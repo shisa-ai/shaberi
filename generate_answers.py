@@ -1,13 +1,7 @@
-from tqdm import tqdm
-from openai import OpenAI
 from datasets import load_dataset
-from datasets import Dataset
-import pandas as pd
-import inspect
-import os
 from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
 from llm_functions import get_model_answer 
-tqdm.pandas()
+import argparse
 
 def load_model_dataset(evaluation_dataset_name: str) -> Dataset:
     eval_config = EVAL_MODEL_CONFIGS.get(evaluation_dataset_name, None)
@@ -28,7 +22,7 @@ def load_model_dataset(evaluation_dataset_name: str) -> Dataset:
         split_dataset = split_dataset.rename_column(q_col, "Question")
     return split_dataset
           
-def main(model_name: str, eval_dataset_name: str = "all", request_batch_size: int = 16):
+def run_generate(model_name: str, eval_dataset_name: str = "all", num_proc: int = 16):
     
     eval_dataset_names = list(EVAL_MODEL_CONFIGS.keys()) if eval_dataset_name == "all" else [eval_dataset_name]
     
@@ -36,8 +30,20 @@ def main(model_name: str, eval_dataset_name: str = "all", request_batch_size: in
         # 1. テストデータセットの読み込み
         dataset = load_model_dataset(dataset_name)
         # 2. モデルの回答の取得
-        dataset = get_model_answer(dataset, model_name, request_batch_size)
+        dataset = get_model_answer(dataset, model_name, num_proc)
         model_answer_path = get_ans_path(dataset_name, model_name)
         dataset.to_json(model_answer_path)
 
-main("gpt-3.5-turbo-0125", "all")
+def main():
+    parser = argparse.ArgumentParser(description='Judge model answers with LLM as judge')
+
+    parser.add_argument('-m', '--model_name', type=str, required=True)
+    parser.add_argument('-d', '--eval_dataset_name', type=str, default='all')
+    parser.add_argument('-n', '--num_proc', type=int, default=8)
+
+    args = parser.parse_args()
+    input_file = args.file
+    run_generate(args.model_name, args.eval_dataset_name, args.num_proc)
+    
+if __name__ == '__main__':
+    main()
