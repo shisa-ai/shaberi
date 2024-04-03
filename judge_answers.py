@@ -14,7 +14,7 @@ def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num
     eval_config = EVAL_MODEL_CONFIGS.get(eval_dataset_name, None)
     
     if eval_config is None:
-        raise ValueError(f'モデル名「{eval_dataset_name}」は対応しておりません。設定の"evaluation_model"には"lightblue/tengu_bench"もしくは"elyza/ELYZA-tasks-100"を入力してください')
+        raise ValueError(f'モデル名「{eval_dataset_name}」は対応しておりません。引数の"--eval_dataset_name"は{list(EVAL_MODEL_CONFIGS.keys())}から選択してください。')
 
     eval_fn = eval_config["evaluator_function"]
 
