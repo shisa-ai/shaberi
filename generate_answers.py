@@ -10,7 +10,7 @@ def load_model_dataset(evaluation_dataset_name: str) -> Dataset:
     eval_config = EVAL_MODEL_CONFIGS.get(evaluation_dataset_name, None)
 
     if eval_config is None:
-        raise ValueError(f'モデル名「{evaluation_dataset_name}」は対応しておりません。引数の"--eval_dataset_name"には"lightblue/tengu_bench", "elyza/ELYZA-tasks-100", "lightblue/japanes-mt-bench-oneshot", "yuzuai/rakuda-questions"のいずれかを入力してください')
+        raise ValueError(f'モデル名「{evaluation_dataset_name}」は対応しておりません。引数の"--eval_dataset_name"は{list(EVAL_MODEL_CONFIGS.keys())}から選択してください。')
 
     # Load dataset
     dataset = load_dataset(evaluation_dataset_name)
