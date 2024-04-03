@@ -1,7 +1,10 @@
-from datasets import load_dataset
-from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
-import os
 import argparse
+import os
+
+from datasets import load_dataset
+
+from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
+
 
 def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num_proc: int):
     
@@ -11,7 +14,7 @@ def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num
     eval_config = EVAL_MODEL_CONFIGS.get(eval_dataset_name, None)
     
     if eval_config is None:
-        raise ValueError(f'モデル名「{eval_dataset_name}」は対応しておりません。設定の"evaluation_model"には"lightblue/tengu_bench"もしくは"elyza/ELYZA-tasks-100"を入力してください')
+        raise ValueError(f'モデル名「{eval_dataset_name}」は対応しておりません。引数の"--eval_dataset_name"は{list(EVAL_MODEL_CONFIGS.keys())}から選択してください。')
 
     eval_fn = eval_config["evaluator_function"]
 
@@ -20,7 +23,7 @@ def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num
     ans_dataset.to_json(os.path.join(".", "data", "judgements", "judge_" + evaluation_model.replace("/", "__"), eval_dataset_name.replace("/", "__"), model_name.replace("/", "__") + ".json"))
 
     
-def run_judgement(model_name: str, eval_dataset_name: str = "all", evaluation_model: str = "gpt-4-turbo-preview", num_proc: int):
+def run_judgement(model_name: str, eval_dataset_name: str = "all", evaluation_model: str = "gpt-4-turbo-preview", num_proc: int = 8):
     eval_dataset_names = EVAL_MODEL_CONFIGS.keys() if eval_dataset_name == "all" else [eval_dataset_name]
     
     for eval_dataset_name in eval_dataset_names:

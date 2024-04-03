@@ -1,5 +1,6 @@
-from llm_functions import get_response_from_openai
 import re
+
+from llm_functions import get_response_from_openai
 
 ######### TENGU ##########
 
@@ -76,7 +77,7 @@ def get_tengu_eval_score(eval_text: str) -> int:
         score_text = re.search(r"\[点数\]\n\d{1,2}点", eval_text).group()
         score = re.search(r"\d{1,2}", score_text).group()
         return int(score)
-    except:
+    except (ValueError, AttributeError):
         print(f"Unable to parse Tengu score from {eval_text}")
         return None
         
@@ -136,6 +137,64 @@ def elyza_evaluator(data: dict, model_name:str) -> int|None:
         gpt4score = None
     return gpt4score
 
+######### MT-Bench ##########
+
+def get_mt_prompt(row: dict):
+    question = row['Question']
+    model_answer = row['ModelAnswer']
+    return f"""[指示]
+公平な判断者として行動し、以下に表示されるユーザーの質問に対するAIアシスタントの応答の品質を評価してください。あなたの評価は、応答の有用性、関連性、正確性、深さ、創造性、詳細度などの要素を考慮すべきです。AIアシスタントの返答の言語は、ユーザーが使用している言語と一致しているべきで、そうでない場合は減点されるべきです。評価は短い説明から始めてください。できるだけ客観的であること。説明を提供した後、このフォーマットに厳密に従って1から10までのスケールで応答を評価する必要があります："[[評価]]"、例えば："評価：[[5]]"。
+
+[質問]
+{question}
+
+[アシスタントの回答の開始]
+{model_answer}
+
+[アシスタントの回答の終了]"""
+
+def mt_evaluator(data: dict, model_name:str) -> int|None:
+    prompt = get_mt_prompt(data)
+    messages = [{"role": "user", "content": prompt}]
+    evaluation = get_response_from_openai(messages, model_name)
+    try:
+        score_text = re.search(r"評価：\[\[\d{1,2}\]\]", evaluation).group()
+        score = re.search(r"\d{1,2}", score_text).group()
+        return int(score)
+    except (ValueError, AttributeError):
+        print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
+        gpt4score = None
+    return gpt4score
+
+######### Rakuda Benchmark ##########
+
+def get_rakuda_prompt(row: dict):
+    question = row['Question']
+    model_answer = row['ModelAnswer']
+    return f"""[指示]
+以下に表示されたユーザーの質問に対するAIアシスタントのパフォーマンスについて、あなたのフィードバックをお願いします。回答の有用性、関連性、正確性、詳細度、日本語能力を評価してください。まず、アシスタントの有用性、関連性、正確性、詳細度、日本語能力の評価を提供してください。評価の包括的な説明も提供してください。ユーザーは日本語しか話さないので日本語で書かれていない回答には低評価をつけてください。できるだけ客観的であること。説明を提供した後、このフォーマットに厳密に従って1から10までのスケールで応答を評価する必要があります："[[評価]]"、例えば："評価：[[5]]"。
+
+[質問]
+{question}
+
+[アシスタントの回答の開始]
+{model_answer}
+
+[アシスタントの回答の終了]"""
+
+def rakuda_evaluator(data: dict, model_name:str) -> int|None:
+    prompt = get_rakuda_prompt(data)
+    messages = [{"role": "user", "content": prompt}]
+    evaluation = get_response_from_openai(messages, model_name)
+    try:
+        score_text = re.search(r"評価：\[\[\d{1,2}\]\]", evaluation).group()
+        score = re.search(r"\d{1,2}", score_text).group()
+        return int(score)
+    except (ValueError, AttributeError):
+        print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
+        gpt4score = None
+    return gpt4score
+
 #### ALL EVAL DATASETS ####
 
 EVAL_MODEL_CONFIGS = {
@@ -149,7 +208,18 @@ EVAL_MODEL_CONFIGS = {
         "evaluator_function": elyza_evaluator,
         "split_name": "test"
     },
+    "lightblue/japanes-mt-bench-oneshot": {
+        "question_column": "Question",
+        "evaluator_function": mt_evaluator,
+        "split_name": "train"
+    },
+    "yuzuai/rakuda-questions": {
+        "question_column": "text",
+        "evaluator_function": rakuda_evaluator,
+        "split_name": "train"
+    },
 }
 
 import os
+
 get_ans_path = lambda dataset_name, model_name: os.path.join(".", "data", "model_answers", dataset_name.replace("/", "__"), model_name.replace("/", "__") + ".json")
