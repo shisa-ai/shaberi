@@ -1,14 +1,17 @@
-from datasets import load_dataset
-from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
-from llm_functions import get_model_answer 
 import argparse
+
+from datasets import Dataset, load_dataset
+
+from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
+from llm_functions import get_model_answer
+
 
 def load_model_dataset(evaluation_dataset_name: str) -> Dataset:
     eval_config = EVAL_MODEL_CONFIGS.get(evaluation_dataset_name, None)
-    
+
     if eval_config is None:
-        raise ValueError(f'モデル名「{evaluation_model}」は対応しておりません。設定の"evaluation_model"には"lightblue/tengu_bench"もしくは"elyza/ELYZA-tasks-100"を入力してください')
-        
+        raise ValueError(f'モデル名「{evaluation_dataset_name}」は対応しておりません。引数の"--eval_dataset_name"には"lightblue/tengu_bench", "elyza/ELYZA-tasks-100", "lightblue/japanes-mt-bench-oneshot", "yuzuai/rakuda-questions"のいずれかを入力してください')
+
     # Load dataset
     dataset = load_dataset(evaluation_dataset_name)
 
@@ -42,7 +45,6 @@ def main():
     parser.add_argument('-n', '--num_proc', type=int, default=8)
 
     args = parser.parse_args()
-    input_file = args.file
     run_generate(args.model_name, args.eval_dataset_name, args.num_proc)
     
 if __name__ == '__main__':
