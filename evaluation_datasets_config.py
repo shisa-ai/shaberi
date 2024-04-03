@@ -1,6 +1,6 @@
 import re
 
-from llm_functions import get_response_from_openai
+from llm_functions import get_model_response
 
 ######### TENGU ##########
 
@@ -84,7 +84,7 @@ def get_tengu_eval_score(eval_text: str) -> int:
 # Takes a dict and outputs a score for each
 def tengu_bench_evaluator(data:dict, model_name:str) -> int|None:
     messages = make_tengu_conversation(data)
-    evaluation = get_response_from_openai(messages, model_name)
+    evaluation = get_model_response(messages, model_name)
     return get_tengu_eval_score(evaluation)
 
 ######### ELYZA ##########
@@ -129,7 +129,7 @@ def get_elyza_prompt(row: dict):
 def elyza_evaluator(data: dict, model_name:str) -> int|None:
     prompt = get_elyza_prompt(data)
     messages = [{"role": "user", "content": prompt}]
-    evaluation = get_response_from_openai(messages, model_name)
+    evaluation = get_model_response(messages, model_name)
     try:
         gpt4score = int(evaluation)
     except ValueError:
@@ -156,7 +156,7 @@ def get_mt_prompt(row: dict):
 def mt_evaluator(data: dict, model_name:str) -> int|None:
     prompt = get_mt_prompt(data)
     messages = [{"role": "user", "content": prompt}]
-    evaluation = get_response_from_openai(messages, model_name)
+    evaluation = get_model_response(messages, model_name)
     try:
         score_text = re.search(r"評価：\[\[\d{1,2}\]\]", evaluation).group()
         score = re.search(r"\d{1,2}", score_text).group()
@@ -185,7 +185,7 @@ def get_rakuda_prompt(row: dict):
 def rakuda_evaluator(data: dict, model_name:str) -> int|None:
     prompt = get_rakuda_prompt(data)
     messages = [{"role": "user", "content": prompt}]
-    evaluation = get_response_from_openai(messages, model_name)
+    evaluation = get_model_response(messages, model_name)
     try:
         score_text = re.search(r"評価：\[\[\d{1,2}\]\]", evaluation).group()
         score = re.search(r"\d{1,2}", score_text).group()

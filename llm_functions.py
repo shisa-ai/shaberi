@@ -1,6 +1,8 @@
-from openai import OpenAI
-from datasets import Dataset
 import os
+
+from datasets import Dataset
+from openai import OpenAI
+
 
 def get_response_from_openai(messages:list, model_name:str) -> str:
     client = OpenAI(
@@ -12,6 +14,19 @@ def get_response_from_openai(messages:list, model_name:str) -> str:
         temperature = 0,
     )
     return response.choices[0].message.content
+
+def get_response_func(model_name: str):
+    if "gpt" in model_name:
+        return get_response_from_openai
+    else:
+        """
+        他のモデルで評価する場合は関数、分岐をここに追加
+        """
+        raise NotImplementedError(f"Model {model_name} is not supported")
+    
+def get_model_response(messages:list, model_name:str) -> str:
+    answer_function = get_response_func(model_name)
+    return answer_function(messages, model_name)
 
 def get_answer_from_openai(question:str, model_name:str) -> str:
     return get_response_from_openai([{"role": "user", "content": question}], model_name)
