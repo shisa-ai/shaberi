@@ -43,8 +43,11 @@ OPENAI_API_KEY=[自分のOpenAIのAPIキー] python judge_answers.py \
 `--num_proc`（`default=8`）：並列処理数。実行環境に合わせて設定してください。設定しない場合の並列処理数は 8 です。
 
 ## 評価することができるLLMのモデル
+OpenAIモデル
 1. `gpt-3.5-turbo-0125`
 2. `gpt-4-turbo-preview`
+
+vLLMが対応しているモデル
 
 ## 評価に利用できるモデル
 1. `gpt-4-turbo-preview`
