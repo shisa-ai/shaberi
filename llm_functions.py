@@ -22,7 +22,7 @@ def get_response_func(model_name: str):
         """
         他のモデルで評価する場合は関数、分岐をここに追加
         """
-        return get_response_from_openai
+        raise NotImplementedError(f"Model {model_name} is not supported")
     
 def get_model_response(messages:list, model_name:str) -> str:
     answer_function = get_response_func(model_name)
