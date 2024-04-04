@@ -13,6 +13,7 @@ def get_response_from_openai(messages: list, model_name: str) -> str:
         messages=messages,
         model=model_name,
         temperature=0,
+        max_tokens=1024
     )
     return response.choices[0].message.content
 
@@ -49,6 +50,7 @@ def get_answer(question: str, model_name: str):
         messages=[{"role": "user", "content": question}],
         model=model_name,
         temperature=0,
+        max_tokens=2048
     )
     return response.choices[0].message.content
 
