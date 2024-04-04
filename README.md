@@ -61,4 +61,5 @@ vLLMが対応しているモデル
 
 ## 判明しているエラー
 --num_proc=8でmeta-llama/Llama-2-7b-chat-hfを用いてlightblue/tengu_benchの回答を生成する際にエラーが発生する
-→ --num_proc=1ならエラーが出ない（原因不明）
+
+→ --num_proc=1ならエラーが出ない（原因不明：tengu-benchのmax-tokenは2600程度だったので1024に変えたら大丈夫なはずだがダメだった）
