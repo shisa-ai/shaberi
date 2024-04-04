@@ -1,9 +1,9 @@
 {% for message in messages %}
     {% if message['role'] == 'user' %}
-        {{ bos_token + 'USER: ' + message['content'].strip()}}
+        {{ 'USER: ' + message['content'].strip()}}
     {% elif message['role'] == 'system' %}
         {{ 'SYSTEM: ' + message['content'].strip()}}
     {% elif message['role'] == 'assistant' %}
-        {{ 'ASSISTANT: '  + message['content'] + eos_token }}
+        {{ 'ASSISTANT: '  + message['content'] + "<|endoftext|>" }}
     {% endif %}
 {% endfor %}
