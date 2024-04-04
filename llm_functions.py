@@ -9,11 +9,15 @@ def get_response_from_openai(messages: list, model_name: str) -> str:
     client = OpenAI(
         api_key=os.environ.get("OPENAI_API_KEY")
     )
+
+    evaluation_temperature = 0
+    evaluation_max_tokens = 1024
+
     response = client.chat.completions.create(
         messages=messages,
         model=model_name,
-        temperature=0,
-        max_tokens=1024
+        temperature=evaluation_temperature,
+        max_tokens=evaluation_max_tokens
     )
     return response.choices[0].message.content
 
@@ -46,11 +50,14 @@ def get_answer(question: str, model_name: str):
         base_url=base_url,
     )
 
+    generation_temperature = 0
+    generation_max_tokens = 2048
+
     response = client.chat.completions.create(
         messages=[{"role": "user", "content": question}],
         model=model_name,
-        temperature=0,
-        max_tokens=2048
+        temperature=generation_temperature,
+        max_tokens=generation_max_tokens
     )
     return response.choices[0].message.content
 
