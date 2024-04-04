@@ -1,0 +1,9 @@
+{% for message in messages %}
+    {% if message['role'] == 'user' %}
+        {{ '[INST]' + message['content'].strip() + '[/INST]\n' }}
+    {% elif message['role'] == 'system' %}
+        {{ '<<SYS>>\n' + message['content'].strip() + "\n<</SYS>>\n"}}
+    {% elif message['role'] == 'assistant' %}
+        {{ message['content'].strip() + '\n' }}
+    {% endif %}
+{% endfor %}
