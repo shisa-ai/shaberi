@@ -1,0 +1,10 @@
+{% for message in messages %}
+    {% if message['role'] == 'user' %}
+        {{ 'ユーザー: ' + message['content'].strip() + '<NL>'}}
+    {% elif message['role'] == 'system' %}
+        {{ 'ユーザー: ' + message['content'].strip() + '<NL>'}}
+    {% elif message['role'] == 'assistant' %}
+        {{ 'システム: '  + message['content'].strip() + '<NL>'}}
+    {% endif %}
+{% endfor %}
+{{ "システム:" }}
