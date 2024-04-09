@@ -1,0 +1,16 @@
+{{'\n以下は、タスクを説明する指示と、文脈のある入力の組み合わせです。要求を適切に満たす応答を書きなさい。\n'}}
+{{'### 指示:'}}
+{{'以下の入力の質問に答えてください。\n'}}
+{% for message in messages %}
+    {% if message['role'] == 'user' %}
+        {{ '### 入力:' }}
+        {{ message['content'].strip() + '\n' }}
+    {% elif message['role'] == 'system' %}
+        {{ '### 指示:' }}
+        {{ message['content'].strip() + '\n' }}
+    {% elif message['role'] == 'assistant' %}
+        {{ '### 応答:' }}
+        {{ message['content'].strip() + '\n' }}
+    {% endif %}
+{% endfor %}
+{{ "### 応答:\n" }}
