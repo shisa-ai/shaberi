@@ -1,4 +1,4 @@
-# japanese_llm_eval
+# Shaberi: A Suite of Japanese Chat Benchmarks
 A repo for evaluating Japanese LLMs　・　日本語LLMを評価するレポ
 
 ## 実行方法
