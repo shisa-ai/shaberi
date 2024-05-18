@@ -1,6 +1,42 @@
 # Shaberi: A Suite of Japanese Chat Benchmarks
 A repo for evaluating Japanese LLMs　・　日本語LLMを評価するレポ
 
+
+```
+mamba create -n shaberi python=3.11
+mamba activate shaberi
+pip install -r requirement.txt
+
+# Run vllm OpenAI API, eg:
+# note we manually specify max model len since vLLM thinks Mistral is 4K (and response go over)
+python -m vllm.entrypoints.openai.api_server --model augmxnt/shisa-gamma-7b-v1 -tp 8 --max-model-len 8192
+
+# Generate answers (use '--num-proc 1' if you need to debug):
+OPENAI_BASE_URL='http://localhost:8000/v1' python generate_answers.py --model_name 'augmxnt/shisa-gamma-7b-v1' --num_proc 8
+
+# Judge answers (assume OPENAI_API_KEY in env already)
+python judge_answers.py -m augmxnt/shisa-gamma-7b-v1
+```
+
+
+Changes made:
+* We have to add a system prompt or it uses the ridiculous Llama 2 one? (wtf)
+* We get a lot of bad requests - I've added backoff to the code
+  * 400s are due to vLLM not realizing Mistral has a higher 32K context
+* We create a new shisa-ai/ja-mt-bench-1shot dataset since the lightblue one is missing
+
+
+If we were making our own:
+* No separate vLLM, we should load our models in process, that lets us script/queue multiple models up
+* simple step by step CLI
+* generate answers
+* judge
+  * Multiple LLM Judge options
+* Save to sqlite
+* Output
+
+
+
 ## 実行方法
 ### 1. 評価用データセットごとのモデルの回答生成用関数
 ```
