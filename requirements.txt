@@ -1,0 +1,7 @@
+datasets
+flash_attn --no-build-isolation
+jupyter
+matplotlib
+seaborn
+tabulate
+vllm
