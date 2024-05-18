@@ -208,7 +208,7 @@ EVAL_MODEL_CONFIGS = {
         "evaluator_function": elyza_evaluator,
         "split_name": "test"
     },
-    "lightblue/japanes-mt-bench-oneshot": {
+    "shisa-ai/ja-mt-bench-1shot": {
         "question_column": "Question",
         "evaluator_function": mt_evaluator,
         "split_name": "train"
