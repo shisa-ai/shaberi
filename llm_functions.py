@@ -1,3 +1,4 @@
+import backoff
 import os
 
 from datasets import Dataset
@@ -5,6 +6,7 @@ from openai import OpenAI
 
 
 # === 評価生成関数群 ===
+@backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
 def get_response_from_openai(messages: list, model_name: str) -> str:
     client = OpenAI(
         api_key=os.environ.get("OPENAI_API_KEY")
@@ -38,6 +40,7 @@ def get_model_response(messages: list, model_name: str) -> str:
 
 
 # === 回答生成関数群 ===
+@backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
 def get_answer(question: str, model_name: str):
     api_key = os.environ.get("OPENAI_API_KEY", "EMPTY")
     if api_key == "EMPTY":
@@ -51,13 +54,17 @@ def get_answer(question: str, model_name: str):
     )
 
     generation_temperature = 0
+    # generation_max_tokens = 2048
     generation_max_tokens = 2048
 
     response = client.chat.completions.create(
-        messages=[{"role": "user", "content": question}],
+        messages=[
+            {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
+            {"role": "user", "content": question},
+        ],
         model=model_name,
         temperature=generation_temperature,
-        max_tokens=generation_max_tokens
+        max_tokens=generation_max_tokens,
     )
     return response.choices[0].message.content
 
