@@ -62,7 +62,7 @@ def analyze_jsonl_files(base_directory):
         for filename in os.listdir(directory):
             if filename.endswith(".json") or filename.endswith(".jsonl"):
                 file_path = os.path.join(directory, filename)
-                model_id = filename.split('.')[0]
+                model_id = filename.rsplit('.', 1)[0]
                 parse_file(file_path, model_id, models)
     update_total_percentage(models)
 
