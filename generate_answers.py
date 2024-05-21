@@ -3,6 +3,7 @@ import argparse
 from datasets import Dataset, load_dataset
 
 from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
+import llm_functions
 from llm_functions import get_model_answer
 
 
@@ -43,8 +44,13 @@ def main():
     parser.add_argument('-m', '--model_name', type=str, required=True)
     parser.add_argument('-d', '--eval_dataset_name', type=str, default='all')
     parser.add_argument('-n', '--num_proc', type=int, default=8)
+    parser.add_argument('-fp', '--frequency_penalty', type=float, default=1.0)
 
     args = parser.parse_args()
+
+    # hack
+    llm_functions.fp = args.frequency_penalty
+
     run_generate(args.model_name, args.eval_dataset_name, args.num_proc)
     
 if __name__ == '__main__':
