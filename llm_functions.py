@@ -1,8 +1,16 @@
 import backoff
+import litellm
 import os
 
 from datasets import Dataset
+import litellm
+from litellm import completion
 from openai import OpenAI
+
+litellm.set_verbose=True
+
+# Global
+fp = 0.0
 
 
 # === 評価生成関数群 ===
@@ -19,7 +27,7 @@ def get_response_from_openai(messages: list, model_name: str) -> str:
         messages=messages,
         model=model_name,
         temperature=evaluation_temperature,
-        max_tokens=evaluation_max_tokens
+        max_tokens=evaluation_max_tokens,
     )
     return response.choices[0].message.content
 
@@ -53,18 +61,20 @@ def get_answer(question: str, model_name: str):
         base_url=base_url,
     )
 
-    generation_temperature = 0
-    # generation_max_tokens = 2048
+    generation_temperature = 0.2
     generation_max_tokens = 2048
 
-    response = client.chat.completions.create(
+    response = completion(
+        model=f'openai/{model_name}',
         messages=[
             {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
             {"role": "user", "content": question},
         ],
-        model=model_name,
+        api_base="http://localhost:8000/v1",
         temperature=generation_temperature,
+        frequency_penalty=fp,
         max_tokens=generation_max_tokens,
+        min_p = 0.1
     )
     return response.choices[0].message.content
 
