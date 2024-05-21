@@ -11,10 +11,11 @@ if gpu_count:
 
 
 
-model_path = 'tokyotech-llm/Swallow-70b-instruct-v0.1'
+model_path = '/fsx/user02//axolotl/outputs/lr-2e6'
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, trust_remote_code=True)
 llm = LLM(model=model_path, tensor_parallel_size=num_gpus_per_model, trust_remote_code=True)
 
+'''
 chat = []
 chat.append({'role': 'system', 'content': 'You are a helpful assistant'})
 chat.append({'role': 'user', 'content': 'tell me a joke'})
@@ -36,3 +37,4 @@ sampling_params = SamplingParams(
 outputs = llm.generate(prompt_token_ids=[input_ids], sampling_params=sampling_params, use_tqdm=False)
 output = outputs[0].outputs[0].text.strip()
 print(output)
+'''
