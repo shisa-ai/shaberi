@@ -11,7 +11,7 @@ if gpu_count:
 
 
 
-model_path = 'shisa-ai/shisa-llama3-8b-v1'
+model_path = 'tokyotech-llm/Swallow-70b-instruct-v0.1'
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, trust_remote_code=True)
 llm = LLM(model=model_path, tensor_parallel_size=num_gpus_per_model, trust_remote_code=True)
 
