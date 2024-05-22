@@ -71,6 +71,10 @@ karakuri-ai__karakuri-lm-70b-chat-v0.1,ELYZA-tasks-100,3.43,6.86
 karakuri-ai__karakuri-lm-70b-chat-v0.1,MT-Bench,6.432098765432099,6.432098765432099
 karakuri-ai__karakuri-lm-70b-chat-v0.1,Rakuda,7.85,7.85
 karakuri-ai__karakuri-lm-70b-chat-v0.1,Tengu-Bench,6.233333333333333,6.233333333333333
+karakuri-ai__karakuri-lm-8x7b-chat-v0.1,ELYZA-tasks-100,3.59,7.18
+karakuri-ai__karakuri-lm-8x7b-chat-v0.1,MT-Bench,6.3,6.3
+karakuri-ai__karakuri-lm-8x7b-chat-v0.1,Rakuda,7.975,7.975
+karakuri-ai__karakuri-lm-8x7b-chat-v0.1,Tengu-Bench,6.55,6.55
 lightblue__20240422,ELYZA-tasks-100,3.34,6.68
 lightblue__20240422,MT-Bench,4.962025316455696,4.962025316455696
 lightblue__20240422,Rakuda,6.675,6.675
