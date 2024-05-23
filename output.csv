@@ -194,6 +194,10 @@ shisa-ai__shisa-v1-llama3-8b.wd-0.05,ELYZA-tasks-100,3.2,6.4
 shisa-ai__shisa-v1-llama3-8b.wd-0.05,MT-Bench,6.830508474576271,6.830508474576271
 shisa-ai__shisa-v1-llama3-8b.wd-0.05,Rakuda,6.175,6.175
 shisa-ai__shisa-v1-llama3-8b.wd-0.05,Tengu-Bench,5.55,5.55
+shisa-ai__shisa-v1-mistral0.3-7b,ELYZA-tasks-100,2.82,5.64
+shisa-ai__shisa-v1-mistral0.3-7b,MT-Bench,6.101694915254237,6.101694915254237
+shisa-ai__shisa-v1-mistral0.3-7b,Rakuda,3.825,3.825
+shisa-ai__shisa-v1-mistral0.3-7b,Tengu-Bench,4.858333333333333,4.858333333333333
 shisa-ai__shisa-v1-smaug-llama3-70b,ELYZA-tasks-100,3.61,7.22
 shisa-ai__shisa-v1-smaug-llama3-70b,MT-Bench,7.533333333333333,7.533333333333333
 shisa-ai__shisa-v1-smaug-llama3-70b,Rakuda,7.725,7.725
