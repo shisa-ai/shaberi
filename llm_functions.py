@@ -7,7 +7,7 @@ import litellm
 from litellm import completion
 from openai import OpenAI
 
-litellm.set_verbose=True
+# litellm.set_verbose=True
 
 # Global
 fp = 0.0
