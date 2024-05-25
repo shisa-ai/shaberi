@@ -107,6 +107,10 @@ meta-llama__Meta-Llama-3-8B-Instruct,ELYZA-tasks-100,3.34,6.68
 meta-llama__Meta-Llama-3-8B-Instruct,MT-Bench,7.677966101694915,7.677966101694915
 meta-llama__Meta-Llama-3-8B-Instruct,Rakuda,3.125,3.125
 meta-llama__Meta-Llama-3-8B-Instruct,Tengu-Bench,5.848739495798319,5.848739495798319
+microsoft__Phi-3-medium-128k-instruct,ELYZA-tasks-100,3.55,7.1
+microsoft__Phi-3-medium-128k-instruct,MT-Bench,5.916666666666667,5.916666666666667
+microsoft__Phi-3-medium-128k-instruct,Rakuda,6.842105263157895,6.842105263157895
+microsoft__Phi-3-medium-128k-instruct,Tengu-Bench,6.041666666666667,6.041666666666667
 mistralai__Mistral-7B-Instruct-v0.2,ELYZA-tasks-100,2.89,5.78
 mistralai__Mistral-7B-Instruct-v0.2,MT-Bench,4.65,4.65
 mistralai__Mistral-7B-Instruct-v0.2,Rakuda,3.8,3.8
@@ -198,6 +202,10 @@ shisa-ai__shisa-v1-mistral0.3-7b,ELYZA-tasks-100,2.82,5.64
 shisa-ai__shisa-v1-mistral0.3-7b,MT-Bench,6.101694915254237,6.101694915254237
 shisa-ai__shisa-v1-mistral0.3-7b,Rakuda,3.825,3.825
 shisa-ai__shisa-v1-mistral0.3-7b,Tengu-Bench,4.858333333333333,4.858333333333333
+shisa-ai__shisa-v1-phi3-14b,ELYZA-tasks-100,3.14,6.28
+shisa-ai__shisa-v1-phi3-14b,MT-Bench,5.258620689655173,5.258620689655173
+shisa-ai__shisa-v1-phi3-14b,Rakuda,6.55,6.55
+shisa-ai__shisa-v1-phi3-14b,Tengu-Bench,5.008474576271187,5.008474576271187
 shisa-ai__shisa-v1-smaug-llama3-70b,ELYZA-tasks-100,3.61,7.22
 shisa-ai__shisa-v1-smaug-llama3-70b,MT-Bench,7.533333333333333,7.533333333333333
 shisa-ai__shisa-v1-smaug-llama3-70b,Rakuda,7.725,7.725
@@ -206,6 +214,10 @@ shisa-ai__shisa-yi1.5-9b-v1,ELYZA-tasks-100,2.99,5.98
 shisa-ai__shisa-yi1.5-9b-v1,MT-Bench,4.283333333333333,4.283333333333333
 shisa-ai__shisa-yi1.5-9b-v1,Rakuda,3.2564102564102564,3.2564102564102564
 shisa-ai__shisa-yi1.5-9b-v1,Tengu-Bench,5.0,5.0
+shisa-v1-llama3-70b.q4_k_m,ELYZA-tasks-100,3.61,7.22
+shisa-v1-llama3-70b.q4_k_m,MT-Bench,7.271186440677966,7.271186440677966
+shisa-v1-llama3-70b.q4_k_m,Rakuda,8.2,8.2
+shisa-v1-llama3-70b.q4_k_m,Tengu-Bench,6.19327731092437,6.19327731092437
 tokyotech-llm__Swallow-70b-instruct-v0.1,ELYZA-tasks-100,3.64,7.28
 tokyotech-llm__Swallow-70b-instruct-v0.1,MT-Bench,6.448275862068965,6.448275862068965
 tokyotech-llm__Swallow-70b-instruct-v0.1,Rakuda,6.575,6.575
