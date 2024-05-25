@@ -1,30 +1,37 @@
 # Shaberi: A Suite of Japanese Chat Benchmarks
 A repo for evaluating Japanese LLMs　・　日本語LLMを評価するレポ
 
-
+## How to run
 ```
+# Get code
+git clone https://github.com/shisa-ai/shaberi
+cd shaberi
+
+# Create Environment, Install requirements
 mamba create -n shaberi python=3.11
 mamba activate shaberi
 pip install -r requirement.txt
 
-# Run vllm OpenAI API, eg:
-# note we manually specify max model len since vLLM thinks Mistral is 4K (and response go over)
-python -m vllm.entrypoints.openai.api_server --model augmxnt/shisa-gamma-7b-v1 -tp 8 --max-model-len 8192
+# In one terminal, run vLLM OpenAI API, eg: 
+python -m vllm.entrypoints.openai.api_server --model shisa-ai/shisa-v1-llama3-70b -tp 8
+# or llama.cpp OpenAI API, eg:
+./server -ngl 99 -c 8192 -m shisa-v1-llama3-70b.Q4_K_M.gguf --chat-template llama3 --host 0.0.0.0 --port 8000 -a shisa-v1-llama3-70b.q4_k_m
 
-# Generate answers (use '--num-proc 1' if you need to debug):
-OPENAI_BASE_URL='http://localhost:8000/v1' python generate_answers.py --model_name 'augmxnt/shisa-gamma-7b-v1' --num_proc 8
+# In a separate terminal, generate answers:
+mamba activate shaberi
+# Match model name to what vLLM is serving
+# We run frequency_penalty=0.5 for all our runs, probably generally the best
+python generate_answers.py --model_name 'shisa-ai/shisa-v1-llama3-8b' -fp 0.5
 
-# Judge answers (assume OPENAI_API_KEY in env already)
-python judge_answers.py -m augmxnt/shisa-gamma-7b-v1
+# Then run the judge (assumes your OPENAI_API_KEY is in the env already):
+python judge_answers.py -m shisa-ai/shisa-v1-llama3-8b
 ```
-
 
 Changes made:
 * We have to add a system prompt or it uses the ridiculous Llama 2 one? (wtf)
 * We get a lot of bad requests - I've added backoff to the code
   * 400s are due to vLLM not realizing Mistral has a higher 32K context
 * We create a new shisa-ai/ja-mt-bench-1shot dataset since the lightblue one is missing
-
 
 If we were making our own:
 * No separate vLLM, we should load our models in process, that lets us script/queue multiple models up
@@ -35,6 +42,10 @@ If we were making our own:
 * Save to sqlite
 * Output
 
+---
+```
+### OLD SHABERI README... 
+```
 
 
 ## 実行方法
