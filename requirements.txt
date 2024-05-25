@@ -1,7 +1,11 @@
+backoff
 datasets
-flash_attn --no-build-isolation
+flash_attn
 jupyter
+litellm
 matplotlib
+packaging
 seaborn
 tabulate
+torch
 vllm

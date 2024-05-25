@@ -6,6 +6,9 @@ mamba activate shaberi
 # Terminal 0: Run vllm - so janky
 # python -m vllm.entrypoints.openai.api_server -tp 8 --model /fsx/user02/axolotl/outputs/wd-0.05 --served-model-name 'shisa-ai/shisa-v1-llama3-8b.wd-0.05'
 # python -m vllm.entrypoints.openai.api_server --model $model -tp 8 --max-model-len 8192 --served-model-name 'shisa-ai/shisa-swallowmx-13a47b-v1'
+#
+# 2 x 24GB version... (lowered gpu-memory-utilization since OOM)
+# python -m vllm.entrypoints.openai.api_server --model shisa-ai/shisa-v1-phi3-14b --max-model-len 8192 -tp 2 --gpu-memory-utilization 0.85
 
 # Terminal 2: Run this here
 
