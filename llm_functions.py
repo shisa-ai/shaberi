@@ -64,6 +64,21 @@ def get_answer(question: str, model_name: str):
     generation_temperature = 0.2
     generation_max_tokens = 2048
 
+    '''
+    # Anthropic / OpenAI
+    response = completion(
+        model=f'{model_name}',
+        messages=[
+            {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
+            {"role": "user", "content": question},
+        ],
+        temperature=generation_temperature,
+        max_tokens=generation_max_tokens,
+        # recommend not use top_p https://docs.anthropic.com/en/api/complete
+    )
+    '''
+
+    # OpenAI compatible endpoints (vLLM/llama.cpp)
     response = completion(
         model=f'openai/{model_name}',
         messages=[
@@ -76,6 +91,39 @@ def get_answer(question: str, model_name: str):
         max_tokens=generation_max_tokens,
         min_p = 0.1
     )
+
+    '''
+    # Gemini
+    response = completion(
+        model="gemini/gemini-1.5-flash", 
+        messages=[
+            {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
+            {"role": "user", "content": question},
+        ],
+        safety_settings=[
+            {
+                "category": "HARM_CATEGORY_HARASSMENT",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_HATE_SPEECH",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                "threshold": "BLOCK_NONE",
+            },
+        ],
+        temperature=generation_temperature,
+        top_p=0.95,
+        max_tokens=generation_max_tokens,
+    )
+    '''
+
     return response.choices[0].message.content
 
 

@@ -87,6 +87,10 @@ gpt-4-turbo-preview,ELYZA-tasks-100,4.47,8.94
 gpt-4-turbo-preview,MT-Bench,8.6125,8.6125
 gpt-4-turbo-preview,Rakuda,9.275,9.275
 gpt-4-turbo-preview,Tengu-Bench,7.841666666666667,7.841666666666667
+gpt-4o-2024-05-13,ELYZA-tasks-100,4.44,8.88
+gpt-4o-2024-05-13,MT-Bench,8.694915254237289,8.694915254237289
+gpt-4o-2024-05-13,Rakuda,9.15,9.15
+gpt-4o-2024-05-13,Tengu-Bench,8.158333333333333,8.158333333333333
 karakuri-ai__karakuri-lm-70b-chat-v0.1,ELYZA-tasks-100,3.43,6.86
 karakuri-ai__karakuri-lm-70b-chat-v0.1,MT-Bench,6.432098765432099,6.432098765432099
 karakuri-ai__karakuri-lm-70b-chat-v0.1,Rakuda,7.85,7.85
