@@ -25,6 +25,13 @@ python generate_answers.py --model_name 'shisa-ai/shisa-v1-llama3-8b' -fp 0.5
 
 # Then run the judge (assumes your OPENAI_API_KEY is in the env already):
 python judge_answers.py -m shisa-ai/shisa-v1-llama3-8b
+
+# Make sure you have new answers and judgements
+git status
+
+# To generate updated results
+python results_vizualization.py
+cat output.csv
 ```
 
 Changes made:
