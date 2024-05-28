@@ -242,6 +242,10 @@ shisa-v1-llama3-70b.q4_k_m,ELYZA-tasks-100,3.61,7.22
 shisa-v1-llama3-70b.q4_k_m,MT-Bench,7.271186440677966,7.271186440677966
 shisa-v1-llama3-70b.q4_k_m,Rakuda,8.2,8.2
 shisa-v1-llama3-70b.q4_k_m,Tengu-Bench,6.19327731092437,6.19327731092437
+together_ai__mistralai__Mixtral-8x22B-Instruct-v0.1,ELYZA-tasks-100,3.82,7.64
+together_ai__mistralai__Mixtral-8x22B-Instruct-v0.1,MT-Bench,6.65,6.65
+together_ai__mistralai__Mixtral-8x22B-Instruct-v0.1,Rakuda,6.108108108108108,6.108108108108108
+together_ai__mistralai__Mixtral-8x22B-Instruct-v0.1,Tengu-Bench,6.428571428571429,6.428571428571429
 tokyotech-llm__Swallow-70b-instruct-v0.1,ELYZA-tasks-100,3.64,7.28
 tokyotech-llm__Swallow-70b-instruct-v0.1,MT-Bench,6.448275862068965,6.448275862068965
 tokyotech-llm__Swallow-70b-instruct-v0.1,Rakuda,6.575,6.575

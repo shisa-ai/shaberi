@@ -64,7 +64,6 @@ def get_answer(question: str, model_name: str):
     generation_temperature = 0.2
     generation_max_tokens = 2048
 
-    '''
     # Anthropic / OpenAI
     response = completion(
         model=f'{model_name}',
@@ -92,7 +91,6 @@ def get_answer(question: str, model_name: str):
         min_p = 0.1
     )
 
-    '''
     # Gemini
     response = completion(
         model="gemini/gemini-1.5-flash", 
