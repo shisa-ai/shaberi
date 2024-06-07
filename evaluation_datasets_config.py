@@ -187,7 +187,7 @@ def rakuda_evaluator(data: dict, model_name:str) -> int|None:
     messages = [{"role": "user", "content": prompt}]
     evaluation = get_model_response(messages, model_name)
     try:
-        score_text = re.search(r"評価：\[\[\d{1,2}\]\]", evaluation).group()
+        score_text = re.search(r"評価：(\[\[|\[|【)\d{1,2}(\]\]|\]|】)", evaluation).group()
         score = re.search(r"\d{1,2}", score_text).group()
         return int(score)
     except (ValueError, AttributeError):
