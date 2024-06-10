@@ -67,6 +67,10 @@ claude-3-sonnet-20240229,ELYZA-tasks-100,4.0606060606060606,8.121212121212121
 claude-3-sonnet-20240229,MT-Bench,7.683333333333334,7.683333333333334
 claude-3-sonnet-20240229,Rakuda,8.076923076923077,8.076923076923077
 claude-3-sonnet-20240229,Tengu-Bench,7.325,7.325
+cognitivecomputations__dolphin-2.9.2-qwen2-7b,ELYZA-tasks-100,3.1,6.2
+cognitivecomputations__dolphin-2.9.2-qwen2-7b,MT-Bench,6.440677966101695,6.440677966101695
+cognitivecomputations__dolphin-2.9.2-qwen2-7b,Rakuda,5.625,5.625
+cognitivecomputations__dolphin-2.9.2-qwen2-7b,Tengu-Bench,5.55,5.55
 cyberagent__calm2-7b-chat,ELYZA-tasks-100,2.45,4.9
 cyberagent__calm2-7b-chat,MT-Bench,3.575,3.575
 cyberagent__calm2-7b-chat,Rakuda,5.75,5.75
@@ -262,6 +266,14 @@ tokyotech-llm__Swallow-70b-instruct-v0.1,ELYZA-tasks-100,3.64,7.28
 tokyotech-llm__Swallow-70b-instruct-v0.1,MT-Bench,6.448275862068965,6.448275862068965
 tokyotech-llm__Swallow-70b-instruct-v0.1,Rakuda,6.575,6.575
 tokyotech-llm__Swallow-70b-instruct-v0.1,Tengu-Bench,5.906779661016949,5.906779661016949
+umiyuki__Llama-3-Umievo-itr014-Shizuko-8b,ELYZA-tasks-100,3.49,6.98
+umiyuki__Llama-3-Umievo-itr014-Shizuko-8b,MT-Bench,7.35,7.35
+umiyuki__Llama-3-Umievo-itr014-Shizuko-8b,Rakuda,7.8,7.8
+umiyuki__Llama-3-Umievo-itr014-Shizuko-8b,Tengu-Bench,6.45,6.45
+umiyuki__Umievo-itr012-Gleipnir-7B,ELYZA-tasks-100,3.5,7.0
+umiyuki__Umievo-itr012-Gleipnir-7B,MT-Bench,6.396551724137931,6.396551724137931
+umiyuki__Umievo-itr012-Gleipnir-7B,Rakuda,8.325,8.325
+umiyuki__Umievo-itr012-Gleipnir-7B,Tengu-Bench,6.310924369747899,6.310924369747899
 xverse__XVERSE-13B-Chat,ELYZA-tasks-100,3.17,6.34
 xverse__XVERSE-13B-Chat,MT-Bench,5.3375,5.3375
 xverse__XVERSE-13B-Chat,Rakuda,6.65,6.65

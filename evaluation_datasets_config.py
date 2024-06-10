@@ -78,8 +78,14 @@ def get_tengu_eval_score(eval_text: str) -> int:
         score = re.search(r"\d{1,2}", score_text).group()
         return int(score)
     except (ValueError, AttributeError):
-        print(f"Unable to parse Tengu score from {eval_text}")
-        return None
+        try:
+            print('Parse error, trying again...')
+            score_text = re.search(r"\[点数\]\n\d{1,2}点", eval_text).group()
+            score = re.search(r"\d{1,2}", score_text).group()
+            return int(score)
+        except (ValueError, AttributeError):
+            print(f"Unable to parse Tengu score from {eval_text}")
+            return None
         
 # Takes a dict and outputs a score for each
 def tengu_bench_evaluator(data:dict, model_name:str) -> int|None:
@@ -133,8 +139,11 @@ def elyza_evaluator(data: dict, model_name:str) -> int|None:
     try:
         gpt4score = int(evaluation)
     except ValueError:
-        print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
-        gpt4score = None
+        try:
+            gpt4score = int(evaluation)
+        except ValueError:
+            print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
+            gpt4score = None
     return gpt4score
 
 ######### MT-Bench ##########
