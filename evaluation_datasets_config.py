@@ -140,6 +140,7 @@ def elyza_evaluator(data: dict, model_name:str) -> int|None:
         gpt4score = int(evaluation)
     except ValueError:
         try:
+            print('Parse error, trying again...')
             gpt4score = int(evaluation)
         except ValueError:
             print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
