@@ -7,7 +7,7 @@ import litellm
 from litellm import completion
 from openai import OpenAI
 
-# litellm.set_verbose=True
+litellm.set_verbose=True
 
 # Global
 fp = 0.0
@@ -64,7 +64,7 @@ def get_answer(question: str, model_name: str):
     generation_temperature = 0.2
     generation_max_tokens = 2048
 
-    '''
+    #'''
     # Anthropic / OpenAI
     response = completion(
         model=f'{model_name}',
@@ -76,13 +76,15 @@ def get_answer(question: str, model_name: str):
         max_tokens=generation_max_tokens,
         # recommend not use top_p https://docs.anthropic.com/en/api/complete
     )
-    '''
+    #'''
 
+    '''
     # OpenAI compatible endpoints (vLLM/llama.cpp)
     response = completion(
         model=f'openai/{model_name}',
         messages=[
             {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
+            # {"role": "system", "content": "あなたは誠実で優秀な日本人のアシスタントです。特に指示が無い場合は、常に日本語で回答してください。"},
             {"role": "user", "content": question},
         ],
         api_base="http://localhost:8000/v1",
@@ -92,9 +94,12 @@ def get_answer(question: str, model_name: str):
         min_p = 0.1
     )
     '''
+
+    '''
     # Gemini
     response = completion(
-        model="gemini/gemini-1.5-flash", 
+        # model="gemini/gemini-1.5-flash", 
+        model="gemini/gemma-2-27b-it", 
         messages=[
             {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
             {"role": "user", "content": question},
