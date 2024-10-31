@@ -8,9 +8,13 @@ git clone https://github.com/shisa-ai/shaberi
 cd shaberi
 
 # Create Environment, Install requirements
-mamba create -n shaberi python=3.11
+mamba create -n shaberi python=3.12
 mamba activate shaberi
-pip install -r requirement.txt
+pip install -r requirements.txt
+
+# For AMD or other hardware you may need to install torch manually
+# https://pytorch.org/get-started/locally/
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.2
 
 # In one terminal, run vLLM OpenAI API, eg: 
 python -m vllm.entrypoints.openai.api_server --model shisa-ai/shisa-v1-llama3-70b -tp 8

@@ -64,7 +64,7 @@ def get_answer(question: str, model_name: str):
     generation_temperature = 0.2
     generation_max_tokens = 2048
 
-    #'''
+    '''
     # Anthropic / OpenAI
     response = completion(
         model=f'{model_name}',
@@ -76,9 +76,8 @@ def get_answer(question: str, model_name: str):
         max_tokens=generation_max_tokens,
         # recommend not use top_p https://docs.anthropic.com/en/api/complete
     )
-    #'''
-
     '''
+
     # OpenAI compatible endpoints (vLLM/llama.cpp)
     response = completion(
         model=f'openai/{model_name}',
@@ -93,7 +92,6 @@ def get_answer(question: str, model_name: str):
         max_tokens=generation_max_tokens,
         min_p = 0.1
     )
-    '''
 
     '''
     # Gemini
