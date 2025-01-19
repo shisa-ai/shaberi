@@ -7,7 +7,7 @@ import litellm
 from litellm import completion
 from openai import OpenAI
 
-litellm.set_verbose=True
+# litellm.set_verbose=True
 
 # Global
 fp = 0.0
@@ -48,18 +48,12 @@ def get_model_response(messages: list, model_name: str) -> str:
 
 
 # === 回答生成関数群 ===
-@backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
 def get_answer(question: str, model_name: str):
     api_key = os.environ.get("OPENAI_API_KEY", "EMPTY")
     if api_key == "EMPTY":
         base_url = "http://localhost:8000/v1"
     else:
         base_url = None
-
-    client = OpenAI(
-        api_key=api_key,
-        base_url=base_url,
-    )
 
     generation_temperature = 0.2
     generation_max_tokens = 2048
@@ -78,6 +72,7 @@ def get_answer(question: str, model_name: str):
     )
     '''
 
+    # os.environ['LITELLM_LOG'] = 'DEBUG'
     # OpenAI compatible endpoints (vLLM/llama.cpp)
     response = completion(
         model=f'openai/{model_name}',
@@ -87,6 +82,7 @@ def get_answer(question: str, model_name: str):
             {"role": "user", "content": question},
         ],
         api_base="http://localhost:8000/v1",
+        api_key=api_key,
         temperature=generation_temperature,
         frequency_penalty=fp,
         max_tokens=generation_max_tokens,
