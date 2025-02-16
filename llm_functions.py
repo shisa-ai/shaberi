@@ -31,10 +31,44 @@ def get_response_from_openai(messages: list, model_name: str) -> str:
     )
     return response.choices[0].message.content
 
+# shisa-bench llmjudge
+@backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
+def get_response_from_llmjudge(messages: list, model_name: str) -> str:
+    judge = model_name.split("-")[1]
+    if judge == "tulu405":
+        # base_url = "http://tulu405/v1"
+        base_url = "http://ip-10-1-85-83:8000/v1"
+        model_name = "Llama-3.1-Tulu-3-405B-FP8-Dynamic"
+    elif judge == "llama33":
+        # base_url = "http://llama33/v1"
+        base_url = "http://ip-10-1-33-173:8001/v1"
+        model_name = "meta-llama/Llama-3.3-70B-Instruct"
+    elif judge == "athenev2":
+        # base_url = "http://athenev2/v1"
+        base_url = "http://ip-10-1-33-173:8000/v1"
+        model_name = "Nexusflow/Athene-V2-Chat"
+    client = OpenAI(
+        api_key=os.environ.get("OPENAI_API_KEY"),
+        base_url=base_url,
+    )
+
+    evaluation_temperature = 0
+    evaluation_max_tokens = 1024
+
+    response = client.chat.completions.create(
+        messages=messages,
+        model=model_name,
+        temperature=evaluation_temperature,
+        max_tokens=evaluation_max_tokens,
+    )
+    return response.choices[0].message.content
+
 
 def get_response_func(model_name: str) -> callable:
     if "gpt" in model_name:
         return get_response_from_openai
+    elif "llmjudge" in model_name:
+        return get_response_from_llmjudge
     else:
         """
         他のモデルで評価する場合は関数、分岐をここに追加
@@ -56,7 +90,7 @@ def get_answer(question: str, model_name: str):
     else:
         base_url = None
 
-    if os.environ.get("OPENAI_BASE_URL", None):
+    if base_url == None:
         base_url = os.environ.get("OPENAI_BASE_URL", "http://localhost:8000/v1")
 
     generation_temperature = 0.2
@@ -89,10 +123,9 @@ def get_answer(question: str, model_name: str):
     # os.environ['LITELLM_LOG'] = 'DEBUG'
     # OpenAI compatible endpoints (vLLM/llama.cpp)
     response = completion(
-        model=f'openai/{model_name}',
+        model=f'hosted_vllm/{model_name}',
         messages=[
             {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
-            # {"role": "system", "content": "あなたは誠実で優秀な日本人のアシスタントです。特に指示が無い場合は、常に日本語で回答してください。"},
             {"role": "user", "content": question},
         ],
         api_base=base_url,
