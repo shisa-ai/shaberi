@@ -23,7 +23,7 @@ tengu_example_evaluation = """[該当する評価項目とその簡潔な理由]
 [計算式]
 3+2+1+1=7
 [点数]
-7点"""
+<score>7</score>"""
 
 def get_tengu_prompt(data: dict) -> str:
     question = data['Question']
@@ -49,14 +49,30 @@ def get_tengu_prompt(data: dict) -> str:
 [評価するモデルの回答]
 {model_answer}
 
-# 以下の形式で回答してください。
+# 以下の形式で回答してください。必ず最終的なスコアを<score>タグで囲んでください。
 [該当する評価項目とその簡潔な理由]
 
 [計算式]
 
 [点数]
+<score>点数をここに記入</score>
 """
     return prompt
+
+def get_tengu_eval_score(eval_text: str) -> int:
+    try:
+        # Try to find score in XML tags first
+        score_match = re.search(r"<score>(\d{1,2})</score>", eval_text)
+        if score_match:
+            return int(score_match.group(1))
+        
+        # Fall back to original parsing method
+        score_text = re.search(r"\[点数\]\n\d{1,2}点", eval_text).group()
+        score = re.search(r"\d{1,2}", score_text).group()
+        return int(score)
+    except (ValueError, AttributeError):
+        print(f"Unable to parse Tengu score from {eval_text}")
+        return None
 
 def make_tengu_conversation(data: dict) -> list:
     return [
@@ -72,22 +88,6 @@ def make_tengu_conversation(data: dict) -> list:
         }
     ]
 
-def get_tengu_eval_score(eval_text: str) -> int:
-    try:
-        score_text = re.search(r"\[点数\]\n\d{1,2}点", eval_text).group()
-        score = re.search(r"\d{1,2}", score_text).group()
-        return int(score)
-    except (ValueError, AttributeError):
-        try:
-            print('Parse error, trying again...')
-            score_text = re.search(r"\[点数\]\n\d{1,2}点", eval_text).group()
-            score = re.search(r"\d{1,2}", score_text).group()
-            return int(score)
-        except (ValueError, AttributeError):
-            print(f"Unable to parse Tengu score from {eval_text}")
-            return None
-        
-# Takes a dict and outputs a score for each
 def tengu_bench_evaluator(data:dict, model_name:str) -> int|None:
     messages = make_tengu_conversation(data)
     evaluation = get_model_response(messages, model_name)
@@ -105,6 +105,7 @@ def get_elyza_prompt(row: dict):
 問題, 正解例, 採点基準, 回答 が与えられます。
 
 採点基準と正解例を参考にして、回答を1,2,3,4,5の5段階で採点し、数字のみを出力してください。
+必ず最終的なスコアを<score>タグで囲んで出力してください。
 
 # 問題
 {question}
@@ -130,6 +131,8 @@ def get_elyza_prompt(row: dict):
 
 # 回答
 {model_answer}
+
+最終スコア: <score>ここにスコアを記入</score>
 """
 
 def elyza_evaluator(data: dict, model_name:str) -> int|None:
@@ -137,15 +140,16 @@ def elyza_evaluator(data: dict, model_name:str) -> int|None:
     messages = [{"role": "user", "content": prompt}]
     evaluation = get_model_response(messages, model_name)
     try:
-        gpt4score = int(evaluation)
-    except ValueError:
-        try:
-            print('Parse error, trying again...')
-            gpt4score = int(evaluation)
-        except ValueError:
-            print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
-            gpt4score = None
-    return gpt4score
+        # Try to find score in XML tags first
+        score_match = re.search(r"<score>(\d)</score>", evaluation)
+        if score_match:
+            return int(score_match.group(1))
+            
+        # Fall back to direct integer parsing
+        return int(evaluation.strip())
+    except (ValueError, AttributeError):
+        print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
+        return None
 
 ######### MT-Bench ##########
 
