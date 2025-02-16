@@ -84,7 +84,7 @@ if all_dfs:
         result_df = result_df.join(judge_means, how='outer')
     
     # Add judge count column
-    result_df["# Judges"] = pd.Series({model: len(judges) for model, judges in model_judge_counts.items()})
+    result_df["Judges"] = pd.Series({model: len(judges) for model, judges in model_judge_counts.items()})
 
     # Sort by Average (All) descending
     result_df = result_df.sort_values("Average (All)", ascending=False)
@@ -109,8 +109,7 @@ if all_dfs:
     # Debug print some values
     # Ensure floating point division
     delta = (ex_gpt4_avg - gpt4_avg) / gpt4_avg
-    print("Raw delta:", delta[valid_scores].head())
-    
+    # print("Raw delta:", delta[valid_scores].head())
     result_df.loc[valid_scores, "GPT4 delta"] = delta[valid_scores]
 
     # Organize columns by judge blocks
@@ -127,7 +126,7 @@ if all_dfs:
         judge_blocks.extend(avg_col + other_cols)
     
     # Combine all blocks in order, with # Judges and Average (ex-GPT4) after index
-    sorted_cols = ["# Judges", "Average (ex-GPT4)"] + all_cols + judge_blocks + ["GPT4 delta"]
+    sorted_cols = ["Judges", "Average (ex-GPT4)"] + all_cols + judge_blocks + ["GPT4 delta"]
     result_df = result_df[sorted_cols]
 
     # Create Excel writer with formatting
@@ -143,8 +142,8 @@ if all_dfs:
     ws = wb.active
     
     # Define styles
-    header_font = Font(name='Source Code Pro', bold=True)
-    cell_font = Font(name='Source Code Pro')
+    header_font = Font(name='Consolas', bold=True)
+    cell_font = Font(name='Consolas')
     left_align = Alignment(horizontal='left', vertical='top')
     header_align = Alignment(horizontal='left', vertical='top', wrap_text=True)
     number_align = Alignment(horizontal='right', vertical='top')
@@ -177,15 +176,25 @@ if all_dfs:
     
     # Set specific column widths
     # Model column (A)
-    ws.column_dimensions['A'].width = 60
+    ws.column_dimensions['A'].width = 50
     
-    # # Judges column (B)
-    ws.column_dimensions['B'].width = 12
+    # Judges column (B)
+    ws.column_dimensions['B'].width = 8
+
+    # GPT4 delta
+    ws.column_dimensions['AC'].width = 8
     
     # All other numeric columns
     for column in range(3, ws.max_column + 1):
         col_letter = get_column_letter(column)
-        ws.column_dimensions[col_letter].width = 14
+        ws.column_dimensions[col_letter].width = 12
+        
+        # Add left border for columns with headers starting with 'Average'
+        header_value = ws.cell(1, column).value
+        if header_value and (header_value.startswith('Average') or header_value == "GPT4 delta"):
+            for row in range(1, ws.max_row + 1):
+                cell = ws.cell(row, column)
+                cell.border = Border(left=Side(style='thin'))
     
     from openpyxl.formatting.rule import CellIsRule
     from openpyxl.styles import PatternFill, Font
@@ -205,7 +214,7 @@ if all_dfs:
             operator='equal',
             formula=[f'MAX(${col_letter}$2:${col_letter}${ws.max_row})'],
             stopIfTrue=True,
-            font=Font(name='Source Code Pro', bold=True, color='127622')
+            font=Font(name='Consolas', bold=True, color='127622')
         )
         
         # Apply the rule to the column range
