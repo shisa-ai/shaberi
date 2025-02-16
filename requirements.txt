@@ -5,4 +5,5 @@ litellm
 matplotlib
 packaging
 seaborn
+rich
 tabulate
