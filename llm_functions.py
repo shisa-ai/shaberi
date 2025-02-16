@@ -48,6 +48,7 @@ def get_model_response(messages: list, model_name: str) -> str:
 
 
 # === 回答生成関数群 ===
+# @backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
 def get_answer(question: str, model_name: str):
     api_key = os.environ.get("OPENAI_API_KEY", "EMPTY")
     if api_key == "EMPTY":
