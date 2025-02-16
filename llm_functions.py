@@ -62,6 +62,16 @@ def get_answer(question: str, model_name: str):
     generation_temperature = 0.2
     generation_max_tokens = 2048
 
+    thinking_models = [
+        'deepseek-ai/DeepSeek-R1',
+        'FuseAI/FuseO1-DeepSeekR1-QwQ-SkyT1-32B-Preview',
+        'dahara1/DeepSeek-R1-Distill-Qwen-14B-unsloth-jpn',
+        'FuseAI/FuseO1-DeepSeekR1-QwQ-SkyT1-32B-Preview',
+    ]
+
+    if model_name in thinking_models:
+        generation_max_tokens = 32000
+
     '''
     # Anthropic / OpenAI
     response = completion(
@@ -126,7 +136,16 @@ def get_answer(question: str, model_name: str):
     )
     '''
 
-    return response.choices[0].message.content
+    content = response.choices[0].message.content
+
+    # If we want to parse out thinking tags...
+    if model_name in thinking_models:
+        try:
+            content = content.split('</think>')[1].strip()
+        except:
+            print('Hmm... No </think> to strip?')
+
+    return content
 
 
 def get_answerer(model_name: str) -> callable:
