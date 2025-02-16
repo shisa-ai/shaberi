@@ -56,6 +56,9 @@ def get_answer(question: str, model_name: str):
     else:
         base_url = None
 
+    if os.environ.get("OPENAI_BASE_URL", None):
+        base_url = os.environ.get("OPENAI_BASE_URL", "http://localhost:8000/v1")
+
     generation_temperature = 0.2
     generation_max_tokens = 2048
 
@@ -82,7 +85,7 @@ def get_answer(question: str, model_name: str):
             # {"role": "system", "content": "あなたは誠実で優秀な日本人のアシスタントです。特に指示が無い場合は、常に日本語で回答してください。"},
             {"role": "user", "content": question},
         ],
-        api_base="http://localhost:8000/v1",
+        api_base=base_url,
         api_key=api_key,
         temperature=generation_temperature,
         frequency_penalty=fp,
