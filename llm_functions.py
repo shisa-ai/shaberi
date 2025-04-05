@@ -36,17 +36,24 @@ def get_response_from_openai(messages: list, model_name: str) -> str:
 def get_response_from_llmjudge(messages: list, model_name: str) -> str:
     judge = model_name.split("-")[1]
     if judge == "tulu405":
-        # base_url = "http://tulu405/v1"
         base_url = "http://ip-10-1-85-83:8000/v1"
+
+        base_url = "http://tulu405/v1"
         model_name = "Llama-3.1-Tulu-3-405B-FP8-Dynamic"
+
+        model_name = "shisa-ai/Llama-3.1-Tulu-3-405B-FP8-Dynamic"
     elif judge == "llama33":
-        # base_url = "http://llama33/v1"
         base_url = "http://ip-10-1-33-173:8001/v1"
         model_name = "meta-llama/Llama-3.3-70B-Instruct"
+
+        base_url = "http://llama33/v1"
+        model_name = "llama-3.3-70b-ray"
     elif judge == "athenev2":
-        # base_url = "http://athenev2/v1"
         base_url = "http://ip-10-1-33-173:8000/v1"
         model_name = "Nexusflow/Athene-V2-Chat"
+
+        base_url = "http://athenev2/v1"
+        model_name = "athene-v2"
     client = OpenAI(
         api_key=os.environ.get("OPENAI_API_KEY"),
         base_url=base_url,
@@ -84,6 +91,7 @@ def get_model_response(messages: list, model_name: str) -> str:
 # === 回答生成関数群 ===
 # @backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
 def get_answer(question: str, model_name: str):
+
     api_key = os.environ.get("OPENAI_API_KEY", "EMPTY")
     if api_key == "EMPTY":
         base_url = "http://localhost:8000/v1"
@@ -101,6 +109,7 @@ def get_answer(question: str, model_name: str):
         'FuseAI/FuseO1-DeepSeekR1-QwQ-SkyT1-32B-Preview',
         'dahara1/DeepSeek-R1-Distill-Qwen-14B-unsloth-jpn',
         'FuseAI/FuseO1-DeepSeekR1-QwQ-SkyT1-32B-Preview',
+        'RekaAI/reka-flash-3',
     ]
 
     if model_name in thinking_models:
@@ -120,27 +129,50 @@ def get_answer(question: str, model_name: str):
     )
     '''
 
-    # os.environ['LITELLM_LOG'] = 'DEBUG'
-    # OpenAI compatible endpoints (vLLM/llama.cpp)
-    response = completion(
-        model=f'hosted_vllm/{model_name}',
-        messages=[
+
+
+    ### Making Call
+    completion_args = {
+        "messages": [
             {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
             {"role": "user", "content": question},
         ],
-        api_base=base_url,
-        api_key=api_key,
-        temperature=generation_temperature,
-        frequency_penalty=fp,
-        max_tokens=generation_max_tokens,
-        min_p = 0.1
-    )
+        "api_base": base_url,
+        "api_key": api_key,
+        "temperature": generation_temperature,
+        "max_tokens": generation_max_tokens,
+    }
+
+    # HACK Handling OpenAI Model Names
+    openai_prefixes = [
+        "gpt-", "text-davinci-", "davinci", "curie", "babbage", "ada", 
+        "whisper", "claude", "text-embedding", "openai/", "openai:"
+    ]
+    if any(model_name.startswith(prefix) for prefix in openai_prefixes):
+        completion_args['model'] = model_name
+        # no support for freq penalty or min_p
+    elif model_name.startswith("gemini"):
+        completion_args['model'] = f'hosted_vllm/{model_name}'
+    else:
+        completion_args['model'] = f'hosted_vllm/{model_name}'
+        completion_args['frequency_penalty'] = fp
+        completion_args['min_p'] = 0.1
+
+
+    # print(f"base_url: {base_url}")
+    # print(f"api_key: {api_key}")
+    # import sys
+    # sys.exit()
+
+    # os.environ['LITELLM_LOG'] = 'DEBUG'
+    # OpenAI compatible endpoints (vLLM/llama.cpp)
+    response = completion(**completion_args)
 
     '''
     # Gemini
     response = completion(
-        # model="gemini/gemini-1.5-flash", 
-        model="gemini/gemma-2-27b-it", 
+        # model="gemini/gemini-1.5-flash",
+        model="gemini/gemma-2-27b-it",
         messages=[
             {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
             {"role": "user", "content": question},
@@ -174,9 +206,12 @@ def get_answer(question: str, model_name: str):
     # If we want to parse out thinking tags...
     if model_name in thinking_models:
         try:
-            content = content.split('</think>')[1].strip()
+            if '</think>' in content:
+                content = content.split('</think>')[1].strip()
+            elif '</reasoning>' in content:
+                content = content.split('</reasoning>')[1].strip()
         except:
-            print('Hmm... No </think> to strip?')
+            print('Hmm... No </think> or </reasoning> to strip?')
 
     return content
 
