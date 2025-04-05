@@ -62,14 +62,14 @@ def get_tengu_prompt(data: dict) -> str:
 def get_tengu_eval_score(eval_text: str) -> int:
     try:
         # Try to find score in XML tags first
-        score_match = re.search(r"<score>(\d{1,2})</score>", eval_text)
+        score_match = re.search(r"<score>([0-9.]+)</score>", eval_text)
         if score_match:
-            return int(score_match.group(1))
+            return round(float(score_match.group(1)))
         
         # Fall back to original parsing method
-        score_text = re.search(r"\[点数\]\n\d{1,2}点", eval_text).group()
-        score = re.search(r"\d{1,2}", score_text).group()
-        return int(score)
+        score_text = re.search(r"\[点数\]\n[0-9.]+点", eval_text).group()
+        score = re.search(r"[0-9.]+", score_text).group()
+        return round(float(score))
     except (ValueError, AttributeError):
         print(f"Unable to parse Tengu score from {eval_text}")
         return None
@@ -141,12 +141,12 @@ def elyza_evaluator(data: dict, model_name:str) -> int|None:
     evaluation = get_model_response(messages, model_name)
     try:
         # Try to find score in XML tags first
-        score_match = re.search(r"<score>(\d)</score>", evaluation)
+        score_match = re.search(r"<score>([0-9.]+)</score>", evaluation)
         if score_match:
-            return int(score_match.group(1))
+            return round(float(score_match.group(1)))
             
         # Fall back to direct integer parsing
-        return int(evaluation.strip())
+        return round(float(evaluation.strip()))
     except (ValueError, AttributeError):
         print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
         return None
@@ -172,9 +172,9 @@ def mt_evaluator(data: dict, model_name:str) -> int|None:
     messages = [{"role": "user", "content": prompt}]
     evaluation = get_model_response(messages, model_name)
     try:
-        score_text = re.search(r"評価：\[\[\d{1,2}\]\]", evaluation).group()
-        score = re.search(r"\d{1,2}", score_text).group()
-        return int(score)
+        score_text = re.search(r"評価：\[\[[0-9.]+\]\]", evaluation).group()
+        score = re.search(r"[0-9.]+", score_text).group()
+        return round(float(score))
     except (ValueError, AttributeError):
         print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
         gpt4score = None
@@ -201,9 +201,9 @@ def rakuda_evaluator(data: dict, model_name:str) -> int|None:
     messages = [{"role": "user", "content": prompt}]
     evaluation = get_model_response(messages, model_name)
     try:
-        score_text = re.search(r"評価：(\[\[|\[|【)\d{1,2}(\]\]|\]|】)", evaluation).group()
-        score = re.search(r"\d{1,2}", score_text).group()
-        return int(score)
+        score_text = re.search(r"評価：(\[\[|\[|【)[0-9.]+(\]\]|\]|】)", evaluation).group()
+        score = re.search(r"[0-9.]+", score_text).group()
+        return round(float(score))
     except (ValueError, AttributeError):
         print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
         gpt4score = None
