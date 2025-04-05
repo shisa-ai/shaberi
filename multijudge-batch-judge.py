@@ -119,12 +119,13 @@ def make_progress_panel(judge_state: JudgeState) -> Panel:
     """Create a progress panel for a judge."""
     from rich.console import Group
     from rich.text import Text
+    from rich.padding import Padding
     
-    # Create progress bar
+    # Create progress bar with fixed width ratio
     progress = Progress(
-        TextColumn("[bold blue]{task.description}"),
-        BarColumn(),
-        TextColumn("{task.fields[fraction]}"),
+        TextColumn("[bold blue]{task.description:20}"),  # Use string formatting for width
+        BarColumn(bar_width=None),  # Allow bar to flex
+        TextColumn("{task.fields[fraction]:>10}"),  # Right-aligned, fixed width
         expand=True
     )
     
@@ -135,23 +136,30 @@ def make_progress_panel(judge_state: JudgeState) -> Panel:
     )
     progress.update(task_id, completed=judge_state.completed)
     
-    # Create output display
+    # Create output display with fixed height
     output_lines = []
     with judge_state.lock:
         output_lines = judge_state.output_lines.copy()
     
+    # Ensure consistent height by padding or truncating
+    target_height = 10
+    if len(output_lines) < target_height:
+        output_lines.extend([''] * (target_height - len(output_lines)))
+    else:
+        output_lines = output_lines[-target_height:]
+    
     output_text = Text('\n'.join(output_lines), style="bright_black")
     
-    # Combine progress and output in a group
+    # Create a responsive group with padding
     group = Group(
-        progress,
-        Text(f"Current: {judge_state.current_model}", style="bold yellow"),
-        Text(judge_state.status, style="green"),
-        Text("\nOutput:", style="bold blue"),
-        output_text
+        Padding(progress, (0, 1)),
+        Padding(Text(f"Current: {judge_state.current_model}", style="bold yellow"), (1, 1)),
+        Padding(Text(judge_state.status, style="green"), (0, 1)),
+        Padding(Text("Output:", style="bold blue"), (1, 1)),
+        Padding(output_text, (0, 1))
     )
     
-    return Panel(group, title=judge_state.name)
+    return Panel(group, title=judge_state.name, expand=True)
 
 def main():
     # Read model list from output.csv
@@ -168,10 +176,17 @@ def main():
         judge_states[judge] = JudgeState(judge, remaining_models)
         print(f"{judge}: {len(remaining_models)}/{len(models)} models to judge")
     
-    # Setup TUI
+    # Setup TUI with responsive layout
     console = Console()
-    layout = Layout()
-    layout.split_column(*[make_progress_panel(state) for state in judge_states.values()])
+    layout = Layout(name="root")
+    
+    # Initialize layout with panels
+    panels = {}
+    for judge, state in judge_states.items():
+        panels[judge] = make_progress_panel(state)
+    
+    # Create layout sections and add initial content
+    layout.split_column(*[Layout(panels[judge], name=judge, ratio=1) for judge in judge_states])
     
     # Setup thread management
     stop_event = threading.Event()
@@ -180,8 +195,8 @@ def main():
         stop_event.set()
     signal.signal(signal.SIGINT, signal_handler)
     
-    # Start judge threads
-    with Live(layout, refresh_per_second=4, auto_refresh=False) as live:
+    # Start judge threads with optimized refresh
+    with Live(layout, console=console, screen=True, refresh_per_second=10) as live:
         with ThreadPoolExecutor(max_workers=len(JUDGES)) as executor:
             futures = []
             for judge in JUDGES:
@@ -192,11 +207,24 @@ def main():
                     )
             
             while futures and not stop_event.is_set():
-                # Update layout with new panels
-                layout.split_column(*[make_progress_panel(state) for state in judge_states.values()])
+                # Update each panel individually to reduce flickering
+                for judge, state in judge_states.items():
+                    panels[judge] = make_progress_panel(state)
+                    layout[judge].update(panels[judge])
+                
+                # Sleep to prevent excessive updates
+                time.sleep(0.1)
+                
+                # Check for completed futures
+                futures = [f for f in futures if not f.done()]
+                
                 # Force a refresh of the display
                 live.refresh()
-                time.sleep(0.25)
+    
+    if stop_event.is_set():
+        print("\nExecution stopped by user")
+    else:
+        print("\nAll judgements completed")
     
     if stop_event.is_set():
         print("Gracefully stopped all judge threads")
