@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 
 import pandas as pd
+import string
+
 from glob import glob
 from collections import defaultdict
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.formatting.rule import CellIsRule
 from openpyxl.utils import get_column_letter
 
 # Define paths and dataset mapping
@@ -24,9 +27,32 @@ eval_dataset_dict = {
     "shisa-ai__ja-mt-bench-1shot": "JA-MT",
 }
 
+# Helper functions for Japanese text analysis
+def is_japanese_char(char):
+    return any([
+        0x3040 <= ord(char) <= 0x309F,  # Hiragana
+        0x30A0 <= ord(char) <= 0x30FF,  # Katakana
+        0x4E00 <= ord(char) <= 0x9FFF   # Kanji
+    ])
+
+def is_acceptable_char(char):
+    return char in string.punctuation or char.isdigit()
+
+def calculate_japanese_percentage(text):
+    # Filter out whitespace characters first
+    non_space_chars = [char for char in text if not char.isspace()]
+    if not non_space_chars:
+        return 0
+    
+    total_chars = len(non_space_chars)
+    japanese_chars = sum(is_japanese_char(char) or is_acceptable_char(char) for char in non_space_chars)
+    return (japanese_chars / total_chars) if total_chars > 0 else 0
+
 # Initialize dictionaries to store results by judge
 judge_results = defaultdict(list)
 model_judge_counts = defaultdict(set)
+model_ja_percentages = {}
+
 
 # Process results by judge
 for model_result_path in model_result_paths:
@@ -45,6 +71,15 @@ for model_result_path in model_result_paths:
     df = pd.read_json(model_result_path, lines=True)
     df["eval_dataset"] = eval_dataset_dict[eval_dataset_key]
     df["model_name"] = model_name
+    
+    # Calculate Japanese percentage for each response
+    if model_name not in model_ja_percentages:
+        ja_percentages = []
+        for _, row in df.iterrows():
+            if 'ModelAnswer' in row:
+                ja_percentages.append(calculate_japanese_percentage(row['ModelAnswer']))
+        if ja_percentages:
+            model_ja_percentages[model_name] = sum(ja_percentages) / len(ja_percentages)
     
     # Apply ELYZA score adjustment (0-5 to 0-10 scale)
     if eval_dataset_dict[eval_dataset_key] == "ELYZA 100":
@@ -85,6 +120,9 @@ if all_dfs:
     
     # Add judge count column
     result_df["Judges"] = pd.Series({model: len(judges) for model, judges in model_judge_counts.items()})
+    
+    # Add Japanese percentage column
+    result_df["% JA"] = pd.Series(model_ja_percentages)
 
     # Sort by Average (All) descending
     result_df = result_df.sort_values("Average (All)", ascending=False)
@@ -126,8 +164,12 @@ if all_dfs:
         judge_blocks.extend(avg_col + other_cols)
     
     # Combine all blocks in order, with # Judges and Average (ex-GPT4) after index
-    sorted_cols = ["Judges", "Average (ex-GPT4)"] + all_cols + judge_blocks + ["GPT4 delta"]
+    sorted_cols = ["Judges", "Average (ex-GPT4)"] + all_cols + judge_blocks + ["GPT4 delta", "% JA"]
     result_df = result_df[sorted_cols]
+
+
+    # csv output
+    result_df.to_csv('output.csv', index=True)
 
     # Create Excel writer with formatting
     output_file = 'output-multi.xlsx'
@@ -142,8 +184,8 @@ if all_dfs:
     ws = wb.active
     
     # Define styles
-    header_font = Font(name='Consolas', bold=True)
-    cell_font = Font(name='Consolas')
+    header_font = Font(name='Noto Sans Mono', bold=True)
+    cell_font = Font(name='Noto Sans Mono')
     left_align = Alignment(horizontal='left', vertical='top')
     header_align = Alignment(horizontal='left', vertical='top', wrap_text=True)
     number_align = Alignment(horizontal='right', vertical='top')
@@ -167,8 +209,9 @@ if all_dfs:
                         row_cell.fill = PatternFill(start_color="dcb1ff", end_color="dcb1ff", fill_type="solid")
             else:  # Numeric cells
                 cell.alignment = number_align
-                # Set specific number format for GPT4 delta column
-                if ws.cell(1, cell.column).value == "GPT4 delta":
+                cell.number_format = '0.00'
+                header_value = ws.cell(1, cell.column).value
+                if header_value in ["GPT4 delta", "% JA"]:
                     cell.number_format = '0.0%'
     
     # Freeze panes for first row and column
@@ -181,9 +224,6 @@ if all_dfs:
     # Judges column (B)
     ws.column_dimensions['B'].width = 8
 
-    # GPT4 delta
-    ws.column_dimensions['AC'].width = 8
-    
     # All other numeric columns
     for column in range(3, ws.max_column + 1):
         col_letter = get_column_letter(column)
@@ -191,13 +231,14 @@ if all_dfs:
         
         # Add left border for columns with headers starting with 'Average'
         header_value = ws.cell(1, column).value
-        if header_value and (header_value.startswith('Average') or header_value == "GPT4 delta"):
+        if header_value and (header_value.startswith('Average') or header_value == "GPT4 delta" or header_value == "% JA"):
             for row in range(1, ws.max_row + 1):
                 cell = ws.cell(row, column)
                 cell.border = Border(left=Side(style='thin'))
     
-    from openpyxl.formatting.rule import CellIsRule
-    from openpyxl.styles import PatternFill, Font
+    # GPT4 delta
+    ws.column_dimensions['AC'].width = 8
+
     
     # Get column indices for score columns (skip Model, # Judges, and GPT4 delta)
     score_columns = list(range(3, ws.max_column))  # Columns C onwards, excluding last column
@@ -214,13 +255,14 @@ if all_dfs:
             operator='equal',
             formula=[f'MAX(${col_letter}$2:${col_letter}${ws.max_row})'],
             stopIfTrue=True,
-            font=Font(name='Consolas', bold=True, color='127622')
+            font=Font(bold=True, color='127622')
         )
         
         # Apply the rule to the column range
         ws.conditional_formatting.add(col_range, rule)
     
     # Format numbers
+    '''
     for row in ws.iter_rows(min_row=2, max_row=ws.max_row, min_col=3, max_col=ws.max_column):
         for cell in row:
             if isinstance(cell.value, (int, float)):
@@ -228,6 +270,7 @@ if all_dfs:
                     cell.number_format = '+0.0%;-0.0%;0%'
                 else:
                     cell.number_format = '0.00'
+    '''
     
     # Add threshold borders
     from openpyxl.styles import Border, Side
@@ -260,7 +303,32 @@ if all_dfs:
                 cell.border = threshold_border
                 break
     
-    # Save the formatted workbook
+    # Add conditional formatting for % JA column
+    ja_col = get_column_letter(ws.max_column)  # % JA is the last column
+    ja_range = f"{ja_col}2:{ja_col}{ws.max_row}"
+    
+    # Rule for <50%
+    ws.conditional_formatting.add(
+        ja_range,
+        CellIsRule(
+            operator='lessThan',
+            formula=['0.5'],
+            stopIfTrue=True,
+            font=Font(color='ff0000')
+        )
+    )
+    
+    # Rule for <80% but >=50%
+    ws.conditional_formatting.add(
+        ja_range,
+        CellIsRule(
+            operator='lessThan',
+            formula=['0.8'],
+            stopIfTrue=False,
+            font=Font(color='c6654e')
+        )
+    )
+    
     wb.save(output_file)
     print(f"Results saved to {output_file}")
 else:
