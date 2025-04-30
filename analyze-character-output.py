@@ -82,6 +82,9 @@ def parse_file(file_path: str) -> dict | None:
     special_chars = 0
     other_chars = 0
 
+    # Regex to remove anything in <think> tags (including the tags)
+    think_pattern = re.compile(r'<think>.*?</think>', re.DOTALL)
+
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             for line in f:
@@ -90,7 +93,10 @@ def parse_file(file_path: str) -> dict | None:
                     model_answer = data.get("ModelAnswer", "")
                     
                     if model_answer:
-                        for char in model_answer:
+                        # Strip out anything in <think> tags
+                        cleaned_answer = think_pattern.sub('', model_answer)
+                        
+                        for char in cleaned_answer:
                             category = categorize_char(char)
                             if category == "Japanese":
                                 japanese_chars += 1
@@ -104,7 +110,7 @@ def parse_file(file_path: str) -> dict | None:
                                 special_chars += 1
                             else:
                                 other_chars += 1
-                        total_chars += len(model_answer)
+                        total_chars += len(cleaned_answer)
                 except json.JSONDecodeError:
                     print(f"Error parsing JSON in file: {file_path}")
                     continue
