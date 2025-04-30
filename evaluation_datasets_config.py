@@ -1,5 +1,4 @@
 import re
-
 from llm_functions import get_model_response
 
 ######### TENGU ##########
@@ -59,19 +58,29 @@ def get_tengu_prompt(data: dict) -> str:
 """
     return prompt
 
-def get_tengu_eval_score(eval_text: str) -> int:
+def get_tengu_eval_score(eval_text: str) -> int | None:
+    if eval_text is None:
+        print("Received None eval_text, returning None score.")
+        return None
     try:
         # Try to find score in XML tags first
         score_match = re.search(r"<score>([0-9.]+)</score>", eval_text)
         if score_match:
             return round(float(score_match.group(1)))
-        
+
         # Fall back to original parsing method
-        score_text = re.search(r"\[点数\]\n[0-9.]+点", eval_text).group()
-        score = re.search(r"[0-9.]+", score_text).group()
-        return round(float(score))
+        score_text_match = re.search(r"\[点数\]\\n[0-9.]+点", eval_text)
+        if score_text_match:
+            score_text = score_text_match.group()
+            score_match_fallback = re.search(r"[0-9.]+", score_text)
+            if score_match_fallback:
+                score = score_match_fallback.group()
+                return round(float(score))
+
+        raise ValueError("Could not find score pattern")
+
     except (ValueError, AttributeError):
-        print(f"Unable to parse Tengu score from {eval_text}")
+        print(f"Unable to parse Tengu score from '{eval_text[:100]}...'") 
         return None
 
 def make_tengu_conversation(data: dict) -> list:
