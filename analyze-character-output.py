@@ -83,6 +83,35 @@ def categorize_char(char):
 
 def analyze_text(text):
     """Analyze text and return character distribution by category"""
+    # NOTE ON JAPANESE/CHINESE DIFFERENTIATION:
+    # The current implementation uses a simple codepoint-based approach to differentiate
+    # between Japanese and Chinese characters, which has limitations due to the overlap in 
+    # the Unicode CJK ranges. For more accurate differentiation, consider these approaches:
+    #
+    # 1. Frequency dictionary approach: Build dictionaries of character frequencies in
+    #    both languages and classify shared CJK characters based on their relative frequency
+    #    (e.g., a character that appears 100x more in Chinese than Japanese texts would
+    #    be considered Chinese leakage in a Japanese context)
+    #
+    # 2. N-gram analysis: Analyze sequences of characters rather than individual codepoints,
+    #    as certain character combinations are characteristic of one language but not the other
+    #
+    # 3. Joyo Kanji list approach: Maintain a list of commonly used Japanese kanji
+    #    (~2,136 Joyo kanji + ~863 Jinmeiyo kanji) and flag other characters in the shared
+    #    CJK range as potential Chinese leakage
+    #
+    # 4. Context-aware classification: Consider surrounding characters - if a CJK ideograph
+    #    is surrounded by hiragana/katakana, it's more likely to be Japanese usage
+    #
+    # 5. Language-specific variants: Check for simplified Chinese-specific or traditional 
+    #    Chinese-specific variants of characters that differ from their Japanese counterparts
+    #
+    # 6. Morphological analysis: Use Japanese-specific morphological analyzers (like MeCab)
+    #    to separate text into morphemes; anything not properly parsed could be non-Japanese
+    #
+    # These methods would provide more accurate detection of cross-lingual token leakage,
+    # especially for models like Qwen that may leak Chinese tokens into Japanese outputs.
+    
     total_chars = len(text)
     if total_chars == 0:
         return {"Japanese": 0, "Chinese": 0, "English": 0, "Number": 0, "Whitespace": 0, 
