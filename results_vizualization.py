@@ -5,8 +5,19 @@
 
 
 from glob import glob
+import os
 
+# Get all JSON files
 model_result_paths = glob("./data/judgements/*/*/*.json")
+
+# Skip known problematic files
+problematic_files = [
+    "./data/judgements/judge_llmjudge-tulu405/shisa-ai__ja-mt-bench-1shot/ablation-170-a174.dpo.finaldpo.if50.pl25-shisa-v2-llama-3.1-8b.json"
+]
+
+# Filter out problematic files
+model_result_paths = [path for path in model_result_paths if path not in problematic_files]
+print(f"Processing {len(model_result_paths)} JSON files (skipped {len(problematic_files)} problematic files)")
 
 
 # In[159]:
@@ -24,11 +35,40 @@ eval_dataset_dict = {
 
 
 import pandas as pd
+import json
 
 all_result_dfs = []
 
 for model_result_path in model_result_paths:
-    temp_df = pd.read_json(model_result_path, lines=True)
+    try:
+        # Try the standard pandas read_json first
+        temp_df = pd.read_json(model_result_path, lines=True)
+    except ValueError as e:
+        print(f"Error reading {model_result_path}: {e}")
+        print("Attempting alternative parsing method...")
+        try:
+            # Try manual parsing as fallback
+            with open(model_result_path, 'r', encoding='utf-8') as f:
+                json_lines = []
+                for i, line in enumerate(f):
+                    try:
+                        # Attempt to parse each line individually
+                        if line.strip():  # Skip empty lines
+                            json_obj = json.loads(line.strip())
+                            json_lines.append(json_obj)
+                    except json.JSONDecodeError as je:
+                        print(f"Error in line {i+1}: {je} - {line[:50]}...")
+                # Create dataframe from successfully parsed lines
+                if json_lines:
+                    temp_df = pd.DataFrame(json_lines)
+                else:
+                    print(f"Could not parse any lines in {model_result_path}, skipping file")
+                    continue
+        except Exception as e2:
+            print(f"Failed to parse {model_result_path} with alternative method: {e2}")
+            continue
+    
+    # Add metadata columns
     temp_df["judge_model"] = model_result_path.split("/")[3]
     temp_df["eval_dataset"] = eval_dataset_dict[model_result_path.split("/")[4]]
     temp_df["model_name"] = model_result_path.split("/")[5].replace(".json", "")
@@ -117,13 +157,38 @@ styled_df
 
 import re
 def get_model_size(x):
-    if x.name == "openchat__openchat-3.5-0106":
-        return 7
-    elif x.name == "CohereForAI__c4ai-command-r-v01":
-        return 35
+    # Dictionary for known models with their sizes
+    known_models = {
+        "openchat__openchat-3.5-0106": 7,
+        "CohereForAI__c4ai-command-r-v01": 35,
+        # Add more known models as needed
+    }
+    
+    # Check if the model is in our known list
+    if x.name in known_models:
+        return known_models[x.name]
+    
+    # Try multiple regex patterns to extract size
     try:
-        return int(re.search("\d{1,2}[bB]",x.name).group(0)[:-1])
-    except:
+        # Try pattern like "7b" or "13B"
+        size_match = re.search(r"\b(\d{1,3})[bB]\b", x.name)
+        if size_match:
+            return int(size_match.group(1))
+        
+        # Try other common patterns (add more as needed)
+        size_match = re.search(r"-(\d{1,3})b", x.name, re.IGNORECASE)
+        if size_match:
+            return int(size_match.group(1))
+            
+        # For models like "llama-3-70b"
+        size_match = re.search(r"\b(\d{1,3})b-", x.name, re.IGNORECASE)
+        if size_match:
+            return int(size_match.group(1))
+        
+        print(f"Could not find model size for: {x.name}")
+        return None
+    except Exception as e:
+        print(f"Error parsing model size for {x.name}: {e}")
         return None
 
 
@@ -151,7 +216,19 @@ log_size_df = size_df
 
 
 from math import log
-log_size_df["model_size"] = log_size_df["model_size"].apply(lambda x: log(x))
+
+# Add a safety check for the logarithm (only positive numbers)
+def safe_log(x):
+    try:
+        if x <= 0:
+            print(f"Warning: Cannot take logarithm of non-positive number {x}, using 1 instead")
+            return log(1)  # Default to log(1) = 0
+        return log(x)
+    except Exception as e:
+        print(f"Error calculating log for value {x}: {e}")
+        return log(1)  # Default to log(1) = 0
+
+log_size_df["model_size"] = log_size_df["model_size"].apply(safe_log)
 
 
 # In[152]:
