@@ -35,7 +35,8 @@ def main():
 
     parser.add_argument('-m', '--model_name', type=str, required=True)
     parser.add_argument('-d', '--eval_dataset_name', type=str, default='all')
-    parser.add_argument('-e', '--evaluation_model', type=str, default='gpt-4-turbo-preview')
+    # parser.add_argument('-e', '--evaluation_model', type=str, default='gpt-4-turbo-preview')
+    parser.add_argument('-e', '--evaluation_model', type=str, default='gpt-4.1-2025-04-14')
     parser.add_argument('-n', '--num_proc', type=int, default=8)
 
     args = parser.parse_args()
