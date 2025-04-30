@@ -9,41 +9,74 @@ from collections import Counter
 CACHE_FILE = "analysis_cache.json"
 
 def categorize_char(char):
-    """Categorize a character into different linguistic/symbol groups"""
+    """Categorize a character into different linguistic/symbol groups with enhanced detection"""
     code_point = ord(char)
     
-    # Check for Japanese characters
+    # Japanese-specific characters
     if any([
         0x3040 <= code_point <= 0x309F,  # Hiragana
         0x30A0 <= code_point <= 0x30FF,  # Katakana
-        0x4E00 <= code_point <= 0x9FFF   # Kanji (Note: overlaps with Chinese)
     ]):
         return "Japanese"
     
-    # Check for Chinese characters (that aren't shared with Japanese)
-    # CJK Unified Ideographs Extension blocks
+    # CJK Unified Ideographs (Kanji/Hanzi) - Shared between Japanese and Chinese
+    # We need to be careful here, as many of these characters are used in both languages
+    # Let's consider basic CJK block (0x4E00-0x9FFF) as potentially shared
+    if 0x4E00 <= code_point <= 0x9FFF:
+        # To improve detection, we could implement frequency analysis or context-based 
+        # classification here, but for now we'll categorize as CJK
+        return "Japanese"  # Default to Japanese since analyzing Japanese text
+        
+    # Chinese-specific characters (extensions not commonly used in Japanese)
     if any([
-        0x3400 <= code_point <= 0x4DBF,  # Extension A
-        0x20000 <= code_point <= 0x2A6DF,  # Extension B
-        0x2A700 <= code_point <= 0x2B73F,  # Extension C
-        0x2B740 <= code_point <= 0x2B81F,  # Extension D
-        0x2B820 <= code_point <= 0x2CEAF,  # Extension E
-        0x2CEB0 <= code_point <= 0x2EBEF,  # Extension F
-        # Add more ranges if needed
+        0x3400 <= code_point <= 0x4DBF,  # Extension A - some overlap with Japanese but less common
+        0x20000 <= code_point <= 0x2A6DF,  # Extension B - rarely used in Japanese
+        0x2A700 <= code_point <= 0x2B73F,  # Extension C - not commonly used in Japanese
+        0x2B740 <= code_point <= 0x2B81F,  # Extension D - not commonly used in Japanese
+        0x2B820 <= code_point <= 0x2CEAF,  # Extension E - not commonly used in Japanese
+        0x2CEB0 <= code_point <= 0x2EBEF,  # Extension F - not commonly used in Japanese
+        0xF900 <= code_point <= 0xFAFF,    # CJK Compatibility Ideographs
+        0x2F800 <= code_point <= 0x2FA1F,  # CJK Compatibility Ideographs Supplement
     ]):
         return "Chinese"
-    
-    # Check for English alphabet characters
+        
+    # Chinese-specific punctuation and symbols
+    if any([
+        0x3000 <= code_point <= 0x303F and code_point not in [0x3001, 0x3002, 0x300C, 0x300D, 0x3005],  # CJK punctuation excluding ones common in Japanese
+        0xFE30 <= code_point <= 0xFE4F,    # CJK Compatibility Forms
+    ]):
+        return "Chinese"
+        
+    # Japanese-specific punctuation and symbols
+    if any([
+        code_point in [0x3001, 0x3002, 0x300C, 0x300D, 0x3005],  # Common Japanese punctuation
+        code_point in [0x30FB, 0x30FC],    # Middle dot and prolonged sound mark
+        0x3099 <= code_point <= 0x309C,    # Japanese combining marks
+    ]):
+        return "Japanese_Punct"
+        
+    # English alphabet characters
     if char.isalpha() and char in string.ascii_letters:
         return "English"
     
-    # Check for numbers
-    if char.isdigit():
+    # Numbers (both half-width and full-width)
+    if char.isdigit() or (0xFF10 <= code_point <= 0xFF19):  # Include full-width digits
         return "Number"
     
-    # Check for special characters/punctuation
-    if char in string.punctuation or char.isspace():
-        return "Special"
+    # Whitespace (separate from punctuation)
+    if char.isspace():
+        return "Whitespace"
+    
+    # Latin/English punctuation
+    if char in string.punctuation:
+        return "Latin_Punct"
+        
+    # Other Unicode punctuation and symbols
+    if any([
+        0x2000 <= code_point <= 0x206F,  # General Punctuation
+        0x2E00 <= code_point <= 0x2E7F,  # Supplemental Punctuation
+    ]):
+        return "Other_Punct"
     
     # Everything else
     return "Other"
@@ -52,14 +85,18 @@ def analyze_text(text):
     """Analyze text and return character distribution by category"""
     total_chars = len(text)
     if total_chars == 0:
-        return {"Japanese": 0, "Chinese": 0, "English": 0, "Number": 0, "Special": 0, "Other": 0}
+        return {"Japanese": 0, "Chinese": 0, "English": 0, "Number": 0, "Whitespace": 0, 
+                "Japanese_Punct": 0, "Latin_Punct": 0, "Other_Punct": 0, "Other": 0}
     
     categories = {
         "Japanese": 0,
         "Chinese": 0,
         "English": 0,
         "Number": 0,
-        "Special": 0,
+        "Whitespace": 0,
+        "Japanese_Punct": 0,
+        "Latin_Punct": 0,
+        "Other_Punct": 0,
         "Other": 0
     }
     
@@ -79,7 +116,10 @@ def parse_file(file_path: str) -> dict | None:
     chinese_chars = 0
     english_chars = 0
     number_chars = 0
-    special_chars = 0
+    whitespace_chars = 0
+    japanese_punct_chars = 0
+    latin_punct_chars = 0
+    other_punct_chars = 0
     other_chars = 0
 
     # Regex to remove anything in various reasoning tags (including the tags)
@@ -107,8 +147,14 @@ def parse_file(file_path: str) -> dict | None:
                                 english_chars += 1
                             elif category == "Number":
                                 number_chars += 1
-                            elif category == "Special":
-                                special_chars += 1
+                            elif category == "Whitespace":
+                                whitespace_chars += 1
+                            elif category == "Japanese_Punct":
+                                japanese_punct_chars += 1
+                            elif category == "Latin_Punct":
+                                latin_punct_chars += 1
+                            elif category == "Other_Punct":
+                                other_punct_chars += 1
                             else:
                                 other_chars += 1
                         total_chars += len(cleaned_answer)
@@ -128,29 +174,32 @@ def parse_file(file_path: str) -> dict | None:
             'Chinese': 0,
             'English': 0,
             'Number': 0,
-            'Special': 0,
-            'Other': 0
+            'Whitespace': 0,
+            'Japanese_Punct': 0,
+            'Latin_Punct': 0,
+            'Other_Punct': 0,
+            'Other': 0,
+            'Special': 0
         }
 
     # Calculate percentages
-    japanese_percent = (japanese_chars / total_chars) * 100
-    chinese_percent = (chinese_chars / total_chars) * 100
-    english_percent = (english_chars / total_chars) * 100
-    number_percent = (number_chars / total_chars) * 100
-    special_percent = (special_chars / total_chars) * 100
-    other_percent = (other_chars / total_chars) * 100
-
-    # Instead of modifying models dict directly, return the analysis result
-    analysis_result = {
-        'chars': total_chars,
-        'Japanese': japanese_percent,
-        'Chinese': chinese_percent,
-        'English': english_percent,
-        'Number': number_percent,
-        'Special': special_percent,
-        'Other': other_percent
+    percentages = {
+        "Japanese": (japanese_chars / total_chars) * 100 if total_chars else 0,
+        "Chinese": (chinese_chars / total_chars) * 100 if total_chars else 0,
+        "English": (english_chars / total_chars) * 100 if total_chars else 0,
+        "Number": (number_chars / total_chars) * 100 if total_chars else 0,
+        "Whitespace": (whitespace_chars / total_chars) * 100 if total_chars else 0,
+        "Japanese_Punct": (japanese_punct_chars / total_chars) * 100 if total_chars else 0,
+        "Latin_Punct": (latin_punct_chars / total_chars) * 100 if total_chars else 0,
+        "Other_Punct": (other_punct_chars / total_chars) * 100 if total_chars else 0,
+        "Other": (other_chars / total_chars) * 100 if total_chars else 0,
+        "chars": total_chars
     }
-    return analysis_result
+    
+    # Calculate a combined punctuation percentage for backward compatibility
+    total_punct = japanese_punct_chars + latin_punct_chars + other_punct_chars
+    percentages["Special"] = ((whitespace_chars + total_punct) / total_chars) * 100 if total_chars else 0
+    return percentages
 
 def update_total_percentages(models):
     """Calculates the weighted average percentage for each category across all files for each model."""
@@ -266,10 +315,11 @@ def analyze_jsonl_files(base_directory):
     except IOError as e:
         print(f"Error writing cache file {CACHE_FILE}: {e}")
 
-    # Print results using tabulate
+    # Print results using tabulate - main summary table
     headers = ["Model", "# Chars", "JA", "ZH", "EN", "#", "Special", "Other"]
     table_data = []
     
+    '''
     for model_id, data in sorted(models.items()):
         row = [
             model_id,
@@ -282,9 +332,33 @@ def analyze_jsonl_files(base_directory):
             f"{data['total'].get('Other', 0):.2f}%"
         ]
         table_data.append(row)
+    '''
+
+    # Also create a detailed table with more granular breakdowns
+    detail_headers = ["Model", "# Chars", "JA", "ZH", "EN", "#", "WS", "JP_P", "LAT_P", "OTH_P", "Other"]
+    detail_table = []
     
-    print("\nCharacter Distribution Analysis:")
-    print(tabulate(table_data, headers=headers, tablefmt="pipe", stralign="right"))
+    for model_id, data in sorted(models.items()):
+        row = [
+            model_id,
+            data['total']['chars'],
+            f"{data['total'].get('Japanese', 0):.2f}%",
+            f"{data['total'].get('Chinese', 0):.2f}%",
+            f"{data['total'].get('English', 0):.2f}%",
+            f"{data['total'].get('Number', 0):.2f}%",
+            f"{data['total'].get('Whitespace', 0):.2f}%",
+            f"{data['total'].get('Japanese_Punct', 0):.2f}%",
+            f"{data['total'].get('Latin_Punct', 0):.2f}%",
+            f"{data['total'].get('Other_Punct', 0):.2f}%",
+            f"{data['total'].get('Other', 0):.2f}%"
+        ]
+        detail_table.append(row)
+    
+    # print("\nCharacter Distribution Analysis:")
+    # print(tabulate(table_data, headers=headers, tablefmt="pipe", stralign="right"))
+    
+    print("\nDetailed Character Distribution (WS=Whitespace, JP_P=Japanese Punctuation, LAT_P=Latin Punctuation, OTH_P=Other Punctuation):")
+    print(tabulate(detail_table, headers=detail_headers, tablefmt="pipe", stralign="right"))
 
 # Usage
 base_directory = "./data/model_answers"
