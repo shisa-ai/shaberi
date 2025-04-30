@@ -82,8 +82,9 @@ def parse_file(file_path: str) -> dict | None:
     special_chars = 0
     other_chars = 0
 
-    # Regex to remove anything in <think> tags (including the tags)
-    think_pattern = re.compile(r'<think>.*?</think>', re.DOTALL)
+    # Regex to remove anything in various reasoning tags (including the tags)
+    # Handle <think>, <thinking>, and <reason> tags
+    reasoning_pattern = re.compile(r'<(think|thinking|reason)>.*?</(think|thinking|reason)>', re.DOTALL | re.IGNORECASE)
 
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -93,8 +94,8 @@ def parse_file(file_path: str) -> dict | None:
                     model_answer = data.get("ModelAnswer", "")
                     
                     if model_answer:
-                        # Strip out anything in <think> tags
-                        cleaned_answer = think_pattern.sub('', model_answer)
+                        # Strip out anything in reasoning tags
+                        cleaned_answer = reasoning_pattern.sub('', model_answer)
                         
                         for char in cleaned_answer:
                             category = categorize_char(char)
