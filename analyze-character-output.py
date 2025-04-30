@@ -1,7 +1,8 @@
 import json
 import os
-import string
 import re
+import string
+from tabulate import tabulate
 from collections import Counter
 
 # --- Constants ---
@@ -258,12 +259,25 @@ def analyze_jsonl_files(base_directory):
     except IOError as e:
         print(f"Error writing cache file {CACHE_FILE}: {e}")
 
-    # Print results
+    # Print results using tabulate
+    headers = ["Model", "# Chars", "JA", "ZH", "EN", "#", "Special", "Other"]
+    table_data = []
+    
     for model_id, data in sorted(models.items()):
-        print(f"\nModel: {model_id}, Total Chars: {data['total']['chars']}")
-        print(f"Character Distribution:")
-        for category in ["Japanese", "Chinese", "English", "Number", "Special", "Other"]:
-            print(f"  - {category}: {data['total'].get(category, 0):.2f}%")
+        row = [
+            model_id,
+            data['total']['chars'],
+            f"{data['total'].get('Japanese', 0):.2f}%",
+            f"{data['total'].get('Chinese', 0):.2f}%",
+            f"{data['total'].get('English', 0):.2f}%",
+            f"{data['total'].get('Number', 0):.2f}%",
+            f"{data['total'].get('Special', 0):.2f}%",
+            f"{data['total'].get('Other', 0):.2f}%"
+        ]
+        table_data.append(row)
+    
+    print("\nCharacter Distribution Analysis:")
+    print(tabulate(table_data, headers=headers, tablefmt="pipe", stralign="right"))
 
 # Usage
 base_directory = "./data/model_answers"
