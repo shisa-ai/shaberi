@@ -93,13 +93,11 @@ def get_model_response(messages: list, model_name: str) -> str:
 def get_answer(question: str, model_name: str):
 
     api_key = os.environ.get("OPENAI_API_KEY", "EMPTY")
-    if api_key == "EMPTY":
-        base_url = "http://localhost:8000/v1"
-    else:
-        base_url = None
 
+    base_url = os.environ.get("OPENAI_BASE_URL", "http://localhost:8000/v1")
     if base_url == None:
-        base_url = os.environ.get("OPENAI_BASE_URL", "http://localhost:8000/v1")
+        base_url = "http://localhost:8000/v1"
+
 
     generation_temperature = 0.2
     generation_max_tokens = 2048
@@ -110,10 +108,11 @@ def get_answer(question: str, model_name: str):
         'dahara1/DeepSeek-R1-Distill-Qwen-14B-unsloth-jpn',
         'FuseAI/FuseO1-DeepSeekR1-QwQ-SkyT1-32B-Preview',
         'RekaAI/reka-flash-3',
+        'abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0',
     ]
 
     if model_name in thinking_models:
-        generation_max_tokens = 32000
+        generation_max_tokens = 30000
 
     '''
     # Anthropic / OpenAI
