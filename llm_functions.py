@@ -109,7 +109,10 @@ def get_answer(question: str, model_name: str):
         'FuseAI/FuseO1-DeepSeekR1-QwQ-SkyT1-32B-Preview',
         'RekaAI/reka-flash-3',
         'abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0',
+        '011-qwen3-8b-v2',
     ]
+
+    generation_max_tokens = 30000
 
     if model_name in thinking_models:
         generation_max_tokens = 30000
@@ -202,6 +205,8 @@ def get_answer(question: str, model_name: str):
 
     content = response.choices[0].message.content
 
+    '''
+    # Swap to parse out on juding
     # If we want to parse out thinking tags...
     if model_name in thinking_models:
         try:
@@ -211,6 +216,7 @@ def get_answer(question: str, model_name: str):
                 content = content.split('</reasoning>')[1].strip()
         except:
             print('Hmm... No </think> or </reasoning> to strip?')
+    '''
 
     return content
 

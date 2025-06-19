@@ -1,7 +1,10 @@
 import argparse
 import os
+import re
 
 from datasets import load_dataset
+
+reasoning_pattern = re.compile(r'<(think|thinking|reason)>.*?</(think|thinking|reason)>', re.DOTALL | re.IGNORECASE)
 
 from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
 
@@ -19,6 +22,12 @@ def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num
     eval_fn = eval_config["evaluator_function"]
 
     ans_dataset = ans_dataset.map(lambda x: {"score": eval_fn(x, evaluation_model)}, num_proc=num_proc)
+
+    # Remove reasoning/thinking segments from answers before judging
+    ans_dataset = ans_dataset.map(
+        lambda x: {"ModelAnswer": reasoning_pattern.sub("", x.get("ModelAnswer", ""))},
+        num_proc=num_proc,
+    )
     
     ans_dataset.to_json(os.path.join(".", "data", "judgements", "judge_" + evaluation_model.replace("/", "__"), eval_dataset_name.replace("/", "__"), model_name.replace("/", "__") + ".json"))
 
