@@ -154,7 +154,11 @@ def get_answer(question: str, model_name: str):
         completion_args['model'] = model_name
         # no support for freq penalty or min_p
     elif model_name.startswith("gemini"):
-        completion_args['model'] = f'hosted_vllm/{model_name}'
+        completion_args['model'] = model_name  # Use direct litellm syntax
+        # Remove api_base for Gemini - it uses Google's API directly
+        completion_args.pop('api_base', None)
+        # Use GEMINI_API_KEY instead of OPENAI_API_KEY
+        completion_args['api_key'] = os.environ.get("GEMINI_API_KEY", "")
     else:
         completion_args['model'] = f'hosted_vllm/{model_name}'
         completion_args['frequency_penalty'] = fp
