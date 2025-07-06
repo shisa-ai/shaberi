@@ -112,7 +112,8 @@ def get_answer(question: str, model_name: str):
         '011-qwen3-8b-v2',
     ]
 
-    generation_max_tokens = 30000
+    # 8K default
+    generation_max_tokens = 6000
 
     if model_name in thinking_models:
         generation_max_tokens = 30000
