@@ -1,10 +1,7 @@
 import backoff
-import litellm
 import os
 
 from datasets import Dataset
-import litellm
-from litellm import completion
 from openai import OpenAI
 
 # litellm.set_verbose=True
@@ -118,62 +115,58 @@ def get_answer(question: str, model_name: str):
     if model_name in thinking_models:
         generation_max_tokens = 30000
 
-    '''
-    # Anthropic / OpenAI
-    response = completion(
-        model=f'{model_name}',
-        messages=[
-            {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
-            {"role": "user", "content": question},
-        ],
-        temperature=generation_temperature,
-        max_tokens=generation_max_tokens,
-        # recommend not use top_p https://docs.anthropic.com/en/api/complete
-    )
-    '''
-
-
-
-    ### Making Call
-    completion_args = {
-        "messages": [
-            {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
-            {"role": "user", "content": question},
-        ],
-        "api_base": base_url,
-        "api_key": api_key,
-        "temperature": generation_temperature,
-        "max_tokens": generation_max_tokens,
-    }
+    # Create OpenAI client based on model type
+    messages = [
+        {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
+        {"role": "user", "content": question},
+    ]
 
     # HACK Handling OpenAI Model Names
     openai_prefixes = [
         "gpt-", "text-davinci-", "davinci", "curie", "babbage", "ada", 
-        "whisper", "claude", "text-embedding", "openai/", "openai:"
+        "whisper", "claude", "text-embedding", "openai:"
     ]
+    
     if any(model_name.startswith(prefix) for prefix in openai_prefixes):
-        completion_args['model'] = model_name
-        # no support for freq penalty or min_p
+        # Use OpenAI API directly
+        client = OpenAI(api_key=api_key)
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=messages,
+            temperature=generation_temperature,
+            max_tokens=generation_max_tokens,
+        )
     elif model_name.startswith("gemini"):
-        completion_args['model'] = model_name  # Use direct litellm syntax
-        # Remove api_base for Gemini - it uses Google's API directly
-        completion_args.pop('api_base', None)
-        # Use GEMINI_API_KEY instead of OPENAI_API_KEY
-        completion_args['api_key'] = os.environ.get("GEMINI_API_KEY", "")
+        # For Gemini models, we'll need to handle this differently
+        # For now, treating as OpenAI-compatible with different API key
+        client = OpenAI(
+            api_key=os.environ.get("GEMINI_API_KEY", ""),
+            base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+        )
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=messages,
+            temperature=generation_temperature,
+            max_tokens=generation_max_tokens,
+        )
     else:
-        completion_args['model'] = f'hosted_vllm/{model_name}'
-        completion_args['frequency_penalty'] = fp
-        completion_args['min_p'] = 0.1
-
-
-    # print(f"base_url: {base_url}")
-    # print(f"api_key: {api_key}")
-    # import sys
-    # sys.exit()
-
-    # os.environ['LITELLM_LOG'] = 'DEBUG'
-    # OpenAI compatible endpoints (vLLM/llama.cpp)
-    response = completion(**completion_args)
+        # VLLM/custom hosted models
+        client = OpenAI(
+            api_key=api_key,
+            base_url=base_url
+        )
+        
+        extra_params = {}
+        if fp != 0.0:
+            extra_params['frequency_penalty'] = fp
+        
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=messages,
+            temperature=generation_temperature,
+            max_tokens=generation_max_tokens,
+            **extra_params
+        )
 
     '''
     # Gemini

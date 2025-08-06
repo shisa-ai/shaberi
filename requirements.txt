@@ -1,7 +1,6 @@
 backoff
 datasets
 jupyter
-litellm
 matplotlib
 packaging
 seaborn
