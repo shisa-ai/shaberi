@@ -130,12 +130,29 @@ def get_answer(question: str, model_name: str):
     if any(model_name.startswith(prefix) for prefix in openai_prefixes):
         # Use OpenAI API directly
         client = OpenAI(api_key=api_key)
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=messages,
-            temperature=generation_temperature,
-            max_tokens=generation_max_tokens,
-        )
+        
+        # Official OpenAI API uses max_completion_tokens, vLLM/custom endpoints use max_tokens
+        token_param = "max_completion_tokens" if os.environ.get("OPENAI_BASE_URL") is None else "max_tokens"
+        
+        try:
+            response = client.chat.completions.create(
+                model=model_name,
+                messages=messages,
+                temperature=generation_temperature,
+                **{token_param: generation_max_tokens}
+            )
+        except Exception as e:
+            # Fallback: try the other parameter if the first one fails
+            if "max_tokens" in str(e) or "max_completion_tokens" in str(e):
+                fallback_param = "max_tokens" if token_param == "max_completion_tokens" else "max_completion_tokens"
+                response = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=generation_temperature,
+                    **{fallback_param: generation_max_tokens}
+                )
+            else:
+                raise e
     elif model_name.startswith("gemini"):
         # For Gemini models, we'll need to handle this differently
         # For now, treating as OpenAI-compatible with different API key
