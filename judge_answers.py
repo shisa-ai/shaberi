@@ -25,7 +25,7 @@ def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num
 
     # Remove reasoning/thinking segments from answers before judging
     ans_dataset = ans_dataset.map(
-        lambda x: {"ModelAnswer": reasoning_pattern.sub("", x.get("ModelAnswer", ""))},
+        lambda x: {"ModelAnswer": reasoning_pattern.sub("", x.get("ModelAnswer") or "")},
         num_proc=num_proc,
     )
     
