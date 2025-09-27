@@ -3,6 +3,7 @@ import os
 import json
 from datetime import datetime, timezone
 from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from datasets import Dataset, load_dataset
 
@@ -29,7 +30,15 @@ def load_model_dataset(evaluation_dataset_name: str) -> Dataset:
     if q_col != "Question":
         split_dataset = split_dataset.rename_column(q_col, "Question")
     return split_dataset
-          
+
+def process_question(question: str, model_name: str, answer_function):
+    """Worker function to process a single question."""
+    try:
+        model_answer = answer_function(question, model_name)
+        return question, model_answer, None
+    except Exception as e:
+        return question, f"UNEXPECTED_ERROR: {str(e)}", str(e)
+
 def run_generate_with_checkpoint(model_name: str,
                                  eval_dataset_name: str = "all",
                                  num_proc: int = 16,
@@ -165,54 +174,68 @@ def run_generate_with_checkpoint(model_name: str,
             # Atomic replace to avoid truncation on interruption
             os.replace(tmp_path, path)
 
-        # Process each question individually to enable checkpointing  
-        for i, item in enumerate(dataset):
-            question = item['Question']
-            
-            # Skip if not scheduled to run
-            if question not in to_run:
-                continue
-            
-            # Generate answer
+        # Process questions using ThreadPoolExecutor
+        questions_to_process = [item['Question'] for item in dataset if item['Question'] in to_run]
+
+        with ThreadPoolExecutor(max_workers=num_proc) as executor:
+            # Submit all questions to the thread pool
+            future_to_question = {
+                executor.submit(process_question, question, model_name, answer_function): question
+                for question in questions_to_process
+            }
+
             try:
-                model_answer = answer_function(question, model_name)
-                answers_by_q[question] = model_answer
-                # Update metadata
-                prev = meta_by_q.get(question, {'ErrorCount': 0, 'ErrorType': None, 'UpdatedAt': None})
-                etype = classify_error(model_answer)
-                if etype is None:
-                    # Successful answer; preserve prior error count (no increment)
-                    meta_by_q[question] = {'ErrorCount': int(prev.get('ErrorCount', 0) or 0), 'ErrorType': None, 'UpdatedAt': now_iso()}
-                else:
-                    meta_by_q[question] = {'ErrorCount': int(prev.get('ErrorCount', 0) or 0) + 1, 'ErrorType': etype, 'UpdatedAt': now_iso()}
-                generated_since_checkpoint += 1
+                # Process completed futures as they finish
+                for future in as_completed(future_to_question):
+                    question = future_to_question[future]
 
-                # Checkpoint: Save progress every 10 new generations or on error answers
-                if (generated_since_checkpoint % 10 == 0) or (isinstance(model_answer, str) and model_answer.startswith(('ERROR', 'PERMANENT_ERROR', 'UNEXPECTED_ERROR'))):
-                    # Save intermediate results atomically (merge cached + new)
-                    write_checkpoint_atomic(model_answer_path)
+                    try:
+                        question_result, model_answer, error = future.result()
 
-                    if isinstance(model_answer, str) and model_answer.startswith(('ERROR', 'PERMANENT_ERROR', 'UNEXPECTED_ERROR')):
-                        print(f"Error on question {i+1}, checkpointed progress")
+                        # Store the answer
+                        answers_by_q[question] = model_answer
+
+                        # Update metadata
+                        prev = meta_by_q.get(question, {'ErrorCount': 0, 'ErrorType': None, 'UpdatedAt': None})
+                        etype = classify_error(model_answer)
+                        if etype is None:
+                            # Successful answer; preserve prior error count (no increment)
+                            meta_by_q[question] = {'ErrorCount': int(prev.get('ErrorCount', 0) or 0), 'ErrorType': None, 'UpdatedAt': now_iso()}
+                        else:
+                            meta_by_q[question] = {'ErrorCount': int(prev.get('ErrorCount', 0) or 0) + 1, 'ErrorType': etype, 'UpdatedAt': now_iso()}
+
+                        generated_since_checkpoint += 1
+
+                        # Checkpoint: Save progress every 10 new generations or on error answers
+                        if (generated_since_checkpoint % 10 == 0) or (isinstance(model_answer, str) and model_answer.startswith(('ERROR', 'PERMANENT_ERROR', 'UNEXPECTED_ERROR'))):
+                            # Save intermediate results atomically (merge cached + new)
+                            write_checkpoint_atomic(model_answer_path)
+
+                            if isinstance(model_answer, str) and model_answer.startswith(('ERROR', 'PERMANENT_ERROR', 'UNEXPECTED_ERROR')):
+                                print(f"Error on question, checkpointed progress")
+
+                        # Update progress bar
+                        pbar.update(1)
+
+                    except Exception as e:
+                        print(f"Unexpected error processing question result: {e}")
+                        # Still add the question with an error message
+                        err_msg = f"UNEXPECTED_ERROR: {str(e)}"
+                        answers_by_q[question] = err_msg
+                        prev = meta_by_q.get(question, {'ErrorCount': 0, 'ErrorType': None, 'UpdatedAt': None})
+                        meta_by_q[question] = {'ErrorCount': int(prev.get('ErrorCount', 0) or 0) + 1, 'ErrorType': 'UNEXPECTED_ERROR', 'UpdatedAt': now_iso()}
+                        generated_since_checkpoint += 1
+                        pbar.update(1)
 
             except KeyboardInterrupt:
                 print("\nInterrupted by user. Saving progress...")
+                # Cancel remaining futures
+                for future in future_to_question:
+                    future.cancel()
                 # Save current progress atomically before exiting (merge cached + new)
                 write_checkpoint_atomic(model_answer_path)
                 print(f"Progress saved to {model_answer_path}")
                 raise
-            except Exception as e:
-                print(f"Unexpected error on question {i+1}: {e}")
-                # Still add the question with an error message
-                err_msg = f"UNEXPECTED_ERROR: {str(e)}"
-                answers_by_q[question] = err_msg
-                prev = meta_by_q.get(question, {'ErrorCount': 0, 'ErrorType': None, 'UpdatedAt': None})
-                meta_by_q[question] = {'ErrorCount': int(prev.get('ErrorCount', 0) or 0) + 1, 'ErrorType': 'UNEXPECTED_ERROR', 'UpdatedAt': now_iso()}
-                generated_since_checkpoint += 1
-            finally:
-                # Only advance progress bar when we actually process a new generation
-                if question in to_run:
-                    pbar.update(1)
         
         # 4. Final save (atomic)
         write_checkpoint_atomic(model_answer_path)
