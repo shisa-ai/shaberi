@@ -6,3 +6,4 @@ packaging
 seaborn
 rich
 tabulate
+textual
