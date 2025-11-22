@@ -324,14 +324,9 @@ def build_question_renderable(record: QuestionRecord, max_score: int) -> Group:
         else:
             table.add_row("Ground Truth", "|", Text(record.ground_truth, style="dim green"))
 
-    # Eval Criteria (show abbreviated version if too long)
+    # Eval Criteria (show full content)
     if record.eval_aspect:
-        if len(record.eval_aspect) > 150:
-            lines = record.eval_aspect.split('\n')
-            preview = lines[0][:100] + "..." if len(lines[0]) > 100 else lines[0]
-            table.add_row("Criteria", "|", Text(preview, style="dim magenta"))
-        else:
-            table.add_row("Criteria", "|", Text(record.eval_aspect, style="dim magenta"))
+        table.add_row("Criteria", "|", Text(record.eval_aspect, style="dim magenta"))
 
     return Group(header, table)
 
