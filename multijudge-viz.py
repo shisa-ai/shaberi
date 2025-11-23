@@ -15,7 +15,8 @@ model_result_paths = glob("./data/judgements/*/*/*.json")
 
 judge_dict = {
     "judge_gpt-4.1-2025-04-14": "GPT4.1",
-    "judge_gpt-4-turbo-preview": "GPT4", # "gpt-4-0125-preview"
+    "judge_gpt-4-turbo-preview": "GPT4",  # "gpt-4-0125-preview"
+    "judge_gpt-5.1-2025-11-13": "GPT5.1",
     "judge_llmjudge-athenev2": "AtheneV2",
     "judge_llmjudge-llama33": "Llama 3.3",
     "judge_llmjudge-tulu405": "Tulu405",
