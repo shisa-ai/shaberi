@@ -2,6 +2,7 @@ backoff
 datasets
 jupyter
 matplotlib
+openpyxl
 packaging
 seaborn
 rich
