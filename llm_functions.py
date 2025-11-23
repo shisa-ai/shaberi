@@ -4,6 +4,14 @@ import os
 from datasets import Dataset
 from openai import OpenAI
 
+# Optional native Gemini support
+try:
+    import google.genai as genai
+    from google.genai import types as genai_types
+    GEMINI_AVAILABLE = True
+except ImportError:
+    GEMINI_AVAILABLE = False
+
 # litellm.set_verbose=True
 
 # Global
@@ -29,12 +37,43 @@ def _is_openai_refusal_error(err: Exception) -> bool:
 # === 評価生成関数群 ===
 @backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
 def get_response_from_openai(messages: list, model_name: str) -> str:
-    client = OpenAI(
-        api_key=os.environ.get("OPENAI_API_KEY")
-    )
+    api_key = os.environ.get("OPENAI_API_KEY")
+    base_url = os.environ.get("OPENAI_BASE_URL")
+    client_kwargs = {"api_key": api_key}
+    if base_url:
+        client_kwargs["base_url"] = base_url
+    client = OpenAI(**client_kwargs)
 
     evaluation_temperature = 0
     evaluation_max_tokens = 1024
+
+    # GPT-5.1 supports the Responses API and can take reasoning control
+    if model_name.startswith("gpt-5.1"):
+        response = client.responses.create(
+            model=model_name,
+            input=messages,
+            temperature=evaluation_temperature,
+            max_output_tokens=evaluation_max_tokens,
+            reasoning={"effort": "none"},
+        )
+        # Try to extract text from the responses API output
+        try:
+            content = "".join(
+                part.text
+                for item in response.output
+                for part in item.content
+                if getattr(part, "text", None)
+            )
+        except Exception:
+            content = None
+
+        if not content:
+            content = getattr(response, "output_text", None)
+
+        if not content:
+            raise RuntimeError("Could not parse content from Responses API output")
+
+        return content
 
     response = client.chat.completions.create(
         messages=messages,
@@ -43,6 +82,45 @@ def get_response_from_openai(messages: list, model_name: str) -> str:
         max_tokens=evaluation_max_tokens,
     )
     return response.choices[0].message.content
+
+
+@backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
+def get_response_from_gemini_native(messages: list, model_name: str) -> str:
+    if not GEMINI_AVAILABLE:
+        raise ImportError("google-genai is required for native Gemini support. Install with: pip install google-genai")
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("Missing OPENAI_API_KEY for Gemini client")
+
+    client = genai.Client(api_key=api_key)
+    safety_settings = [
+        genai_types.SafetySetting(category="HARM_CATEGORY_HATE_SPEECH", threshold="OFF"),
+        genai_types.SafetySetting(category="HARM_CATEGORY_DANGEROUS_CONTENT", threshold="OFF"),
+        genai_types.SafetySetting(category="HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold="OFF"),
+        genai_types.SafetySetting(category="HARM_CATEGORY_HARASSMENT", threshold="OFF"),
+    ]
+
+    evaluation_temperature = 0.0
+    thinking_config = genai_types.ThinkingConfig(thinking_budget=0)
+    prompt_text = "\n".join(f"{m.get('role', 'user')}: {m.get('content', '')}" for m in messages)
+
+    gen_config = genai_types.GenerateContentConfig(
+        temperature=evaluation_temperature,
+        safety_settings=safety_settings,
+        thinking_config=thinking_config,
+    )
+
+    response = client.models.generate_content(
+        model=model_name,
+        contents=prompt_text,
+        config=gen_config,
+    )
+
+    if not response.text:
+        raise ValueError("Empty response from Gemini API")
+
+    return response.text
 
 # shisa-bench llmjudge
 @backoff.on_exception(backoff.fibo, Exception, max_tries=1000)
@@ -85,7 +163,12 @@ def get_response_from_llmjudge(messages: list, model_name: str) -> str:
 
 
 def get_response_func(model_name: str) -> callable:
-    if "gpt" in model_name:
+    lower_name = model_name.lower()
+    if "gemini" in lower_name:
+        if os.environ.get("GEMINI_NATIVE") == "1":
+            return get_response_from_gemini_native
+        return get_response_from_openai
+    if "gpt" in lower_name:
         return get_response_from_openai
     elif "llmjudge" in model_name:
         return get_response_from_llmjudge
