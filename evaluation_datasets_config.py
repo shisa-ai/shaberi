@@ -1,6 +1,131 @@
 import re
 from llm_functions import get_model_response
 
+
+def _shorten_for_log(value, max_len: int = 80) -> str:
+    """Utility: collapse newlines and truncate long strings for logging."""
+    if value is None:
+        return ""
+    s = str(value).replace("\n", " ").replace("\r", " ")
+    return (s[: max_len - 3] + "...") if len(s) > max_len else s
+
+
+def _extract_question_id(data: dict) -> str:
+    """
+    Try to extract a compact identifier for the sample so that logs are
+    legible without dumping entire prompts/responses.
+    """
+    for key in ("id", "ID", "index", "Index", "Category", "Question", "text", "input"):
+        if key in data:
+            return _shorten_for_log(data.get(key), 40)
+    return ""
+
+
+def _extract_answer_snippet(data: dict) -> str:
+    """
+    Try to pull a short snippet of the model's original answer for logging.
+    """
+    for key in ("ModelAnswer", "Answer", "output", "response", "answer"):
+        if key in data:
+            return _shorten_for_log(data.get(key), 60)
+    return ""
+
+
+def _log_no_score(source: str, data: dict, evaluation_text: str | None, note: str = "") -> None:
+    """
+    Compact, production-friendly logging when no numeric score can be
+    parsed, instead of printing entire LLM responses.
+    """
+    qid = _extract_question_id(data or {})
+    eval_head = _shorten_for_log(evaluation_text or "", 80)
+    answer_head = _extract_answer_snippet(data or {})
+    eval_len = len(evaluation_text) if evaluation_text is not None else 0
+    parts: list[str] = [f"NO SCORE FOUND [{source}]"]
+    if qid:
+        parts.append(f"id='{qid}'")
+    if answer_head:
+        parts.append(f"answer_head='{answer_head}'")
+    if eval_head:
+        parts.append(f"eval_head='{eval_head}'")
+    parts.append(f"eval_len={eval_len}")
+    if note:
+        parts.append(note)
+    print(" ".join(parts))
+
+
+def _fallback_score_from_analysis(
+    analysis_text: str,
+    data: dict,
+    judge_model_name: str,
+    scale_description: str,
+) -> int | None:
+    """
+    Generic guard: if the primary evaluation output does not contain a
+    parseable FINAL SCORE, ask the judge once more to extract just the
+    numeric score from its own analysis.
+    """
+    if analysis_text is None:
+        print("Fallback score requested but analysis_text is None; returning None.")
+        return None
+
+    analysis_text = str(analysis_text).strip()
+    if not analysis_text:
+        print("Fallback score requested but analysis_text is empty; returning None.")
+        return None
+
+    # Include original question and answer for maximum robustness when backfilling.
+    question_text = ""
+    for key in ("Question", "text", "input", "prompt"):
+        if key in (data or {}):
+            question_text = str((data or {}).get(key) or "")
+            break
+    answer_text = ""
+    for key in ("ModelAnswer", "Answer", "output", "response", "answer"):
+        if key in (data or {}):
+            answer_text = str((data or {}).get(key) or "")
+            break
+
+    fallback_prompt = f"""We are evaluating a model response. The original question, the model's answer, and an existing judge evaluation are given below. The judge appears to have forgotten to include the numeric FINAL SCORE.
+
+Please carefully read the question, the model answer, and the judge evaluation. Then output ONLY a single line in the exact format:
+
+FINAL SCORE: [#]
+
+where [#] is the final numeric score {scale_description}.
+
+[Question]
+{question_text}
+
+[Model answer]
+{answer_text}
+
+[Judge evaluation]
+{analysis_text}
+
+*** 
+IMPORTANT REMINDER: Do not explain. Do not add any other text or punctuation. Output exactly one line 'FINAL SCORE: [#]'.
+"""
+
+    messages = [{"role": "user", "content": fallback_prompt}]
+
+    try:
+        fallback_output = get_model_response(messages, judge_model_name)
+    except Exception as e:
+        print(f"Error while calling fallback score prompt with judge {judge_model_name}: {e}")
+        return None
+
+    try:
+        # Primary: look for FINAL SCORE pattern
+        matches = re.findall(r"FINAL SCORE:\s*([0-9.]+)", str(fallback_output))
+        if matches:
+            return round(float(matches[-1]))
+
+        # Fallback: treat the whole output as a bare number
+        return round(float(str(fallback_output).strip()))
+    except (ValueError, AttributeError):
+        _log_no_score("FALLBACK", data or {}, fallback_output, note="fallback_parse_error")
+        return None
+
 ######### TENGU ##########
 
 tengu_example_question_answer = {
@@ -36,8 +161,7 @@ def get_tengu_prompt(data: dict) -> str:
     answer_explanation = "'正解例'," if answer_bool else ""
     
     prompt = f"""[指示]
-あなたは熟練した生成AIモデルの性能評価者です。評価項目に準拠して客観的に評価することで報酬を得ることができますが、評価項目と異なる評価をした場合報酬がもらえなくなってしまいます。
-以下の'質問',{answer_explanation}'評価項目'に基づいて'評価するモデルの回答'を0~10点の整数値で評価してください。
+あなたは評価者です。以下の'質問',{answer_explanation}'評価項目'に基づいて'評価するモデルの回答'を0~10点の数値で評価してください。客観的かつ公平に評価してください。回答は正しく自然な日本語であるべきです。日本語でない場合や不適切な言語表現、支離滅裂・意味不明な出力、反復/ループがある場合は大きく減点してください。
 
 [質問]
 {question}
@@ -48,13 +172,14 @@ def get_tengu_prompt(data: dict) -> str:
 [評価するモデルの回答]
 {model_answer}
 
-# 以下の形式で回答してください。必ず最終的なスコアを<score>タグで囲んでください。
+# 以下の形式で回答してください。最後の行に必ず 'FINAL SCORE: x' （x は最終スコアの数値）だけを出力してください。
 [該当する評価項目とその簡潔な理由]
 
 [計算式]
 
-[点数]
-<score>点数をここに記入</score>
+[点数]（途中経過を示してもよい）
+
+FINAL SCORE: #
 """
     return prompt
 
@@ -63,24 +188,27 @@ def get_tengu_eval_score(eval_text: str) -> int | None:
         print("Received None eval_text, returning None score.")
         return None
     try:
-        # Try to find score in XML tags first
-        score_match = re.search(r"<score>([0-9.]+)</score>", eval_text)
-        if score_match:
-            return round(float(score_match.group(1)))
+        # Prefer FINAL SCORE pattern, using the last occurrence if multiple appear
+        matches = re.findall(r"FINAL SCORE:\s*([0-9.]+)", eval_text)
+        if matches:
+            return round(float(matches[-1]))
 
-        # Fall back to original parsing method
+        # Backwards compatibility: legacy <score> tag
+        legacy_tag_match = re.findall(r"<score>([0-9.]+)</score>", eval_text)
+        if legacy_tag_match:
+            return round(float(legacy_tag_match[-1]))
+
+        # Older Tengu style: [点数]\n7点
         score_text_match = re.search(r"\[点数\]\\n[0-9.]+点", eval_text)
         if score_text_match:
-            score_text = score_text_match.group()
-            score_match_fallback = re.search(r"[0-9.]+", score_text)
+            score_match_fallback = re.search(r"[0-9.]+", score_text_match.group())
             if score_match_fallback:
-                score = score_match_fallback.group()
-                return round(float(score))
+                return round(float(score_match_fallback.group()))
 
         raise ValueError("Could not find score pattern")
 
     except (ValueError, AttributeError):
-        print(f"Unable to parse Tengu score from '{eval_text[:100]}...'") 
+        _log_no_score("TENGU", {}, eval_text, note="parse_error")
         return None
 
 def make_tengu_conversation(data: dict) -> list:
@@ -97,10 +225,25 @@ def make_tengu_conversation(data: dict) -> list:
         }
     ]
 
-def tengu_bench_evaluator(data:dict, model_name:str) -> int|None:
+def tengu_bench_evaluator(data:dict, model_name:str) -> dict:
     messages = make_tengu_conversation(data)
     evaluation = get_model_response(messages, model_name)
-    return get_tengu_eval_score(evaluation)
+    score = get_tengu_eval_score(evaluation)
+    if score is None:
+        # Guard: if the judge forgot to emit a FINAL SCORE, ask it to
+        # summarize its own analysis into a numeric score between 0 and 10.
+        score = _fallback_score_from_analysis(
+            evaluation,
+            data,
+            model_name,
+            "between 0 and 10 (inclusive)",
+        )
+
+    return {
+        "score": score,
+        # Keep the full judge analysis so downstream tools can surface it.
+        "judge_output": evaluation,
+    }
 
 ######### ELYZA ##########
 
@@ -113,8 +256,8 @@ def get_elyza_prompt(row: dict):
 
 問題, 正解例, 採点基準, 回答 が与えられます。
 
-採点基準と正解例を参考にして、回答を1,2,3,4,5の5段階で採点し、数字のみを出力してください。
-必ず最終的なスコアを<score>タグで囲んで出力してください。
+採点基準と正解例を参考にして、回答を1,2,3,4,5の5段階で採点してください。
+説明の後、最後の行に「FINAL SCORE: x」（x は最終スコアの数値）だけを出力してください。それ以外の行には「FINAL SCORE:」を書かないでください。
 
 # 問題
 {question}
@@ -134,6 +277,8 @@ def get_elyza_prompt(row: dict):
 - 不自然な日本語: -1点
 - 部分的に事実と異なる内容を述べている: -1点
 - 「倫理的に答えられません」のように過度に安全性を気にしてしまっている: 2点にする
+- 日本語で回答していない: 1点にする
+- 支離滅裂・意味不明な出力や反復/ループがある: 1点にする
 
 問題固有の採点基準
 {criteria}
@@ -141,24 +286,42 @@ def get_elyza_prompt(row: dict):
 # 回答
 {model_answer}
 
-最終スコア: <score>ここにスコアを記入</score>
+FINAL SCORE: #
 """
 
-def elyza_evaluator(data: dict, model_name:str) -> int|None:
+def elyza_evaluator(data: dict, model_name:str) -> dict:
     prompt = get_elyza_prompt(data)
     messages = [{"role": "user", "content": prompt}]
     evaluation = get_model_response(messages, model_name)
+    score: int | None
     try:
-        # Try to find score in XML tags first
-        score_match = re.search(r"<score>([0-9.]+)</score>", evaluation)
-        if score_match:
-            return round(float(score_match.group(1)))
-            
-        # Fall back to direct integer parsing
-        return round(float(evaluation.strip()))
+        # Prefer FINAL SCORE pattern on the last occurrence
+        matches = re.findall(r"FINAL SCORE:\s*([0-9.]+)", evaluation)
+        if matches:
+            score = round(float(matches[-1]))
+        else:
+            # Backwards compatibility: legacy <score> tag
+            legacy_tag_match = re.findall(r"<score>([0-9.]+)</score>", evaluation)
+            if legacy_tag_match:
+                score = round(float(legacy_tag_match[-1]))
+            else:
+                # Fallback: treat the whole output as a bare number
+                score = round(float(evaluation.strip()))
     except (ValueError, AttributeError):
-        print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
-        return None
+        _log_no_score("ELYZA", data, evaluation, note="parse_error")
+        # Guard: if the judge forgot FINAL SCORE entirely, ask it to
+        # reduce its own analysis to a numeric score between 1 and 5.
+        score = _fallback_score_from_analysis(
+            evaluation,
+            data,
+            model_name,
+            "between 1 and 5 (inclusive)",
+        )
+
+    return {
+        "score": score,
+        "judge_output": evaluation,
+    }
 
 ######### MT-Bench ##########
 
@@ -166,7 +329,7 @@ def get_mt_prompt(row: dict):
     question = row['Question']
     model_answer = row['ModelAnswer']
     return f"""[指示]
-公平な判断者として行動し、以下に表示されるユーザーの質問に対するAIアシスタントの応答の品質を評価してください。あなたの評価は、応答の有用性、関連性、正確性、深さ、創造性、詳細度などの要素を考慮すべきです。AIアシスタントの返答の言語は、ユーザーが使用している言語と一致しているべきで、そうでない場合は減点されるべきです。評価は短い説明から始めてください。できるだけ客観的であること。説明を提供した後、このフォーマットに厳密に従って1から10までのスケールで応答を評価する必要があります："[[評価]]"、例えば："評価：[[5]]"。
+公平な判断者として行動し、以下に表示されるユーザーの質問に対するAIアシスタントの応答の品質を評価してください。あなたの評価は、応答の有用性、関連性、正確性、深さ、創造性、詳細度などの要素を考慮すべきです。AIアシスタントの返答は正しく自然な日本語であるべきで、そうでない場合、あるいは不適切な言語表現を含む場合は大きく減点してください。さらに、支離滅裂・意味不明な出力や反復/ループがある場合も大きく減点してください。評価は短い説明から始めてください。できるだけ客観的であること。説明を提供した後、1から10までのスケールで最終スコアを決定し、最後の行に「FINAL SCORE: x」（x は最終スコアの数値）だけを出力してください。それ以外の行には「FINAL SCORE:」を書かないでください。
 
 [質問]
 {question}
@@ -174,20 +337,48 @@ def get_mt_prompt(row: dict):
 [アシスタントの回答の開始]
 {model_answer}
 
-[アシスタントの回答の終了]"""
+[アシスタントの回答の終了]
 
-def mt_evaluator(data: dict, model_name:str) -> int|None:
+IMPORTANT REMINDER: After judging, remember to output FINAL SCORE: # on it's own line.
+"""
+
+def mt_evaluator(data: dict, model_name:str) -> dict:
     prompt = get_mt_prompt(data)
     messages = [{"role": "user", "content": prompt}]
     evaluation = get_model_response(messages, model_name)
+    score: int | None = None
     try:
-        score_text = re.search(r"評価：\[\[[0-9.]+\]\]", evaluation).group()
-        score = re.search(r"[0-9.]+", score_text).group()
-        return round(float(score))
+        # Prefer FINAL SCORE pattern, using last occurrence
+        matches = re.findall(r"FINAL SCORE:\s*([0-9.]+)", evaluation)
+        if matches:
+            score = round(float(matches[-1]))
+        else:
+            # Backwards compatibility: legacy <score> tag
+            legacy_tag_match = re.findall(r"<score>([0-9.]+)</score>", evaluation)
+            if legacy_tag_match:
+                score = round(float(legacy_tag_match[-1]))
+            else:
+                # Backwards compatibility: legacy [[評価]] style
+                score_text_match = re.search(r"評価：\[\[[0-9.]+\]\]", evaluation)
+                if score_text_match:
+                    score_match = re.search(r"[0-9.]+", score_text_match.group())
+                    if score_match:
+                        score = round(float(score_match.group()))
     except (ValueError, AttributeError):
-        print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
-        gpt4score = None
-    return gpt4score
+        _log_no_score("MT-BENCH", data, evaluation, note="parse_error")
+        # Guard: ask the judge to convert its own analysis to a score
+        # between 1 and 10 if it forgot to include FINAL SCORE.
+        score = _fallback_score_from_analysis(
+            evaluation,
+            data,
+            model_name,
+            "between 1 and 10 (inclusive)",
+        )
+
+    return {
+        "score": score,
+        "judge_output": evaluation,
+    }
 
 ######### Rakuda Benchmark ##########
 
@@ -195,7 +386,8 @@ def get_rakuda_prompt(row: dict):
     question = row['Question']
     model_answer = row['ModelAnswer']
     return f"""[指示]
-以下に表示されたユーザーの質問に対するAIアシスタントのパフォーマンスについて、あなたのフィードバックをお願いします。回答の有用性、関連性、正確性、詳細度、日本語能力を評価してください。まず、アシスタントの有用性、関連性、正確性、詳細度、日本語能力の評価を提供してください。評価の包括的な説明も提供してください。ユーザーは日本語しか話さないので日本語で書かれていない回答には低評価をつけてください。できるだけ客観的であること。説明を提供した後、このフォーマットに厳密に従って1から10までのスケールで応答を評価する必要があります："[[評価]]"、例えば："評価：[[5]]"。
+以下に表示されたユーザーの質問に対するAIアシスタントのパフォーマンスについて、あなたのフィードバックをお願いします。回答の有用性、関連性、正確性、詳細度、日本語能力を評価してください。まず、アシスタントの有用性、関連性、正確性、詳細度、日本語能力の評価を提供してください。評価の包括的な説明も提供してください。ユーザーは日本語しか話さないので日本語で書かれていない回答には低評価をつけてください。日本語であっても、支離滅裂・意味不明な出力や反復/ループがある場合は大きく減点してください。できるだけ客観的であること。説明を提供した後、1から10までのスケールで最終スコアを決定し、最後の行に「FINAL SCORE: x」（x は最終スコアの数値）だけを出力してください。それ以外の行には「FINAL SCORE:」を書かないでください。
+
 
 [質問]
 {question}
@@ -203,20 +395,57 @@ def get_rakuda_prompt(row: dict):
 [アシスタントの回答の開始]
 {model_answer}
 
-[アシスタントの回答の終了]"""
+[アシスタントの回答の終了]
 
-def rakuda_evaluator(data: dict, model_name:str) -> int|None:
+FINAL SCORE: #
+
+IMPORTANT REMINDER: After judging, remember to output FINAL SCORE: # on it's own line.
+"""
+
+def rakuda_evaluator(data: dict, model_name:str) -> dict:
     prompt = get_rakuda_prompt(data)
     messages = [{"role": "user", "content": prompt}]
     evaluation = get_model_response(messages, model_name)
+    score: int | None
     try:
-        score_text = re.search(r"評価：(\[\[|\[|【)[0-9.]+(\]\]|\]|】)", evaluation).group()
-        score = re.search(r"[0-9.]+", score_text).group()
-        return round(float(score))
+        # Prefer FINAL SCORE pattern, using last occurrence
+        matches = re.findall(r"FINAL SCORE:\s*([0-9.]+)", evaluation)
+        if matches:
+            score = round(float(matches[-1]))
+        else:
+            # Backwards compatibility: legacy <score> tag
+            legacy_tag_match = re.findall(r"<score>([0-9.]+)</score>", evaluation)
+            if legacy_tag_match:
+                score = round(float(legacy_tag_match[-1]))
+            else:
+                # Backwards compatibility: legacy [[5]] style
+                score_text_match = re.search(r"評価：(\[\[|\[|【)[0-9.]+(\]\]|\]|】)", evaluation)
+                if score_text_match:
+                    score_match = re.search(r"[0-9.]+", score_text_match.group())
+                    if score_match:
+                        score = round(float(score_match.group()))
+                else:
+                    # Fallback: look for X/10 style ratings and average them
+                    slash_scores = [float(s) for s in re.findall(r"([0-9.]+)\s*/\s*10", evaluation)]
+                    if slash_scores:
+                        score = round(sum(slash_scores) / len(slash_scores))
+                    else:
+                        raise ValueError("Could not parse score")
     except (ValueError, AttributeError):
-        print(f"Int parse error.\n\nOutput was {evaluation}.\n\nInput was {data}.")
-        gpt4score = None
-    return gpt4score
+        _log_no_score("RAKUDA", data, evaluation, note="parse_error")
+        # Guard: as a last resort, ask the judge once more to emit a
+        # single FINAL SCORE between 1 and 10 based on its analysis.
+        score = _fallback_score_from_analysis(
+            evaluation,
+            data,
+            model_name,
+            "between 1 and 10 (inclusive)",
+        )
+
+    return {
+        "score": score,
+        "judge_output": evaluation,
+    }
 
 #### ALL EVAL DATASETS ####
 
