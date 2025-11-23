@@ -1,5 +1,23 @@
-# Shaberi: A Suite of Japanese Chat Benchmarks
+# Shaberi v2.1: A Suite of Japanese Chat Benchmarks
+
 A repo for evaluating Japanese LLMs　・　日本語LLMを評価するレポ
+
+This is a heavily modified version of [LightBlue's Shaberi](https://github.com/lightblue-tech/japanese_llm_eval) evaluation suite. It's due for an overhaul soon, hwever it *does* support quite a few addditional features:
+
+- Full support for OpenAI API Compatible (vLLM/SGLang etc) models, as well as OpenAI and Gemini models (including custom parameters to support GPT5+, Gemini safety and reasoning, etc)
+  - `backoff` used for handling retries and rate limits
+- The ability to parse out reasoning/think tags
+- Saving of judgement reasoning
+- Heuristics for calculating a "JA %" to help detect non-JA output
+- Saving of XLSX/CSV spreadsheets for output
+- A `shaberi-viewer.py` TUI to allow easy inspection of outputs
+- IMPORTANT: 2025-11: Modified prompts to try to more harshly penalize wrong language or corrupted output
+  - There is a new `reprocess-forgotten-scores.py` to help when the LLM Judge forgets to output the final score.
+
+Scoring should not be compared to other versions. Also note that different judges grade very differently. Any comparisons should be made with the same prompt and LLM judge.
+
+We've found that the commonly used GPT-4/GPT-4 Turbo/GPT-4o judges are not adequate in 2025. In the past, Gemini judges have been too lenient, although the Gemini 2.5/3 Pro models are now (2025-11) the best Japanese models. For current judging we (Shisa.AI) are using GPT-5.1 which is stricter and more discerning on judging output.
+
 
 ## How to run
 ```
@@ -14,7 +32,7 @@ pip install -r requirements.txt
 
 # For AMD or other hardware you may need to install torch manually
 # https://pytorch.org/get-started/locally/
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.2
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.4
 
 # In one terminal, run vLLM OpenAI API, eg: 
 python -m vllm.entrypoints.openai.api_server --model shisa-ai/shisa-v1-llama3-70b -tp 8
@@ -37,21 +55,6 @@ git status
 python results_vizualization.py
 cat output.csv
 ```
-
-Changes made:
-* We have to add a system prompt or it uses the ridiculous Llama 2 one? (wtf)
-* We get a lot of bad requests - I've added backoff to the code
-  * 400s are due to vLLM not realizing Mistral has a higher 32K context
-* We create a new shisa-ai/ja-mt-bench-1shot dataset since the lightblue one is missing
-
-If we were making our own:
-* No separate vLLM, we should load our models in process, that lets us script/queue multiple models up
-* simple step by step CLI
-* generate answers
-* judge
-  * Multiple LLM Judge options
-* Save to sqlite
-* Output
 
 ---
 ```
