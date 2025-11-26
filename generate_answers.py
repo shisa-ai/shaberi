@@ -7,7 +7,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from datasets import Dataset, load_dataset
 
-from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
+from evaluation_datasets_config import (
+    EVAL_MODEL_CONFIGS,
+    get_ans_path,
+    ensure_id_column,
+    filter_excluded_questions_by_id,
+)
 import llm_functions
 from llm_functions import get_answerer
 
@@ -29,6 +34,12 @@ def load_model_dataset(evaluation_dataset_name: str) -> Dataset:
     q_col = eval_config.get("question_column")
     if q_col != "Question":
         split_dataset = split_dataset.rename_column(q_col, "Question")
+
+    # Ensure each row has a stable integer id and apply any dataset-level
+    # exclusions (e.g. specific Tengu questions that should be skipped).
+    split_dataset = ensure_id_column(split_dataset, id_column="id")
+    split_dataset = filter_excluded_questions_by_id(evaluation_dataset_name, split_dataset, id_column="id")
+
     return split_dataset
 
 def process_question(question: str, model_name: str, answer_function):

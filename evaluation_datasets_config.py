@@ -475,3 +475,64 @@ EVAL_MODEL_CONFIGS = {
 import os
 
 get_ans_path = lambda dataset_name, model_name: os.path.join(".", "data", "model_answers", dataset_name.replace("/", "__"), model_name.replace("/", "__") + ".json")
+
+
+# -------- Dataset-level question exclusions --------
+#
+# Some evaluation datasets contain questions that we want to exclude from
+# answer generation, judging, and aggregate scoring. We track these by a
+# 1-based question id aligned with the dataset row order.
+
+EXCLUDED_QUESTION_IDS_BY_DATASET: dict[str, set[int]] = {
+    # Tengu-Bench: exclude safety-sensitive questions 61–65 whose
+    # rubric is underspecified and highly judge-dependent.
+    "lightblue/tengu_bench": {61, 62, 63, 64, 65},
+}
+
+
+def ensure_id_column(dataset, id_column: str = "id"):
+    """
+    Ensure the given dataset has an integer id column.
+
+    - If the column already exists, the dataset is returned unchanged.
+    - Otherwise, a 1-based sequential id is added in the current row order.
+    """
+    # HuggingFace Datasets expose `column_names`; for other dataset-like
+    # objects we fall back to a no-op.
+    column_names = getattr(dataset, "column_names", None)
+    if column_names is None or id_column in column_names:
+        return dataset
+
+    return dataset.map(lambda _row, idx: {id_column: idx + 1}, with_indices=True)
+
+
+def filter_excluded_questions_by_id(dataset_name: str, dataset, id_column: str = "id"):
+    """
+    Filter out rows whose question id is in the dataset's exclude list.
+
+    This is used by:
+    - answer generation (to avoid creating answers for excluded questions)
+    - judging (to avoid submitting excluded questions to the judge)
+    Downstream analysis tools can also use the same id lists when
+    aggregating scores.
+    """
+    excluded_ids = EXCLUDED_QUESTION_IDS_BY_DATASET.get(dataset_name)
+    if not excluded_ids:
+        return dataset
+
+    dataset = ensure_id_column(dataset, id_column=id_column)
+    excluded_set = {int(i) for i in excluded_ids}
+
+    def _keep(row: dict) -> bool:
+        try:
+            qid = int(row[id_column])
+        except Exception:
+            # If the id is missing or non-numeric, keep the row rather than
+            # accidentally dropping data.
+            return True
+        return qid not in excluded_set
+
+    # HuggingFace Datasets support .filter; for other dataset-like objects
+    # this is expected to be a no-op or raise, in which case callers should
+    # not use this helper.
+    return dataset.filter(_keep)

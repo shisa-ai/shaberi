@@ -10,6 +10,8 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.formatting.rule import CellIsRule
 from openpyxl.utils import get_column_letter
 
+from evaluation_datasets_config import EXCLUDED_QUESTION_IDS_BY_DATASET
+
 # Define paths and dataset mapping
 model_result_paths = glob("./data/judgements/*/*/*.json")
 
@@ -55,6 +57,8 @@ judge_results = defaultdict(list)
 model_judge_counts = defaultdict(set)
 model_ja_percentages = {}
 
+TENGU_EXCLUDED_IDS = set(EXCLUDED_QUESTION_IDS_BY_DATASET.get("lightblue/tengu_bench", []))
+
 
 # Process results by judge
 for model_result_path in model_result_paths:
@@ -71,6 +75,13 @@ for model_result_path in model_result_paths:
     model_judge_counts[model_name].add(judge_id)
         
     df = pd.read_json(model_result_path, lines=True)
+
+    # Apply Tengu per-question exclusions consistently across judges.
+    if eval_dataset_key == "lightblue__tengu_bench" and TENGU_EXCLUDED_IDS:
+        if "id" not in df.columns:
+            df["id"] = range(1, len(df) + 1)
+        df = df[~df["id"].isin(TENGU_EXCLUDED_IDS)]
+
     df["eval_dataset"] = eval_dataset_dict[eval_dataset_key]
     df["model_name"] = model_name
     

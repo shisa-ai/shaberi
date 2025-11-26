@@ -40,6 +40,8 @@ from rich.console import Group
 from rich.table import Table
 from rich.text import Text
 
+from evaluation_datasets_config import EXCLUDED_QUESTION_IDS_BY_DATASET
+
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 MODEL_ANSWERS_DIR = DATA_DIR / "model_answers"
@@ -55,6 +57,8 @@ EVAL_DATASETS = {
     "shisa-ai__ja-mt-bench-1shot": {"name": "JA-MT", "max_score": 10},
     "yuzuai__rakuda-questions": {"name": "Rakuda", "max_score": 10},
 }
+
+TENGU_EXCLUDED_IDS = set(EXCLUDED_QUESTION_IDS_BY_DATASET.get("lightblue/tengu_bench", []))
 
 try:  # Defer Textual import so users get a clear message if it's missing.
     from textual.app import App, ComposeResult
@@ -236,11 +240,21 @@ def load_model_data(
         if not judgements:
             continue
 
+        # Dataset-specific question id exclusions (e.g. Tengu 61–65)
+        excluded_ids: set[int] = set()
+        if dataset_safe == "lightblue__tengu_bench":
+            excluded_ids = TENGU_EXCLUDED_IDS
+
         # Load corresponding model answers (for reference, though judgements contain everything)
-        questions = []
+        questions: List[QuestionRecord] = []
         for idx, record in enumerate(judgements):
+            # Prefer explicit id when present; otherwise fall back to 1-based index
+            qid = safe_int(record.get("id")) or (idx + 1)
+            if excluded_ids and qid in excluded_ids:
+                continue
+
             question_record = QuestionRecord(
-                index=idx,
+                index=len(questions),
                 question=record.get("Question", ""),
                 model_answer=record.get("ModelAnswer", ""),
                 ground_truth=record.get("output"),

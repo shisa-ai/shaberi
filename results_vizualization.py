@@ -7,6 +7,8 @@
 from glob import glob
 import os
 
+from evaluation_datasets_config import EXCLUDED_QUESTION_IDS_BY_DATASET
+
 # Get all JSON files
 model_result_paths = glob("./data/judgements/*/*/*.json")
 
@@ -37,9 +39,14 @@ eval_dataset_dict = {
 import pandas as pd
 import json
 
+# Map canonical dataset name to excluded ids (if any)
+EXCLUDED_TENGU_IDS = set(EXCLUDED_QUESTION_IDS_BY_DATASET.get("lightblue/tengu_bench", []))
+
 all_result_dfs = []
 
 for model_result_path in model_result_paths:
+    dataset_safe = model_result_path.split("/")[4]  # e.g. lightblue__tengu_bench
+
     try:
         # Try the standard pandas read_json first
         temp_df = pd.read_json(model_result_path, lines=True)
@@ -67,10 +74,17 @@ for model_result_path in model_result_paths:
         except Exception as e2:
             print(f"Failed to parse {model_result_path} with alternative method: {e2}")
             continue
+
+    # Ensure an integer id column for datasets that use id-based exclusions.
+    if dataset_safe == "lightblue__tengu_bench":
+        if "id" not in temp_df.columns:
+            temp_df["id"] = range(1, len(temp_df) + 1)
+        if EXCLUDED_TENGU_IDS:
+            temp_df = temp_df[~temp_df["id"].isin(EXCLUDED_TENGU_IDS)]
     
     # Add metadata columns
     temp_df["judge_model"] = model_result_path.split("/")[3]
-    temp_df["eval_dataset"] = eval_dataset_dict[model_result_path.split("/")[4]]
+    temp_df["eval_dataset"] = eval_dataset_dict[dataset_safe]
     temp_df["model_name"] = model_result_path.split("/")[5].replace(".json", "")
     
     all_result_dfs.append(temp_df)
@@ -354,7 +368,6 @@ offline.plot(fig)
 
 
 # In[ ]:
-
 
 
 

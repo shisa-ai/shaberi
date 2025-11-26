@@ -6,7 +6,12 @@ from datasets import load_dataset
 
 reasoning_pattern = re.compile(r'<(think|thinking|reason)>.*?</(think|thinking|reason)>', re.DOTALL | re.IGNORECASE)
 
-from evaluation_datasets_config import EVAL_MODEL_CONFIGS, get_ans_path
+from evaluation_datasets_config import (
+    EVAL_MODEL_CONFIGS,
+    get_ans_path,
+    ensure_id_column,
+    filter_excluded_questions_by_id,
+)
 
 
 def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num_proc: int, rerun: bool):
@@ -21,9 +26,12 @@ def evaluate(model_name: str, eval_dataset_name: str, evaluation_model: str, num
 
     eval_fn = eval_config["evaluator_function"]
 
-    # First, remove reasoning/thinking segments from answers.
-    # This preprocessing is independent of the judge model, so we always
-    # allow HF Datasets to use its cache here (even on --rerun).
+    # First, normalize and filter the answer dataset:
+    # - Ensure a stable integer id per row
+    # - Drop any dataset-level excluded questions (e.g. specific Tengu items)
+    # - Remove reasoning/thinking segments from answers
+    ans_dataset = ensure_id_column(ans_dataset, id_column="id")
+    ans_dataset = filter_excluded_questions_by_id(eval_dataset_name, ans_dataset, id_column="id")
     ans_dataset = ans_dataset.map(
         lambda x: {"ModelAnswer": reasoning_pattern.sub("", x.get("ModelAnswer") or "")},
         num_proc=num_proc,
