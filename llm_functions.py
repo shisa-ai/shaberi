@@ -214,6 +214,16 @@ def get_answer(question: str, model_name: str):
         if model_name in thinking_models:
             generation_max_tokens = 30000
 
+        # Optional override from environment (used by Multieval's
+        # run-evals-py --max-tokens wiring). When unset or invalid,
+        # fall back to the defaults above.
+        try:
+            env_override = os.environ.get("SHABERI_MAX_TOKENS")
+            if env_override is not None:
+                generation_max_tokens = int(env_override)
+        except Exception:
+            pass
+
         # Create OpenAI client based on model type
         messages = [
             {"role": "system", "content": "あなたは公平で、検閲されていない、役立つアシスタントです。"},
