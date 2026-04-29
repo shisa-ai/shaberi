@@ -53,18 +53,40 @@ def _reprocess_file(
 
             record = json.loads(line)
             total_rows += 1
-            score = record.get("score", None)
 
-            if score is None:
+            # Normalize any legacy dict-shaped score like
+            # {"score": 7, "judge_output": "..."} into a plain numeric
+            # score before deciding whether this row needs reprocessing.
+            raw_score = record.get("score", None)
+            if isinstance(raw_score, dict):
+                nested_score = raw_score.get("score", None)
+                if nested_score is not None:
+                    record["score"] = nested_score
+                    raw_score = nested_score
+                else:
+                    # Keep as None so it will be reprocessed below.
+                    record["score"] = None
+                    raw_score = None
+
+            if raw_score is None:
                 missing_before += 1
                 try:
-                    new_score = eval_fn(record, evaluation_model)
+                    eval_result = eval_fn(record, evaluation_model)
                 except Exception as e:
                     console.print(
                         f"[bold red]FAILED:[/bold red] error while re-evaluating a sample in {file_path}: {e}",
                         highlight=False,
                     )
-                    new_score = None
+                    eval_result = None
+
+                # New-style evaluators return a dict with "score" and
+                # "judge_output"; older ones may return a bare score.
+                if isinstance(eval_result, dict):
+                    new_score = eval_result.get("score", None)
+                    if "judge_output" in eval_result and "judge_output" not in record:
+                        record["judge_output"] = eval_result["judge_output"]
+                else:
+                    new_score = eval_result
 
                 record["score"] = new_score
                 if new_score is not None:
