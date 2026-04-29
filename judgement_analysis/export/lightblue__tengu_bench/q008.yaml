@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 8,
+  "category": "論理パズル",
+  "question": {
+    "original": "100円玉を4枚持っている人が170円のお菓子を買った。その時もらったお釣りはいくら？",
+    "translation_en": "**[Purpose: Question]**  \n\nA person has four 100-yen coins and buys a snack costing 170 yen. How much change do they receive?  \n\n*(Note: The translation maintains the original meaning and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "100円玉を4枚持っている場合、170円のお菓子を買うには100円玉を2枚出すと考えられます。そのため、お釣りは100(円)*2 - 170(円) = 30(円)になると考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nIf you have four 100-yen coins, you might consider using two 100-yen coins to buy a 170-yen snack. Therefore, the change would be calculated as 100 yen * 2 - 170 yen = 30 yen.  \n\n*(Note: The translation preserves the original meaning and calculation while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 答えのお釣りが30円である:4点\n- 100円玉を2枚しか出さない点に着目している:3点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **4 points** – The change given is 30 yen.  \n- **3 points** – Focuses on the fact that only two 100-yen coins are used.  \n- **2 points** – Explanation is specific and easy to understand.  \n- **1 point** – Uses natural Japanese.  \n\n*(Note: The translation maintains the original structure and meaning while ensuring clarity and natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "100円玉を4枚持っている人が170円のお菓子を買った場合、支払った金額は400円です。170円のお菓子を買ったので、お釣りは次のように計算できます：\n\n400円（持っている金額） - 170円（お菓子の値段） = 230円\n\nしたがって、もらったお釣りは230円です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えのお釣りが30円である:0点  \n  - 回答は「230円」としており誤り。\n- 100円玉を2枚しか出さない点に着目している:0点  \n  - 「支払った金額は400円」としており、4枚すべて出した前提で説明している。\n- 説明が具体的でわかりやすい:2点  \n  - 誤答ではあるが、「400円 - 170円 = 230円」と計算手順は具体的でわかりやすい。\n- 自然な日本語である:1点  \n  - 文法的に自然な日本語で書かれている。\n\n[計算式]\n0 + 0 + 2 + 1 = 3\n\n[点数]\n3点\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:05.180347+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "4枚の100円玉は合計400円です。170円のお菓子を買った場合、もらえるお釣りは以下の通りです。\n\n400円（支払った金額） - 170円（お菓子の値段） = 230円\n\nしたがって、お釣りは**230円**です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:21.869164+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "お釣りは**30円**です。\n\n**理由：**\n170円を支払うために、持っている100円玉のうち2枚（200円分）を出すのが一般的だからです。\n200円 - 170円 = 30円 となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:28.728756+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:15.118267+00:00"
+  }
+}

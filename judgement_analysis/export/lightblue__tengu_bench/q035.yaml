@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 35,
+  "category": "長い文書のClosed QA（千トークン以上）",
+  "question": {
+    "original": "以下の文章をもとに問題に答えよ\n### 文章\nアフリカ文学はナショナルなものたらんとして誕生し,批評,文学研究 はそれに呼応する形で自らの対象を生み出した。現在アフリカ文学として知られる,ヨ ーロッパ語による文学伝統の嚆矢となったのは,1930年代のパリで,サンゴール,セゼール らの手 によってフランス語で生み出されたネグリチュードという文学運動だった。それはフランスの 「われわれ」に回収され,統合されることを拒 み,別の「われわれ」を立ち上げようとする試みであり,黒人,アフリカ人としての 「われわれ」を主体として形 成し,西欧国民国家の文学という制度を通して,人々を 新たな 「われわれ」 に動員することによって,黒 人 あるいはアフリカ人 としての 「国民/民 族」 を形成 しようと する文学的ナショナリズムだった。そして,西 欧 によるアフリカ文学批評の嚆矢 と言 って もよいサルトルの 『黒いオルフェ』(1947)は,ネグリチュードを歴 史の弁証法の弱泊 と して位置づ ける,一 見冷静で俯瞰的な眼差しにもかかわらず,心 地よい自文化 の まどろみの中に突如立ち上 がってきた 「他者」の眼差しに戦標し,フランス語の 「われわれ」に回収し得ない 異質な 「われわれ」の存在を感じ取る,ネグリチュード のナショナリズムに敏感 に呼応す るものだった。\n英語圏において も,1950年 代 にチュチュオーラの 『ヤシ酒飲み』が 「プリミティブな文体」と「荒唐無稽な」物 語の ゆ えに イギ リス人読者の 間で物議 をか も した後, 1960年代から70年代にかけて,ユリ・ベイヤー,ジェラルド・ムーア,チャールズ ・ラーソンといった批評家 が, ヨーロッパ文学 とは異 なる,アフリカ文学 とい う独自の世界が存在するのだ,と いうことを論じ始めている。 こうした最初期の,ナショナリズムとしてのアフリカ 文学の誕生 に呼応す る形 で表 れた批評,研 究 は,し ば しばかなり性急なエッセンシャリズムの傾向を持っていた。 なかで もよく知 られてい るの は,生 まれつつ あったアフ リカ文学の本質 を,『ム ン トゥ』 などに よって当時流布 し ていたアフリカ哲学の諸価値に還元しようとした,ド イ ツ人批 評家ヤンハインツ ・ヤ ーンだろ う。ベル ギー人 リリアン・ケステロートの 『フランス語黒人作家たち』も 「黒人世界の価値」をネグリチュードに呼応する形で語るものだ った。\nこうした傾 向は,ア フリカ人作家 自身の主意主義的ナショナリズムとの共 犯関係 を構成 す るかの ように,そ の 後 も形 を さま ざまに変 えなが ら続 いてい った。 しきりに 口承文芸の影響 を語 り,チュチュオー ラヘの批評 の場合 に見られたように,ア フリカ人作家の英語やフランス語 の中に独自の アフ リカ的文体 を見いだそ うとす る傾向 も,こうした中か ら現れて きた もので ある。\n次 に現れて きたの は,ア フ リカ文学 を一連 のテーマ群に還元 しようとす る研究の スタイル である。これ はアフ リカ人作家たちが ネグ リチ ュー ドの人種的,大陸的語 り を離れ,個 別の アフ リカ人社会 とその 中の人間が直面する諸問題を主題とし始めたことに対応しているが,同 時 に,1970年代以降,英,米,仏 などのヨーロッパ諸国と 新 しいア フリカの独立諸 国の大学において,ア フリカ文 学 が学位論文の テーマ として取 り上げ られ るようになってか ら顕著 に見 られるようになってきたもので ある。 何よりも,欧 米のアカデミズムに大きく依存したまま とはいえ,ア フ リカ人 によ るア フリカ文学研究 が徐 々に 主要 な位置 を占め るよ うにな って きていた。ア フリカ人作家の作品の中に,伝 統と近代,農 村と都市という価値 対立の問題が読み込 まれ,さ らに独立 国家の矛盾 が,無 視 されて きたア フ リカ人女性の問題 が読 み込 まれてい っ た。アパルトヘイト下の南アフリカの黒人文学が,強 い 共感を持って迎えられたの もこの時代であった。しかし,ア フ リカ文学に現実の アフ リカ社会の諸問題 を読み込もうとするこうした傾向も,大 陸的,人 種的な 語りに呼応する本質還元主義とは異なった形で,ナ ショナルなものという大きな枠組みは共有しつづけていた。\n### 問題\nネグリチュードとはなんですか。",
+    "translation_en": "**Negritude** was a literary movement that emerged in the 1930s in Paris, spearheaded by figures such as Senghor and Césaire, and written in French. It was a rejection of being subsumed and integrated into the French \"we,\" instead attempting to establish a different \"we\" centered on the identity of Black and African people. This literary nationalism sought to form a \"nation/ethnicity\" of Black or African individuals by mobilizing people through the institution of Western national literature, thereby creating a new collective identity.  \n\nSartre’s *Black Orpheus* (1947), often considered the beginning of Western African literary criticism, positioned Negritude as a moment of weakness in the dialectic of history. Despite its seemingly detached and panoramic perspective, it was sensitive to Negritude’s nationalism, reacting to the sudden emergence of the \"other\" from the comfortable slumber of self-culture and perceiving the existence of an alien \"we\" that could not be reclaimed by the French \"we.\"  \n\nIn the English-speaking world, Chinua Achebe’s *Things Fall Apart* (1958) sparked controversy among British readers due to its \"primitive style\" and \"absurd\" narrative. From the 1960s to the 1970s, critics like Yulie Beyer, Gerald Moore, and Charles Larson began arguing that African literature constituted a distinct world separate from European literature. These early critical and scholarly responses to the birth of African literature as nationalism often exhibited a tendency toward hasty essentialism. A well-known example is German critic Janheinz Jahn, who attempted to reduce the essence of emerging African literature to the values of African philosophy, as circulated at the time in works like *Muntu*. Belgian critic Léon Kesteloot’s *Black French Writers* also spoke of \"the values of the Black world\" in a manner resonant with Negritude.  \n\nThis trend continued in various forms, often in complicity with the self-centered nationalism of African writers themselves. The tendency to emphasize the influence of oral literature and to seek a unique African style in African writers’ English or French, as seen in Achebe’s criticism, also emerged from this context.  \n\nThe next phase involved studies that reduced African literature to a series of thematic groups. This corresponded to African writers moving away from Negritude’s racial and continental narratives to focus on the specific issues faced by individual African societies and their people. At the same time, as African literature became a topic for doctoral theses in European and newly independent African universities from the 1970s onward, this approach became more prominent. African scholars gradually began to occupy a more central role in African literary studies, despite remaining heavily reliant on Western academia. Themes of value conflicts—tradition vs. modernity, rural vs. urban—were read into African writers’ works, along with the contradictions of independent states and the previously overlooked issues of African women. Black South African literature under apartheid was warmly received during this period. However, this tendency to read real-world African social issues into African literature, while different from the essentialist reductionism of continental or racial narratives, continued to share the overarching framework of the \"national.\"  \n\n**Answer:**  \n**Negritude** was a 1930s French-language literary movement led by figures like Senghor and Césaire, rejecting assimilation into French identity and instead asserting a collective Black/African identity. It was a form of literary nationalism that sought to mobilize people through Western literary institutions to create a new \"nation/ethnicity\" of Black or African individuals. Sartre’s *Black Orpheus* (1947) positioned Negritude as a moment in the dialectic of history, reacting to the emergence of the \"other\" and perceiving an alien \"we\" that could not be reclaimed by the French \"we.\" The movement influenced early African literary criticism, which often exhibited essentialist tendencies, such as reducing African literature to African philosophical values. This trend continued in various forms, including the emphasis on oral literature and African stylistic elements in English or French writing. Later, African literature was studied thematically, reflecting the shift from Negritude’s broad narratives to specific societal issues, while still operating within a national framework."
+  },
+  "answer": {
+    "gold_original": "ネグリチュードは、1930年代のパリで生まれた文学運動であり、黒人やアフリカ人としての「われわれ」を主体として形成しようとする文学的ナショナリズムです。この運動は、フランス語で書かれ、サンゴールやセゼールらによって推進されました。ネグリチュードは、フランスの「われわれ」に統合されることを拒み、黒人,アフリカ人としての「われわれ」を主体として形成し、西欧国民国家の文学という制度を通じて人々を新たな「われわれ」に動員することによって、黒人あるいはアフリカ人としての「国民/民族」を形成することを目指していました。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nNégritude was a literary movement born in Paris in the 1930s, a form of literary nationalism that sought to define \"us\" as Black or African. The movement, written in French and championed by figures like Senghor and Césaire, rejected integration into the French \"us\" and aimed to forge a new \"us\" as Black or African people. Through the institution of Western national literature, it sought to mobilize people into a new collective identity, forming a \"nation/ethnicity\" as Black or African.  \n\n(Note: The translation preserves the original meaning, structure, and key details while ensuring natural and clear English suitable for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 1930年代のパリで生まれた文学運動である:2点\n  - 黒人あるいはアフリカ人としての「国民/民族」形成を目指す文学的ナショナリズムである:2点\n  - フランス人としての「国民/民族」に統合されることを拒む運動である:2点\n  - 西欧国民国家の文学を通じて黒人あるいはアフリカ人としての「国民/民族」への動員を試みた:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Includes the following information in the text:  \n  - A literary movement born in Paris in the 1930s: **2 points**  \n  - A literary nationalism aiming to form a \"national/ethnic\" identity for Black or African people: **2 points**  \n  - A movement rejecting integration into the French \"national/ethnic\" identity: **2 points**  \n  - An attempt to mobilize Black or African people as a \"national/ethnic\" group through Western European national literature: **2 points**  \n- Written in natural Japanese: **1 point**  \n- Concise and appropriate as a summary: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "ネグリチュード（Négritude）は、1930年代にフランスのパリで、レオポール・セダール・センゴールとレヴィク・セゼールによって提唱された文学運動および思想的潮流です。主な特徴は以下の通りです。  \n\n1. **黒人/アフリカ人としてのアイデンティティの確立**  \n   ヨーロッパ中心主義的な視点から脱却し、「黒人」や「アフリカ人」としての共同体意識を強調しました。西欧の「国民国家」の概念を批判し、独自の「われわれ」を形成しようとしました。  \n\n2. **言語と文化の再評価**  \n   フランス語などのヨーロッパ語を用いながらも、その中で黒人の経験や文化を表現する独自性を追求しました。センゴールはフランス語を「黒人のための言語」として再定義しようとしました。  \n\n3. **歴史的弁証法との関係**  \n   サルトルの『黒いオルフェ』（1947）は、ネグリチュードを歴史的弁証法の一段階として捉えつつも、その独自性（異質な「われわれ」の存在）に共感しました。  \n\n4. **批評的反応とその後の発展**  \n   英語圏ではチュチュオーラの『ヤシ酒飲み』（1952）が物議を醸し、アフリカ文学批評家（ユリ・ベイヤーら）が独自の文学世界の存在を主張するようになりました。その後、アフリカ哲学や口承文芸への回帰、テーマ論的な研究などが展開されました。  \n\nネグリチュードは、アフリカ文学研究におけるナショナリズムの一形態であり、西欧中心主義への抵抗とアフリカ人自身による自己定義を目指した重要な運動でした。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 1930年代のパリで生まれた文学運動である:2点  \n  - 「1930年代にフランスのパリで…提唱された文学運動」と明記している。\n- 黒人あるいはアフリカ人としての「国民/民族」形成を目指す文学的ナショナリズムである:1点  \n  - 黒人/アフリカ人としての共同体意識や独自の「われわれ」を強調しているが、「国民/民族」形成やナショナリズムという語が明示されていない。\n- フランス人としての「国民/民族」に統合されることを拒む運動である:1点  \n  - 「ヨーロッパ中心主義的な視点から脱却」「西欧の『国民国家』の概念を批判し、独自の『われわれ』を形成」とあり、統合への拒否は読み取れるが、「フランスの『われわれ』への統合拒否」とまでは明示していない。\n- 西欧国民国家の文学を通じて黒人あるいはアフリカ人としての「国民/民族」への動員を試みた:0点  \n  - 「文学を通じて動員する」といった趣旨は述べられておらず、この点は説明されていない。\n- 自然な日本語である:1点  \n  - 文体・語彙ともに自然で読みやすい日本語。\n- 要約として適切な短さである:0点  \n  - 箇条書きで詳細に説明しており、設問に対する要約としては冗長。\n\n[計算式]\n2 + 1 + 1 + 0 + 1 + 0 = 5\n\n[点数]\n5\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:11.106103+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "ネグリチュードとは、1930年代にパリでサンゴールやセゼールらによって提唱された文学運動であり、フランス語を用いて黒人やアフリカ人としてのアイデンティティを主体的に形成しようとした試みです。西欧の国民国家の文学制度を通じて、新たな「われわれ」を動員し、黒人あるいはアフリカ人としての「国民/民族」を形成することを目的とした文学的ナショナリズム運動と言えます。ネグリチュードは、西欧による同化を拒否し、異質な「われわれ」の存在を確立しようとするものでした。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:27.970484+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提供された文章に基づくと、ネグリチュードとは以下の特徴を持つものです。\n\n1.  **起源と位置づけ**\n    1930年代のパリで、サンゴールやセゼールらによってフランス語で生み出された文学運動です。現在知られているヨーロッパ語によるアフリカ文学の伝統の始まり（嚆矢）となりました。\n\n2.  **目的と性質**\n    フランスの「われわれ」に回収・統合されることを拒否し、黒人やアフリカ人としての別の「われわれ」を主体として立ち上げようとする試みでした。\n\n3.  **定義**\n    西欧国民国家の文学という制度を通じて人々を新たな「われわれ」に動員し、黒人あるいはアフリカ人としての「国民/民族」を形成しようとする「文学的ナショナリズム」であるとされています。\n\n4.  **特徴**\n    人種的、大陸的な語りを特徴としています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:34.550081+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:38:20.177670+00:00"
+  }
+}

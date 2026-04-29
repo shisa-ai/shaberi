@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 57,
+  "category": "抽出",
+  "question": {
+    "original": "以下の文章から問いに答えなさい。\n### 文章\nプラスチックは軽くて耐久性があるという性質から、 パソコンなどの電化製品や食品保存容器などに使われて おり私たちの身の回りに溢れている。プラスチックはセ ルロイドとして発明され、1930 年頃から世界的にプラス チックの生産が始まり、現在の世界生産量は年間 2 億 8 千万トンに達し増加傾向にある。一方で、プラスチック の年間生産量の約 40%が使い捨てのプラスチックである(Hopewell et al. 2009;PlasticsEurope 2013)。海岸を訪れる と、貝殻や海藻などと一緒に漁網や発泡スチレン、空き缶やビンなどのごみを目にする。これら海ゴミのうちプ ラスチックは 7 ~ 8 割を占めており(Derraik 2002)、こ のことから、陸上での不十分な管理によって流出したプ ラスチックの一部が海岸に漂着していることが分かる。  プラスチックの主要な素材はポリエチレン(29.6%)、 ポリプロピレン(18.9%)、ポリ塩化ビニル(10.4%)、ポ リスチレン(7.1%)である(PlasticsEurope 2013)。生産 量の多いポリエチレンやポリプロピレンは海水に対して 比重が軽く海表面に浮く(比重;ポリエチレン 0.79 ~ 0.97， ポリプロピレン 0.9 ~ 0.92)。プラスチックはポリマー重 合体として安定な構造をもっているが、海洋へ流出した プラスチックは主に光分解や熱酸化分解によって劣化し、 微細化していく(Andrady 2011)。\n### 問い\n海岸に漂着しているゴミからどのようなことが分かりますか",
+    "translation_en": "From the garbage washing ashore, it can be understood that a portion of the plastic that has leaked into the ocean due to inadequate management on land has drifted to the coast. Specifically, plastic constitutes 70-80% of marine debris, indicating that a significant amount of improperly managed plastic waste ends up in the ocean and eventually washes up on shorelines. This highlights the issue of plastic pollution and the need for better waste management practices to prevent plastic from entering marine environments.  \n\n(Translation preserves the original meaning and details while ensuring natural and clear English suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "海岸に漂着しているゴミの大部分をプラスチックが占めており、特に海ゴミの約7から8割をプラスチックが占めているということから、陸上での不十分な管理によって流出したプラスチックが海岸に漂着していることが分かります。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nA significant portion of the debris washing ashore consists of plastic, with plastic accounting for approximately 70-80% of marine litter. This indicates that plastic waste, improperly managed on land, is flowing into the ocean and accumulating on coastlines.  \n\n*(Translation preserves the original meaning, details, and formal tone suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 「陸上での不十分な管理がわかる」ことを示している:4点\n- 海岸に漂着しているゴミに含まれるプラスチックの割合を示している:3点\n- 必要以上の情報を含まない:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **4 points** – Demonstrates an understanding of inadequate land-based management.  \n- **3 points** – Indicates the proportion of plastic in marine debris.  \n- **2 points** – Does not include excessive information.  \n- **1 point** – Written in natural Japanese.  \n\n*(Note: The translation maintains the original structure and meaning while ensuring clarity for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "海岸に漂着しているゴミから、以下のことが分かります。  \n\n1. **プラスチックが主なゴミ成分である**：海岸のゴミの約7～8割がプラスチックで占められており（Derraik 2002）、陸上での不適切な管理や流出により海岸に漂着していることが明らかです。  \n2. **使い捨てプラスチックが多い**：年間生産量の約40%が使い捨てプラスチックであり、これらが海洋に流出しやすい傾向があります。  \n3. **特定のプラスチック素材が浮遊しやすい**：ポリエチレンやポリプロピレンなどの軽量なプラスチック（比重0.79～0.97）が海表面に浮遊しやすく、漂着量を増加させています。  \n4. **プラスチックは劣化する**：海洋環境下では光分解や熱酸化分解により微細化され、生態系への影響を引き起こす可能性があります（Andrady 2011）。  \n\nこれらの情報から、プラスチックの過剰生産と不適切な廃棄管理が海岸に大量のゴミをもたらし、特に軽量素材が問題となっていることが分かります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 「陸上での不十分な管理がわかる」ことを示している:4点  \n  - 「陸上での不適切な管理や流出により海岸に漂着している」と明確に述べている。\n- 海岸に漂着しているゴミに含まれるプラスチックの割合を示している:3点  \n  - 「海岸のゴミの約7～8割がプラスチック」と割合を正しく示している。\n- 必要以上の情報を含まない:0点  \n  - 使い捨てプラスチックの割合や素材の比重、劣化など、問いに不要な情報を多数含んでいる。\n- 自然な日本語である:1点  \n  - 文法的にも表現としても自然な日本語で書かれている。\n\n[計算式]\n4 + 3 + 0 + 1 = 8\n\n[点数]\n8\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.117082+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "海岸に漂着しているゴミ、特にプラスチックゴミの状況から、以下のことが分かります。  \n\n1. **陸上からの流出が主因**  \n   海岸に漂着するプラスチックゴミ（漁網、発泡スチレン、容器など）の多くは、陸上での不十分な管理や処理不足によって河川や下水を通じて海洋へ流出したものであることが示唆されます。  \n\n2. **プラスチックが海洋汚染の主要因**  \n   海ゴミの7～8割がプラスチックであるというデータから、プラスチックが海洋汚染の大きな割合を占めていることが明確です。  \n\n3. **特定の素材が漂着しやすい**  \n   ポリエチレンやポリプロピレンなどの比重が軽いプラスチックは海面に浮遊しやすく、長期間漂着・蓄積する傾向があると考えられます。  \n\n4. **微細化による環境影響**  \n   漂着したプラスチックは光分解や熱酸化によって微細化（マイクロプラスチック化）し、生態系への影響が懸念されます。  \n\nこれらの点から、陸上での適切な廃棄物管理と再利用・リサイクルの推進が重要であることが示されています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:43.134189+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "文章によると、海岸に漂着しているゴミ（特にその7〜8割を占めるプラスチック）から分かることは以下の通りです。\n\n**陸上での不十分な管理によって流出したプラスチックの一部が海岸に漂着していること。**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:27.980064+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:40:01.915061+00:00"
+  }
+}

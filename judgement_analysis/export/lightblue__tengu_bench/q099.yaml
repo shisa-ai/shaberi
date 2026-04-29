@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 99,
+  "category": "建設",
+  "question": {
+    "original": "150平方メートルの敷地に対し、1階の床面積が70平方メートル、2階が50平方メートルの時容積率はどれほどですか。",
+    "translation_en": "**[Purpose: Question]**  \n\nWhat is the floor area ratio (FAR) when the site area is 150 square meters, with the first floor having a floor area of 70 square meters and the second floor having a floor area of 50 square meters?  \n\n*(Note: The translation maintains the original meaning and details while ensuring natural and clear English suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "容積率（ようせきりつ）は、敷地面積に対する建築物の延べ床面積の比率を示す指標です。計算式は以下の通りです。\n\n\\[ 容積率（\\%） = \\left( \\frac{延べ床面積}{敷地面積} \\right) \\times 100 \\]\n\n問題の条件に基づいて計算します。\n\n- 敷地面積: 150平方メートル\n- 1階の床面積: 70平方メートル\n- 2階の床面積: 50平方メートル\n\n延べ床面積は、1階と2階の床面積を合計したものです。\n\n\\[ 延べ床面積 = 70平方メートル + 50平方メートル = 120平方メートル \\]\n\nこれを使って容積率を計算します。\n\n\\[ 容積率 = \\left( \\frac{120}{150} \\right) \\times 100 = 0.8 \\times 100 = 80\\% \\]\n\nしたがって、この建物の容積率は80%です。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\n**Floor Area Ratio (FAR)** is an indicator that shows the ratio of a building's total floor area to the land area. The calculation formula is as follows:  \n\n\\[ \\text{Floor Area Ratio (\\%)} = \\left( \\frac{\\text{Total Floor Area}}{\\text{Land Area}} \\right) \\times 100 \\]  \n\nBased on the given conditions, we calculate as follows:  \n\n- **Land Area:** 150 square meters  \n- **1st Floor Area:** 70 square meters  \n- **2nd Floor Area:** 50 square meters  \n\nThe **total floor area** is the sum of the 1st and 2nd floor areas.  \n\n\\[ \\text{Total Floor Area} = 70 \\, \\text{m}^2 + 50 \\, \\text{m}^2 = 120 \\, \\text{m}^2 \\]  \n\nUsing this, we calculate the floor area ratio:  \n\n\\[ \\text{Floor Area Ratio} = \\left( \\frac{120}{150} \\right) \\times 100 = 0.8 \\times 100 = 80\\% \\]  \n\nTherefore, the floor area ratio of this building is **80%**."
+  },
+  "rubric": {
+    "original": "- 容積率が80％に定まっている:4点\n- 容積率の計算法の定義について言及している:2点\n- 容積率を求める導出過程を述べている:1点\n- 導出過程の計算が正確である:1点\n- 説明が具体的でわかりやすい:1点\n- 自然な日本語であり:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Fixed at a Floor Area Ratio of 80%: 4 points**  \n- **Mentions the definition of the floor area ratio calculation method: 2 points**  \n- **States the derivation process for calculating the floor area ratio: 1 point**  \n- **The calculation in the derivation process is accurate: 1 point**  \n- **Explanation is specific and easy to understand: 1 point**  \n- **Written in natural Japanese: 1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "容積率を計算するには、建物の総床面積を敷地面積で割ります。ただし、容積率は通常、建物の総延べ床面積（1階と2階の床面積の合計）を敷地面積で割ることで求められます。\n\n与えられた情報：\n- 敷地面積：150平方メートル\n- 1階の床面積：70平方メートル\n- 2階の床面積：50平方メートル\n\n総延べ床面積 = 1階の床面積 + 2階の床面積  \n= 70平方メートル + 50平方メートル  \n= 120平方メートル\n\n容積率 = 総延べ床面積 ÷ 敷地面積  \n= 120平方メートル ÷ 150平方メートル  \n= **0.8**（または80%）\n\nしたがって、この建物の容積率は **0.8**（または80%）です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 容積率が80％に定まっている:4点  \n  - 「= **0.8**（または80%）」と明記している。\n- 容積率の計算法の定義について言及している:2点  \n  - 「建物の総延べ床面積…を敷地面積で割ることで求められます」と定義を述べている。\n- 容積率を求める導出過程を述べている:1点  \n  - 延べ床面積の算出から割り算まで順を追って説明している。\n- 導出過程の計算が正確である:1点  \n  - 70+50=120、120÷150=0.8 と正しい。\n- 説明が具体的でわかりやすい:1点  \n  - 数値を箇条書きし、式も示しており分かりやすい。\n- 自然な日本語であり:1点  \n  - 不自然な表現はなく、自然な日本語で書かれている。\n\n[計算式]\n4 + 2 + 1 + 1 + 1 + 1 = 10\n\n[点数]\n10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:11.235693+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下は、Markdown形式で研究内容を報告するための文書例です。必要に応じてセクションを追加・削除したり、内容を調整してください。\n\n```markdown\n# 研究報告書\n## タイトル\n研究テーマ: [あなたの研究テーマ]\n\n## 概要\nこの研究では、[研究の背景や目的]について調査し、[具体的なアプローチや方法]を用いて分析を行いました。主な成果としては、[主要な発見や結論]が得られました。\n\n## 背景と目的\n- **背景**: [研究分野の現状や問題点]\n- **目的**: [この研究で何を明らかにしたいか]\n- **重要性**: [なぜこの研究が重要なのか]\n\n## 関連研究\n- [既存の関連研究1]: [概要と貢献]\n- [既存の関連研究2]: [概要と貢献]\n- 本研究との違い: [あなたの新規性]\n\n## 方法論\n### データ収集\n- 使用データ: [データソースと特徴]\n- 収集方法: [具体的な手順]\n\n### 分析手法\n1. **前処理**: [データクリーニング/変換]\n2. **モデル構築**: \n   - 使用ツール: [ソフトウェア/ライブラリ]\n   - モデル選択理由: \n3. **評価指標**: \n   - 使用指標: \n   - 評価基準:\n\n## 結果\n### 主要な発見\n1. **発見1**: \n   - 内容: \n   - 図表: ![図1](画像URL)\n2. **発見2**:\n   - 内容:\n   - 数値結果:\n\n### 考察\n- 結果の解釈:\n- 期待とのずれ:\n\n## 議論\n### 研究の限界\n1. データ制約:\n2. モデル仮定:\n\n### 今後の課題\n1. 改善点:\n2. 拡張可能性:\n\n## 結論\n本研究では、[再度主要な成果を簡潔に記述]。今後は、[具体的な今後の計画]を行う予定である。\n\n## 参考文献\n1. 著者名, \"論文タイトル\", ジャーナル名, 年.\n2. 著者名, \"書籍タイトル\", 出版社, 年.\n\n```\n\n### 補足説明:\n1. 各セクションは必要に応じて追加・削除可能です（例：倫理的配慮、アックノウレジメント）。\n2. 図表はMarkdown形式では直接埋め込めないため、画像URLまたはファイルパスを指定します。\n3. 数式はLaTeX記法で記述可能です（例：`$\\alpha = 0.05$`）。\n4. コードスニペットがある場合はバッククォート3つで囲みます（```python ...```）。\n\n必要に応じてさらに詳細化してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:12.801855+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "研究内容を報告するためのMarkdown形式の文書例を作成しました。\n\n汎用的に使える「テンプレート（雛形）」と、実際に内容を埋め込んだ「記入例」の2パターンを用意しました。用途に合わせてコピー＆ペーストしてご使用ください。\n\n---\n\n### パターン1：汎用テンプレート（雛形）\n\nこのままコピーして、`[ ]` の部分を書き換えて使用してください。\n\n```markdown\n# [研究タイトル]\n\n**作成者:** [氏名]  \n**所属:** [部署・大学名など]  \n**日付:** 202X年X月X日  \n**バージョン:** 1.0\n\n---\n\n## 1. 概要 (Abstract)\n> 本研究の要約をここに記述します。背景、目的、主な結果、結論を300文字程度で簡潔にまとめます。\n\n## 2. 背景と目的 (Background & Objectives)\n### 2.1 背景\n現在の状況や、なぜこの研究が必要なのかという課題意識を記述します。\n- 課題点1\n- 課題点2\n\n### 2.2 目的\n本研究によって何を明らかにしたいのか、何を達成したいのかを明確にします。\n\n## 3. 研究方法 (Methodology)\nどのような手法で研究を行ったかを記述します。\n\n*   **対象データ:** [例: 2023年度の売上データ、X名のアンケート回答]\n*   **使用ツール:** [例: Python (Pandas, Scikit-learn), Excel]\n*   **分析手法:** [例: 回帰分析、A/Bテスト]\n\n### 手順\n1. データの収集\n2. 前処理（クリーニング）\n3. モデルの構築と検証\n\n## 4. 結果 (Results)\n得られたデータやグラフを提示します。\n\n### 4.1 定量データ\n| 項目 | 結果A | 結果B | 改善率 |\n| :--- | :---: | :---: | :---: |\n| 指標1 | 100 | 120 | +20% |\n| 指標2 | 50 | 45 | -10% |\n\n### 4.2 分析結果のグラフ\n![グラフの説明テキスト](画像ファイルのパスまたはURL)\n*図1: [グラフのタイトル]*\n\n## 5. 考察 (Discussion)\n結果から読み取れる意味や、仮説との整合性について記述します。\n\n*   **ポジティブな要素:** 結果Aが上昇した要因は...\n*   **課題点:** 指標2が低下した理由は...\n\n## 6. 結論と今後の展望 (Conclusion & Future Work)\n### 6.1 結論\n本研究の最終的なまとめです。\n\n### 6.2 今後の課題\n今回解決できなかった点や、次にやるべきアクションプランを記述します。\n- [ ] 追加データの収集\n- [ ] 別アルゴリズムでの検証\n\n## 7. 参考文献 (References)\n1. 著者名, \"論文タイトル\", 掲載誌, 発行年.\n2. [Webサイト名](URL)\n```\n\n---\n\n### パターン2：具体的な記入例（架空の研究テーマ）\n\n以下は、「生成AI導入による業務効率化」という架空のテーマで実際にMarkdownを記述した例です。\n\n```markdown\n# 生成AIツール導入による社内ドキュメント作成効率の変化に関する報告\n\n**作成者:** 研究開発部 山田太郎  \n**日付:** 2023年10月27日\n\n---\n\n## 1. 概要\n本レポートは、社内における生成AIツール（ChatGPT等）の導入が、ドキュメント作成業務に与える影響を定量的に評価したものである。2週間の実証実験の結果、作成時間は平均30%削減されたものの、ファクトチェックにかかる時間は10%増加したことが判明した。\n\n## 2. 背景と目的\n### 背景\n当部署では月間平均20本の技術レポートを作成しており、その作成工数が他の開発業務を圧迫している現状がある。\n\n### 目的\n生成AIをドラフト作成の補助として利用することで、以下の達成を目指す。\n1. ドキュメント作成時間の20%削減\n2. 従業員の業務負荷（ストレス値）の低減\n\n## 3. 検証方法\n*   **対象:** 開発部メンバー 10名\n*   **期間:** 2023年10月1日 ～ 10月14日\n*   **比較方法:** \n    *   Aグループ（5名）: 従来どおり手動で作成\n    *   Bグループ（5名）: 生成AIを使用してドラフト作成後、修正\n\n## 4. 検証結果\n\n### 4.1 作業時間の比較（1記事あたり）\n\n| グループ | ドラフト作成(分) | 修正・確認(分) | 合計時間(分) |\n| :--- | :---: | :---: | :---: |\n| **A (手動)** | 60 | 30 | **90** |\n| **B (AI利用)** | 10 | 53 | **63** |\n\n> **結果:** BグループはAグループと比較して、合計時間で約30%の短縮が見られた。\n\n### 4.2 コードによる分析（Python）\nアンケート結果の感情分析に用いたコードは以下の通り。\n\n```python\nimport pandas as pd\nfrom textblob import TextBlob\n\n# アンケートデータの読み込み\ndf = pd.read_csv('survey_results.csv')\n\n# ポジティブ/ネガティブ分析\ndf['sentiment'] = df['comment'].apply(lambda x: TextBlob(x).sentiment.polarity)\nprint(df['sentiment'].mean())\n```\n\n## 5. 考察\n### 時間短縮の効果\nドラフト作成時間は劇的に短縮された（60分→10分）。これは「白紙の状態から書き始める」という心理的ハードルが下がったことが大きいと考えられる。\n\n### 新たな課題\n修正・確認時間が30分から53分へと増加している。これはAIが生成した情報の正確性を確認する「ファクトチェック」に時間を要したためである。特に専門的な技術用語の誤用が散見された。\n\n## 6. 結論\n生成AIの導入は業務効率化に有効であるが、**「作成」から「監修」へと業務の質が変化する**ことが明らかになった。\n\n### 今後のアクション\n- [x] 全社導入に向けたガイドライン策定\n- [ ] ファクトチェック専用のチェックリスト作成\n- [ ] プロンプトエンジニアリング研修の実施\n\n## 7. 参考文献\n1. OpenAI Documentation. https://platform.openai.com/docs/\n2. 社内規定集 第4版 (2023)\n```\n\n### Markdown活用のポイント\n\n研究報告書をMarkdownで書く際のコツです：\n\n1.  **見出し (`#`) を構造化する:** 目次が自動生成されるツール（VS Code, GitHub, Notionなど）で読みやすくなります。\n2.  **引用 (`>`) を使う:** 要約や重要なインサイトを目立たせるのに便利です。\n3.  **表 (`|`) を使う:** 数字の比較は必ず表にします。\n4.  **コードブロック (```` ``` ````) を使う:** 分析に使用したスクリプトや、生データの一部を表示する際に可読性が高まります。\n5.  **太字 (`**`) を使う:** 結論や重要な数字だけを太字にすると、スキャンして読む人（上司など）に親切です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:17.851068+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:17.062094+00:00"
+  }
+}

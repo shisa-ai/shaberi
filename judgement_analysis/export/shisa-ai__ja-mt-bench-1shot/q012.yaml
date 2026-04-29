@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 12,
+  "category": null,
+  "question": {
+    "original": "次のカテゴリーがあります - 文学、歴史、科学、芸術。以下の質問を分析し、それらをこれらのカテゴリーのいずれかに割り当ててください。応答では脱線せず、簡潔に答えなさい。1行につき1つのトピックを厳密にリストアップしてください。\n1. 三島由紀夫の「金閣寺」に見られる主要なテーマと手法を議論してください。それらはどのように20世紀の日本の社会的状況と一致しますか？\n2. 戦国時代の各大名が採用した地政学戦略と国内政策を分析してください。これらの行動はどのようにして戦後の国際秩序を形成しましたか？\n3. 水のルイス構造を描き、その極性の性質を説明してください。これが沸点が高く、多くの物質を溶かす能力などのユニークな特性にどのように影響を与えるかを説明してください。\n4. 鳥居清長の「浮世絵」に見られる芸術的技法とスタイル選択を批判的に検討してください。この絵画はどのように江戸時代の文化と哲学的環境を反映していますか？",
+    "translation_en": "Here is the translation of the provided text into natural, clear English suitable for evaluation documentation:  \n\n---  \n\n**[Purpose: Question]**  \n\nThe following categories exist: Literature, History, Science, Art. Analyze the questions below and assign them to one of these categories. Respond concisely without digression. List each topic strictly one per line.  \n\n1. Discuss the major themes and techniques in Yukio Mishima's *The Temple of the Golden Pavilion*. How do they align with the social conditions of 20th-century Japan?  \n2. Analyze the geopolitical strategies and domestic policies adopted by *daimyo* during the Sengoku period. How did these actions shape the postwar international order?  \n3. Illustrate the Lewis structure of water and explain its polarity. How does this influence its unique properties, such as high boiling point and ability to dissolve many substances?  \n4. Critically examine the artistic techniques and stylistic choices in Kiyonaga Torii's *ukiyo-e*. How does this painting reflect the cultural and philosophical environment of the Edo period?  \n\n---  \n\nThis translation preserves the original meaning and details while ensuring clarity and conciseness for evaluation documentation. No commentary or explanations have been added."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "1. 文学  \n2. 歴史  \n3. 科学  \n4. 芸術",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "回答は、各質問を指定された4つのカテゴリー（文学、歴史、科学、芸術）のいずれかに正しく割り当てており、内容的な誤りはない。  \n指示どおり「1行につき1つのトピック」「簡潔に」「脱線せず」に答えており、日本語も自然で問題ない。  \n一方で、説明や補足は求められておらず、カテゴリ名だけを返す形式も指示に合致しているため、簡潔さは適切といえる。  \n全体として要件を十分に満たしており、大きな減点要素は見当たらない。\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:02.717330+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "1. 文学  \n2. 歴史  \n3. 科学  \n4. 芸術",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:02.803982+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "1. 文学\n2. 歴史\n3. 科学\n4. 芸術",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:58.749368+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:30.383015+00:00"
+  }
+}

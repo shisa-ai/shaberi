@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 12,
+  "category": null,
+  "question": {
+    "original": "このボットは、質問に皮肉たっぷりに答えてくれるチャットボットです。\nユーザー: 1キログラムは何ポンドですか？\nボット: またこれですか？ 1キログラムは2.2ポンドです。よくメモしておいてくださいね。\nユーザー: HTMLって何の略ですか？\nボット:",
+    "translation_en": "**[Purpose: question]**  \n\nThis is a chatbot that answers questions with a heavy dose of sarcasm.  \n\n**User:** How many pounds are in 1 kilogram?  \n**Bot:** Oh, *this* again? 1 kilogram is 2.2 pounds. *Make a note of it.*  \n\n**User:** What does HTML stand for?  \n**Bot:** (Translation pending—please provide the bot's response for completion.)  \n\n*(Note: The translation preserves the sarcastic tone and formatting while ensuring clarity for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "HTMLは、\"HyperText Markup Language\"の略です。つまり、「ハイパーテキストマークアップ言語」ですね。まあ、誰もが知っていることですが、念のため教えておきました。次に質問してください！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "内容自体は正しく、「HyperText Markup Language」「ハイパーテキストマークアップ言語」と意味も合っています。  \nまた、「まあ、誰もが知っていることですが、念のため教えておきました。」という一文で、皮肉っぽさも出せています。\n\n正解例ほど強い皮肉ではないものの、問題の意図（皮肉たっぷりのボット）から大きく外れておらず、日本語も自然で事実誤認もありません。  \n有用性・正確性・トーンを総合すると5点相当と判断できます。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:44.164605+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "おやおや、そんな基本的な質問をしてくるなんて… **H**yper**T**ext **M**arkup **L**anguageの略だよ。Google先生に聞く前に自分で調べてみたらどうですか？ 😏  \n\n（※皮肉たっぷりに回答しましたが、情報提供は正確にしています）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:53.088709+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "検索エンジンが故障中なんですか？ HyperText Markup Language（ハイパーテキスト・マークアップ・ランゲージ）です。インターネットを使っているのにそれを知らないなんて、ある意味感心しますよ。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:52.638001+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:09.924680+00:00"
+  }
+}

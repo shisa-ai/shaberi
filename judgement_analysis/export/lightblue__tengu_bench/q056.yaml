@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 56,
+  "category": "抽出",
+  "question": {
+    "original": "以下の文章から以下の問いに答えなさい。\n### 文章\n〜物体検知・骨格推定によって重機オペレーターの死角を漏れなくカバーすることが可能に〜 株式会社Lightblue(以下Lightblue)は、清水建設株式会社（代表取締役社長：井上和幸、以下「清水建設」）および日本道路グループのエヌディーリース・システム株式会社（代表取締役社長：村井永典、以下「エヌディーリース・システム」）との共同開発により、重機用の車両搭載型安全監視カメラシステム「カワセミ」を商品化しました。Lightblueでは、このシステムの核となる物体検知・骨格推定のアルゴリズム開発を担当。従来の検知システムの制約を克服し、重機オペレータの死角を漏れなくカバーすることが可能になりました。本システムは、国土交通省の新技術情報提供システム「NETIS」に登録されています。\n◎プレスリリースの詳細はこちら\n車両搭載型安全監視カメラシステム「カワセミ」の概要 カワセミは、画像解析AIを活用して重機オペレータの死角となる後方危険区域内にいる人や車両を瞬時に検知し、警告音、ライト点灯、モニター表示等でアラートを発報するカメラ監視システムです。 建設現場で発生する災害の中で、重機接触災害は大きな問題です。狭い作業空間での重機と作業員の接触を防ぐことは、安全管理上の重要な課題となっています。「カワセミ」では、従来の検知システムの制約を克服し、より高度な安全監視を実現します。 システムは、重機オペレータの死角を監視する単眼カメラユニット、カメラユニットの撮影画像から人や車両の侵入を検知する画像解析AIサーバー、パトライト、監視モニターで構成されます。本システムの特徴は、画像解析AIに組み込んだ骨格推定アルゴリズムにより様々な作業姿勢に対応した人の検知機能を有すること、人が重機を認識しているかどうかをリアルタイムに判定できることです。また、カメラユニットは重機の種類を問わずマグネットで簡単に固定できます。\n本システムの開発にあたっては、検出アルゴリズムの開発を弊社及び清水建設が、販売計画の策定と販路開拓をエヌディーリース・システムが担当しています。\n◎お問い合わせはこちら◎\n「カワセミ」の画像解析AI（物体検知・骨格推定のアルゴリズムについて） カワセミの核となる画像解析AIは、様々な姿勢の骨格を機械学習しており、しゃがんだ状態や手荷物等に隠れて体の一部が画像に映っていない場合でも、人の存在を検知できます。また、骨格から推定した目・鼻・耳の位置関係を基に、当該人物が重機を視認しているかどうかを判断することもできます。これにより、アラートの発報レベルを「注意」から「警告」へと段階的に上げるといった運用が可能となり、危険な状況にある作業者をいち早くオペレータに知らせることができるようになります。（特許出願中）さらに、人物に加えて車両を検知する機能も備えており、重機と車両の衝突回避にも効果を発揮します。\n画像解析AIによる骨格推定 人の骨格を、右側（赤線）と左側（青線）を区別して認識することにより、様々な姿勢を推定可能 足元の推定位置（×印）により、常に安全側の評価（実際よりも重機に近い評価）となるように算定可能\n画像解析AIによる顔の向きの推定 骨格推定技術により、目・鼻・耳の位置関係から顔の向きを判定し、重機を視認しているかを確認可能\n### 問い\nこの文章中で述べられているシステムとはどのような災害に対応するものか、抜き出しなさい",
+    "translation_en": "The system is designed to address **heavy machinery contact disasters**, particularly in construction sites where accidents occur due to collisions between heavy machinery and workers in narrow working spaces. It specifically covers blind spots of heavy machinery operators by detecting people and vehicles in hazardous rear areas, providing alerts to prevent such incidents. Additionally, it helps avoid collisions between heavy machinery and vehicles.  \n\n*(Extracted from the text: \"建設現場で発生する災害の中で、重機接触災害は大きな問題です。狭い作業空間での重機と作業員の接触を防ぐことは、安全管理上の重要な課題となっています。\" and \"また、人物に加えて車両を検知する機能も備えており、重機と車両の衝突回避にも効果を発揮します。\")*"
+  },
+  "answer": {
+    "gold_original": "この文章中で述べられているシステムは、建設現場で発生する「重機接触災害」に対応するものとして記述されています。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe system described in this text is intended to address \"heavy machinery contact accidents\" occurring at construction sites.  \n\n*(Translation preserves the original meaning and technical detail while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 重機接触災害という単語を含んでいる:7点\n- 文章中にない内容を含んだいない:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the term \"heavy machinery contact accident\": 7 points**  \n- **Does not contain content outside the given text: 2 points**  \n- **Written in natural Japanese: 1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この文章中で述べられているシステム「カワセミ」は、主に以下の災害に対応するものとされています。  \n\n1. **重機接触災害**  \n   - 建設現場で発生する重機と作業員の接触事故を防ぐことを目的としています。  \n   - 特に狭い作業空間での重機と作業員の衝突を監視し、警告を発報します。  \n\n2. **車両との衝突事故**  \n   - 重機オペレーターの死角にいる車両を検知し、衝突回避のためのアラートを発報します。  \n\n3. **作業員の安全管理**  \n   - しゃがんだ状態や手荷物で体の一部が隠れている場合でも、人の存在を検知し、危険な状況にある作業者を早期にオペレーターに知らせます。  \n\nこれらの災害に対応するため、「カワセミ」は画像解析AIによる物体検知・骨格推定アルゴリズムを活用し、死角の監視とリアルタイム警告を行います。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 重機接触災害という単語を含んでいる:7点  \n  - 回答中に「重機接触災害」という語が明示的に含まれている。\n- 文章中にない内容を含んだいない:0点  \n  - 問いは「どのような災害に対応するものか、抜き出しなさい」としているが、回答では「車両との衝突事故」「作業員の安全管理」など、文章中の表現を超えた要約・追加説明をしており、「抜き出し」の条件から外れているため減点。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語で書かれている。\n\n[計算式]\n7 + 0 + 1 = 8\n\n[点数]\n8点\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.141341+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この文章中で述べられているシステム「カワセミ」は、**重機接触災害**に対応するものです。具体的には、建設現場で発生する重機と作業員の接触事故や、重機と車両の衝突事故を防ぐことを目的としています。狭い作業空間での安全管理上の課題を解決し、より高度な安全監視を実現することで、これらの災害リスクを低減します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:24.716068+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "重機接触災害",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:28.650434+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:58.539533+00:00"
+  }
+}

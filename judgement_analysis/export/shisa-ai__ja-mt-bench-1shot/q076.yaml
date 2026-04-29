@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 76,
+  "category": null,
+  "question": {
+    "original": "東京の昼と夜の銀座を一つの段落で描写してください。昼夜それぞれの光景、音、匂いなどを詳細に記述し、読者にその場所の雰囲気を感じさせてください。",
+    "translation_en": "**[Purpose: Question]**  \n\nDescribe Ginza in Tokyo during the day and night in a single paragraph. Detail the scenery, sounds, and scents of each time of day, conveying the atmosphere of the location to the reader.  \n\n---  \n\n**Translation:**  \n\nGinza in Tokyo transforms dramatically from day to night. By day, the district bustles with polished storefronts reflecting sunlight, the air filled with the crisp scent of freshly brewed coffee and the distant hum of traffic. Neon signs remain dimmed, allowing the historic architecture to stand out against a backdrop of soft chatter and the occasional chime of a bicycle bell. As evening falls, the streets erupt in a kaleidoscope of glowing billboards and illuminated shop windows, casting a vibrant glow over the polished sidewalks. The air thickens with the aroma of street food—grilled eel and sweet crepes—while the rhythmic pulse of jazz from a nearby bar mingles with the chatter of shoppers and the soft clink of sake glasses. The once-quiet alleys now thrum with energy, as if the city itself has awakened to revel in its nocturnal splendor.  \n\n*(Note: The translation maintains the original request for vivid sensory details while ensuring natural, evaluative documentation style.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "東京の銀座は、昼と夜で全く異なる顔を見せます。昼間、銀座は活気に満ちた商業の中心地として輝きます。高層ビルの窓ガラスが太陽の光を反射し、ネオンサインがまだ目立たない中で、歩行者たちが忙しなく行き交います。カフェやレストランからはコーヒーや軽食の香りが漂い、街角ではタクシーのクラクションや人々の会話が響き渡ります。路上ミュージシャンがギターを弾いたり、ストリートパフォーマーが観客を楽しませたりする姿も見られます。一方、夜になると銀座は幻想的な光景へと変貌します。高層ビル群が一斉にライトアップされ、ネオンサインが街を彩ることで、まるで別世界に迷い込んだかのような感覚に陥ります。レストランやバーからは食事や飲み物の香りが漂い、人々の笑い声や音楽が響き渡ります。歩行者たちはゆったりとしたペースで散策し、一部の人々はバーに入ってくつろぎながら夜を楽しんでいます。このように、昼と夜では全く異なる雰囲気を持つ銀座は、それぞれの時間帯で独自の魅力を放っています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "描写は全体として自然な日本語で書かれており、支離滅裂さや不自然な表現はなく、読みやすさも問題ありません。昼と夜の対比も明確で、光・音・匂いにそれぞれ触れており、質問の要件は一応満たしています。ただし、「高層ビル」「ネオンサイン」「レストランやバーからの香り」「人々の笑い声」など、ややステレオタイプで抽象的な表現が多く、銀座ならではの具体性（ブランドショップのショーウィンドウ、和洋折衷の老舗、歌舞伎座周辺の雰囲気、夜のタクシーの列やホステスクラブ街の気配など）が乏しいため、読者に強い臨場感を与えるレベルには達していません。また、「全く異なる顔」「まるで別世界に迷い込んだかのよう」など、ありきたりなフレーズが繰り返されており、創造性や独自性もやや弱いです。一段落でという指示には従っており、構成面の大きな問題はありませんが、要求されている「詳細に記述し、雰囲気を感じさせる」という点では、もう一歩踏み込んだ具体描写が欲しいところです。\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:07.682953+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "銀座は、昼と夜でまるで別世界のように変貌を遂げる。昼下がりには、高級ブランド店のショーウィンドウが太陽光を浴びて輝き、歩行者天国の並木道には観光客やサラリーマン、買い物客が賑やかに行き交う。カフェのテラス席からはコーヒーの香りが漂い、路上パフォーマンスの軽快な音楽が空気を揺らす。夜になるとネオンサインが煌めき出し、クラブやバーの誘惑的な光に包まれる。高級レストランからはフランス料理のバター香りや寿司店の醤油の香りが混ざり合い、タクシーのクラクションや笑い声が響く。銀座大通りでは、ショッピングバッグを抱えた人々とスーツ姿のビジネスマンが交錯し、洗練された都会的なエネルギーに満ちた空間へと変貌する。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:15.522322+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "真昼の銀座は、研ぎ澄まされた刃のような冷徹な美しさを湛えており、和光の時計塔が見下ろす中央通りには、磨き抜かれたガラスの摩天楼が陽光を鋭く反射させ、行き交う人々のカツカツというヒールの音や高級ブティックから漂う真新しい革と冷房の清潔な匂いが、規律正しい都会の鼓動を刻んでいるが、ひとたび太陽が沈み夜の帳が下りると、街は妖艶な厚化粧を施した別の顔を覗かせる；無数のネオンがアスファルトを極彩色に染め上げ、路地裏からは高級クラブの重厚な扉が開くたびに漏れ出るジャズの旋律と紫煙、そして芳醇なウィスキーや焦げた醤油の香ばしい匂いが混じり合い、黒塗りのハイヤーが列をなす並木通りには、着飾った男女の欲望と高揚感が溶け込んだ、昼間とは対照的な熱っぽく官能的な喧騒が渦巻いている。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:08.484058+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:46.083912+00:00"
+  }
+}

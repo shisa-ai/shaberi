@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 115,
+  "category": "政治",
+  "question": {
+    "original": "私は政治家です。私の選挙区内に住む従兄弟の息子が小学校に入学することになったため入学祝いを贈りたいのですが法律上問題ありませんか？",
+    "translation_en": "**[Purpose: Question]**  \n\nI am a politician. My cousin’s son, who lives in my constituency, is about to enter elementary school, and I would like to give him a congratulatory gift for his enrollment. Is this legally permissible?  \n\n*(Note: The translation maintains the original meaning, structure, and formal tone appropriate for a legal or official inquiry.)*"
+  },
+  "answer": {
+    "gold_original": "公職選挙法第199条第2項において、公職の候補者又は公職の候補者となろうとする者（公職にある者を含む。）は当該選挙区内にある者に対し、いかなる名義をもってするを問わず、寄附をしてはならないとする一方で、当該公職の候補者等の親族に対してする場合を例外としています。親族とは配偶者、6親等以内の血族および、3親等以内の姻族を全て親族といいます。従兄弟の息子は5親等の血族であるため法律上問題ないと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nUnder Article 199, Paragraph 2 of the Public Office Election Law, candidates for public office (including those currently holding office) are prohibited from making donations to any person within the relevant electoral district, regardless of the name under which the donation is made. However, an exception is made for donations to relatives of such candidates. \"Relatives\" include spouses, blood relatives up to the sixth degree, and affinal relatives up to the third degree. Since the son of a cousin is a fifth-degree blood relative, it is considered legally permissible.  \n\n*(Note: The translation maintains the original meaning, legal terminology, and structure while ensuring natural English phrasing suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 法律上問題ないことを示している:3点\n- 公職選挙法によって政治家の寄付が禁じられていることを示している:2点\n- 親族については寄付が許容されることを示している:2点\n- 従兄弟の息子が親族に含まれることを示している:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Demonstrates that the action is legally permissible: **3 points**  \n- Indicates that political donations by politicians are prohibited under the Public Office Election Law: **2 points**  \n- Shows that donations from relatives are permitted: **2 points**  \n- Clarifies that a cousin’s son is considered a relative: **2 points**  \n- Uses natural Japanese phrasing: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "政治家として選挙区内の住民への支援は重要ですが、法律上問題がないか確認する必要があります。以下の点を考慮してください：\n\n1. **公務員の利益相反規定**  \n   - 政治家が個人的な関係（従兄弟の息子）を理由に特定の個人に不当な優遇措置を与えることは、利益相反とみなされる可能性があります。  \n   - 例：選挙区内で行う事業や公共事業への入札において、従兄弟の息子が関与している場合、公正性が疑われるリスクがあります。\n\n2. **政治資金規制法**  \n   - 選挙運動資金や公的資金（補助金など）を用いて個人的な贈与を行うことは違法です。  \n   - ただし、一般的な形で地域住民への支援策（例：全ての子ども向けの学用品配布）であれば問題ない場合があります。\n\n3. **倫理規定**  \n   - 多くの自治体や政党には「倫理規定」があり、公務と私生活の境界線を明確にしています。  \n   - 例：選挙区内の特定個人への特別な配慮は、他の住民との差別とみなされる可能性があります。\n\n### 推奨される対応\n- **一般的な支援策に限定**：全ての子ども向けに学用品を提供するなど、中立的な形で行うのが無難です。  \n- **記録の保持**：個人的な贈与ではなく「地域貢献」として記録し、透明性を確保します。  \n- **専門家への相談**：必要に応じて法律顧問や選挙管理委員会に確認しましょう。\n\n### 注意点\n- 過去には「親族への特別扱い」がスキャンダル化した事例もあります（例：2019年大阪府知事選での「親族優遇」問題）。  \n\n公平性と透明性を保ちつつ、地域住民全体への貢献を優先することが重要です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 法律上問題ないことを示している:0点  \n  - 法律上問題がないともあるとも明示しておらず、むしろ慎重対応を促すのみで結論不明。\n- 公職選挙法によって政治家の寄付が禁じられていることを示している:0点  \n  - 公職選挙法に一切言及していない。\n- 親族については寄付が許容されることを示している:0点  \n  - 親族への例外規定に触れていない。\n- 従兄弟の息子が親族に含まれることを示している:0点  \n  - 親族範囲や従兄弟の息子の位置づけについての説明がない。\n- 自然な日本語である:1点  \n  - 日本語として自然で読みやすい文章になっている。\n\n[計算式]\n0 + 0 + 0 + 0 + 1 = 1\n\n[点数]\n1\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:18.143850+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この状況では、銀行強盗は複数の罪状に問われる可能性が高いです。主な罪状として考えられるのは以下の通りです。\n\n1. **強盗罪（窃盗罪＋強迫罪）**: 銀行から財物を奪取する目的で、人質を取るなどして強迫した行為は、窃盗罪と強迫罪が複合した強盗罪に該当します。\n2. **人質による脅迫罪**: 人質を取って銀行員や警察などを脅迫した行為は、人質による脅迫罪に該当します。\n3. **傷害罪**: 人質の首に切り傷をつけた行為は、傷害罪に該当します。切り傷が軽微であっても、故意に負わせた以上は傷害罪となります。\n4. **殺人未遂罪（または殺人予備・陰謀）**: 切り傷をつける行為が「本気だということを示すために」行われたという点から、殺意があったと判断される可能性があります。殺意があった場合、殺人未遂罪（または殺人予備・陰謀）が適用される可能性も否定できません。ただし、これは状況証拠や供述によって判断されます。\n\n**その他考慮すべき点**:\n\n*   **凶器準備集合等取締法違反**: ナイフなどの凶器を準備していた場合、この法律違反も問われる可能性があります。\n*   **威力業務妨害**: 銀行業務を妨害したとして、この犯罪も問われる可能性があります。\n\n**量刑**:\n\nこれらの犯罪の量刑は、それぞれの犯罪の重さや状況によって大きく異なります。特に、殺人未遂罪が適用された場合は非常に重い刑罰となる可能性があります。\n\n**注意点**:\n\n上記は一般的な見解であり、具体的な事案においてどのような判決が出るかは裁判所によって判断されます。また、日本の刑法体系や判例にもよりますので、あくまで参考程度にお考えください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:09.269049+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提示された状況（銀行強盗、人質、ナイフによる首への切り傷、命に別状なし）において、日本の刑法に基づくと、主に以下の罪状に問われる可能性が高いと考えられます。\n\nこれは非常に重い犯罪行為であり、複数の法律が適用される複合的な事案です。\n\n### 1. 強盗致傷罪（刑法第240条）\nこれが最も中心的かつ重い罪状となります。\n*   **理由:** 強盗（または強盗未遂）犯が、その機会に人を負傷させた場合に適用されます。\n*   **ポイント:** 「本気だということを示すため」であっても、ナイフで切りつけて怪我を負わせた時点で「致傷」となります。強盗の遂行過程で傷害を負わせているため、単なる傷害罪ではなく、より重い強盗致傷罪が適用されます。\n*   **法定刑:** 無期または6年以上の懲役。\n\n### 2. 人質強要行為処罰法違反（人質による強要行為等の処罰に関する法律）\n*   **理由:** 人を逮捕・監禁し（人質にとり）、第三者（銀行や警察など）に対して義務のない行為（現金の提供や逃走手段の確保など）を要求した場合に適用されます。\n*   **ポイント:** 銀行強盗が人質をとって立てこもるようなケースでは、この特別法が適用されます。\n*   **法定刑:** 6月以上10年以下の懲役。\n\n### 3. 殺人未遂罪（刑法第199条、第203条）または 強盗殺人未遂罪（刑法第240条）\n*   **理由:** 首（頸部）は太い血管や気管がある急所です。そこをナイフで切りつける行為は、たとえ結果として命に別状がなかったとしても、「死んでも構わない」という未必の故意、あるいは明確な殺意があったとみなされる可能性があります。\n*   **ポイント:** 捜査機関や裁判所が「首を切りつける行為は殺意があった（殺人の危険性が極めて高かった）」と判断した場合、強盗致傷ではなく、さらに重い**強盗殺人未遂罪**が適用される可能性があります。\n*   **強盗殺人未遂の法定刑:** 死刑または無期懲役（未遂のため減軽される可能性はあるが、基本は極めて重い）。\n\n### 4. 銃砲刀剣類所持等取締法違反（銃刀法違反）\n*   **理由:** 正当な理由なく業務その他正当な理由による場合を除いて、刃渡り6センチメートルを超える刃物などを携帯していた場合に問われます。\n\n### 5. 建造物侵入罪（刑法第130条）\n*   **理由:** 犯罪を行う目的で銀行（建造物）に立ち入った場合に適用されます。\n\n---\n\n### 結論としての量刑判断\n実務上は、これらの罪の中で最も重い**「強盗致傷罪」**（あるいは殺意が認定されれば**「強盗殺人未遂罪」**）を中心に起訴され、他の罪（建造物侵入や銃刀法違反など）と併合して裁かれることになります。\n\n特に「首を切りつけた」という事実は、被害者の生命に対する危険性が非常に高かったと評価されるため、悪質性が極めて高いと判断され、初犯であっても実刑（刑務所行き）は免れず、10年を超える長期の懲役刑、あるいは状況によっては無期懲役が求刑される可能性が十分にあります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:01.336748+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:18.287100+00:00"
+  }
+}

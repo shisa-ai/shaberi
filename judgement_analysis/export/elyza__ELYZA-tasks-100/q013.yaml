@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 13,
+  "category": null,
+  "question": {
+    "original": "IMEとして機能してください。\n\nあなたのタスクはローマ字入力されたアルファベット列を単語ごとにひらがなに変換し、それぞれの単語を漢字に変換する候補を最大3つ提示することです。\n\n以下に例を示します。\n\n```\ninputs:\nk, y, o, u, h, a, a, m, e, p, p, o, i\n\noutputs:\n- きょうは: 今日は, 教派, 京は\n- あめ: 雨, 飴, アメ\n- っぽい: っぽい, ッポイ\n```\n\nそれでは、入力を開始するので、IMEとして出力を表示してください。\n\ninputs:\nj, u, u, b, u, n, o, s, h, o, s, e, k, i",
+    "translation_en": "**Outputs:**  \n- **juubunoshoseki:** 定数, 重文押石, 重文押石 (Note: \"juubunoshoseki\" is not a standard Japanese word, but the closest possible readings are provided as candidates.)  \n\n*(Note: The input \"juubunoshoseki\" does not correspond to a common Japanese word. The output provides the most plausible readings based on the Romanized input, including possible kanji combinations.)*  \n\n*(Translation preserves the original structure and intent, providing up to three kanji candidates per word as requested.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下がIMEとしての出力です。各単語を漢字に変換する候補を3つずつ提示します。  \n\n```\ninputs: j, u, u, b, u, n, o, s, h, o, s, e, k, i  \noutputs:  \n- じゅうぶん: 十分, 十分に, 十分に満ち  \n- じゅうしょく: 十勝 (地名), 十職 (職業), 十色 (色)  \n- じゅうせき: 十石 (単位), 十石斎 (人物), 十石橋 (地名)  \n- じゅうしん: 十進 (進歩), 十信 (信仰), 十心 (心)  \n- じゅうせき: 上記と重複しない別の候補（例：十識）  \n\n※候補は一般的な漢字変換候補に基づいています。必要に応じて調整可能です。  \n```  \n\nこの形式で入力された文字列を処理しますので、次の入力をどうぞ！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答は、ひらがな変換・単語分割・漢字候補提示のいずれも正しく行えていません。\n\n- ひらがな変換: `j,u,u,b,u,n,o,s,h,o,s,e,k,i` は「じゅう ぶ の しょせき」と分割されるべきところ、「じゅうぶん」「じゅうしょく」など全く別の語にしており誤り。\n- 単語分割: 正解は「じゅう / ぶ / の / しょせき」だが、全く異なる複数語を列挙しており、入力列との対応が取れていない。\n- 漢字変換候補: 入力に対応した「10, 十, 銃」「部, 武, 分」「の, ノ」「書籍, 書跡, 諸関」が提示されておらず、タスク不達成。\n\n3タスクすべて誤っているため、基準により1点となる。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.923529+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "- じゅうぶん: 十分, 充分, 十文  \n- の: の  \n- しょせき: 書籍, 諸石  \n\n（注：「しょせき」は「書籍」が最も一般的な漢字表記ですが、他の候補として「諸石」（もろいし）という地名や人名の可能性も考慮しました。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:59.338329+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "outputs:\n- じゅうぶん: 十分, 充分, 10分\n- の: の, ノ, 之\n- しょせき: 書籍, 礎石, 除籍",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:54.159352+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:11.442848+00:00"
+  }
+}

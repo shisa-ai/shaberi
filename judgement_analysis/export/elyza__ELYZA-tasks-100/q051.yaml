@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 51,
+  "category": null,
+  "question": {
+    "original": "ネットスラングでは、似た音を持つ別の短い表現に表されることがあります。例えばサーバーは鯖（さば）と表現されます。\n「消防 」というネットスラングはどのような意味を持つでしょうか？",
+    "translation_en": "**[Purpose: question]**  \n\nIn internet slang, words with similar sounds may be represented by shorter expressions. For example, \"server\" is written as 鯖 (saba).  \n\nWhat does the internet slang term \"消防\" (shōbō) mean?  \n\n*(Note: The translation preserves the original structure and meaning while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "「消防」は、ネットスラングでは「消防署（しょうぼうじょう）」の略称として使われることがありますが、特に「消防」という言葉自体が持つ意味を連想させる場合は、「消火（しょうか）」や「鎮火（ちんか）」といった意味合いを含む場合があります。  \n\nただし、文脈によっては、他の意味合いを持つこともあります。例えば：  \n- **「消防」を「消費（しょうひ）」と読む**場合：商品やサービスを大量に使い果たすことを指す。  \n- **「消防」を「消去（しょうきょ）」と読む**場合：データや情報を削除することを指す。  \n\n一般的には、「鯖（さば）」や「サーバー」と同様に、類似音を持つ別の表現として使われることが多いです。  \n\nもし具体的な文脈があれば、より正確な解釈が可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "この回答は、「消防」を辞書通りの意味（消防署・消火など）として扱っており、「小坊（小学生）」というネットスラングとしての意味に到達していません。また、問題文で求められている「似た音を持つ別の短い表現」を用いた推測もできていません。  \nそのため、方向性は一部ネットスラングに触れているものの、肝心の意味が誤っているため、問題固有の基準では「辞書通りの回答」に該当します。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.950934+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "ネットスラングで「消防」という言葉は、**「消費（しょうひ）」**の意味で使われることがあります。特にゲームやオンラインコミュニティでは、課金やアイテム購入などの「資金を消費する行為」を指すスラングとして使われます。  \n\n例:  \n- 「このゲームのガチャに消防しすぎた…」（課金しすぎてお金がなくなった）  \n- 「新しい装備を手に入れるために消防した」（課金して購入した）  \n\n由来は「消費」の「消」の字と「防火・消火」の「防」を掛け合わせたダジャレ的な表現です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:11.039831+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ネットスラングにおける「消防（しょうぼう）」は、**「小学生」**という意味を持ちます。\n\n具体的な由来やニュアンスは以下の通りです。\n\n**1. 言葉の成り立ち**\n*   **小学生（しょうがくせい）** ＋ **坊主（ぼうず／「ガキ」のようなニュアンス）**\n*   これらを組み合わせて「小坊（しょうぼう）」となり、同じ読みである「消防」という漢字が当てられました。\n\n**2. 使用される文脈とニュアンス**\n*   **蔑称としての意味合いが強い:** 単に小学生を指す場合もありますが、多くの場合、ネット上の議論やコメントにおいて「言動が幼稚である」「論理が通じない」「マナーが悪い」相手を罵倒する際に使われます。\n*   **精神年齢への指摘:** 相手の実年齢に関わらず、精神年齢が小学生並みであると揶揄する際にも使用されます。\n\n**3. 関連語**\nこの言葉は、学年（年齢）別のネットスラングシリーズの一つです。\n*   **消防（しょうぼう）：** 小学生（小坊）\n*   **厨房（ちゅうぼう）：** 中学生（中坊） ※これが最も有名で、このシリーズの派生元です。\n*   **工房（こうぼう）：** 高校生（高坊）\n\n現在ではこれらのスラングは以前（2000年代〜2010年代前半）ほど頻繁には使われなくなっていますが、ネットの歴史や文脈を知る上では基本的な用語の一つです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:55.407826+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:58.994970+00:00"
+  }
+}

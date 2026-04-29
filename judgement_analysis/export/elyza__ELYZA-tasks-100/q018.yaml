@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 18,
+  "category": null,
+  "question": {
+    "original": "「スタート地点から西に向かって歩き、交差点で南に曲がりしばらく歩くとゴール地点に着いた」という場面を想像して、以下の問いに答えてください。\n\n1. 交差点で左右どちらに曲がりましたか？\n2. スタート地点はゴール地点から見てどの方角にありますか？ 東西南北八方位で答えてください。",
+    "translation_en": "**[Purpose: Question]**  \n\nImagine the following scenario: *\"You walk west from the starting point, turn south at an intersection, and after walking for a while, you arrive at the goal.\"*  \n\nAnswer the following questions:  \n\n1. Which way did you turn at the intersection—left or right?  \n2. From the goal, in which direction is the starting point? Answer using the eight cardinal directions (east, west, south, north, etc.).  \n\n---  \n\n*(Note: The translation preserves the original meaning and structure while ensuring clarity for evaluation documentation. No additional commentary is included.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "1. 交差点で南に曲がりました。  \n2. スタート地点はゴール地点から見て北の方角にあります。  \n\n（解説：西に向かって歩き、交差点で南に曲がるため、ゴール地点は西と南の方向を組み合わせた位置になります。スタート地点はこの移動の逆方向であるため、北の方角になります。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答は2問とも不正解です。  \n1. 「南に曲がりました」は、「左に曲がりました」が正解なので誤り。  \n2. 「北」は、「北東」が正解なので誤り。  \n\n2問不正解のため -4点。  \n基礎点を5点とすると、5 - 4 = 1点となります。  \n日本語表現は自然で、その他の減点要素はありません。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:44.966833+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "1. 交差点で**南**に曲がりました。  \n2. スタート地点はゴール地点から見て**北東**にあります。  \n\n### 解説  \n- **1. 交差点での方向転換**: 問題文では「交差点で南に曲がった」と明記されています。  \n- **2. スタート地点とゴール地点の相対位置**:  \n  - スタート地点 → 西へ進む → 南へ曲がる → ゴール地点  \n  - ゴール地点からスタート地点を振り返ると、西（←）と北（↑）の組み合わせであるため、**北東（↗）**となります。  \n\n八方位（東・西・南・北・北東・南東・南西・北西）で考えると、スタートはゴールから見て「右上」（北東）に位置します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:14.158061+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご質問にお答えします。\n\n**1. 交差点で左右どちらに曲がりましたか？**\n**答え：左**\n（解説：西を向いて立っているとき、南は左手側になります。）\n\n**2. スタート地点はゴール地点から見てどの方角にありますか？**\n**答え：北東**\n（解説：スタートから見てゴールは「西」に進んで「南」に行った場所（南西）にあります。したがって、逆にゴールからスタートを見ると、正反対の「北東」になります。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:48.317916+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:19.103062+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 50,
+  "category": "数学",
+  "question": {
+    "original": "満月から次の満月まで ２９．５３日かかるものとします。ある【うるう年】の ９月３０日が満月であるとき、次の満月を１回目として、１００回目の満月となるのは何年後の何月何日ですか。ただし、【うるう年】は４年に１度、必ずあるものとします。",
+    "translation_en": "**[Purpose: Question]**  \n\nAssume it takes 29.53 days from one full moon to the next. If September 30th of a leap year is a full moon, when will the 100th full moon from that date occur (counting the next full moon as the 1st)? Assume that a leap year occurs every 4 years without exception.  \n\n**What year and date will the 100th full moon fall on?**  \n\n*(Note: The translation preserves the original meaning, including the assumption about leap years and the counting method for full moons.)*"
+  },
+  "answer": {
+    "gold_original": "満月から次の満月までに29.53日かかるので100回目の満月は29.53日 * 100 = 2953日後となります。今1年を常に365日とすると100回目の満月は2953 / 365 = 8 ... 33 であることから8年と33日後であることがわかります。今うるう年の9月30日の次の満月から数えて100回目の満月の日にちを知りたいため先に求めた8年の間に2回うるう年が含まれることがわかります。そのため、今回の場合8年と33日後ではなく、33 - 2 = 31 であることより8年と31日後に100回目の満月を迎えます。9月が30日までであること、10月が31日までであることを加味すると9月30日から8年と31日後は8年後の10月31日であるとわかります。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nSince it takes 29.53 days from one full moon to the next, the 100th full moon will occur 29.53 days * 100 = 2953 days later. Assuming a year is always 365 days, the 100th full moon will be 2953 / 365 = 8…33, meaning 8 years and 33 days later. However, since we are counting from the next full moon after September 30th of a leap year, there will be two leap years within those 8 years. Therefore, instead of 8 years and 33 days, it will be 8 years and 31 days later (33 - 2 = 31). Considering that September has 30 days and October has 31 days, 8 years and 31 days after September 30th will be October 31st, 8 years later.  \n\n*(Note: The translation preserves the original meaning and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 答えが8年後の10月31日になっている:3点\n- うるう年を正しく考慮することができている:2点\n- 100回目の満月が何日後か計算している:1点\n- 1年の長さをもとに割り算を行っている:1点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Answer is October 31, 8 years later:** 3 points  \n- **Correctly accounts for leap years:** 2 points  \n- **Calculates how many days until the 100th full moon:** 1 point  \n- **Performs division based on the length of a year:** 1 point  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くために、以下の手順で考えていきます。\n\n1. **1回目の満月から100回目の満月までの日数を計算する:**\n   - 29.53日 × 100 = 2953日\n\n2. **2953日を年と日数に変換する:**\n   - 1年 = 365日\n   - うるう年 = 366日\n   - 2953 ÷ 365 ≈ 8.09年\n   - 残り = 2953 % 365 = 288日\n\n3. **8.09年後のうるう年の位置を考慮する:**\n   - 通常の年は8年後、うるう年の位置は9年後。\n   - 残りの288日は、9年後のうるう年の9月から始まる。\n\n4. **9月30日の満月から288日後を計算する:**\n   - 9月30日 + 288日 ≈ 6月18日（2024年）\n\n5. **100回目の満月が起こるのは、2024年の6月18日のことになります。**\n\n**結論:**  \n100回目の満月は、**2024年6月18日**に起こります。  \n\n（補足: この計算では、最初の満月が2022年12月（仮定）とします。実際の開始時期によって結果は変わりますが、問題文の条件から上記の答えが導かれます。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えが8年後の10月31日になっている:0点  \n  - 答えが「2024年6月18日」となっており、条件とも合致していない。\n- うるう年を正しく考慮することができている:0点  \n  - 「4年に1度必ずある」という条件に基づく体系的な考慮ができておらず、年数の扱いも不明瞭。\n- 100回目の満月が何日後か計算している:1点  \n  - 29.53日×100＝2953日と正しく計算している。\n- 1年の長さをもとに割り算を行っている:1点  \n  - 2953÷365≈8.09年と計算している。\n- 説明が具体的でわかりやすい:0点  \n  - 手順は書かれているが、論理が飛躍しており、途中の「うるう年の位置」や日付の導出が不明瞭で分かりにくい。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n0 + 0 + 1 + 1 + 0 + 1 = 3\n\n[点数]\n3点\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.303970+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この問題を解くために、以下の手順で計算します。\n\n### 1. 満月の周期と日数の計算\n- 満月から次の満月までの周期: 29.53日\n- 100回目の満月までにかかる日数: \\(29.53 \\times 100 = 2953\\) 日\n\n### 2. 年と日の換算\n- 通常年: 365日\n- うるう年: 366日\n\n4年に1度がうるう年なので、4年間の総日数は:\n\\[ (365 \\times 3) + 366 = 1461 \\text{日} \\]\n\n### 3. 年数と残り日の計算\n2953日を4年間（1461日）で割ります:\n\\[ \n\\begin{align*}\n2953 \\div 1461 &= 2 \\text{（商）} \\\\\n2953 - (2 \\times 1461) &= 31 \\text{（余り）}\n\\end{align*}\n\\]\nつまり、**2周期（8年）＋31日の後**に100回目の満月が来ます。\n\n### 4. 日付の計算\n元の満月は【うるう年】の9月30日です。8年後の9月30日に31日を加えます。\n\n#### (a) 通常年の場合:\n9月30日 + 31日 → **10月31日**\n\n#### (b) 次のうるう年の確認:\n8年後の次はまた【うるう年】です。したがって、10月31日にさらに1日加算します:\n\\[ \n10\\text{月}31\\text{日} + 1\\text{日} = **11\\text{月}1\\text{日}**\n\\]\n\n### 最終回答:\n**100回目の満月は、元の満月から8年後の11月1日に起こります。**\n\n---\n\n### 補足説明:\n- **4年に1度のうるう年の考慮**: 問題文では「必ずある」と明記されているため、8年後にまた【うるう年】が来ると確定します。\n- **通常年の場合**: もし通常年の場合は10/31ですが、今回は次が【うるう年】なので11/1となります。\n- **正確性**: 実際には29.53日の周期は小数点以下も考慮すべきですが、この問題では整数値として扱っています。もし厳密に計算すると±1日の誤差が出る可能性がありますが、問題文からは整数値として扱えると解釈しました。\n\nしたがって、最終的な答えは「**8年後の11月1日**」です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:00.708526+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "１００回目の満月が何年後の何月何日になるか、順を追って計算します。\n\n**１．必要な日数の計算**\n満月から次の満月まで２９．５３日かかります。\n１００回目の満月までの日数は：\n$$29.53 \\text{日} \\times 100 \\text{回} = 2953 \\text{日}$$\nとなります。\n\n**２．年数の計算（うるう年を考慮）**\nスタート地点は「うるう年の９月３０日」です。\nここから１年ごとの日数をカウントしていきます。\n\n*   **１年後（翌年の９月３０日まで）：**\n    スタートの年はうるう年ですが、すでに２月２９日を過ぎているため、翌年の９月３０日までの１年間は平年扱い（３６５日）となります。\n*   **２年後〜３年後：**\n    平年が続きます（各３６５日）。\n*   **４年後：**\n    ４年に１度のうるう年が巡ってくるため、この１年間には２月２９日が含まれます（３６６日）。\n\nこのように、スタートが「うるう年の９月以降」の場合、４年間のサイクルは「３６５日、３６５日、３６５日、３６６日」の順になります。\n\n８年間の日数を計算してみます。\n*   最初の４年間：$365 \\times 3 + 366 = 1461 \\text{日}$\n*   次の４年間：$365 \\times 3 + 366 = 1461 \\text{日}$\n*   **８年間の合計：** $1461 + 1461 = 2922 \\text{日}$\n\n**３．残りの日数の計算と日付の特定**\n必要な総日数（２９５３日）から、８年間の日数（２９２２日）を引きます。\n$$2953 - 2922 = 31 \\text{日}$$\n\nつまり、**８年後の９月３０日から、さらに３１日進んだ日**が答えになります。\n\n*   ９月３０日の１日後は１０月１日です。\n*   １０月は３１日まであります。\n*   したがって、９月３０日の３１日後は、１０月３１日となります。\n\n**答え**\n**８年後の１０月３１日**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:09.467197+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:36.155443+00:00"
+  }
+}

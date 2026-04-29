@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 79,
+  "category": "日本",
+  "question": {
+    "original": "箸の扱いについてどのようなマナー違反があるか",
+    "translation_en": "**[Purpose: Question]**  \n\n*What are the common etiquette violations when using chopsticks?*  \n\n(Alternatively, for a more natural phrasing: **\"What are the chopstick etiquette mistakes to avoid?\"**)  \n\n*(Note: The translation preserves the original meaning while ensuring clarity and natural English suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "箸の扱いにおけるマナー違反にはいくつかの典型的な例があります。日本の食文化においては、箸の使い方には特に気を遣うべき礼儀があります。以下にいくつかの一般的なマナー違反を挙げます。\n\n1. **渡し箸（わたしばし）**\n   食事の途中で箸を食器の上に渡し置くことを指します。これは「もういりません」という意味になります。\n\n2. **迷い箸（まよいばし）**\n   食事の際に、食べ物を選ぶために箸で皿の上を行ったり来たりする行動です。これは非常に失礼とされ、また決断力のなさを示す行為とも考えられます。\n\n3. **空箸（からばし）**\n   箸を一度料理に付けたのに食べないで戻す所作を指します。\n4. **立て箸（たてばし）**\n   箸をご飯に突き刺して立てることを示します。仏式の葬儀で用いられる枕御前であり、忌み嫌われます。\n\n5. **指し箸（さしばし）**\n   人を箸で指すことです。これは非常に失礼とされる行為で、相手に対する軽蔑を示してしまいます。\n\n6. **寄せ箸（よせばし）**\n   自分の箸で皿を自分の方に引き寄せる行為です。これは食事のマナーにおいて良くない行為とされています。\n\n7. **舐り箸（ねぶりばし）**\n   お箸を口の中に深く入れて舐めたり、箸についたご飯などを舐めてとることを言います。他の人と同じ料理を共有している場合、特に避けるべき行為です。\n\n8. **銜え箸（くわえばし）**\n   箸を口にくわえる行為です。料理を盛り付けるなどの作業をしている最中に、手がふさがっている状況で見られがちですが、不衛生で不適切とされます。\n\nこれらは日本の食卓での一般的なマナー違反です。文化によってはこれらの行為が許容されることもありますが、日本においてはこれらの行為を避け、箸の正しい使い方を心がけることが大切です。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nThere are several typical examples of bad manners in chopstick etiquette. In Japanese dining culture, there are specific rules of politeness regarding chopstick use. Below are some common etiquette violations:  \n\n1. **Passing Chopsticks (渡し箸 / Watashi-bashi)**  \n   Placing chopsticks across a bowl or plate during a meal, which symbolizes \"I don’t need this anymore.\"  \n\n2. **Hesitant Chopsticks (迷い箸 / Mayoi-bashi)**  \n   Moving chopsticks back and forth over food without picking anything up, considered extremely rude and seen as indecisiveness.  \n\n3. **Empty Chopsticks (空箸 / Kara-bashi)**  \n   Picking up food with chopsticks and then putting it back without eating it.  \n\n4. **Sticking Chopsticks Upright (立て箸 / Tategashi)**  \n   Inserting chopsticks vertically into rice, resembling a funeral offering (kubizashi), which is taboo.  \n\n5. **Pointing with Chopsticks (指し箸 / Sashi-bashi)**  \n   Using chopsticks to point at people, a highly disrespectful act that conveys contempt.  \n\n6. **Pulling Food Closer (寄せ箸 / Yose-bashi)**  \n   Dragging food toward oneself with chopsticks instead of picking it up.  \n\n7. **Licking Chopsticks (舐り箸 / Neburi-bashi)**  \n   Sticking chopsticks deeply into the mouth or licking food off them. Especially inappropriate when sharing dishes.  \n\n8. **Holding Chopsticks in the Mouth (銜え箸 / Kuwaebashi)**  \n   Keeping chopsticks in the mouth while serving food, often seen when hands are occupied, but considered unhygienic and improper.  \n\nThese are common chopstick etiquette violations in Japanese dining. While some cultures may tolerate these behaviors, it is important to avoid them in Japan and practice proper chopstick use."
+  },
+  "rubric": {
+    "original": "- マナー違反の具体的名称を示している:3点\n- 複数の箸に関するマナー違反について紹介している:2点\n- マナー違反の内容は正しいものである:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Specifically identifies the name of the etiquette violation:** 3 points  \n- **Introduces multiple chopstick-related etiquette violations:** 2 points  \n- **The content of the etiquette violation is correct:** 2 points  \n- **The explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "箸の扱いに関するマナー違反は、日本の食事文化において重要な要素です。以下に主な違反を挙げます：\n\n1. **箸を立ててご飯に突き刺す**  \n   - これは仏壇で供え物をする際の行為であり、食事中にすると不吉とされる。\n\n2. **箸で食器を叩く**  \n   - 食器を鳴らす行為は、相手に不快感を与える可能性がある。\n\n3. **箸で食べ物を突き刺す**  \n   - 箸で直接食べ物をつまむのは失礼とされる。代わりに、箸先でつまんで口元へ運ぶのが正しい方法。\n\n4. **箸を舐める**  \n   - 箸を舐める行為は衛生面でも問題視される。\n\n5. **箸で人や物を指差す**  \n   - 箸を使って人や物を指し示すのは失礼とされる。代わりに手や指を使うのが適切。\n\n6. **箸を渡し合う（特に食事中）**  \n   - 箸渡しは死別の際などに用いる習慣であり、食事中にすると不吉とされる。\n\n7. **箸先で皿や器をかき回す**  \n   - 食べ物をかき回す行為は無駄遣いと見なされ、相手に失礼にあたる場合がある。\n\n8. **箸を持つ手を汚したままする**  \n   - 手洗いやアルコール消毒が必要な場合（例：トイレ後）は、箸を持つ手を清潔にする必要がある。\n\n9. **箸置きがない場所での置き忘れ**  \n   - 箸置きがない場合は、皿の上に正しく置くのがマナー。ただし、テーブルクロスがある場合はその上には置かない。\n\n10. **過度な使い方（例：食べ物をつまみすぎる）**  \n    - 過度なつまみ方は無駄遣いと見なされ、相手に不快感を与える可能性がある。\n\nこれらのマナー違反は、日本の伝統的な食文化において重要視されていますが、現代では必ずしも厳格に守られるわけでもあります。しかし、ビジネスシーンやフォーマルな場では特に意識することが望ましいでしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- マナー違反の具体的名称を示している:1点  \n  - 「箸を立ててご飯に突き刺す」「箸で食器を叩く」など行為の説明はあるが、「立て箸」「たたき箸」など一般的な名称をほとんど示していない。\n- 複数の箸に関するマナー違反について紹介している:2点  \n  - 箇条書きで10個挙げており、数としては十分。\n- マナー違反の内容は正しいものである:1点  \n  - 1,2,4,5,6,7あたりは概ね妥当だが、「箸で食べ物を突き刺す」説明文中の「箸で直接食べ物をつまむのは失礼」は誤りで、日本語として意味が逆転している。また8〜10はマナー違反として不自然・曖昧。\n- 説明が具体的でわかりやすい:1点  \n  - いくつかは具体的だが、8〜10は趣旨が不明瞭で、全体としてややちぐはぐ。\n- 自然な日本語である:1点  \n  - 日本語としては概ね自然だが、「必ずしも厳格に守られるわけでもあります」は文法的に不自然（「わけではありません」が自然）。\n\n[計算式]\n具体的名称1 + 複数紹介2 + 内容の正確さ1 + わかりやすさ1 + 日本語1 = 6\n\n[点数]\n6\n\nFINAL SCORE: 6",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:13.115311+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "浦安三社（うらやすさんしゃ）とは、千葉県浦安市にある3つの神社の総称で、それぞれが地域の信仰を集めています。以下に各神社の概要を説明します。\n\n### 1. **富岡八幡宮（とみおかはちまんぐう）**\n   - **所在地**: 浦安市富岡2-17-18  \n   - **主な祭神**: 誉田別命（ほんだわけのみこと）  \n   - **特徴**: 源頼朝が鎌倉へ向かう際に祈願したと伝えられ、武運長久の神として知られる。例大祭は毎年9月15日頃に行われ、武者行列や奉納相撲などが見どころ。\n\n### 2. **浦安神社（うらやすじんじゃ）**\n   - **所在地**: 浦安市猫実3-1-29  \n   - **主な祭神**: 天照皇大御神・豊受皇大御神・誉田別命  \n   - **特徴**: 江戸時代に徳川家康が領地を与えた際に創建されたとされ、地域の鎮守として崇められている。例大祭は8月下旬で、夜店や盆踊りなどで賑わう。\n\n### 3. **猫実本町稲荷神社（ねこざねほんちょういなりじんじゃ）**\n   - **所在地**: 浦安市猫実本町1-13-16  \n   - **主な祭神**: 宇迦之御魂大神（稲荷大明神）  \n   - **特徴**: 商売繁盛や五穀豊穣の守護神として信仰される。千本鳥居が有名で、赤い鳥居が連なる美しい景観が人気。初詣時には多くの参拝客で賑わう。\n\n### 共通情報\n- いずれもJR京葉線「浦安駅」または「新浦安駅」からバスまたは徒歩圏内。\n- 浦安三社巡りをする場合、各社を巡るコースも提案されており、一日で全て訪問可能。\n\nこれらの神社はそれぞれ異なる歴史や信仰を持つため、一度訪れて比較してみるのも興味深いでしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:57.073988+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "千葉県浦安市にある「浦安三社」とは、元町地域（昔からの漁師町エリア）にある以下の3つの神社のことを指します。\n\nこれら3つの神社は、4年に一度（オリンピックイヤー）の6月中旬に行われる**「浦安三社祭」**で合同でお祭りを行うことでも有名です。\n\n### 1. 豊受神社（とようけじんじゃ）\n*   **鎮座地:** 浦安市猫実（ねこざね）\n*   **概要:** 浦安で最も古い神社と言われています（1157年創建と伝えられています）。\n*   **御祭神:** 豊受姫大神（トヨウケヒメノオオカミ）など。衣食住の神様です。\n*   **特徴:** 境内にある大銀杏（オオイチョウ）が有名で、市の天然記念物に指定されています。\n\n### 2. 清瀧神社（せいりゅうじんじゃ）\n*   **鎮座地:** 浦安市堀江（ほりえ）\n*   **概要:** 堀江地区の鎮守様です。\n*   **御祭神:** 大綿積彦命（オオワタツミヒコノミコト）。海の神様です。\n*   **特徴:** 社殿は江戸時代の建築様式を残しており、龍の彫刻などが見事です。かつて海から龍神（女神）が現れたという伝説が名前の由来に関わっています。\n\n### 3. 稲荷神社（いなりじんじゃ）\n*   **鎮座地:** 浦安市当代島（とうだいじま）\n*   **概要:** 当代島地区の鎮守様です。\n*   **御祭神:** 豊受大神（トヨウケノオオカミ）。※一般的に稲荷神社は宇迦之御魂神を祀ることが多いですが、こちらは豊受大神を主祭神としています。\n*   **特徴:** 境内には「鯨（くじら）の塚」があり、かつて浦安が漁師町であった歴史を伝えています。厄除けの神社としても知られています。\n\n---\n\n**補足：浦安三社祭について**\nこの3つの神社が合同で行う「浦安三社祭」は、大小合わせて100基以上の神輿や山車が街を練り歩く、浦安市最大のお祭りです。「マエダ、マエダ」という独特の掛け声と、神輿を地面すれすれまで下げる「地すり」という担ぎ方が特徴的です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:37.879150+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:14.895270+00:00"
+  }
+}

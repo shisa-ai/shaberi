@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 24,
+  "category": "長い文書要約（千トークン以上）",
+  "question": {
+    "original": "以下の文書を要約してください。\n### 文書\n2000 年の建築基準法改正に伴い性能的手法に基づ く避難安全検証手法が導入され，仕様規準に縛られな い設計を行うことが可能となった.しかし，現在の避 難安全検証手法では，排煙設備や防火設備は必ず作動 する確定論的なシナリオで評価をするが，自動消火設 備の効果は考慮しないのが一般的である.また，居室・ 階・全館と避難フェーズが進むにつれ，避難者の合流 や滞留，避難開始の遅れなど配慮すべき項目が複雑に なり，潜在的な危険性が高くなることが考えられるが，すべて一律のクライテリアの下で評価される傾向があ る.そのため，居室避難に多くの検証作業の時間を費 やす一方で，避難上重要な階避難や全館避難の検証が 疎かになる傾向があり，防火対策の重点が偏る場面が 見られる.この原因の 1 つとして現在の検証手法に火 災リスク(出火率や防災設備の作動率，避難不能者数 など)の観点が欠けていることが挙げられる.従来の 仕様規準では小規模な建物に対する規制は緩やかに， 大規模な建物は複数の対策が要求されるように(例え ば 3 階建て以上の物販店舗における階段幅はより厳し く制限されているなど)，経験的ながらも火災リスク に対する配慮が影響していたと考えられる.  そこで筆者らは，火災リスクの概念を採り入れた新 たな避難安全設計法(以後，リスクベース設計法とい う)を導入することで潜在的な危険性の大小に応じて 火災安全対策を講じることが可能な枠組みの構築を目 指している 1)~4).このリスクベース設計法では，出火 後に拡大する火災(以降，成長火災注 1 という)を対象としている.一方で，火災が小火に留まった要因を把握することは，初期消火対策に貢献する可能性があることから，防火対策上の意義がある.また，各用途の出火率や小火に至った火災の割合を定量的に把握することは，リスクベース設計法に応用することが出来るといった展望もある.\n そこで本報では，1995 年~2008 年の統計データを 用いて，建物用途別の小火特性について把握すること を目的とした.なお出火率や小火の要因は，使われ方， 出火原因や発火源，着火物，内装等の影響が考えられ る.このような出火率や小火の要因に関する一連の分 析は，今後検討する予定である.",
+    "translation_en": "### Summary of the Document  \n\nWith the 2000 revision of the Building Standards Law, performance-based evacuation safety verification methods were introduced, allowing designs not bound by prescriptive standards. However, current evacuation safety verification typically evaluates smoke control and fire protection systems under deterministic scenarios where they are assumed to function perfectly, while the effectiveness of automatic fire suppression systems is often overlooked. Additionally, as evacuation progresses from individual rooms to floors and then the entire building, factors such as evacuee convergence, delays, and prolonged stays become more complex, increasing potential risks. Yet, these are often assessed under uniform criteria. Consequently, excessive verification efforts are spent on room-level evacuation, while critical floor- and building-wide evacuations are neglected, leading to imbalanced fire safety measures.  \n\nOne reason for this is the lack of fire risk perspectives (e.g., ignition rates, fire protection system reliability, and the number of individuals unable to evacuate) in current verification methods. Traditional prescriptive standards applied less stringent regulations to smaller buildings and stricter measures to larger ones (e.g., narrower stair widths in three-story or larger retail buildings), reflecting empirical considerations of fire risk.  \n\nTo address this, the authors propose a new risk-based evacuation safety design framework (hereafter, \"risk-based design\") that tailors fire safety measures to the severity of potential hazards (Refs. 1–4). This approach focuses on \"growth fires\" (fires that expand after ignition) but also recognizes the importance of understanding factors that prevent fires from escalating, which can inform initial fire suppression strategies. Quantifying ignition rates and the proportion of small, contained fires by building use could further refine risk-based design applications.  \n\nThis study analyzes statistical data from 1995–2008 to characterize small fire trends across different building uses. Factors influencing ignition rates and small fire containment—such as usage patterns, ignition sources, combustible materials, and interior finishes—will be examined in future research.  \n\n(Translation preserves technical details, logical flow, and key terms while ensuring natural English readability for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 現行の避難安全検証手法の問題点(特に火災リスク):2点\n  - 火災リスクを考慮した新たな安全対策の枠組みの提案:2点\n  - 1995年から2008年の統計データを用いた出火率・小火の原因分析:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Problems with current evacuation safety verification methods (especially fire risk): **2 points**  \n  - Proposal of a new safety framework considering fire risk: **2 points**  \n  - Analysis of fire incidence and small fire causes using statistical data from 1995–2008: **2 points**  \n- **Preserves logical relationships in the text:** **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Note: The translation maintains the original structure, scoring criteria, and technical details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "### 要約  \n2000年の建築基準法改正により、性能的手法に基づく避難安全検証手法が導入され、仕様規準に縛られない設計が可能になった。しかし、現在の検証手法では自動消火設備の効果が考慮されず、居室・階・全館の避難フェーズごとの複雑な要素（避難者の滞留や遅れなど）が一律のクライテリアで評価される傾向がある。これにより、居室避難に時間を費やす一方で階・全館避難の検証が疎かになり、防火対策の偏りが生じている。  \n\nその原因の一つとして、現在の検証手法に火災リスク（出火率・防災設備作動率・避難不能者数など）の観点が欠けていることが挙げられる。従来は小規模建物は緩やかな規制、大規模建物は厳しい制限という経験的配慮があったが、新たなリスクベース設計法では火災リスクに応じた対策を講じる枠組みを構築することを目指す。  \n\n本研究では1995～2008年の統計データを用いて建物用途別の小火特性を分析し、今後の出火率や小火要因に関する詳細な調査を予定している。  \n\n### 主なポイント  \n- 現在の避難安全検証手法の課題：自動消火設備不評価・一律評価による偏り  \n- リスクベース設計法の提案：火災リスクに応じた対策強化  \n- 小火特性分析：統計データを用いた建物用途別分析と今後の調査計画",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 現行の避難安全検証手法の問題点(特に火災リスク):2点  \n  - 自動消火設備が考慮されないことや一律クライテリアによる偏り、火災リスク観点の欠如を明確に要約している。\n- 火災リスクを考慮した新たな安全対策の枠組みの提案:2点  \n  - 「リスクベース設計法」による火災リスクに応じた対策枠組みの構築を目指す点を述べている。\n- 1995年から2008年の統計データを用いた出火率・小火の原因分析:2点  \n  - 「1995～2008年の統計データを用いて建物用途別の小火特性を分析」と記載し、今後の詳細調査予定にも触れている。\n- 文章中の論理関係を保存している:2点  \n  - 現行手法の問題 → 火災リスク観点の欠如 → リスクベース設計法の提案 → 本研究の位置づけ、という流れを保っている。\n- 自然な日本語である:1点  \n  - 不自然な表現はなく、専門的だが読みやすい日本語になっている。\n- 要約として適切な短さである:1点  \n  - 原文より十分に短く、要点を簡潔にまとめている。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 1 = 10\n\n[点数]\n10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.513907+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 文書要約  \n\n2000年の建築基準法改正により、性能的手法に基づく避難安全検証が導入され、仕様規準に縛られない設計が可能になった。しかし、現行の検証手法では、排煙・防火設備は確定論的に評価される一方、自動消火設備の効果や火災リスク（出火率、防災設備の作動率など）が考慮されていない。特に居室・階・全館避難の各段階で複雑化する要素（合流・滞留・遅延など）を一律の基準で評価するため、重要な階段や全館避難の検証が不足しやすく、防火対策の偏りが生じている。  \n\nそこで筆者らは、「リスクベース設計法」を提案し、火災リスクを考慮した対策を可能にする枠組みを構築することを目指している。この手法では「成長火災」（小火から拡大する火災）を対象とし、小火に留まる要因を分析することで初期消火対策にも活用できる。  \n\n本研究では1995年～2008年の統計データを用いて、建物用途別の「小火特性」を把握することを目的としている。今後は出火率や小火化要因（使われ方・原因・発生源など）の分析を行う予定である。  \n\n**ポイント**  \n- 現行検証手法の課題：リスク考慮不足による対策偏り  \n- 提案：リスクベース設計法による柔軟な防火対策  \n- 本研究：統計データによる小火特性分析（今後の展望含む）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:48.637986+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた文書の要約は以下の通りです。\n\n**背景と課題**\n2000年の建築基準法改正により性能的な避難安全検証が可能となりましたが、現行の手法には以下の課題があります。\n*   排煙・防火設備が確実に作動する前提である一方、自動消火設備の効果は考慮されない。\n*   避難フェーズ（居室→階→全館）が進むにつれて高まる危険性が考慮されず、評価基準が一律であるため、重要な全館避難などの検証が疎かになりがちである。\n*   これらは、現行手法に「火災リスク（出火率、設備作動率など）」の観点が欠けていることに起因する。\n\n**提案手法**\n筆者らは、潜在的な危険性の大小に応じて適切な防火対策を講じるため、火災リスクの概念を取り入れた新たな「リスクベース設計法」の構築を目指しています。\n\n**本報告の目的**\nリスクベース設計法への応用および初期消火対策への貢献を見据え、1995年～2008年の統計データを用いて、建物用途別の「小火（ぼや）」の特性を把握することを目的としています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:32.290935+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:36:35.411468+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 19,
+  "category": null,
+  "question": {
+    "original": "こんな感じでパラフレーズして。\n\n源頼朝が征夷大将軍に就任。これによって鎌倉幕府の開設が完了したともされる（1192年 - 建久3年7月12日）\n言い換え:\n1192年の7月12日に源頼朝が征夷大将軍に就任して、鎌倉幕府ができたんだって！\n\n1928年 - 三井財閥の大番頭・中上川彦次郎の娘・あきがテノール歌手・藤原義江を追ってミラノへ出発。「世紀の恋」と話題になる。\n言い換え:",
+    "translation_en": "**1928 – The daughter of Nakagawa Hikojirō, the head manager of the Mitsui zaibatsu, Akiko, departed for Milan in pursuit of the tenor singer Yoshie Fujiwara, sparking the \"Century's Love\" story.**  \n\n*(Note: The translation maintains the original meaning while ensuring natural English phrasing suitable for evaluation documentation. Key details like names, dates, and the context of the \"Century's Love\" story are preserved.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "1928年、ミラノへ出発したテノール歌手・藤原義江を追って、三井財閥の大番頭・中上川彦次郎の娘・あきが話題となった「世紀の恋」が話題になったんだ！  \n\n（元の文のニュアンスを保ちつつ、より自然な日本語に言い換えました）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は、  \n- 源頼朝の文には手を付けていない点はOK。  \n- ただし、「こんな感じ」のカジュアルさが弱く、やや説明調。  \n- 「話題となった『世紀の恋』が話題になった」と重複表現で不自然。  \n- 年月日の具体的な日付が抜けているのは許容範囲だが、「ミラノへ出発したのは藤原義江」であり、「あきが追って行った」という主語・構造が少し分かりにくくなっている。  \n\n全体として大きく事実を誤ってはいないが、日本語の不自然さとカジュアルさ不足があるため減点。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:44.762314+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "1928年、中上川彦次郎の娘・あきさんが、テノール歌手の藤原義江さんを追いかけてミラノへ旅立ったんです。二人の恋は「世紀の恋」として大きな話題になりましたよ！  \n\n（よりカジュアルに）  \n「1928年、あきさんが歌手の藤原義江さんを追ってミラノに行ったんだって！ それが『世紀の恋』って呼ばれて有名になったんだ！」",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:05.760537+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "1928年に三井財閥のお嬢様・あきが、テノール歌手の藤原義江を追いかけてミラノに行っちゃって、「世紀の恋」って話題になったんだって！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:50.529171+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:20.296001+00:00"
+  }
+}

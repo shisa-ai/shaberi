@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 30,
+  "category": "会話要約",
+  "question": {
+    "original": "以下の会話を要約してください。\n### 会話\n―――――日本は物質的に豊かになり、あえてチャレンジをしなくてもそれなりに生きられる社会を手に入れたようにも感じます。そんな社会において「チャレンジ」とはどういうものでしょうか？\n山田総括（以下山田）：それなりに生きられるというのは良い社会ということですよね。ではチャレンジの必要がないかというと、そもそもチャレンジは我々の生きがいに直結するものです。北海道でも道外でも課題ばかりが声高に語られますが、課題の裏返しはチャンスです。チャンスが沢山あるということです。これまでの使命感に燃えたチャレンジだけでなく、自分を試したり自分の可能性を広げようとするチャレンジにも積極的に飛び込んだらどうでしょう。\n\n岩岡先生（以下岩岡）：確かに。失敗を許さない、減点方式の風土はチャレンジをしないことに拍車をかけていると思います。失敗しても良いんだという雰囲気がないと、そもそもチャレンジできないですね。\n\n山田：私自身はよくもまあここまで、というくらい失敗しているんですが、振り返ってみても最低限のセーフティネットがあったからチャレンジできたんだと感じています。例えば企業の場合ですが、多くの大企業は閉塞感にさいなまれています。これを打破するために、副業や兼業がシンプルで効果的な一つのチャンスになると期待しています。本業で生計をたて、副業・兼業で別のやりたいことにチャレンジをしてみるといった選択肢が、制度を含めて早く整うと良いと思います。\n\n岩岡：「自信の無さ」がチャレンジを阻む本当の理由ではないかと、高校生を見ていて思うことがあります。\n\n山田：自信の無さは、成熟社会ゆえのことかもしれませんね。僕はケニアに何度か出かけたことがあるんですが、ケニアでは部族間闘争などで大人が早く死んでしまうので、20代くらいの若者が社会を支えているんですね。そういった彼ら若者には有能感・有用感が漂っており堂々としています。北海道でも、若者の小さなチャレンジを周りが支援をして小さな自信を積み重ねることで、大きな自信につながると良いと思います。\n\n岩岡：若者だけでなく、大人もそうかもしれません。やらされ感が出るとダメですね。でも生徒が目を輝かせる姿は教員にとっての一番の喜びでもありますから、普段自分たちが教えられないようなことを地域やチャレンジフィールド北海道に関わる沢山の方に協力してもらえるとうれしいですね。例えば企業の研究者に生徒が進路相談できたりとか。",
+    "translation_en": "### Summary of Conversation  \n\nThe discussion explores the concept of \"challenge\" in a materially affluent society like Japan, where people can live comfortably without actively seeking challenges.  \n\n**Yamada** argues that while a stable life is positive, challenges are essential for fulfillment. He suggests that obstacles often present opportunities, and people should embrace challenges—not just those driven by duty but also those that test personal growth. He notes that his own failures were possible because of a safety net, and proposes that side jobs or moonlighting could help break corporate stagnation by allowing people to pursue passions outside their main jobs.  \n\n**Iwao** adds that a culture of penalizing failure discourages risk-taking. He observes that \"lack of confidence\" may be the real barrier to challenges, especially among high school students.  \n\n**Yamada** suggests that this lack of confidence may stem from a mature society, contrasting it with Kenya, where young people lead due to early adult mortality, giving them a sense of competence. He proposes that supporting small challenges in youth can build confidence over time.  \n\n**Iwao** agrees, noting that adults may also feel pressured. He emphasizes that teachers find joy in students' enthusiasm and would welcome external support (e.g., corporate researchers advising students) to help them explore unconventional paths.  \n\n**Key Points:**  \n- Challenges are vital for fulfillment, even in stable societies.  \n- Obstacles can be opportunities, and side ventures can foster growth.  \n- A forgiving culture toward failure is needed.  \n- Confidence, especially in youth, is crucial for taking risks.  \n- External support (e.g., industry experts) can help students explore new paths."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 山田総括、岩岡先生は共にチャレンジの必要性および、失敗への恐れや自信のなさに起因して日本人がチャレンジをしないことについて議論している:2点\n  - チャレンジを促進するための山田総括の提案:2点\n  - チャレンジを促進するための岩岡先生の提案:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Discussion by Yamada (the summarizer) and Professor Iwao regarding the necessity of challenges and the reasons why Japanese people avoid challenges due to fear of failure and lack of confidence: **2 points**  \n  - Yamada's proposals to promote challenges: **2 points**  \n  - Professor Iwao's proposals to promote challenges: **2 points**  \n- **Preserves the logical relationships in the text:** **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "**会話の要約**：  \n\n山田総括と岩岡先生は、現代社会における「チャレンジ」の意義について議論しました。岩岡先生は、失敗を許さない風土がチャレンジを阻むと指摘し、失敗を許容する文化が必要だと主張しました。山田は自身の経験から、セーフティネットの存在がチャレンジを可能にしたと振り返り、大企業の閉塞感を打破するための副業・兼業の推進を提案しました。  \n\nさらに、岩岡先生は高校生たちを見て、「自信の無さ」ではなく「自信がない」という認識がチャレンジを妨げている可能性があると指摘。山田はケニアでの経験から、若者が社会を支えることで有能感・有用感を持つ姿を見て、日本でも若者の小さなチャレンジを支援することで大きな自信につなげるべきだと提案しました。  \n\n最後に、岩岡先生は教員として生徒の成長を見守る喜びを語り、地域や企業との連携（例：企業研究者による進路相談）による支援の重要性も強調しました。  \n\n**キーポイント**：  \n- 失敗を許容する文化の必要性  \n- 副業・兼業による新たなチャンス  \n- 若者の自信形成への支援  \n- 地域・企業との連携による成長機会の提供",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 山田総括、岩岡先生は共にチャレンジの必要性および、失敗への恐れや自信のなさに起因して日本人がチャレンジをしないことについて議論している:2点  \n  - 両者がチャレンジの意義や失敗を許さない風土、自信のなさについて議論していることが要約されている。\n- チャレンジを促進するための山田総括の提案:2点  \n  - セーフティネットの重要性、副業・兼業の推進、小さなチャレンジを支援して自信を育てることが述べられている。\n- チャレンジを促進するための岩岡先生の提案:2点  \n  - 失敗を許容する文化の必要性、地域や企業との連携による支援（研究者による進路相談など）が記載されている。\n- 文章中の論理関係を保存している:2点  \n  - 会話の流れ（問題提起→要因→具体的提案）が保たれている。\n- 自然な日本語である:1点  \n  - 不自然な表現はなく、読みやすい日本語で書かれている。\n- 要約として適切な短さである:1点  \n  - 元の会話より十分に短く、要点が整理されている。\n\n[計算式]\n2+2+2+2+1+1 = 10\n\n[点数]\n10\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.301397+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**会話の要約**  \n\n日本社会が物質的に豊かになり、チャレンジをしなくても生活できる状況になった一方で、「チャレンジ」の意義について議論。  \n- **山田総括**は「課題の裏にはチャンスがある」と指摘し、失敗を恐れず可能性を広げるチャレンジの重要性を強調。企業における副業・兼業の推進も提案。  \n- **岩岡先生**は「失敗を許さない風土」や「自信の無さ」がチャレンジを阻む要因と指摘。若者だけでなく大人も、周囲の支援や自発性が必要だと述べた。  \n\n両者は、北海道において若者の小さな成功体験を積み重ねることで自信につなげることや、地域社会との連携（例：企業研究者との進路相談）が重要だと共有した。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:33.620731+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "以下は会話の要約です。\n\n物質的に豊かな現代日本における「チャレンジ」の意義と、それを促進するための環境づくりについて議論されています。\n\n*   **チャレンジの意義**\n    山田氏は、現代のチャレンジは「生きがい」に直結するものであり、社会課題をチャンスと捉え、自分の可能性を広げるために積極的に挑むべきだと主張しています。\n*   **阻害要因**\n    岩岡氏は、失敗を許さない減点方式の社会風土や、若者が抱える「自信のなさ」がチャレンジを阻む要因であると指摘しています。\n*   **解決策と支援**\n    *   山田氏は、失敗しても大丈夫なセーフティネット（本業を持ちながらの副業・兼業など）の整備や、小さな成功体験を積み重ねて自信を育む支援が重要だと説いています。\n    *   岩岡氏はこれに同意し、学校だけでなく地域や企業が連携して生徒の興味や可能性を広げる協力体制（研究者への進路相談など）を求めています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:37.554757+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:37:30.473517+00:00"
+  }
+}

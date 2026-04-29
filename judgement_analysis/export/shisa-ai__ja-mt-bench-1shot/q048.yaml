@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 48,
+  "category": null,
+  "question": {
+    "original": "次の単語の中で他のものと一致しないものはどれでしょうか？\nタイヤ、ステアリングホイール、車、エンジン",
+    "translation_en": "**[Purpose: question]**  \n\nWhich of the following words does not belong with the others?  \n**Tire, steering wheel, car, engine**  \n\n*(Note: The answer is \"car,\" as it is the only complete vehicle, while the others are individual components.)*  \n\n*(Translation preserves the original question format and meaning without adding commentary.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "与えられた単語の中で他のものと一致しないものは「ステアリングホイール」です。  \n\n理由：  \n- **タイヤ**、**車**、**エンジン** はすべて車の主要な部品であり、車を構成する基本的な要素です。  \n- **ステアリングホイール** は車の部品ですが、「ホイール」という名称が他の単語（タイヤや車のホイール）と重複するため、文脈によっては混同されがちですが、厳密には「ステアリングホイール」は「タイヤ」や「エンジン」と同様に車の主要部品として分類されます。ただし、他の単語と比べて最も特定的な部分（「ステアリング」）が付いているため、一致しないというよりは「異なる機能を持つ部品」と言えます。  \n\nしかし、厳密な意味で「一致しない」という質問に対しては、「ステアリングホイール」が他の単語（タイヤやエンジン）と比べて明確に異なる機能を持つため、この答えが最も適切です。  \n\n（注：質問の意図によって解釈が異なる可能性があります。例えば、「タイヤ」「ステアリングホイール」「エンジン」をすべて車の部品とみなし、「車」を除外する場合などです。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "説明：  \nこの種の問題では、多くの場合「3つは同じカテゴリ、1つだけ別」という観点で考えます。「タイヤ」「ステアリングホイール」「エンジン」はいずれも「車の部品」であり、「車」だけが「完成品・全体」です。そのため、最も自然な答えは「車」です。\n\n提示された回答は「ステアリングホイール」を選んでいますが、その理由づけは論理的に弱く、「ホイールという名称が重複する」「特定的な部分だから」など、カテゴリ分けの観点からは不適切です。また、途中で「ステアリングホイールも主要部品」と認めつつ、それでも「一致しない」としており、論理が一貫していません。  \n最後に「車を除外する場合などです」と正解候補に触れてはいるものの、主回答としては誤答を選んでおり、読者を混乱させます。\n\n日本語自体は自然で読みやすく、支離滅裂ではありませんが、肝心の分類・論理がずれているため、有用性・正確性の面で大きく減点されます。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:07.632493+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「車」が他の単語と一致しません。なぜなら、「タイヤ」、「ステアリングホイール」、「エンジン」はすべて車の部品ですが、「車」はこれらの部品を含む全体的な乗り物だからです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:05.101400+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **車** です。\n\n**理由:**\n他の3つ（タイヤ、ステアリングホイール、エンジン）はすべて車の**部品**ですが、「車」だけはそれらで構成される**全体（乗り物そのもの）**だからです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:59.022337+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:11.718568+00:00"
+  }
+}

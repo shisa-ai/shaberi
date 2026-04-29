@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 48,
+  "category": "数学",
+  "question": {
+    "original": "兄が6歩歩く間に弟は5歩歩きます。また兄が3歩で進む道のりを弟は5歩かかります。\n\n弟が100歩進んでから兄が後ろからおいかけると兄は何歩歩いたところでおいつきますか？",
+    "translation_en": "[Purpose: question]\n\nWhen the older brother walks 6 steps, the younger brother walks 5 steps. Also, the distance the older brother covers in 3 steps takes the younger brother 5 steps to cover.\n\nIf the younger brother walks 100 steps and the older brother starts chasing from behind, how many steps will the older brother have taken when he catches up?  \n\n(Translation preserves the original meaning, details, and structure while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "兄が3歩で進む道のりを弟は5歩かかるため、2人の1歩あたりに進む距離は5:3である。\nそのため弟が初めに進んでいた距離を100歩*3 = 300 とおく。\n今2人の一定時間に進む距離の比は6歩*5 : 5歩*3 = 30 : 15 = 2 : 1 であるから300の距離を追いつく間に兄は 300 * 2/(2-1) = 600の距離を進む必要がある。これは600/5 = 120歩に相当するため、兄は120歩歩いたところで追いつく。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nSince the brother takes 5 steps to cover the distance the older brother covers in 3 steps, the distance covered per step for the two is in the ratio 5:3.  \n\nTherefore, let the initial distance the younger brother had covered be 100 steps * 3 = 300. Since the ratio of the distances they cover in the same time is 6 steps * 5 : 5 steps * 3 = 30 : 15 = 2 : 1, the older brother must cover a distance of 300 * 2/(2-1) = 600 to catch up. This corresponds to 600 / 5 = 120 steps, so the older brother catches up after walking 120 steps.  \n\n*(Note: The translation maintains the original mathematical reasoning and structure while ensuring clarity in English.)*"
+  },
+  "rubric": {
+    "original": "- 答えが120歩になっている:3点\n- 距離を歩幅と歩数を用いて仮定している:2点\n- 兄と弟の歩く速さの比を求めている:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Answer is 120 steps:** 3 points  \n- **Assumes distance using stride length and step count:** 2 points  \n- **Calculates the ratio of the brother’s and sister’s walking speeds:** 2 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くために、まずは兄と弟の歩数の比率を理解しましょう。  \n\n1. **兄と弟の歩数比率**  \n   - 兄が6歩で弟が5歩進むということは、**兄 : 弟 = 6 : 5** の比率で進むことがわかります。  \n   - 兄が3歩進むと弟は5歩進むので、この比率は **3 : 5** でも同じです。  \n\n2. **100歩後の位置関係**  \n   - 弟が100歩進んだとき、兄は **(100 / 5) * 3 = 60** 歩進んでいます。  \n     - なぜなら、弟の100歩に対して、兄は (100 / 5) * 3 = 60 歩進んでいるからです。  \n\n3. **おいつくまでの距離**  \n   - おいつくためには、弟が100歩進んだときに、兄も同じ距離を進める必要があります。  \n   - 兄が60歩進んでいるので、おいつくにはさらに **(60 / (6/6)) = 60** 歩進む必要があります（兄と弟の速度比率は1:1なので）。  \n\n4. **合計で必要なステップ数**  \n   - おitsuするためには、合計で **60 + 60 = 120** 歩進む必要があります。  \n\nしたがって、**兄は120歩進んだところでおいつきます**。  \n\n### 解答：  \n\\boxed{120}",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えが120歩になっている:3点  \n  - 最終的な答えとして「兄は120歩進んだところでおいつきます」としており、数値は正しい。\n- 距離を歩幅と歩数を用いて仮定している:0点  \n  - 距離を「兄3歩＝弟5歩」などとして距離（長さ）として明示的に仮定・整理していない。\n- 兄と弟の歩く速さの比を求めている:0点  \n  - 「速度比率は1:1」などと誤った記述があり、速さの比を正しく求めていない。\n- 説明が具体的でわかりやすい:1点  \n  - 手順立てて書かれているが、途中の論理が誤っており、「速度比1:1」など混乱を招く説明が含まれるため満点不可。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n3 + 0 + 0 + 1 + 1 = 5\n\n[点数]\n5点\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.659252+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この問題を解くために、まず兄と弟の歩幅の比率を求めます。\n\n1. **兄と弟の歩幅の比率:**\n   - 弟が5歩で進む道のりを兄は3歩で進むので、1歩あたりの距離は以下のように表せます。\n     - 弟1歩 = \\( \\frac{3}{5} \\) (兄1歩)\n   - つまり、弟1歩は兄の \\( \\frac{3}{5} \\) 歩に相当します。\n\n2. **弟が100歩進む距離:**\n   - 弟が100歩進む距離は、兄の \\( 100 \\times \\frac{3}{5} = 60 \\) 歩に相当します。\n\n3. **追いつくまでの距離:**\n   - 弟が100歩進んでから、兄が追いつくまでに必要な距離は60歩です（弟が100歩進んだ地点まで）。\n   - しかし、問題文では「弟が100歩進んでから」なので、この時点で弟は停止し、兄だけが走り始めます。したがって、追いつくまでに必要な距離は60歩です。\n\n4. **答え:**\n   - 弟が停止した後、兄は60歩を走ることで追いつきます。\n   - したがって、**答えは60歩**です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:41.896711+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "兄が**120歩**歩いたところで追いつきます。\n\n以下のように順を追って計算すると分かりやすくなります。\n\n### 1. 歩幅（1歩の距離）の比を求める\n「兄が3歩で進む道のりを弟は5歩かかる」ことから、距離の比を計算します。\n計算しやすいように、最小公倍数を使って仮の距離を設定します。\n兄3歩 ＝ 弟5歩 ＝ 15（という距離）と仮定すると、1歩あたりの距離（歩幅）は以下のようになります。\n\n*   **兄の歩幅**：$15 \\div 3 = 5$\n*   **弟の歩幅**：$15 \\div 5 = 3$\n\n### 2. 速さの比を求める\n「兄が6歩歩く間に弟は5歩歩く」ことから、一定時間に進む距離（速さ）を計算します。\nある一定の時間（1セット）で進む距離は以下の通りです。\n\n*   **兄の速さ**：$6\\text{歩} \\times 5\\text{（歩幅）} = 30$\n*   **弟の速さ**：$5\\text{歩} \\times 3\\text{（歩幅）} = 15$\n\nつまり、兄は弟の2倍の速さ（$30:15$）で進みます。\n1セット（兄が6歩歩く時間）ごとに、兄は弟との差を $30 - 15 = 15$ ずつ縮めることができます。\n\n### 3. 弟のリード（ハンデ）を距離に換算する\n弟は先に100歩進んでいます。これを距離に換算します。\n\n*   **弟のリード**：$100\\text{歩} \\times 3\\text{（歩幅）} = 300$\n\n### 4. 追いつくまでの歩数を計算する\n兄は距離300の差を埋める必要があります。\n1セットごとに距離15ずつ差が縮まるので、追いつくのにかかるセット数は：\n\n*   $300 \\div 15 = 20\\text{セット}$\n\n1セットで兄は6歩歩くので、合計の歩数は：\n\n*   $20\\text{セット} \\times 6\\text{歩} = 120\\text{歩}$\n\n答え：**120歩**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:46.091200+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:24.426484+00:00"
+  }
+}

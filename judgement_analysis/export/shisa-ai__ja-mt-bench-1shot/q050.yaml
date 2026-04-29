@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 50,
+  "category": null,
+  "question": {
+    "original": "保護者たちは、休み時間中のいじめについて校長に苦情を申し立てました。校長はこの問題を速やかに解決したいと考え、休憩補助員に警戒するよう指示しました。補助員が校長に報告すべき状況はどれでしょうか？\na) 関心を示さない少女が一人でベンチに座り、本に夢中で、仲間との交流を全く見せていません。\nb) 一対一のバスケットボールゲームに参加している2人の男の子が、最後に得点したバスケットについて激しく議論しています。\nc) 4人の女の子が別の女の子を囲み、彼女のバックパックを持っているようです。\nd) 3人の男の子がハンドヘルドのビデオゲームに集中しており、これはルールに違反しており、学校内での使用は許可されていません。",
+    "translation_en": "**[Purpose: Question]**  \n\nParents have filed a complaint with the principal regarding bullying during recess. The principal wants to resolve the issue promptly and has instructed the recess aides to be vigilant. Which of the following situations should the aides report to the principal?  \n\na) A girl sitting alone on a bench, engrossed in a book, showing no interest in interacting with her peers.  \nb) Two boys engaged in a one-on-one basketball game, arguing heatedly over the last basket scored.  \nc) Four girls surrounding another girl and seemingly taking her backpack.  \nd) Three boys playing handheld video games, which is against school rules and not permitted on campus.  \n\n*(Note: The correct answer is **c**, as it directly indicates potential bullying behavior—surrounding a peer and taking her backpack. The other options describe either non-interactive behavior, a normal argument, or a rule violation unrelated to bullying.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "校長が休憩補助員に警戒するよう指示した場合、報告すべき状況は以下の通りです。  \n\n**a) 関心を示さない少女が一人でベンチに座り、本に夢中で、仲間との交流を全く見せていません。**  \n→ これは通常の行動であり、いじめの兆候ではありません。ただし、もし少女が孤立している様子や、何か問題を抱えている可能性がある場合は注意が必要ですが、現時点では特に報告すべき事項ではありません。  \n\n**b) 一対一のバスケットボールゲームに参加している2人の男の子が、最後に得点したバスケットについて激しく議論しています。**  \n→ これは競争心や熱意の表れであり、いじめの兆候ではありません。ただし、議論が過度に激しくなる場合や、一方が他方を嘲笑している場合は注意が必要です。  \n\n**c) 4人の女の子が別の女の子を囲み、彼女のバックパックを持っているようです。**  \n→ これは明らかないじめの兆候です。女の子が囲まれている状況やバックパックを持たれていることから、強制的な行動や不当な扱いを受けている可能性があります。速やかに校長に報告すべきです。  \n\n**d) 3人の男の子がハンドヘルドのビデオゲームに集中しており、これはルールに違反しており、学校内での使用は許可されていません。**  \n→ これは規則違反ですが、いじめとは直接関係ありません。しかし、校長への報告として適切です（規則遵守のため）。  \n\n### 結論：  \n**c) 4人の女の子が別の女の子を囲み、彼女のバックパックを持っているようです。** が最も報告すべき事項です。これは明確ないじめ行為であり、速やかな対応が必要です。他の選択肢も適宜校長に報告することで問題解決につながります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "説明：  \n回答は日本語として自然で読みやすく、各選択肢についていじめとの関連性を簡潔に評価しており、正解である c) を明確に特定できています。「校長が休憩補助員に警戒するよう指示した」文脈から、いじめに該当しそうな場面を選ぶという趣旨も正しく理解できています。\n\n一方で、設問は「どれを報告すべきか」という単一選択問題であり、d) について「校長への報告として適切」と述べているのは、いじめ対応という文脈からはやや論点がぶれています（規則違反といじめの指示が混在している）。また、「明らかないじめの兆候」「明確ないじめ行為」と断定しているが、本来は「いじめの可能性が高い状況」と少し慎重に表現してもよいところです。ただし、設問の意図を踏まえれば c) を選ぶロジックとしては妥当です。\n\n全体として、有用性・関連性・正確性は高く、大きな誤りや支離滅裂さもありませんが、若干の過剰説明や論点の広げ方に改善の余地があります。\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:09.990563+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "正解は **c) 4人の女の子が別の女の子を囲み、彼女のバックパックを持っているようです。** です。  \n\nこの状況は、いじめの可能性が高いと考えられます。複数人が一人を取り囲み、個人の物品（バックパック）を奪っている様子は、仲間外れにしたり、脅したりする行為に該当する可能性があります。補助員は、このような状況を直ちに報告し、被害者の安全を確保する必要があります。  \n\n他の選択肢について：  \n- **a)** 一人で本を読んでいる少女は、いじめの兆候とは限りません（ただし、孤立している場合には注意が必要）。  \n- **b)** バスケットボールでの議論は、競技中の通常のやり取りであり、いじめとは異なります。  \n- **d)** ビデオゲームの使用はルール違反ですが、いじめとは直接関係ありません（ただし指導が必要）。  \n\nしたがって、**c) 4人の女の子が別の女の子を囲んでいる状況**が最も報告すべきケースです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:16.733037+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **c) 4人の女の子が別の女の子を囲み、彼女のバックパックを持っているようです。** です。\n\n**理由:**\n校長の指示は、特に「いじめ」の問題に対処することです。\n\n*   **c)** は、多人数（4人）が一人を囲むという「力の不均衡」があり、相手の所有物（バックパック）を奪っている可能性があるため、いじめや威圧の最も明確な兆候を示しています。\n*   **a)** は、単に内向的であるか、読書を楽しんでいるだけの可能性が高いです。\n*   **b)** は、スポーツ中の対等な口論であり、いじめとは異なります。\n*   **d)** は校則違反ですが、いじめの問題とは関係ありません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:02.659244+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:14.982094+00:00"
+  }
+}

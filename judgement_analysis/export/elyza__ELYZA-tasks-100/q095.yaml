@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 95,
+  "category": null,
+  "question": {
+    "original": "犬が「ワンワン」ほえるなど、音や声を直接表す言葉を「擬音語」、星が「きらきら」光るなど、ものや人の様子を直接表す言葉を「擬態語」といいます。\n\n下の文を読み、擬音語・擬態語をそれぞれリストアップしてください。\n\n窓辺に座り、ぼんやりと外を見ていると、パラパラと雨が降り始めました。ビシャビシャと音を立てる雨に、私は何でもない場面にワクワクした気持ちを抱きました。",
+    "translation_en": "**[Purpose: question]**  \n\nWords that directly represent sounds or voices, such as a dog barking \"wan-wan,\" are called **onomatopoeia (擬音語)**. Words that directly represent the state or appearance of things or people, such as stars twinkling \"kirakira,\" are called **mimetic words (擬態語)**.  \n\nRead the following sentence and list the onomatopoeia and mimetic words separately.  \n\n*\"Sitting by the window and gazing blankly outside, it started to rain in a *parapara* patter. The *bishabisha* sound of the rain filled me with a sense of excitement in an otherwise ordinary scene.\"*  \n\n**Onomatopoeia (擬音語):**  \n- *parapara* (パラパラ) – the sound of light rain  \n- *bishabisha* (ビシャビシャ) – the sound of heavy rain  \n\n**Mimetic Words (擬態語):**  \n- *wakuwaku* (ワクワク) – feeling excited or thrilled (though not strictly mimetic, it describes an emotional state)  \n\n*(Note: \"wakuwaku\" is often categorized as a mimetic word in Japanese, though it describes an internal feeling rather than an external state. If strictly adhering to the definition, it may not be included.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下に、与えられた文から擬音語と擬態語をそれぞれリストアップします。  \n\n### **擬音語（音を表す言葉）**  \n1. **パラパラ**（雨が降る音）  \n2. **ビシャビシャ**（雨が降る音）  \n\n### **擬態語（ものや人の様子を表す言葉）**  \n1. **ぼんやりと**（外を見ている様子）  \n2. **ワクワク**（興奮や期待の気持ち）  \n\nこのように、文中の「パラパラ」「ビシャビシャ」は音を表し、「ぼんやりと」「ワクワク」は状況や感情を表すため、それぞれのカテゴリに分類されます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "擬音語・擬態語ともに、正解例どおりすべて正しく抽出・分類できています。  \n日本語も自然で、指示にも従えており減点要素はありません。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:48.735975+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**擬音語:**  \n- パラパラ（雨の音）  \n- ビシャビシャ（雨の音）  \n\n**擬態語:**  \n- ぼんやり（様子）  \n- ワクワク（気持ちの様子）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:10.834041+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた例文に含まれる擬音語・擬態語は以下の通りです。\n\n**擬音語（音や声を表す言葉）**\n*   **パラパラ**（雨が降る音）\n*   **ビシャビシャ**（雨が激しく当たる音）\n\n**擬態語（様子や状態を表す言葉）**\n*   **ぼんやり**（何もせずにいる様子）\n*   **ワクワク**（期待や喜びで心が弾む様子）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:58.692287+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:34:22.527427+00:00"
+  }
+}

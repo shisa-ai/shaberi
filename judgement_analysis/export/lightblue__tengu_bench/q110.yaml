@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 110,
+  "category": "法律判断",
+  "question": {
+    "original": "銀行強盗が強盗に際して人質をとり、本気だということを示すために持っていたナイフで人質の首に切り傷をつけました。一方で人質の命に別状はありませんでした。\nこの場合どのような罪状に問われると考えられますか。",
+    "translation_en": "**[Purpose: Question]**  \n\nA bank robber took hostages during the robbery and inflicted a superficial cut on a hostage’s neck with a knife to demonstrate seriousness. However, the hostage was not seriously injured.  \n\n**What charges could be considered in this case?**  \n\n*(Note: The translation maintains the original meaning and details while ensuring natural, clear English suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "日本では複数の罪を同時に犯した場合処罰の内容が最も重い罪状が選ばれます。そのため、今回の場合は強盗を行なっている点、意図して怪我を負わせたという点から強盗傷人罪に問われると考えられます。この場合無期又は6年以上の懲役が課せられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nIn Japan, when multiple crimes are committed simultaneously, the punishment is based on the most serious offense. Therefore, in this case, due to the act of robbery and the intentional infliction of injury, the individual would likely be charged with robbery with injury (強盗傷人罪). The penalty for this offense is either life imprisonment or a minimum of six years in prison.  \n\n*(Note: \"強盗傷人罪\" is translated as \"robbery with injury\" to align with legal terminology, though \"aggravated robbery\" could also be used depending on context.)*"
+  },
+  "rubric": {
+    "original": "- 罪状名を示している:2点\n- 日本では複数の罪を同時に犯した際に最も重いものが選択されることを言及している:2点\n- 強盗傷人罪が選択されることを示している:3点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates the name of the charge:** 2 points  \n- **Mentions that in Japan, when multiple crimes are committed simultaneously, the most severe one is selected:** 2 points  \n- **Shows that robbery with injury is the selected charge:** 3 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and meaning while ensuring clarity and natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この状況では、銀行強盗の加害者は以下の罪状に問われる可能性が高いです。  \n\n1. **強盗罪（刑法235条）**  \n   - 銀行強盗は強盗罪に該当し、暴行や脅迫を伴う場合、刑罰が重くなる。  \n\n2. **傷害罪（刑法204条）**  \n   - 人質の首にナイフで切り傷をつけた行為は「傷害」に該当し、故意による身体への危害を構成します。ただし、人質の命に別状がないため、傷害罪は軽減される可能性があります。  \n\n3. **脅迫罪（刑法222条）**  \n   - 人質を取り、本気だということを示すためにナイフを使った行為は「脅迫」に該当します。  \n\n4. **特別背任罪（会社法960条）**  \n   - 銀行員が強盗に関与した場合、会社法上の特別背任罪も問われる可能性があります。  \n\n### 補足  \n- 切り傷の深さや人質の状態によっては、傷害罪がより重い「重傷害」に発展する可能性もあります。  \n- 強盗時に使用したナイフが凶器とみなされるかどうかも判断材料となります。  \n\n最終的な判決は裁判所の判断によりますが、これらの罪状が適用される可能性が高いと考えられます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 罪状名を示している:2点  \n  - 強盗罪、傷害罪、脅迫罪、特別背任罪など具体的な罪名を挙げている。\n- 日本では複数の罪を同時に犯した際に最も重いものが選択されることを言及している:0点  \n  - 併合罪や最も重い罪を基準に処断されるといった説明が一切ない。\n- 強盗傷人罪が選択されることを示している:0点  \n  - 強盗傷人罪という罪名に全く触れていない。\n- 説明が具体的でわかりやすい:1点  \n  - 各罪の構成要件に軽く触れており文章自体は読みやすいが、設問の事案に対する結論が的外れで、不要な罪（特別背任罪など）も挙げており、適切さに欠ける。\n- 自然な日本語である:1点  \n  - 文法や表現は自然で読みやすい日本語になっている。\n\n[計算式]\n2 + 0 + 0 + 1 + 1 = 4\n\n[点数]\n4\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:15.029611+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "はい、障害者雇用納付金は徴収されます。  \n\n**理由：**  \n日本の障害者雇用促進法では、一定規模以上の事業主（従業員数50人以上）に対し、**「障害者雇用率」が法定比率（2023年時点で2.3%）に満たない場合**に、不足分に応じて「障害者雇用納付金」を徴収します。  \n\n従業員50人中で障害者がゼロの場合、障害者雇用率は0%となり、法定比率を大幅に下回るため、納付金が発生します。  \n\n### 補足情報  \n- **納付金額の算出方法**：不足する障害者数×1人あたりの基準額（約5万円/月）で計算されます。  \n- **免除条件**：新規事業や特別な事情がある場合、一部免除される可能性がありますが、原則として適用されます。  \n- **対応策**：障害者の採用・継続雇用により納付金を削減できます。  \n\n詳細は厚生労働省のガイドラインを参照してください：[https://jsite.mhlw.go.jp/iwate-roudoukyoku/var/rev0/0126/8597/syougaishakoyou.pdf](https://jsite.mhlw.go.jp/iwate-roudoukyoku/var/rev0/0126/8597/syougaishakoyou.pdf)",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:00.708726+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "結論から申し上げますと、従業員数が50人の場合、障害者雇用納付金は**徴収されません**。\n\n理由は以下の通りですが、**「納付金は不要だが、雇用義務はある」**という点に注意が必要です。\n\n### 1. なぜ徴収されないのか（納付金の対象範囲）\n障害者雇用納付金の申告・納付義務があるのは、**「常時雇用している労働者数が100人を超える事業主」**です。\n従業員数が50人の場合はこの基準を下回っているため、たとえ障害者を一人も雇用していなくても、納付金を支払う必要はありません。\n\n### 2. ただし「雇用の義務」はあります\nお金（納付金）を取られないからといって、障害者を雇わなくて良いわけではありません。\n\n2024年（令和6年）4月から、障害者の法定雇用率が**2.5%**に引き上げられました。これにより、障害者を1人以上雇用しなければならない企業の範囲が、従業員「43.5人以上」から**「40.0人以上」**に拡大されました。\n\nあなたの会社は従業員が50人ですので、計算上は以下のようになります。\n*   $50人 \\times 2.5\\% = 1.25人$\n*   （1人未満は切り捨てですが、1以上の端数はどうあれ「1人」の雇用義務が発生します）\n\nつまり、**「法律上は1人以上の障害者を雇う義務がある状態だが、雇っていなくても罰金的な納付金は取られないサイズ」**という位置づけになります。\n\n### まとめ\n*   **納付金：** 払う必要はありません（対象は101人以上のため）。\n*   **法律上の義務：** 違反している状態です（対象は40人以上のため）。\n\n現状では金銭的なペナルティはありませんが、ハローワークからの指導対象になる可能性はありますので、今後の採用計画において留意しておくことをお勧めします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:07.570856+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:00.373982+00:00"
+  }
+}

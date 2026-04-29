@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 79,
+  "category": null,
+  "question": {
+    "original": "「愛飲」を簡単な表現に言い換えて。",
+    "translation_en": "**\"Frequently enjoyed\"** or **\"Often consumed\"** (depending on context).  \n\nAlternatively, if the nuance is more about habitual enjoyment: **\"Regularly enjoyed\"** or **\"A favorite drink.\"**  \n\n(For evaluation documentation, the most neutral and clear option would be **\"Frequently enjoyed.\"**)  \n\n---  \n**Final Translation:**  \n*\"Frequently enjoyed.\"* (or *\"Often consumed\"* if the context is more about quantity.)  \n\n*(Note: The original term \"愛飲\" carries a connotation of fondness, so \"frequently enjoyed\" best preserves this nuance in English.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "「愛飲」を簡単な表現に言い換えるなら、「好んで飲む」や「よく飲む」などが適切です。  \n\n例:  \n- 「愛飲する」という意味は「好んで飲む」や「よく飲む」に置き換えられます。  \n- さらに短くすると「好きで飲む」でも通じます。  \n\n文脈によって使い分けると、より自然な表現になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "回答は「好んで飲む」「よく飲む」としており、問題の「愛飲」を簡単な表現に言い換えるという要求に正しく対応している。  \n問題固有の採点基準では、正解の場合は無条件で5点とされているため、この回答は5点となる。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.021353+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「愛飲」を簡単な表現に言い換えると、以下のような言い方ができます。  \n\n- **好きな飲み物**  \n- **よく飲むもの**  \n- **お気に入りの飲み物**  \n\n例:  \n「コーヒーは彼の愛飲だ」→「コーヒーは彼の好きな飲み物だ」  \n\n必要に応じて、さらに短く「よく飲む」とだけ言うことも可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:03.741048+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "「愛飲（あいいん）」を簡単な表現に言い換えると、文脈に合わせて以下のように表現できます。\n\n**日常的・習慣的に飲んでいることを伝えたい場合**\n*   **いつも飲んでいる**\n*   **普段から飲んでいる**\n*   **よく飲む**\n*   **飲み続けている**\n\n**その飲み物が好きであることを強調したい場合**\n*   **好きで飲んでいる**\n*   **気に入って飲んでいる**\n*   **好んで飲んでいる**\n*   **お気に入りの**（例：「愛飲しているコーヒー」→「お気に入りのコーヒー」）\n\n**少しカジュアルな表現**\n*   **ハマっている**（飲み物に対して）\n\n**例文での比較**\n*   硬い表現：「私はこのお茶を長年**愛飲**しています。」\n*   簡単な表現：「私はこのお茶を長年**気に入って飲んで**います。」\n*   簡単な表現：「私はこのお茶を**いつも飲んで**います。」",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:51.215801+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:34:01.958164+00:00"
+  }
+}

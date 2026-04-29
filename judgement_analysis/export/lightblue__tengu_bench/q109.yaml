@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 109,
+  "category": "法律判断",
+  "question": {
+    "original": "Aさんは2023年の6月14日にはある発明についての研究を完成していたものの特許の出願方法について戸惑っていたところ2023年の6月18日にBさんがAさんに先立って同じ発明についての特許を出願しました。\nこの場合特許を受けるのはどちらの人ですか？",
+    "translation_en": "**[Purpose: Question]**  \n\nA had completed research on an invention by June 14, 2023, but was unsure about the patent application process. On June 18, 2023, B filed a patent application for the same invention before A. In this case, who is entitled to the patent?  \n\n*(Note: The translation preserves the original meaning, details, and structure while ensuring natural and clear English suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "特許を受けることができるのは、原則として最初に特許を出願した人です。この原則は「先願主義」と呼ばれています。したがって、このケースではBさんがAさんに先立って同じ発明について特許を出願したため、Bさんが特許を受けることができます。\n\n多くの国では、発明の公開や使用前に特許出願が行われる必要があります。もしAさんがその発明を公開していた場合、その公開が特許出願に影響を与える可能性がありますが、このケースではそのような情報は提供されていません。\n\n結論として、提供された情報に基づくと、Bさんが特許を受ける可能性が高いです。ただし、特許法は国や地域によって異なるため、具体的な状況に応じて専門家のアドバイスを求めることが重要です。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nThe principle of \"first-to-file\" generally grants patent rights to the person who first files a patent application. In this case, since B filed a patent application for the same invention before A, B is eligible to receive the patent.  \n\nIn many countries, a patent application must be filed before the invention is publicly disclosed or used. If A had publicly disclosed the invention, such disclosure could affect the patent application, but no such information is provided in this case.  \n\nIn conclusion, based on the information given, B is more likely to receive the patent. However, since patent laws vary by country and region, it is important to seek expert advice for specific circumstances."
+  },
+  "rubric": {
+    "original": "- Bさんが特許を受けることになると言及している:4点\n- 特許を受ける人を選ぶ根拠を示している:2点\n- 先願主義に触れている:2点\n- 説明が具体的でわかりやすい:1点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Mentions that B will receive the patent: **4 points**  \n- Provides justification for selecting the patent recipient: **2 points**  \n- Addresses the \"first-to-file\" principle: **2 points**  \n- Explanation is specific and clear: **1 point**  \n- Uses natural Japanese: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この状況では、**Bさんが特許を受ける可能性が高い**です。  \n\n### 理由：  \n1. **先願主義（First-to-File）**  \n   日本を含む多くの国では、特許制度は「先願主義」に基づいています。これは、発明のアイデアを最初に特許庁に申請した者が権利を得るという原則です。Aさんは6月14日に研究を完成させたものの、Bさんが6月18日に先に出願したため、Bさんの申請が優先されます。  \n\n2. **実用新案の可能性**  \n   Aさんが研究を完成させていた時点で、まだ具体的な出願準備が整っていなかった場合（例：詳細な設計や実験データが不足していた）、Aさんは「実用新案」という別の制度で保護できる可能性があります。しかし、これは発明の新規性や進歩性よりも「実用性」を重視する制度であり、通常は特許よりも権利範囲が狭くなります。  \n\n3. **共同出願の可能性**  \n   もしAさんとBさんが協力関係にあった場合（例：共同研究）、共同で出願することでAさんも権利を得られる可能性があります。しかし、この問題文からはそのような情報は得られません。  \n\n### 結論：  \n現時点での情報から、**Bさんの特許申請が優先されるため、Bさんが特許を受ける可能性が高い**と判断されます。ただし、Aさんが未発表の技術情報を持っていた場合や、Bさんの申請に瑕疵がある場合は異なる結果になることもあります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- Bさんが特許を受けることになると言及している:4点  \n  - 「Bさんが特許を受ける可能性が高い」「Bさんの特許申請が優先されるため、Bさんが特許を受ける可能性が高い」と明確に述べている。\n- 特許を受ける人を選ぶ根拠を示している:2点  \n  - 出願日と「先に出願した者が権利を得る」という原則を理由として説明している。\n- 先願主義に触れている:2点  \n  - 「先願主義（First-to-File）」という用語を明示し、その内容も説明している。\n- 説明が具体的でわかりやすい:1点  \n  - 箇条書きで理由を整理し、結論も明確に示している。\n- 自然な日本語である:1点  \n  - 文法的にも自然で読みやすい日本語で書かれている。\n\n[計算式]\n4 + 2 + 2 + 1 + 1 = 10\n\n[点数]\n10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:15.428384+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "会社を設立した際に就業規則を作成する必要性は、**従業員を雇うかどうか**によって大きく異なります。  \n\n### **1. 従業員を雇う場合（労働者が1人でもいる場合）**  \n- **法的義務があります**。労働基準法第89条に基づき、10人以上の従業員がいる事業所では就業規則を作成し、労働基準監督署に届け出る必要があります。  \n- **10人未満の場合でも**、労働条件（労働時間、賃金、休日など）を明確にするため、作成することが強く推奨されます（法的義務はありませんが、紛争防止のため重要）。  \n\n### **2. 従業員を雇わない場合（個人事業主や役員のみ）**  \n- 法的義務はありません。ただし、今後の事業拡大に備えてテンプレートを作成しておくと便利です。  \n\n### **作成時の注意点**  \n- 労働基準法やその他関連法令（例：育児・介護休業法）を遵守する必要があります。  \n- 従業員への周知・承諾が必要です（就業規則変更時も同様）。  \n\n### **参考情報**  \n- 厚生労働省「就業規則の作成・届出について」：[https://jsite.mhlw.go.jp/iwate-roudoukyoku/var/rev0/0116/7853/kisoku.pdf](https://jsite.mhlw.go.jp/iwate-roudoukyoku/var/rev0/0116/7853/kisoku.pdf)  \n\n会社設立後、早期に就業規則の有無を確認し、必要であれば専門家（社会保険労務士など）に相談することをおすすめします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:04.787334+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "結論から申し上げますと、**「常時10人以上の従業員を使用する事業場」**であれば、法律上、就業規則の作成と労働基準監督署への届出が**義務**となります。\n\nしかし、従業員が10人未満であっても、会社を守るため、また助成金を受け取るために作成することが強く推奨されます。\n\n詳細を以下に整理しました。\n\n### 1. 法律上の義務（労働基準法第89条）\n\n*   **従業員が10人以上の場合：**\n    作成および労働基準監督署への届出が**必須**です。違反した場合は30万円以下の罰金が科される可能性があります。\n    *   ※ここでの「従業員」には、正社員だけでなく、**パートタイムやアルバイトも含みます**。\n    *   ※「常時10人以上」とは、一時的に10人未満になることがあっても、常態として10人以上が働いている状態を指します。\n\n*   **従業員が10人未満の場合：**\n    法律上の作成・届出義務はありません。\n\n### 2. 10人未満でも作成すべき理由（メリット）\n\n義務でなくとも、会社設立時（または最初の従業員を雇った時）に作成しておくべき実務的な理由は以下の通りです。\n\n*   **トラブルの防止（リスク管理）**\n    労働時間、残業代、休暇、解雇などのルールが曖昧だと、従業員との間で「言った・言わない」のトラブルになりがちです。特に、問題社員に対して懲戒処分（減給や解雇など）を行う場合、**就業規則にその根拠（懲戒規定）が明記されていないと、法的に処分が無効になる可能性が高い**です。\n*   **助成金の受給要件**\n    国（厚生労働省関連）の助成金（キャリアアップ助成金など）を申請する場合、多くのケースで**「就業規則を作成し、労働基準監督署に届け出ていること」**が要件となります。10人未満でも、助成金をもらうためには届出が必要です。\n*   **従業員の安心感**\n    ルールが明確であることは、従業員にとって「しっかりした会社である」という安心感につながり、採用や定着率に良い影響を与えます。\n\n### 3. 就業規則に記載すべき内容\n\n就業規則には必ず書かなければならない事項（絶対的必要記載事項）があります。\n\n1.  **始業・終業の時刻、休憩時間、休日、休暇**\n2.  **賃金の決定方法、計算方法、支払方法、締切日、支払日**\n3.  **退職に関する事項（解雇の事由を含む）**\n\nその他、賞与や退職金、食費などの手当がある場合は、それらについても記載する必要があります（相対的必要記載事項）。\n\n### 4. 作成・届出の流れ\n\n1.  **原案の作成**（厚生労働省のモデル就業規則などを参考にするか、社会保険労務士に依頼する）\n2.  **従業員代表の意見聴取**（過半数代表者の意見書をもらう。同意である必要はなく、反対意見でも提出は可能ですが、意見を聞くプロセスは必須です）\n3.  **労働基準監督署へ届出**（就業規則本体 + 意見書）\n4.  **従業員への周知**（ここが重要です。作成しても、従業員がいつでも見られる状態にしておかないと効力を持ちません）\n\n### まとめ\n\n*   **10人以上**なら、**絶対に必要**です。\n*   **10人未満**なら、法律上は不要ですが、**「トラブル回避」と「助成金」のために作成することを強くお勧めします**。\n\n設立当初はテンプレート（ひな形）をベースにしたシンプルなものでも構いませんので、早めに整備しておくのが経営上の安全策と言えます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:59.299263+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:56.477270+00:00"
+  }
+}

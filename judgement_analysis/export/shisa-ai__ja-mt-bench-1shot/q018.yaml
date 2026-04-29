@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 18,
+  "category": null,
+  "question": {
+    "original": "次の三つの最新のスマートフォン、iPhone、Samsung Galaxy、Google Pixelに対する、さまざまな情報源からの顧客レビューを分析し、各電話について1から10のスケールで全体的な評価を提供してください。以下の複雑で矛盾したレビューを考慮に入れてください：\n- TechRadarによる最新のiPhoneのレビュー：新しいiPhoneは、スマートフォンのパフォーマンスとカメラの品質に新たな基準を設ける、驚くべき技術の勝利です。しかし、デザインの増微と高価格は、以前のiPhoneの「すげー」ファクターを欠いています。それでも、そのパワーと性能は無比です。\n- CNETによる最新のSamsung Galaxyのレビュー：Samsung Galaxyの携帯電話には、素晴らしいスクリーン、高速なパフォーマンス、堅実なバッテリー寿命、そして印象的なカメラオプションなど、たくさんのハイポイントがあります。しかしながら、Bixbyはまだ物足りなく、AR絵文字は平坦で、全体的なデザインはそれほど変わっていません。新しいGalaxyは全体的に素晴らしい電話ですが、いくつかの小さな弱点が真の偉大さを達成するのを妨げています。\n- The Vergeによる最新のGoogle Pixelのレビュー：GoogleのPixelは、最新の仕様、革新的なAIパワードソフトウェア、そして素晴らしいカメラをスリークなデザインに詰め込んでいます。しかし、バッテリー寿命が物足りない、拡張可能なストレージがない、そして高価格を考慮すると、パフォーマンスが時々つまづくことがあります。シームレスなソフトウェア、エリートの写真撮影、そしてGoogleのAIアシスタンスが最も重要なら、Pixelが好きになるでしょう。しかし、全体的な体験は競合他社ほどまんべんなくはありません。\nそれぞれのスマートフォンの全体的な評価を10点満点で1つのJSONオブジェクトで返してください、小数点第一位まで。",
+    "translation_en": "**Translation:**  \n\n**[Purpose: Question]**  \n\nAnalyze customer reviews from various sources for the three latest smartphones—iPhone, Samsung Galaxy, and Google Pixel—and provide an overall rating for each device on a scale of 1 to 10. Consider the following complex and contradictory reviews:  \n\n- **TechRadar’s review of the latest iPhone:** The new iPhone is a stunning technological triumph that sets new standards for smartphone performance and camera quality. However, its incremental design and high price lack the \"wow factor\" of previous iPhones. Still, its power and performance are unmatched.  \n- **CNET’s review of the latest Samsung Galaxy:** The Samsung Galaxy phone has many high points, including a fantastic screen, fast performance, solid battery life, and impressive camera options. However, Bixby remains underwhelming, AR emojis are lackluster, and the overall design hasn’t changed much. The new Galaxy is an excellent phone overall, but a few minor weaknesses prevent it from achieving true greatness.  \n- **The Verge’s review of the latest Google Pixel:** Google’s Pixel packs the latest specs, innovative AI-powered software, and an excellent camera into a sleek design. However, its battery life is lacking, it lacks expandable storage, and its performance sometimes stutters at the high price. If seamless software, elite photography, and Google’s AI assistance are priorities, you’ll love the Pixel—but the overall experience isn’t as well-rounded as its competitors.  \n\nReturn the overall rating for each smartphone in a single JSON object, rounded to the first decimal place.  \n\n---  \n\n**JSON Output:**  \n```json  \n{  \n  \"iPhone\": 8.5,  \n  \"Samsung Galaxy\": 8.0,  \n  \"Google Pixel\": 7.5  \n}  \n```"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下は、各スマートフォンの全体的な評価を10点満点でJSON形式でまとめたものです。  \n\n```json\n{\n  \"iPhone\": 8.5,\n  \"Samsung Galaxy\": 8.2,\n  \"Google Pixel\": 7.8\n}\n```\n\n### 評価の根拠:  \n1. **iPhone (8.5/10)**  \n   - **強み**: パフォーマンスとカメラの革新性。  \n   - **弱み**: デザインの微細な進化と高価格。  \n   - **総合**: 技術的優位性が高いが、デザインと価格面で妥協が必要。  \n\n2. **Samsung Galaxy (8.2/10)**  \n   - **強み**: スクリーン、パフォーマンス、バッテリー寿命、カメラオプション。  \n   - **弱み**: Bixbyの未成熟さ、AR絵文字の質、デザインの変化不足。  \n   - **総合**: 多機能だが、小さな欠点が全体的な評価を下げる。  \n\n3. **Google Pixel (7.8/10)**  \n   - **強み**: AIパワードソフトウェア、カメラ性能、シームレスなユーザー体験。  \n   - **弱み**: バッテリー寿命の不足、ストレージ拡張不可、高価格とパフォーマンスの一貫性不足。  \n   - **総合**: 特定のユーザー（AIや写真撮影に重点を置く人）には最適だが、汎用性に欠ける。  \n\nこの分析では、各レビューの賛否両面を考慮し、小数点以下まで評価を調整しました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "全体として、日本語は自然で読みやすく、レビュー内容もおおむね正しく要約できています。3機種の長所・短所を整理し、それに基づいてスコアをつけている点は妥当です。\n\nただし、ユーザーの指示では「さまざまな情報源からの顧客レビューを分析し」「複雑で矛盾したレビューを考慮」とあり、より踏み込んだ分析（たとえば、長所と短所の重みづけや、他機種との相対比較、矛盾点の整理など）が期待されますが、提示された説明はかなり表層的で、与えられたレビュー文をほぼそのまま短く言い換えた程度にとどまっています。  \nまた、JSONオブジェクトの返却という要件は満たしていますが、JSON以外の説明文も付けており、「1つのJSONオブジェクトで返してください」という文言を厳密に解釈すると、余分なテキストは不要とも考えられます。\n\nとはいえ、支離滅裂さや不自然な表現、事実誤認は特に見られず、基本的な要件は満たしているため、総合的には中〜上程度の品質と評価できます。\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:08.669220+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下に、各スマートフォンの全体的な評価を10点満点でJSONオブジェクト形式で提供します。レビュー内容を総合的に考慮し、強みと弱みをバランス良く評価しました。\n\n```json\n{\n  \"iPhone\": 8.5,\n  \"Samsung Galaxy\": 8.2,\n  \"Google Pixel\": 8.0\n}\n```\n\n### 評価の根拠：\n1. **iPhone (8.5/10)**  \n   - **強み**: パフォーマンスとカメラの品質が突出しており、技術的な優位性が高い。  \n   - **弱み**: デザインの進化不足と高価格がネガティブ要因。  \n   - TechRadarのレビューでは「パワーと性能は無比」と評価されており、これが高スコアに寄与。\n\n2. **Samsung Galaxy (8.2/10)**  \n   - **強み**: スクリーン、パフォーマンス、バッテリー寿命、カメラオプションが優秀。  \n   - **弱み**: BixbyやAR絵文字の未成熟さ、デザインの変化不足がマイナス要因。  \n   - CNETは「全体的に素晴らしい電話」としつつも、小さな弱点を指摘。\n\n3. **Google Pixel (8.0/10)**  \n   - **強み**: AIソフトウェアやカメラ性能が優れ、シームレスな体験を提供。  \n   - **弱み**: バッテリー寿命不足、ストレージ拡張不可、高価格が課題。  \n   - The Vergeは「競合他社ほどまんべんなくない」と指摘し、中間的な評価。\n\nこれらの評価は、各機種の特性を考慮した総合的な判断です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:24.896118+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n{\n  \"iPhone\": 9.3,\n  \"Samsung Galaxy\": 8.8,\n  \"Google Pixel\": 8.0\n}\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:04.304928+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:45.890211+00:00"
+  }
+}

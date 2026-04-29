@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 83,
+  "category": "雑談",
+  "question": {
+    "original": "コンビニといえばどこを思い浮かべますか",
+    "translation_en": "**[Purpose: Question]**  \n\n*When you think of convenience stores, which one comes to mind?*  \n\n(Translation preserves the casual, conversational tone while maintaining clarity for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 具体的な会社名を含む:2点\n- 複数の会社名を含む:2点\n- 実在する会社名である:2点\n- 独断的な判断をしていない:3点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Includes a specific company name: **2 points**  \n- Includes multiple company names: **2 points**  \n- Uses real company names: **2 points**  \n- Avoids subjective judgment: **3 points**  \n- Written in natural Japanese: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "コンビニエンスストア（コンビニ）を思い浮かべるとき、私は日本の文化や生活様式と深く結びついている場所として捉えます。以下に、コンビニが持つ多面的な側面を挙げます：\n\n1. **利便性**：24時間営業で、飲食物や日用品を手軽に購入できる点が特徴的です。特に夜間や休日など、他の店舗が閉まっている時間帯でも利用可能です。\n\n2. **地域社会への貢献**：コンビニは地域住民にとって不可欠な存在であり、近隣のコミュニティセンターのような役割も果たしています。例えば、ATMや簡易郵便局のサービスを提供することで、住民の生活をサポートしています。\n\n3. **多様な商品ラインナップ**：食品だけでなく、日用品から雑貨まで幅広い商品を扱っています。季節限定品や健康食品なども取り揃われており、常に新しい発見があるのも魅力の一つです。\n\n4. **文化的影響**：日本のポップカルチャーにおいても重要な役割を果たしています。漫画やアニメの舞台として頻繁に登場し、日本のライフスタイルの一部として世界的に認知されています。\n\n5. **技術革新**：近年では自動販売機やレジシステムの進化により、より効率的なサービス提供が可能になっています。また、デジタル技術を活用した新しいサービス（例えばオンライン注文・自宅配送）も導入されています。\n\n6. **環境への配慮**：リサイクルプログラムや省エネ製品の販売など、環境問題にも積極的に取り組んでいます。これらの取り組みは持続可能な社会への貢献として評価されています。\n\n7. **国際的な展開**：日本発祥のコンビニエンスストアは世界各国に広がり、それぞれの地域で独自の進化を見せています。例えば、アメリカでは24時間営業の大型店舗が一般的で、日本とは異なる形態で普及しています。\n\nこれらの点から、コンビニは単なる商業施設ではなく、日本社会における重要なインフラの一部として機能していると言えます。その利便性と多様性は、今後も変化する社会の中でその価値を保ち続けるでしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 具体的な会社名を含む:0点  \n  - セブンイレブン、ローソンなど具体的な社名が一切出ていない。\n- 複数の会社名を含む:0点  \n  - 会社名自体が出ていないため、複数も満たさない。\n- 実在する会社名である:0点  \n  - 会社名が出ていない。\n- 独断的な判断をしていない:3点  \n  - 特定のコンビニを一番などと断定せず、一般的・説明的に述べている。\n- 自然な日本語である:1点  \n  - 文法的にも内容的にも自然で読みやすい日本語。\n\n[計算式]\n0 + 0 + 0 + 3 + 1 = 4\n\n[点数]\n4\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:13.027103+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "2025年の海の日は、**7月21日（月曜日）** です。  \n\n海の日は毎年7月の第3月曜日（祝日法上は7月20日）に定められており、2025年も同様です。  \n\n（参考：国民の祝日に関する法律）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:21.505259+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "2025年（令和7年）の海の日は、**7月21日（月）**です。\n\n海の日は「7月の第3月曜日」と定められています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:27.889995+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:26.145033+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 29,
+  "category": null,
+  "question": {
+    "original": "次の文章は正しいですか？\n本田圭佑は高校生の時に甲子園で優勝した。",
+    "translation_en": "**[Purpose: question]**  \n\nIs the following sentence correct?  \n*\"Keisuke Honda won at Koshien (the National High School Baseball Championship) when he was in high school.\"*  \n\n(Note: The original sentence is incorrect. Keisuke Honda is a soccer player, not a baseball player, and did not win at Koshien. The translation preserves the original meaning while maintaining natural English phrasing.)  \n\n---  \n**Key Adjustments:**  \n- \"甲子園で優勝した\" → *\"won at Koshien\"* (Koshien is widely recognized as the National High School Baseball Championship in Japan).  \n- \"高校生の時に\" → *\"when he was in high school\"* (natural phrasing for English evaluation documentation).  \n- Keisuke Honda is a soccer player; the statement is factually incorrect, but the translation reflects the original intent without adding commentary.  \n\n*(Output only the translation as requested.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "いいえ、その文章は正しくありません。本田圭佑（Honda Keisuke）は、プロのレーシングドライバーとして知られていますが、高校生の時に甲子園で優勝したという記録はありません。甲子園は高校野球の全国大会を指し、本田圭佑は野球選手ではなく、自動車レースで活躍しています。彼はF1やスーパーフォーミュラなどの競技で活躍しており、特に2018年にはF1世界選手権で2勝を挙げてチャンピオンに輝きました。したがって、この文章は誤りであり、正しい情報を提供するために訂正する必要があります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は文章が誤りである点は正しく指摘していますが、「本田圭佑」をレーシングドライバーとして説明しており、サッカー選手の本田圭佑についての情報としては誤りです。そのため「答えが合っているが、本田圭佑についての誤った情報を含む」に該当します。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.865617+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "本田圭佑（Keisuke Honda）は、高校時代に甲子園で優勝した経験はありません。彼は1999年生まれで、高校時代は「藤枝明誠高等学校」に在籍していましたが、甲子園（全国高等学校野球選手権大会）での優勝実績はありません。  \n\n本田圭佑はプロサッカー選手として知られており、日本代表やACミランなどで活躍しました。もし他の人物や情報について質問がある場合はお知らせください！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:08.369632+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "いいえ、その文章は**正しくありません**。\n\n理由は以下の通りです。\n\n1.  **競技の違い:** 本田圭佑さんは**サッカー選手**であり、野球選手ではありません。「甲子園」は高校野球の大会を指します。\n2.  **実際の経歴:** 本田圭佑さんは星稜高校（石川県）の**サッカー部**に所属していました。高校3年生の時に「全国高校サッカー選手権大会」に出場し、ベスト4（準決勝進出）になりましたが、優勝はしていません。\n\nしたがって、彼が甲子園（野球）で優勝したという事実は存在しません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:50.185312+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:36.802157+00:00"
+  }
+}

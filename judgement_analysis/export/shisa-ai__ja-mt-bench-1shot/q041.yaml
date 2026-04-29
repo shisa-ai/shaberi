@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 41,
+  "category": null,
+  "question": {
+    "original": "あなたが人々と一緒にレースをしていると想像してみてください。あなたがちょうど2番目の人を追い越したとしたら、あなたの現在の位置は何番目でしょうか？ あなたが追い越した人の位置はどこでしょうか？",
+    "translation_en": "**[Purpose: Question]**  \n\nImagine you are racing with other people. If you just overtook the person in second place, what position are you in now? What position is the person you overtook in?  \n\n*(Note: The translation maintains the original meaning and structure while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "あなたが2番目の人を追い越した場合、以下のようになります。  \n\n- **あなたの現在の位置**: 2番目  \n- **追い越した人の位置**: 3番目  \n\n追い越すことで、あなたは2番目の位置に移動し、追い越した人は3番目に下がります。  \n\nこの問題は、レースにおける「順位の変化」を理解する良い例です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "回答は論理的に正しく、質問の意図（典型的ななぞなぞ）にも合致しています。\n\n- 「2番目の人を追い越したら自分は2番目になる」\n- 「追い越された人は3番目になる」\n\nという説明が簡潔かつ明確に示されており、日本語も自然で不自然な表現や誤りはありません。  \n余計な脱線もなく、必要十分な解説が付いていて有用性も高いです。\n\n総合的に見て、内容・日本語ともに高品質な回答です。\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:04.064555+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この問題は、レース中の順位の変化について考えます。以下にステップごとに説明します。\n\n1. **初期状態**: あなたが2番目の選手を追い越す前、あなたは3番目（またはそれ以下）の位置にいます。2番目の選手は2番目、1番目の選手は1番目です。\n\n2. **追い越し**: あなたが2番目の選手を追い越すと、あなたは2番目の選手の前に出ます。これにより、あなたの位置が上がります。\n\n3. **新しい順位**:\n   - あなたが2番目の選手を追い越したので、あなたは2番目になります。\n   - それまで2番目だった選手は、3番目に下がります。\n   - 1番目の選手はまだ1番目です。\n\nしたがって、最終的な順位は以下のようになります：\n- 1位: そのまま\n- 2位: あなた\n- 3位: 追い越された選手\n\n**答え**:  \n- あなたの現在の位置: **2位**\n- 追い越した人の位置: **3位**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:16.553203+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "答えは以下の通りです。\n\n1.  あなたの現在の位置は**2位**です。\n2.  あなたが追い越した人は**3位**になります。\n\n**理由：**\n2位の人を追い越すと、あなたがその人の順位（2位）に取って代わるからです。1位になるためには、1位の人を追い越す必要があります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:59.991964+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:01.600098+00:00"
+  }
+}

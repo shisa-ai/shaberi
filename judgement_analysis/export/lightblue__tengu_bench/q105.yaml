@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 105,
+  "category": "ビジネス",
+  "question": {
+    "original": "雇用している従業員50人の中に障害者が一人もいない場合、障害者雇用納付金は徴収されますか？",
+    "translation_en": "[Purpose: Question]  \n\nIf a company with 50 employees has no disabled workers, will the disability employment insurance contribution be collected?  \n\n(Translation preserves the original meaning, structure, and key details without adding commentary.)"
+  },
+  "answer": {
+    "gold_original": "日本では2.3%の障害者の法定雇用率を達成していない場合行政指導が入り、また雇用人数が100人以上の場合には障害者雇用納付金が徴収されます。一方で今回の場合雇用している従業員は50人であるため、行政指導はされるものの障害者雇用納付金は徴収されないと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nIn Japan, if a company fails to meet the legally mandated 2.3% employment rate for people with disabilities, it may receive administrative guidance. Additionally, if the company employs 100 or more people, a disability employment levy is imposed. However, in this case, since the company employs only 50 people, it is unlikely to be subject to the disability employment levy, though it may still receive administrative guidance.  \n\n*(Note: The translation maintains the original meaning, legal context, and key details without adding commentary.)*"
+  },
+  "rubric": {
+    "original": "- 障害者雇用納付金が徴収されないことを示している:3点\n- 障害者の法定雇用率を示している:2点\n- 雇用人数が100人以上の場合に障害者雇用納付金が徴収されることを示している:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates that the Disability Employment Security Contribution is not collected:** 3 points  \n- **Indicates the legally mandated employment rate for people with disabilities:** 2 points  \n- **Indicates that the Disability Employment Security Contribution is collected when the number of employees exceeds 100:** 2 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and meaning while ensuring clarity and natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "はい、雇用している従業員50人の中に障害者が一人もいない場合でも、障害者雇用納付金（旧称：障害者雇用促進助成金）が徴収される可能性があります。  \n\n### 主なポイント：  \n1. **法的義務**：日本の障害者雇用促進法では、企業規模に関わらず、一定規模以上の企業は「障害者雇用計画」を策定し、実施することが義務付けられています。  \n2. **納付金の徴収基準**：納付金は「計画の実施状況」に基づいて判断されます。従業員50人未満でも計画を立てていれば納付金は発生しないですが、計画を立てていない場合や計画に沿って実施していない場合は徴収対象となります。  \n3. **例外規定**：従業員数が少ない企業（例：10人未満）は「特別措置」として計画策定義務が軽減される場合がありますが、完全に免除されるわけではありません。  \n\n### 結論：  \n従業員50人未満でも計画を策定・実施していれば納付金は発生しませんが、計画がない場合は徴収される可能性があります。正確な判断には税務専門家や労働基準監督署への確認をおすすめします。  \n\n（※2024年5月時点の情報です。最新の法改正や解釈については確認が必要です）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 障害者雇用納付金が徴収されないことを示している:0点  \n  - 実際には「徴収される可能性があります」としており、正解と逆の内容。\n- 障害者の法定雇用率を示している:0点  \n  - 数値や法定雇用率そのものへの言及がない。\n- 雇用人数が100人以上の場合に障害者雇用納付金が徴収されることを示している:0点  \n  - 「100人以上」という基準への言及がない。\n- 説明が具体的でわかりやすい:1点  \n  - 内容は誤っているが、日本語としての説明構成は具体的で読みやすい。\n- 自然な日本語である:1点  \n  - 文法・表現ともに自然な日本語。\n\n[計算式]\n0 + 0 + 0 + 1 + 1 = 2\n\n[点数]\n2点\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:14.842471+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**建築確認申請の必要性について**  \n\n建物の増築面積が **12m²** の場合、建築確認申請が必要かどうかは以下の条件によって異なります。  \n\n### 1. **増築部分の面積が10m²を超える場合**  \n- 増築面積が **10m²を超える** 場合（今回は12m²）は、原則として **建築確認申請（または小規模建築確認申請）が必要** です。  \n- ただし、既存建物との接続方法や構造によっては例外があります。  \n\n### 2. **例外となるケース（建築確認申請不要）**  \n以下の条件をすべて満たす場合、申請が不要な場合があります。  \n- 増築部分が **既存建物と同一構造** であり、壁や柱などの主要構造部材に影響を与えない。  \n- 増築部分の高さや用途が既存建物と同一である。  \n- 地域の条例で特に定めがない。  \n\n### 3. **小規模建築確認申請（簡素手続き）の適用可否**  \n- 増築面積が30m²以下で、一定の要件を満たす場合は「小規模建築確認申請」で手続き可能です（通常より迅速・費用も安価）。  \n\n### 4. **注意点**  \n- 建築基準法や地域条例により要件が異なるため、必ず **自治体（市区町村）の建築担当部署に相談することを推奨します**。  \n- 特に耐震基準や防火に関する規制も考慮する必要があります。  \n\n### 結論  \n12m²の増築では原則として **建築確認申請または小規模建築確認申請が必要ですが**、詳細は自治体へ問い合わせるのが確実です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:02.881583+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "結論から申し上げますと、**原則として建築確認申請が必要**です。\n\n理由は以下の通りです。\n\n### 1. 基本的なルール（10㎡の壁）\n建築基準法では、増築する床面積が**10㎡（平方メートル）を超える場合**、建築確認申請が必要と定められています。\n今回のケースは**12㎡**ですので、この基準を超えており、申請が必要です。\n\n### 2. 防火地域・準防火地域の場合\nもし、その建物がある場所が「防火地域」または「準防火地域」に指定されている場合は、増築する面積が1㎡であっても（10㎡以下であっても）、必ず建築確認申請が必要です。\nしたがって、地域に関わらず12㎡であれば申請は必須となります。\n\n---\n\n### 例外（申請が不要になる稀なケース）\n極めて限定的ですが、以下の**すべての条件**を満たす場合のみ、申請が不要になる可能性があります。\n\n1.  **都市計画区域外**（および準都市計画区域外）であること。\n    *   いわゆる山間部や過疎地など、都市計画が定められていないエリアです。一般的な住宅街はほぼ「都市計画区域内」です。\n2.  **木造の小規模な建物**（4号建築物相当）であること。\n3.  **自治体の条例**で別途規制がないこと。\n\nもし、お住まいの地域が一般的な市街地や住宅地であれば、この例外には当てはまりません。\n\n### 注意点\n建築確認申請を行わずに12㎡の増築を行うと「違反建築物」となり、以下のリスクがあります。\n\n*   **融資が受けられない:** 将来、家の売却やリフォームローンを組む際に銀行の審査が通らなくなる可能性があります。\n*   **是正命令:** 行政から撤去や使用禁止を命じられる可能性があります。\n*   **建ぺい率・容積率:** 12㎡増えることで、敷地に対する建物の制限（建ぺい率・容積率）をオーバーしないか確認が必要です。\n\n### 推奨されるアクション\n12㎡の増築はDIYレベルではなく、法的な手続きが必要な工事です。\n*   **建築士（工務店やハウスメーカー）に相談する**\n*   **役所の建築指導課に問い合わせる**\n\nこれらを行い、正規の手順で進めることを強くお勧めします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:15.968921+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:39.236837+00:00"
+  }
+}

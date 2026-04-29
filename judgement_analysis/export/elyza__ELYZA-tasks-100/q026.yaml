@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 26,
+  "category": null,
+  "question": {
+    "original": "質問: 太郎くんはりんごを5つ持っています。彼はさらに2つのりんごの箱を買いました。1つの箱には3つのりんごが入っています。太郎くんは何個のりんごを持っていますか？",
+    "translation_en": "[Purpose: Question]\n\nQuestion: Taro has 5 apples. He bought 2 more boxes of apples. Each box contains 3 apples. How many apples does Taro have in total?  \n\n(Translation preserves the original meaning, structure, and details without adding commentary.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "問題を解いていきましょう。  \n\n**問題:**  \n太郎くんはりんごを5つ持っています。彼はさらに2つのりんごの箱を買いました。1つの箱には3つのりんごが入っています。太郎くんは何個のりんごを持っていますか？  \n\n**解答:**  \n1. 太郎くんが最初に持っているりんごの数：5個  \n2. 2つの箱を買ったので、箱の数：2箱  \n3. 1箱に3個のりんごが入っているので、追加で得られるりんごの数：2箱 × 3個/箱 = 6個  \n4. 最初の5個に追加した6個を足すと：5個 + 6個 = **11個**  \n\n**答え:** 太郎くんは**11個**のりんごを持っています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "回答は日本語で書かれており、問題文を踏まえて途中の計算過程（5個 + 2箱×3個 = 11個）も正しく示されています。  \n最終的な答え「11個」も正解例と一致しており、説明も丁寧でわかりやすく、減点対象もありません。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.477067+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "太郎くんは最初に5つのりんごを持っています。彼はさらに2つの箱を買い、1つの箱には3つのりんごが入っているので、2つの箱には合計6つのりんごが入っています。したがって、太郎くんは5 + 6 = 11個のりんごを持っています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:53.463266+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "太郎くんは合計で**11個**のりんごを持っています。\n\n計算は以下の通りです。\n\n1.  元々持っていたりんご：5個\n2.  買った箱に入っているりんご：2箱 × 3個 ＝ 6個\n3.  合計：5個 ＋ 6個 ＝ 11個",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:45.602495+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:32.668752+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 98,
+  "category": "建設",
+  "question": {
+    "original": "隣地斜線制限が定められていない用途地域を全てあげなさい",
+    "translation_en": "**[Purpose: Question]**  \n\nList all the zoning districts where no adjacent land slope restrictions are applied.  \n\n*(Note: The translation maintains the original meaning and structure while ensuring clarity for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "隣地斜線制限が定められていない用途地域は以下の三つの用途地域です。\n1. 第一種低層住居専用地域\n2. 第二種低層住居専用地域\n3. 田園住居地域",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe following three zoning districts do not have adjacent land setback restrictions:  \n1. First-Class Low-Rise Residential District  \n2. Second-Class Low-Rise Residential District  \n3. Rural Residential District  \n\n(Translation preserves the original meaning and technical terms while ensuring natural English phrasing for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 具体的な用途地域名を挙げている:2点\n- 全ての該当する用途地域を挙げている:5点\n- 該当しない用途地域をあげていない:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Specifically names a designated land use zone:** 2 points  \n- **Lists all applicable land use zones:** 5 points  \n- **Does not include non-applicable land use zones:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "日本の都市計画法における「隣地斜線制限」は、建物の高さや配置に関する規制の一つで、特に用途地域によって異なる場合があります。以下に、**隣地斜線制限が定められていない（または適用されない）用途地域**を挙げます。ただし、自治体ごとの条例や特別な規制がある場合があるため、具体的な確認が必要です。  \n\n### **隣地斜線制限が定められていない主な用途地域**  \n1. **第一種低層住居専用地域**（第一種低層住居専用地域）  \n   - 高さ制限（最大15m）や建ぺい率・容積率の制限はあるが、隣地斜線制限は通常適用されません。  \n\n2. **第二種低層住居専用地域**（第二種低層住居専用地域）  \n   - 第一種と同様で、高さ制限（最大12m）や建ぺい率・容積率の制限はあるが、隣地斜線制限は通常適用されません。  \n\n3. **準住居専用地域**  \n   - 商業施設や事務所を含む多様な利用が認められるため、高さ制限（最大15m）や建ぺい率・容積率の制限はあるものの、隣地斜線制限は通常適用されません。  \n\n4. **商業地域**（商業地域・準商業地域など）  \n   - 高層建築物を含む多様な利用が認められるため、高さ制限や建ぺい率・容積率の規制がある場合もありますが、隣地斜線制限は通常適用されません。  \n\n5. **工業地域**（工業地区など）  \n   - 工場や倉庫などを中心とした利用が認められるため、高さ制限や建ぺい率・容積率の規制がある場合もありますが、隣地斜線制limitionは通常適用されません。  \n\n### **注意点**  \n- 上記以外にも、一部の自治体では独自の条例で隣地斜線制limitionを設けている場合があります。  \n- 特定の地区では「景観地区」などの特別な区域設定により追加的な規制がある可能性があります。  \n- 具体的な確認には、各自治体の都市計画図面や条例を参照する必要があります。  \n\nもし特定の市区町村について確認したい場合は、その場所を教えていただければより詳細な情報を提供できます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 具体的な用途地域名を挙げている:2点  \n  - 複数の用途地域名を具体的に列挙している。\n- 全ての該当する用途地域を挙げている:3点  \n  - 第一種低層住居専用地域、第二種低層住居専用地域は挙げているが、田園住居地域を挙げていない。\n- 該当しない用途地域をあげていない:0点  \n  - 準住居地域、商業地域、工業地域など、実際には隣地斜線制限が定められている用途地域を多数含んでいる。\n- 自然な日本語である:1点  \n  - 一部「制limition」などの誤記はあるが、全体として意味は通る自然な日本語。\n\n[計算式]\n2 + 3 + 0 + 1 = 6\n\n[点数]\n6\n\nFINAL SCORE: 6",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:18.331081+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "マッチングアプリで顧客同士を効果的にマッチングするためには、以下のようなデータをJSON形式で保持することが考えられます。ここでは、基本的なプロフィール情報とマッチングに必要な属性を含んでいます。\n\n```json\n{\n  \"user_id\": \"U1234567890\",\n  \"basic_info\": {\n    \"nickname\": \"サンプルユーザー\",\n    \"gender\": \"male\", // male/female/other\n    \"age\": 28,\n    \"location\": {\n      \"city\": \"東京\",\n      \"prefecture\": \"東京都\",\n      \"latitude\": 35.6895,\n      \"longitude\": 139.6917\n    },\n    \"profile_picture_url\": \"/path/to/picture.jpg\"\n  },\n  \"matching_preferences\": {\n    \"target_gender\": [\"female\"], // male/female/both\n    \"age_range\": {\n      \"min_age\": 22,\n      \"max_age\": 35\n    },\n    \"distance_preference_km\": 50,\n    // その他の好み（例：趣味、職業、学歴など）\n    // 数値化可能な場合は数値で保持し、そうでない場合はカテゴリ化する\n    // 例: {\"hobbies\":[\"映画鑑賞\",\"旅行\"]}, {\"job_category\":\"クリエイティブ\"}\n    \n    // マッチングアルゴリズム用のスコアリング属性（例）\n    // ユーザーの行動データから算出されるものも含む\n    // (例: アクティブ度、返信率、プロフィール充実度など)\n    \n    // ユーザーが回答した質問やアンケート結果もここに含めることが可能\n  },\n  \n  // マッチング履歴や評価情報（オプション）\n  // (例: 過去のマッチング相手との相性スコアなど)\n  \n}\n```\n\n### ポイント解説:\n1. **基本情報**: 年齢・性別・居住地は必須。位置情報は緯度経度で保持することで距離計算が容易に。\n2. **マッチング希望条件**: 対象性別・年齢範囲・距離制限などを明確に。\n3. **拡張性**: 趣味や職業などの属性はカテゴリ化して配列やオブジェクトで管理。\n4. **行動データ連携**: アクティブ度や返信率などの動的スコアを追加可能。\n5. **プライバシー配慮**: 機密情報（本名・連絡先）は別テーブル管理し、必要最小限のみ公開。\n\nこのJSON構造は、マルチフェーズマッチング（初期フィルタリング→詳細スコアリング）にも対応可能です。必要に応じて属性を追加/削除してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:09.964311+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "マッチングアプリ（デーティングアプリ）において、アルゴリズムが適切にユーザー同士を引き合わせるためには、**「ユーザー自身の属性（Profile）」**と**「相手に求める条件（Preferences）」**、そして**「行動データ（Behavior）」**の3つの軸が必要です。\n\n以下に、実際の開発で想定される詳細なデータ構造のJSON例を作成しました。\n\n### マッチングアプリ用 ユーザーデータモデル (JSON)\n\nこのJSONは1人のユーザーを表しています。\n\n```json\n{\n  \"user_id\": \"u_88234910\",\n  \"created_at\": \"2023-10-01T12:00:00Z\",\n  \"last_active_at\": \"2023-10-27T09:30:00Z\",\n  \"account_status\": \"active\",\n  \"verification_status\": {\n    \"identity_verified\": true,\n    \"income_verified\": false\n  },\n  \"subscription_plan\": \"gold_member\",\n\n  \"profile\": {\n    \"basic_info\": {\n      \"nickname\": \"Kenji\",\n      \"gender\": \"male\",\n      \"birth_date\": \"1995-05-20\",\n      \"age\": 28,\n      \"location\": {\n        \"country\": \"JP\",\n        \"prefecture\": \"Tokyo\",\n        \"city\": \"Shibuya\",\n        \"geo_coordinates\": {\n          \"lat\": 35.658034,\n          \"lon\": 139.701636\n        }\n      }\n    },\n    \"appearance\": {\n      \"height_cm\": 175,\n      \"body_type\": \"athletic\", \n      \"blood_type\": \"A\",\n      \"hair_color\": \"black\",\n      \"photos\": [\n        {\n          \"url\": \"https://cdn.example.com/u_88234910/main.jpg\",\n          \"is_main\": true,\n          \"labels\": [\"face\", \"smile\", \"outdoor\"]\n        },\n        {\n          \"url\": \"https://cdn.example.com/u_88234910/sub1.jpg\",\n          \"is_main\": false,\n          \"labels\": [\"full_body\", \"suit\"]\n        }\n      ]\n    },\n    \"lifestyle\": {\n      \"occupation\": \"Software Engineer\",\n      \"industry\": \"IT\",\n      \"education_level\": \"bachelors_degree\",\n      \"school_name\": \"Waseda University\",\n      \"annual_income_range\": {\n        \"min\": 6000000,\n        \"max\": 8000000,\n        \"currency\": \"JPY\"\n      },\n      \"smoking_habit\": \"non_smoker\",\n      \"drinking_habit\": \"socially\",\n      \"living_situation\": \"alone\",\n      \"holiday_type\": \"saturday_sunday\"\n    },\n    \"relationship_status\": {\n      \"marital_history\": \"never_married\",\n      \"children\": \"none\",\n      \"desire_for_marriage\": \"within_2_years\",\n      \"desire_for_children\": \"wants_children\"\n    },\n    \"personality\": {\n      \"bio\": \"都内でエンジニアをしています。休日はカフェ巡りや映画鑑賞が好きです...\",\n      \"tags\": [\"movies\", \"coffee\", \"coding\", \"travel\", \"cats\"],\n      \"mbti\": \"INTJ\",\n      \"sociability\": \"introvert\"\n    }\n  },\n\n  \"matching_preferences\": {\n    \"target_gender\": [\"female\"],\n    \"age_range\": {\n      \"min\": 24,\n      \"max\": 32\n    },\n    \"distance_radius_km\": 50,\n    \"height_range_cm\": {\n      \"min\": 150,\n      \"max\": null\n    },\n    \"body_type_preference\": [\"slim\", \"average\", \"athletic\"],\n    \"smoking_preference\": [\"non_smoker\"],\n    \"drinking_preference\": [\"non_drinker\", \"socially\"],\n    \"marital_history_preference\": [\"never_married\", \"divorced\"],\n    \"children_preference\": [\"none\"],\n    \"income_preference_min\": null,\n    \"holiday_match\": true\n  },\n\n  \"behavioral_score\": {\n    \"response_rate\": 0.85,\n    \"average_response_time_minutes\": 45,\n    \"profile_completeness\": 90,\n    \"popularity_score\": 72.5,\n    \"swipe_history\": {\n      \"likes_sent\": 120,\n      \"dislikes_sent\": 300,\n      \"matches\": 15\n    }\n  }\n}\n```\n\n### データの解説とポイント\n\nマッチングロジックを構築する際、上記のデータは以下のように利用されます。\n\n1.  **基本フィルタリング (Hard Filters):**\n    *   `matching_preferences` 内のデータ（年齢、性別、居住地、距離）を使用して、絶対に対象外となるユーザーを検索クエリから除外します。\n    *   位置情報 (`geo_coordinates`) は、GeoHashや近傍検索を用いて「半径◯km以内」の計算に使用します。\n\n2.  **スコアリングとランキング (Soft Filters / Ranking):**\n    *   **共通点ブースト:** `profile.personality.tags`（趣味タグ）や `lifestyle.holiday_type`（休日）が一致する場合、スコアを加算して上位に表示します。\n    *   **人気度調整:** `behavioral_score.popularity_score`（いいねを受け取る頻度）が高いユーザーばかりが表示されないよう、または逆に人気会員を優先するなど、アルゴリズムの重み付けに使用します。\n    *   **アクティブ度:** `last_active_at` を見て、長期間ログインしていないユーザー（幽霊会員）を表示しないようにします。\n\n3.  **安全性と信頼性:**\n    *   `verification_status`（本人確認済みか、年収証明済みか）は、ユーザーに安心感を与えるバッジ表示に使用されるほか、未確認ユーザーの機能を制限するために使われます。\n\n4.  **センシティブなデータ:**\n    *   年収 (`annual_income_range`) や 婚姻歴 (`marital_history`)、子供の有無 (`children`) は、真剣な婚活アプリであればあるほど重要なマッチング要素となります。\n\nこのJSON構造をNoSQLデータベース（MongoDBやDynamoDBなど）や、検索エンジン（Elasticsearchなど）に格納し、クエリを投げることで高速なマッチングを実現します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:59.214034+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:11.441944+00:00"
+  }
+}

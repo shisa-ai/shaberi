@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 30,
+  "category": null,
+  "question": {
+    "original": "下の会話は音声認識を行った結果で誤りを含んでいる可能性があります。自然な会話に直してください。\n\nカスタマー: すいません。ちょっと投資信託を始めたいと思ってるんですけど、\nオペレータ: かしこまりました新宅空\nオペレータ: ですね\nオペレータ: お口座、\nオペレータ: ご予定お伺いしてもよろしいでしょうか？",
+    "translation_en": "**Customer:** Excuse me. I was thinking of starting an investment trust, but…  \n**Operator:** Understood, Mr. Kazutaka.  \n**Operator:** Yes.  \n**Operator:** Regarding your account, may I ask about your plans?  \n\n*(Note: The original text appears to be a transcription of a phone conversation with errors. The translation corrects these while maintaining natural conversational flow.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "カスタマー: すいません。投資信託を始めたいと思っています。  \n\nオペレータ: かしこまりました、新宅さんですね。  \nオペレータ: 投資信託のご案内をさせていただきます。  \nオペレータ: まずは、お口座をお伺いしてもよろしいでしょうか？  \nオペレータ: その後、ご予定についてお伺いしたいです。  \n\n（修正点)  \n1. 「新宅空」を「新宅さん」に修正（名前の誤認識が疑われるため）  \n2. 「お口座」を「口座」に修正（自然な表現）  \n3. 会話の流れを整理し、より自然な会話に調整  \n\n必要に応じて、さらに具体的な内容（投資目標やリスク許容度など）を追加することも可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答は、問題文の会話を越えて対話の続きを生成しており、「指示に従えていない」に該当します。また、「新宅空」を「新宅さん」と人名にしており、文脈上「投資信託」の誤認識と考えるのが自然であるため、修正の方向性も誤りです。  \nしたがって、採点基準により1点となります。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.564358+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "カスタマー: すいません。ちょっと投資信託を始めたいと思ってるんですけど、  \nオペレータ: かしこまりました。新規のお口座開設をご希望ですか？  \nオペレータ: それとも、既にお口座をお持ちで、何かお手続きが必要でしょうか？  \nオペレータ: まずは、お客様のご予定をお伺いしてもよろしいでしょうか？  \n\n（修正点）  \n1. 「新宅空」→「新規のお口座開設をご希望ですか？」（文脈に合う自然な表現に修正）  \n2. 「お口座」→「お口座開設」または「お手続き」（具体的な内容を明確化）  \n3. 会話の流れを整理し、顧客の意図を確認する丁寧な表現に変更。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:14.156188+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "音声認識の誤変換を修正し、文脈に沿った自然な会話に直しました。\n\n**修正後の会話**\n\n**カスタマー:** すいません。ちょっと投資信託を始めたいと思ってるんですけど、\n**オペレータ:** かしこまりました。**投資信託**ですね。\n**オペレータ:** **お口座開設の**ご予定をお伺いしてもよろしいでしょうか？\n（または：**お口座はお持ちでしょうか？**）\n\n---\n\n**修正のポイント**\n\n1.  **新宅空（しんたく そら） → 投資信託（とうし しんたく）**\n    *   「新宅（しんたく）」は「信託（しんたく）」の誤変換、「空（そら）」は「投資（とうし）」の聞き間違い、あるいは「〜ですね」につながる言葉の誤認識と考えられます。文脈から「投資信託」が適切です。\n\n2.  **お口座、ご予定 → お口座開設のご予定（または、お口座はお持ちでしょうか）**\n    *   単に「口座の予定」と聞くのは不自然です。投資信託を始めたいという申し出に対し、オペレータは「口座を新しく作る予定があるか（＝まだ持っていないか）」、あるいは単に「口座を持っているか」を確認しようとしています。音声認識で「ご予定」と出ているため、「（お口座）開設のご予定」と言った可能性が高いです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:26.540200+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:37.818297+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 7,
+  "category": null,
+  "question": {
+    "original": "こうして社会の秩序は政治家や教師や警官による物理的な強制のほか、メンバー個々人の自発的な意志にも支えられています。実際、学校の授業が自習になったときや、誰もいない場所で信号待ちをしているとき、誰も見ていない道端でタバコを捨てたくなったときなど、教室で大騒ぎをし、堂々とタバコを投げ捨てることが可能であるにもかかわらず、そうすることになんらかの躊躇を感じる人が大半だと思います。（<a>傍若無人にふるまう人もいますが。）\n\n上記の文章を読んで、<a> に入れるのに最も適したものを以下の選択肢から選び、その理由を答えなさい。\n\n- だから\n- また\n- むしろ\n- もちろん",
+    "translation_en": "**Translation:**  \n\n*\"In this way, social order is supported not only by the physical coercion of politicians, teachers, and police officers but also by the voluntary will of individual members. In fact, even when a classroom turns into a free-for-all, or when no one is around and one feels the urge to litter a cigarette butt on the side of the road while waiting at a deserted traffic light, most people would hesitate to do so despite having the opportunity. (Though some people do act with utter disregard.)*  \n\n*After reading the above passage, choose the most appropriate option to fill in <*a*>, and explain your reasoning.\"*  \n\n**Best Choice: \"Though\"**  \n\n**Reasoning:**  \nThe sentence contrasts the general tendency of people to follow social norms (hesitating to misbehave) with the existence of exceptions (those who act without regard). \"Though\" introduces this contrast effectively, acknowledging the minority who behave differently while emphasizing the majority's restraint. The other options do not fit the concessive relationship needed here.  \n\n- \"Therefore\" (だから) implies causation, which doesn’t fit.  \n- \"Also\" (また) suggests addition, not contrast.  \n- \"Rather\" (むしろ) implies a preference or correction, which is not the intent.  \n- \"Of course\" (もちろん) would contradict the main point by implying the behavior is expected.  \n\nThus, \"Though\" is the most natural and logical choice."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この文章の文脈から、最も適した選択肢は「**むしろ**」です。  \n\n理由：  \n文章は「物理的な強制以外にも、個人の自発的な意志が社会の秩序を支えている」という主張を続けており、その後に「傍若無人にふるまう人もいる」という例外を挙げています。ここで「あと」や「また」といった接続詞を使うよりも、「むしろ」（逆に）を使うことで、例外の存在が主張の強さを弱めるというニュアンスがより自然に伝わります。つまり、「物理的な強制以外にも自発的な意志が支えているのだが、傍若無人な人はその例外だ」という意味合いになります。  \n\n他の選択肢の問題点：  \n- 「だから」：主張と結びつけるためには不自然（例：「だから傍若無人にふるまう人もいる」）。  \n- 「また」：単なる追加説明として使われるため、文脈的には弱い。  \n- 「もちろん」：同意や確認を示すため、この文脈では不適切（例：「もちろん傍若無人にふるまう人もいる」）。  \n\nしたがって、「むしろ」が最も適しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "選択肢を外しており（正解は「もちろん」）、理由も「反論を予想してあらかじめ示している」という観点から外れているため不適切です。また、「『もちろん』は不適切」としており、正解の説明と逆の評価をしている点も誤りです。\n\n以上から、方向性も大きくずれているため低評価となります。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:47.962703+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "最も適した選択肢は **「もちろん」** です。  \n\n**理由**:  \n文章全体は、社会の秩序が物理的な強制だけでなく、個人の自発的な意志によって支えられていることを指摘しています。特に「誰も見ていない場所でも躊躇する人が大半」という記述の後で、例外を示すために「傍若無人にふるまう人もいますが」と続けています。この場合、「もちろん」は「当然ながら」「やはり」というニュアンスで、社会には常にルールを破る人々がいることを認めつつ、全体として秩序が保たれているという主張を補強します。  \n\n他の選択肢との比較:  \n- 「だから」：前の文から直接的な因果関係を示すため不自然。  \n- 「また」：単なる追加情報として弱く、本文の意図（例外の提示）を弱める。  \n- 「むしろ」：逆説的なニュアンスで、本文の流れと合わない。  \n\nしたがって、「もちろん」が最も自然な接続詞となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:17.489013+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **もちろん** です。\n\n**理由：**\n\nこの文章の論理構成は以下のようになっています。\n\n1.  **主張（前段）：** 社会の秩序は個人の自発的な意志（良心やためらい）によって支えられており、「大半」の人は誰も見ていなくても悪いことをすることに躊躇する。\n2.  **補足（括弧内）：** しかし、全員がそうであるわけではなく、例外的にルールを守らない人も存在する。\n\n括弧内の文章は、前段の「大半の人は～」という主張に対して、読者が抱くであろう「でも、ルールを守らない人もいるじゃないか」という反論をあらかじめ想定し、「それは分かっている（当然である）」と認めるための**譲歩**の役割を果たしています。\n\nしたがって、例外の存在を当然の事実として認める接続詞である「もちろん」が最も適切です。\n\n他の選択肢が不適切な理由は以下の通りです。\n*   **だから：** 前の文が原因で、後の文が結果となる因果関係を表しますが、ここでは因果関係はありません。\n*   **また：** 並列を表しますが、ここでは「大半の傾向」に対する「例外」を述べているため、単なる並列ではありません。\n*   **むしろ：** 前の文を否定して、後の文の方が適切であると述べる場合に使い​​ますが、ここでは前の文（大半の人の行動）を否定しているわけではありません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:56.930024+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:01.103377+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 71,
+  "category": null,
+  "question": {
+    "original": "仮説: 2人の男女が、赤い薔薇を眺めています。\nある前提からこの仮説が導けるかを1~5で評価すると、3になります。どのような前提でしょうか？",
+    "translation_en": "**[Purpose: Question]**  \n\n**Hypothesis:** Two men and women are gazing at a red rose.  \n**Evaluation:** If we were to rate how well this hypothesis can be derived from a given premise on a scale of 1 to 5, it would be a **3**. What kind of premise would lead to this evaluation?  \n\n*(Note: The translation maintains the original structure and meaning while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この仮説（2人の男女が赤い薔薇を眺めています）を導ける前提として、3に相当する評価は以下のような状況を想定しています。  \n\n**前提の例:**  \n1. **公園や庭園で花が咲いている**  \n2. **2人が一緒にいる（友人、恋人、家族など）**  \n3. **赤い薔薇が目立つ場所にある**  \n\nこれらの前提から、2人が赤い薔薇を眺めているという仮説は合理的に導けます。ただし、評価が3であることから、必ずしも「必然的に導ける」というよりは、「可能性が高い」という程度の関連性があると考えられます。  \n\n例えば、公園で2人が一緒にいる場合でも、必ずしも赤い薔薇を見ているとは限らないため、完全な確実性はない点に注意が必要です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "この回答で挙げられている前提は、\n\n- 「公園や庭園で花が咲いている」\n- 「2人が一緒にいる」\n- 「赤い薔薇が目立つ場所にある」\n\nといった「状況の説明」にとどまっており、「2人の男女が赤い薔薇を眺めている」という仮説がそこから“ある程度”導けるとは言いにくいです。  \n「2人が花を見ている」「カップルが薔薇を眺めている」など、仮説にもう少し近い内容が前提に含まれている必要があります。\n\nしたがって、方向性は近いものの、問題固有基準でいう「仮説があまり導けない場合」に相当します。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.833243+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この仮説（2人の男女が赤い薔薇を眺めている）が評価3（中程度の可能性）になるような前提は、以下のようなものが考えられます。  \n\n### **前提例**  \n1. **「2人が庭園でデートをしている」**  \n   - 薔薇はロマンチックなシンボルであり、デートの場面で見られる可能性が高い。ただし、必ずしも赤い薔薇であるとは限らないため評価3。  \n\n2. **「バレンタインデーにカップルが花屋にいる」**  \n   - バレンタインデーでは赤い薔薇が人気だが、他の色や花も選ばれるため確実性は低い。  \n\n3. **「写真撮影のために男女が赤い花を探している」**  \n   - 薔薇は一般的な選択肢だが、他の赤い花（チューリップなど）も候補に上がるため評価3。  \n\n4. **「恋人同士が植物園で散歩中だ」**  \n   - 植物園には多くの種類の植物があるため、必ずしも赤い薔薇を見ているとは限らない。  \n\n### **評価理由**  \n- 薔薇は男女間のロマンスと関連付けられることが多い。  \n- しかし、「赤い」という具体的な色指定や、「眺めている」という行動まで特定するには追加情報が必要。  \n- したがって、「あり得るシナリオだが確実ではない」という評価になる。  \n\nこのように、中程度の可能性（評価3）になる前提は、「男女とロマンス関連の状況」を示すもので、さらに具体的な条件（例：赤い花を指している会話）がない場合です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:25.030319+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "評価「3（中立／どちらとも言えない）」となる前提文の例として、以下のようなものが考えられます。\n\n**前提：「男女が、花屋の店先で色とりどりの花を眺めています。」**\n\n### 解説\nこの前提から仮説（2人の男女が、赤い薔薇を眺めています）を導く際の論理は以下の通りです。\n\n1.  **主語の一致:** 「男女」と「2人の男女」は一致しています。\n2.  **動作の一致:** 「眺めています」という動作は一致しています。\n3.  **対象の包含関係（ここがポイント）:** 前提では「色とりどりの花」と言っています。赤い薔薇は「花」の一種であり、「色とりどり」の中に赤が含まれる可能性は高いため、彼らが見ているのが赤い薔薇である**可能性はあります**。しかし、彼らが見ているのはチューリップかもしれないし、ひまわりかもしれません。\n\nしたがって、この前提だけでは仮説が「正しい（5）」とも「間違いである（1）」とも断定できないため、評価は**3（中立）**となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:59.545113+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:51.374534+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 77,
+  "category": null,
+  "question": {
+    "original": "次の検索クエリに最も相応しいページのタイトルを選んでください。\n\n検索クエリ: 竜のあごの下にある鱗のことで、目上の人を怒らせた時にここに触れると表現されるのは何でしょう?\n\n1. 竜の生態について\n2. 人を怒らせた時の対処方法\n3. 慣用表現一覧: 怒り・悲しみ",
+    "translation_en": "**[Purpose: question]**  \n\n**Select the most appropriate page title for the following search query:**  \n\n**Search Query:** What is the expression referring to touching the scales under a dragon's jaw when angering a superior?  \n\n1. About Dragon Ecology  \n2. How to Deal with People When They Are Angry  \n3. List of Idiomatic Expressions: Anger & Sadness  \n\n*(Note: The correct answer is likely **3**, as the query refers to a specific idiom.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "最も相応しいページタイトルは、  \n\n**3. 慣用表現一覧: 怒り・悲しみ**  \n\nです。  \n\n理由：  \n検索クエリは「竜のあごの下にある鱗」が「目上の人を怒らせた時に触れる」という慣用表現について尋ねています。これは日本の伝統的な言い回し（例：「竜のあごを掴む」）であり、怒りの表現に関連しています。したがって、慣用表現一覧が最も適切な選択肢です。  \n\n他の選択肢は以下の理由で不適切です。  \n- **1. 竜の生態について**：竜の生態ではなく、慣用表現に焦点が当てられています。  \n- **2. 人を怒らせた時の対処方法**：対処法ではなく、怒りの表現そのものを尋ねています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "5\n\n説明：\n- 回答は正解例と同じく「3. 慣用表現一覧: 怒り・悲しみ」を選択しており、問題固有の採点基準により満点（5点）となる。\n- 日本語も自然であり、減点要素はない。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.592227+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "最も相応しいページのタイトルは、  \n\n**3. 慣用表現一覧: 怒り・悲しみ**  \n\nです。  \n\n### 理由：\n- 検索クエリは「竜のあごの下にある鱗」という比喩表現（慣用句）について尋ねており、「目上の人を怒らせた時にここに触れる」という文脈が含まれています。  \n- この表現は「逆鱗（ぎゃくりん）」という慣用句であり、怒りや怒りの対象に関する慣用表現の一種です。  \n- したがって、**3. 慣用表現一覧: 怒り・悲しみ** が最も関連性が高く、適切な回答を提供できるページです。  \n\n他の選択肢は以下の理由で不適切です：  \n- **1. 竜の生態について**：生物学的な情報に偏り、比喩的な意味合いが薄い。  \n- **2. 人を怒らせた時の対処方法**：解決策に焦点を当てており、特定の慣用句の説明には向かない。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:17.668480+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "この検索クエリに最も相応しいページのタイトルは **3. 慣用表現一覧: 怒り・悲しみ** です。\n\n**理由:**\n検索クエリの内容は、「逆鱗（げきりん）」および「逆鱗に触れる」という慣用句の意味と由来を問うものです。この言葉は「激しい怒り」を表す際によく使われるため、怒りに関する慣用表現をまとめたページに記載されている可能性が最も高いです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:46.280978+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:58.402782+00:00"
+  }
+}

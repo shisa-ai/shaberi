@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 104,
+  "category": "ビジネス",
+  "question": {
+    "original": "会社を設立した際に就業規則を作成する必要はありますか？",
+    "translation_en": "[Purpose: Question]  \n\nIs it necessary to create a set of employment rules when establishing a company?  \n\n(Translation preserves the original meaning and formality while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "労働基準法第89条によると常時10人以上の労働者を雇用している会社は必ず就業規則を作成し、労働基準監督署長に届け出なければなりません。しかし、会社を設立した直後に10人以上雇っていることは稀だと考えられるため大体の場合においては就業規則を作成必要はないと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nAccording to Article 89 of the Labor Standards Act, companies employing 10 or more workers on a regular basis must create and submit a set of employment rules to the Labor Standards Inspection Office. However, since it is rare for a company to employ 10 or more workers immediately after establishment, in most cases, there is no need to create employment rules at that time.  \n\n*(Note: The translation preserves the original meaning and details while ensuring natural and clear English suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 就業規則が必要ないことを示している:4点\n- 就業規則が人数に依存することを示している:1点\n- 会社設立時に10人も労働者を雇用していないことを仮定している:1点\n- 労働基準法第89条によることを示している:1点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates that a labor rules and regulations (就業規則) is not required:** 4 points  \n- **Indicates that the need for a labor rules and regulations depends on the number of employees:** 1 point  \n- **Assumes that the company did not employ 10 or more workers at the time of establishment:** 1 point  \n- **Indicates that this is based on Article 89 of the Labor Standards Act (労働基準法第89条):** 1 point  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "はい、会社を設立した際に就業規則を作成する必要があります。日本の労働基準法では、企業が10人以上の従業員を雇用する場合、就業規則を作成し、労働者に提示することが義務付けられています（労働基準法第89条）。ただし、従業員が1人未満の場合は就業規則は作成不要ですが、労働条件を明確にするために推奨されます。\n\n### 就業規則作成のポイント\n1. **内容**  \n   - 労働時間、休憩時間、休日  \n   - 賃金・賃金計算方法  \n   - 退職・解雇に関する規定  \n   - その他労働条件（賞与、残業代など）  \n\n2. **法的要件**  \n   - 労働基準法や関連法令（男女雇用機会均等法など）に適合していること。  \n\n3. **提出手続き**  \n   - 労働基準監督署への届出が必要（10人以上の場合）。  \n\n4. **例外**  \n   - 1人未満の場合は任意ですが、小規模事業者向けの簡易的なルール作成も可能です。  \n\n### 注意点\n- 就業規則は「書面」で作成し、労働者に配布する必要があります。  \n- 内容を変更する場合は、その旨を労働者に通知する義務があります。  \n\n詳細は厚生労働省のウェブサイト（[https://jsite.mhlw.go.jp/iwate-roudoukyoku/var/rev0/0116/6898/shugyoukiso.pdf](https://jsite.mhlw.go.jp/iwate-roudoukyoku/var/rev0/0116/6898/shugyoukiso.pdf)）で確認できます。専門家（弁護士や社会保険労務士）のアドバイスもおすすめです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 就業規則が必要ないことを示している:0点  \n  - 冒頭で「必要があります」と明言しており、設問に対して逆の回答をしている。\n- 就業規則が人数に依存することを示している:1点  \n  - 「企業が10人以上の従業員を雇用する場合、就業規則を作成…義務付け」と記載。\n- 会社設立時に10人も労働者を雇用していないことを仮定している:0点  \n  - 設立直後の一般的な人数についての言及・仮定がない。\n- 労働基準法第89条によることを示している:1点  \n  - 「労働基準法第89条」と明示している。\n- 説明が具体的でわかりやすい:2点  \n  - 就業規則の内容・手続きなどを具体的に説明しており、理解しやすい。\n- 自然な日本語である:1点  \n  - 日本語として自然で文法的にも問題ない。\n\n[計算式]\n0 + 1 + 0 + 1 + 2 + 1 = 5\n\n[点数]\n5\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:16.762409+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "容積率は、建築物の延床面積（各階の床面積の合計）を敷地面積で割った値です。  \n\nこの場合、  \n- 敷地面積：150平方メートル  \n- 1階床面積：70平方メートル  \n- 2階床面積：50平方メートル  \n\n延床面積 = 1階 + 2階 = 70 + 50 = **120平方メートル**  \n\n容積率 = 延床面積 ÷ 敷地面積 = 120 ÷ 150 = **0.8**  \n\nしたがって、容積率は **0.8（80%）** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:44.818588+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "容積率は **80%** です。\n\n計算式は以下の通りです。\n\n1.  **延べ床面積（建物の床面積の合計）を計算します**\n    $70\\text{m}^2$（1階） $+ 50\\text{m}^2$（2階） $= 120\\text{m}^2$\n\n2.  **容積率を計算します**\n    （延べ床面積 $\\div$ 敷地面積） $\\times 100$\n    $(120 \\div 150) \\times 100 = 80\\%$",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:41.377428+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:35.916490+00:00"
+  }
+}

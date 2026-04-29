@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 68,
+  "category": null,
+  "question": {
+    "original": "Q：私の目は黒く、髪は明るい黄色で、足元はしっかりと地面に根ざしています。私は太陽の光を顔に浴びるのが好きです。私の正体は何でしょう？\n",
+    "translation_en": "[Purpose: question]  \n\nQ: My eyes are black, my hair is bright yellow, and my feet are firmly rooted in the ground. I love basking in the sunlight on my face. What am I?  \n\n(Translation preserves the poetic and descriptive nature of the original Japanese while maintaining clarity for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "あなたの説明から、以下のような特徴が読み取れます：  \n\n1. **黒い目** → 植物や動物の特徴（例：花の蕾や昆虫の目）  \n2. **明るい黄色の髪** → 植物の花や果実（例：ひまわりの花やバナナ）  \n3. **足元が地面に根ざしている** → 植物（木や草）の特徴  \n4. **太陽の光を浴びるのが好き** → 光合成を行う植物（日向に生える植物）  \n\nこれらの要素を総合すると、**ひまわりの花**が最も適していると考えられます。ひまわりは黒い中心部（目）、明るい黄色の花びら、そして太陽に向かって伸びる姿から、あなたの説明に一致します。  \n\nもし他の解釈を想定している場合は、さらに詳しく教えていただければ調整できます！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "この回答は、問題文の特徴を整理し、「ひまわりの花」と正しく特定できています。  \n擬人法も理解しており、日本語も自然で、説明も分かりやすく有用です。  \n採点基準に従うと、「ひまわりであると正解している場合: 5点」に該当します。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.872583+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "答え：あなたは「向日葵」です。向日葵は黒い種（目）と明るい黄色の花びら（髪）を持ち、太陽の光を追いかけて顔を向ける習性があります。また、根はしっかりと地面に張り付いています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:52.987830+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **ヒマワリ（向日葵）** です。\n\n理由は以下の通りです。\n*   **黒い目：** 花の中心部分（種ができる部分）が黒や茶色であることを指しています。\n*   **明るい黄色の髪：** 黄色い花びらのことです。\n*   **地面に根ざしている：** 植物であることを表しています。\n*   **太陽の光を顔に浴びるのが好き：** ヒマワリが太陽の動きに合わせて花の向きを変える性質（向日性）や、その名前の由来を表しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:47.458096+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:47.505036+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 60,
+  "category": null,
+  "question": {
+    "original": "比喩を用いた文1が与えられます。文2が文1の正しい言い換えでしょうか？はいかいいえで答えてください。\n\n文1: この車はすごくガソリンを食う\n文2: この車は美味しそうにガソリンを食べる",
+    "translation_en": "**No.**  \n\nWhile both sentences use the metaphor of \"eating gas,\" Sentence 2 (\"This car eats gas deliciously\") incorrectly implies the car enjoys or benefits from consuming fuel, which contradicts the intended meaning of Sentence 1 (\"This car guzzles a lot of gas\"), which emphasizes high fuel consumption. The correct paraphrase should retain the negative connotation of excessive fuel use.  \n\n*(Note: The translation preserves the original question's structure and intent while ensuring natural English phrasing.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "いいえ、文2は文1の正しい言い換えではありません。  \n\n**理由:**  \n- 文1は「ガソリンを食う」という比喩を用いて、車が燃費が悪いことを表現しています。  \n- 文2は「美味しそうにガソリンを食べる」という表現で、比喩の意図（燃費の悪さ）を損ねています。  \n  - 「美味しそうに」はポジティブなニュアンスを含み、燃費の悪さとは矛盾します。  \n\nしたがって、文2は文1の意味や比喩的な効果を正しく伝えていません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "5\n\n理由・評価:\n- 回答は「いいえ」としており、正解例と一致している。\n- 文1の比喩（燃費が悪い＝ガソリンを多く消費する）を正しく説明している。\n- 文2が「美味しそうに」という語を加えることで、元の比喩の意味・ニュアンスを変えてしまっている点を的確に指摘している。\n- 日本語も自然で、指示（はい/いいえ＋理由）にも従っている。\n\nよって満点評価とする。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.861361+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "いいえ  \n\n文1は「この車はガソリンを大量に消費する」という意味の比喩表現ですが、文2は文字通り「食べる」と解釈され、元の意図（燃料消費の多さ）が失われています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:50.538773+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "いいえ",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:43.744476+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:34.232965+00:00"
+  }
+}

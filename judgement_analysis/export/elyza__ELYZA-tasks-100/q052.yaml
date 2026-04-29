@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 52,
+  "category": null,
+  "question": {
+    "original": "架空の言語「エクル語」と日本語の関係をいくつか示します。\n1.\nエクル語: ダスインガ ウタ\n日本語: 彼が水を飲む\n2.\nエクル語: ダストン ウタ\n日本語: 彼は水を運んだ\n3.\nエクル語: ダスデル\n日本語: 彼は走った\n4.\nエクル語: クルデル クルインガ ウタ\n日本語: 子供が走って水を飲んだ\n\nここから推測して以下のエクル語を日本語に直してください。\n5.\nエクル語: クルデル クルトン",
+    "translation_en": "**Japanese Translation:**  \n**エクル語: クルデル クルトン**  \n**日本語: 子供は走った**  \n\n*(Alternatively, if the context implies a completed action: \"子供が走った\" or \"子供は走っていた\" depending on nuance.)*  \n\n**Key Notes:**  \n- \"クルデル\" = \"子供は\" (child + past tense marker)  \n- \"クルトン\" = \"走った\" (ran, past tense)  \n- The structure mirrors example 3 (\"ダスデル\" = \"彼は走った\") and 2 (\"ダストン\" = \"彼は運んだ\").  \n\n*(No additional commentary as per instructions.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "エクル語の文法パターンから推測すると、  \n「クルデル クルトン」は日本語で「子供が歩いた」と訳されます。  \n\n理由：  \n- 「クルデル」は「子供」を意味する単語（例1・4参照）。  \n- 「クルトン」は動詞の過去形で、「走る」の過去形「デル」を変化させたものと考えられます（例3の「ダスデル」に類似）。  \n- エクル語では動詞の活用が簡潔なため、「歩く」という別の動作を表すためには、異なる変化が必要です。  \n\nしたがって、**日本語訳は「子供が歩いた」**となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "回答は「子供が歩いた」であり、\n\n- A（子供が）：含まれている\n- B（走った）：欠落 → -2点\n- C（運んだ）：欠落 → -2点\n\nさらに、「歩いた」という余計な要素が入っており、これは走る／運ぶと対応しない動作なので問題固有の基準上「余計な要素」とみなせるため -2点。\n\n減点合計は -6点だが、最低点は1点なので、方向性は一部合っているものの、主要要素を外しているため総合評価は2点相当と判断できる。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.023276+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "与えられたエクル語と日本語の対応関係から、以下の規則性が見られます。  \n\n1. **「ダス」** は主語「彼」を表す（例: ダスインガ → 彼が、ダストン → 彼は）。  \n2. **「デル」** は動詞「走る」を表す（例: ダスデル → 彼は走った）。  \n3. **「トン」** は動詞「運ぶ」を表す（例: ダストン → 彼は運んだ）。  \n4. **「インガ」** は動詞「飲む」を表す（例: ダスインガ → 彼が飲む）。  \n5. **「クル」** は主語「子供」を表す（例: クルデル → 子供が走って）。  \n\nこれらの規則に基づき、  \n**エクル語: クルデル クルトン**  \nを日本語に直すと、  \n**日本語: 子供が走って運んだ**  \nとなります。  \n\n（解説）  \n- 「クルデル」は主語+動詞で「子供が走って」。  \n- 「クルトン」は主語+動詞で「子供が運んだ」。  \n- 両者を合わせると、「子供が走って運んだ」となる。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:18.835871+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提示されたエクル語と日本語の対応関係から、単語と文法の規則を以下のように推測できます。\n\n**単語の分析:**\n*   **Das-**: 彼（主語の接頭辞）\n*   **Kuru-**: 子供（主語の接頭辞）\n*   **-uinga**: 飲む（動詞の接尾辞）\n*   **-ton**: 運ぶ／運んだ（動詞の接尾辞）\n*   **-deru**: 走る／走った（動詞の接尾辞）\n*   **uta**: 水（目的語）\n\n**文法構造の分析:**\n*   例文4「クルデル クルインガ ウタ」→「子供が走って水を飲んだ」\n    *   **Kuruderu**: 子供が走って（Kuru- + -deru）\n    *   **Kuruinga**: 子供が飲んだ（Kuru- + -inga）\n    *   **uta**: 水を\n    *   このことから、動詞が連続する場合（クルデル、クルインガ）、動作の連続（～して、～した）を表すことがわかります。\n\n**問題の解読:**\n5. **エクル語: クルデル クルトン**\n\n*   **Kuruderu**: 子供が走って（Kuru- + -deru）\n*   **Kuruton**: 子供が運んだ（Kuru- + -ton）※例文2「ダストン（彼は運んだ）」より推測\n\nこれらを繋げると、以下のようになります。\n\n**日本語訳:**\n**子供が走って運んだ**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:07.682569+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:01.082994+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 60,
+  "category": "抽出",
+  "question": {
+    "original": "以下の文章をもとに問題に答えよ\n### 文章\n狂犬病（Rabies）とは\n狂犬病は世界中で年間5万人以上が死亡する人獣共通感染症です。発症するとほぼ100%死亡します。狂犬病はほとんど全ての哺乳動物から感染する可能性があります。感染症法では4類に分類されています。\nどうやってうつる\nウイルスは感染動物の唾液に含まれます。哺乳動物に咬まれたり、傷口、目や口の粘膜をなめられたりすることで神経系の細胞に感染します。動物は前足をなめるので、ウイルスの付いたツメで引っかかれても感染する可能性があります。\n症状\nウイルスが直接中枢神経を侵した場合、10日目あたりから、発熱、頭痛、全身倦怠や嘔吐などを起こします。一方、末梢の神経線維に感染した場合には、ウイルスは非常にゆっくりと脳へ向かうので、発症まで一般的に1カ月～3カ月程度の期間を要します。極めてまれに発症までに数年の年月を要することもあります。発症後は、ものを飲み込みづらくなり、液体を飲もうとすると筋肉がけいれんするため、水を恐れるようになります(恐水症)。また、風をおそれるようになる恐風症状も特徴的です。やがて昏睡状態となり、呼吸が麻痺し死亡します。\n治療\n哺乳動物に咬まれたときには、できるだけ早く病院を受診してください。\n同時に、狂犬病のおそれのある動物に咬まれたら、傷口を石鹸と水（できれば流水）でよく洗い、消毒液で消毒します。環境中では直ぐに感染力が弱まるウイルスです。粘膜から感染する可能性があるので、決して傷口を口で吸いださないでください。\n医師はWHOが定めた基準に沿ってワクチンの必要性を判断します。咬まれたときの状況、咬まれた後の処置の仕方などをできるだけ詳しく説明してください。ワクチン接種が必要と判断されたときには、医師の指示に従ってワクチンを接種してください。接種は複数回を受ける必要があります。\n感染後の潜伏期間に感染を特定する検査法はなく、症状が発現したときの確立された治療法もありません。\n日本でも、2006年に狂犬病の輸入感染例がありました。しかし、その前の発生例は1970年です。日本に狂犬病を診た医師はほとんどいないので、診断と治療が遅れる可能性があります。そのためにもワクチン接種は大切です。\n狂犬病の発生がない日本では、常備されているワクチンは限られています。接種対象者が予めワクチン接種が可能であることを病院に確認し、病院の指示に従って受診してください。\n### 問題\n狂犬病の進行がどのようなものか説明してください。",
+    "translation_en": "### Explanation of Rabies Progression  \n\nRabies is a zoonotic disease that causes over 50,000 deaths worldwide each year. Once symptoms appear, the fatality rate is nearly 100%. The virus can infect almost all mammals and is classified as a Category 4 infectious disease under the Infectious Diseases Control Law.  \n\n**Transmission:**  \nThe rabies virus is present in the saliva of infected animals. It spreads to nerve cells through bites, scratches, or contact with mucous membranes (eyes, mouth) of mammals. Even scratches from contaminated claws (e.g., an animal licking its paws) can transmit the virus.  \n\n**Symptoms:**  \n- If the virus directly invades the central nervous system, symptoms (fever, headache, fatigue, vomiting) appear around 10 days later.  \n- If it infects peripheral nerves, the virus slowly travels to the brain, with an incubation period of 1–3 months (rarely years).  \n- After onset, difficulty swallowing and muscle spasms when drinking liquids (hydrophobia) develop.  \n- A characteristic symptom is aerophobia (fear of air drafts).  \n- The disease progresses to coma, respiratory paralysis, and death.  \n\n**Treatment:**  \n- Seek medical attention immediately after a mammal bite.  \n- Wash the wound thoroughly with soap and water (preferably running water) and disinfect.  \n- The virus loses infectivity quickly in the environment, but mucosal contact is possible—never suck the wound.  \n- Doctors assess vaccine need based on WHO guidelines, considering bite circumstances and wound care.  \n- Multiple vaccine doses are required if administered.  \n- No tests detect infection during the incubation period, and no effective treatment exists after symptoms appear.  \n\n**Japan-Specific Notes:**  \n- Japan has no endemic rabies, but imported cases (e.g., 2006) occur. The last prior case was in 1970.  \n- Few Japanese doctors have seen rabies, risking delayed diagnosis/treatment—vaccination is crucial.  \n- Limited vaccine stockpiles exist; confirm hospital availability before travel.  \n\n**Summary:** Rabies progresses from incubation (1–3 months) to neurological symptoms (hydrophobia, aerophobia) and fatal paralysis. Early vaccination after exposure is the only effective prevention."
+  },
+  "answer": {
+    "gold_original": "ウイルスが直接中枢神経を侵した場合、10日目あたりから、発熱、頭痛、全身倦怠や嘔吐などを起こします。一方、末梢の神経線維に感染した場合には、ウイルスは非常にゆっくりと脳へ向かうので、発症まで一般的に1カ月～3カ月程度の期間を要します。極めてまれに発症までに数年の年月を要することもあります。発症後は、ものを飲み込みづらくなり、液体を飲もうとすると筋肉がけいれんするため、水を恐れるようになります(恐水症)。また、風をおそれるようになる恐風症状も特徴的です。やがて昏睡状態となり、呼吸が麻痺し死亡します。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nWhen a virus directly invades the central nervous system, symptoms such as fever, headache, general fatigue, and vomiting typically appear around the 10th day. In contrast, if the virus infects peripheral nerve fibers, it travels to the brain very slowly, and the onset of symptoms generally takes 1 to 3 months. In extremely rare cases, it may take several years for symptoms to develop. After onset, patients find it difficult to swallow, and muscle spasms occur when attempting to drink liquids, leading to a fear of water (hydrophobia). A characteristic symptom is also a fear of drafts (aerophobia). Eventually, the patient enters a comatose state, respiratory paralysis occurs, and death ensues.  \n\n(Translation preserves the original meaning, medical details, and natural phrasing suitable for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- ウイルスが直接中枢神経を侵した場合の症状について書かれている:2点\n- ウイルスが末梢の神経線維に感染した場合の症状について書かれている:2点\n- 発症に1~3ヶ月かかることを示している:2点\n- 発症後の症状を示している:2点\n- 進行過程の順序が正確である:1点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **2 points** – Describes symptoms when the virus directly invades the central nervous system.  \n- **2 points** – Describes symptoms when the virus infects peripheral nerve fibers.  \n- **2 points** – Indicates an incubation period of 1–3 months.  \n- **2 points** – Describes symptoms after onset.  \n- **1 point** – The progression order is accurate.  \n- **1 point** – Written in natural Japanese.  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "狂犬病の進行は、ウイルスが神経系に侵入し、徐々に中枢神経系を破壊していくことで特徴づけられます。以下にその進行段階を説明します。  \n\n1. **感染初期**  \n   - ウイルスは咬傷や粘膜からの侵入を通じて神経細胞に感染し、まず末梢の神経線維に拡散します。  \n   - この段階では症状が現れず、ウイルスはゆっくりと脳へと移動します。  \n\n2. **潜伏期間**  \n   - ウイルスが脳まで到達するまでの期間は、通常1～3ヶ月（まれに数年）かかります。この間も症状はほとんど現れません。  \n\n3. **発症前兆**  \n   - 潜伏期間終了後、ウイルスが中枢神経系を破壊すると、発熱・頭痛・倦怠感・嘔吐などの全身症状が出現します。  \n\n4. **特異的な症状**  \n   - ウイルスの進行により、「恐水症」（飲み込みづらさと筋肉けいれん）や「恐風症」（風をおそれる行動）が現れます。これはウイルスが顔面神経や脊髄を侵しているためです。  \n\n5. **末期**  \n   - 症状が悪化し、昏睡状態となり呼吸麻痺を起こすことで死亡につながります。  \n\n狂犬病の進行は非常に急速で致死率が99%以上と高いため、早期診断と治療（ワクチン接種など）が極めて重要です。日本では発生例が稀ですが、輸入感染のリスクがあるため予防接種の検討も推奨されています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- ウイルスが直接中枢神経を侵した場合の症状について書かれている:0点  \n  - 「直接中枢神経を侵した場合」という区別や「10日目あたりから」の記述がなく、文章からは読み取れない。\n- ウイルスが末梢の神経線維に感染した場合の症状について書かれている:1点  \n  - 末梢神経から脳へゆっくり移動する説明はあるが、「その場合の症状」という形では具体的に書かれていない。\n- 発症に1~3ヶ月かかることを示している:2点  \n  - 「通常1～3ヶ月（まれに数年）かかります」と明記している。\n- 発症後の症状を示している:2点  \n  - 発熱・頭痛・倦怠感・嘔吐、恐水症、恐風症、昏睡、呼吸麻痺・死亡まで具体的に述べている。\n- 進行過程の順序が正確である:1点  \n  - 感染→潜伏→前兆→特異的症状→末期と、文章の流れに沿った正しい順序で説明している。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語で書かれている。\n\n[計算式]\n0 + 1 + 2 + 2 + 1 + 1 = 7\n\n[点数]\n7\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.918870+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "狂犬病の進行は、感染経路やウイルスの侵入部位によって大きく異なります。以下に詳細を説明します。  \n\n### **1. 感染初期（潜伏期間）**  \n- **直接中枢神経への侵入**：  \n  動物の咬傷などでウイルスが直接脳や脊髄に近い場所（例：顔面や首）に侵入した場合、**10日程度**で発症することがあります。  \n  - 症状：発熱、頭痛、全身倦怠、嘔吐などが現れます。  \n\n- **末梢神経からの侵入**：  \n  手足など末梢部から感染した場合、ウイルスは神経線維を通じてゆっくりと脳へ移動するため、**1～3カ月（まれに数年）**の潜伏期間があります。  \n\n### **2. 発症期（神経症状の出現）**  \n- **初期症状**：  \n  - 発熱・頭痛・倦怠感が続き、徐々に神経障害が現れます。  \n  - 咬傷部位周辺の知覚異常（痺れ・痛み）や筋肉けいれんが起こることがあります。  \n\n- **特徴的な症状**：  \n  - **恐水症（水恐怖）**：飲み込みづらさから水を飲もうとすると喉の筋肉がけいれんし、水を恐れるようになります。  \n  - **恐風症（風恐怖）**：風音や空気の動きに対して過剰反応を示すことがあります。  \n\n### **3. 終末期（致死的進行）**  \n- 症状が悪化し、意識混濁→昏睡状態へと移行します。  \n- 呼吸筋麻痺により呼吸困難となり、最終的に死亡します（発症後数日～2週間程度）。  \n\n### **重要なポイント**  \n- 潜伏期間中は無症状ですが、一度発症するとほぼ100%死亡するため、咬傷時の早期治療とワクチン接種が極めて重要です。  \n- 日本では狂犬病患者が少ないため、医師による診断・治療の遅れリスクがあることに注意しましょう。  \n\nこのように狂犬病は潜伏期間後、一度発症すると急速に重篤化する疾患です。予防策としてワクチン接種と咬傷時の適切な処置が不可欠です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:00.710861+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提供された文章に基づき、狂犬病の進行を時系列で説明すると以下のようになります。\n\n1.  **感染と潜伏期間**\n    *   動物に咬まれたり、傷口や粘膜をなめられたりすることでウイルスが神経系に感染します。\n    *   **発症までの期間**：ウイルスが中枢神経を直接侵した場合は10日目あたりから発症しますが、末梢神経に感染した場合は脳へ向かうのが遅いため、通常1カ月～3カ月程度かかります（稀に数年かかることもあります）。\n    *   この期間に感染を特定する検査法はありません。\n\n2.  **初期症状**\n    *   発熱、頭痛、全身倦怠、嘔吐などが現れます。\n\n3.  **特徴的な症状の出現**\n    *   ものを飲み込みづらくなります。\n    *   液体を飲もうとすると筋肉がけいれんするため、水を恐れるようになります（恐水症）。\n    *   風を恐れるようになります（恐風症状）。\n\n4.  **末期・転帰**\n    *   やがて昏睡状態となり、呼吸が麻痺して死亡します。\n    *   発症後の確立された治療法はなく、発症するとほぼ100%死亡します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:35.288133+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:40:20.292694+00:00"
+  }
+}

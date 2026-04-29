@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 98,
+  "category": null,
+  "question": {
+    "original": "漢字に対応する意味を選び、対応する数字とアルファベットのペアを解答してください。\n\n1. 立派　A. すばらしい\n2. 開拓　B. ある事柄について知っている内容。\n3. 知識　C. 物事に味わいや価値を加える\n4. 賞賛　D. 新しい領域を切り開く\n5. 味付け　E. 高い評価を与える",
+    "translation_en": "**[Purpose: Question]**  \n\nSelect the meaning corresponding to each kanji and provide the matching number-letter pair as your answer.  \n\n1. 立派 (りっぱ) - A. すばらしい (splendid)  \n2. 開拓 (かいたく) - D. 新しい領域を切り開く (to pioneer new territories)  \n3. 知識 (ちしき) - B. ある事柄について知っている内容 (knowledge of a subject)  \n4. 賞賛 (しょうさん) - E. 高い評価を与える (to praise highly)  \n5. 味付け (あじつけ) - C. 物事に味わいや価値を加える (to add flavor or value to something)  \n\n**Answer:**  \n1-A, 2-D, 3-B, 4-E, 5-C"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下に、各漢字の意味と対応する数字とアルファベットのペアを解答します。  \n\n1. **立派** → **E. 高い評価を与える**  \n   - 「立派」は「すばらしい」「素晴らしい」という意味で、**E. 高い評価を与える**が最も適切です。  \n\n2. **開拓** → **D. 新しい領域を切り開く**  \n   - 「開拓」は「新しい土地や分野を開く」という意味で、**D. 新しい領域を切り開く**が正解です。  \n\n3. **知識** → **B. ある事柄について知っている内容。**  \n   - 「知識」は「ある事柄について知っていること」を指すため、**B. ある事柄について知っている内容。**が適切です。  \n\n4. **賞賛** → **A. すばらしい（高く評価する）**  \n   - 「賞賛」は「褒める」「高く評価する」という意味で、**A. すばらしい（高く評価する）**が最も近い表現です。  \n\n5. **味付け** → **C. 物事に味わいや価値を加える**  \n   - 「味付け」は「料理に調味料を加える」という意味ですが、「物事に味わいや価値を加える」という広い解釈で、**C. 物事に味わいや価値を加える**が適切です。  \n\n以上が解答となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答は以下の通りです。\n\n1. 立派 → 正解は A だが、回答は E（誤り）  \n2. 開拓 → D（正解）  \n3. 知識 → B（正解）  \n4. 賞賛 → 正解は E だが、回答は A（誤り）  \n5. 味付け → C（正解）\n\n5問中3問正解で、「1,2このみ間違えている」には該当せず、それ以上間違えているため問題固有基準では1点となります。  \n日本語も自然で、指示にも従っているため追加の減点要素はありません。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:52.312272+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下が正解のペアリングです。  \n\n1. **立派** → **A. すばらしい**  \n2. **開拓** → **D. 新しい領域を切り開く**  \n3. **知識** → **B. ある事柄について知っている内容。**  \n4. **賞賛** → **E. 高い評価を与える**  \n5. **味付け** → **C. 物事に味わいや価値を加える**  \n\n解答:  \n1-A, 2-D, 3-B, 4-E, 5-C",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:15.834347+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "解答は以下の通りです。\n\n1. **立派** - A. すばらしい\n2. **開拓** - D. 新しい領域を切り開く\n3. **知識** - B. ある事柄について知っている内容。\n4. **賞賛** - E. 高い評価を与える\n5. **味付け** - C. 物事に味わいや価値を加える",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:53.547285+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:34:27.387403+00:00"
+  }
+}

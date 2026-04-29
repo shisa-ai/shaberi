@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 9,
+  "category": "論理パズル",
+  "question": {
+    "original": "なぞなぞです。以下の数式の?に入る数字はなんでしょう？\n2+5=12\n3+6=21\n4+7=32\n8+11=?",
+    "translation_en": "**[Purpose: Question]**  \n\nThis is a riddle. What number should replace the question mark in the following equation?  \n2 + 5 = 12  \n3 + 6 = 21  \n4 + 7 = 32  \n8 + 11 = ?  \n\n*(Note: The translation maintains the original structure and intent, presenting the riddle as a question for evaluation.)*"
+  },
+  "answer": {
+    "gold_original": "与えられた数式を見ると前の数字と後の数字との積に前の数字を足した値が答えになっています。すなわち、\n1. 2 * 5 + 2 = 12\n2. 3 * 6 + 3 = 21\n3. 4 * 7 + 4 = 32\nとなっていることが分かります。\nよって、 8 * 11 + 8 = 96 であることから?に入る数字は96であると分かります。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nUpon examining the given formula, it becomes clear that the answer is derived by multiplying the first number by the second number and then adding the first number to the result. Specifically:  \n1. 2 * 5 + 2 = 12  \n2. 3 * 6 + 3 = 21  \n3. 4 * 7 + 4 = 32  \n\nTherefore, since 8 * 11 + 8 = 96, the number that should replace the question mark is **96**.  \n\n*(Note: The translation maintains the original meaning and structure while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 答えの？に入る数字が96である:4点\n- 二つの数字の積と前の数字の和が解になっていることを示している:3点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **4 points** – The number that fills in the answer is 96.  \n- **3 points** – Demonstrates that the solution is the product of two numbers and the sum of the previous number.  \n- **2 points** – Explanation is specific and easy to understand.  \n- **1 point** – Written in natural Japanese.  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity in English.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "このなぞなぞの答えを見つけるために、数式のパターンを分析してみましょう。  \n\n1. **2+5=12**  \n   - 2 + 5 = 7  \n   - 7 × 2 = 14  \n   - 14 + 2 = 16  \n   - 16 × (5-2) = 48（これは12に合わない）  \n\n2. **3+6=21**  \n   - 3 + 6 = 9  \n   - 9 × (6-3) = 27（これも21に合わない）  \n\n3. **4+7=32**  \n   - 同様に計算しても、明確なパターンが見つかりません。  \n\n別のアプローチとして、**数字の並び替えや演算子の変化**を考えてみます。  \n\n- **2+5=12** → (2+5)×(5-2)=10×3=30（これも12に合わない）  \n- **3+6=21** → (3+6)×(6-3)=9×3=27（21に近いが不完全）  \n\nしかし、問題文に「なぞなぞ」とあるため、数字自体ではなく**文字や別の意味**を隠している可能性があります。例えば：  \n\n- **\"8+11\" の \"8\" を \"H\" に置き換えると \"H+\"11=\"H plus\" → \"H plus eleven\" の頭文字は \"H\" でないが、数字の並びで考えると…**  \n\n実は、この問題は「数字の並び」を逆から読むと「8→8,11→1,1」で「811」ですが、これも答えにはつながりません。  \n\n### 正解へのヒント：  \nこの問題は「数字の足し算」の結果ではなく、**文字や別の意味を隠したもの**です。正解は「32」ではなく、「32」を含む別の答えかもしれませんが、一般的には「32」が正解とされています（例えば、「4+7」の結果である32をそのまま使う）。  \n\n### 結論：  \n正解は **32** と考えられますが、なぞなぞとしては「数字そのものではなく、その結果や隠された意味」を問うものです。もし他にヒントがあれば教えてください！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えの？に入る数字が96である:0点  \n  - 回答は「32」としており誤り。\n- 二つの数字の積と前の数字の和が解になっていることを示している:0点  \n  - そのような規則には一切言及していない。\n- 説明が具体的でわかりやすい:0点  \n  - 計算過程はあるが、誤ったパターン探索を繰り返しており、結論も不正確でわかりやすい説明とは言えない。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n0 + 0 + 0 + 1 = 1\n\n[点数]\n1点\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:12.350983+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "このなぞなぞは、単純な加算ではなく、各数字の積（掛け算）と和（足し算）の関係に着目する必要があります。  \n\n**解き方:**  \n- 2 + 5 = (2 × 5) + (2 + 5) = 10 + 7 = **12**  \n- 3 + 6 = (3 × 6) + (3 + 6) = 18 + 9 = **21**  \n- 4 + 7 = (4 × 7) + (4 + 7) = 28 + 11 = **32**  \n\n同様に、8と11の場合も計算します。  \n- **8 × 11 = 88**  \n- **8 + 11 = 19**  \n- **88 + 19 = ? → 答えは107**\n\nしたがって、正解は **107**です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:31.333481+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **96** です。\n\nこのなぞなぞには、以下の法則（ロジック）が隠されています。\n\n**法則：左の数字 × 右の数字 ＋ 左の数字**\n（あるいは、「左の数字 × (右の数字 + 1)」とも考えられます）\n\nそれぞれの式で確認してみましょう。\n\n*   **2 + 5 = 12**\n    *   $2 \\times 5 + 2 = 10 + 2 = 12$\n*   **3 + 6 = 21**\n    *   $3 \\times 6 + 3 = 18 + 3 = 21$\n*   **4 + 7 = 32**\n    *   $4 \\times 7 + 4 = 28 + 4 = 32$\n\nこの法則を最後の式に当てはめます。\n\n*   **8 + 11 = ?**\n    *   $8 \\times 11 + 8 = 88 + 8 = \\mathbf{96}$\n\nよって、答えは **96** になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:36.079572+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:18.885594+00:00"
+  }
+}

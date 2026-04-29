@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 34,
+  "category": "長い文書のClosed QA（千トークン以上）",
+  "question": {
+    "original": "以下の文章をもとに問題に答えよ\n### 文章\n条里制とは, わが国の古代に施行された土地区画制度であり, いわゆる条里地割として現在も歴然と認 められる条里の遺構や, 条里制特有の地名の残存などを通じて, 条里制が東北地方の一部を除き, 畿内を 中心に, 広 く日本全土の平野や盆地に行なわれたことは明らかである。 このように, 条里制は古代大和朝廷政権の成立発展と深く関連し, とくに大化改新による班田収授法と密接な関係を有するものとみなされ る。 それにも拘らず, 条里制については日本の通史にも, 律令の明文にも殆んど記載されていないため, 今日まで条里制について幾多の研究が進められてきたが, 条里制の起源をはじめ, 条里地割, 条里集落などについて, なお解明されていない多くの問題が残されている。\n著者は本論文を前篇と後篇とに分かち, 前篇では, 条理制に関する従来の諸研究について詳細な学説史 的考察を行ない, それによって, 現在の条里制研究に課せ られた問題点を明かにし, また後篇では, 主と して摂津国の地方条里を対象とし, 綿密な現地調査を基礎にして, これらの問題点の解明を試みている。 前篇 「条里制研究の系譜的考察」 は 4章より成る。 条里についての総括的記載は平安朝末の 「拾芥抄」をもって唱矢とするが, 第 1 章 「明治以前の諸研究」 では, 著者は条里制研究がすでに江戸時代に,伊藤 東涯の「制度通」 などにみられるように, 「拾芥抄」 の記載に基づく制度史研究にはじまることを指摘している。 次いで第 2章の 「明治 ・ 大正期の研究」 では, これまでの文献的制度史的研究 とな らんで, 明 治時代には新たに, 実証的歴史的研究がはじまり, とくに平城京の条坊制の研究と関連して, 大正時代には, 条里制研究においても, 地方条里の実証的研究の蓄積を通じて, 条里制自体を理解しようとする帰納的方法が確立され, 歴史学的研究の分野にめざましい発展がみられたと述べる。 さらに第 3・4章の 「昭 和期の研究動向」 では, 条里制研究は一段と進歩し, 昭和前期には, 歴史学の分野では, 従来の文献史的 ・実証的研究のほかに,/条里制が広く全国に実施されるに至った背景としての律令国家の社会経済史的研究が加わったこと, また歴史学的研究ばかりでなく, 新たに地理学の分野において, 地方条里の実態調査 を基礎にして, 条里制の分布や自然環境の問題が検討されるに至ったことを強調している。 \n### 問題\n文章中で述べられている章構成を教えてください。",
+    "translation_en": "The chapter structure described in the text is as follows:  \n\n1. **Chapter 1: \"Pre-Meiji Studies\"** – Discusses how *Jōri* studies began in the Edo period, based on institutional history research derived from the *Shūkai-shō* (late Heian period).  \n2. **Chapter 2: \"Meiji and Taishō Period Research\"** – Examines the shift from textual/institutional history to empirical historical studies in the Meiji era, and the inductive approach to understanding *Jōri* through regional *Jōri* fieldwork in the Taishō period, particularly in relation to Heian-kyō’s *Jōbō* system.  \n3. **Chapters 3 & 4: \"Shōwa Period Research Trends\"** – Highlights advancements in *Jōri* studies, including socio-economic historical research on the Ritsuryō state (pre-WWII) and geographical studies of regional *Jōri* distribution and natural environments.  \n\nThe first part (\"Genealogical Consideration of *Jōri* Studies\") consists of these four chapters. The second part focuses on fieldwork in Settsu Province."
+  },
+  "answer": {
+    "gold_original": "文章中では章構成について以下のように述べられています。\n- 前篇「条里制研究の系譜的考察」: 条理制に関する従来の諸研究について詳細な学説史的考察を行ない, それによって, 現在の条里制研究に課せられた問題点を明かにする。\n  - 第 1 章 「明治以前の諸研究」: 条里制研究がすでに江戸時代に,伊藤 東涯の「制度通」などにみられるように, 「拾芥抄」 の記載に基づく制度史研究にはじまることを指摘している。\n  - 第 2 章「明治 ・ 大正期の研究」: 明治時代に新たに始まった実証的歴史的研究により、大正時代には, 条里制研究においても, 地方条里の実証的研究の蓄積を通じて, 条里制自体を理解しようとする帰納的方法が確立され, 歴史学的研究の分野にめざましい発展がみられたと述べる。\n  - 第 3 章・第 4 章「昭和期の研究動向」:  昭和前期には, 歴史学の分野では, 従来の文献史的 ・実証的研究のほかに,/条里制が広く全国に実施されるに至った背景としての律令国家の社会経済史的研究が加わったこと, また歴史学的研究ばかりでなく, 新たに地理学の分野において, 地方条里の実態調査を基礎にして, 条里制の分布や自然環境の問題が検討されるに至ったことを強調している。\n- 後篇: 主として摂津国の地方条里を対象とし, 綿密な現地調査を基礎にして, これらの問題点の解明を試みている。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe text describes the chapter structure as follows:  \n\n- **Part I: \"Genealogical Consideration of *Jōri* System Studies\"** – This section provides a detailed historiographical analysis of previous research on the *jōri* system, clarifying the problems currently facing *jōri* system studies.  \n  - **Chapter 1: \"Studies Before the Meiji Period\"** – It points out that *jōri* system studies began in the Edo period, as seen in works like Ito Tokei’s *Seido Tsū*, based on the *Shikai-shō* records, marking the start of institutional history research.  \n  - **Chapter 2: \"Meiji and Taisho Period Research\"** – It states that the new empirical historical research initiated in the Meiji era led to the Taisho period, where *jōri* system studies saw the establishment of inductive methods through the accumulation of empirical research on local *jōri*, resulting in significant advancements in historical studies.  \n  - **Chapters 3 & 4: \"Research Trends in the Showa Period\"** – It emphasizes that in the early Showa period, historical studies expanded beyond traditional textual and empirical research to include socio-economic historical studies of the Ritsuryō state as the background for the nationwide implementation of the *jōri* system. Additionally, it highlights that, beyond historical studies, the field of geography emerged, conducting empirical surveys of local *jōri* to examine the distribution of the *jōri* system and its relationship with the natural environment.  \n\n- **Part II** – Primarily focusing on local *jōri* in Settsu Province, this section attempts to resolve the aforementioned issues through meticulous on-site investigations.  \n\n(Translation preserves the original meaning and structure while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 把握しやすい章構成の表記である:2点\n- 正しい章構成の順序である:2点\n- 各章の文章中で与えられた名称を示している:2点\n- 各章の具体的な内容を示している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Clear chapter structure notation:** 2 points  \n- **Correct chapter sequence order:** 2 points  \n- **Indicates given names within chapter text:** 2 points  \n- **Provides specific content for each chapter:** 2 points  \n- **Natural Japanese phrasing:** 1 point  \n- **Appropriate brevity for a summary:** 1 point  \n\n*(Note: The translation maintains the original meaning, structure, and scoring criteria while ensuring natural English readability for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "文章中で述べられている章構成は以下の通りです。  \n\n1. **第1章 「明治以前の諸研究」**  \n   - 条里制研究の起源を江戸時代（伊藤東涯の「制度通」など）に遡り、「拾芥抄」の記載に基づく制度史研究が始まったことを指摘。  \n\n2. **第2章 「明治・大正期の研究」**  \n   - 明治時代以降、文献的・実証的歴史的研究が進み、特に平城京の条坊制や地方条里の実証的研究が蓄積され、帰納的方法が確立されたと述べる。  \n\n3. **第3・4章 「昭和期の研究動向」**  \n   - 昭和前期には、律令国家の社会経済史的研究や地理学的な実態調査が加わり、条里制研究がさらに進展したことを強調。  \n\nしたがって、前篇「条里制研究の系譜的考察」は4章から成り立っています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 把握しやすい章構成の表記である:2点  \n  - 箇条書きで章番号と章名が明確に示されている。\n- 正しい章構成の順序である:2点  \n  - 第1章→第2章→第3・4章の順で記載されており、本文と一致している。\n- 各章の文章中で与えられた名称を示している:2点  \n  - 「明治以前の諸研究」「明治・大正期の研究」「昭和期の研究動向」と本文どおりに示している。\n- 各章の具体的な内容を示している:2点  \n  - 各章ごとに、江戸期の制度史研究、明治・大正期の実証的研究と帰納的方法、昭和期の社会経済史的研究と地理学的調査など、本文に沿った内容を要約している。\n- 自然な日本語である:1点  \n  - 文法的にも表現としても自然な日本語で書かれている。\n- 要約として適切な短さである:1点  \n  - 必要な情報に絞って簡潔にまとめられている。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 1 = 10\n\n[点数]\n10\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.087721+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "文章中で述べられている章構成は以下の通りです。  \n\n1. **前篇「条里制研究の系譜的考察」**  \n   - 第1章「明治以前の諸研究」  \n   - 第2章「明治・大正期の研究」  \n   - 第3章・第4章「昭和期の研究動向」（2つの章に分かれている）  \n\n2. **後篇**（具体的な章構成は記載されていないが、摂津国の地方条里を対象とした現地調査に基づく問題点の解明を試みているとある）  \n\nこのように、前篇は4つの章から構成されており、後篇については詳細な章分けが明示されていません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:29.263912+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "文章中で述べられている章構成は以下の通りです。\n\n**全体構成**\n*   **前篇**：「条里制研究の系譜的考察」（全4章）\n*   **後篇**：（具体的な章名の記載なし。摂津国の地方条里を対象とした研究）\n\n**前篇の章構成**\n*   **第1章**：「明治以前の諸研究」\n*   **第2章**：「明治・大正期の研究」\n*   **第3・4章**：「昭和期の研究動向」",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:31.276725+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:38:05.958532+00:00"
+  }
+}

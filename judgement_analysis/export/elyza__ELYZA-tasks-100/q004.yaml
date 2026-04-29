@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 4,
+  "category": null,
+  "question": {
+    "original": "以下の説明を読んだユーザーが感じるであろう疑問とは？\n\n大量のゴミの処理にお困りではありませんか？\n\n「生産で出るゴミ処理費用が大幅にかかっている」\n「指定ゴミ袋が導入され、一気にコストが上がってしまった」\n「工場が狭いので、ゴミ保管スペースを減らしたい」\n「ISO14001でゴミ削減が大きな課題となっている」\n\n場所をとる嵩張るゴミをつぶしてまとめて運びやすい形にすることで、処理・保管・運搬にかかる様々なコストを削減したり、環境負荷の低減にも貢献できるのが、廃棄物圧縮減容機→『ゴミ圧縮機』です。\n\nゴミ圧縮機の主な用途は廃プラスチック・紙・段ボール・袋類・ペットボトル・プラスチック容器などつぶれるが元に戻ってしまうゴミを圧縮梱包します。",
+    "translation_en": "**[Purpose: Question]**  \n\nWhat questions might a user have after reading the following explanation?  \n\n---  \n\n**Are you struggling with the disposal of large amounts of waste?**  \n\n- *\"Production waste disposal costs are significantly high.\"*  \n- *\"The introduction of designated garbage bags has suddenly increased costs.\"*  \n- *\"Our factory is small, so we want to reduce waste storage space.\"*  \n- *\"Waste reduction is a major challenge under ISO14001.\"*  \n\nA **waste compactor** reduces bulky waste into a more manageable form for transport, lowering various costs associated with processing, storage, and transportation, while also contributing to reduced environmental impact.  \n\nThe primary use of a **waste compactor** is to compress and package compressible waste such as plastic, paper, cardboard, bags, PET bottles, and plastic containers—waste that can be crushed but returns to its original shape.  \n\n---  \n\n*(Note: The translation preserves the original meaning and details while ensuring natural, clear English suitable for evaluation documentation. No commentary or explanations were added.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この説明を読んだユーザーが感じるであろう疑問は以下の通りです。  \n\n1. **「ゴミ圧縮機」はどのように機能するのか？**  \n   - 具体的な操作方法や安全性について詳しく知りたい。  \n   - どのような種類のゴミが圧縮可能か（例：生ごみ、金属、ガラスなど）について確認したい。  \n\n2. **コストと効果の具体的なデータは？**  \n   - 「コスト削減」や「環境負荷低減」の具体的な数値（例：処理費用の削減率、CO2排出量の削減量）を知りたい。  \n   - 初期投資と運用コストの詳細を確認したい。  \n\n3. **導入時の課題と解決策は？**  \n   - 「指定ゴミ袋導入後のコスト増」を解決するために、ゴミ圧縮機がどのように役立つのか疑問に思う。  \n   - 工場の狭さやISO14001基準への対応について具体的な事例を知りたい。  \n\n4. **メンテナンスや廃棄物処理後の対応は？**  \n   - 圧縮されたゴミをどう処理するのか（リサイクル、焼却など）について確認したい。  \n   - 機器のメンテナンス頻度や部品交換費用について知りたい。  \n\n5. **導入事例や成功実績は？**  \n   - 他の企業での導入事例や効果データ（例：廃棄物量の削減率、従業員の負担軽減）を知りたい。  \n\nこれらの疑問に対して、より詳細な情報を提供することで、ユーザーの理解と信頼性を高めることができます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "この回答は、ユーザーが感じそうな「疑問」を複数挙げており、形式も疑問文になっているため、問題の要求には概ね沿っています。  \nまた、「どのように機能するのか」「どのゴミが圧縮可能か」「コストと効果」「導入時の課題」「メンテナンス」「導入事例」など、正解例よりも広く具体的に疑問点を列挙しており、有用性も高いです。\n\n一方で、正解例にある「どれくらい圧縮できるのか」「購入価格はいくらか」といった、より直接的な疑問が明示されていない点はやや惜しいものの、方向性としては十分カバーできている内容です。  \n不自然な日本語や事実誤認もなく、問題固有の減点条件にも該当しません。\n\n総合的に見て「役に立つ」レベルと判断できます。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:49.976325+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この説明を読んだユーザーが抱くであろう疑問は以下の通りです。  \n\n1. **具体的なコスト削減効果は？**  \n   - 「ゴミ処理費用が大幅にかかっている」とあるが、ゴミ圧縮機導入でどれくらい削減可能か具体的な数値や事例がない。  \n   - 指定ゴミ袋のコスト上昇との比較も不明確。  \n\n2. **導入時の課題や制約は？**  \n   - 工場スペースが狭い場合、ゴミ圧縮機自体の設置場所は確保できるのか？  \n   - ISO14001対応として、圧縮後の処理方法（リサイクル率など）に影響はないか？  \n\n3. **対象となるゴミの範囲について**  \n   - 「つぶれるが元に戻ってしまうゴミ」とあるが、金属や木材など非可逆性の廃棄物は不可なのか？  \n   - 有害物質（油汚れなど）を含むゴミへの対応可否も不明。  \n\n4. **運用面での疑問**  \n   - 圧縮作業に手間や人件費がかかるのか？自動化されているのか？  \n   - 圧縮後の梱包材（ワイヤーやテープ）の追加コストはないか？  \n\n5. **環境負荷低減の具体例**  \n   - 「環境負荷低減」にはどのような効果があるのか（輸送効率化・埋め立て量削減など）詳細がない。  \n\n特に、**「コスト削減効果」や「導入時の制約」**について具体性に欠けるため、これらの点をユーザーは確認したいと考えると予想されます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:24.558629+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提示された説明文は、ゴミ圧縮機のメリット（コスト削減、スペース確保、環境対応）を強調していますが、具体的な運用や導入条件についての詳細が省かれています。そのため、読んだユーザー（主に企業の担当者）は、導入を検討するにあたって以下のような現実的な疑問を抱く可能性が高いです。\n\nカテゴリー別に整理しました。\n\n### 1. コスト・費用対効果に関する疑問\n*   **本体価格と設置費用はいくらか？**（数百万円するのか、数十万円で済むのか）\n*   **ランニングコストはどれくらいか？**（電気代、メンテナンス費、消耗品である梱包紐や袋のコスト）\n*   **具体的にどれくらいの期間で元が取れるのか？**（投資回収のシミュレーションはあるか）\n*   **リースやレンタルでの導入は可能か？**\n\n### 2. 対象物・性能に関する疑問\n*   **圧縮「できない」ゴミは何か？**（金属、ガラス、生ゴミ、危険物などはどうなるのか）\n*   **中身が残っているペットボトルや容器はそのまま圧縮できるのか？**（液体が漏れ出した場合の排水処理機能はあるか）\n*   **圧縮率はどれくらいか？**（「1/5になる」など具体的な数値目安が知りたい）\n*   **分別はどの程度厳密に行う必要があるか？**（異物が混入しても大丈夫か）\n\n### 3. 設置・環境に関する疑問\n*   **機械のサイズはどれくらいか？**（「工場が狭い」という悩みがあるが、そもそもこの機械を置くスペースがあるか）\n*   **電源工事は必要か？**（家庭用コンセント100Vで動くのか、動力200Vが必要か）\n*   **作動音や振動はうるさくないか？**（オフィスや住宅街の近くでも使えるか）\n*   **屋外に設置しても大丈夫か？**\n\n### 4. 運用・操作に関する疑問\n*   **操作は難しくないか？**（専任の担当者が必要か、誰でも安全に使えるか）\n*   **安全性は確保されているか？**（挟み込み事故などを防ぐ安全装置はあるか）\n*   **圧縮した後のゴミ（ベール）はどれくらいの重さになるのか？**（人の手で運べるのか、フォークリフトが必要か）\n\n### 5. 回収・処分に関する疑問（※非常に重要）\n*   **圧縮したゴミを、現在の回収業者は持って行ってくれるのか？**（圧縮すると受け入れを拒否されたり、逆に単価が上がったりするケースはないか）\n*   **有価物として売れるようになるのか、それとも単にゴミ処理費が減るだけか？**\n\nこれらの疑問は、ユーザーが「興味はあるが、失敗したくない」と感じている証拠であり、これらに答えるFAQや資料を用意することが次のステップとして有効です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:56.007456+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:31:55.214665+00:00"
+  }
+}

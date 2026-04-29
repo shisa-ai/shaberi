@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 88,
+  "category": "ダジャレ",
+  "question": {
+    "original": "以下の文がダジャレかどうかを判断してください。 また、そう判断した理由を説明してください。\n川向かいのカラスがうるさいかな",
+    "translation_en": "[Purpose: question]  \n\nDetermine whether the following sentence is a pun. Also, explain the reasoning behind your judgment.  \n\n*\"Is the crow across the river noisy?\"*  \n\n(Translation preserves the literal meaning while maintaining natural English phrasing. The question mark indicates it is a query, and the phrasing \"across the river\" reflects the original *kawa mukai* (川向かい) idiom.)  \n\n---  \n**Note:** The original Japanese sentence *川向かいのカラスがうるさいかな* (Kawa mukai no karasu ga urusai kana) is a pun because *kawa mukai* (across the river) sounds like *kawa mukai* (crow across), and *karasu* (crow) is a homophone for *karasu* (noisy). The English translation reflects this wordplay while remaining natural."
+  },
+  "answer": {
+    "gold_original": "この文はダジャレではありません。この文をひらがなにすると「かわむかいのからすがうるさいかな」となりますが、この文の中にはダジャレと判断できる同じひらがなの並びを見つけることはできません。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThis sentence is not a pun. When written in hiragana, it becomes \"かわむかいのからすがうるさいかな,\" but there is no sequence of identical hiragana characters within the sentence that would indicate a pun.  \n\n*(Note: The translation maintains the original meaning, including the explanation of why the sentence is not considered a pun, while ensuring natural and clear English suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- ダジャレではないことを示している: 6点\n- 音に注目してダジャレではない理由を示している:3点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Demonstrates that it is not a pun (6 points)**  \n- **Highlights the sound and explains why it is not a pun (3 points)**  \n- **Is natural Japanese (1 point)**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この文「川向かいのカラスがうるさいかな」は、ダジャレと判断します。  \n\n**判断理由：**  \n1. **言葉遊びの要素**：「カラス」と「川」を掛け合わせ、「うるさい」という音を連想させるダジャレの構造を持っています。  \n2. **意味の二重性**：文字通りにはカラスが騒いでいるかどうかを聞いているように見えますが、実際は「カラス（からす）」と「川（かわ）」の音を重ねて笑いを誘っています。  \n3. **自然な会話とのギャップ**：日常会話でこのような表現は稀ですが、ダジャレとして意図的に言葉を選んでいます。  \n\nしたがって、この文はダジャレと言えます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- ダジャレではないことを示している:0点  \n  - 回答は「ダジャレと判断します」としており、評価項目と逆の内容。\n- 音に注目してダジャレではない理由を示している:0点  \n  - 音に注目はしているが、「ダジャレである理由」として述べており、求められる方向と逆。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語になっている。\n\n[計算式]\n0 + 0 + 1 = 1\n\n[点数]\n1点\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.881233+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "コンビニといえば、**セブン-イレブン**、**ファミリーマート**、**ローソン**の3社が日本で最も有名ですね。  \n\n特に、  \n- **24時間営業**でいつでも利用できる  \n- **お弁当・飲み物・日用品など品揃えが豊富**  \n- **ATMや公共料金の支払いサービスも充実**  \n\nといった点が特徴的です。最近では、モバイル決済（PayPayなど）にも対応し、利便性がさらに高まっています。  \n\nあなたはどのコンビニをよく利用しますか？",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:34.773810+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "一般的に「コンビニ」と聞いて多くの人が真っ先に思い浮かべるのは、店舗数やシェアの大きさから**「セブン-イレブン」「ファミリーマート」「ローソン」**のいわゆる**大手3社**です。\n\nそれぞれの特徴や、人によって思い浮かべる理由が異なります。\n\n**1. セブン-イレブン**\n*   **理由:** 国内店舗数No.1であり、圧倒的なシェアを持っています。「近くて便利」のキャッチコピー通り、どこにでもある印象が強いです。\n*   **特徴:** お弁当やお惣菜、プライベートブランド（セブンプレミアム）の品質が高いことで知られています。\n\n**2. ファミリーマート**\n*   **理由:** 「あなたと、コンビに、ファミリーマート」のCMや入店音でおなじみです。\n*   **特徴:** ホットスナックの「ファミチキ」が非常に有名で、これを目当てに行く人も多いです。\n\n**3. ローソン**\n*   **理由:** 青い看板とミルク缶のロゴが特徴的です。\n*   **特徴:** 「からあげクン」という国民的ホットスナックがあります。また、「プレミアムロールケーキ」などのスイーツ（ウチカフェ）に力を入れているイメージが強いです。\n\n---\n\n**地域や好みによって思い浮かべるその他のコンビニ**\n\n*   **セイコーマート（セコマ）:** 北海道出身・在住の人にとっては、大手3社よりも圧倒的にこちらを思い浮かべるでしょう。「ホットシェフ（店内調理）」や安くて美味しいオリジナル商品があり、顧客満足度が非常に高いです。\n*   **ミニストップ:** ソフトクリームやハロハロなどのコールドスイーツ、店内加工のファストフードが強いイメージがあります。\n*   **デイリーヤマザキ:** 山崎製パン系列のため、店内で焼いたパン（デイリーホット）を思い浮かべる人が多いです。\n*   **NewDays:** 電車通勤・通学をしている人にとっては、駅のコンビニとして馴染み深いです。\n\nあなたの住んでいる地域や、好きな食べ物（チキン派かスイーツ派かなど）によって、一番に思い浮かぶコンビニは変わるかもしれませんね。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:42.743714+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:41.851826+00:00"
+  }
+}

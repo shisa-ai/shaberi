@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 28,
+  "category": null,
+  "question": {
+    "original": "鉛筆は水に沈みますか？",
+    "translation_en": "[Purpose: question]\n\nDoes a pencil sink in water?  \n\n(Translation preserves the original meaning and question format while ensuring natural English phrasing for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "一般的に、鉛筆は水に沈みます。鉛筆の主な材料は木材とグラファイト（鉛筆芯）で構成されており、木材は密度が高いため水に浮かびません。グラファイトも同様に密度が高いため、水に沈む傾向があります。ただし、鉛筆の形状や材質によっては、わずかに浮く場合もあります。例えば、鉛筆の先端が尖っている場合や、特殊な加工が施されている場合は、一時的に浮くことがあります。しかし、これはあくまで例外的なケースであり、一般的には鉛筆は水に沈みます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答は「一般的に鉛筆は水に沈む」としており、正解例と逆で明確に誤りです。  \n問題固有の採点基準で「間違えている: 1点になる」とあるため、内容の詳しさにかかわらず1点評価となります。  \n日本語は自然ですが、根本が誤答なので加点要素にはなりません。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.861053+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "鉛筆は水に沈みます。鉛筆の主な材料は木材とグラファイト（黒鉛）で、グラファイトの比重が水よりも大きいため、全体として水に沈む性質があります。ただし、木材の種類や含有量によっては浮く場合もありますが、一般的な鉛筆は沈むことが多いです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:59.516096+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "一般的な木の鉛筆は、水に**浮きます**。\n\nその理由は以下の通りです。\n\n1.  **木材の密度:** 鉛筆の大部分を占める木材は、水よりも密度（比重）が小さいため、水に浮く性質があります。\n2.  **全体のバランス:** 鉛筆の芯（黒鉛と粘土）自体は水よりも重いですが、周りにある木材の体積が大きいため、全体としては水よりも軽くなり、浮くことができます。\n\nただし、金属製のシャープペンシルや、特殊な重い素材で作られた鉛筆などは沈むことがあります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:00.310979+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:34.428868+00:00"
+  }
+}

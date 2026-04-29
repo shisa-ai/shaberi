@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 11,
+  "category": null,
+  "question": {
+    "original": "以下の映画のレビューを1から5のスケールで評価してください。1は非常に否定的、3は中立、5は非常に肯定的とします：\n1. 2019年11月18日に公開されたこの映画は素晴らしい。撮影、演技、プロット、すべてが一流でした。\n2. 映画にこんなに失望したことは今までにない。ストーリーは予測可能で、キャラクターは一次元的だった。私の意見では、この映画は2022年に公開された映画の中で最悪の一つだ。\n3. 映画はまあまあだった。楽しめた部分もあったが、物足りないと感じた部分もあった。これは2018年2月に公開された、かなり平凡な映画のようだ。\n答えを整数のJSON配列として返してください。",
+    "translation_en": "Here is the translation:  \n\n**[Purpose: question]**  \n\nRate the following movie reviews on a scale of 1 to 5, where 1 is very negative, 3 is neutral, and 5 is very positive:  \n1. This movie, released on November 18, 2019, was fantastic. The cinematography, acting, and plot were all top-notch.  \n2. I have never been so disappointed in a movie. The story was predictable, and the characters were one-dimensional. In my opinion, this is one of the worst movies released in 2022.  \n3. The movie was so-so. There were parts I enjoyed, but also parts that felt lacking. It seems like a rather mediocre film released in February 2018.  \n\nReturn the answer as a JSON array of integers.  \n\n---  \n**JSON Output:**  \n```json  \n[5, 1, 3]  \n```"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "```json\n[\n  5,\n  1,\n  3\n]\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "応答はユーザーの指示（1〜5のスケールでレビューの感情を評価し、整数のJSON配列で返す）に正確に従っており、各レビューの内容とも整合しています。\n\n1. 「素晴らしい」「すべてが一流」→ 非常に肯定的なので5は妥当。\n2. 「こんなに失望したことはない」「最悪の一つ」→ 非常に否定的なので1は妥当。\n3. 「まあまあ」「平凡」→ 中立寄りなので3は妥当。\n\n形式も指定どおりJSON配列のみで、余計な文もなく、日本語の問題もありません（数値のみなので問題なし）。全体として要件を完全に満たしています。\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:02.490119+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "[5, 1, 3]",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:02.115248+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n[5, 1, 3]\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:56.253297+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:31:42.585686+00:00"
+  }
+}

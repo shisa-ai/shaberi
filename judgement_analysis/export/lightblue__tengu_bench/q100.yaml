@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 100,
+  "category": "建設",
+  "question": {
+    "original": "12m^2の面積の建物の増築を行う際に建築確認申請は必要ですか？",
+    "translation_en": "[Purpose: Question]  \n\nIs a building permit required when expanding a building by 12 m²?  \n\n(Translation preserves the original meaning, including the specific area (12 m²) and the context of a building expansion. The phrasing is natural and clear for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "建築確認制度によって10m^2以上の面積の建物の増築を行う際には建築確認申請が必要となります。そのため12m^2の面積の建物の増築を行う際には建築確認申請が必要になると考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nUnder the Building Confirmation System, a building permit is required for expansions of structures with an area of 10 m² or more. Therefore, it is considered necessary to obtain a building permit when expanding a structure with an area of 12 m².  \n\n(Translation preserves the original meaning, technical details, and formal tone suitable for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 建築確認申請が必要であることを示している:3点\n- 建築確認制度に言及している:2点\n- 10m^2以上の面積の建物の増築を行う際には建築確認申請が必要であることを示している:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates that a building permit application is required:** 3 points  \n- **Mentions the building permit system:** 2 points  \n- **States that a building permit application is required for expansions of buildings with an area of 10m² or more:** 2 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "12m²の面積の建物の増築を行う際に、建築確認申請が必要かどうかは、**増築の内容や地域の条例によって異なります**。以下にポイントをまとめます：\n\n### 1. **建築確認申請が必要なケース**\n   - **構造変更がある場合**：  \n     増築部分に梁や柱を追加するなど、建物の構造を変更する場合は必ず申請が必要です。\n   - **用途変更がある場合**：  \n     住宅から店舗などに利用を変える場合は、用途地域によっては建築確認・許可が必要です。\n   - **防火・衛生規制区域内**：  \n     防火地域や公衆衛生法で規制される区域では、増築にも特別な許可が必要になることがあります。\n\n### 2. **建築確認申請が不要なケース**\n   - **外観のみの変更（例：壁塗装）**：  \n     構造や用途に影響しない軽微な変更であれば、申請不要です（ただし自治体によっては届出が必要な場合も）。\n   - **既存部分の補修・改修**：  \n     増築以外で建物全体を改修する場合でも、一定規模以下であれば免除されることがあります。\n\n### 3. **確認すべき事項**\n   - **自治体の条例を確認**：  \n     各自治体で「建築基準法」や「都市計画法」に基づく規制があります。事前に担当部署（都市計画課など）に相談しましょう。\n   - **専門家への相談推奨**：  \n     構造計算や設計が必要な場合は、建築士などの専門家へ相談することをおすすめします。\n\n### 結論\n12m²と小さい増築でも、構造や用途に関わる変更がある場合は必ず建築確認申請が必要です。自治体のウェブサイトや担当部署で最新情報を確認してください。  \n\n（※具体的な判断には自治体への問い合わせが必須です）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 建築確認申請が必要であることを示している:0点  \n  - 「必要かどうかは…異なります」とし、12m²増築について一貫した「必要」とは示していない。\n- 建築確認制度に言及している:0点  \n  - 「建築確認申請」という語はあるが、「建築確認制度」自体への言及や制度説明はない。\n- 10m^2以上の面積の建物の増築を行う際には建築確認申請が必要であることを示している:0点  \n  - 10m²という基準値への具体的な言及がない。\n- 説明が具体的でわかりやすい:1点  \n  - 説明自体は構造変更や用途変更などの例を挙げており、文章としては具体的で読みやすい。\n- 自然な日本語である:1点  \n  - 文法・表現ともに自然な日本語で書かれている。\n\n[計算式]\n0 + 0 + 0 + 1 + 1 = 2\n\n[点数]\n2\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:16.339430+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "部分積分の公式は、以下のように表されます：\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nこの公式を積の微分公式（\\( (uv)' = u'v + uv' \\)）を用いて証明します。まず、積 \\( uv \\) の微分を考えます：\n\n\\[\n(uv)' = u'v + uv'\n\\]\n\n両辺を \\( x \\) について積分します（不定積分）：\n\n\\[\n\\int (uv)' \\, dx = \\int (u'v + uv') \\, dx\n\\]\n\n左辺は直接積分できます：\n\n\\[\nuv = \\int u'v \\, dx + \\int uv' \\, dx\n\\]\n\nここで、\\( dv = v' dx \\) および \\( du = u' dx \\) と置くと、式は次のように変形されます：\n\n\\[\nuv = \\int v \\, du + \\int u \\, dv\n\\]\n\nしたがって、両辺から \\( int v du\\) を引くと：\n\n\\[\nuv - int v du = int u dv\n\\]\n\nこれが部分積分の公式です。したがって、TeX形式で証明は以下のようになります。\n\n```latex\n% 部分積分の公式の証明\n\nまず、積 $uv$ の微分を考えます：\n$$\n(uv)' = u'v + uv'\n$$\n\n両辺を $x$ について積分します（不定積分）：\n$$\n\\int (uv)' dx = int (u'v + uv') dx\n$$\n\n左辺は直接積分できます：\n$$\nuv = int u'v dx + int uv' dx\n$$\n\nここで、$dv = v'dx$ および $du = u'dx$ と置くと、式は次のように変形されます：\n$$\nuv = int v du + int u dv\n$$\n\nしたがって、両辺から $\\int v du$ を引くと：\n$$\nuv - int v du = int u dv\n$$\n\nこれが部分積分の公式です。\n```\n\nこの証明では、積の微分公式と不定積分の性質を用いて部分積分の公式を導き出しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:03.448976+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "積の微分公式から部分積分の公式を導出する証明をTeX形式で記述します。\n\n### 証明\n\n$f(x)$ と $g(x)$ を微分可能な関数とします。\n\nまず、積の微分公式（ライプニッツ則）より、以下の等式が成り立ちます。\n\n$$\n\\frac{d}{dx} \\{ f(x)g(x) \\} = f'(x)g(x) + f(x)g'(x)\n$$\n\nこの式の右辺にある $f(x)g'(x)$ について整理するために、項を移項します。\n\n$$\nf(x)g'(x) = \\frac{d}{dx} \\{ f(x)g(x) \\} - f'(x)g(x)\n$$\n\nこの両辺を $x$ について積分します。\n\n$$\n\\int f(x)g'(x) \\, dx = \\int \\left( \\frac{d}{dx} \\{ f(x)g(x) \\} - f'(x)g(x) \\right) \\, dx\n$$\n\n積分の線形性を用いて右辺を分割します。\n\n$$\n\\int f(x)g'(x) \\, dx = \\int \\frac{d}{dx} \\{ f(x)g(x) \\} \\, dx - \\int f'(x)g(x) \\, dx\n$$\n\nここで、微分の逆演算としての積分の性質 $\\int \\frac{d}{dx} F(x) \\, dx = F(x) + C$ （ここでは積分定数を省略して一般式として扱います）を用いると、第一項は $f(x)g(x)$ となります。\n\nしたがって、以下の部分積分の公式が得られます。\n\n$$\n\\int f(x)g'(x) \\, dx = f(x)g(x) - \\int f'(x)g(x) \\, dx\n$$\n\n（証明終）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:50.783770+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:20.037050+00:00"
+  }
+}

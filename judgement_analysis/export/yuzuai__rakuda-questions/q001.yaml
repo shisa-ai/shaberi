@@ -1,0 +1,68 @@
+{
+  "dataset": "yuzuai__rakuda-questions",
+  "id": 1,
+  "category": null,
+  "question": {
+    "original": "四国地方の４つの都道府県名と、それぞれの県庁所在地を列挙してください。",
+    "translation_en": "**[Purpose: Question]**  \n\nList the names of the four prefectures in the Shikoku region and their respective prefectural capitals.  \n\n(Translation preserves the original meaning and structure while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "四国地方の4つの都道府県とそれぞれの県庁所在地は以下の通りです。  \n\n1. **愛媛県**  \n   - 県庁所在地：**松山市**  \n\n2. **香川県**  \n   - 県庁所在地：**高松市**  \n\n3. **徳島県**  \n   - 県庁所在地：**徳島市**  \n\n4. **高知県**  \n   - 県庁所在地：**高知市**  \n\nこれらの情報は公的データに基づいており、検閲されていない正確な情報を提供しています。必要に応じてさらに詳しい情報を提供できますので、お知らせください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "有用性:  \nユーザーの質問「四国地方の４つの都道府県名と、それぞれの県庁所在地を列挙してください」に対して、4県すべてを正しく列挙し、それぞれに対応する県庁所在地も正しく提示しています。ユーザーのニーズを完全に満たしており、実用性は高いです。余計な情報はほとんどなく、目的に対して十分有用です。\n\n関連性:  \n回答内容は質問に完全に対応しており、四国地方の都道府県名と県庁所在地のみを列挙しています。質問と無関係な話題への逸脱はありません。ただし、最後の一文「これらの情報は公的データに基づいており、検閲されていない正確な情報を提供しています。」は、質問内容からするとやや不自然かつ不要なメタ情報であり、関連性という点では若干過剰です。\n\n正確性:  \n列挙された情報はすべて正確です。  \n- 愛媛県 — 松山市  \n- 香川県 — 高松市  \n- 徳島県 — 徳島市  \n- 高知県 — 高知市  \nいずれも事実に合致しており、誤りはありません。「公的データに基づいており」という表現も一般的な意味では問題ありません。\n\n詳細度:  \n質問は「列挙してください」というシンプルな要求であり、都道府県名と県庁所在地を対で示せば十分です。その点で、箇条書きで県名と県庁所在地を明確に分けて提示しており、過不足のない詳細度です。  \n一方で、「検閲されていない正確な情報…」という一文は、質問の性質からすると不要で、やや説明過多・不自然な付け足しに見えますが、情報量としては邪魔になるほどではありません。\n\n日本語能力:  \n日本語は自然で読みやすく、文法的にも問題ありません。敬体で統一されており、箇条書きの構成も分かりやすいです。  \n唯一気になる点は、「検閲されていない正確な情報を提供しています。」という表現が、この文脈ではやや不自然で、システム側の事情を説明しているようなメタな文になっていることです。ただし、日本語として破綻しているわけではなく、意味も通じます。\n\n総合評価説明:  \n・質問への直接的な回答としてはほぼ満点レベルで、内容も正確。  \n・構成も分かりやすく、日本語も自然。  \n・ただし、最後の一文がやや不自然かつ不要で、関連性と自然さをわずかに損ねている。  \nこの点を差し引いて、非常に高評価だが満点から少しだけ減点するのが妥当と判断できます。\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:28.471795+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "四国地方の4つの都道府県名と、それぞれの県庁所在地は以下の通りです。  \n\n1. **香川県** - 高松市  \n2. **愛媛県** - 松山市  \n3. **徳島県** - 徳島市  \n4. **高知県** - 高知市  \n\nこれらの情報は正確で、検閲されていないものです。何か追加で知りたいことがあればお気軽にどうぞ！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:47:08.627630+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "四国地方の4つの県と、それぞれの県庁所在地は以下の通りです。\n\n*   **徳島県**：徳島市\n*   **香川県**：高松市\n*   **愛媛県**：松山市\n*   **高知県**：高知市",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:55.025450+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:31:43.168024+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 74,
+  "category": null,
+  "question": {
+    "original": "公開の場で話すのが苦手な友人を、地元の「ことばの会」でボランティアとして参加するよう説得するメールを書いてください。日本の親しみやすい言葉で、友情と共感を表現してください。",
+    "translation_en": "**Subject:** Hey [Friend's Name], How About Volunteering at the Local \"Kotoba no Kai\"?  \n\n**Hi [Friend's Name],**  \n\nI was thinking about how you mentioned struggling with public speaking, and I remembered the local \"Kotoba no Kai\" (Language Circle) is looking for volunteers. It’s a super chill, supportive group where people share ideas and practice speaking in a relaxed way—no pressure at all!  \n\nI know how tough it can be to speak up in front of others, but this place is all about encouragement and learning together. Plus, it’s a great way to meet new people who share similar interests, and you’d be helping others too!  \n\nWould you consider giving it a shot? I’d be happy to go with you if you’d like, or just check it out first. No worries if you’re not up for it—just thought it might be a good fit for you.  \n\nLet me know what you think!  \n\n**Take care,**  \n[Your Name]  \n\n*(Note: \"Kotoba no Kai\" is kept in Japanese as it’s a proper noun, but the tone remains warm and encouraging.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "件名：ことばの会、ぜひ一緒にどうかな？\n\n〇〇さん\n\nお元気ですか？最近どうしてたかな。私の方は元気に過ごしていますよ。\n\nさて、ちょっとお話したいことがあってメールしました。〇〇さんが以前「人前で話すのがちょっと苦手なんだよね」と話していたのを思い出しました。でもね、〇〇さんの優しい声や温かい人柄は、みんなが安心して話せる雰囲気を作る力があると思います。\n\nそこで、「ことばの会」っていう地元の団体があるんですけど、ボランティアとして参加するのはどうかなと思いました。ここでは、みんなが自分のペースで言葉を選びながら、少しずつコミュニケーションを楽しむんです。最初は簡単な挨拶から始めて、お互いのことを少しずつ知っていくような感じですよ。\n\nもちろん、無理強いするつもりはありません。ただ、もし興味があれば、一度だけ「ことばの会」を見学に行ってもいいかもしれないです。一緒に行ってもいいし、私が先に行ってみてから連絡してもいいですし、何でも構いません。\n\nもし参加してみることで、新しい出会いや発見があるかもしれませんし、何もなくても、私たち二人の時間を一緒に過ごせるだけで十分嬉しいです。\n\nどうかな？少しでも興味があれば、お返事をお待ちしていますね。お忙しいところ申し訳ないですが、どうぞよろしくお願いします。\n\n〇〇さんと一緒に何か新しいことを始めるのが楽しみです！\n\n敬具\n\n[あなたの名前]",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "全体として、日本語は自然で丁寧であり、内容も質問の意図にかなり沿っています。公開の場で話すのが苦手な友人に対して、無理強いせず、共感と友情を込めて「ことばの会」への参加をやさしく勧めており、トーンも親しみやすく配慮があります。\n\n良い点:\n- 「無理強いするつもりはありません」「一度見学だけでも」など、相手の苦手意識に配慮した表現ができている。\n- 「優しい声や温かい人柄」など、友人の良さを具体的に褒めており、励ましとして自然。\n- 全体の構成（挨拶 → 本題 → 提案 → 締め）もメールとして違和感がない。\n- 日本語表現はおおむね正しく、支離滅裂な箇所や不自然な敬語の乱用もない。\n\nやや惜しい点:\n- 「日本の親しみやすい言葉で」という条件に対して、末尾の「敬具」はややかしこまりすぎており、友人宛のカジュアルなメールとしては少し堅い印象がある。\n- 全体的に丁寧寄りで、友人同士のメールとしては、もう少しくだけた言い回し（「〜だよ」「〜かな？」など）を増やしてもよい。\n- 「ことばの会」の雰囲気や具体的な活動内容の描写がやや抽象的で、もう一歩踏み込んだ説明があると説得力が増す。\n\nとはいえ、要求された条件（説得メール／友情と共感／自然な日本語）は十分に満たしており、大きな問題は見当たりません。\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:08.482279+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**件名：一緒に「ことばの会」で新しい挑戦をしよう！**  \n\n〇〇さん、こんにちは！  \n\n最近、地元の「ことばの会」でボランティアを募集しているって知ってた？ そこで、ふとあなたのことを思い浮かべて… 実は、私も少し勇気を出して参加しようと思ってるんだ。  \n\n〇〇さんはいつも優しくて、人の話をじっくり聞いてくれる人だから、きっと「ことばの会」の皆さんにも温かい存在になれると思うんだ。公開の場で話すのが苦手だってことは知ってるけど、それは私も同じだよ。でも、一緒に少しずつ慣れていけば、きっと大丈夫だと思うんだ。  \n\nこの経験が、新しい自分に出会えるチャンスになるかもしれないし、何よりあなたと一緒なら心強いから… 一緒に挑戦してみない？ もちろん、無理強いはしないよ。でも、あなたなら絶対にできるって信じてるから。  \n\nもし興味があったら、一緒に詳細を調べてみよう！ 応援してるよ～！  \n\n（P.S. もし不安なことがあったら、いつでも相談してね）  \n\n---  \n**ポイント**  \n- 共感（自分も苦手だと共有）  \n- 友情（一緒なら大丈夫という安心感）  \n- 前向きな誘い（新しい挑戦の機会として提示）  \n- 無理強いしない姿勢（相手のペースを尊重）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:21.271773+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご友人との関係性に合わせて、少しカジュアルで温かみのある文面を作成しました。相手の不安（人前で話すことへの苦手意識）に寄り添いつつ、ハードルを下げるような構成にしています。\n\n件名や細かいニュアンスは、ご友人との距離感に合わせて調整して使ってください。\n\n***\n\n**件名：** 今度の日曜、ちょっと付き合ってくれない？（「ことばの会」の話）\n\n**本文：**\n\n〇〇、お疲れ様！\n最近どう？元気にしてるかな。\n\n実は今日メールしたのは、地元の「ことばの会」のボランティアに、〇〇を誘いたいなと思って。\n\nあ、今「えっ、人前で話すなんて絶対無理！」って顔したでしょ？（笑）\n〇〇が大勢の前で話したり、注目されたりするのが苦手なのは、昔からよーく知ってるよ。だからこそ、声をかけたんだ。\n\n「ことばの会」って名前だけ聞くと、何か立派なスピーチをしなきゃいけないみたいに感じるかもしれないけど、実際は全然違うんだよ。\n主な活動は、子供たちに絵本を読んであげたり、地域のお年寄りとゆっくりお喋りしたりすることなの。\n\n大勢の前でマイクを持って話すんじゃなくて、少人数の輪の中で、静かにお話しするようなアットホームな雰囲気なんだ。\n\n私が〇〇を誘いたいと思った一番の理由は、〇〇が「聞き上手」で、とても優しい雰囲気を持ってるからなんだよね。\n流暢にペラペラ喋る人よりも、〇〇みたいに相手のペースに合わせて、丁寧に言葉を選べる人のほうが、実はこのボランティアには向いていると思うんだ。〇〇の声や話し方って、相手を安心させる力があるから。\n\nもちろん、いきなり「やってみて」とは言わないよ！\nまずは私と一緒に、どんな雰囲気か覗きに行くだけでもどうかな？私が横についてるから、何かあったら全部私に振ってくれて大丈夫（笑）。\n\nもし「ちょっとだけなら…」って思ってくれたら嬉しいな。\nもちろん、気が進まなかったら断ってくれて全然OKだからね！\n\nまた近いうちにご飯でも行こう！\n\n（あなたの名前）より",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:10.156145+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:42.182421+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 6,
+  "category": "論理パズル",
+  "question": {
+    "original": "冷蔵庫のプリンが誰かに食べられてしまった。\nAさんは「犯人はBさんです」と発言した。 Bさん,Cさんもある発言をした。\nその後、 『犯人はAさん, Bさん, Cさんのうち誰か1人』 『犯人だけが発言で本当のことを言った』 ということが分かった。\n犯人は誰？",
+    "translation_en": "**[Purpose: Question]**  \n\nThe refrigerator's pudding was eaten by someone.  \nA said, \"The culprit is B.\" B and C also made statements.  \nIt was later revealed that:  \n1. \"The culprit is one of A, B, or C.\"  \n2. \"Only the culprit told the truth in their statement.\"  \nWho is the culprit?  \n\n*(Translation preserves the original meaning, structure, and key details for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "この謎の条件に沿って、犯人を推理してみましょう。\n最初にAさんが「犯人はBさんです」と発言しました。BさんとCさんも何らかの発言をしたが、それが何であるかは問題には記載されていません。ただし、犯人だけが発言で本当のことを言っているというのが重要な手掛かりです。\nここでいくつかの可能性を考えると：\nもしAさんが犯人だった場合、Aさんの発言は真実でなければならず、Bさんが犯人であるということになります。しかし、これは「犯人はAさん、Bさん、Cさんのうち一人」という条件に反し、かつ「犯人だけが発言で本当のことを言った」というルールにも違反します。従って、Aさんが犯人であることは論理的に不可能です。\nBさんが犯人である場合、Bさんは真実を語っているはずです。しかし、その発言が何であるかは不明ですが、Aさんが「犯人はBさんです」と発言しているため、もしBさんが本当に犯人ならAさんの発言も真実になるはずですが、これは「犯人だけが発言で本当のことを言った」という条件に反します。\nCさんが犯人であった場合、Cさんの発言が真実である必要がありますが、AさんとBさんの発言は真実ではないことになります。これは問題の条件に一致しています。\nこの推理に基づくと、犯人はCさんであると結論づけられます。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nLet’s deduce the culprit based on the given conditions.  \n\nFirst, A stated, \"The culprit is B.\" B and C also made statements, but what they said is not specified in the problem. However, the key clue is that only the culprit tells the truth in their statement.  \n\nConsidering the possibilities:  \n\n- If A were the culprit, A’s statement would have to be true, meaning B is the culprit. But this contradicts the condition that \"the culprit is one of A, B, or C\" and violates the rule that \"only the culprit tells the truth in their statement.\" Thus, A cannot be the culprit.  \n\n- If B were the culprit, B would be telling the truth. However, since A stated, \"The culprit is B,\" if B were indeed the culprit, A’s statement would also be true. This violates the condition that \"only the culprit tells the truth in their statement.\"  \n\n- If C were the culprit, C’s statement would have to be true, while A and B’s statements would be false. This aligns with the problem’s conditions.  \n\nBased on this reasoning, the culprit must be C."
+  },
+  "rubric": {
+    "original": "- 答えの犯人がCさんである:4点\n- AさんとBさんが犯人だと仮定した際に条件と相反することを読み取れている:3点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Identifies C as the culprit:** 4 points  \n- **Recognizes contradictions when assuming A or B as the culprit:** 3 points  \n- **Explanation is specific and clear:** 2 points  \n- **Natural Japanese phrasing:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English readability.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くために、各人物の発言と条件を分析します。  \n\n### 条件の整理  \n1. **犯人はAさん、Bさん、Cさんのうち誰か1人**  \n2. **犯人だけが発言で本当のことを言った**  \n   - つまり、犯人が嘘をついている場合、他の2人の発言はすべて嘘である。  \n   - 犯人が真実を言った場合、他の2人の発言はすべて嘘である。  \n\n### 各人物の可能性を検討  \n- **Aさんが犯人**の場合：  \n  - Aさんは「Bさんが犯人」と発言したが、これは嘘なのでBさんは犯人ではない。  \n  - Cさんの発言も嘘なので、Cも犯人ではない。  \n  - しかし、Aさんが犯人なら「Bさんが犯人」という発言は真実でなければならない（自分が犯人だとするとBが犯人の可能性があるため）。これは矛盾する。  \n\n- **Bさんが犯人**の場合：  \n  - Bさんは「Aさんが犯人」と発言したが、これは嘘なのでAさんは犯人ではない。  \n  - Cさんの発言も嘘なのでCも犯人ではない。  \n  - Bさんが犯人なら「Aさんが犯人」という発言は真実でなければならない（自分が犯人だとするとAが犯人の可能性があるため）。これは矛盾する。  \n\n- **Cさんが犯人**の場合：  \n  - Cさんの発言（「AさんとBさんは両方とも正しい」）は嘘なので、AさんとBさんのどちらか一方だけが正しい。  \n    - Aさんが「Bさんが犯人」と言ったのは真実かどうか？ Cが嘘をついているため、「AさんとBさんは両方とも正しい」は偽りであり、「Aさんだけが正しい」または「Bさんだけが正しい」のどちらかしかない。  \n    - もしCが「Aさんだけが正しい」と言ったら（つまり「Bさんは間違っている」）、Aさんの発言「Bさんが犯人」は偽りとなり、矛盾しない。しかし、この場合Cの発言自体も偽り（自分自身を除く）なので、「Cだけが正しい」という条件に合致する。  \n\n### 結論  \n- Cさんが「AさんとBさんは両方とも正しい」と言ったのは嘘であり、自分自身のみが正しいということになるため、**Cさんが唯一の解決策**です。  \n\nしたがって、**Cさんが犯人**です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えの犯人がCさんである:4点  \n  - 最終的に「Cさんが犯人」と結論している。  \n- AさんとBさんが犯人だと仮定した際に条件と相反することを読み取れている:1点  \n  - A犯人・B犯人のケースを検討し矛盾を述べようとしているが、「犯人だけが本当のことを言った」という条件の扱いが混乱しており、論理が破綻している部分が多い。満点は与えにくいが、一応「仮定して矛盾を探そうとしている」点のみ部分的に評価。  \n- 説明が具体的でわかりやすい:0点  \n  - 設定されていない発言内容（「Cさんの発言（『AさんとBさんは両方とも正しい』）」など）を勝手に作っており、推論過程も矛盾だらけで非常に分かりにくい。  \n- 自然な日本語である:1点  \n  - 日本語としては自然で、文法的な大きな誤りはない。  \n\n[計算式]\n4 + 1 + 0 + 1 = 6\n\n[点数]\n6\n\nFINAL SCORE: 6",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:13.489662+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この謎かけの問題を解くために、各人の発言と条件を整理してみましょう。\n\n### 条件\n1. 犯人はAさん、Bさん、Cさんのうち誰か1人。\n2. 犯人だけが発言で本当のことを言った。\n\n### 各人の発言\n- Aさん：「犯人はBさんです。」\n- Bさんの発言：不明（「犯人はCさんです」などと仮定）\n- Cさんの発言：不明（「犯人はAさんです」などと仮定）\n\n### 考察\n1. **Aさんが犯人**の場合：\n   - Aさんの発言「犯人はBさんです」は嘘になります（自分が犯人なのに他人を指す）。\n   - しかし、条件2より「犯人だけが本当のことを言った」と矛盾します。よってAさんは犯人ではない。\n\n2. **Bさんが犯人**の場合：\n   - Bさんが本当のことを言うなら、「自分以外」を指すはず（例：「Cさんが犯人」など）。\n   - しかし、Aさんは「Bさんが犯人」と言っており、これは真実なので、Bさんが本当のことを言ったことになります。これは条件2に合致します。\n\n3. **Cさんが犯人**の場合：\n   - Cさんが本当のことを言うなら、「自分以外」を指すはず（例：「Aさんが犯人」など）。\n   - この場合、Aさんの発言は嘘になりますが、Cさんの発言が真実になるため、これも条件2に合致します。\n\n### 結論\n- Aさんは絶対に犯人ではない（自分の嘘を許容しない）。\n- Bさんが犯人の場合：Aさんの「Bさんは犯人」という発言が真実となり、条件2に合致。\n- Cさんが犯人の場合：Cさんの「自分以外」（例えば「Aさんは犯人」）という発言が真実となり、条件2に合致。\n\nしかし、「Bさんは『Cさんが犯人』と言った」と仮定すると、この場合はBさんが真実を語ることになります。逆に、「Cさんは『Aさんが犯人』と言った」と仮定すると、これも真実になります。しかし、この問題では**他の人物の具体的な発言内容が不明**であるため、一意的な解答は難しいように見えます。\n\n### 最終的な推測\n問題文から直接導き出せる情報だけでは確定できませんが、「**BさんまたはCさん**」という結論になる可能性があります。しかし、一番自然な解釈としては：\n\n> **もしBさんが「自分以外」を指したならば、彼自身が真実を語っていることになるため、『B人が最有力候補』となる。**\n\nただし、この問題では他の人物の具体的な発言内容がないため、一意解には至りません。もし追加情報（例：「Bさんは『私は無関係』と言った」「Cさんは『私じゃない』と言った」）がある場合は再検討可能ですが、今回は以下のように結論付けられます：\n\n> **最も可能性が高いのは『B人がプリンを食べた』ですが、一意解には至らない。**\n\nもし他の人物の具体的な発言内容がある場合は、その情報からさらに絞り込めます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:06.300107+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "犯人は **Cさん** です。\n\n論理的に考えると以下のようになります。\n\n1.  **Aさんが犯人だと仮定した場合**\n    *   ルールにより、犯人であるAさんは「本当のこと」を言わなければなりません。\n    *   しかし、Aさんは「犯人はBさんです」と言っています。\n    *   これだとAさんとBさんの2人が犯人になってしまい、矛盾します。\n    *   よって、**Aさんは犯人ではありません**。\n\n2.  **Bさんが犯人だと仮定した場合**\n    *   Aさんは犯人ではないので、ルールにより「嘘」をつかなければなりません。\n    *   Aさんの発言「犯人はBさんです」が嘘だとすると、「犯人はBさんではない」ことになります。\n    *   これは「Bさんが犯人である」という仮定と矛盾します。\n    *   よって、**Bさんも犯人ではありません**。\n\n3.  **結論**\n    *   AさんもBさんも犯人ではないため、消去法で **Cさんが犯人** となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:35.046912+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:05.443590+00:00"
+  }
+}

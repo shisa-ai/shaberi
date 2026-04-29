@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 47,
+  "category": null,
+  "question": {
+    "original": "AさんはBさんの父親です。BさんはCさんの父親です。AさんとCさんの関係は何でしょうか？",
+    "translation_en": "**[Purpose: Question]**  \n\nA is B's father. B is C's father. What is the relationship between A and C?  \n\n*(Note: The answer is that A is C's grandfather. However, as per your instruction, I have only provided the translation of the question without adding commentary.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "AさんはBさんの父親であり、BさんはCさんの父親です。したがって、AさんはCさんの祖父（おじいちゃん）です。  \n\n関係性のまとめ：  \n- Aさん → Bさんの父親  \n- Bさん → Cさんの父親  \n→ Aさん → Cさんの祖父（おじいちゃん）  \n\nこのように、AさんとCさんは「祖父と孫」の関係にあります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "回答は論理的に正しく、「AさんはCさんの祖父」であることを明確に説明できています。  \n日本語も自然で丁寧であり、関係性を箇条書きで整理している点もわかりやすく、有用性・関連性ともに問題ありません。  \n質問の難易度に対して十分な深さと明瞭さがあり、冗長さや不自然さも見られません。\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:03.893339+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "AさんはCさんの祖父です。  \n\n理由：  \n- AさんがBさんの父親  \n- BさんがCさんの父親  \n→ したがって、AさんはCさんの父方の祖父にあたります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:04.361184+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "AさんはCさんの**祖父**（おじいさん）です。\n\n逆に、CさんはAさんの**孫**になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:59.026330+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:10.848292+00:00"
+  }
+}

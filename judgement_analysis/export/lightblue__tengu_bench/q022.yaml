@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 22,
+  "category": "長い文書要約（千トークン以上）",
+  "question": {
+    "original": "以下の文書を要約してください。\n### 文書\n私が保険会社で働いていることを知っている人から、「目の前にいる人がいつ死亡するかもわからないのに、死亡保険なんてどうして成り立つのか？」と聞かれたことがあります。予測できないことなのに、なぜ保険金の支払を約束できるのか、という問いです。\n\nたしかに、目の前の人がいつ死亡するか、わかるはずはありませんが、死亡保険が成り立つには、そのようなことを知る必要はありません。\n\n生命保険は、一定数の集団（被保険者の集団）が存在することが前提となっています。\nその集団のうちの「誰が死亡するか」ということは問題ではなく、その集団のうちの「何人が死亡するか」をある程度予測できれば、死亡保険は成立します。\n\n保険は大数の法則を基に成り立っているとよく言われます。\n「大数の法則」とは、数学の定理のひとつで、母集団の数が増えれば増えるほど、ある事柄（死亡保険の場合は死亡）の発生する割合は、 一定の値に近づき、その値は事柄の発生する確率に等しい。というものです。\n\nたとえば、死亡率が1000分の1の集団があったとします。\nこの集団の人数が、仮に1000人だったとすると、死亡する人数の期待値は1人ということになりますが、実際には、2人死亡するかも知れないし、誰も死なないかもしれません。\n前者の場合、死亡した人の割合は死亡率の倍の1000分の2で、後者の場合はゼロです。\nどちらも死亡率には一致しません。死亡者が1人のときだけ、割合が確率に一致します。\n\nこの集団が100万人になると死亡者の期待値は1000人になります。\nここまで人数が増えると死亡者が増えても減っても、その差はせいぜい数十人くらいにとどまり、よっぽどのことがない限り、実際の死亡者が倍の2000人になったり、ゼロだったりすることはないでしょう。つまり、人数が増えることによって、死亡する割合が死亡率である1000分の1に近づいていくことがわかります。\n\n逆に死亡率がわからないときでも、この大数の法則を利用すれば、死亡率を推定することができます。これが、保険は大数の法則を基に成り立っていると言われる理由です。\n\nところで、この「大数の法則」が成り立つには、いくつかの条件があります。\n(1) そもそも「死亡という事象」に確率があること\n(2) その集団内のどのメンバーも死亡する「確率」が等しい\n(3) あるメンバーの死亡と別のメンバーの死亡との間に何の関係もない（独立している）\n\n(1)については、そもそも「確率とは何ぞや」という哲学的な問いに発展してしまいそうですが、とりあえずは、（生命保険の歴史からみて）経験的に成り立っているのだ、というしかないと思います。\n\n(2)の条件については、年齢・性別ごとの死亡率を使用している上に、なるべく健康状態等の条件が均質になるように選択を行うことによって成立しているとみなされます。\n\n(3)は、伝染病や地震などの災害の場合は成り立たなくなってしまいますが、そういった場合を除けば、赤の他人同士の死亡には何の関係もないと思って問題ないでしょう。\n\nちなみに、「集団の規模がどれくらいになれば、大数の法則が働くのか？」というようなことをしばしば聞かれます。数学の定理が「働く」というのは、不思議な言葉の使い方です。この「大数の法則が働く」というのは、「集団の規模が大きくなれば、その割合は一定値に近いところに落ち着く（ばらつきが減る）」くらいの意味に使われていて、すでに慣用化してしまっているようです。\nもっとも、（投資の話でよく出てくる）「分散効果」が効いていると言っても同じはずなんですが。",
+    "translation_en": "Here is the translation of the provided Japanese text into natural, clear English suitable for evaluation documentation:  \n\n---  \n\n**Summary of the Document**  \n\nI was once asked by someone who knew I worked for an insurance company: *\"How can death insurance even work when you can’t predict when the person in front of you will die?\"* The question was about how insurance companies can promise to pay out death benefits when death is unpredictable.  \n\nWhile it’s true that we can’t know when any specific individual will die, death insurance doesn’t require knowing that. Instead, it relies on the existence of a large group of insured individuals. The key isn’t *\"who\"* will die, but *\"how many\"* will die within that group—and we can predict that number to a reasonable degree.  \n\nInsurance is often said to be based on the **law of large numbers**. This mathematical theorem states that as the size of a population increases, the observed rate of an event (in this case, death) will converge toward its true probability.  \n\nFor example, if a group has a mortality rate of 1 in 1,000, and the group consists of 1,000 people, the expected number of deaths is one. However, in reality, two people might die, or no one might die. In the first case, the death rate would be 2/1,000, and in the second, it would be zero—neither matching the expected rate. Only when exactly one person dies does the observed rate align with the probability.  \n\nIf the group grows to 1 million people, the expected number of deaths becomes 1,000. At this scale, even if the actual number of deaths deviates slightly (e.g., 1,020 or 980), the difference is negligible, and the observed death rate will closely approximate 1 in 1,000. Thus, as the group size increases, the observed rate converges toward the expected probability.  \n\nConversely, even if the mortality rate is unknown, the law of large numbers allows us to estimate it. This is why insurance is said to be based on this principle.  \n\nHowever, the law of large numbers holds under certain conditions:  \n1. The event (death) must have a probability.  \n2. Each member of the group must have an equal probability of dying.  \n3. The deaths of different members must be independent (unrelated).  \n\nRegarding (1), while the philosophical question of *\"what is probability?\"* could arise, we can pragmatically assume it holds based on historical data in life insurance.  \n\nFor (2), insurers use mortality rates stratified by age and gender and select insured individuals with relatively homogeneous health conditions to ensure equal probabilities.  \n\nFor (3), the law may not hold in cases of epidemics or disasters where deaths are correlated, but for unrelated individuals, deaths are generally independent.  \n\nA common question is: *\"How large must a group be for the law of large numbers to apply?\"* The phrase *\"the law works\"* is a colloquial way of saying that as the group size increases, the observed rate stabilizes (variance decreases). This is essentially the same as the *\"diversification effect\"* often discussed in finance.  \n\n---  \n\nThis translation preserves the original meaning, technical details, and logical flow while ensuring clarity and natural English phrasing. Let me know if you'd like any refinements!"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - なぜ死亡(生命)保険の支払いを約束できるのかについての文章である:2点\n  - 死亡(生命)保険は一定数の被保険者の集団が存在することが前提である:2点\n  - 死亡(生命)保険は死亡率についての大数の法則に基づく:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Explanation of why life insurance payments can be guaranteed: **2 points**  \n  - Life insurance is based on the premise of a defined group of policyholders: **2 points**  \n  - Life insurance relies on the law of large numbers regarding mortality rates: **2 points**  \n- **Preserves logical relationships in the text:** **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "### 要約  \n**死亡保険の成立理由：大数の法則**  \n\n「目の前の人がいつ死亡するか分からないのに、なぜ死亡保険が成立するのか？」という問いに対し、死亡保険は特定の個人ではなく、**一定数の集団（被保険者）全体での死亡率を予測**することで成立します。  \n\n**大数の法則**は、母集団が大きくなるほど、事象（死亡）の発生割合が確率に近づくという数学的原理です。例えば、1000人の集団で死亡率1%であれば、期待値は1人ですが、実際には0～2人まで変動します。しかし、集団が100万人になると、実際の死亡者は約100人となり、その割合は確率1%に近づきます。  \n\nこの原理により、死亡率を推定し保険金支払いを約束できます。ただし、大数の法則が成り立つためには以下の条件が必要です：  \n1. 死亡に確率がある（経験的に成り立つ）  \n2. 各メンバーの死亡確率が等しい（年齢・性別などの均質化で達成）  \n3. メンバー間の独立性がある（災害時など例外あり）  \n\n「大数の法則が働く」という表現は慣用的なもので、「集団規模が大きくなれば割合が安定する」という意味です。これは投資における分散効果と同様の概念です。  \n\n### キーポイント  \n- 死亡保険は個人ではなく集団での予測に基づく  \n- 大数の法則：母集団規模が大きいほど確率に近づく  \n- 成立条件：確率性・均一性・独立性  \n- 集団規模の大きな影響と安定化",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- なぜ死亡(生命)保険の支払いを約束できるのかについての文章である:2点  \n  - 冒頭で「なぜ死亡保険が成立するのか？」という問いに答えており、支払いを約束できる理由を説明している。\n- 死亡(生命)保険は一定数の被保険者の集団が存在することが前提である:2点  \n  - 「一定数の集団（被保険者）全体での死亡率を予測することで成立」と明記している。\n- 死亡(生命)保険は死亡率についての大数の法則に基づく:2点  \n  - 大数の法則の説明と、それにより死亡率を推定し保険金支払いを約束できると述べている。\n- 文章中の論理関係を保存している:2点  \n  - 質問 → 集団と死亡率 → 大数の法則の説明 → 条件 → 表現「大数の法則が働く」の意味、という元文の論理の流れを概ね保っている。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語になっている。\n- 要約として適切な短さである:0点  \n  - 見出しや箇条書き、例示などが多く、元の文章に対してやや冗長で、要約としては短くない。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 0 = 9\n\n[点数]\n9\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.831662+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**要約：**  \n\n「目の前の人がいつ死亡するかは予測できないのに、なぜ死亡保険が成り立つのか？」という疑問に対し、生命保険は「大数の法則」に基づいて成立しているという説明がなされています。  \n\n- **大数の法則**：集団の規模が大きくなると、死亡率などの割合は確率に近づき、ばらつきが減る。  \n  - 例：1000人中1人が死亡する確率（1000分の1）でも、実際には0～2人と変動するが、100万人ならば約1000人に近づく。  \n- **成立条件**：  \n  (1) 死亡に確率があること（経験的に確認）。  \n  (2) 集団内で死亡確率が均一（年齢・性別ごとに調整）。  \n  (3) 個人の死亡が独立していること（災害時など例外あり）。  \n\n保険会社は個々の予測ではなく、「集団全体での死亡者数」を統計的に予測し、保険金を支払う仕組みです。集団規模が大きいほど、大数の法則により精度が高まります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:38.068581+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提示された文書の要約は以下の通りです。\n\n**要約：生命保険が成り立つ仕組みと「大数の法則」**\n\n生命保険は、個人の死亡時期を予測するのではなく、**集団全体で「何人が死亡するか」を予測する**ことで成り立っています。これを支えているのが数学の定理である**「大数の法則」**です。\n\n*   **大数の法則の概要**\n    母集団の数が増えれば増えるほど、事象（死亡）が発生する割合は一定の確率に近づき、ばらつきが減少します。これにより、保険会社は死亡率を正確に推定できます。\n\n*   **法則が成立するための3つの条件**\n    1.  **確率の存在：** 死亡という事象に確率が存在すること（経験的に成立）。\n    2.  **確率の均等性：** 集団内のメンバーの死亡確率が等しいこと（年齢・性別・健康状態などで区分けして調整）。\n    3.  **事象の独立性：** ある人の死亡が他の人の死亡に影響しないこと（伝染病や大規模災害時を除く）。\n\nつまり、十分な規模の集団を確保し、条件を整えることで死亡率の予測が安定し、保険制度の運営が可能になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:34.539485+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:36:21.099477+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 41,
+  "category": null,
+  "question": {
+    "original": "82歳の男性が24歳の友人と、ここ数十年で政治がどれだけ変わったかについて話していました。\nQ: 誰が政治の変化を批判しているのでしょうか？\n選択肢\n- 82歳の男性\n- 24歳の友人\n- 情報不足",
+    "translation_en": "**[Purpose: question]**  \n\nAn 82-year-old man was discussing with his 24-year-old friend how much politics has changed in recent decades.  \n**Q: Who is criticizing the changes in politics?**  \n**Options**  \n- The 82-year-old man  \n- The 24-year-old friend  \n- Not enough information  \n\n*(Note: The translation maintains the original structure and meaning while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この質問に対する最適な回答は「情報不足」です。以下にその理由を説明します。  \n\n1. **文脈の不明瞭さ**：問題文では、82歳の男性と24歳の友人が「政治がどれだけ変わったか」について話していることが述べられていますが、誰が具体的に政治の変化を批判しているかは明示されていません。  \n2. **批判の有無の不確実性**：両者が議論しているだけで、必ずしも批判的な意見を述べているとは限りません。彼らは単に政治の変化について意見交換をしている可能性もあります。  \n3. **選択肢の検討**：  \n   - 82歳の男性：年齢からすると過去の政治変化を知ることができるかもしれませんが、必ずしも批判的であるとは限りません。  \n   - 24歳の友人：若い世代として現代の政治に敏感かもしれませんが、批判的な意見を持っているかは不明です。  \n   - 情報不足：問題文から直接的に誰が批判しているかはわからないため、この選択肢が最も適切です。  \n\nしたがって、与えられた情報からは誰が政治の変化を批判しているかを特定することはできず、「情報不足」が最も正確な回答となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "5\n\n理由:\n- 回答は選択肢として「情報不足」が最適であると明確に述べており、正解と一致している。\n- なぜ「情報不足」が適切なのかを、文脈の不明瞭さ・批判の有無の不確実性・各選択肢の検討という形で丁寧に説明しており、採点基準の「正解している上に理由を説明している」に該当する。\n- 日本語も自然で、不自然さや事実誤認も見られない。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:48.460545+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この状況では、**情報不足**が最も適切な回答です。会話の内容や双方の意見が具体的に示されていないため、誰が政治の変化を批判しているのかを判断するには不十分な情報しかありません。  \n\n- **82歳の男性**は長年の経験から政治の変化を指摘する可能性がありますが、必ずしも批判的であるとは限りません。  \n- **24歳の友人**は若い世代として現状に不満を持つかもしれませんが、同様に批判的であるとは断定できません。  \n\nしたがって、与えられた情報だけでは「誰が批判しているか」を特定できず、**情報不足**と判断します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:11.663715+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **情報不足** です。\n\n**理由:**\n提供された文章には、二人が「政治の変化について話している」ことしか書かれていません。その変化に対してどちらかが批判的であるか、あるいは肯定的であるかといった意見の内容が記述されていないため、判断することができません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:57.758263+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:47.641948+00:00"
+  }
+}

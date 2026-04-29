@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 78,
+  "category": "日本",
+  "question": {
+    "original": "2025年の海の日はいつですか",
+    "translation_en": "**[Purpose: Question]**  \n\nWhat is the date of Marine Day in 2025?  \n\n*(Note: The translation maintains the original phrasing while ensuring natural English for evaluation documentation. The question is kept direct and clear, preserving the intent of the original Japanese.)*"
+  },
+  "answer": {
+    "gold_original": "2025年の海の日は、7月21日（月曜日）です。海の日は、1996年から日本で設けられた国民の祝日で、2003年までは7月20日でしたが、2003年の祝日法の改正により、「ハッピーマンデー制度」の導入され、7月の第3月曜日に変更されました。この制度は、週末と連休を作ることで国民の憩いの時間を増やし、観光などの経済活動を活性化する目的があります。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe Marine Day holiday in 2025 will be observed on Monday, July 21st. Marine Day is a national holiday in Japan established in 1996. Until 2003, it was celebrated on July 20th, but following a revision of the Holiday Law in 2003, it was moved to the third Monday of July as part of the \"Happy Monday System.\" This system aims to create longer weekends and holidays to increase leisure time for citizens and stimulate economic activities such as tourism.  \n\n*(Note: The translation preserves the original meaning, details, and formal tone suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 海の日が7月の第3月曜日であることを示している:3点\n- 2025年の海の日が7月21日であることを示している:4点\n- 海の日についての詳細な説明を含む:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates that Marine Day is on the third Monday of July:** 3 points  \n- **Indicates that Marine Day in 2025 falls on July 21st:** 4 points  \n- **Includes a detailed explanation about Marine Day:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "2025年の海の日は、**7月20日（日）**です。  \n\n海の日は毎年7月20日に祝われますが、2025年は日曜日が当日で、祝日の効果もあります。  \n\n詳細な情報やイベントについては、各自治体や関連団体の発表をご確認ください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 海の日が7月の第3月曜日であることを示している:0点  \n  - 「毎年7月20日に祝われます」と誤った説明をしており、第3月曜日であることに触れていない。\n- 2025年の海の日が7月21日であることを示している:0点  \n  - 「7月20日（日）」と誤った日付を示している。\n- 海の日についての詳細な説明を含む:0点  \n  - 制度や由来などの説明がなく、「毎年7月20日」と誤情報のみで詳細とは言えない。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n0 + 0 + 0 + 1 = 1\n\n[点数]\n1\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:05.196392+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "日本の警察官の階級で4番目に高いのは「警視正」です。  \n\n1. 警察庁長官  \n2. 警視総監（東京都のみ）  \n3. 警視監  \n4. **警視正**  \n5. 警視  \n\n警視正は主に警察本部の部長や方面本部長などを務め、重要な指揮官としての役割を担います。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:23.926913+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "日本の警察官の階級（全9階級）において、上から4番目に位置するのは**警視正（けいしせい）**です。\n\n上位からの順序は以下の通りです。\n\n1. 警視総監（けいしそうかん）\n2. 警視監（けいしかん）\n3. 警視長（けいしちょう）\n4. **警視正（けいしせい）**\n5. 警視（けいし）\n   ...（以下続く）\n\n**補足:**\n*   **役職の目安:** 大規模な警察署の副署長や、中小規模の警察署の署長などがこの階級にあたります。\n*   **身分:** この階級（警視正）以上は、都道府県警察に所属していても身分は「国家公務員（地方警務官）」となります。\n\n※なお、警察庁長官は警察官のトップですが、階級制度の枠外（階級を持たない唯一の警察官）という扱いになるため、階級としての1位は警視総監となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:47.124273+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:07.846442+00:00"
+  }
+}

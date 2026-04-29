@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 36,
+  "category": "敬語",
+  "question": {
+    "original": "以下の文章を敬語に直してください\n### 文章\n今回のマネジメント講演会で、企業で必要なリーダー像やチーム全体や部下のマネジメント方法について学んだ。 特に、講演で話していた「部下とのコミュニケーションは積極的に上司が取らなければならない」ことや「大勢の前で指導してはいけない」みたいなことが印象に残った。 これらは自分が意識できていなかったことで、部下とのコミュニケーションが少なかったことや、指導の仕方が不適切だったことを認識し、すごく反省した。 これからは、積極的に部下とコミュニケーションを取るとともに、指導方法についてもこの講演会のことを思い出しながらチーム全体の士気を高めていくよう努めていくつもり",
+    "translation_en": "### Polished Version (with honorifics and formal tone)  \n\nAt this management lecture, I learned about the qualities of leaders needed in a company and methods for managing teams and subordinates. In particular, the points made during the lecture—that \"managers must proactively communicate with their subordinates\" and that \"one should not reprimand in front of a large group\"—left a strong impression on me. I realized that I had not been mindful of these aspects, and I deeply regretted my lack of communication with my subordinates and my inappropriate guidance. Moving forward, I intend to actively engage in communication with my team and improve my guidance methods, keeping in mind the insights from this lecture, in order to enhance the morale of the entire team.  \n\n(Note: Adjustments were made to elevate the formality and politeness while preserving the original meaning. Key phrases were refined for a more professional tone suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "今回のマネジメント講演会におきまして、企業で求められるリーダー像や、チーム全体及び部下のマネジメント方法について拝聴いたしました。特に、講演でお話しになられた「部下とのコミュニケーションは積極的に上司が取り組むべきである」ことや、「多くの人の前での指導を避けるべきである」といった点が、大変印象に残りました。これらの指摘は、私が十分意識してこなかった事項であり、部下とのコミュニケーションが不足していたことや、指導の方法に適切さを欠いていたことを深く反省するところでございます。今後は、積極的に部下とのコミュニケーションを図ると共に、指導方法についても本講演会の内容を念頭におきながら、チーム全体の士気の向上に努めて参りたいと存じます。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nAt this management lecture, I listened to discussions on the type of leader desired in a company and methods for managing both the entire team and subordinates. In particular, the points raised during the lecture—that \"communication with subordinates should be actively pursued by supervisors\" and that \"guidance should be avoided in front of many people\"—left a strong impression on me. These observations highlighted areas where I had not been sufficiently mindful, leading me to deeply reflect on my insufficient communication with subordinates and the inadequacy of my guidance methods. Moving forward, I intend to proactively engage in communication with my team and improve my guidance approach, keeping the content of this lecture in mind, in order to enhance the overall morale of the team.  \n\n(Translation preserves the original meaning, tone, and key details while ensuring natural and clear English suitable for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 全ての文が敬語表現にされている:3点\n- 文章の意味内容に変更がないように敬語に変換されている:3点\n- 正しい敬語の用法である:3点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- All sentences are converted to polite/formal language: **3 points**  \n- The meaning of the text remains unchanged after conversion to polite/formal language: **3 points**  \n- Uses correct and appropriate polite/formal language: **3 points**  \n- Sounds natural in Japanese: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下に敬語に直した文章を示します。  \n\n---  \n\n**今回のマネジメント講演会では、企業において求められるリーダー像や、チーム全体および部下を統率するためのマネジメント方法について学ばせていただきました。特に講演者が指摘されていた「部下とのコミュニケーションは積極的に上司が行うべきである」という点や、「大勢の前で指導することは避けるべきである」といった教訓が心に深く刻まれました。これらは私自身の意識不足によるものであり、部下とのコミュニケーション不足や指導方法の不適切さを自覚し、大変反省いたしました。**  \n\n**これからは、積極的に部下とコミュニケーションを図るとともに、講演会で学んだ知見を活かし、適切な指導方法を心がけながらチーム全体の士気向上に努めていきたいと考えております。**  \n\n---  \n\nこのように表現することで、より丁寧でプロフェッショナルな印象になります。必要に応じてさらに調整可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 全ての文が敬語表現にされている:3点  \n  - 「学ばせていただきました」「反省いたしました」「努めていきたいと考えております」など、全体として丁寧語・謙譲語で統一されている。\n- 文章の意味内容に変更がないように敬語に変換されている:2点  \n  - 大筋は維持されているが、「すごく反省した」→「大変反省いたしました」などは問題ない一方、「この講演会のことを思い出しながら」が「講演会で学んだ知見を活かし」とやや意味が広がっており、若干の意訳がある。\n- 正しい敬語の用法である:3点  \n  - 「学ばせていただきました」「反省いたしました」「努めていきたいと考えております」など、誤用は見られない。\n- 自然な日本語である:1点  \n  - ビジネス文書として自然で読みやすい敬語表現になっている。\n\n[計算式]\n3 + 2 + 3 + 1 = 9\n\n[点数]\n9\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.344595+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 敬語に直した文章  \nこの度のマネジメント講演会において、企業が求めるリーダーシップ像や、チーム全体および部下のマネジメント方法について学習させていただきました。特に、講演の中でご指摘いただいた「部下とのコミュニケーションは上司が積極的に行うべきである」という点や、「多くの人前での指導は避けるべき」という点が印象深く残りました。これらの点は、私自身が十分に意識できていなかったことであり、部下とのコミュニケーション不足や指導方法の不適切さを認識し、大変反省しております。今後は、積極的に部下とのコミュニケーションを図るとともに、本講演会での教訓を胸に、指導方法を見直し、チーム全体の士気向上に努めてまいります。  \n\n（変更点：  \n- 「学んだ」→「学習させていただきました」  \n- 「話していた」→「ご指摘いただいた」  \n- 「自分が～できていなかった」→「私自身が～できていなかったことであり」  \n- 「すごく反省した」→「大変反省しております」  \n- 「思い出しながら～努めていくつもり」→「教訓を胸に～努めてまいります」）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:43.173001+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提出先や相手との関係性に合わせて、いくつかパターンを用意しました。状況に合わせて使い分けてください。\n\n### パターン1：標準的なビジネス報告（上司への報告書や日報など）\n最も汎用性が高く、自然な敬語表現です。\n\n今回のマネジメント講演会では、企業に必要なリーダー像や、チーム全体および部下のマネジメント方法について学びました。\n特に、講演の中で触れられていた「上司から積極的に部下とコミュニケーションを取るべきである」という点や、「大勢の前で指導をしてはいけない」といった点が印象に残りました。\nこれらは私自身が意識できていなかった点であり、部下とのコミュニケーション不足や、指導方法が不適切であったことを認識し、深く反省いたしました。\n今後は、積極的に部下とコミュニケーションを図るとともに、指導方法についても本講演の内容を活かし、チーム全体の士気を高められるよう努めていきたいと考えております。\n\n---\n\n### パターン2：より丁寧・硬めの表現（役員への報告や公式な研修レポート）\n「〜つもり」を「〜所存です」にするなど、より改まった表現にしています。\n\nこの度のマネジメント講演会におきまして、企業に求められるリーダー像や、チームおよび部下のマネジメント手法について学ばせていただきました。\nとりわけ、講師の方が仰っていた「上司から積極的にコミュニケーションを図る重要性」や「大勢の前での指導は避けるべきである」といった点が強く印象に残っております。\nこれらは私自身、これまで十分に意識できていなかった点であり、部下との対話不足や指導方法の至らなさを痛感し、深く反省いたしました。\n今後は、部下とのコミュニケーションを積極的に行うとともに、ご教授いただいた指導方法を実践し、チーム全体の士気向上に努めてまいる所存です。\n\n---\n\n### 修正のポイント\n元の文章から、ビジネス文書として適切になるよう以下の言葉を変換しています。\n\n*   **「学んだ」** → 「学びました」「学ばせていただきました」\n*   **「話していた」** → 「お話しされていた」「仰っていた」「触れられていた」\n*   **「〜みたいなこと」** → 「〜といった点」「〜という内容」\n*   **「自分が」** → 「私自身が」\n*   **「すごく反省した」** → 「深く反省いたしました」「痛感いたしました」\n*   **「〜つもり」** → 「〜と考えております」「〜所存です」",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:37.881559+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:38:25.695648+00:00"
+  }
+}

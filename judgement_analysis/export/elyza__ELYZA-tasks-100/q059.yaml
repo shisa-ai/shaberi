@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 59,
+  "category": null,
+  "question": {
+    "original": "自動運転に懐疑的な太郎は、友人と「2030年以降、ほとんどの道路を自動運転車が走ることはないだろう」という賭けをした。  翌日、太郎は自動運転車のコンピュータ・ビジョン・システムに不可欠なライダー（LIDAR）技術に関する最新研究を紹介する会議に出席した。その後太郎は友人に賭けをなかったことにしないかと持ちかけた。 次のうち妥当なものを選んでください。\n選択肢:\n- 太郎はLIDARの会議で自動運転車の会社に投資した。\n- 太郎はまだ、自動運転車は今世紀中にうまくいかないと考えている。\n- 太郎は、LIDAR技術がうまくいかないことを示唆する何かを会議で学んだ。\n- 太郎は会議で自動運転技術の実現可能性に関する信念を変えなかった。\n- 太郎は会議で何かを学び、LIDAR技術に驚いた。",
+    "translation_en": "**Translation:**  \n\n*Taro, who is skeptical about autonomous driving, made a bet with a friend that \"by 2030, most roads will not be driven by autonomous vehicles.\" The next day, Taro attended a conference presenting the latest research on LIDAR technology, which is essential for the computer vision systems of autonomous vehicles. Afterward, Taro suggested to his friend that they should call off the bet. Choose the most appropriate option from the following:*  \n\n**Options:**  \n- Taro invested in an autonomous vehicle company at the LIDAR conference.  \n- Taro still believes that autonomous vehicles will not succeed this century.  \n- Taro learned something at the conference that suggested LIDAR technology would fail.  \n- Taro did not change his belief about the feasibility of autonomous driving technology at the conference.  \n- Taro learned something at the conference and was impressed by LIDAR technology.  \n\n*(Note: The correct answer is likely the last option, as the context implies Taro reconsidered the bet after learning about LIDAR's advancements.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "最も妥当な選択肢は以下の通りです。  \n\n**「太郎は会議で何かを学び、LIDAR技術に驚いた。」**  \n\n理由：  \n- 太郎は自動運転に懐疑的で、友人と賭けをしていたが、LIDAR技術に関する最新研究会議に出席した。  \n- 会議で新たな知識を得たことで、自動運転技術に対する見方が変わった可能性が高い。  \n- 「LIDAR技術がうまくいかないことを示唆する何かを学んだ」という選択肢も考えられるが、会議の内容から直接的な否定的な情報を得たとは限らない。  \n- 「太郎はまだ自動運転車は今世紀中にうまくいかないと考えている」という選択肢は、会議後の太郎の行動（賭けをなかったことにしようとしたこと）と矛盾するため不適切。  \n- 「太郎はLIDARの会議で自動運転車の会社に投資した」という選択肢は、会議後の行動から直接導き出せないため不適切。  \n\nしたがって、「太郎は会議で何かを学び、LIDAR技術に驚いた」が最も自然な流れです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "この回答は、正解の選択肢を正しく選び、その理由も複数の選択肢を比較しながら丁寧に説明できています。  \n日本語も自然で、問題文の状況（太郎が賭けを取り消したいと申し出た理由）と整合的に解釈できており、減点要素はありません。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:47.841446+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "最も妥当な選択肢は以下の通りです。  \n\n**「太郎は会議で何かを学び、LIDAR技術に驚いた。」**  \n\n### 理由：  \n1. **賭けの撤回の動機**：太郎が賭けをなかったことにしたいと持ちかけたということは、会議で得た情報が彼の見通し（2030年以降も自動運転車が普及しない）に疑問を投げかけた可能性が高い。  \n2. **LIDAR技術の重要性**：LIDARは自動運転車のセンシングに不可欠な技術であり、その進歩や課題に関する新情報は太郎の認識を変える可能性がある。  \n3. **他の選択肢との比較**：  \n   - 「投資した」→ 賭け撤回とは直接関係ない。  \n   - 「まだうまくいかないと考えている」→ 賭け撤回と矛盾する。  \n   - 「LIDAR技術がうまくいかないことを示唆する何かを学んだ」→ これなら賭けを続けるはず（撤回する理由にならない）。  \n   - 「信念を変えなかった」→ 賭け撤回と矛盾する。  \n\nしたがって、太郎は会議でLIDAR技術について新たな知見を得て、自動運転車の将来性について考え直したと推測できます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:20.618099+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は：\n**太郎は会議で何かを学び、LIDAR技術に驚いた。**\n\n**解説:**\n太郎はもともと自動運転に懐疑的で、「2030年までに普及しない」という方に賭けていました。しかし、会議に出席した直後に賭けをなかったことにしようとしています。これは、彼が「賭けに負ける（つまり、自動運転が普及する）」可能性が高いと感じたことを意味します。したがって、会議でLIDAR技術の進歩を目の当たりにし、その技術に驚き、自動運転の実現可能性について考えを改めたと推測するのが最も妥当です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:58.433972+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:33.012845+00:00"
+  }
+}

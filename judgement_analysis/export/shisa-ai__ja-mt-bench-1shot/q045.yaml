@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 45,
+  "category": null,
+  "question": {
+    "original": "以下の文を注意深く読み、説明を含む質問に答えてください：\n小さな会社では、駐車スペースはトップエグゼクティブ：CEO、社長、副社長、秘書、財務官が予約しています。駐車場のガードは、車の色を見るだけで車が正しく駐車されているかどうかを一目で確認できます。車の色は黄色、緑、紫、赤、青で、エグゼクティブの名前は和也、明、桃子、健一、恵です。\n\n最初のスペースには赤い車があります。\n青い車は赤い車と緑の車の間に駐車されています。\n最後のスペースには紫色の車があります。\n秘書は黄色の車を運転しています。\n和也の車は健一の隣に駐車されています。\n恵は緑の車を運転しています。\n明の車は桃子と恵の間に駐車されています。\n健一の車は最後のスペースに駐車されています。\n質問：秘書の名前は何ですか？",
+    "translation_en": "**[Purpose: Question]**  \n\nRead the following passage carefully and answer the question with an explanation:  \n\nIn a small company, parking spaces are reserved for top executives: the CEO, President, Vice President, Secretary, and Treasurer. The parking attendant can instantly verify whether a car is parked correctly by simply looking at its color. The car colors are yellow, green, purple, red, and blue, and the executives' names are Kazuya, Aki, Momoko, Kenichi, and Megumi.  \n\n- The first space has a red car.  \n- The blue car is parked between the red and green cars.  \n- The last space has a purple car.  \n- The Secretary drives a yellow car.  \n- Kazuya's car is parked next to Kenichi's.  \n- Megumi drives a green car.  \n- Aki's car is parked between Momoko and Megumi.  \n- Kenichi's car is parked in the last space.  \n\n**Question:** What is the Secretary's name?  \n\n---  \n\n**Answer:** The Secretary's name is **Momoko**.  \n\n**Explanation:**  \n1. The last space has a purple car (Kenichi's car is in the last space, so it must be purple).  \n2. The first space has a red car.  \n3. The blue car is between the red and green cars, so the order is: Red, Blue, Green.  \n4. Megumi drives the green car, so the order is: Red, Blue, Green (Megumi).  \n5. Aki's car is between Momoko and Megumi, so the order is: Momoko, Aki, Megumi (Green).  \n6. Kazuya's car is next to Kenichi's (purple), so Kazuya's car must be yellow (since the Secretary drives the yellow car).  \n7. The only remaining name is **Momoko**, who must be the Secretary.  \n\nThus, the Secretary's name is **Momoko**."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "与えられた情報を整理し、質問に答えましょう。  \n\n1. **秘書の名前**：文中で「秘書は黄色の車を運転しています」と明記されていますが、名前は直接示されていません。しかし、エグゼクティブの名前と車の色の対応関係から推測できます。  \n   - 黄色の車を運転している秘書は、**和也**（CEO）ではありません（和也は赤い車を運転）。  \n   - **明**（社長）は青い車を運転（和也と健一の隣に駐車）し、**桃子**（副社長）は紫色の車を運転（最後のスペース）です。  \n   - したがって、黄色の車を運転している秘書は **恵**（財務官）または **健一**（最後のスペースに駐車）のどちらかですが、健一は最後のスペースに駐車しているため、黄色の車を運転しているのは **恵** です。  \n\n2. **確認**:  \n   - 恵は緑の車を運転しているとありますが、これは矛盾しています。文脈から推測すると、「秘書は黄色の車を運転しています」という記述が正しく、恵が黄色の車を運転していると解釈するのが適切です。  \n\n3. **結論**: 秘書の名前は **恵** です。  \n\nただし、この問題には矛盾点があります。文中で「秘書は黄色の車を運転しています」とありつつ、「恵は緑の車を運転しています」とも記載されています。これら2つの情報が同時に成立することは不可能なため、おそらく問題文に誤りがある可能性があります。正しい解答として「秘書は恵」ですが、この矛盾点には注意が必要です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "この回答は論理パズルとしての扱い方に重大な問題があります。\n\n1. **与えられた条件の無視・改変**  \n   - 問題文には明確に「秘書は黄色の車を運転しています」「恵は緑の車を運転しています」とあり、これは「秘書＝黄色の車」「恵＝緑の車」という2つの事実を同時に満たす必要があります。\n   - にもかかわらず回答では、「恵が黄色の車を運転していると解釈するのが適切」として、問題文の「恵は緑の車を運転しています」という条件を事実上捨てています。論理パズルでは、与えられた条件を勝手に書き換えるのは誤りです。\n\n2. **根拠のない役職の付与**  \n   - 回答中に「和也（CEO）」「明（社長）」「桃子（副社長）」「恵（財務官）」などと役職を割り当てていますが、問題文には誰がどの役職か一切書かれていません。  \n   - これは完全な創作であり、問題文に基づかない情報を前提に推論しているため、解答の信頼性を大きく損ねています。\n\n3. **論理展開の破綻**  \n   - 「黄色の車を運転している秘書は、和也（CEO）ではありません（和也は赤い車を運転）」などと述べていますが、「和也は赤い車を運転」という事実も問題文にはありません。「最初のスペースには赤い車があります」とあるだけで、誰の車かは未定です。\n   - その後も「明は青い車」「桃子は紫の車」など、問題文にない前提を積み重ねて結論を出しており、論理パズルとしての解法になっていません。\n\n4. **矛盾の扱い方が不適切**  \n   - 回答は「恵は緑の車を運転しているとありますが、これは矛盾しています」と述べ、問題文側に誤りがあるかのように処理しています。しかし、論理パズルとしてはまず全条件を用いて配置を試み、そこから一貫した解が得られるかどうかを検証すべきです。\n   - 実際には、与えられた全条件をきちんと整理すれば、誰が秘書かを一意に決められる可能性がありますが、回答はその作業を行っていません。\n\n5. **日本語の自然さ**  \n   - 日本語自体は大きく不自然ではなく、文法的にも概ね問題ありません。\n   - ただし、内容が問題文と食い違うため、読み手にとっては混乱を招く文章になっています。\n\n総合すると、この回答は：\n- 問題文にない情報を勝手に付け足している\n- 与えられた条件を破棄・改変している\n- 論理パズルとしての解法手順を踏んでいない\nという点で、内容面の評価はかなり低くなります。日本語の形式面は悪くないものの、論理性・正確性の欠如が致命的です。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:09.643689+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この謎を解くために、与えられた情報を整理してみましょう。  \n\n1. **駐車スペースの配置**  \n   - 最初：赤い車  \n   - 真ん中：青い車（赤と緑の間）  \n   - 最後：紫色の車  \n\n2. **人物と車の色**  \n   - 秘書：黄色の車  \n   - 恵：緑の車  \n   - 健一：最後（紫色）  \n\n3. **その他の条件**  \n   - 和也と健一は隣り合っている。  \n   - 明は桃子と恵（緑）の間。  \n\n### 解析ステップ  \n1. **最後のスペースは紫色で健一**なので、健一＝紫。和也は健一の隣なので、和也＝青（真ん中）。  \n2. **最初が赤で、青（和也）は赤と緑の間**なので、配置は「赤・青・緑・黄・紫」。秘書は黄色なので4番目。  \n3. **明は桃子と恵（緑）の間**なので、明＝赤（最初）、桃子＝黄色（秘書）。  \n\n### 結論  \n- 秘書は「桃子」です。  \n\n### 確認用表  \n| スペース | 色     | 人物 |\n|----------|--------|------|\n| 1        | 赤     | 明    |\n| 2        | 青     | 和也  |\n| 3        | 緑     | 恵    |\n| 4        | 黄     | 桃子  |\n| 5        | 紫     | 健一  |\n\nしたがって、秘書の名前は「桃子」です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:23.769537+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "秘書の名前は**和也**です。\n\n以下に、答えに至るまでの論理的な手順を説明します。\n\n**ステップ1：車の色の配置を特定する**\n1.  「最初のスペースには赤い車があります」→ スペース1：赤\n2.  「最後のスペースには紫色の車があります」→ スペース5：紫\n3.  「青い車は赤い車と緑の車の間に駐車されています」→ 赤は1番目なので、青は2番目、緑は3番目になります。\n    *   スペース1：赤\n    *   スペース2：青\n    *   スペース3：緑\n    *   スペース5：紫\n4.  残りの色は黄色だけなので、スペース4は黄色になります。\n\n**車の色の順序：**\n1. 赤、2. 青、3. 緑、4. 黄、5. 紫\n\n**ステップ2：名前を配置に当てはめる**\n1.  「健一の車は最後のスペースに駐車されています」→ 健一はスペース5（紫）。\n2.  「和也の車は健一の隣に駐車されています」→ 健一は5番目なので、和也はスペース4（黄）。\n3.  「恵は緑の車を運転しています」→ 緑は3番目なので、恵はスペース3（緑）。\n4.  「明の車は桃子と恵の間に駐車されています」→ 恵は3番目なので、明は2番目（青）、桃子は1番目（赤）になります。\n\n**人と車の最終的な配置：**\n1. 桃子（赤）\n2. 明（青）\n3. 恵（緑）\n4. **和也（黄）**\n5. 健一（紫）\n\n**ステップ3：秘書を特定する**\n*   ヒントに「秘書は黄色の車を運転しています」とあります。\n*   黄色の車を運転しているのは**和也**です。\n\nしたがって、秘書は和也です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:06.839454+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:08.667867+00:00"
+  }
+}

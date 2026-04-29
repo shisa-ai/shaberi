@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 62,
+  "category": null,
+  "question": {
+    "original": "Bさんの発言は「はい」か「いいえ」で言い換えるとどちらですか？\nAさん: 準備はできましたか?\nBさん: 大丈夫です。\n\nまた、Dさんの発言は「はい」か「いいえ」で言い換えるとどちらですか？\nCさん: 手伝いましょうか？\nDさん: 大丈夫です。",
+    "translation_en": "**[Purpose: question]**  \n\n**For B's statement, would it be more accurately rephrased as \"yes\" or \"no\"?**  \nA: Are you ready?  \nB: I'm fine.  \n\n**For D's statement, would it be more accurately rephrased as \"yes\" or \"no\"?**  \nC: Shall I help?  \nD: I'm fine.  \n\n*(Note: The translation preserves the original intent and structure while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "Bさんの発言「大丈夫です」は、Aさんの質問「準備はできましたか？」に対して「はい」と言い換えることができます。  \n\nDさんの発言「大丈夫です」は、Cさんの質問「手伝いましょうか？」に対して「いいえ」と言い換えることができます。  \n\nただし、文脈によっては「大丈夫です」が肯定的な意味合いを持つ場合もありますが、一般的には否定的なニュアンスを含むこともあります。例えば、手伝いを求められた際に「大丈夫です」と答える場合、それは「自分でできるから手伝いは不要」という意味で、「いいえ」に近い解釈が適切です。  \n\nしたがって、両方のケースで「いいえ」と解釈するのが自然でしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答の前半では、  \n- Bさん＝「はい」  \n- Dさん＝「いいえ」  \n\nと正しく説明できています。\n\nしかし、その後のまとめで  \n「したがって、両方のケースで『いいえ』と解釈するのが自然」  \nと書いており、Bさんについての結論が正解と矛盾して誤答になっています。\n\n問題固有の基準では、2つのうち1つ誤ると -2点なので、  \n満点5点から2点減点して3点となります。  \n日本語も自然で、その他の減点要素はありません。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.376732+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "Bさんの発言「大丈夫です」は、**「はい」**と言い換えられます。  \n（Aさんの質問に対して肯定的に返事をしているため）  \n\nDさんの発言「大丈夫です」は、**「いいえ」**と言い換えられます。  \n（Cさんの申し出を辞退しているため）  \n\n### 解説  \n- **Bさん**: 「準備はできましたか？」という質問に対し、「大丈夫です」と返すことで「準備OK」を意味するため、肯定の「はい」と同義。  \n- **Dさん**: 「手伝いましょうか？」という申し出に対し、「大丈夫です」と返すことで「手伝い不要」を意味するため、否定の「いいえ」と同義。  \n\n日本語では文脈によって同じ言葉でも意味が逆転することがあり、この例では相手の意図（肯定/否定）を正しく読み取る必要があります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:14.330163+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "Bさんの発言：**はい**\n（意味：準備に問題はないので、完了しています。）\n\nDさんの発言：**いいえ**\n（意味：手助けは不要です、自分だけでできます。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:54.998765+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:37.385228+00:00"
+  }
+}

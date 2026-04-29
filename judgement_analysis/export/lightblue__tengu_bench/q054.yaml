@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 54,
+  "category": "翻訳",
+  "question": {
+    "original": "以下の文章を和訳して下さい。\n### 文章\nJust a reminder that Mr. Tanaka is coming to the office today to discuss a potential tie-up between our businesses, so make sure that the office is clean and that there is someone to receive him at the front desk at 2pm. Thank you.",
+    "translation_en": "### Translation (English)  \n**Just a reminder that Mr. Tanaka will be visiting the office today to discuss a potential business collaboration. Please ensure the office is clean and that someone is available to greet him at the front desk at 2 PM. Thank you.**  \n\n*(Note: The translation maintains the original meaning, tone, and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "### 和訳\n本日、田中様が当社とのビジネス提携の検討について話し合うためにご来社されます。そのため、オフィスの整頓をお願いいたします。また、午後2時にはフロントデスクにて田中様をお迎えする準備をお願いします。ご協力をお願い申し上げます。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]\n\n### Translation\nMr. Tanaka will be visiting our office today to discuss a potential business partnership. Please ensure the office is tidy. Also, please be prepared to greet Mr. Tanaka at the front desk by 2:00 PM. Thank you for your cooperation."
+  },
+  "rubric": {
+    "original": "- 原文の内容を過不足なく訳すことができている:4点\n- ビジネスシーンであることを読み取り適切な敬語表現になっている:3点\n- 自然な日本語である:3点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Accuracy of translation (faithfulness to the original content): 4/4**  \n- **Appropriateness of honorifics for a business context: 3/4**  \n- **Naturalness of Japanese phrasing: 3/4**  \n\n*(Note: The translation maintains the original meaning and details without adding commentary, as requested.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "### 和訳  \n田中様が本日、当社との事業提携の可能性について話し合いのためにオフィスに来られますので、オフィスを清潔に保ち、午後2時に受付で迎えられるようにしておきましょう。ご協力よろしくお願いいたします。  \n\n（注：より自然な日本語表現として「～のために」と「～するように」を使用し、丁寧な依頼形に調整しました。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 原文の内容を過不足なく訳すことができている:4点  \n  - 「本日」「事業提携の可能性」「オフィスを清潔に」「午後2時に受付で迎える」など、原文の要素をほぼ漏れなく訳出している。\n- ビジネスシーンであることを読み取り適切な敬語表現になっている:3点  \n  - 「田中様」「来られます」「迎えられるようにしておきましょう」「ご協力よろしくお願いいたします」と、社内向けの丁寧なビジネス文として適切。\n- 自然な日本語である:3点  \n  - 文体は自然で読みやすく、不自然な表現はない。\n\n[計算式]\n4 + 3 + 3 = 10\n\n[点数]\n10\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:05.730687+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 和訳  \n田中様が本日、弊社との業務提携の可能性について話し合いに来られますので、事務所の清掃を徹底し、午後2時には受付に担当者がいるようにしてください。よろしくお願いいたします。  \n\n（より丁寧な表現として）  \n**田中様**  \n→ **田中様**（敬称はそのまま）  \n\n**弊社との業務提携の可能性について話し合いに来られますので**  \n→ **当社との業務提携の可能性についてご面会いただきますので**（よりフォーマルな表現）  \n\n**事務所の清掃を徹底し、午後2時には受付に担当者がいるようにしてください。よろしくお願いいたします。**  \n→ **事務所内の清掃を完了させ、午後2時には受付に係員を配置しておくようお願い申し上げます。ご協力のほど、何卒よろしくお願いいたします。**（さらに丁寧な表現）  \n\n### 最終案例（状況に応じて選択可能）:  \n1. **簡潔版**:  \n   > 田中様が本日、業務提携について話し合いに来られます。事務所を清掃し、午後2時には受付に担当者をお願いします。  \n\n2. **丁寧版**:  \n   > 田中様が本日、当社との業務提携の可能性についてご面会いただきますので、大変恐縮ですが、事務所内の清掃を完了させ、午後2時には受付に係員を配置しておくようお願い申し上げます。何卒よろしくお願いいたします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:47.851272+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "文脈に合わせて、いくつか自然な日本語訳を作成しました。状況に応じて使い分けてください。\n\n**1. 標準的なビジネスメール・チャット（最も推奨）**\n> 本日、業務提携の話し合いのため田中様が来社されます。念のための確認ですが、オフィスの整理整頓と、午後2時に受付でお出迎えができるよう手配をお願いします。よろしくお願いします。\n\n**2. 社内チャットなどで少し砕けた表現にする場合**\n> 【リマインダー】本日、事業提携の件で田中さんがいらっしゃいます。オフィスをきれいにしておくことと、14時に誰か受付で対応できるようにしておいてください。よろしくお願いします。\n\n**3. 直訳に近い表現**\n> 本日、田中氏が事業提携の可能性について話し合うために来社されますので、念のためお知らせします。オフィスを清潔に保ち、午後2時に受付で誰かが彼を出迎えるようにしてください。ありがとうございます。\n\n### 用語の解説\n*   **Tie-up:** 日本語のビジネスシーンでは「業務提携」や「提携」と訳すのが一般的です。\n*   **Just a reminder:** 「念のためのご連絡」「再確認」といったニュアンスです。\n*   **Receive him:** 「出迎える」「対応する」という意味になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:37.628733+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:50.156184+00:00"
+  }
+}

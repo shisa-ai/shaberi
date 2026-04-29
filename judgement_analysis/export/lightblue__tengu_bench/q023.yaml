@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 23,
+  "category": "長い文書要約（千トークン以上）",
+  "question": {
+    "original": "以下の文書を要約してください。\n### 文書\nポーリン・ボスは，親密な関係において経験される 喪失のうち，存在と不在をめぐる不確実性が伴う喪失 であるあいまいな喪失に焦点をあて，自身の調査研究 やセラピストとしての実践経験をふまえながら議論し ている(Boss, 2005/1999, 2002a, 2015/2006, 2011)1)。  あいまいな喪失に関する議論は，ニューヨーク世界 貿易センタービルテロ事件の被害者家族支援の理論的 枠組みとなり(Boss, 2002b)，東日本大震災被災者支援 においても早くから着目されてきた経緯 2)がある。 親密な関係にある人の遺体が発見されない場合も少な くなく，家族は親密な関係にある人をいわば生と死の〈あいだ〉に置きながら，複雑化した悲嘆に向き合わ なければならないのである。  本論では，ボスが提唱した「あいまいな喪失」概念 に関する議論を俯瞰したうえで，あいまいな喪失を生 と死の〈あいだ〉をめぐる事象と位置づけながら議論 することとしよう。後述するように，あいまいな喪失 には，身体的に存在しているが心理的に不在であるタ イプと身体的には不在であるが心理的には存在してい るタイプに大別されるが，本論では，主として後者の タイプのあいまいな喪失に着目することとなる。  さて，「なぜわれわれはあいまいな喪失を受け入れ ることに困難を覚えるのか」という議論は，澤井が「死の諸次元」を設定する中で導出した「社会的死」 という視点(澤井，2005)3)を取り入れることではじ めて可能となる(水津，2015)。既に述べたように，本 論で主に焦点化するのは，遺体が発見されていないあ いまいな喪失である。このような喪失の場合，「死の 肉体的側面」についての確証が得られないため，一般 にその延長線上に位置しやすい「法的死」「儀礼的な 死」も容易には準備され難いことが考えられる。この ような状況下において，家族という社会関係の中で， あいまいな喪失は如何なる経験をもたらすのか注意深 く問う必要があるだろう。  また，近代化の進展や家族・地域社会の変容に伴 い，死別に伴う悲嘆が，社会的文脈から切り離され， 個人の心の問題として精神医学や心理学の管理下にお かれる事態がより，顕在化・常態化しているとする議 論(澤井，2005; 澤井・有末，2015)がある。こうした 事態との関わりをふまえた場合，ボスは，「明確な喪 失」とは異なる「あいまいな喪失」にかかわるセラピ ストや研究者がどのようなことに留意する必要がある としているのだろうか。この問題を，あいまいな喪失 を経験している人々とセラピスト・研究者との〈あい だ〉に関わることとして検討していくこととしたい。",
+    "translation_en": "### Summary of the Document  \n\nPauline Boss focuses on ambiguous loss—losses in intimate relationships marked by uncertainty surrounding presence and absence—drawing on her research and therapeutic practice (Boss, 2005/1999, 2002a, 2015/2006, 2011). Discussions of ambiguous loss have served as a theoretical framework for supporting families of victims of the 9/11 terrorist attacks (Boss, 2002b) and were also early recognized in post-disaster support for the 2011 Great East Japan Earthquake.  \n\nIn many cases, the bodies of loved ones are never found, leaving families to grapple with complex grief while holding their loved ones in a state between life and death. This paper will overview Boss’s concept of ambiguous loss, positioning it as an event surrounding the boundary between life and death. As discussed later, ambiguous loss can be broadly categorized into two types: (1) physically present but psychologically absent, and (2) physically absent but psychologically present. This paper will primarily focus on the latter type.  \n\nThe question of why we struggle to accept ambiguous loss becomes addressable only by incorporating Sawai’s (2005) perspective of \"social death\" within his framework of \"dimensions of death\" (Mizutani, 2015). As previously mentioned, this paper will mainly focus on ambiguous loss where the body is not found. In such cases, the lack of confirmation of the \"physical aspect of death\" makes it difficult to prepare for the subsequent \"legal death\" and \"ritual death.\" Under these circumstances, it is crucial to carefully examine what experiences ambiguous loss brings within the social relationship of the family.  \n\nFurthermore, with the advancement of modernization and changes in family and community structures, grief associated with bereavement has become increasingly detached from its social context, being treated as an individual psychological issue under the management of psychiatry and psychology (Sawai, 2005; Sawai & Arisuto, 2015). Considering this situation, what should therapists and researchers working with ambiguous loss—distinct from \"clear loss\"—be mindful of? This paper will explore this issue by examining the relationship between those experiencing ambiguous loss and therapists/researchers.  \n\n---  \n*(Note: The translation preserves the original meaning, structure, and key details while ensuring natural and clear English suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - ポーリン・ボスのあいまいな喪失についての議論:2点\n  - 身体的には不在であるが心理的には存在しているタイプのあいまいな喪失に焦点:2点\n  - あいまいな喪失の経験者にセラピスト・研究者が関わる際に何を留意すべきかを検討:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Discussion of ambiguous loss regarding Pauline Boss: **2 points**  \n  - Focus on the type of ambiguous loss where the person is physically absent but psychologically present: **2 points**  \n  - Consideration of what therapists/researchers should be mindful of when engaging with individuals experiencing ambiguous loss: **2 points**  \n- **Preserves logical relationships in the text:** **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "### 要約  \nポーリン・ボスは、親密な関係における「あいまいな喪失」（存在と不在の不確実性を伴う喪失）を研究し、セラピストとしての実践経験をもって議論している（Boss, 2005/1999, 2002a, 2015/2006, 2011）。この概念は、ニューヨーク世界貿易センタービルテロ事件や東日本大震災の被災者支援で重要視されてきた。特に、遺体が発見されない場合、家族は「生と死の〈あいだ〉」に置かれ、複雑な悲嘆に直面する。  \n\n本論では、ボスの「あいまいな喪失」概念を俯瞰し、その事象を生と死の境界として位置づける。主に「身体的には不在だが心理的には存在する」タイプに焦点を当て、「なぜあいまいな喪失を受け入れにくいか」という問いに取り組む。澤井（2005）の「社会的死」の視点（水津, 2015）を導入し、法的・儀礼的な死の準備が困難な状況で、あいまいな喪失が家族関係に与える影響を検討する。  \n\nさらに、近代化や家族・地域社会の変容により、死別の悲嘆が精神医学や心理学の管理下に置かれる傾向があることを考慮し、「明確な喪失」と異なる「あいまいな喪失」に対するセラピストや研究者の注意点について考察する。最終的に、あいまいな喪失を経験する人々とセラピスト・研究者との関係性（〈あいだ〉）に関わる問題として検討することを目指す。  \n\n### 主要ポイント  \n- **あいまいな喪失**：存在と不在の不確実性を伴う喪失（例：遺体未発見）。  \n- **社会的文脈**：近代化による悲嘆の個人化・精神医学化への懸念。  \n- **セラピスト・研究者の役割**：法的・儀礼的な死への対応や家族関係への配慮。  \n\nこの要約は、本文書が「あいまいな喪失」の概念とその社会的影響、および対応策について議論していることを明確に示しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- ポーリン・ボスのあいまいな喪失についての議論:2点  \n  - ボスがあいまいな喪失を研究し、実践経験をもとに議論していることを明確に述べている。\n- 身体的には不在であるが心理的には存在しているタイプのあいまいな喪失に焦点:2点  \n  - 「主に『身体的には不在だが心理的には存在する』タイプに焦点を当て」と明示している。\n- あいまいな喪失の経験者にセラピスト・研究者が関わる際に何を留意すべきかを検討:2点  \n  - 「セラピストや研究者の注意点について考察する」「関係性（〈あいだ〉）に関わる問題として検討」と要約しており、趣旨を押さえている。\n- 文章中の論理関係を保存している:2点  \n  - ボスの理論紹介 → 生と死のあいだとしての位置づけ → 社会的死の視点導入 → 近代化と悲嘆の個人化 → セラピスト・研究者の留意点、という流れを保っている。\n- 自然な日本語である:1点  \n  - 文法的にも語彙的にも自然で読みやすい。\n- 要約として適切な短さである:0点  \n  - 段落構成や「主要ポイント」まで含めており、元の文章に対してやや冗長で、要約としては短くない。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 0 = 9\n\n[点数]\n9\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:13.282905+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 要約  \n\nポーリン・ボスは、「あいまいな喪失」という概念を提唱し、親密な関係における存在と不在の不確実性に焦点を当てた研究を行っている。この概念は、遺体が発見されない場合など、生死の境界線上にある喪失体験を指し、ニューヨーク同時多発テロや東日本大震災の被災者支援において理論的枠組みとして活用されてきた。  \n\n本論では、特に「身体的には不在だが心理的には存在する」タイプのあいまいな喪失に着目し、「社会的死」の視点（澤井）を取り入れることで、なぜ受け入れが困難なのかを考察する。遺体未発見の場合、「肉体的死」の確証が得られず、「法的死」「儀礼的な死」も準備されにくいため、家族という社会関係において複雑な悲嘆が生じる。  \n\nまた、近代化により死別の悲嘆が個人の精神医学問題として扱われる傾向があることを踏まえ、あいまいな喪失を経験する人々とセラピスト・研究者の関係性について検討する。ボスの議論は、あいまいな喪失に対応する際に留意すべき点を明らかにする。  \n\n### キーワード  \n- あいまいな喪失（ポーリン・ボス）  \n- 社会的死（澤井）  \n- 遺体未発見による悲嘆  \n- 近代化と悲嘆の個人化  \n- セラピスト・研究者の役割",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:47.383250+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた文書の要約は以下の通りです。\n\n**要約：**\n\n本文書は、ポーリン・ボスが提唱した「あいまいな喪失（Ambiguous Loss）」という概念に基づき、以下の点を論じています。\n\n1.  **概念と背景**\n    「あいまいな喪失」とは、親密な人の存在と不在が不確実な状態を指す概念であり、9.11テロや東日本大震災の被害者家族支援において重要な枠組みとされてきました。\n\n2.  **本論の焦点**\n    あいまいな喪失には2つのタイプがありますが、本論では主に「身体的には不在であるが、心理的には存在している（遺体が発見されない等）」ケースに焦点を当て、これを生と死の〈あいだ〉にある事象として位置づけます。\n\n3.  **受け入れの困難さ**\n    遺体がないため「肉体的な死」の確証が得られず、それに続く法的・儀礼的な死の準備も困難になるため、家族がこの喪失を受け入れることが難しくなる構造を「社会的死」の視点から考察します。\n\n4.  **専門家の関わり方**\n    悲嘆が個人の精神医学的な問題として処理されがちな現代において、セラピストや研究者が「あいまいな喪失」を経験する人々とどのように関わり、何に留意すべきかを検討することを目的としています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:54.653798+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:36:28.670478+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 21,
+  "category": "長い文書要約（千トークン以上）",
+  "question": {
+    "original": "以下の文書を要約してください。\n### 文書\n第一条　この法律は、情報通信技術の進展に伴い取引デジタルプラットフォームが国民の消費生活にとって重要な基盤となっていることに鑑み、取引デジタルプラットフォーム提供者による消費者の利益の保護に資する自主的な取組の促進、内閣総理大臣による取引デジタルプラットフォームの利用の停止等に係る要請及び消費者による販売業者等情報の開示の請求に係る措置並びに官民協議会の設置について定めることにより、取引デジタルプラットフォームを利用して行われる通信販売（特定商取引に関する法律（昭和五十一年法律第五十七号）第二条第二項に規定する通信販売をいう。以下同じ。）に係る取引の適正化及び紛争の解決の促進に関し取引デジタルプラットフォーム提供者の協力を確保し、もって取引デジタルプラットフォームを利用する消費者の利益を保護することを目的とする。\n（定義）\n第二条　この法律において「取引デジタルプラットフォーム」とは、特定デジタルプラットフォームの透明性及び公正性の向上に関する法律（令和二年法律第三十八号）第二条第一項に規定するデジタルプラットフォームのうち、当該デジタルプラットフォームにより提供される場が次の各号のいずれかの機能を有するものをいう。\n一　当該デジタルプラットフォームを利用する消費者が、その使用に係る電子計算機の映像面に表示される手続に従って当該電子計算機を用いて送信することによって、販売業者等に対し、通信販売に係る売買契約又は役務を有償で提供する契約（以下「役務提供契約」という。）の申込みの意思表示を行うことができる機能\n二　当該デジタルプラットフォームを利用する消費者が、その使用に係る電子計算機の映像面に表示される手続に従って当該電子計算機を用いて送信することによって、競りその他の政令で定める方法により販売業者等の通信販売に係る売買契約又は役務提供契約の相手方となるべき消費者を決定する手続に参加することができる機能（前号に該当するものを除く。）\n２　この法律において「取引デジタルプラットフォーム提供者」とは、事業として、取引デジタルプラットフォームを単独で又は共同して提供する者をいう。\n３　この法律において「消費者」とは、個人（商業、工業、金融業その他の事業を行う場合におけるものを除く。）をいう。\n４　この法律において「販売業者等」とは、販売業者又は役務の提供の事業を営む者（自らが提供する取引デジタルプラットフォームを利用して商品若しくは特定権利（特定商取引に関する法律第二条第四項に規定する特定権利をいう。次条第一項第二号及び第四条第一項において同じ。）の販売又は役務の提供を行う場合におけるものを除く。）をいう。",
+    "translation_en": "### Summary of the Document  \n\n**Article 1 (Purpose)**  \nThis Act aims to ensure the proper conduct of transactions and promote dispute resolution in e-commerce conducted through transaction digital platforms, recognizing their importance in consumers' daily lives due to advancements in information and communication technology. It seeks to:  \n1. Encourage voluntary measures by transaction digital platform providers to protect consumer interests.  \n2. Empower the Prime Minister to request the suspension of platform use when necessary.  \n3. Establish procedures for consumers to request disclosure of seller information.  \n4. Create a public-private council to oversee these measures.  \n\n**Article 2 (Definitions)**  \n1. **\"Transaction Digital Platform\"** refers to a digital platform (as defined in the Act on Improving Transparency and Fairness of Specific Digital Platforms) that provides a space with one or more of the following functions:  \n   - Allowing consumers to express intent to enter a sales or service contract via electronic means.  \n   - Enabling consumers to participate in processes (e.g., auctions) to determine counterparties for sales or service contracts.  \n2. **\"Transaction Digital Platform Provider\"** means an entity that offers such platforms as a business, either independently or jointly.  \n3. **\"Consumer\"** refers to an individual (excluding those acting in a business capacity).  \n4. **\"Seller\"** refers to a business entity selling goods or services (excluding those using their own platforms to sell their own products or services).  \n\n*(Note: The summary retains key legal definitions and objectives without commentary.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 取引デジタルフォームの利用者の利益保護が目的の法律である:2点\n  - 取引デジタルフォームの定義:2点\n  - その他の関連用語の定義:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - The law aims to protect the interests of users of transaction digital forms: **2 points**  \n  - Definition of transaction digital forms: **2 points**  \n  - Definitions of other related terms: **2 points**  \n- **Preserves logical relationships in the text:** **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Total: 10 points)*  \n\n*(Note: The translation maintains the original structure, scoring criteria, and key details without adding commentary.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この法律は、デジタルプラットフォームの利用が国民の消費生活に重要な役割を果たしていることを踏まえ、消費者保護のための措置を定めています。具体的には、以下の内容が含まれています。  \n\n1. **目的**：取引デジタルプラットフォーム（通信販売におけるオンライン取引を指す）を利用する消費者の利益を保護するため、プラットフォーム提供者による自主的な取り組みの促進や、内閣総理大臣による停止要請権限の付与などを規定。  \n2. **定義**：  \n   - **取引デジタルプラットフォーム**：消費者がオンラインで商品やサービスを購入・契約する際に利用するプラットフォーム（例：ECサイト、オークションサイト）。  \n   - **取引デジタルプラットフォーム提供者**：これらのプラットフォームを事業として提供する企業。  \n   - **消費者**：個人（事業者は除く）。  \n   - **販売業者等**：商品やサービスを販売・提供する事業者（自社プラットフォーム利用は除く）。  \n\n3. **主な内容**：  \n   - プラットフォーム提供者の自主的な消費者保護対策の推進。  \n   - 内閣総理大臣によるプラットフォーム停止要請権限の付与（緊急時の紛争解決）。  \n   - 消費者の販売業者情報開示請求権の確立。  \n\nこの法律は、オンライン取引における公正性と透明性を高め、消費者の権利保護と紛争解決を促進することを目的としています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 取引デジタルフォームの利用者の利益保護が目的の法律である:2点  \n  - 「消費者保護のための措置」「消費者の権利保護と紛争解決を促進」と明確に述べている。\n- 取引デジタルフォームの定義:2点  \n  - 消費者がオンラインで商品やサービスを購入・契約する際に利用するプラットフォームとして説明しており、本文の機能面の定義を要約できている。\n- その他の関連用語の定義:2点  \n  - 「取引デジタルプラットフォーム提供者」「消費者」「販売業者等」について、それぞれ本文に沿った形で定義している。\n- 文章中の論理関係を保存している:2点  \n  - 目的→定義→主な内容→全体の目的という構成で、原文の趣旨と関係性を保っている。\n- 自然な日本語である:1点  \n  - 不自然な表現や誤用はなく、読みやすい日本語で書かれている。\n- 要約として適切な短さである:1点  \n  - 原文に比べ十分に圧縮されており、要約として妥当な長さ。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 1 = 10\n\n[点数]\n10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.500056+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 文書要約  \n\nこの法律は、デジタルプラットフォーム（以下「取引デジタルプラットフォーム」）が消費生活において重要な役割を果たすことを踏まえ、消費者保護を目的として制定されたものである。主な内容は以下の通り。  \n\n1. **目的**  \n   - 取引デジタルプラットフォーム提供者の自主的な取り組み促進  \n   - 内閣総理大臣による利用停止要請や情報開示措置の実施  \n   - 官民協議会の設置による紛争解決の促進  \n\n2. **定義**  \n   - **取引デジタルプラットフォーム**：通信販売や競売など、消費者がオンラインで契約申込みや参加できる機能を有するデジタルプラットフォーム。  \n   - **取引デジタルプラットフォーム提供者**：上記プラットフォームを事業として提供する者。  \n   - **消費者**：個人（事業目的での利用を除く）。  \n   - **販売業者等**：商品・サービスを提供する事業者（自社運営の場合は除く）。  \n\nこの法律は、取引デジタルプラットフォームにおける通信販売の適正化と紛争解決を支援し、消費者の利益保護を図ることを目的とする。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:42.092093+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた文書は、**「取引デジタルプラットフォームを利用する消費者の利益の保護に関する法律」**（通称：取引デジタルプラットフォーム消費者保護法）の第一条（目的）と第二条（定義）の抜粋です。\n\n要約は以下の通りです。\n\n### 1. 法律の目的（第一条）\nこの法律は、通販サイトやオークションサイトなどの「取引デジタルプラットフォーム」が生活の重要な基盤となっていることを踏まえ、**そこでの取引の適正化と紛争解決を促進し、消費者の利益を保護すること**を目的としています。\n\nそのために以下の措置等を定めています。\n*   プラットフォーム提供者による自主的な取り組みの促進\n*   内閣総理大臣による利用停止等の要請\n*   消費者による販売業者情報の開示請求\n*   官民協議会の設置\n\n### 2. 用語の定義（第二条）\nこの法律における主要な用語は以下のように定義されています。\n\n*   **取引デジタルプラットフォーム**\n    消費者が画面上の操作によって、以下のいずれかを行える機能を持つデジタルプラットフォーム。\n    1.  販売業者等に対して、購入やサービス契約の申し込みができる機能（一般的な通販サイト）。\n    2.  オークション等により、契約相手を決める手続きに参加できる機能（オークションサイト等）。\n*   **取引デジタルプラットフォーム提供者**\n    上記プラットフォームを事業として提供する者（運営企業）。\n*   **消費者**\n    個人（事業として行う場合を除く）。\n*   **販売業者等**\n    プラットフォーム上で商品やサービスを提供する事業者（ただし、プラットフォーム提供者自身が直販する場合は含まない）。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:35.208380+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:36:11.010002+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 114,
+  "category": "政治",
+  "question": {
+    "original": "選挙当日に自分が応援している候補者へ投票を促すような内容をインターネット上で拡散しました。\nこの行為は問題がないでしょうか？また問題がある場合どのような罰則が与えられるでしょうか？",
+    "translation_en": "**[Purpose: Question]**  \n\nOn election day, I spread online content encouraging people to vote for the candidate I support.  \nIs this action permissible? If not, what penalties could be imposed?  \n\n*(Translation preserves the original meaning, structure, and formal tone suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "日本では公職選挙法により選挙期間中の選挙運動は厳しく規制されており、選挙の投票日当日には選挙運動を行うことが禁止されています。これにはインターネット上での活動も含まれ、SNSやブログ、ウェブサイトなどで特定の候補者への投票を呼びかける行為も選挙運動に該当し得ます。違反した場合、1年以下の禁錮又は30万円以下の罰金に処することとされており（公職選挙法第239条第1項第1号）、選挙権及び被選挙権が停止されます（公職選挙法第252条第1項・第2項）。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nIn Japan, election campaigns during the election period are strictly regulated under the Public Office Election Law, and campaigning on election day itself is prohibited. This includes online activities, such as calls for votes for specific candidates on social media, blogs, or websites, which may also constitute election campaigning. Violators may be subject to imprisonment for up to one year or a fine of up to ¥300,000 (Public Office Election Law Article 239, Paragraph 1, Item 1), and their right to vote and stand for election will be suspended (Public Office Election Law Article 252, Paragraphs 1 and 2).  \n\n(Translation preserves the legal details and structure of the original Japanese text while ensuring natural English phrasing for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 法律上問題があることを示している:3点\n- 公職選挙法によって投票日の選挙運動が禁じられていることを示している:2点\n- 罰則内容について正確に示している:3点\n- 説明が具体的でわかりやすい:1点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates a legally problematic issue:** 3 points  \n- **Shows that election campaigning on election day is prohibited under the Public Office Election Law:** 2 points  \n- **Accurately describes the penalty:** 3 points  \n- **Explanation is specific and easy to understand:** 1 point  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The last two criteria, \"Explanation is specific and easy to understand\" and \"Written in natural Japanese,\" each have only 1 point, which may be an error in the original rubric. If this is intentional, the translation reflects that.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "選挙当日に自分が応援している候補者へ投票を促すような内容をインターネット上で拡散した場合、問題がある可能性があります。具体的な状況によっては違法となる可能性もあります。以下に詳細を説明します。\n\n**問題点**\n\n*   **選挙法違反の可能性:** 日本の選挙法では、選挙運動の規制があります。特に、選挙日前日の選挙運動は厳しく制限されています。投票を促す内容が、選挙運動とみなされる場合、違法となる可能性があります。\n*   **公平性の確保:** 選挙は公平に行われるべきであり、一方的な情報発信によって他の候補者の機会が損なわれる可能性があります。\n*   **誹謗中傷や虚偽情報:** 投票を促す内容に誹謗中傷や虚偽情報が含まれている場合、名誉毀損や不正競争防止法に抵触する可能性もあります。\n\n**罰則**\n\n違反した場合、以下のような罰則が科される可能性があります。\n\n*   **刑事罰:**\n    *   選挙法違反：10年以下の懲役または100万円以下の罰金（またはその両方）\n    *   名誉毀損：3年以下の懲役または50万円以下の罰金\n    *   不正競争防止法違反：3年以下の懲役または300万円以下の罰金\n*   **行政処分:**\n    *   選挙管理委員会による指導・勧告\n    *   広告物撤去命令\n*   **民事上の責任:**\n    *   損害賠償請求\n\n**注意点**\n\n*   上記は一般的な情報であり、具体的な状況によって判断が異なります。\n*   違法行為を行った場合は、弁護士などの専門家に相談することをお勧めします。\n*   選挙運動を行う際には、必ず選挙法を遵守し、公平性を確保するように心がけてください。\n\n**参考情報**\n\n*   総務省 - 選挙制度：[https://www.soumu.go.jp/senkyo/senkyo_seido/index.html](https://www.soumu.go.jp/senkyo/senkyo_seido/index.html)\n*   法務省 - 刑法：[https://elaws.e-gov.go.jp/document?lawid=331AC0000000049](https://elaws.e-gov.go.jp/document?lawid=331AC0000000049)\n\nこの情報が、あなたのお役に立てば幸いです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 法律上問題があることを示している:2点  \n  - 「問題がある可能性」「違法となる可能性」と述べており、違法の可能性には触れているが、明確に「法律上問題がある」とまでは言い切っていない。\n- 公職選挙法によって投票日の選挙運動が禁じられていることを示している:0点  \n  - 「日本の選挙法」「選挙日前日」としており、公職選挙法の名称も「投票日当日禁止」であることも明示していない。しかも前日と誤っている。\n- 罰則内容について正確に示している:0点  \n  - 正解例の「1年以下の禁錮又は30万円以下の罰金」と異なり、「10年以下の懲役または100万円以下の罰金」など誤った重い刑罰を挙げており不正確。\n- 説明が具体的でわかりやすい:1点  \n  - 誤りはあるが、文章としての構成や説明自体は具体的で読みやすい。\n- 自然な日本語である:1点  \n  - 日本語としては自然で文法的にも問題ない。\n\n[計算式]\n2 + 0 + 0 + 1 + 1 = 4\n\n[点数]\n4\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:20.400382+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この状況では、**Bさんが特許を受ける可能性が高い**です。日本の特許制度は「先願主義」を採用しており、**最初に特許出願した者が権利を取得する**のが原則です。  \n\n### 詳細な理由：\n1. **先願主義の原則**  \n   - Aさんが研究を完成させていたとしても、特許出願の日付（2023年6月18日）で優先順位が決まります。BさんがAさんより早く出願したため、Bさんの方が優先されます。  \n\n2. **例外：先使用権（限定的な保護）**  \n   - Aさんは「先使用権」を主張できる可能性がありますが、これは特許権侵害訴訟で防御的に用いるものであり、特許権そのものを取得するものではありません。Aさんが発明を実際に事業として利用していた場合に限り、Bさんの特許権に対抗できます。  \n\n3. **証拠の重要性**  \n   - Aさんは研究完成時の記録（実験ノートや設計図など）を保管しておくことが重要です。これにより、発明の真の創作者であることを主張できますが、出願日には影響しません。  \n\n### 結論：  \nBさんが6月18日に最初に出願したため、原則としてBさんに特許が付与されます。Aさんは「先使用権」を活用するか、新たな改良点を見つけて別途出願する必要があります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:01.797823+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "結論から申し上げますと、原則として**Bさんが特許を受けることになります。**\n\nその理由は、日本の特許法が**「先願主義（せんがんしゅぎ）」**というルールを採用しているからです。\n\n### 解説\n\n**1. 先願主義とは？**\n日本の特許法（第39条）では、「誰が一番早く発明を完成させたか（先発明主義）」ではなく、**「誰が一番早く特許庁に出願書類を提出したか」**によって特許権を与える人を決めます。これを先願主義といいます。\n\n**2. 今回のケースへの当てはめ**\n*   **Aさん：** 6月14日に発明を完成（一番早かった）\n*   **Bさん：** 6月18日に特許を出願（一番早かった）\n\nAさんの方が先に発明を完成させていますが、特許庁への手続き（出願）を行ったのはBさんが先です。したがって、法的にはBさんが優先され、Bさんが特許権者となります。\n\n### 例外的なケース（注意点）\nもしBさんが独自に発明したのではなく、**Aさんの研究データを盗んだり、Aさんから話を聞いて勝手に出願していた場合**は話が別です。これを「冒認出願（ぼうにんしゅつがん）」といいます。\nこの事実をAさんが証明できれば、Bさんの特許を拒絶・無効にしたり、特許を受ける権利をAさんに取り戻したりすることが可能です。\n\nしかし、Bさんも独自に同じ発明をしていて、単に手続きが早かっただけであれば、残念ながらAさんは特許を取得することはできません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:48.910412+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:14.334033+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 3,
+  "category": "表の読み取り",
+  "question": {
+    "original": "ある宅配便は、料金が荷物の大きさによって決まっている。各大きさによる運送料金は以下の表の通りである。\n大きさ４０cmのものと、１m２０cmのものをそれぞれ一つずつ配送を頼んだ場合、料金はいくらになるか。\n### 表\n大きさ        10cm以下        10 - 30cm        30cm - 1m        1m以上\n料金        300円        500円        620円        1000円",
+    "translation_en": "**[Purpose: Question]**  \n\nA certain delivery service charges based on the size of the package. The shipping fees for each size category are as follows:  \n\n| Size          | 10cm or less | 10 - 30cm | 30cm - 1m | 1m or more |  \n|---------------|--------------|-----------|-----------|------------|  \n| Fee           | ¥300         | ¥500      | ¥620      | ¥1000      |  \n\nIf you request delivery for one package measuring 40cm and another measuring 1m 20cm, what will the total cost be?  \n\n*(Note: The translation maintains the original structure and details, including the table format and currency.)*"
+  },
+  "answer": {
+    "gold_original": "大きさ40cmの荷物は、「30cm - 1m」の範囲に当てはまるので、料金は620円です。\n\n大きさ1m20cm（120cm）の荷物は、「1m以上」の範囲に当てはまるので、料金は1000円です。\n\nしたがって、両方の荷物を配送する場合の合計料金は、620円 + 1000円 = 1620円になります。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nA package measuring 40 cm falls within the \"30 cm - 1 m\" range, so the fee is 620 yen.  \n\nA package measuring 1 m 20 cm (120 cm) falls within the \"1 m or more\" range, so the fee is 1000 yen.  \n\nTherefore, the total shipping cost for both packages is 620 yen + 1000 yen = 1620 yen."
+  },
+  "rubric": {
+    "original": "- 答えが1620円である:3点\n- 二つの荷物がそれぞれ違う大きさにあたることを元に料金を合計して求められている:2点\n- 表の値を正しく読み取れている:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Answer is 1620 yen:** 3 points  \n- **Calculated the total fee based on the two packages being of different sizes:** 2 points  \n- **Correctly read the values from the table:** 2 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くために、各荷物の大きさに基づいて料金を計算し、それらを合計します。  \n\n1. **40cmの荷物**  \n   - 大きさは「30cm - 1m」に該当するため、料金は **620円** です。  \n\n2. **1m20cmの荷物**  \n   - 大きさは「1m以上」に該当するため、料金は **1000円** です。  \n\n3. **合計料金**  \n   - 40cmの荷物: 620円  \n   - 1m20cmの荷物: 1000円  \n   - 合計: **1620円**  \n\nしたがって、両方の荷物を配送する場合の総額は **1620円** になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えが1620円である:3点  \n  - 合計を「1620円」と正しく求めている。\n- 二つの荷物がそれぞれ違う大きさにあたることを元に料金を合計して求められている:2点  \n  - 40cmと1m20cmを別々の区分に当てはめ、その料金を合計している。\n- 表の値を正しく読み取れている:2点  \n  - 「30cm - 1m → 620円」「1m以上 → 1000円」と正しく使用している。\n- 説明が具体的でわかりやすい:2点  \n  - 手順を番号付きで整理し、各荷物ごとの料金と合計を明示している。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語になっている。\n\n[計算式]\n3 + 2 + 2 + 2 + 1 = 10\n\n[点数]\n10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:06.739681+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "40cmの荷物は「30cm - 1m」の区分に該当し、料金は620円です。  \n1m20cmの荷物は「1m以上」の区分に該当し、料金は1000円です。  \n\nしたがって、合計料金は **620円 + 1000円 = 1620円** になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:22.606715+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "合計料金は **1,620円** です。\n\n内訳は以下の通りです。\n\n1.  **大きさ40cmの荷物**\n    *   表の「30cm - 1m」の区分に当てはまるため、料金は **620円** です。\n2.  **大きさ1m20cmの荷物**\n    *   表の「1m以上」の区分に当てはまるため、料金は **1,000円** です。\n\n**計算：** 620円 + 1,000円 = 1,620円",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:28.653059+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:34:40.283763+00:00"
+  }
+}

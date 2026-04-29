@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 38,
+  "category": null,
+  "question": {
+    "original": "ある男性が、高校時代に好きだった女性に再会した。彼女は結婚して子供もいて幸せそうだった。男性は彼女に告白しようと思っていたが、その機会を逃してしまった。彼は後悔しながら、OOとつぶやいた。\n\nOOにはあることわざが入ります。何でしょう？",
+    "translation_en": "**[Purpose: Question]**  \n\nA man reunited with a woman he had liked in high school. She was married with children and seemed happy. The man had intended to confess his feelings to her but missed the opportunity. Regretfully, he muttered, *\"OO.\"*  \n\n*OO* contains a certain proverb. What is it?  \n\n*(Note: The translation preserves the original structure and meaning while ensuring natural English phrasing for evaluation documentation. The proverb remains as \"OO\" since the answer is the question's focus.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この状況に合うことわざは「**後知恵**」です。  \n\n理由：  \n男性は過去の機会を逃した後で、後悔しながらつぶやいている場面です。「後知恵」という言葉は、過去の出来事を振り返って初めて気づくことや、後から得られる知恵を意味します。彼が「告白すべきだった」と後悔している様子が、このことわざにぴったり当てはまります。  \n\n他の候補としては「**水に流す**」（過去のことを忘れる）や「**懐かしい**」（過去への郷愁）も考えられますが、「後知恵」が最も状況に合致しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "この回答で挙げられている「後知恵」は、一般的な意味では「後からなら何とでも言える知恵」のような慣用的表現であり、ことわざとしてもややマイナーかつ、このシチュエーションで自然に男性が「後知恵」と一言つぶやくとは考えにくく、文脈にもあまり合っていません。\n\nまた、「水に流す」「懐かしい」はそもそもことわざではなく、候補としても不適切です。\n\n問題固有の採点基準に照らすと、\n- 一応ことわざ的な表現ではあるが、このシチュエーションにふさわしくない → -2点相当\n\n方向性として「後悔」や「過去を振り返る」ニュアンスを狙っている点はあるため、完全に的外れではないものの、適切なことわざ（「後悔先に立たず」「後の祭り」など）からは外れています。\n\n総合して2点相当と判断します。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.135146+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「後悔先に立たず」  \n\n（意味：後悔しても過ぎ去ったことは変えられない）  \n\nこのことわざは、機会を逃した後の無念さや、過ぎ去ったことを悔やんでも仕方がないという諦念を表しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:52.535961+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **「後の祭り」**（あとのまつり）です。\n\n**解説:**\n「後の祭り」とは、時期を逃してしまって、今さらどうしようもないこと、手遅れであることを意味することわざです。\n\n祭りが終わった後に山車（だし）を出そうとしても意味がないことから、好機を逃して後悔する状況で使われます。この男性の場合、彼女が独身だった頃に告白すべきでしたが、すでに結婚して幸せな家庭を築いている今となっては、もう手遅れであるため、この言葉が当てはまります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:57.352298+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:44.823394+00:00"
+  }
+}

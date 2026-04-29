@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 5,
+  "category": "表の読み取り",
+  "question": {
+    "original": "下表は、Ｐ県の耕地面積と、その使用内訳を割合を表したものです。\nＰ県の果樹地の耕地面積が9800haのとき、Ｐ県の田の耕地面積の割合は何%になるか？\n### 表\n耕地面積 | 35000ha\n-- | --\n田 | ?\n果樹園 | ? \n牧草地 | 22％\nその他 | 24％",
+    "translation_en": "**[Purpose: Question]**  \n\nThe table below shows the cultivated land area in P Prefecture and the breakdown of its usage by percentage.  \n\nWhen the cultivated land area for orchards in P Prefecture is 9,800 ha, what percentage of the cultivated land area is rice paddies?  \n\n### Table  \n| Cultivated Land Area | 35,000 ha |  \n|----------------------|-----------|  \n| Rice Paddies         | ?         |  \n| Orchards             | ?         |  \n| Pastureland          | 22%       |  \n| Others               | 24%       |  \n\n*(Note: The translation preserves the original structure and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "Ｐ県の果樹地の耕地面積が9800haであることが分かっています。まずはその割合を求めましょう。\n\n全体の耕地面積は35000haです。果樹地の割合を求めます。\n\n$$\n\\text{果樹園の割合} = \\frac{\\text{果樹園の面積}}{\\text{全体の耕地面積}} \\times 100 = \\frac{9800}{35000} \\times 100\n$$\n\nこれを計算すると、\n\n$$\n= \\frac{9800}{35000} \\times 100 = 28\\%\n$$\n\nとなります。したがって、果樹園の割合は28%です。\n\n既に牧草地の割合が22%、その他の割合が24%と与えられていますので、これらの割合を加えた合計を求めます。\n\n$$\n22\\% + 24\\% + 28\\% = 74\\%\n$$\n\nこれらを合わせると、これまでの割合の合計は74%です。つまり、残りは田の耕地面積の割合です。\n\n$$\n100\\% - 74\\% = 26\\%\n$$\n\nよって、Ｐ県の田の耕地面積の割合は26%になります。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nIt is known that the cultivated area of fruit orchards in P Prefecture is 9,800 hectares. First, let's determine its proportion.  \n\nThe total cultivated area is 35,000 hectares. We will calculate the proportion of fruit orchards.  \n\n$$  \n\\text{Proportion of fruit orchards} = \\frac{\\text{Area of fruit orchards}}{\\text{Total cultivated area}} \\times 100 = \\frac{9800}{35000} \\times 100  \n$$  \n\nCalculating this gives:  \n\n$$  \n= \\frac{9800}{35000} \\times 100 = 28\\%  \n$$  \n\nTherefore, the proportion of fruit orchards is 28%.  \n\nSince the proportion of pastureland is already given as 22% and the proportion of other land is 24%, we will sum these proportions.  \n\n$$  \n22\\% + 24\\% + 28\\% = 74\\%  \n$$  \n\nAdding these together, the total proportion so far is 74%. This means the remaining proportion is that of rice paddies.  \n\n$$  \n100\\% - 74\\% = 26\\%  \n$$  \n\nThus, the proportion of rice paddy cultivated area in P Prefecture is 26%."
+  },
+  "rubric": {
+    "original": "- 答えが26%である:3点\n- 果樹園の耕地面積の割合を求めることで田の耕地面積の割合を求めている:2点\n- 表の値を正しく読み取れている:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Answer is 26%: 3 points**  \n- **Calculates the rice paddy's cultivated area ratio by using the orchard's cultivated area ratio: 2 points**  \n- **Correctly reads values from the table: 2 points**  \n- **Explanation is specific and easy to understand: 2 points**  \n- **Natural Japanese: 1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "与えられた情報から、Ｐ県の耕地面積全体が35000haであることがわかります。果樹地の耕地面積が9800haであるため、残りの面積は田、牧草地、その他に分配されます。  \n\nまず、果樹地の割合を計算します。  \n果樹地の割合 = (9800ha / 35000ha) × 100% = **28.00%**  \n\n次に、果樹地以外の割合を求めます。  \n果樹地以外の割合 = 100% - 28.00% = **72.00%**  \n\nこの72.00%は、田（?）、牧草地（22％）、その他（24％）で構成されています。  \n牧草地とその他の割合を合わせると、22％ + 24％ = **46％** です。  \n\nしたがって、田の耕地面積の割合は以下のように計算できます。  \n田の耕地面積の割合 = 72.00% - 46.00% = **26.00%**  \n\nよって、Ｐ県の田の耕地面積は全体に対して **26.00%** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えが26%である:3点  \n  - 最終的に「26.00%」と正しく答えている。\n- 果樹園の耕地面積の割合を求めることで田の耕地面積の割合を求めている:2点  \n  - まず果樹地の割合28%を求め、その結果を用いて田の割合を計算している。\n- 表の値を正しく読み取れている:2点  \n  - 全体35000ha、牧草地22％、その他24％、果樹地9800haを正しく使用している。\n- 説明が具体的でわかりやすい:2点  \n  - 計算手順を段階的に示し、どの割合が何を表すかも明示している。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語になっている。\n\n[計算式]\n3 + 2 + 2 + 2 + 1 = 10\n\n[点数]\n途中経過合計: 10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.118752+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "まず、果樹園の耕地面積が9800haであることを利用して、果樹園の割合を計算します。  \n全体の耕地面積は35000haなので、果樹園の割合は：  \n\\[ \\frac{9800}{35000} \\times 100 = 28\\% \\]  \n\n次に、表中の「牧草地」と「その他」の割合を合計します。  \n\\[ 22\\% + 24\\% = 46\\% \\]  \n\n全体の割合は100%になるため、田（水田）の割合は：  \n\\[ 100\\% - (28\\% + 46\\%) = 26\\% \\]  \n\nしたがって、Ｐ県の田の耕地面積の割合は **26%** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:30.067774+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "Ｐ県の田の耕地面積の割合は **26%** です。\n\n計算手順は以下の通りです。\n\n1.  **果樹園の割合を計算する**\n    果樹園の面積（9800ha）を全体の耕地面積（35000ha）で割って割合を出します。\n    $$9800 \\div 35000 \\times 100 = 28\\%$$\n\n2.  **田以外の割合を合計する**\n    *   果樹園：28%\n    *   牧草地：22%\n    *   その他：24%\n    $$28 + 22 + 24 = 74\\%$$\n\n3.  **全体（100%）から引いて、田の割合を出す**\n    $$100 - 74 = 26\\%$$\n\nよって、田の割合は **26%** となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:34.111213+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:00.379748+00:00"
+  }
+}

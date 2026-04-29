@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 29,
+  "category": "会話要約",
+  "question": {
+    "original": "以下の会話を要約してください。\n### 会話\n大島：大久保先生は今も現役の歯科医師であり、サンスターグループ顧問やNPO法人ハート・リング運動特別顧問としても活動をされ、「オーラルフレイル予防」や「口の健康と認知症予防」などをテーマに書籍を出版、メディアに登場されるなど、社会活動を続けていらっしゃいます。先生の経歴を見ますと、比較的若い頃からいろいろな社会活動に関わっておられますね。\n\n大久保：一番のきっかけは、大学院で小児歯科を専攻したものの、凄まじい「子供のむし歯の洪水」を目の当たりにしたことです。例えば、突然歯が痛くなった子供を連れて母親がわれわれの小児歯科に駆け込んできて、応急処置をしたあと、次の治療を希望しても、8か月先まで予約が取れない。当時の歯科医は小児歯科の教育を受けていないために、子供が泣いて暴れたらお手上げです。だから大学の小児歯科にかかるしかなく、8か月も待つような事態が生じていました。ならば研究よりもむし歯予防の実践活動をしなければならないと、自分の方向性を決めるきっかけになった出来事でした。患者があふれて治療が物理的に難しいのであれば、せめて次の治療日までむし歯が増えないように、重症化しないように、歯磨きや甘いものの摂り方を指導する「むし歯予防教室」を開きたいと教授にお願いして、1年間任せてもらいました。\n\n大島：むし歯治療を8か月も待たせるという状況を単なる医療の問題ではないと考えて予防教室を開く、という発想にはなかなか至らないと思います。\n\n大久保：父の跡を継いで歯科医になりましたが、高校時代から独学で社会科学や哲学を勉強していたので、「ここで起きている現象の根本は何か」と考える傾向があったと思います。だから、たとえ応急処置でも自分が一度担当した子供と母親のために何かできないかという発想が自然に出てきたんですね。予防教室を1年続けたところで父が急死したため、静岡市へ戻ることを決意し、予防教室を後輩に引き継いで大学院をやめました。静岡に戻ったら、案の定、子供の歯を診るというだけで富士山の麓の遠い町から患者さんが来るんです。\n\n大島：当時、小児歯科がそれくらい少なかったということですね。\n\n大久保：おっしゃる通りです。子供は泣いたら口を開けてくれませんから、そのくらい子供の歯を診るのは大変です。たくさんの患者さんを診療する中で、大学院での予防教室を開催しなければと考え、1971年に29歳で静岡市歯科医師会の公衆衛生部理事に就任して、「子供をむし歯から守る母親教室」を始めました。その時、母親教室を継続的な事業にするために市長に直談判し、市の予算を入れてもらいました。市の保健所に歯科衛生士を採用してもらい、歯科衛生士が行政を代表してわれわれと一緒に予防教室を実施するという、市と歯科医師会の協働の公的事業としました。おそらく日本で最初のむし歯予防のための組織的な公衆衛生活動だったと思います。",
+    "translation_en": "Please summarize the following conversation.  \n\n### Conversation  \n大島: Dr. Okubo is still an active dentist and serves as a consultant for the Sunstar Group and a special advisor for the NPO Heart Ring Movement. He continues his social activities, publishing books on themes like \"oral frailty prevention\" and \"oral health and dementia prevention,\" and appearing in the media. Looking at your career, you’ve been involved in various social activities since a relatively young age.  \n\n大久保: The biggest trigger was witnessing the overwhelming \"flood of childhood cavities\" during my graduate studies in pediatric dentistry. For example, mothers would rush their suddenly toothache-stricken children to our pediatric clinic, and after emergency treatment, they couldn’t get a follow-up appointment for eight months. At the time, dentists lacked pediatric training, so they were helpless when children cried and struggled. This meant people had no choice but to go to the university’s pediatric clinic, resulting in eight-month wait times. That made me realize I needed to focus on practical cavity prevention rather than research, which became a turning point in my career. Since treating patients was physically impossible due to overcrowding, I asked my professor if I could open a \"cavity prevention class\" to teach brushing and sugar intake habits to prevent cavities from worsening before the next appointment. I was given a year to do so.  \n\n大嶋: It’s hard to imagine someone thinking beyond medical issues and opening a prevention class due to an eight-month wait for cavity treatment.  \n\n大久保: After inheriting my father’s dental practice, I had been self-studying social sciences and philosophy since high school, so I tended to think, \"What is the root cause of this phenomenon?\" That’s why I naturally thought, \"What can I do for the children and mothers I’ve treated, even if it’s just emergency care?\" After running the prevention class for a year, my father suddenly passed away, so I decided to return to Shizuoka City, handing over the class to a junior colleague and leaving graduate school. Back in Shizuoka, as expected, patients came from distant towns at the foot of Mount Fuji just to see a dentist for their children’s teeth.  \n\n大嶋: So, pediatric dentists were that scarce at the time.  \n\n大久保: Exactly. Children don’t open their mouths when they cry, so treating children’s teeth was that difficult. Seeing so many patients made me realize I needed to hold prevention classes like the one I did in graduate school. In 1971, at age 29, I became the director of the Public Health Department of the Shizuoka City Dental Association and started \"Mothers’ Classes to Protect Children from Cavities.\" To make the classes a continuous program, I directly appealed to the mayor to allocate city funds. I also persuaded the city’s public health center to hire a dental hygienist, who would then represent the administration and conduct prevention classes with us, making it a collaborative public project between the city and the dental association. I believe it was the first organized public health activity for cavity prevention in Japan.  \n\n---  \n**Summary:**  \nDr. Okubo, an active dentist and consultant, was motivated to focus on cavity prevention after witnessing severe childhood cavities during his graduate studies. He initiated a \"cavity prevention class\" to teach preventive measures due to long wait times for treatment. After his father’s death, he returned to Shizuoka City, where pediatric dentists were scarce, and started \"Mothers’ Classes to Protect Children from Cavities\" in 1971. He secured city funding and collaboration with the public health center, making it Japan’s first organized public health initiative for cavity prevention. His early exposure to social sciences influenced his holistic approach to dental care."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 大島は大久保の若いころについて話を引き出している:2点\n  - 大久保は膨大な数の子供の虫歯を知ったことをきっかけに治療ではなく予防に焦点を当てた:2点\n  - 大久保は虫歯予防の活動の継続および日本で最初のむし歯予防のための組織的な公衆衛生活動をした:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Ōshima draws out a story about Ōkubo's youth: **2 points**  \n  - Ōkubo shifted his focus from treatment to prevention after learning about the vast number of children with cavities: **2 points**  \n  - Ōkubo continued his cavity prevention efforts and initiated the first organized public health campaign for cavity prevention in Japan: **2 points**  \n- **Preserves the logical relationships in the text:** **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "大島さんと大久保先生の会話の要約は以下の通りです。  \n\n**大久保先生の社会活動と「むし歯予防」のきっかけ**  \n大久保先生は現在も現役で、サンスターグループ顧問やNPO法人ハート・リング運動特別顧問として活動し、「オーラルフレイル予防」や「口の健康と認知症予防」をテーマに書籍を出版・メディアに登場しています。若い頃から社会活動に関わっており、特に大学院で小児歯科を専攻した際、子供たちの「むし歯の洪水」を目の当たりにし、治療待ちが8か月もかかる現状に衝撃を受けました。  \n\n**予防教室への転換**  \n当時の歯科医は小児歯科の教育を受けておらず、子供が泣いて暴れると対応できず、患者があふれる状況でした。そこで、大久保先生は研究よりもむし歯予防の実践活動を選び、「むし歯予防教室」を開催しました。この発想には、なかなか至らないものだと大島さんは指摘していますが、大久保先生は独学で社会科学や哲学を学んでいたため、「根本的な問題」を考える傾向があったと語っています。  \n\n**静岡での活動と公衆衛生への貢献**  \n父の死後、静岡市へ戻り、小児歯科が少ない地域で患者が遠方から来る状況に直面しました。その後、1971年に29歳で静岡市歯科医師会の公衆衛生部理事となり、「子供をむし歯から守る母親教室」を開始しました。この事業を継続するため市長に直談判し、市の予算を獲得。市と歯科医師会が協力して組織的な公衆衛生活動を行い、日本で最初のむし歯予防公衆衛生事業の一つとなったと述べています。  \n\nこの会話では、大久保先生が「医療問題」ではなく「社会問題」と捉え、実践的な予防活動へと転換した過程や、その後の公衆衛生への貢献が強調されています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 大島は大久保の若いころについて話を引き出している:2点  \n  - 冒頭で現在の活動に触れつつ「若い頃から社会活動に関わっており」と会話の導入を要約している。\n- 大久保は膨大な数の子供の虫歯を知ったことをきっかけに治療ではなく予防に焦点を当てた:2点  \n  - 「むし歯の洪水」を目の当たりにし、研究より予防教室を選んだ経緯を説明している。\n- 大久保は虫歯予防の活動の継続および日本で最初のむし歯予防のための組織的な公衆衛生活動をした:2点  \n  - 「母親教室」を開始し、市長に直談判して市と歯科医師会の協働による組織的公衆衛生活動にしたこと、日本で最初の事業の一つと述べている。\n- 文章中の論理関係を保存している:2点  \n  - 子供の虫歯の多さ→予防教室→静岡に戻る→公衆衛生活動へ、という因果・時系列が保たれている。\n- 自然な日本語である:1点  \n  - 不自然な表現や誤用はなく、読みやすい日本語になっている。\n- 要約として適切な短さである:1点  \n  - 原文より十分に短く、要点を整理している。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 1 = 10\n\n[点数]\n10\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:12.260929+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**会話の要約**  \n\n大久保先生は現役の歯科医師であり、サンスターグループ顧問やNPO法人ハート・リング運動特別顧問として社会活動を続けています。若い頃から社会活動に関わり、そのきっかけは大学院で小児歯科を専攻中に「子供のむし歯の洪水」を目の当たりにしたことです。治療予約が8か月待ちという深刻な状況に直面し、研究よりもむし歯予防の実践活動に方向性を転換しました。  \n\n大学院では「むし歯予防教室」を開設し、1年間運営後、父の急死により静岡市へ戻りました。当時、小児歯科医が少なく遠方から患者が来るほどでした。そこで1971年（29歳）、静岡市歯科医師会公衆衛生部理事に就任し、「子供をむし歯から守る母親教室」を開始。市長と交渉して予算を獲得し、保健所と協力する日本初の組織的な公衆衛生活動として実施しました。  \n\nこの経験は、大久保先生が単なる治療だけでなく、予防と社会貢献に焦点を当てるようになった背景を示しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:40.987413+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "以下の会話の要約です。\n\n現役歯科医師であり社会活動家でもある大久保先生が、若くして予防歯科活動に注力するようになった経緯について語られています。\n\n*   **活動の原点（大学院時代）：**\n    小児歯科における凄まじい「むし歯の洪水」と、治療まで8カ月待ちという状況を目の当たりにしました。そこで、研究よりも「むし歯予防の実践」が必要だと考え、治療待ちの間に重症化させないための「むし歯予防教室」を大学内で始めました。\n*   **活動の展開（静岡時代）：**\n    実家に戻った後も同様の需要の多さに直面し、29歳で静岡市歯科医師会の理事に就任しました。市長に直談判して予算を確保し、行政（保健所）と歯科医師会が連携する「母親教室」を立ち上げました。これは日本初と思われる組織的な公衆衛生活動となりました。\n*   **背景にある思想：**\n    学生時代から学んでいた社会科学や哲学の影響で、「現象の根本原因は何か」を考える姿勢を持っていたことが、対症療法だけでなく予防活動へ目を向けるきっかけとなりました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:38.392966+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:37:24.455482+00:00"
+  }
+}

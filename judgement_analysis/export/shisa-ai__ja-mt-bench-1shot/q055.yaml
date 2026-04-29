@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 55,
+  "category": null,
+  "question": {
+    "original": "日本語翻訳者としての役割を担ってください。私がどの言語を使っても、それを識別し、翻訳し、私のテキストを洗練された日本語で応答してください。あなたの目標は、オリジナルの意味を保ちつつ、雄弁で洗練された表現を使うことです。あなたの唯一の焦点は、訂正と改善を提供することです。私の最初のリクエストは「衣帶漸寬終不悔 為伊消得人憔悴」です。",
+    "translation_en": "**Translation:**  \n\n*\"Though the sash loosens little by little, I shall never regret it—for her sake, I have withered away.\"*  \n\n*(Note: This translation preserves the poetic and refined tone of the original Japanese, maintaining the emotional weight and imagery while ensuring natural English phrasing.)*  \n\n---  \n*(No additional commentary or explanation included, as per instructions.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "承知いたしました。日本語翻訳者として、あなたのリクエストを丁寧に処理させていただきます。  \n\n「衣带漸寬終不悔 為伊消得人憔悴」は、**「帯を巻きながら広げていけば、最後には後悔せず、人の消える姿を見れば憔悴する」**という意味の古文です。  \n\n洗練された日本語で表現すると、以下のようになります。  \n\n**「帯を巻きながら広げていけば、最後には後悔せず、人の消える姿を見れば憔悴する。」**  \n\nまたは、より詩的な表現を用いても良いでしょう。例えば：  \n**「帯を巻きながら広げていけば、最後には後悔せず、人の消える姿に憔悴する。」**  \n\nこの翻訳では、原文の意味を保ちつつ、日本語として自然で美しい表現を心がけました。何か修正点や改善点があれば、お気軽にお申し付けください。あなたのご要望に応じて最適な翻訳を提供いたします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "この回答は大きな誤訳を含んでおり、内容面での評価は低くなります。\n\n原文「衣帶漸寬終不悔 為伊消得人憔悴」は、宋代の詞（柳永）に由来し、「恋い慕うあまりやつれて衣の帯がゆるくなっていくが、それでも少しも悔いはない。あの人を思い焦がれて、すっかりやつれてしまったのだ」という意味です。  \nところが提示された訳は「帯を巻きながら広げていけば、最後には後悔せず、人の消える姿を見れば憔悴する」としており、\n\n- 「衣帶漸寬」を「帯を巻きながら広げていけば」と誤解している（本来は「やせ細って衣の帯がだんだんゆるくなる」の意）\n- 「為伊消得人憔悴」を「人の消える姿を見れば憔悴する」と誤って解釈している（「伊」は「あの人」、「消得人憔悴」は「人をやつれさせるほど思い悩む」の意）\n- 恋愛感情・相手への思慕という核心的なニュアンスがほぼ失われている\n\nなど、意味の取り違えが甚だしいです。\n\nまた、ユーザーは「洗練された日本語」での翻訳を求めているのに、提示された日本語は直訳調で不自然かつ詩的でもなく、原詩の情感も再現できていません。  \n日本語自体の文法は破綻していないものの、誤訳のために全体として有用性は低いです。\n\n以上から、正確性・深み・洗練度のいずれも不十分と判断できます。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:06.575211+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「衣帶漸寬終不悔 為伊消得人憔悴」は中国語の古典的な詩句ですね。日本語に翻訳・洗練すると以下のようになります。  \n\n**「帯（おび）を緩め、終いに悔いなし。彼（かれ）のために、人は憔悴（しょうすい）するとも。」**  \n\nまたは、より詩的な表現を求めるなら：  \n**「帯をゆるめど、後悔なし。愛しき人のため、身をやつしても惜しくはない。」**  \n\nこの詩句は、愛する人のために自己犠牲を厭わない情熱を表現しています。原文の意味を保ちつつ、日本語として自然で美しい響きになるよう調整しました。必要に応じてさらに微調整も可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:13.002460+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "「恋い慕うあまり衣の帯が緩むほどに痩せ細ろうとも、決して後悔はしない。愛しい人のためならば、この身がやつれ果てようとも本望である。」\n\n（書き下し文：衣帯（いたい）漸（ようや）く寛（ゆる）くとも終（つい）に悔いず、伊（これ）が為に人の憔悴（しょうすい）するを消（しょう）し得たり）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:06.840934+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:19.597577+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 40,
+  "category": "敬語",
+  "question": {
+    "original": "以下の文章を小学生の生徒にわかりやすいように直してください。\n### 文章\n空が青い理由は3つあります。太陽光、大気中の粒子、そして見ている私たちが人間だからです。3つ目については最後に説明するとして、まずは太陽光と大気中の粒子の相互作用に注目してみましょう。\n\nかつて空の青さは、大気中の塵や水滴、そのほかの大きな粒子がつくりだしていると信じられていました。これは間違いです。空の青さをつくりだしているのは、空気中の非常に小さな粒子、空気分子そのものです。とくに酸素分子と窒素分子がカギとなります。\n光の波長よりも小さい超微小の酸素分子と窒素分子は、空気中に大量に存在しています。これこそが空の実態です。\n目に見える光は、長さの違う波長のスペクトルから成り立っています。最長の波長をもつのは赤い光で、最短の波長をもつのは青、もっと正確にいえば紫の光です。\n青の波長は短いので、大気中の酸素分子や窒素分子に、より頻繁に衝突します。その結果、衝突した青の波長はありとあらゆる方向へ散乱します。\nこれは“レイリー散乱”と呼ばれます。1871年、青い光の波長は赤い光の波長と比べて、空気中で16倍も散乱するということを数学的に証明し、それを発表したジョン・ウィリアム・ストラット、通称レイリー男爵が、この現象にはじめて言及したからです。\nでもちょっと待ってください。最短の波長をもつのは紫の光でしたよね？　紫の波長は青よりもさらに短いわけですから、空気分子との衝突もより頻繁になり、もっと散乱するはずですよね？　ではなぜ空は紫色ではないのでしょうか？そこで重要になってくるのが3つめの理由、私たちが人間である、という事実です。人間の目は、光のスペクトルの真ん中に位置する色をより鮮明に捉えられるようにできています。\nですから、紫よりも青の方が目でとらえるのがずっと簡単なのです。青の波長よりも紫の波長の方が空気中に多く散乱しているにも関わらず空が青く見えるのは、私たちの目が紫色よりも青色を捉えているからにすぎません。虹色の中で紫色がもっとも目で確認しづらいのも、同じ理由です。",
+    "translation_en": "Here is the translation into natural, clear English suitable for evaluation documentation, preserving meaning and important details:  \n\n---  \n\n**[Purpose: Question]**  \n\nRevise the following text to make it easier for elementary school students to understand.  \n\n### Text  \nThere are three reasons why the sky is blue: sunlight, particles in the atmosphere, and the fact that we, the observers, are human. Let’s focus first on the interaction between sunlight and atmospheric particles, and explain the third reason later.  \n\nIn the past, it was believed that the sky’s blueness was caused by dust, water droplets, and other large particles in the atmosphere. This is incorrect. The sky’s blueness is actually created by very small particles in the air—air molecules themselves, especially oxygen and nitrogen molecules.  \n\nThese tiny oxygen and nitrogen molecules, smaller than the wavelength of light, exist in large quantities in the air. This is the true nature of the sky.  \n\nVisible light is made up of a spectrum of wavelengths of different lengths. Red light has the longest wavelength, while blue (or more precisely, violet) light has the shortest.  \n\nBecause blue wavelengths are shorter, they collide with oxygen and nitrogen molecules in the atmosphere more frequently. As a result, these blue wavelengths scatter in all directions.  \n\nThis phenomenon is called \"Rayleigh scattering.\" In 1871, John William Strutt, also known as Lord Rayleigh, mathematically proved and published that blue light scatters 16 times more in the atmosphere than red light, making him the first to describe this effect.  \n\nBut wait—didn’t we say that violet light has the shortest wavelength? Since violet wavelengths are even shorter than blue, they should collide with air molecules even more often and scatter even more. So why isn’t the sky violet? This is where the third reason comes in: the fact that we are human.  \n\nHuman eyes are better at perceiving colors in the middle of the light spectrum. Therefore, blue is easier for us to see than violet. Even though violet wavelengths scatter more in the air, the sky appears blue because our eyes pick up blue more strongly than violet. The same reason explains why violet is the hardest color to see in a rainbow.  \n\n---  \n\nThis translation maintains the original meaning while simplifying the language for clarity and accessibility. Let me know if you'd like any further refinements!"
+  },
+  "answer": {
+    "gold_original": "空が青い理由は、太陽の光、空気の中の小さい物質、それから私たちが人間だから、の3つがあります。最初に太陽の光と空気の粒子について話しますね。\n\n昔、みんなは空の青さは空気中のホコリや水の粒などが作っていると考えていたんだけど、これは実は間違っていて、本当は、空気中にたくさんあるすごく小さい物質が空の青さを作っています。\n\n光は、実はいろんな長さの波からできていて、赤い光が一番長くて、青や紫の光が一番短いってことがわかっています。青い光は短いから、空気中にたくさんあるすごく小さい物質とぶつかりやすくて、色んな方向にバラバラになります。これを「レイリー男爵」という人が、青い光は赤い光より16倍も多くバラバラになるって証明したんだよ。\n\nでも、本当は紫の光が一番短いから、もっとバラバラになるはずだよね？じゃあ、なんで空が紫色じゃないの？それは、私たち人は、目で青を紫よりはっきり見ることができるから。虹を見るときも、紫が一番見つけにくいのは、このせいなんだよ。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe reason the sky is blue is due to three factors: sunlight, tiny particles in the air, and the fact that we are human. First, let’s talk about sunlight and air particles.  \n\nIn the past, people thought the sky’s blueness was caused by dust or water droplets in the air, but that was actually wrong. In reality, it’s the extremely small particles abundant in the air that create the blue sky.  \n\nLight is actually made up of waves of different lengths, with red light being the longest and blue and violet light being the shortest. Because blue light has a shorter wavelength, it collides more easily with the tiny particles in the air and scatters in many directions. Lord Rayleigh proved that blue light scatters 16 times more than red light.  \n\nBut if violet light is even shorter, shouldn’t it scatter even more? Why isn’t the sky violet, then? The reason is that human eyes perceive blue more vividly than violet. That’s also why violet is the hardest to see in a rainbow.  \n\n*(Note: The translation maintains the original tone and structure while ensuring clarity and natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 小学校の先生らしい、丁寧で柔らかい物言いである:3点\n- 小学生が理解できないような概念(分子、スペクトルなど)の言及を避けられている:2点\n- 文章にある内容のみを用いて言い換えている:2点\n- 説明が具体的で小さい子にもわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Polite and gentle wording, as expected of an elementary school teacher:** 3 points  \n- **Avoids mentioning concepts that elementary students would not understand (e.g., molecules, spectra):** 2 points  \n- **Rewrites using only the content provided in the text:** 2 points  \n- **Explanation is concrete and easy for young children to understand:** 2 points  \n- **Natural Japanese phrasing:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "空が青い理由は3つあります。まず、太陽の光が大気の中を通るときに、空気の小さな粒子とぶつかり合って青く見えるようになるんです。そして、最後に説明しますが、私たちが人間だからという理由もあります。まずは太陽の光と大気の粒子の関係について見ていきましょう。\n\n昔は、空の青さは大気中の大きな塵や水滴が原因だと思われていました。しかし、それは間違いです。実際には、空を青くしているのは空気中の非常に小さな粒子、つまり酸素や窒素というガスの分子なんです。\n\n空気中には、光よりもずっと小さい酸素と窒素の分子がたくさんあります。これこそが空の本当の姿なんです。\n\n光は色々な長さを持つ波のようなもので、それをスペクトルと呼びます。最も長い波長を持つのは赤色で、一番短い波長を持つのは紫色です。青色は紫色よりも短い波長だから、大気中の粒子にぶつかる回数が多くなります。そのため、青色の光はあらゆる方向に散らばりやすくなります。\n\nこの現象を「レイリー散乱」と呼びます。この現象について数学的に証明した人がジョン・ウィリアム・ストラット（レイリー男爵）で、彼は1871年に発表しました。\n\nでも待ってください！紫色の方が一番短い波長だから、大気中でもっと散らばるはずじゃないですか？ それなら、なぜ空は紫色じゃなくて青色に見えるんでしょうか？ そこで重要なのが3つ目の理由、私たち人間であることなんです。人間の目は、光の中央にある青色をよく見るようにできています。\n\nだから、私たちは紫色よりも青色の方がずっと簡単に見ることができます。紫色の方がもっと散らばっているのに空が青く見えるのは、私たちの目が紫より青を捉えているからなんです。虹の中でも紫色を見づらいのも同じ理由ですね。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 小学校の先生らしい、丁寧で柔らかい物言いである:2点  \n  - 「〜なんです」「〜でしょうか？」など丁寧で柔らかいが、やや説明口調で教科書的な硬さも残る。\n- 小学生が理解できないような概念(分子、スペクトルなど)の言及を避けられている:0点  \n  - 「分子」「スペクトル」「波長」「数学的に証明」など、避けるべき専門用語を多く使用している。\n- 文章にある内容のみを用いて言い換えている:2点  \n  - 元の文章にある情報の範囲内で説明しており、新しい事実や設定は加えていない。\n- 説明が具体的で小さい子にもわかりやすい:1点  \n  - 流れは具体的だが、専門用語が多く、小さい子には難しい部分が多い。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語になっている。\n\n[計算式]\n2 + 0 + 2 + 1 + 1 = 6\n\n[点数]\n6\n\nFINAL SCORE: 6",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:11.754695+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 空が青い理由をわかりやすく説明しよう！  \n\n空が青く見える理由は、3つあります。1つ目は太陽の光、2つ目は空気の中にある小さな粒子、そして3つ目は「私たちが人間だから」です。最後の理由は後で説明します。まず、太陽の光と空気の粒子の関係から見ていきましょう。  \n\n昔は、空の青さは大きな塵や水滴が作っていると考えられていましたが、これは間違いです。本当の原因は、空気の中にたくさんある「超小さな酸素や窒素の粒子」です。これらの粒子は光よりもずっと小さいんです。  \n\n太陽から出る光には、いろいろな色（赤・オレンジ・黄・緑・青・藍・紫）が混ざっています。この中で、赤い光が一番長くてゆっくり進みます。一方、青や紫の光は短くて早く進みます。  \n\n青い光は波長が短いので、大気中の酸素や窒素とよくぶつかります。そのため、あらゆる方向に散らばってしまいます。これを「レイリー散乱」と呼びます。この現象を最初に解明したのがレイリー男爵という科学者でした。  \n\nでも…紫色も青よりさらに短い波長を持っているのに、なぜ空は紫色にならないのでしょう？ ここで大事なのが、私たち人間の目の特徴です。人間の目は、中間くらいの色（特に青）をよく見るようにできています。そのため、紫よりも青の方が目に入りやすいのです。虹を見ても紫色が薄く見えるのも同じ理由です！  \n\nだからこそ、私たちの目には空が青く見えるんですよ！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:49.639170+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "小学生のみなさんにもわかるように、言葉をかんたんにして説明しますね。\n\n***\n\n### 空はどうして青いの？\n\n空が青いのには、3つの理由があります。「太陽の光」、「空気」、そして「私たち人間の目」です。\nじゅんばんに見ていきましょう。\n\n**1. 空気には「小さなつぶ」がたくさんある**\n昔の人は、空にあるチリや水てきが空を青くしていると思っていました。でも実は、空気そのものを作っている「酸素（さんそ）」や「窒素（ちっそ）」という、目に見えないくらい**小さなつぶ**が理由なんです。\n\n**2. 太陽の光は「虹色（にじいろ）」のまざりもの**\n太陽の光は白っぽく見えますが、実は虹（にじ）のようにいろいろな色が混ざっています。\n光は「波」のように進むのですが、色によって波の大きさがちがいます。\n*   **赤い光**は、波が大きくてゆったりしています。\n*   **青や紫（むらさき）の光**は、波が小さくて細かいです。\n\n**3. 青い光はあちこちに散らばる**\n太陽の光が空気の中を通るとき、波の大きい「赤い光」は、空気の小さなつぶにぶつからずに通りぬけます。\nでも、波が細かい「青い光」は、空気のつぶにたくさんぶつかってしまいます。ぶつかった青い光は、空のあちこちに散らばります。\nこれを**「レイリー散乱（さんらん）」**と言います。\n空を見上げると、この散らばった青い光が目に入ってくるので、空が青く見えるのです。\n\n**4. どうして紫（むらさき）色じゃないの？**\nここでふしぎなことがあります。\n「青」よりも「紫」のほうが、もっと波が細かくて、もっとたくさん散らばっているはずです。それなら、空は紫色に見えるはずですよね？\n\nここで3つ目の理由、**「人間の目」**の登場です。\n実は、人間の目は「紫」よりも「青」のほうを感じやすいようにできています。\n空には紫の光もたくさん散らばっているのですが、私たちの目が青色を優先してキャッチしているため、空はきれいな青色に見えるのです。\n\n**まとめ**\n空が青いのは、\n1.  太陽の光の中で、**青い光がたくさん散らばっているから**。\n2.  その中でも、人間の目が**青色を見つけやすいから**。\n\nこの2つが重なって、空は青く見えているんですよ。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:40.800322+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:38:57.775909+00:00"
+  }
+}

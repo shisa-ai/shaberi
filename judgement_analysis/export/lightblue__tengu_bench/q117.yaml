@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 117,
+  "category": "架空の質問",
+  "question": {
+    "original": "テクノロジーマスターとはどのような資格ですか？どのようなスキルや知識が必要ですか？",
+    "translation_en": "**[Purpose: Question]**  \n\nWhat is a Technology Master certification? What skills and knowledge are required?  \n\n(Translation preserves the original meaning and structure while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 「存在しない」等のわからない旨の回答をしている:4点\n- あたかも存在するもののように答えていない:4点\n- 自然な日本語である:2点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **\"Does not provide a clear answer, such as 'does not exist'\"**: 4 points  \n- **Does not answer as if it were a real entity**: 4 points  \n- **Uses natural Japanese**: 2 points  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity in English.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "テクノロジーマスターとは、特定の資格制度ではなく、**高度なテクノロジー分野における専門知識と実践的なスキルを総合的に習得した人物**を指す概念です。以下に必要なスキルや知識をまとめます。\n\n---\n\n### **1. 必要なスキル**\n- **プログラミング言語**  \n  - Python, Java, C++, JavaScriptなど、汎用性の高い言語の習熟。\n  - 特定の分野（AI/機械学習）向けの言語（TensorFlow, PyTorch）も必要。\n- **データ分析・AI/ML**  \n  - 統計学、機械学習アルゴリズム、データベース管理（SQL, NoSQL）。\n  - データ可視化ツール（Tableau, Power BI）の活用。\n- **クラウドコンピューティング**  \n  - AWS, Azure, GCPなどのプラットフォームでの設計・運用経験。\n- **セキュリティ**  \n  - セキュリティ基準（ISO27001など）の理解と脆弱性診断スキル。\n- **プロジェクトマネジメント**  \n  - アジャイル開発手法（Scrum, Kanban）の適用とチームリーダーシップ。\n\n---\n\n### **2. 必要な知識**\n- **最新技術トレンド**  \n  - Web3.0、ブロックチェーン、量子コンピューティングなどの動向把握。\n- **倫理的配慮**  \n  - AI倫理やプライバシー保護（GDPRなど）に関する理解。\n- **ビジネス理解**  \n  - 技術がビジネスに与える影響を分析する能力。\n\n---\n\n### **3. 資格や認定**\n特定の「テクノロジーマスター資格」はありませんが、以下のような認定が関連します：\n- **AWS Certified Solutions Architect – Professional**  \n- **Google Cloud Professional Cloud Architect**  \n- **Microsoft Certified: Azure Solutions Architect Expert**\n\n---\n\n### **4. キャリアパス**\n- シニアエンジニア／アーキテクトとして企業内でリードする。  \n- スタートアップやベンチャー企業で技術戦略を策定。  \n- 研究者として新技術の開発に携わる。\n\n---\n\n### 結論\nテクノロジーマスターは、単なる技術者ではなく「ビジネスと技術をつなぐ橋渡し役」です。継続的な学習と実践経験が不可欠です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 「存在しない」等のわからない旨の回答をしている:0点  \n  - 「特定の資格制度ではなく…を指す概念です」としており、「わからない」「存在しない」とは明示していない。\n- あたかも存在するもののように答えていない:2点  \n  - 冒頭で「特定の資格制度ではなく…概念」と述べており、公式資格としては存在しないことを示している一方、その後は実在する肩書きのように詳細に定義しており、やや「あたかもあるかのような」説明になっているため満点は与えにくい。\n- 自然な日本語である:2点  \n  - 文法・表現ともに自然で読みやすい日本語で書かれている。\n\n[計算式]\n0 + 2 + 2 = 4\n\n[点数]\n4\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:20.010601+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "県議会議員選挙に立候補する際の供託金は、**30万円**が必要です。  \n\n### 注意点：\n- **供託金の返還条件**：  \n  - 当選した場合や、一定の得票数（有効投票総数の10分の1以上）を得た場合は全額返還されます。  \n  - 得票数が基準に満たない場合は国庫に帰属します。  \n\n- **その他費用**：  \n  - 立候補届出時には、供託金以外にも選挙運動費用（ポスター印刷費、事務所費など）が別途必要です。  \n\n詳細は各都道府県の選挙管理委員会に確認することをおすすめします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:52.435231+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "都道府県議会議員選挙（県議選）に立候補するための供託金は、**60万円**です。\n\n立候補の届け出をする際に、現金または国債証書などで法務局（供託所）に預ける必要があります。\n\n### 供託金が返還される条件（没収点）\nこの60万円は、選挙の結果、一定の得票数（供託金没収点）に達すれば返還されますが、達しなかった場合は全額没収され、都道府県に納められます。\n\n県議会議員選挙における没収点の計算式は以下の通りです。\n\n$$ \\frac{\\text{その選挙区の有効投票総数}}{\\text{その選挙区の議員定数}} \\times \\frac{1}{10} $$\n\nつまり、**「議員1人あたりの当選に必要な票数の10分の1」**を獲得できなければ、供託金は没収されます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:48.227798+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:22.870047+00:00"
+  }
+}

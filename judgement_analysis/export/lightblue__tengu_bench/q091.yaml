@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 91,
+  "category": "フォーマット",
+  "question": {
+    "original": "以下のアンケートの調査結果をMermaid記法で円グラフにしてください。\n### 調査結果\nアンケート名「あなたは現在の首相を支持しますか」\n「はい」・・・45.6%\n「いいえ」・・・30.4%\n「どちらでもない」・・・24.0%",
+    "translation_en": "**[Purpose: Question]**  \n\nCreate a pie chart using Mermaid syntax based on the following survey results.  \n\n### **Survey Results**  \n**Survey Title:** \"Do you support the current Prime Minister?\"  \n- **Yes:** 45.6%  \n- **No:** 30.4%  \n- **Neither:** 24.0%  \n\n**Mermaid Code:**  \n```mermaid  \npie  \n  title Do you support the current Prime Minister?  \n  \"Yes\" : 45.6  \n  \"No\" : 30.4  \n  \"Neither\" : 24.0  \n```"
+  },
+  "answer": {
+    "gold_original": "pie\n    title あなたは現在の首相を支持しますか\n    \"はい\": 45.6\n    \"いいえ\": 30.4\n    \"どちらでもない\": 24.0",
+    "gold_backtranslation_en": "**Pie Chart**  \n**Title: Do you support the current Prime Minister?**  \n- **Yes:** 45.6%  \n- **No:** 30.4%  \n- **Neither:** 24.0%  \n\n*(Note: The translation maintains the original structure and percentages while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 回答がMermaidとしてコンパイルできる:5点\n- アンケート内容を適切に表現できている:3点\n- 円グラフである:2点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Compiles as Mermaid:** 5 points  \n- **Accurately represents the survey content:** 3 points  \n- **Is a pie chart:** 2 points  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下に、Mermaid記法を使用して円グラフを作成します。  \n\n```mermaid\npie\n    title 首相支持率調査結果\n    \"はい\" : 45.6\n    \"いいえ\" : 30.4\n    \"どちらでもない\" : 24.0\n```\n\nこのコードをMermaidライブラリでレンダリングすると、以下のようになります（画像は生成されませんが、実際の出力は以下の通りです）：\n\n```\npie\n    title 首相支持率調査結果\n    \"はい\" : 45.6\n    \"いいえ\" : 30.4\n    \"どちらでもない\" : 24.0\n```\n\n実際にグラフを表示するには、Mermaidライブラリを使用したり、Markdown形式でHTMLに変換したりする必要があります。例えば、GitHub Markdownでは以下のように記述できます：\n\n```markdown\n```mermaid\npie\n    title 首相支持率調査結果\n    \"はい\" : 45.6\n    \"いいえ\" : 30.4\n    \"どちらでもない\" : 24.0\n```\n```\n\nこのコードをGitHubやMermaidサポート環境でレンダリングすると、円グラフが表示されます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 回答がMermaidとしてコンパイルできる:5点  \n  - ```mermaid 〜 ```内の記述はMermaidのpieチャート構文として正しく記述されている。\n- アンケート内容を適切に表現できている:2点  \n  - 選択肢と数値は正しいが、タイトルが「首相支持率調査結果」となっており、アンケート名「あなたは現在の首相を支持しますか」と完全には一致していないため減点。\n- 円グラフである:2点  \n  - `pie` を用いており、円グラフ指定になっている。\n\n[計算式]\n5 + 2 + 2 = 9\n\n[点数]\n9\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.786600+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "はい、**「隣町に泊まった友達」**はダジャレ（駄洒落）と言えます。  \n\n### 解説：\n- **「泊まった（とまった）」**という言葉が、  \n  - **「友達（ともだち）」**の「**とま**」という音と掛かっているため、ダジャレになります。  \n- 意味としては「隣町で一晩過ごした友人」という普通の文ですが、音の遊びが含まれているため、ユーモラスな表現として機能します。  \n\n### ダジャレのポイント：\n- **語呂合わせ（同音異義語）**を利用した遊び心があり、  \n- 日本語の発音の特徴を活かした軽妙な表現です。  \n\nよって、この文は確かにダジャレの一種です！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:40.792155+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "はい、**ダジャレ（言葉遊び）の一種**と言えます。\n\n理由は、以下の部分で音が似ている（韻を踏んでいる）ためです。\n\n1.  **「となり（Tonari）」と「とまり（Tomari）」**\n    *   「**隣**町（**トナリ**マチ）」と「**泊**まった（**トマ**ッタ）」で、音が非常に似ています。\n2.  **「とまった（Tomatta）」と「ともだち（Tomodachi）」**\n    *   「**泊まった**」と「**友達**」で、「ト」や「マ」の音が繰り返されており、リズムが整っています。\n\n全体として「ト・ナ・リ・マ・チ・ニ・ト・マ・ッ・タ・ト・モ・ダ・チ」と似た音が連続するため、口に出した時に語呂が良い言葉遊びになっています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:47.716978+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:53.195463+00:00"
+  }
+}

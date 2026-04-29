@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 103,
+  "category": "ビジネス",
+  "question": {
+    "original": "飲食店においてアルバイトが皿等の備品を壊した場合に対して、一定の罰金をあらかじめ設定しておくことはできますか",
+    "translation_en": "**[Purpose: Question]**  \n\nIs it permissible to pre-establish a fixed penalty fee for part-time employees in a restaurant who break dishes or other equipment?  \n\n(Translation preserves the original meaning, structure, and key details while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "日本では労働基準法第16条により労働者が労働契約に違反した場合に違約金を支払わせることや、その額をあらかじめ決めておくことは禁止されています。そのため飲食店においてアルバイトが皿等の備品を壊した場合に対して、一定の罰金をあらかじめ設定しておくことはできないと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nIn Japan, Article 16 of the Labor Standards Act prohibits requiring workers to pay liquidated damages for breach of the labor contract or pre-determining the amount. Therefore, in the case of part-time employees in restaurants breaking dishes or other equipment, it is generally considered that setting a predetermined fine is not permissible.  \n\n(Note: The translation maintains the original meaning, legal context, and nuance while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 罰金をあらかじめ設定することはできないと言及している:3点\n- 罰金を設定できない根拠を示している:2点\n- 労働基準法16条に触れている:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Mentions that advance setting of fines is not possible:** 3 points  \n- **Provides justification for why fines cannot be set:** 2 points  \n- **References Labor Standards Act Article 16:** 2 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "飲食店でアルバイトが備品を壊した場合の罰金設定については、以下の点を考慮する必要があります。法的・実務的な観点から、公平かつ適切な対応策を検討しましょう。\n\n### 1. **法的根拠の確認**\n   - **労働基準法**：労働者（アルバイト含む）に対する罰金は、就業規則に明記された場合に限り有効です。無断で罰金を課すと労働基準監督署から指導を受ける可能性があります。\n   - **民法**：損害賠償責任が発生する場合がありますが、事前に罰金規定を設けることは困難です。\n\n### 2. **就業規則への明記**\n   - 備品の取り扱いに関する規定を明確に記載し、違反時の対応（損害賠償請求や減給など）を具体的に示します。\n   - 例：「備品の不用意な扱いにより損傷した場合、修理費用または代替費用を負担する」\n\n### 3. **罰金額の設定**\n   - アルバイトの年収や備品の価値（例：皿1枚あたり500円）を基準に算出します。\n   - 過度な高額化は労働者の権利侵害とみなされる可能性があるため注意が必要です。\n\n### 4. **代替案の検討**\n   - 罰金以外にも以下のような対応も可能：\n     - 勤務時間延長\n     - 後任への引き継ぎ義務\n     - 再発防止訓練\n\n### 5. **事例研究**\n   - 他飲食店での事例調査：\n     - 「皿1枚破損＝500円」という規定（※地域や業界によって異なる）\n     - 重大な事故（例：調理器具破損）では賠償請求\n\n### 6. **実施前の確認事項**\n   - アルバイトとの合意形成\n   - 労働組合との協議（組織がある場合）\n   - 法律専門家への相談\n\n### 結論\n一定額の罰金設定は可能ですが、**「就業規則に明記」**し、**「過度ではない範囲」**で行うことが重要です。特に若手アルバイトには説明責任も求められるため、事前に周知徹底しましょう。必要であれば弁護士や社会保険労務士に相談することをおすすめします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 罰金をあらかじめ設定することはできないと言及している:0点  \n  - むしろ「一定額の罰金設定は可能」と結論づけており、正解例と逆の内容。\n- 罰金を設定できない根拠を示している:0点  \n  - 「できない」という方向の根拠は示しておらず、誤った方向の説明になっている。\n- 労働基準法16条に触れている:0点  \n  - 労働基準法には触れているが、16条にも違約金禁止にも言及していない。\n- 説明が具体的でわかりやすい:2点  \n  - 誤った内容ではあるが、構成は整理されており、文章としては具体的で読みやすい。\n- 自然な日本語である:1点  \n  - 日本語として不自然な点はなく、文法・表現も自然。\n\n[計算式]\n0 + 0 + 0 + 2 + 1 = 3\n\n[点数]\n3\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:19.278035+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "隣地斜線制限が定められていない用途地域は、以下の通りです。ただし、地域によって条例で独自の制限が設けられている場合もあるため、必ず自治体の都市計画図や条例を確認する必要があります。  \n\n### **隣地斜線制限が原則として不要な用途地域**  \n1. **第一種低層住居専用地域**（※一部例外あり）  \n2. **第二種低層住居専用地域**（※一部例外あり）  \n3. **第一種中高層住居専用地域**  \n4. **第二種中高層住居専用地域**  \n5. **準住居地域**  \n6. **商業地域**（ただし、防火・準防火地域では斜線制限が適用される場合あり）  \n7. **準工業地域**（同上）  \n8. **工業地域**（同上）  \n\n### **注意点**  \n- **防火・準防火地域内では、隣地斜線制限が適用される場合があります。**（建築基準法第56条）  \n- 地域によっては「景観法」や「都市景観条例」で斜線制限に類似した規制が設けられていることがあります。  \n- 用途地域以外にも「地区計画」や「再開発地区」などで個別の規制が設けられる場合があります。  \n\n### 確認方法  \n自治体の都市計画課に問い合わせるか、[国土交通省 都市局のウェブサイト](https://www.mlit.go.jp/totikensangyo/const/sozoseido/) で詳細を確認できます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:59.479572+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "建築基準法において、**隣地斜線制限が適用されない（定められていない）用途地域**は、以下の3つです。\n\n1.  **第一種低層住居専用地域**\n2.  **第二種低層住居専用地域**\n3.  **田園住居地域**\n\n### 理由\nこれらの地域では、都市計画によって建物の高さの限度が**10mまたは12m**（絶対高さ制限）と厳しく決められています。\n\n隣地斜線制限は、通常「高さ20mまたは31mを超える部分」に対してかかってくる制限であるため、そもそも高さが10m/12mに制限されているこれらの地域では適用する必要がない（適用対象外）という扱いになっています。\n\n※その代わり、これらの地域では「北側斜線制限」や「絶対高さ制限」が厳しく適用されます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:49.334357+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:32.157761+00:00"
+  }
+}

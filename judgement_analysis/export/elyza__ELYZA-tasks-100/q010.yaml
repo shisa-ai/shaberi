@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 10,
+  "category": null,
+  "question": {
+    "original": "以下の映画タイトルのリストが与えられたとき、タイトルに含まれる都市名をすべて書き出しなさい。\n・バンクーバーからの挑戦\n・ロンドンの夢\n・織田信長の生涯",
+    "translation_en": "**[Purpose: question]**  \n\nWhen given the following list of movie titles, write down all the city names contained in the titles.  \n・バンクーバーからの挑戦  \n・ロンドンの夢  \n・織田信長の生涯  \n\n**Answer:**  \nバンクーバー (Vancouver), ロンドン (London)  \n\n*(Note: \"織田信長の生涯\" does not contain a city name.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下の都市名がタイトルに含まれています。  \n\n1. **バンクーバー**（『バンクーバーからの挑戦』）  \n2. **ロンドン**（『ロンドンの夢』）  \n\nただし、『織田信長の生涯』は都市名ではなく、人物の名前を含む歴史ドラマのタイトルです。したがって、都市名は上記2つのみです。  \n\n必要に応じて、さらに詳細な分析や別の質問があればお知らせください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は、3つのタイトルすべてについて都市名の有無を判定しており、都市名も正しく抽出できています（バンクーバー、ロンドン）。  \n「織田信長の生涯」に都市名が含まれないことも明示しており、内容面では正解例と同等です。  \n\n一方で、問題固有の採点基準にある「余計な要素が入っている場合: -2点」に該当する可能性があります。  \n回答末尾の「必要に応じて、さらに詳細な分析や別の質問があればお知らせください。」という文は、問題の要求（都市名をすべて書き出す）に直接関係しない余計な要素とみなせます。  \nよって、内容は正しいものの、この余計な一文により減点対象となります。  \n\n元は5点相当の内容だが、余計な要素により -2 点として、最終スコアは 3 点と判断します。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.155099+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "タイトルに含まれる都市名は以下の通りです。  \n- バンクーバー  \n- ロンドン  \n\n（「織田信長の生涯」には都市名は含まれていません）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:47.347454+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた映画タイトルに含まれる都市名は以下の通りです。\n\n* **バンクーバー** （『バンクーバーからの挑戦』より）\n* **ロンドン** （『ロンドンの夢』より）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:42.128398+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:06.734732+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 31,
+  "category": "長い文書のClosed QA（千トークン以上）",
+  "question": {
+    "original": "以下の文章をもとに問題に答えよ\n### 文章\n第１回 こども未来戦略会議 議事要旨 １． 日 時 令和５年４月７日（金）１７時４０分～１８時４０分 ２． 場 所 官邸２階 大ホール ３． 出席者 （議長） 岸田内閣総理大臣 （副議長） 後藤全世代型社会保障改革担当大臣、小倉内閣府特命担当大臣（こども政策 少子 化対策 若者活躍 男女共同参画） （閣僚構成員）松野内閣官房長官、尾身総務副大臣（代理出席）、鈴木財務大臣、永岡文部科学 大臣、加藤厚生労働大臣、西村経済産業大臣、古川国土交通大臣政務官（代理出席） （有識者構成員）秋田喜代美、荒木泰臣、遠藤久夫、奥山千鶴子、権丈善一、小林健、櫻井彩乃、 清家篤、武田洋子、立谷秀清、十倉雅和、冨山和彦、中野美奈子、新浪剛史、新居日南恵、 平井伸治、水島郁子、芳野友子 （五十音順、敬称略） ４． 議事内容  最初に、後藤全世代型社会保障改革担当大臣より、こども未来戦略会議の設置について、 【資料１】を用いて説明の上で、こども未来戦略会議の運営などに関して、【資料２】及び【資料 ３】を紹介。  次に、小倉内閣府特命担当大臣（こども政策 少子化対策 若者活躍 男女共同参画）より、 「こども・子育て政策の強化について（試案）」について、【資料４】及び【資料５】を用いて説明。  その後、各構成員（関係閣僚を除く。）より、こども・子育て政策の強化について、下記のような意見があった。 \n【「こども・子育て政策の強化について（試案）」に対する意見（個別施策）】 ○ 少子化の原因の一つは未婚率の上昇。「構造的な賃上げ」への取組が重要であり、生涯賃金 の格差是正に向けた具体的施策や、非正規のセーフティネット拡大が不可欠。 ○ 若い世代の結婚・出産の希望の実現のため、構造的な賃上げの実現が重要。 ○ 特に若い世代の「世帯の実質賃金」が継続的に上がる必要があり、男女とも育児に十分な時間を割くための働き方改革など、子育てをしながら男女ともに活躍ができる環境整備を急ぐべき。特に、雇用の７割を支える中小企業の取組の加速が鍵。 ○ 多様な生き方、働き方、性別に対して中立的な経済社会システムを作るべき。非正規やフリー ランスを包摂し、全ての若者に支援を届けようとする試案の方向性に賛同。労働市場の流動化とリスキリングなどの包摂的セーフティネット構築が連動して、「正社員男性」とそれ以外の 人々の格差が解消し、若者の結婚・出産・子育てへの希望再生を期待。 ○ 奨学金の問題が大きい。卒業後の収入に応じた返済の仕組みの対象を広げるとか、社会全体で教育を支えるということが必要。 ○ 住宅支援の充実も必要であり、市町村で空き家をリノベーションし、子育て世代のために活用 するといったことを行っていただきたい。 ○ 幼児教育・保育の質の向上として、75 年ぶりの配置基準改革が記載されたことは有意義。その実現には保育者の養成、人材確保、更なる処遇改善の検討が重要。また、「こども誰でも 通園制度」は、孤立化しやすい低年齢の「子育て」を支援する親支援というだけでなく、全てのこどもの育ちを低年齢から保障する未来投資であり、画期的。 ○ 試案にある育休給付の手取り 10 割の保証などは意義深い。育児休業がネガティブな経験に ならないよう、育休手当の手取り保障や、振り込みのタイミングについても具体化に向けた議 論が重要。 ○ 若者が結婚や子育てについて希望が持てないのが日本の現状。こどもを諦める原因は、性別役割分担意識。最近、若い男性は、就活のときに男性育休がとれるかどうかで活動をしている。大企業以外でも男性育休の取得がマストとなるようにすべき。\n### 問題\n文章によると日本の現状についてどのように捉えられているか",
+    "translation_en": "According to the text, the current situation in Japan is perceived as follows:  \n\n- Young people lack hope for marriage and child-rearing due to economic and social factors.  \n- A major cause of declining birth rates is the rising unmarried rate, linked to stagnant wages and job insecurity.  \n- Younger generations, especially, face financial instability, with \"real household wages\" not increasing, hindering their ability to marry and raise children.  \n- The gap between \"regular male employees\" and others (including non-regular workers, freelancers, and women) contributes to this issue, as does the lack of support for diverse work and life choices.  \n- Student loan burdens and insufficient housing support further discourage young people from starting families.  \n- Traditional gender roles and the expectation that women bear the brunt of childcare also play a role.  \n- There is a growing awareness among young men that companies offering parental leave are more desirable, but this is not yet widespread outside large corporations.  \n\nOverall, the text suggests that Japan's demographic challenges stem from economic inequality, rigid work structures, and outdated social norms, which discourage young people from marrying and having children."
+  },
+  "answer": {
+    "gold_original": "文章中では日本の現状について子どもや子育てに焦点を当てて以下のように述べられています。\n- 未婚率の上昇を原因として少子化が起きている。\n- 「正社員男性」とそれ以外の人々の間で生涯賃金に格差がある。\n- 若い世代が結婚・出産・子育てについて希望が持てない。\n- 性別役割分担意識が子供を諦める原因となっている。\n-  奨学金の返済が問題になっている。 \n- 住宅支援が足りていない。\n- 幼児教育・保育の質の向上として、75 年ぶりの配置基準改革が記載されたことは有意義であったが、その実現には保育者の養成、人材確保、更なる処遇改善の検討が重要である。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe text discusses the current situation in Japan, focusing on children and childcare, as follows:  \n- The declining birthrate is caused by the rising rate of unmarried individuals.  \n- There is a disparity in lifetime earnings between \"regular male employees\" and others.  \n- Younger generations lack hope regarding marriage, childbirth, and childcare.  \n- Traditional gender role expectations contribute to people giving up on having children.  \n- Student loan repayment is a significant issue.  \n- Housing support is insufficient.  \n- The revision of childcare staffing standards—the first in 75 years—was meaningful for improving early childhood education and care quality, but its implementation requires further consideration of childcare worker training, personnel recruitment, and improved compensation.  \n\n(Translation preserves the original meaning and details without adding commentary.)"
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 若者が結婚や子育てについて希望が持てない:3点\n  - その他の正解例に含まれる点を含む:2点\n- 日本の現状についての文章中の内容を網羅している:3点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Young people lacking hope for marriage and child-rearing: **3 points**  \n  - Includes points from other correct examples: **2 points**  \n- **Covers the content of Japan’s current situation in the text:** **3 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "文章によると、日本の現状について以下のように捉えられています。  \n\n1. **少子化の深刻さ**  \n   - 未婚率の上昇が少子化の原因の一つと認識されており、構造的な賃上げや非正規雇用のセーフティネット拡大が求められています。  \n   - 若い世代の結婚・出産希望が低迷しており、特に「世帯の実質賃金」が継続的に上がる必要性が強調されています。  \n\n2. **ジェンダー格差と働き方改革**  \n   - 男女ともに育児と仕事を両立できる環境整備（中小企業を中心とした取り組み加速）が急務とされています。  \n   - 「正社員男性」と他の働き方（非正規・フリーランス）の格差解消に向けた包摂的セーフティネット構築が提言されています。  \n\n3. **教育・住宅支援の課題**  \n   - 奨学金制度の見直し（卒業後の収入に応じた返済）や住宅支援（空き家リノベーション）の充実が必要とされています。  \n\n4. **保育・育児政策の重要性**  \n   - 幼児教育・保育の質向上（配置基準改革）や「こども誰でも通園制度」の推進が未来投資として評価されています。  \n   - 育休給付手取り保障（10割保証）や育休手当の具体化に向けた議論が求められています。  \n\n5. **若者の意識変革**  \n   - 若者が結婚や子育てを諦める背景には、性別役割分担意識や男性育休への不安があると指摘されており、意識改革が必要とされています。  \n\n総じて、日本は少子化、ジェンダー格差、経済的不安定さなど複合的な課題を抱えており、これらの解決に向けた包括的な政策提言が出されていることがわかります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 若者が結婚や子育てについて希望が持てない:3点  \n  - 「若い世代の結婚・出産希望が低迷」「若者が結婚や子育てを諦める背景には…」と明示している。\n- その他の正解例に含まれる点を含む:2点  \n  - 未婚率上昇による少子化、賃金格差・非正規のセーフティネット、奨学金問題、住宅支援不足、保育の質向上と配置基準改革などを言及。\n- 日本の現状についての文章中の内容を網羅している:2点  \n  - 主要な論点は押さえているが、「若者が希望を持てない」という点以外の現状認識をやや政策提言寄りの表現でまとめており、網羅性は概ね良いが満点にはやや不足。\n- 自然な日本語である:1点  \n  - 文法的にも表現としても自然。\n- 要約として適切な短さである:0点  \n  - 箇条書きで詳細に書かれており、求められる要約としてはやや長い。\n\n[計算式]\n3 + 2 + 2 + 1 + 0 = 8\n\n[点数]\n8\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:11.548016+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "文章によると、日本の現状は以下のように捉えられています。  \n\n1. **少子化の深刻化**  \n   - 未婚率の上昇が少子化の主要因の一つと認識されており、構造的な賃上げや非正規雇用のセーフティネット拡大が求められている。  \n\n2. **若者の結婚・出産意欲の低下**  \n   - 若い世代の「世帯の実質賃金」が上がらないことが問題視され、育児と仕事両立を可能にする働き方改革（特に中小企業での取り組み）が急務とされている。  \n\n3. **経済格差と社会保障の課題**  \n   - 「正社員男性」と他の労働者（非正規・フリーランスなど）の格差解消が必要で、包摂的なセーフティネット構築が提案されている。  \n\n4. **教育・住宅支援の不足**  \n   - 奨学金制度や住宅支援（空き家リノベーションなど）の充実が求められ、経済的負担軽減策が重要視されている。  \n\n5. **保育・教育環境への期待**  \n   - 幼児教育・保育の質向上（配置基準改革）や「こども誰でも通園制度」の重要性が強調され、低年齢からの包括的支援が強く望まれている。  \n\n6. **性別役割分担意識の影響**  \n   - 若者の結婚・子育て希望を阻む要因として「性別役割分担意識」が指摘され、大企業だけでなく中小企業でも男性育休取得を促進すべきという意見が出ている。  \n\n総じて、日本社会は少子高齢化と経済格差に直面し、若者世代への経済的・社会的な支援強化と価値観転換（特に性別役割分担）が喫緊課題として認識されていることが伺えます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:52.079196+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "文章によると、日本の現状は**「若者が結婚や子育てについて希望が持てない」**状況であると捉えられています。\n\nまた、その背景や関連する現状として、以下の点も挙げられています。\n*   少子化の原因の一つとして未婚率が上昇している。\n*   性別役割分担意識が原因でこどもを諦めている。\n*   「正社員男性」とそれ以外の人々の間に格差がある。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:32.628150+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:37:36.851356+00:00"
+  }
+}

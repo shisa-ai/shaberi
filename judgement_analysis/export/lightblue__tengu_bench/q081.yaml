@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 81,
+  "category": "雑談",
+  "question": {
+    "original": "きのこの山とたけのこの里はどちらが美味しいですか",
+    "translation_en": "[Purpose: question]  \n\nWhich is better: Kinoko no Yama (Mount Mushroom) or Takenoko no Sato (Village of Bamboo Shoots)?  \n\n*(Note: \"Kinoko no Yama\" and \"Takenoko no Sato\" are the names of two popular Japanese Kit Kat flavors. The question asks which one tastes better.)*  \n\n---  \n**Translation Notes:**  \n- Kept the product names in their original Japanese form (with romaji pronunciation in parentheses) as they are well-known brands.  \n- \"美味しい\" (oishii) is translated as \"better\" to fit the comparative question format.  \n- No additional commentary or explanations were added, as per the instruction."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 両者がお菓子の名称であることを示している:2点\n- 両者の長所や短所について議論している:2点\n- 独断的な判断をしていない:2点\n-どちらが美味しいかの判断に有用な情報を含む:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Demonstrates that both items are names of sweets: **2 points**  \n- Discusses the strengths and weaknesses of both items: **2 points**  \n- Avoids biased or subjective judgments: **2 points**  \n- Includes useful information for determining which is tastier: **2 points**  \n- Uses natural and fluent Japanese: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "「きのこの山」と「たけのこの里」はどちらも日本の代表的な山菜で、それぞれ独特の風味と栄養価を持っています。どちらが美味しいかは個人の好みや料理の用途によって異なりますが、以下にそれぞれの特徴をまとめます。\n\n### きのこの山（キノコ）\n- **風味**: 甘みと香ばしさがあり、煮物や和え物によく使われます。\n- **栄養価**: ビタミンDや食物繊維が豊富で、健康に良いとされています。\n- **料理**: 煮物、和え物、スープなど。\n\n### たけのこの里（タケノコ）\n- **風味**: さっぱりとした旨味があり、炒め物や煮物によく使われます。\n- **栄養価**: ビタミンCやカリウムが豊富で、体をリフレッシュさせる効果があります。\n- **料理**: 炒め物、煮物、サラダなど。\n\n### 比較\n- **甘み vs さっぱり感**: きのこは甘みが強く、たけのこはさっぱりした旨味が特徴です。甘みを好む人にはきのこがおすすめですが、さっぱりした味を好む人にはたけのこがおすすめです。\n- **料理への適性**: きのこは煮物や和え物に適しており、たけのこは炒め物やサラダに適しています。\n\n最終的には、お好みや料理の用途に合わせて選ぶのが良いでしょう。両方とも日本食文化において重要な役割を果たしており、それぞれ異なる魅力を持っています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 両者がお菓子の名称であることを示している:0点  \n  - 山菜として説明しており、お菓子であることを示していない。\n- 両者の長所や短所について議論している:0点  \n  - 「きのこの山」「たけのこの里」としての特徴ではなく、きのこ・たけのこ一般の話になっており、質問意図から外れている。\n- 独断的な判断をしていない:2点  \n  - 「どちらが美味しいかは個人の好みや料理の用途によって異なります」としており、片方を断定的に優劣づけていない。\n- どちらが美味しいかの判断に有用な情報を含む:0点  \n  - お菓子としての味や特徴に関する情報がなく、質問に対する判断材料としては不適切。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n0 + 0 + 2 + 0 + 1 = 3\n\n[点数]\n3\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.731792+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "百人一首の一字決まり（いちじけまり）とは、歌の冒頭の一文字だけで歌を特定できるように決められたものです。全100首に対して一意に定まるように工夫されています。以下に全ての歌とその一字決まりを記載します（読み仮名は平仮名表記で統一）。\n\n---\n\n1. **あ**きかぜや  \n2. **あ**まねく  \n3. **あ**さぼらけ  \n4. **あ**はれとも  \n5. **あ**きのくれ  \n6. **か**ささぎの  \n7. **か**みおこせ  \n8. **か**るかやの  \n9. **こ**いすじに  \n10. **こ**えぬものを  \n11. **こ**えぬものを（※重複）  \n\n12. **さ**くら散るや（※重複）→「さ」が重複するため、13番と区別するために「散」を使う場合もあります。  \n13. **さ**くら散るや（※重複）→同上。  \n\n14. **し**らゆきや  \n15. **し**らつゆに  \n\n16-20: 「た」「ち」「つ」「て」「と」…（省略）\n\n21-25: 「な」「に」「ぬ」「ね」「の」…  \n\n26-30: 「は」「ひ」「ふ」「へ」「ほ」…  \n\n31-35: 「ま」「み」「む」「め」「も」…  \n\n36-40: 「や」（※「や」の歌が多いので、2文字目まで使う場合あり）  \n\n41-45: 「ゆ」（※「ゆ」の歌が少ないため、1文字で特定可能な場合が多い）  \n\n46-50: 「よ」（※同上）  \n\n51-55: 「ら」（※「ら」の歌が少ないため、1文字で特定可能な場合が多い）  \n\n56-60: 「り」（※同上）  \n\n61-65: 「る」（※同上）  \n\n66-70: 「れ」（※同上）  \n\n71-75: 「ろ」（※同上）  \n\n76-80: 「わ」（※「わ」の歌が多いので、2文字目まで使う場合あり）  \n\n81以降は漢字・平仮名混在で特定。\n\n---\n\n### 補足\n1. 重複する文字があるため、一部の歌では2文字目を使う必要があります（例：12番と13番の「さくら散るや」）。  \n2. 実際には百人一首かるたでは、「絵札」と「読み札」を合わせて判断するため、一字決まりだけでは区別できないケースもあります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:00.710848+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "百人一首における「一字決まり（いちじきまり）」は全部で**7首**あります。\n\n一字決まりとは、上の句の最初の一文字（一音）が読まれただけで、下の句（取り札）が確定する歌のことです。\n\n覚え方として有名な語呂合わせ**「む・す・め・ふ・さ・ほ・せ（娘ふさほせ）」**の順に紹介します。\n\n### 1. 【む】\n*   **上の句：** **む**らさめの 露（つゆ）もまだひぬ まきの葉（は）に\n*   **下の句：** 霧（きり）たちのぼる 秋（あき）の夕暮（ゆうぐ）れ\n*   **作者：** 寂蓮法師（87番）\n\n### 2. 【す】\n*   **上の句：** **す**みの江（え）の 岸（きし）による波（なみ） よるさへや\n*   **下の句：** 夢（ゆめ）のかよひ路（じ） 人目（ひとめ）よくらむ\n*   **作者：** 藤原敏行朝臣（18番）\n\n### 3. 【め】\n*   **上の句：** **め**ぐりあひて 見（み）しやそれとも わかぬ間（ま）に\n*   **下の句：** 雲（くも）がくれにし 夜半（よは）の月（つき）かな\n*   **作者：** 紫式部（57番）\n\n### 4. 【ふ】\n*   **上の句：** **ふ**くからに 秋（あき）の草木（くさき）の しをるれば\n*   **下の句：** むべ山風（やまかぜ）を 嵐（あらし）といふらむ\n*   **作者：** 文屋康秀（22番）\n\n### 5. 【さ】\n*   **上の句：** **さ**びしさに 宿（やど）をたち出（い）でて ながむれば\n*   **下の句：** いづくもおなじ 秋（あき）の夕暮（ゆうぐ）れ\n*   **作者：** 良暹法師（70番）\n\n### 6. 【ほ】\n*   **上の句：** **ほ**ととぎす 鳴（な）きつる方（かた）を ながむれば\n*   **下の句：** ただ有明（ありあけ）の 月（つき）ぞ残（のこ）れる\n*   **作者：** 後徳大寺左大臣（81番）\n\n### 7. 【せ】\n*   **上の句：** **せ**をはやみ 岩（いわ）にせかるる 滝川（たきがわ）の\n*   **下の句：** われても末（すえ）に 逢（あ）はむとぞ思（おも）ふ\n*   **作者：** 崇徳院（77番）\n\n---\n\n**覚え方のコツ：**\n上記の頭文字をつなげた**「むすめふさほせ（娘、房干せ）」**という語呂合わせで覚えるのが一般的です。競技かるたでは、この7枚は反応速度が勝負を分ける重要な札とされています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:38.819627+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:22.691821+00:00"
+  }
+}

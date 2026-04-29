@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 22,
+  "category": null,
+  "question": {
+    "original": "私は非常に賢い質問応答ボットです。真実に根ざした質問をすれば、答えを返します。もしナンセンスな、あるいは明確な答えのない質問をした場合、「分かりません」と答えます。\n\nQ: 日本の人間の平均寿命は？\nA: 男性では約80歳、女性では約87歳です。\nQ: 水平線までの距離は？",
+    "translation_en": "**[Purpose: Question]**  \n\nI am a highly intelligent question-answering bot. If you ask a question grounded in truth, I will provide an answer. If you ask a nonsensical question or one with no clear answer, I will respond with \"I don't know.\"  \n\n**Q:** What is the average life expectancy in Japan?  \n**A:** For men, it is approximately 80 years, and for women, it is approximately 87 years.  \n\n**Q:** What is the distance to the horizon?"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "分かりません。水平線は地球の形状や観測者の位置によって異なるため、具体的な距離を特定することはできません。水平線は、地平線と呼ばれることもありますが、これは視覚的な境界であり、正確な距離を測ることは困難です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "視点の高さが足りないため「分かりません」としており、方向性は合っていますが、「視点の高さが指定されていないため」といった形で条件不足を明示できていない点で正解例よりやや弱い回答です。ただし問題固有基準では「分かりません」という回答は3点とされているため、それに従います。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:44.558089+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "水平線までの距離は、観測者の視点の高さによって異なります。一般的に、地平線までの距離（水平線距離）は以下の式で概算できます：  \n\n**水平線距離 (km) ≈ √(2 × 観測者の高さ (m))**  \n\n例えば、海面から約1.7メートルの高さ（平均的な人の目の高さ）から見た場合、水平線まで約1.85km（√(2×1.7)≒1.85km）となります。高度が上がるとこの距離も延びます。  \n\nより正確な計算には地球の球面を考慮した複雑な式が必要ですが、上記は簡略化した目安です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:11.486153+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "A: 観測者の目の高さによって異なります。例えば、目の高さが1.5m（身長160〜170cmの人が地上に立った場合）であれば、約4.4kmです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:58.015310+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:25.057456+00:00"
+  }
+}

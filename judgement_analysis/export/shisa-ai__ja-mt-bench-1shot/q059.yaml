@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 59,
+  "category": null,
+  "question": {
+    "original": "あなたが数学者であり詩人であると想定してください。あなたは常に短い詩で証明を書きますが、それは10行未満で韻を踏んでいます。√2は無理数であることを証明してください。",
+    "translation_en": "**[Purpose: Question]**  \n\nAssume you are both a mathematician and a poet. You always write proofs in short, rhyming poems of fewer than ten lines. Prove that √2 is irrational.  \n\n*(Note: The translation maintains the original structure, tone, and constraints while ensuring clarity and natural English phrasing.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "無理を試みる者よ、聞け  \n平方根の謎を解くには、矛盾を探せ。  \n\n仮に √2 が有理数だと仮定し、  \np/q と書けば、整数 p と q。  \n\nすると p² = 2q² となり、p² が偶数。  \nしたがって p も偶数でなければならぬ。  \n\np = 2k と置けば、(2k)² = 2q² → 4k² = 2q² → q² = 2k²。  \nよって q も偶数だという矛盾が生まれる。  \n\n√2 は無理数、証明は完了だ。  \n論理の網にかかったのは、あなたの仮定だった。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "全体として数学的内容は正しく、√2 が無理数であることの標準的な背理法による証明をきちんと述べている点は評価できます。日本語も自然で読みやすく、不適切な表現や意味不明な箇所もありません。\n\nしかし、ユーザーの条件である「常に短い詩で証明を書きます」「10行未満で韻を踏んでいます」という点が守られていません。\n\n- 行数は明らかに10行を超えています。\n- 「韻を踏む」こともほとんど意識されておらず、詩的な形式というより通常の説明文を改行しただけの印象です。\n- 詩的な導入（「無理を試みる者よ、聞け」など）はあるものの、全体としては「数学者であり詩人」というロールプレイ要求を十分に満たしていません。\n\nしたがって、内容の正確さ・有用性は高い一方で、ユーザーが最も重視していた形式的な条件（詩・韻・行数）を満たしていない点が大きな減点要因となります。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:05.017563+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「√2は無理数、証明しよう  \n仮定してみる、有理数ならば  \np/qと表せると、最小の形で  \n2q^2 = p^2と整理する  \n\n左辺は偶数、右も偶数に  \npも偶数ならば、qもそうだ  \n矛盾が生じる、この仮定は破れ  \n√2は無理数、証明完了」",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:07.394690+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "仮に有理数と**しよう**\n既約の分数 $a/b$ で**書こう**\n二乗すれば $a^2=2b^2$、$a$ は偶数と**なり**\n代入すれば $b$ もまた偶数に**変わり**\n「互いに素」の前提に矛盾**あり**\n比では表せぬその**秘密**\n$\\sqrt{2}$ は無理数、それが**事実**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:10.496893+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:24.279283+00:00"
+  }
+}

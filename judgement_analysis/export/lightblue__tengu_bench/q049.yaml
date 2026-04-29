@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 49,
+  "category": "数学",
+  "question": {
+    "original": "Ａ君とＢ君がＸ地点を同時に出発して,Ｙ地点までそれぞれ一定の速さで歩\nき続けました。\nＣ君は２人が出発して５分後にＸ地点を出発し,一定の速さで走り続けて２人を追いかけました。\nＣ君は出発して５分後にＢ君に追いつき，その２０分後にＡ君に追いつきました。\n\n今、Ａ君,Ｂ君,Ｃ君の速さの比をできるだけ簡単な整数の比で表しなさい。",
+    "translation_en": "**[Purpose: Question]**  \n\nA and B started walking from point X to point Y at the same time, maintaining constant speeds. C departed from point X 5 minutes after A and B, running at a constant speed to catch up with them. C caught up with B 5 minutes after starting, and then caught up with A 20 minutes after that.  \n\nExpress the ratio of A, B, and C's speeds in the simplest possible integer ratio.  \n\n---  \n*(Translation preserves the original meaning, structure, and details without adding commentary.)*"
+  },
+  "answer": {
+    "gold_original": "まずB君とC君が出会ったタイミングを考える。2人が出会った時点でB君は 5+5 = 10分歩き続けている一方で、C君は5分走っている。2人が移動した距離が等しいことからB君とC君の速さの比は 5 : 10 = 1 : 2 であるとわかる。\n次にA君とC君が出会ったタイミングを考える。2人が出会った時点でA君は 5+5+20 = 30分歩き続けている一方で、C君は5+20 = 25分走っている。2人が移動した距離が等しいことからA君とC君の速さの比は 25 : 30 = 5 : 6 であるとわかる。\nよってB君とC君の速さの比である1 : 2 と、A君とC君の速さの比である5 : 6を総合するとB君とC君の速さの比の両辺を3倍して3 : 6とすることでB君とC君の速さの比のC君の速さとA君とC君の速さの比のC君の速さが等しくなるため、Ａ君,Ｂ君,Ｃ君の速さの比は5 : 3 : 6であるとわかる。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nFirst, consider the timing of when B and C met. At the moment they met, B had been walking for 5 + 5 = 10 minutes, while C had been running for 5 minutes. Since the distances they traveled were equal, the ratio of B's speed to C's speed is 5 : 10 = 1 : 2.  \n\nNext, consider the timing of when A and C met. At the moment they met, A had been walking for 5 + 5 + 20 = 30 minutes, while C had been running for 5 + 20 = 25 minutes. Since the distances they traveled were equal, the ratio of A's speed to C's speed is 25 : 30 = 5 : 6.  \n\nTherefore, combining the speed ratio of B to C (1 : 2) and the speed ratio of A to C (5 : 6), we can equalize C's speed by multiplying the ratio of B to C by 3, resulting in 3 : 6. This makes C's speed in both ratios equal, allowing us to determine that the speed ratio of A, B, and C is 5 : 3 : 6.  \n\n*(Note: The translation maintains the original structure and mathematical reasoning while ensuring clarity in English.)*"
+  },
+  "rubric": {
+    "original": "- 答えのＡ君,Ｂ君,Ｃ君の速さの比が5 : 3 : 6になっている:3点\n- 問いの中での追いつくことの意味を数学的に示すことができている:2点\n- B君とC君の速さの比とA君とC君の速さの比をそれぞれ求めている:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **3 points**: The ratio of A, B, and C's speeds is correctly given as 5 : 3 : 6.  \n- **2 points**: The mathematical meaning of \"catching up\" in the problem is clearly demonstrated.  \n- **2 points**: The ratios of B's speed to C's speed and A's speed to C's speed are correctly calculated.  \n- **2 points**: The explanation is specific and easy to understand.  \n- **1 point**: The Japanese is natural and fluent.  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "Ａ君の速さを \\( v_A \\)、Ｂ君の速さを \\( v_B \\)、Ｃ君の速さを \\( v_C \\) とします。\n\n1. 5分後にＣ君が出発した時点で、Ａ君とＢ君はそれぞれ \\( 5v_A \\) と \\( 5v_B \\) の距離を進んでいます。\n2. 5分後から20分後までに、Ｃ君はＢ君に追いつき、その20分後にはＡ君に追いつきます。\n3. 20分間で、Ｃ君が進む距離は \\( 20v_C \\) です。\n4. Ｃ君がＢ君に追いつくまでの時間は15分（20 - 5 = 15）です。15分間で、Ｂ君が進む距離は \\( 15v_B \\) であり、Ｃ君が進む距離は \\( 15v_C \\) です。したがって、\n   \\[\n   15v_B = v_C\n   \\]\n5. Ｃ君がＡ君に追いつくまでの時間は20分です。20分間で、Ａ君が進む距離は \\( 20v_A + (5v_A) = 25v_A \\) であり、Ｃ君が進む距離は \\( 20v_C \\) です。したがって、\n   \\[\n   25v_A = v_C\n   \\]\n6. 上記2つの式から、\n   \\[\n   v_C = 15v_B = (25/3)v_A\n   \\]\n7. この式から、\n   \\[\n   v_A : v_B : v_C = (25/3)v_A : v_B : (25/3)v_A\n   \\]\n8. 整数比にするために、\\( (25/3)v_A, v_B, (25/3)v_A \\) を共通因数で割ります。ここでは3を共通因数として割ります。\n9. 削除後の比率：\n   - \\( (25/3)v_A / (1/3)v_A = (25/1)v_A / (1/1)v_A = 25 : 1\\)\n10. よって、アシスタントの答えは **\\( A : B : C = ** **\\( **\\( **\\( **\\( **\\( **\\( **\\( **\\( **\\( **\\)",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えのＡ君,Ｂ君,Ｃ君の速さの比が5 : 3 : 6になっている:0点  \n  - 最終的な比が導かれておらず、5:3:6 という答えも示されていない。途中の式も誤り。\n- 問いの中での追いつくことの意味を数学的に示すことができている:0点  \n  - 「追いつく」場面での距離の等式設定が誤っており（例: 15v_B = v_C など）、正しく示せていない。\n- B君とC君の速さの比とA君とC君の速さの比をそれぞれ求めている:0点  \n  - どちらの比も正しく求められていない。\n- 説明が具体的でわかりやすい:0点  \n  - 計算過程が誤っており、途中で破綻しているため、わかりやすいとは言えない。\n- 自然な日本語である:1点  \n  - 数式部分の誤りや末尾の崩れはあるが、日本語文自体はおおむね自然。\n\n[計算式]\n0 + 0 + 0 + 0 + 1 = 1\n\n[点数]\n1点\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:12.483775+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "A君、B君、C君の速さをそれぞれ \\( v_A \\)、\\( v_B \\)、\\( v_C \\) とします。距離は \\( d \\) とします。\n\n1. **A君とB君の関係**  \n   A君とB君は同時に出発し、一定の速さで歩き続けます。C君がB君に追いつくまでの時間を考えます。\n\n2. **C君がB君に追いつくまでの時間**  \n   - C君は5分遅れて出発し、さらに5分後にB君に追いつくので、C君が歩いた時間は10分（＝1/6時間）です。  \n   - B君はこの時点で15分（＝1/4時間）歩いています。  \n   - 距離は同じなので、\\( v_B \\times \\frac{1}{4} = v_C \\times \\frac{1}{6} \\) となり、\\( v_C = \\frac{3}{2}v_B \\) です。\n\n3. **C君がA君に追いつくまでの時間**  \n   - C君がB君に追いついた後20分後にA君に追いつきます。この時点でC君が歩いた総時間は30分（＝1/2時間）です。  \n   - A君はこの時点で35分（＝7/12時間）歩いています。  \n   - 距離は同じなので、\\( v_A \\times \\frac{7}{12} = v_C \\times \\frac{1}{2} \\) となり、\\( v_C = \\frac{7}{6}v_A \\) です。\n\n4. **比率を求める**  \n   上記から \\( v_C = \\frac{3}{2}v_B = \\frac{7}{6}v_A \\) が得られます。これを整理すると：  \n   \\( v_A : v_B : v_C = 6 : 7 : 9 \\)\n\nしたがって、A, B, Cの速さの比率は **6:7:9** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:52.427395+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "Ａ君、Ｂ君、Ｃ君の速さをそれぞれ $v_A, v_B, v_C$ とします。\n距離 ＝ 速さ × 時間 の関係を使って式を立てていきます。\n\n**１．Ｃ君がＢ君に追いついた時の状況**\nＣ君は出発して５分後にＢ君に追いつきました。\nＡ君とＢ君が出発してからＣ君が出発するまでに５分の差があるので、それぞれの移動時間は以下のようになります。\n\n*   Ｃ君が走った時間：$5$ 分\n*   Ｂ君が歩いた時間：$5$（Ｃ君出発までの時間）$+$ $5$（Ｃ君が走った時間）$= 10$ 分\n\n追いついた地点までの距離は等しいので、以下の式が成り立ちます。\n$$v_B \\times 10 = v_C \\times 5$$\n両辺を５で割ると：\n$$2 \\times v_B = v_C$$\nよって、Ｂ君とＣ君の速さの比は\n$$v_B : v_C = 1 : 2 \\quad \\cdots \\text{①}$$\n\n**２．Ｃ君がＡ君に追いついた時の状況**\nＣ君はＢ君に追いついてから、さらに２０分後にＡ君に追いつきました。\nつまり、Ｃ君が出発してからＡ君に追いつくまでの合計時間は $5 + 20 = 25$ 分です。\n\n*   Ｃ君が走った時間：$25$ 分\n*   Ａ君が歩いた時間：$5$（Ｃ君出発までの時間）$+$ $25$（Ｃ君が走った時間）$= 30$ 分\n\n追いついた地点までの距離は等しいので、以下の式が成り立ちます。\n$$v_A \\times 30 = v_C \\times 25$$\n両辺を５で割ると：\n$$6 \\times v_A = 5 \\times v_C$$\nよって、Ａ君とＣ君の速さの比は\n$$v_A : v_C = 5 : 6 \\quad \\cdots \\text{②}$$\n\n**３．３人の速さの比を合わせる**\n①と②の式には共通してＣ君（$v_C$）が含まれています。\n①では $v_C$ が $2$ の割合、②では $v_C$ が $6$ の割合になっています。\nこれらを合わせるために、①の比を３倍にして $v_C$ を $6$ に揃えます。\n\n*   ①より、$v_B : v_C = 1 : 2 = 3 : 6$\n*   ②より、$v_A : v_C = 5 : 6$\n\nこれらをまとめると：\n$$v_A : v_B : v_C = 5 : 3 : 6$$\n\n**答え**\n**５ ： ３ ： ６**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:40.883088+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:30.745599+00:00"
+  }
+}

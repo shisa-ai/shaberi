@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 76,
+  "category": null,
+  "question": {
+    "original": "次の言葉を順に全て使って、1つの文を書いてください\n\n全力、安全、活用、軽減",
+    "translation_en": "**\"By utilizing our full effort, we ensure safety and effectively reduce risks.\"**  \n\n*(This sentence sequentially incorporates all four words: 全力 (full effort), 安全 (safety), 活用 (utilize), and 軽減 (reduce).)*  \n\n*(Note: The translation maintains the original intent while ensuring natural English flow for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "全力で安全を確保し、危険を軽減することで、資源を最大限に活用できるよう努めます。  \n\n（この文では、各単語が順に使われつつ、安全性と効率性の両方を強調しています。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答は「活用」を使っていないため、条件A「全ての単語を使う」を満たしていません（-2点）。  \nまた、指定された4語「全力、安全、活用、軽減」の順番どおりにもなっていません（「軽減」が「活用」より先に来ているためBも不達成、-2点）。  \n日本語としては自然で意味も通っているので、その他の減点はありません。\n\n基礎点5点から、A・Bの不達成で合計4点減点し、最終的に1点となります。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:44.461636+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「全力で安全対策を活用することで、事故のリスクを軽減できます。」  \n\n（すべての言葉を順番に使い、自然な文を作成しました。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:46.777232+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "私たちは**全力**で**安全**対策に取り組み、最新技術を**活用**してリスクを**軽減**します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:47.454582+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:57.166497+00:00"
+  }
+}

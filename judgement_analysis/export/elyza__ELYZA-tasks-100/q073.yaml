@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 73,
+  "category": null,
+  "question": {
+    "original": "和訳後の不自然な文が与えられます。自然な文に直してください。\n\n和文: 攻撃は驚きを持ってプレイヤーを取った、彼はゲームが終わって、彼の対戦相手が勝つだろうと言うので、彼はちょうど何を決めたのですか？",
+    "translation_en": "**Translation:**  \n\n*\"The attack caught the player by surprise, and he said the game was over and his opponent would win—what exactly did he decide?\"*  \n\n(Alternatively, for a slightly more natural flow: *\"The attack took the player by surprise, and he declared the game over, saying his opponent would win—what exactly did he decide?\"*)  \n\n**Key Adjustments:**  \n- \"取った\" → \"took by surprise\" (more natural phrasing)  \n- \"彼はちょうど何を決めたのですか？\" → \"what exactly did he decide?\" (clarified the question)  \n- Removed redundant phrasing (\"ゲームが終わって\" → \"the game was over\") for conciseness.  \n\nThis version maintains the original meaning while improving readability for evaluation documentation."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "和訳後の不自然な文を自然な文に直すと、以下のようになります。  \n\n**「攻撃はプレイヤーを驚かせた。ゲームが終わって相手が勝つだろうと言ったのに、彼は一体何を決めたんだ？」**  \n\nこの修正では、  \n1. 「取った」を「驚かせた」に変更し、より自然な表現に。  \n2. 「ちょうど」を「一体」に置き換え、文脈に合うように調整。  \n3. 全体的に流れの良い日本語になるように文構造を最適化しました。  \n\n必要に応じてさらに調整可能ですので、お知らせください！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は全体として意味は通じますが、いくつか問題があります。\n\n- 原文は「攻撃は驚きを持ってプレイヤーを取った」という不自然な主語・述語関係を、「プレイヤーは攻撃に驚かされた」のように主語をプレイヤーにする方向で直しているのに対し、回答は「攻撃はプレイヤーを驚かせた」としており、主語を攻撃のままにしていて不自然さが残っています。\n- 「ゲームが終わって、彼の対戦相手が勝つだろうと言うので」という部分は、正解例では「ゲームはもう終わりだと思って、相手が勝つだろうと言った」と、プレイヤーの認識として整理されていますが、回答は「ゲームが終わって相手が勝つだろうと言ったのに」としており、「〜のに」を付けたことで対比・逆接のニュアンスが強くなり、元の意味からややずれています。\n- 「彼はちょうど何を決めたのですか？」は、正解例では「プレイヤーはどうすることにしたのだろうか？」と自然な自問表現にしているのに対し、回答は「彼は一体何を決めたんだ？」としており、カジュアルで話し言葉寄りになっているものの、意味自体は大きく変わってはいません。\n\n元文よりは読みやすくなっていますが、主語の不自然さが残っており、正解例と比べるとやや意味の整理が不十分です。そのため「部分的に合っているが、依然として不自然な箇所がある」レベルと判断できます。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.865647+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "自然な和文:  \n「攻撃に驚かされたプレイヤーは、ゲームが終わり対戦相手が勝つと悟り、どのような決断を下したのでしょうか？」  \n\n（修正点）  \n1. 「驚きを持って取った」→「驚かされた」（自然な表現に）  \n2. 「言うので」→「悟り」（状況に合う言葉へ）  \n3. 「ちょうど何を決めたのですか？」→「どのような決断を下したのでしょうか？」（より自然な疑問形へ）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:08.903406+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた文は、英語のイディオム（慣用句）を直訳してしまった機械翻訳のように見受けられます。\n\n元の英文は恐らく以下のようなものだと推測されます：\n*\"The attack **took the player by surprise**, so he decided to **call it a game** and say his opponent would win. **Just what** did he decide?\"*\n\n文脈に合わせて、いくつか自然な日本語に直した案を提示します。\n\n**1. 最も自然な翻訳（標準的）**\n> 「その攻撃はプレイヤーの不意を突いた。彼はゲームを切り上げ、相手の勝ちを認めることにした。さて、彼は一体何を決断したのだろうか？」\n\n**2. ゲーム用語を使った翻訳（ゲーマー向け）**\n> 「不意打ちを食らったプレイヤーは、ゲームを放棄して相手の勝利とすることにした。つまり、彼はどうすることにしたのか？」\n\n**3. 文脈を補った意訳（わかりやすさ重視）**\n> 「予想外の攻撃を受けた彼は、これ以上続けても無駄だと判断し、負けを認めてゲームを終わらせることにした。彼は何を決めたと言えるだろうか？」\n\n---\n\n**修正のポイント:**\n\n*   **「攻撃は驚きを持ってプレイヤーを取った」**\n    *   英語の \"take someone by surprise\"（不意を突く、驚かせる）の誤訳です。「不意を突かれた」「驚かされた」とするのが自然です。\n*   **「彼はゲームが終わって、彼の対戦相手が勝つだろうと言うので」**\n    *   \"call it a game\"（ゲームを終わりにする／切り上げる）や \"concede\"（投了する／負けを認める）といったニュアンスが含まれています。「ゲームを切り上げる」「負けを認める」と訳すとスムーズです。\n*   **「彼はちょうど何を決めたのですか？」**\n    *   \"Just what...\" は「一体全体、何を～」という強調のニュアンスです。「ちょうど」ではなく「一体何を」「つまり何を」とするのが適切です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:02.423620+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:54.444052+00:00"
+  }
+}

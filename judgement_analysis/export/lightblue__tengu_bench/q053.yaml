@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 53,
+  "category": "翻訳",
+  "question": {
+    "original": "英訳して下さい。\n「東京都千代田区神田小川町1丁目2−3 田中ビル」",
+    "translation_en": "\"Tokyo, Chiyoda-ku, Kanda Ogawacho 1-2-3 Tanaka Building\"  \n\n(Note: The translation maintains the original address format, which is standard in English documentation. No additional commentary or explanations are included, as per the instruction.)"
+  },
+  "answer": {
+    "gold_original": "Tanaka Building, 1-2-3 Kanda Ogawamachi, Chiyoda-ku, Tokyo",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nTanaka Building, 1-2-3 Kanda Ogawamachi, Chiyoda-ku, Tokyo  \n\n*(Note: The translation maintains the original format and details, including the address structure common in Japanese documentation.)*"
+  },
+  "rubric": {
+    "original": "- 住所の表記の順序は適切か\n  - 全て日本語と逆順である(正解例):6点\n  - 日本語と同じ順序である:3点\n- 適切な英語の綴りである: 4点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Order of address components is correct?**  \n  - All components are in reverse order compared to Japanese (correct example): **6 points**  \n  - Components are in the same order as Japanese: **3 points**  \n- **Spelled correctly in English:** **4 points**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "Here is the English translation:  \n\n**\"1-2-3 Kanda Ogawamachi 1-chome, Chiyoda-ku, Tokyo\"**  \n\nThis is the standard English format for Japanese addresses. Let me know if you need any further assistance!",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 住所の表記の順序は適切か: 3点  \n  - 「1-2-3 Kanda Ogawamachi 1-chome, Chiyoda-ku, Tokyo」と、日本語とほぼ同じ順序であり、建物名も欠けているため満点不可。\n- 適切な英語の綴りである: 4点  \n  - 「Kanda Ogawamachi」「Chiyoda-ku」「Tokyo」など綴りは概ね適切。\n\n[計算式]\n3 + 4 = 7\n\n[点数]\n7点\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:04.804951+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「1-2-3 Kanda-Ogawamachi, Chiyoda-ku, Tokyo Tanaka Building」  \n\n（Alternatively, a more natural English format would be:）  \n**Tanaka Building, 1-2-3 Kanda-Ogawamachi, Chiyoda-ku, Tokyo**  \n\nThis keeps the building name first (common in English addresses) while preserving the original Japanese order for the street and district. Let me know if you'd prefer any adjustments!",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:23.926690+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "最も一般的で実用的な表記は以下の通りです。\n\n**Tanaka Bldg., 1-2-3 Kanda-Ogawamachi, Chiyoda-ku, Tokyo**\n\n用途に合わせていくつかのバリエーションがあります。\n\n1.  **標準的・郵便用（最も無難です）**\n    Tanaka Bldg., 1-2-3 Kanda-Ogawamachi, Chiyoda-ku, Tokyo\n\n2.  **少しフォーマル（略語を使わない場合）**\n    Tanaka Building, 1-2-3 Kanda-Ogawamachi, Chiyoda-ku, Tokyo\n\n3.  **行政の公式英語表記に合わせる場合（区＝Cityとする場合）**\n    Tanaka Building, 1-2-3 Kanda-Ogawamachi, Chiyoda City, Tokyo\n\n※英語の住所は、日本語とは逆の順番（建物名→番地→町名→区→都）で書きます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:34.452515+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:47.445696+00:00"
+  }
+}

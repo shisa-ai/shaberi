@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 20,
+  "category": null,
+  "question": {
+    "original": "次の質問に答えてください。\n缶コーヒーの多くはどのような形をしていますか？一番近いものを選んでください。\nA) 円\nB) 円錐\nC) 円柱\nD) 円環",
+    "translation_en": "**[Purpose: Question]**  \n\nAnswer the following question.  \nWhat shape do most canned coffees have? Choose the closest option.  \nA) Circle  \nB) Cone  \nC) Cylinder  \nD) Ring  \n\n*(Note: The correct answer is C) Cylinder, as canned coffees are typically cylindrical in shape.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "正解は **C) 円柱** です。  \n\n缶コーヒーは、底面が円形で側面が円柱状の容器に詰められています。したがって、最も近い形状は「円柱」です。  \n\n他の選択肢の理由：  \n- **A) 円**：底面のみを指すため、全体の形状としては不適切。  \n- **B) 円錐**：頂点があるため、缶コーヒーの形状には当てはまらない。  \n- **D) 円環**：底面が円形だが、側面がないため不完全な表現。  \n\nしたがって、正解は **C) 円柱** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "5\n\n説明：\n- 回答は正解例どおり「C) 円柱」と明確に示しており正答。\n- 他の選択肢が不適切な理由も簡潔かつ正確に説明しており、学習効果が高い。\n- 日本語も自然で不自然な点はない。\n\n以上より、満点の5点と判断できます。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.987652+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "C) 円柱  \n\n缶コーヒーの多くは、**円柱形**（まるじんけい）をしています。  \n理由：缶コーヒーは通常、上下が平らで側面が円形の「円柱」形状をしています。  \n\n他の選択肢の説明：  \n- A) 円：平面的な図形で、立体ではありません。  \n- B) 円錐：上部が尖った形（例：アイスクリームのコーン）。  \n- D) 円環：ドーナツのような穴の開いた円形（缶コーヒーには該当しません）。  \n\nしたがって、正解は **C) 円柱** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:11.217291+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **C) 円柱** です。\n\n缶コーヒー（および多くの飲料缶）は、底面と上面が円形で、側面がまっすぐな筒状になっているため、幾何学的には「円柱」の形をしています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:45.706614+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:21.095011+00:00"
+  }
+}

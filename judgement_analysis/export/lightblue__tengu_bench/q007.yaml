@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 7,
+  "category": "論理パズル",
+  "question": {
+    "original": "Aさん,Bさんがじゃんけんで10回勝負をした。\nAさんは、グーを3回、チョキを6回、パーを1回出した。 Bさんは、グーを2回、チョキを4回、パーを4回出した。 あいこには一度もならなかった。 2人が何の手をどの順番で出したかは分からない。\nさて、勝ったのはどちらだろうか？",
+    "translation_en": "**[Purpose: Question]**  \n\nA and B played rock-paper-scissors for 10 rounds.  \nA chose rock 3 times, scissors 6 times, and paper 1 time. B chose rock 2 times, scissors 4 times, and paper 4 times. There were no ties. The order in which they played is unknown.  \nWho won?  \n\n*(Note: The translation maintains the original structure and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "この問題では各ジャンケンで誰がどの手を出したかについての情報はありませんが、AさんとBさんの出した各手の合計の数とあいこに一度もならなかったという情報が与えられています。あいこに一度もならなかったということはAさんがグーを出した場合はBさんはチョキかパーを、Aさんがチョキを出した場合はBさんはグーかパーを、Aさんがパーを出した場合はBさんはグーかチョキを出したということがわかります。\nAさんがチョキを出した場合に注目するとAさんがチョキを6回出しているのに対して、Bさんがその時出す手であるグーおよびパーを出した数はそれぞれ2回と4回の合計6回であり、その手を出した数が一致していることがわかります。すなわち、Aさんがチョキ以外の手を出した場合にBさんはグーとパーの手を一回も出さず、必ずチョキの手を出していたということがわかります。\nこのことから二人の勝敗の合計数は以下のように求めることができます。\n\n1. Aさんがグーを出した時\nBさんは必ずチョキを出すため、Aさんは必ず勝つ。そのためAさんは3回勝った。\n\n2. Aさんがチョキを出した時\nBさんがグーを出した時にAさんは負けるため、Aさんは2回負けた。\nBさんがパーを出した時にAさんは勝つため、Aさんは4回勝った。\n\n3. Aさんがパーを出した時\nBさんは必ずチョキを出すためAさんは必ず負ける。そのためAさんは1回負けた。\n\n合計するとAさんは 3+4 = 7回勝ち、2+1 = 3回負けたことがわかります。\nそのため、勝ったのはAさんです。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nIn this problem, we are not given information about who played which hand in each round of rock-paper-scissors, but we are told the total number of hands played by A and B, and that there were no ties. The absence of ties means that if A played rock, B must have played scissors or paper; if A played scissors, B must have played rock or paper; and if A played paper, B must have played rock or scissors.  \n\nFocusing on the case where A played scissors, A played scissors 6 times, while B played rock and paper a total of 6 times (2 times rock and 4 times paper). This means the number of times B played rock or paper matches the number of times A played scissors. Therefore, whenever A played a hand other than scissors, B never played rock or paper but always played scissors.  \n\nFrom this, we can determine the total number of wins and losses as follows:  \n\n1. **When A played rock:**  \n   B must have played scissors, so A always wins. Thus, A won 3 times.  \n\n2. **When A played scissors:**  \n   - If B played rock, A loses (2 times).  \n   - If B played paper, A wins (4 times).  \n\n3. **When A played paper:**  \n   B must have played scissors, so A always loses. Thus, A lost 1 time.  \n\nSumming up, A won 3 + 4 = 7 times and lost 2 + 1 = 3 times.  \nTherefore, **A is the winner**.  \n\n*(Note: The translation preserves the original meaning and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 答えの勝った人がAさんである:4点\n- Aさんのチョキの数とBさんのパーとグーの数が同じという点に着目している:3点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **4 points** – The answer correctly identifies A as the winner.  \n- **3 points** – The explanation notes that A’s number of *choki* (scissors) matches B’s combined number of *pa* (paper) and *gu* (rock).  \n- **2 points** – The explanation is specific and easy to understand.  \n- **1 point** – The Japanese is natural and fluent.  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "じゃんけんの勝敗を分析してみましょう。  \n\n### Aさんの手の内訳  \n- グー: 3回  \n- チョキ: 6回  \n- パー: 1回  \n\n### Bさんの手の内訳  \n- グー: 2回  \n- チョキ: 4回  \n- パー: 4回  \n\n### 勝敗の分析  \n1. **グー vs グー**: Aが3回、Bが2回。Aが勝利。  \n2. **チョキ vs チョキ**: Aが6回、Bが4回。Aが勝利。  \n3. **パー vs パー**: Aが1回、Bが4回。Bが勝利。  \n\n### 総合的な勝敗数  \n- Aの勝利: 3 (グー) + 6 (チョキ) = **9勝**  \n- Bの勝利: 2 (グー) + 4 (チョキ) + 4 (パー) = **10勝**  \n\n### 結論  \nBさんが10勝でAさんより1つ多く勝ち、最終的に**Bさんが10対9で勝利**しました。  \n\n（注：じゃんけんでは「同じ手」の場合あいこですが、今回はあいこは一度もなかったため、手の内訳から直接的に勝敗を決定できます）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えの勝った人がAさんである:0点  \n  - 回答では「Bさんが勝利」としており誤り。\n- Aさんのチョキの数とBさんのパーとグーの数が同じという点に着目している:0点  \n  - その点には一切触れていない。\n- 説明が具体的でわかりやすい:1点  \n  - 説明自体は段階的で読みやすいが、前提の取り方が誤っており内容としては不適切。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n0 + 0 + 1 + 1 = 2\n\n[点数]\n2\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.696149+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "AさんとBさんのじゃんけんの結果を分析してみましょう。  \n\n### Aさんの手の内訳  \n- グー: 3回  \n- チョキ: 6回  \n- パー: 1回  \n\n### Bさんの手の内訳  \n- グー: 2回  \n- チョキ: 4回  \n- パー: 4回  \n\n### 勝敗の条件（あいこなし）  \n1. **Aさんが勝つ場合**  \n   - Aグー vs Bチョキ → A勝利（Bチョキは4回）  \n   - Aチョキ vs Bパー → A勝利（Bパーは4回）  \n   - Aパー vs Bグー → A勝利（Bグーは2回）  \n\n2. **Bさんが勝つ場合**  \n   - Bグー vs Aチョキ → B勝利（Aチョキは6回）  \n   - Bチョキ vs Aパー → B勝利（Aパーは1回）  \n   - Bパー vs Aグー → B勝利（Aグーは3回）  \n\n### 勝敗の計算  \n#### **Aさんの最大勝利数**  \n- グーの最大活用：3回中、Bチョキと当たるのは最大4回だが、Bチョキが4回しかないため、最大3勝。  \n- チョキの最大活用：6回中、Bパーと当たるのは最大4回。残り2試合で負ける可能性あり。  \n- パーの活用：1試合でBグーより優位だが、他の手との兼ね合いがある。  \n\n#### **Bさんの最大勝利数**  \n- グーの活用：2試合でAチョキに当たる可能性あり。ただし、Aチョキが6試合あるため、必ずしも全てが有効ではない。  \n- チョキの活用：4試合中、Aパーより優位なのは1試合のみ。残り3試合で負ける可能性あり。  \n\n### 結論の導出方法（矛盾点を見つける）  \n1. **仮定：Aさんが10戦全てに負けた場合** → 不可能（例えば、Aグーの3試合で全て負けるには、Bが3つの「パーより強い手」を持つ必要があるが、実際には不足する）。  \n\n2. **仮定：Bさんが10戦全てに負けた場合** → 不可能（同様に矛盾する）。  \n\n3. **具体的な計算例**：\n   - もし「Aグーの3試合」が「Bパーの4試合」と完全に一致した場合、そのうち1試合は無駄になる（あいこなし）。よって、このケースでは不可能。  \n\n### 最終的な結論策定法：確率的アプローチを避け、「必然性」を探す方法\n> 「あいこなし」という条件から、「互いの手の組み合わせが完全に一致しない」ことが分かる。このとき、「どちらか一方が必ず有利になる組み合わせ」を見つけ出す必要がある。\n\n#### 解答へのヒント：\n> 「もし『互いに同じ手を出す』ことが一度もなかったなら、『どちらかの手』が『相手より有利な組み合わせ』を多く持っているはず」。この問題では「どちらかの特定の手」が「相手より有利なケース」を多く持っているかどうかを検証する。\n\n---\n\n### 正解への最終ステップ\n> 実際には、この問題では「両者とも5勝5敗」という結論になります。これは以下のように導出できます。\n\n#### 両者5勝5敗となる理由：\n1. **総当たり数の一致**\n   - 両者とも10戦行ったので、それぞれ5戦ずつしか勝てない。\n   \n2. **具体的な組み合わせ例**\n   - もし「互いに同じ手を出す」ことが一度もなかったなら、\n     > 「(Aグー-Bチョキ) + (Aチョキ-Bパー) + (Aパー-Bグー) = (Bグー-Aチョキ) + (Bチョキー-Aパ) + (BP-AG)」\n     > 両辺とも同じ数になるため引き分け。\n\n---\n\n### 最終回答\n> 両者とも5戦ずつ勝っています。これは「あいこなし」の条件下で唯一成立する解です。\n\n--- \n※補足：「あいこなし」の条件から逆算すると、「両者の手番ごとの相性差」が均等化されるため引き分けとなります。この問題では「具体的な順番」を問われていないため、「最終的な成績のみ」を求めればよいです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:22.509071+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "勝ったのは **Aさん** です。\n\nAさんが **7勝**、Bさんが **3勝** です。\n\n論理的な内訳は以下の通りです。\n\n**1. あいこがないことによる組み合わせの特定**\n「あいこがない」ということは、同じ手同士がぶつかることはありません。この条件を使って、確定している部分からパズルを解くように組み合わせを特定できます。\n\n**2. Aさんの「パー」から考える**\nAさんはパーを1回しか出していません。\n*   もし、このAのパーがBのグーと戦ったと仮定します。\n    *   Bのグーは残り1回になります。BのグーはAのチョキと戦うしかありません（あいこ不可、Aのパーは使用済みのため）。\n    *   すると、Aのチョキは残り5回になります。この5回のチョキは、Bのパーと戦うしかありません（Bのグーは尽き、チョキ同士は不可のため）。\n    *   しかし、Bのパーは4回しかありません。数が合わないため、この仮定は間違いです。\n\n**結論：Aのパー（1回）は、Bのチョキと戦いました。**\n*   結果：**Bの勝ち（1勝目）**\n*   【残りの手】\n    *   A：グー3、チョキ6\n    *   B：グー2、チョキ3、パー4\n\n**3. Bの「グー」から考える**\nBのグーは残り2回です。\n*   あいこ（グー対グー）はなし、Aのパーはもうありません。\n*   したがって、Bのグーは必ずAのチョキと戦うことになります。\n\n**結論：Bのグー（2回）は、Aのチョキ（2回）と戦いました。**\n*   結果：**Bの勝ち（2勝、3勝目）**\n*   【残りの手】\n    *   A：グー3、チョキ4\n    *   B：チョキ3、パー4\n\n**4. Aの「チョキ」から考える**\nAのチョキは残り4回です。\n*   あいこ（チョキ対チョキ）はなし、Bのグーはもうありません。\n*   したがって、Aのチョキは必ずBのパーと戦うことになります。\n\n**結論：Aのチョキ（4回）は、Bのパー（4回）と戦いました。**\n*   結果：**Aの勝ち（1〜4勝目）**\n*   【残りの手】\n    *   A：グー3\n    *   B：チョキ3\n\n**5. 最後の組み合わせ**\n残ったのはAのグー3回と、Bのチョキ3回です。これらが戦います。\n*   結果：**Aの勝ち（5〜7勝目）**\n\n---\n\n**最終結果**\n*   **Aさんの勝ち：7回**（対パーで4勝、対チョキで3勝）\n*   **Bさんの勝ち：3回**（対パーで1勝、対チョキで2勝）\n\nよって、勝ったのはAさんです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:53.262285+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:12.296086+00:00"
+  }
+}

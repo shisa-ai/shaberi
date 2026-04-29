@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 9,
+  "category": null,
+  "question": {
+    "original": "以下の記事から日付をすべて抽出せよ。\nあすから今冬一番の寒波 “10年に一度の低温に” 大雪に備えを\n\nこの冬一番の非常に強い寒気が流れ込むため、24日から北日本から西日本の日本海側で大雪や猛吹雪となるほか、ふだん雪の少ない太平洋側の平地でも大雪となるおそれがあります。\n全国的に10年に一度程度の低い気温になる見込みで、路面や水道管の凍結による被害が出るおそれもあります。予定の変更を検討するなど、大雪や低温への備えを進めてください。\n\n気象庁によりますと、日本付近は24日から26日 木曜日ごろにかけて冬型の気圧配置が強まり、北日本から西日本の上空には、この冬一番の非常に強い寒気が流れ込む見込みです。\n\nこのため、北日本から西日本の日本海側を中心に大雪や猛吹雪となり、短時間で積雪が急激に増えるおそれがあります。",
+    "translation_en": "**Extract all dates from the following article:**  \n\n*\"Starting tomorrow, the first major cold wave of this winter—'temperatures as low as once in a decade'—Prepare for heavy snow\"*  \n\nA very strong cold front will move in from the 24th, bringing heavy snow and blizzards to the Sea of Japan side from northern to western Japan, as well as heavy snow even in the usually snow-scarce Pacific coastal plains. Temperatures nationwide are expected to drop to levels seen only once every decade or so, raising the risk of damage from frozen roads and water pipes. Please consider adjusting your plans and prepare for heavy snow and low temperatures.  \n\nAccording to the Japan Meteorological Agency, a strong winter-type pressure system will develop from the 24th to around Thursday the 26th, with extremely strong cold air flowing into the upper atmosphere over northern and western Japan.  \n\nAs a result, heavy snow and blizzards are expected, particularly along the Sea of Japan side from northern to western Japan, with rapid snow accumulation in short periods.  \n\n**Extracted Dates:**  \n- 24th (starting date of the cold wave)  \n- 26th (Thursday, end of the strong pressure system)  \n\n*(Note: The exact year is not specified in the text, but the dates are clearly indicated.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "記事から抽出した日付は以下の通りです。  \n\n1. **24日**（寒気が流れ込む開始日）  \n2. **26日（木曜日）**（冬型の気圧配置が強まる終了予定日）  \n\nまた、記事全体を通して「今冬一番の寒波」と「10年に一度の低温」が言及されており、これらは具体的な日付ではなく季節的な表現ですが、関連する情報として記載しています。  \n\n必要に応じてさらに詳細な情報を抽出することも可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は、抽出すべき日付「24日」「26日」を正しく含んでおり、欠落もありません。\n\n一方で、「今冬一番の寒波」「10年に一度の低温」といった日付ではない情報を関連情報として記載しており、問題固有の採点基準にある「余計な要素」に該当します（-2点）。\n\n内容自体は正しく、日本語も自然であり、日付の抽出というタスクには概ね沿っていますので、基礎点を5点とすると、余計な要素による減点で3点相当となります。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.360050+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "記事から抽出した日付は以下の通りです：  \n- **24日**（具体的な月は記載なし）  \n- **26日**（木曜日）  \n\n※記事の文脈から、これらの日付はおそらく「2月24日」と「2月26日」を指していると考えられますが、月の明記がないため確定できません。必要に応じて補足情報を確認してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:00.052498+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "記事から抽出された日付は以下の通りです。\n\n* **24日** （本文中に2回出現）\n* **26日**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:13.698594+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:05.390037+00:00"
+  }
+}

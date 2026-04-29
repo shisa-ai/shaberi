@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 50,
+  "category": null,
+  "question": {
+    "original": "以下の文はある数式を自然言語で表したものです。元の数式を四則演算の数式として表してください。\n1を3で割った結果に33を足して、210を掛ける。最後に100で割る。",
+    "translation_en": "**Translation:**  \n\n*\"Divide 1 by 3, add 33, multiply by 210, and finally divide by 100.\"*  \n\n**Mathematical Expression:**  \n\\((\\frac{1}{3} + 33) \\times 210 \\div 100\\)  \n\n*(Note: The order of operations follows standard mathematical conventions: division first, then addition, followed by multiplication, and finally division.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "与えられた自然言語の文を数式に変換すると、以下のようになります。  \n\n**元の文:**  \n「1を3で割った結果に33を足して、210を掛ける。最後に100で割る。」  \n\n**数式:**  \n\\[\n\\frac{1}{3} + 33 \\times 210 \\div 100\n\\]  \n\n### 解説:  \n1. **1を3で割る**: \\(\\frac{1}{3}\\)  \n2. **33を足す**: \\( \\frac{1}{3} + 33 \\)  \n3. **210を掛ける**: \\( (\\frac{1}{3} + 33) \\times 210 \\)  \n4. **100で割る**: \\( (\\frac{1}{3} + 33) \\times 210 \\div 100 \\)  \n\n### 計算結果:  \n\\[\n\\left( \\frac{1}{3} + 33 \\right) = \\left( \\frac{101}{3} + 99 = \\frac{101+297}{3} = \\frac{398}{3} = 132.\\overline{6} \\right)\n\\]  \n\\[\n132.\\overline{6} \\times 210 = (132 + 0.\\overline{6}) \\times (200 + 10) = (132 + x) \\times (200 + y)\n\\]  \n（ここでは計算の簡略化のため、\\( x = y = z = z' = z'' = z''' = z'''' = z''''' = z'''''' = z''''''' = z'''''''''''''\\approx0.6667\\) と仮定）  \n\n最終的な計算は以下のようになります:  \n\\[\n\\left(132.\\overline{6}\\right)_{10} = (83_8)_8, \\\\\n(83_8)_8=64+8+0=72, \\\\\n72\\times200=14400, \\\\\n72\\times10=720, \\\\\n14400+720=15120\n\\]  \n\nしたがって、最終的な答えは:  \n\\[\n15120 / 100 = **151.2**\n\\]  \n\n（注: 元の文では「最後に100で割る」とあるため、分数ではなく小数として解釈しました。必要に応じて整数部分のみを取り出すことも可能です。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は「1/3+33*210/100」と括弧をつけ忘れた形になっており、問題固有の採点基準ではこの場合3点とされています。  \n途中の解説以降の計算は事実誤認や意味不明な部分が多いものの、最終的に求めるべきものは「数式」であり、その提示自体は方向性としては合っています。  \n日本語表現も致命的に不自然ではないため、追加減点は行いません。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:51.751001+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "元の数式は以下の通りです。  \n\n**((1 ÷ 3) + 33) × 210 ÷ 100**  \n\n計算過程を追うと、  \n1. \\( \\frac{1}{3} \\approx 0.3333 \\)  \n2. \\( 0.3333 + 33 = 33.3333 \\)  \n3. \\( 33.3333 \\times 210 = 7000 \\)  \n4. \\( \\frac{7000}{100} = 70 \\)  \n\n最終的な答えは **70** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:09.081381+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "その数式は以下のようになります。\n\n$$ (1 \\div 3 + 33) \\times 210 \\div 100 $$\n\nまたは、プログラミング等で使われる記号を用いると以下のようになります。\n\n$$ (1 / 3 + 33) * 210 / 100 $$",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:48.476557+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:58.019419+00:00"
+  }
+}

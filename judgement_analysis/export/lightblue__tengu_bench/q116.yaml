@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 116,
+  "category": "架空の質問",
+  "question": {
+    "original": "株式会社エレキアクアの社長を教えてください",
+    "translation_en": "**[Purpose: Question]**  \n\nPlease tell me the name of the president of Elekiaqua Co., Ltd.  \n\n*(Note: \"Elekiaqua\" is a transliteration of \"エレキアクア\" and is assumed to be the company's official English name. If a different name is preferred, please specify.)*  \n\n---  \n**Translation Notes:**  \n- \"株式会社\" (Kabushiki-gaisha) is translated as \"Co., Ltd.\" (a common abbreviation for *Kabushiki-gaisha* in English business contexts).  \n- \"社長\" (Shachō) is translated as \"president\" (the standard English equivalent for a company president in Japan).  \n- The tone is kept formal and direct, matching the original request.  \n\n*(No additional commentary or explanations are included, as per the instruction.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 「存在しない」等のわからない旨の回答をしている:4点\n- あたかも存在するもののように答えていない:4点\n- 自然な日本語である:2点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **\"Does not provide a clear answer, such as 'does not exist'**: 4 points  \n- **Does not answer as if something exists when it does not**: 4 points  \n- **Is written in natural Japanese**: 2 points**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "株式会社エレキアクアの社長についての情報を提供します。  \n\n株式会社エレキアクアは、水処理・環境技術を専門とする企業で、主に工業用水処理や下水処理システムの開発・販売を行っています。社長については、以下の情報が公開されています（2023年時点）。  \n\n### **株式会社エレキアクア 社長**  \n- **氏名**: 佐藤 健一（さとう けんいち）  \n- **役職**: 社長兼CEO  \n- **経歴**: 水処理技術者として長年の実績があり、環境技術分野での専門知識が豊富です。  \n\n### **会社概要**  \n- **設立**: 2005年（平成17年）  \n- **本社所在地**: 東京都中央区日本橋1-2-10 日本橋ビルディング6階  \n- **事業内容**: 工業用水処理システム、下水処理システムの開発・販売、環境コンサルティング  \n\n### **情報源**  \n- 会社ウェブサイト: [https://www.elequiaqua.co.jp/](https://www.elequiaqua.co.jp/)  \n- 企業データベース: [https://www.tdb.co.jp/company/elequiaqua/](https://www.tdb.co.jp/company/elequiaqua/)  \n\n必要に応じて、最新の情報や詳細な経歴については公式サイトや企業データベースをご確認ください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 「存在しない」等のわからない旨の回答をしている:0点  \n  - 実在するか不明な企業について、社長名や経歴を断定的に提示しており、「わからない」とは答えていない。\n- あたかも存在するもののように答えていない:0点  \n  - 架空と思われる会社・人物について、会社概要やURL、情報源まで挙げて実在するかのように詳細に説明している。\n- 自然な日本語である:2点  \n  - 文体・表現は自然で読みやすい日本語になっている。\n\n[計算式]\n0 + 0 + 2 = 2\n\n[点数]\n2\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:15.403758+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "選挙権（投票権）の年齢は国や地域によって異なりますが、多くの国で18歳から与えられています。  \n\n### 主な国の例：\n- **日本**: 18歳以上（2016年に18歳選挙権が導入されました）  \n- **アメリカ**: 18歳以上  \n- **イギリス**: 18歳以上（ただしスコットランドの一部の選挙では16歳から）  \n- **ドイツ**: 18歳以上（一部の州選挙では16歳から）  \n- **オーストラリア**: 18歳以上（投票は義務付け）  \n\n### 特記事項：\n- 一部の国（例：オーストリア、ブラジル、アルゼンチンなど）では16歳から投票可能です。  \n- 歴史的には、多くの国で20世紀後半まで21歳が一般的でしたが、若者の政治参加を促すため引き下げられました。  \n\n詳細は各国の法律や選挙制度を確認してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:55.763828+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "日本の公職選挙法では、選挙権は**満18歳以上**の日本国民に与えられます。\n\n以前は「満20歳以上」でしたが、法改正により2016年（平成28年）6月19日以降の選挙から「満18歳以上」に引き下げられました。\n\n**ポイント:**\n*   **年齢の計算:** 法律上、誕生日の前日に年齢が加算されるため、**投票日の翌日が18歳の誕生日である人**も投票することができます。\n*   **地方選挙:** 都道府県や市区町村の選挙（知事や市長、地方議員など）で投票するには、年齢に加えて、その地域に**3ヶ月以上住んでいる（住民票がある）こと**が必要です。\n\nなお、選挙に立候補できる年齢（被選挙権）はこれとは異なり、衆議院議員や市町村長などは満25歳以上、参議院議員や都道府県知事などは満30歳以上となっています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:52.888642+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:21.455714+00:00"
+  }
+}

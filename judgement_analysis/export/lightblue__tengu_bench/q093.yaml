@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 93,
+  "category": "フォーマット",
+  "question": {
+    "original": "マッチングアプリを運営する際に顧客同士をマッチングするために顧客に対して持つべきデータ例をJSON形式で作成して下さい。",
+    "translation_en": "**[Purpose: Question]**  \n\nCreate a JSON-formatted example of the data that should be collected from users for matching purposes when operating a dating app.  \n\n*(Note: The translation preserves the original intent and structure while ensuring clarity for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 正しいJSON形式である:4点\n- マッチングアップリを作成したときに必要な顧客情報を網羅している:3点\n- 格納する情報がわかりやすくなっている:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Correct JSON format:** 4 points  \n- **Comprehensive customer information required for matching apps:** 3 points  \n- **Stored information is clear and understandable:** 2 points  \n- **Natural Japanese language:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下は、マッチングアプリで顧客をマッチングするために顧客から収集・保持すべきデータの例をJSON形式で示したものです。プライバシー保護とユーザー体験のバランスを考慮し、必要な情報のみを収集することが重要です。\n\n```json\n{\n  \"user_id\": \"unique_customer_id\",\n  \"profile_info\": {\n    \"name\": \"John Doe\",\n    \"age\": 30,\n    \"gender\": \"male\",\n    \"looking_for_gender\": [\"female\"],\n    \"location\": {\n      \"city\": \"Tokyo\",\n      \"country\": \"Japan\",\n      \"radius_km\": 50\n    },\n    \"interests\": [\"hiking\", \"reading\", \"music\"],\n    \"bio_text\": \"I love trying new foods and traveling. Looking for someone who enjoys outdoor activities.\",\n    \"profile_pictures_urls\": [\"https://example.com/pic1.jpg\", ...],\n    \"_last_updated_profile_info_timestamp_UTC_ms_\": 1678886400000\n  },\n  \"_created_timestamp_UTC_ms_\": 1678886400000,\n  \"_last_active_timestamp_UTC_ms_\": null,\n  \"_matching_status_\": {\n    \"_is_active_match_request_sent_\": false,\n    \"_is_active_match_request_received_\": false,\n    \"_is_blocked_by_self_\": false,\n    \"_is_blocked_by_others_count_\": 0\n  },\n  \"_privacy_preferences_\": {\n    \"_show_age_range_on_profile_: true,\n    \"_show_location_on_profile_: true,\n    \"_receive_match_notifications_: true\"\n  }\n}\n```\n\n### データ項目の説明:\n1. **user_id**: ユーザー固有の識別子（匿名化可能）\n2. **profile_info**:\n   - **name**: ユーザー名\n   - **age**: 年齢（オプションで範囲指定可能）\n   - **gender/looking_for_gender**: 性別と探している性別\n   - **location**: 現在地と検索半径\n   - **interests**: 趣味や興味関心\n   - **bio_text**: 自己紹介文\n   - **profile_pictures_urls**: プロフィール画像URLリスト\n3. **timestamp metadata**:\n   - 作成日時、最終更新日時、最終アクティブ日時など\n\n### 注意点:\n- 必要に応じてデータ項目を追加・削除可能（例: 宗教、職業など）\n- プライバシー保護のため、位置情報は匿名化または範囲指定が推奨されます\n- ユーザーの同意に基づいてデータ収集を行う必要があります\n\nこの構造は柔軟性がありながらも、マッチングアルゴリズムに必要な情報を網羅しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 正しいJSON形式である:2点  \n  - 文字列の閉じ忘れ（`\"_show_location_on_profile_` など）や、配列内の `...` があり、厳密なJSONとしては不正。ただし全体構造は概ねJSONを意識しているため部分点。\n- マッチングアプリを作成したときに必要な顧客情報を網羅している:3点  \n  - 年齢、性別、希望する相手の性別、位置情報、興味・関心、自己紹介、画像URL、タイムスタンプ、マッチング状態、プライバシー設定など、マッチングに必要な情報は概ね揃っている。\n- 格納する情報がわかりやすくなっている:2点  \n  - キー名が意味を推測しやすく、後続の日本語での項目説明もあり、構造も整理されている。\n- 自然な日本語である:1点  \n  - 説明文は自然で読みやすい日本語になっている。\n\n[計算式]\n2 + 3 + 2 + 1 = 8\n\n[点数]\n8\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:17.324057+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この文はダジャレと判断できます。  \n\n**理由:**  \n「川向かいのカラスがうるさいかな」は、語呂合わせ（ダジャレ）の一種です。  \n「カワムカイノカラスガウルサイカナ」と読むと、「川向こうのカラスがうるさいかな」と聞こえますが、実際には「1（いち）2（に）3（さん）4（し）5（ご）6（ろく）7（なな）8（はち）9（きゅう）の10（じゅう）」という数字を隠した遊びかき方になっています。  \n\nこのように、数字を文字で表現し、意味の通る文を作るのがダジャレの特徴であり、この文はその条件を満たしています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:38.246820+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "結論から申し上げますと、この文は**ダジャレではありません**。\n\nそのように判断した理由は以下の通りです。\n\n**1. 同音異義語（語呂合わせ）が含まれていない**\nダジャレの基本的な構造は、「布団が吹っ飛んだ」のように、同じ音や似た音で異なる意味の言葉を重ねることにあります。「川向かい」「カラス」「うるさい」という単語の間には、音の重複や掛け言葉による言葉遊びが見当たりません。\n\n**2. 回文（上から読んでも下から読んでも同じ）ではない**\n一見すると回文のように見えるかもしれませんが、逆から読んでも成立しません。\n*   順：か わ む か い の か ら す が う る さ い か な\n*   逆：な か い さ る う が す ら か の い か む わ か\nとなり、回文にはなっていません。\n\n**3. 意味が通る普通の文章である**\nこの文は「川の向こう側にいるカラスが鳴いていて騒がしいだろうか」という、情景を描写した通常の疑問文として成立しており、笑いを誘うような二重の意味が含まれていません。\n\n**補足：リズムについて**\n「かわむかい（5音）」「のからすが（5音）」「うるさいかな（6音）」と、俳句（5・7・5）に近いリズム感があり、また「**か**わむ**か**いの**か**らすがうるさい**か**な」と「か」の音が4回繰り返されているため、口に出した時に語呂が良いと感じられる可能性はあります。しかし、これは「韻（いん）」や「リズム」の範疇であり、ダジャレ（言葉遊びによる冗談）とは異なります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:57.254428+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:56.307427+00:00"
+  }
+}

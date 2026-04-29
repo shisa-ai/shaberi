@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 43,
+  "category": null,
+  "question": {
+    "original": "次の文のうち、どちらがより意味が通じるでしょうか。\n選択肢1: 男が刑務所に行ったのは、ガソリンスタンドを襲ったからだ。\n選択肢2: 男がガソリンスタンドに強盗に入ったのは、刑務所に入ったからだ。",
+    "translation_en": "[Purpose: question]  \n\nWhich of the following sentences is more logically coherent?  \n**Option 1:** The man went to prison because he robbed a gas station.  \n**Option 2:** The man robbed a gas station because he went to prison.  \n\n(Translation preserves the original structure and meaning while ensuring natural English phrasing for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "選択肢1: 男が刑務所に行ったのは、ガソリンスタンドを襲ったからだ。  \n\nこの文はより意味が通じます。理由は以下の通りです。  \n1. **因果関係が明確**：ガソリンスタンドを襲った（犯罪行為）→ 刑務所に入る（結果）という流れが自然です。  \n2. **時間的順序**：犯罪を起こしてから刑務所に入るという順序が一般的で理解しやすいです。  \n\n一方、選択肢2は「刑務所に入ったからガソリンスタンドに強盗に入った」という逆の因果関係を示しており、論理的に不自然です。  \n\nしたがって、**選択肢1**がより適切な文です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "回答は正解を選び、因果関係と時間的順序の観点から理由も述べており、内容は正解例・採点基準と完全に一致しています。不自然な日本語や事実誤認もありません。\n\n最後の「FINAL SCORE: #」の「#」は誤記ですが、採点対象は内容部分なので減点対象にはしません。\n\nよって5点と評価できます。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.175011+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**選択肢1: 男が刑務所に行ったのは、ガソリンスタンドを襲ったからだ。**  \nの方がより意味が通じます。  \n\n### 理由：\n1. **因果関係の整合性**：  \n   - 選択肢1では、「ガソリンスタンドを襲う（犯罪）」→「刑務所に行く（処罰）」という自然な因果関係があります。  \n   - 選択肢2は、「刑務所に入る」→「強盗に入る」という逆順で、論理的に矛盾します（刑務所にいる人が強盗をすることは通常不可能）。\n\n2. **時系列の合理性**：  \n   - 犯罪行為の後で処罰を受けるのが一般的ですが、刑期中に新たな犯罪を起こすという設定は特殊な状況（脱獄など）を想定しない限り不自然です。\n\n3. **日常的な解釈**：  \n   - 一般的に「刑務所に行く」とは「犯罪の結果」と理解されます。一方、「強盗に入る」は自由な状態での行為と捉えられます。\n\n### 結論：\n選択肢1がより自然で、一般的な状況を反映しているため、意味が通じます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:18.913480+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "**選択肢1**の方が、より意味が通じます。\n\n**理由:**\n通常、犯罪を犯した結果として刑務所に入ります。\n\n*   **選択肢1**は、「ガソリンスタンドを襲った（原因）」→「刑務所に行った（結果）」という自然な因果関係になっています。\n*   **選択肢2**は、「刑務所に入った（原因）」→「ガソリンスタンドに強盗に入った（結果）」となっており、時間の流れや一般的な因果関係が逆転しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:49.404485+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:50.032370+00:00"
+  }
+}

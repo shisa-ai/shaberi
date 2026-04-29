@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 25,
+  "category": "長い文書要約（千トークン以上）",
+  "question": {
+    "original": "以下の文書を要約してください。\n### 文書\n1980年 代,不 登校問題の増加 により,フ リースクー ルを始め とした学校外の 「居場所」が注目され始 め,\n1992年 には,文 部省学校不適応対策調査研究協力者会 議が「登校拒否(不登校)問題について-児 童生徒の 『心 の居場所』づ くりを目指 して-」 という報告 を出 し, 学校内での「心の居場所」づくりの必要性が指摘され\nるに至 った。 これにより,子 どもの 「居場所」づ くり が学校の内外で盛んになり,実 践報告も数多 く出され る よ う に な る(例 えば小野,1993;小 野,1994;高 橋,1994)。 さらに,2003年 には文部科学省生涯学習政策局生涯学 習推進課が 「子どもの居場所づくり新プラン 地域子 ども教室推進事業」により,「3ヵ 年計画で計画的 に子 どもたちの居場所 を用意する」 ことを発表 した。 この ように,子 どもの 「居場所」への関心は,「 居場所」が ないことへの注 目から,「 居場所」を作 るという動 きに 進展 しつつある といえる。しか し,子 どもの「居場 所」 その もの を研究対象 として分析 した ものは,現 在 まだ 少ない状況であり,課 題も多い。\nまず,「 居場所」 という言葉 の定義 についてであ る\nが,い まだ確立 しているとはいえない。「居場所」の本\n来 の意 味 は,「 そ の人 のい る場 所 」(三省堂現代国語辞典, 1998)となってお り,人 がいる場所 という物理的な意味\nである。 しか し,先 行研究や関連書籍の中では,文 部\n省の 「児童生徒が存在感を実感することができ,精 神的 に安 心 してい る ことので きる場 所」(田 中,1992)と い う定義 に もあるように,「安心 して身を置 くことのでき る場所」(上野,1992),「 自己存在感が得 られ る場所」(坂 本,1993)と い う心理的な意味が含 まれているものが多 い。つまり,現 代においての 「居場所」という言葉に は,単 に人がいる所 という物理的な意味だ けではな く, 心理的側面が含まれているといえる。 しか し,こ の心 理的な側面を含めた 「居場所」の定義は,い まだ統一 してお らず,ま た,こ れ まで使用 されている定義 も実 証的なデータに基づいた定義ではないとい う問題点 を 有している。\nでは,そ のような中で 「居場所」研究は,ど のよう に行われ てきたのであろうか。 これまでの 「居場所」 研究は,大 き く2つ のアプローチに分けられる。まず 1つ 目のアプローチは,実 際 にいる場所 を調査分析す\nる方法で ある。このアプローチによる研究手法 は,地 理学の分野で,手 書 き地図など,独 自の方法 による研 究が進 め られ て いる(例 えば,岩 本,1981;大 西,1998)。 し かし,地 理学における 「居場所」研究の概観を行った 寺本(2003)は,こ れ までの研 究 は,「 居 場所 」とい う よ\nりは,子 どもの生活空間全体 を,知 覚環境 という視点 から,研 究 しているものが多い と指摘 している。また,\n海外 の研 究 も,Hart(1979)の 実証 研究 を始 め として, 地理学的 アプローチが主流 となっているが,日 本で現 在使用 され ているような,心 理的側面を含めた意味で の「居場所」は,言 葉の概念自体がないために,研 究 は行 われ て いな い状 態で あ る。心 理 ・教 育学 分野 にお いては,「 居場所」への注 目とともに,1990年 代後半以降,研 究が行われつつある。例えば,学 校を調査対象 とした研究(深 谷 ・永井 ・山田,2001)な どがあ り,心 理 的 な意味を含めない辞書通 りの 「居場所」研究 としては, 意義のあるものである。 しか し,確 かに物理的に居 る 場所ではあるが,「 居場所」とは感 じていないという場 所,例 えば,本 人は行きたくないが仕方なく行ってい る学校な ども含 まれて しまうため,本 人の主観が無視 されることとなる。現代の心理的な意味 を含んだ 「居 場所」を捉えてい くには問題があるアプローチ といえ\nる。",
+    "translation_en": "**Summary of the Document**  \n\nIn the 1980s, the rise in school refusal issues led to increased attention on \"places of belonging\" outside of school, such as free schools. In 1992, the Ministry of Education's School Non-Adaptation Countermeasures Research Cooperative Council released a report titled *\"On School Refusal (Non-Attendance) – Aiming to Create a 'Place of Belonging' for Children and Students\"* (Tanaka, 1992), highlighting the need to foster \"places of belonging\" within schools. This spurred widespread efforts to create such spaces for children both inside and outside schools, resulting in numerous practical reports (e.g., Ono, 1993, 1994; Takahashi, 1994).  \n\nIn 2003, the Ministry of Education, Culture, Sports, Science and Technology (MEXT) announced the *\"Child Place of Belonging Creation New Plan – Community Children's Classroom Promotion Project,\"* which aimed to systematically provide \"places of belonging\" for children over a three-year plan. Thus, interest in children's \"places of belonging\" evolved from merely recognizing their absence to actively creating them. However, few studies have analyzed \"places of belonging\" as a research subject, and many challenges remain.  \n\nFirst, the definition of \"place of belonging\" is not yet established. Originally, it meant \"a place where a person is\" (Sanseido Modern Japanese Dictionary, 1998), referring to a physical location. However, in prior research and related literature, it often includes psychological aspects, such as \"a place where one feels secure\" (Ueno, 1992) or \"a place where one gains a sense of self\" (Sakamoto, 1993). Thus, the modern term encompasses both physical and psychological dimensions. Yet, this definition remains inconsistent, and previous definitions lack empirical support.  \n\nHow has \"place of belonging\" research been conducted? Existing studies fall into two main approaches. The first examines actual locations through methods like hand-drawn maps (e.g., Iwamoto, 1981; Onishi, 1998), often in geography. However, Teramoto (2003) noted that such studies tend to analyze children's entire living spaces from a perceptual environment perspective rather than focusing on \"places of belonging.\"  \n\nInternationally, Hart (1979) pioneered geographical approaches, but the psychological dimension of \"place of belonging\" (as used in Japan) is absent in foreign research. In psychology and education, studies emerged in the late 1990s, such as those examining schools (Fukaya, Nagai, & Yamada, 2001). While these studies are valuable, they often ignore subjective experiences—e.g., a school a child attends unwillingly may be physically present but not a \"place of belonging.\" Thus, this approach fails to capture the modern, psychologically-informed concept.  \n\n**Key Points:**  \n- The concept of \"place of belonging\" gained prominence in the 1980s due to school refusal issues.  \n- Definitions vary between physical locations and psychological spaces where one feels secure or has a sense of self.  \n- Research approaches include geographical studies of actual locations and psychological studies of school environments, but neither fully captures the subjective experience of \"place of belonging.\"  \n- The term remains under-researched, with inconsistent definitions and a lack of empirical grounding.  \n\n*(Note: The translation preserves the original meaning, structure, and key details without adding commentary.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 不登校の増加に起因する学校内外での居場所作りへの関心:2点\n  - 居場所という言葉の定義に関する議論:2点\n  - 「居場所」研究のアプローチ:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Includes the following information in the text:  \n  - Interest in creating a sense of belonging (居場所) in and out of school due to the increase in school non-attendance: **2 points**  \n  - Discussion on the definition of the term \"居場所\" (sense of belonging/place): **2 points**  \n  - Approaches to \"居場所\" (sense of belonging/place) research: **2 points**  \n- Preserves the logical relationships in the text: **2 points**  \n- Written in natural Japanese: **1 point**  \n- Appropriate brevity as a summary: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "**要約**  \n\n1980年代以降、不登校問題の増加に伴い、学校外の「居場所」が注目され始めました。1992年の文部省報告書では、学校内での「心の居場所」づくりが指摘され、子どもの居場所づくりが学校内外で盛んになりました。2003年には文部科学省が「子どもの居場所づくり新プラン」を発表し、計画的な居場所提供を推進しました。  \n\nしかし、「居場所」の定義は統一されておらず、物理的な意味（人がいる場所）だけでなく、心理的な意味（安心して身を置ける場所）も含まれるため、研究段階にあります。過去の研究は主に2つのアプローチで行われています：  \n1. 実際にいる場所を調査分析する地理学的アプローチ（例：手書き地図による研究）。  \n2. 学校や生活空間全体を知覚環境として捉える心理・教育学的アプローチ（例：学校調査）。  \n\nただし、これらの研究は現代の心理的な意味を含んだ「居場所」を十分に捉えていないため、課題が残っています。特に、本人が居たいわけではない学校など、本人の主観が無視される場面も存在します。  \n\n**結論**：子どもの居場所づくりへの関心は高まっているものの、「居場所」の定義や研究方法には課題があり、今後の研究でより包括的な理解が求められています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 不登校の増加に起因する学校内外での居場所作りへの関心:2点  \n  - 不登校問題の増加→学校外の居場所への注目→文部省報告→学校内外での居場所づくり→2003年の新プランまで言及している。\n- 居場所という言葉の定義に関する議論:2点  \n  - 物理的意味と心理的意味の両方、および定義が統一されておらず研究段階であることを述べている。\n- 「居場所」研究のアプローチ:2点  \n  - 地理学的アプローチと心理・教育学的アプローチの2つを挙げ、それぞれの概要と限界に触れている。\n- 文章中の論理関係を保存している:2点  \n  - 不登校増加→政策的対応→概念定義の問題→研究アプローチとその課題、という流れを保っている。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語になっている。\n- 要約として適切な短さである:1点  \n  - 元文に比べ十分に圧縮されており、冗長ではない。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 1 = 10\n\n[点数]\n10\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.713556+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 文書要約  \n\n1980年代の不登校問題増加を背景に、学校外の「居場所」（フリースクールなど）が注目され、1992年の文部省報告書で「心の居場所」づくりの必要性が指摘された。2003年には文部科学省が「子どもの居場所づくり新プラン」を発表し、計画的な居場所整備を推進した。こうして「居場所」への関心は、不足への意識から創出へと移行したが、その研究は未だ少ない。  \n\n「居場所」の定義は確立されておらず、物理的な意味（三省堂現代国語辞典）と心理的側面（安心感や自己存在感を得られる場所）が混在する。心理的側面を含む定義は統一されておらず、実証データに基づかないという課題がある。  \n\nこれまでの研究は大きく2つのアプローチに分かれる。  \n1. **地理学的アプローチ**：実際にいる場所を調査分析する方法（例：岩本1981、大西1998）。しかし寺本（2003）は、これらの研究が「知覚環境」としての子どもの生活空間全体を対象としており、「居場所」そのものの分析は少ないと指摘する。また海外研究（Hart1979など）も地理学的視点が主流で、日本独特の心理的意味での「居場所」研究はほとんどない。  \n2. **心理・教育学的アプローチ**：1990年代後半以降、学校を対象とした研究（深谷・永井・山田2001など）が出始めたが、物理的にいる場所全てを含むため、本人の主観（例：行きたくない学校）が反映されず、現代的な意味での「居場所」を捉えるには不十分である。  \n\nこのように、「居場所」の概念や研究方法には未解決の課題が多く、今後の発展が期待される。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:52.257266+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた文書の要約は以下の通りです。\n\n**要約：子どもの「居場所」に関する動向と研究の課題**\n\n1.  **社会的背景と変遷**\n    1980年代の不登校増加を機に、フリースクールなど学校外の「居場所」が注目され、その後、文部省の方針により学校内や地域での「居場所づくり」が推進されるようになった。関心は「居場所がない」ことへの着目から、積極的に「居場所を作る」動きへと進展しているが、対象そのものを分析した研究はまだ少ない。\n\n2.  **定義の曖昧さ**\n    「居場所」という言葉は、本来の「物理的に人がいる場所」という意味に加え、現在では「安心できる」「自己存在感が得られる」といった**心理的な意味**を含んで使われている。しかし、その定義は統一されておらず、実証データに基づいたものでもない。\n\n3.  **研究アプローチの課題**\n    これまでの研究（地理学的な生活空間の調査や、学校への在籍調査など）は、物理的な所在を対象とすることが主流である。しかし、これらは「本人は行きたくないが仕方なくいる場所」なども含んでしまい、本人の主観的な感情が無視されるため、現代的な「心理的な意味を含む居場所」を捉えるには不十分である。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:37.552896+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:36:46.040724+00:00"
+  }
+}

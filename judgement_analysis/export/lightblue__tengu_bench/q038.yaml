@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 38,
+  "category": "敬語",
+  "question": {
+    "original": "以下の文章をビジネスシーンで適切な敬語に直してください\n### 文章\nこれからは起業や独立する方が増えるとはいえ、実際は、企業で活躍する人もたくさんいるわけですが、新・経営学部はベンチャーや独立志向だけでなく、企業が今まさに「欲しい！」と思う人材をしっかりと育てようとされているのを感じます。ビジネスデザイン専攻やAIビジネス専攻が育てようとしているのは、「今、何をすれば利益を伸ばせるか」「テクノロジーをビジネスにどう埋めこむか」を自分で考えられる人材。それは企業が今、最も欲しがっている人材なんです。",
+    "translation_en": "### Translated Text (Business-Appropriate Keigo)  \n\nWhile the number of individuals starting their own businesses or becoming independent is expected to increase, many still thrive within established companies. However, the new Faculty of Business Administration is clearly focused on cultivating not only those with entrepreneurial or independent aspirations but also the talent that companies *right now* desperately need. The Business Design and AI Business majors aim to develop professionals who can independently determine *how to grow profits* and *how to integrate technology into business*. These are precisely the skills companies are most eager to find today.  \n\n(Note: Keigo adjustments include:  \n- \"～されている\" → \"～is focused on cultivating\" (polite passive)  \n- \"欲しい！\" → \"desperately need\" (emphasizing urgency in a professional tone)  \n- \"～なんです\" → \"are precisely the skills\" (formal assertion)  \n- Maintained natural flow while elevating politeness for business documentation.)"
+  },
+  "answer": {
+    "gold_original": "### 敬語に直した文章\nこれからは起業や独立を志す方が増えてまいりますが、それでもなお、企業において活躍されている多くの方々がいらっしゃいます。新しい経営学部におきましては、ベンチャー企業や独立を志向される人材だけではなく、企業が現在強く求めている「即戦力となる」人材を確実に育成する意向が感じられます。ビジネスデザイン専攻やAIビジネス専攻が目指しているのは、「現在、どのような行動を起こせば利益を拡大できるか」、「技術をビジネスにどのように組み込むか」を自ら考え抜くことができる人材です。これは、企業が現在、最も求めている人材でございます。",
+    "gold_backtranslation_en": "### Polished Formal English (for Evaluation Documentation)  \n\nWith the increasing number of individuals aspiring to entrepreneurship and independence, there remains a significant population actively thriving within established corporations. The new Faculty of Business Administration demonstrates a clear commitment to cultivating not only talent inclined toward startups and independence but also the \"immediately deployable\" professionals that companies urgently require. The Business Design and AI Business specializations aim to develop individuals capable of independently determining *how to expand profits through actionable strategies* and *how to integrate technology into business models*. These are precisely the skills most sought after by corporations today.  \n\n(Note: Adjustments were made for natural flow in English while preserving the original intent, emphasis, and formal tone.)"
+  },
+  "rubric": {
+    "original": "- 全ての文が敬語表現にされている:2点\n- 文章中のフランクな表現を適切にビジネスシーンに合致するように言い換えている:2点\n- ビジネスシーンで適切な敬語表現である:2点\n- 文章の意味内容を全て含んでいる:2点\n- 正しい敬語の用法である:1点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- All sentences use honorific expressions: **2 points**  \n- Casual expressions in the text are appropriately rephrased to suit a business context: **2 points**  \n- Uses appropriate honorific expressions for a business setting: **2 points**  \n- Includes all the original meaning of the text: **2 points**  \n- Correct use of honorific language: **1 point**  \n- Natural Japanese phrasing: **1 point**  \n\n*(Total: 10 points)*  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下に、ビジネスシーンで適切な敬語に直した文章をご提案します。  \n\n---  \n\n**修正後（敬語表現を追加）**  \n「近年、起業や独立を目指す方が増えている一方で、企業内で活躍する人材も依然として多く存在します。新・経営学部は、ベンチャーや独立志向だけでなく、企業が今最も求める人材を育成することを重視しております。特にビジネスデザイン専攻やAIビジネス専攻では、『利益拡大のための戦略的思考』や『テクノロジーをビジネスにどう活用するか』といった課題に対し、自ら解決策を創出できる人材の育成に注力しております。これはまさに、現代企業が強く求める能力であり、そのような人材の育成は極めて重要であると考えられます。」  \n\n---  \n\n### 主な変更点  \n1. **「～とある」→「～と考える」**（主観的な表現を避ける）  \n2. **「～と思う」→「～重視しております」「～注力しております」**（よりフォーマルな表現）  \n3. **「欲しい！」→「求める」「重要であると考えられます」**（感情的な表現を抑制）  \n4. **接続詞の調整**（文脈に合わせて適切な敬語表現を選択）  \n\nこの修正により、ビジネスシーンでの説得力と信頼性が高まります。必要に応じてさらに調整可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 全ての文が敬語表現にされている:1点  \n  - 丁寧語・敬語的表現は多いが、「存在します」「求める能力であり」などビジネス敬語としてはやや素の文体も混在しており、完全な敬語文体とは言い難い。\n- 文章中のフランクな表現を適切にビジネスシーンに合致するように言い換えている:2点  \n  - 「欲しい！」→「求める」「強く求める能力」など、フランクさは十分に抑えられている。\n- ビジネスシーンで適切な敬語表現である:1点  \n  - 全体としてフォーマルだが、「存在します」「求める能力であり」など、やや説明文寄りで、対外的なビジネス敬語としては一部カジュアル寄り。\n- 文章の意味内容を全て含んでいる:1点  \n  - 「これからは増えるとはいえ」「実際は～たくさんいる」「今まさに『欲しい！』と思う人材」「今、何をすれば利益を伸ばせるか」「テクノロジーをビジネスにどう埋めこむか」「それは企業が今、最も欲しがっている人材」などのニュアンスが一部抽象化・省略されている。\n- 正しい敬語の用法である:1点  \n  - 用いている敬語表現自体は誤用は見られない。\n- 自然な日本語である:1点  \n  - 文としては自然で読みやすい。\n\n[計算式]\n1 + 2 + 1 + 1 + 1 + 1 = 7\n\n[点数]\n7\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.281360+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 敬語に直した文章  \n「今後、起業や独立を志す方々が増加する傾向にありますが、依然として企業で活躍する方も多く存在します。新・経営学部では、ベンチャーや独立志向の育成に留まらず、企業が現在特に必要としている人材を確実に育成しようとする姿勢が感じられます。ビジネスデザイン専攻やAIビジネス専攻では、『現状においてどのような施策が収益拡大につながるか』『テクノロジーをどのようにビジネスモデルへ統合すべきか』といった課題を自ら考察できる人材の育成を目指しており、これはまさに企業が最も求めている人材像と言えるでしょう。」  \n\n### 改善点  \n1. **謙譲語・尊敬語の適切な使用**  \n   - 「〜しているのを感じます」→「〜する姿勢が感じられます」（より丁寧な表現）  \n   - 「欲しい！」→「必要としている」（ビジネスシーン向けのフォーマル表現）  \n\n2. **文体のフォーマル化**  \n   - 「〜わけですが」→「〜傾向にありますが」（論理的な接続詞へ変更）  \n   - 「自分で考えられる」→「自ら考察できる」（より洗練された表現）  \n\n3. **具体性と客観性の強化**  \n   - 「利益を伸ばせるか」→「収益拡大につながるか」（専門用語への言い換え）  \n   - 「埋めこむ」→「統合すべきか」（ビジネスシーンに適した表現）  \n\nこの修正により、より丁寧でプロフェッショナルな印象になるでしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:50.270998+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた文章は、大学や教育機関の関係者、あるいはビジネスパートナーに対して、その学部の教育方針を評価・称賛している文脈かと存じます。\n\nシチュエーションに合わせて、いくつか段階を分けてリライト案を作成しました。\n\n---\n\n### パターン1：標準的なビジネス敬語\n（会議での発言や、一般的なメールなどで使える、丁寧かつ自然な表現です）\n\n今後、起業や独立を志す方が増えるとはいえ、実際には企業組織の中で活躍される方も多数いらっしゃいます。貴学の新・経営学部からは、ベンチャーや独立志向の方のみならず、今の企業がまさに「求めている」人材をしっかりと育成されようとする姿勢を感じます。\nビジネスデザイン専攻やAIビジネス専攻が育成を目指されているのは、「今、何をすれば利益を拡大できるか」「テクノロジーをビジネスにいかに活用するか」を主体的に考えられる人材であり、それこそが、現在企業が最も必要としている人材であると存じます。\n\n### パターン2：より格式高い表現\n（式典での挨拶、稟議書、目上の方への改まった手紙などに適しています）\n\n昨今、起業や独立を志向される方が増加傾向にあるとはいえ、現実には企業において活躍される方も数多くいらっしゃいます。新・経営学部におかれましては、起業家精神を持つ人材だけでなく、現代の企業が真に渇望する人材の育成に注力されていると拝察いたします。\nビジネスデザイン専攻やAIビジネス専攻が輩出しようとされているのは、「いかにして利益を創出するか」「テクノロジーをビジネスへどう実装するか」を自律的に考案できる人材であり、これこそが今、企業が最も求めている人材像であると確信しております。\n\n### パターン3：プレゼン・スピーチ向け\n（口頭で伝える際に、熱意が伝わりやすく、かつ失礼のない表現です）\n\nこれからは起業や独立を選ぶ方が増えていく時代ですが、一方で、企業の一員として活躍される方も依然として多くいらっしゃいます。新・経営学部からは、そうしたベンチャー志向だけでなく、企業が今まさに「欲しい」と願う人材を、手厚く育てようとされている熱意を感じます。\n特にビジネスデザイン専攻やAIビジネス専攻が育てようとされている、「利益を生むための具体的なアクション」や「テクノロジーのビジネス実装」を自ら考えられる人材。これこそが、今の企業が最も求めている人材そのものであると考えております。\n\n---\n\n### 修正のポイント（語彙の変換）\n\n元の言葉のニュアンスを損なわず、ビジネスシーンにふさわしい言葉に置き換えています。\n\n*   **「～わけですが」**\n    *   → 「～いらっしゃいます」「～と存じます」など、文を一度切るか、丁寧な接続詞に変えることで幼稚さを消します。\n*   **「欲しい！」と思う**\n    *   → 「求める」「必要とする」「渇望する」\n*   **「育てようとされているのを感じます」**\n    *   → 「育成に注力されていると拝察いたします（推察します）」「姿勢に感銘を受けます」\n*   **「利益を伸ばせる」**\n    *   → 「利益を拡大できる」「利益を創出する」\n*   **「埋めこむ」**\n    *   → 「活用する」「実装する」「融合させる」\n*   **「自分で考えられる」**\n    *   → 「主体的に考えられる」「自律的に考案できる」\n*   **「～なんです」**\n    *   → 「～であると存じます」「～であると確信しております」",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:42.838146+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:38:36.169668+00:00"
+  }
+}

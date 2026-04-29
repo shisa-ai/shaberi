@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 2,
+  "category": "表の読み取り",
+  "question": {
+    "original": "以下は去年の各月の営業状況を示した表です。去年の月毎の売り上げ個数の最高値と最低値の差は何個ですか。\n### 表\n月,1,2,3,4,5,6,7,8,9,10,11,12\n売り上げ個数(個),5123,8314,6134,7632,8297,9033,10305,12028,13927,8239,9245,9549\n売り上げ(百万円),5,8,6,7,8,9,10,12,13,8,9,9\n利益(百万円),1,3,2,2,5,4,4,8,8,3,4,5",
+    "translation_en": "**[Purpose: Question]**  \n\nThe following table shows the business performance for each month of last year. What is the difference between the highest and lowest monthly sales volume (in units) from last year?  \n\n### Table  \n| Month | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |  \n|-------|---|---|---|---|---|---|---|---|---|----|----|----|  \n| Sales Volume (units) | 5123 | 8314 | 6134 | 7632 | 8297 | 9033 | 10305 | 12028 | 13927 | 8239 | 9245 | 9549 |  \n| Sales (million yen) | 5 | 8 | 6 | 7 | 8 | 9 | 10 | 12 | 13 | 8 | 9 | 9 |  \n| Profit (million yen) | 1 | 3 | 2 | 2 | 5 | 4 | 4 | 8 | 8 | 3 | 4 | 5 |  \n\n*(Note: The translation preserves the original structure and data while ensuring clarity for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "売り上げ個数の最高値は9月の13,927個、最低値は1月の5,123個です。これらの差を計算すると:\n\n13,927個 - 5,123個 = 8,804個\n\n従って、去年の月毎の売り上げ個数の最高値と最低値の差は8,804個です。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe highest monthly sales volume was 13,927 units in September, and the lowest was 5,123 units in January. The difference between these values is:  \n\n13,927 units - 5,123 units = 8,804 units  \n\nTherefore, the difference between the highest and lowest monthly sales volumes last year was 8,804 units."
+  },
+  "rubric": {
+    "original": "- 答えが8804個である:3点\n- 9月の最高値と1月の最低値の差から答えを求めている:2点\n- 表の値を正しく読み取れている:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Answer is 8804:** 3 points  \n- **Calculates the answer by finding the difference between the highest value in September and the lowest value in January:** 2 points  \n- **Correctly reads values from the table:** 2 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "去年の月毎の売り上げ個数の最高値と最低値の差を計算します。  \n\n1. **最高値と最低値を特定する**  \n   - 最高値: 12028個（8月）  \n   - 最低値: 5123個（1月）  \n\n2. **差を計算する**  \n   \\[\n   12028 - 5123 = 6905 \\text{個}\n   \\]  \n\nしたがって、去年の月毎の売り上げ個数の最高値と最低値の差は **6905個** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えが8804個である:0点  \n  - 回答は「6905個」としており誤り。\n- 9月の最高値と1月の最低値の差から答えを求めている:0点  \n  - 最高値を8月12028個としており、9月13927個を見落としている。\n- 表の値を正しく読み取れている:1点  \n  - 最低値5123個（1月）は正しく読み取れているが、最高値を誤っている。\n- 説明が具体的でわかりやすい:2点  \n  - 手順を段階的に示し、計算過程も明示しており分かりやすい。\n- 自然な日本語である:1点  \n  - 文体・表現ともに自然な日本語。\n\n[計算式]\n0 + 0 + 1 + 2 + 1 = 4\n\n[点数]\n4点\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:06.084099+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "去年の月毎の売り上げ個数の最高値と最低値の差を計算します。  \n\n**最高値:** 13927個 (9月)  \n**最低値:** 5123個 (1月)  \n\n差: 13927 - 5123 = **8804個**  \n\nしたがって、去年の売り上げ個数の最高値と最低値の差は **8804個** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:23.551623+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "去年の月毎の売り上げ個数の最高値と最低値の差は、**8,804個**です。\n\n計算過程は以下の通りです。\n\n1.  **最高値**: 9月の **13,927個**\n2.  **最低値**: 1月の **5,123個**\n3.  **差**: $13,927 - 5,123 = 8,804$",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:28.900875+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:34:36.137514+00:00"
+  }
+}

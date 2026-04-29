@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 69,
+  "category": null,
+  "question": {
+    "original": "大喜利に挑戦してみましょう。大喜利とはお題に対して面白い回答を考える遊びです。大喜利のコツは色々とありますが、1つは「共感を呼ぶ答えをひとひねりする」ことです。誰もが経験したことや思ったことに対して、少し変わった視点や表現で回答することで、共感と笑いを誘うことができます。\n\n例えば、以下の例を見てみましょう\n\nお題: ナルシスト漁師の特徴を教えてください\n回答: キャッチ＆キス＆リリース\n\nこのお題では、「普通の漁師の特徴」の「キャッチ＆リリース」に対して、ナルシストという観点からの捻りを加え、語感がいいようにまとめていて面白いです。\n\nそれでは、以下のお題について大喜利で答えてください。\nお題：初めてドラゴンを退治しに行くのですが、アドバイスをお願いします",
+    "translation_en": "**[Purpose: Question]**  \n\nLet’s try *daigiri* (improv comedy). *Daigiri* is a game where you come up with funny answers to prompts. One key to *daigiri* is to \"twist relatable answers.\" By responding to common experiences or thoughts with a slightly unusual perspective or expression, you can evoke both empathy and laughter.  \n\nFor example, consider this prompt:  \n\n**Prompt:** What are the characteristics of a narcissistic fisherman?  \n**Answer:** Catch & Kiss & Release  \n\nIn this case, the answer takes the familiar \"Catch & Release\" (a common fishing practice) and twists it with a narcissistic angle, making it clever and amusing.  \n\nNow, here’s your *daigiri* prompt:  \n\n**Prompt:** I’m going to defeat a dragon for the first time—what advice do you have?  \n\n*(Provide your *daigiri* answer below.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "初めてドラゴンを退治しに行くなら、まず「ドラゴンとのコミュニケーションスキル」を磨くことです。炎を吐く相手に、ただ攻撃するだけでは解決しません。まずは「共感」から始めましょう。  \n\n**アドバイス：**  \n1. **「なぜ炎を吐くのか？」** を聞いてみてください。もしかしたら、ストレスや孤独が原因かもしれません。  \n2. **「ドラゴンの好きな食べ物」** を調べておきましょう。焼き鳥なら、焼き魚なら…（※実際は焼かないでください）。  \n3. **「ドラゴンの趣味」** を探してみるのもいいです。例えば、「古い宝物集め」なら、共通の話題が見つかるかもしれません。  \n\nそして最も重要なのは…  \n**「自分自身の『ドラゴン』と向き合うこと」** です。あなた自身が抱える炎（怒りや不安）を制御できなければ、他人の炎にどう対処できるでしょうか？  \n\n…というわけで、まずは自己啓発から始めてくださいね！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "共感を呼ぶ「自己啓発」方向へのひねりはあり、ドラゴンを実際に倒すアドバイスからは外れている点は良いです。ただし、大喜利としては文章量が多く、3文以上の長文で説明調になっており、テンポや語感で笑わせるスタイルから外れているため減点対象になります。  \n全体として方向性は合っており、そこそこ面白さもあるためベースは5点相当ですが、長さ・文体のペナルティで-1となります。\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:47.587479+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "ドラゴン退治のアドバイスですか！ では、こうしましょう。  \n\n**「火を吹く前に、SNSで炎上させておく」**  \n\nドラゴンも現代社会なら炎上対策が必須です。炎上させておけば、実際に火を吹いても「またか…」と誰も驚きません。共感と諦念の笑いを狙ってみました！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:03.676928+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "大喜利への挑戦ですね。承知いたしました。\n「冒険の準備」という共感しやすいシチュエーションに、現代的な要素や少しズレた視点を入れて回答します。\n\nお題：初めてドラゴンを退治しに行くのですが、アドバイスをお願いします\n\n回答：**とりあえず、ヒートテック着ていくのだけはやめとけ。**\n\n解説：\n「寒い場所や野外活動にはヒートテック（防寒インナー）を着る」という現代人の常識（共感）に対し、「相手は火を吹くドラゴンだから、逆に熱くなりすぎて地獄を見る」という状況のひねりを加えました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:04.093556+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:49.825505+00:00"
+  }
+}

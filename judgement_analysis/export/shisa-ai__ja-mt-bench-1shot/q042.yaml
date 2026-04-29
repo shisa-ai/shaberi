@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 42,
+  "category": null,
+  "question": {
+    "original": "あなたの左に美しい赤い家が、右には幻想的な温室が、正面には魅力的なピンクの場所が見えます。では、白い家はどこにありますか？",
+    "translation_en": "**[Purpose: question]**  \n\nTo your left, there is a beautiful red house, to your right, a fantastical greenhouse, and straight ahead, an attractive pink place. So, where is the white house?  \n\n*(Note: The translation maintains the original structure and phrasing while ensuring natural English flow for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この質問は、視覚的な描写に基づいていますが、具体的な情報が不足しているため、正確な答えを出すことはできません。ただし、質問の文脈から推測することができます。  \n\n- **左**：美しい赤い家  \n- **右**：幻想的な温室  \n- **正面**：魅力的なピンクの場所  \n\nこれらの情報から、白い家が明示的に言及されていないため、その位置は不明です。ただし、通常は「左」「右」「正面」という方向性で配置されている場合、白い家はこれらの方向以外（例えば後ろや上）にある可能性があります。  \n\nもし追加の情報（例えば「白い家は他の建物と隣接している」など）があれば、より具体的な回答が可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "この質問は典型的ななぞなぞで、「白い家（ホワイトハウス）はどこにありますか？」という意味になります。  \n正解は「アメリカ（アメリカ合衆国のワシントンD.C.）」です。\n\n評価対象の回答は：\n\n- なぞなぞとしての意図を読み取れていない  \n- 「情報不足で答えられない」としており、発想が的外れ  \n- 「後ろや上にある可能性」など、無意味な推測をしている  \n- 日本語自体は自然で読みやすいが、質問の本質を完全に外している  \n\nそのため、有用性・正確性の面で大きく減点されます。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:05.439061+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この質問は、言語の曖昧さと視覚的な想像力を試すものです。与えられた情報では、白い家の位置は明確に示されていません。左には赤い家、右には温室、正面にはピンクの場所があると述べられていますが、これらの場所の背後や隣接する場所に白い家があるかどうかは不明です。\n\nしたがって、与えられた情報だけでは、白い家がどこにあるのかを特定することはできません。白い家が存在する可能性はありますが、その位置については推測するしかありません。例えば、赤い家の向こう側や温室の奥、あるいはピンクの場所の背後に存在する可能性もあります。\n\n結論として、白い家の位置について確実な答えを出すことはできません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:12.822325+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "これは有名ななぞなぞですね。\n\n答えは、**アメリカのワシントンD.C.**です。\n\n**解説：**\nあなたの周りにどんな色の家や建物があろうとも、「ホワイトハウス（白い家）」と言えば、一般的にアメリカ大統領官邸のことを指すというひっかけ問題です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:43.665648+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:02.411611+00:00"
+  }
+}

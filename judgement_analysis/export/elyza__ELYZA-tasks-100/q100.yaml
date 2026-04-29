@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 100,
+  "category": null,
+  "question": {
+    "original": "次の文は1つの物語の文の順番をシャッフルしたものです。適切な順に並び替えてください。\n\n1. 「果物だけではなく、人生も同じです。協力しなくては、全てをこなすことはできません。」\n2. 老人は、広い畑で色々な果物を育てていました。\n3. ある日、孫が老人に『こんなに広い畑で、全ての果物を一人で育てるのは大変そうですね』と尋ねました。\n4. 昔、あるところに老人と孫がいました。\n5. 老人は微笑みながら次のように答えました。\n",
+    "translation_en": "**Translation:**  \n\n1. \"Not only fruit, but life is the same. Without cooperation, you cannot accomplish everything.\"  \n2. An old man grew various fruits in his large field.  \n3. One day, his grandson asked him, \"It must be hard to tend all these fruits by yourself in such a big field.\"  \n4. Once upon a time, there was an old man and his grandson.  \n5. The old man smiled and replied as follows.  \n\n*(Reordered for narrative flow: 4, 2, 3, 5, 1.)*  \n\n*(Note: The original request was to reorder the sentences, but since the task is translation, I've provided the translation first, then indicated the correct order. If only the reordered text is needed, please let me know.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下が正しい物語の文の順番です。  \n\n1. 昔、あるところに老人と孫がいました。  \n2. 老人は、広い畑で色々な果物を育てていました。  \n3. ある日、孫が老人に『こんなに広い畑で、全ての果物を一人で育てるのは大変そうですね』と尋ねました。  \n4. 老人は微笑みながら次のように答えました。  \n5. 「果物だけではなく、人生も同じです。協力しなくては、全てをこなすことはできません。」  \n\nこの順番で物語が自然に展開します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "回答は、指定された正解例どおり「4, 2, 3, 5, 1」の順番になっており、文面も元の文から変化していません。  \n問題固有の採点基準より「順番を全て適切に並べ替えている」に該当するため5点です。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:48.923140+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "適切な順番に並び替えた文は以下の通りです。  \n\n1. 昔、あるところに老人と孫がいました。  \n2. 老人は、広い畑で色々な果物を育てていました。  \n3. ある日、孫が老人に『こんなに広い畑で、全ての果物を一人で育てるのは大変そうですね』と尋ねました。  \n4. 老人は微笑みながら次のように答えました。  \n5. 「果物だけではなく、人生も同じです。協力しなくては、全てをこなすことはできません。」  \n\nこの順番で物語が自然に繋がります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:17.489977+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "適切な順序は以下の通りです。\n\n4. 昔、あるところに老人と孫がいました。\n2. 老人は、広い畑で色々な果物を育てていました。\n3. ある日、孫が老人に『こんなに広い畑で、全ての果物を一人で育てるのは大変そうですね』と尋ねました。\n5. 老人は微笑みながら次のように答えました。\n1. 「果物だけではなく、人生も同じです。協力しなくては、全てをこなすことはできません。」",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:55.083277+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:34:30.606221+00:00"
+  }
+}

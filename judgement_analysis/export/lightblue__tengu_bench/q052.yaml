@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 52,
+  "category": "翻訳",
+  "question": {
+    "original": "以下のメール文を日本語にしてください。\n\n### Email\n\nHey Tanaka-san,\n\nThank you for your help last week with or proposal to the government. You really knocked it out of the park.\n\nCan you send me the results from the experiments from the past 2 months? I have a meeting with Bridgette and Fumi at noon and need to explain what we've been doing.\n\nRegards,\n\nJo",
+    "translation_en": "### Email\n\nHey Tanaka-san,\n\nThank you for your help last week with the proposal to the government. You really knocked it out of the park.\n\nCan you send me the results from the experiments from the past 2 months? I have a meeting with Bridgette and Fumi at noon and need to explain what we've been doing.\n\nRegards,\n\nJo  \n\n---\n\n**Japanese Translation:**  \n\n---  \n\n**メール**  \n\n田中さん  \n\n先週の政府への提案にご協力いただき、ありがとうございました。本当に素晴らしい仕事でした。  \n\n過去2ヶ月間の実験結果を送っていただけますか？ 午後12時にブリジットとフミとの会議があり、これまでの活動内容を説明する必要があります。  \n\nよろしくお願いします。  \n\nジョー  \n\n---  \n\n(Note: Adjusted \"knocked it out of the park\" to a more natural Japanese equivalent while preserving the positive tone. \"Bridgette and Fumi\" were kept as proper nouns, assuming they are names.)"
+  },
+  "answer": {
+    "gold_original": "### 改訂されたメール文\n田中さん\n\n先週は政府への提案へご協力いただき、誠にありがとうございました。ご活躍、大変感謝しております。\n\nさて、本日正午にブリジットさん、フミさんとの会議がございます。この会議では過去2ヶ月間の実験の成果について報告する必要があります。つきましては、実験結果の詳細をお送りいただけますと幸いです。\n\n宜しくお願い申し上げます。\n\nジョー",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\n### Revised Email Text  \nTanaka-san,  \n\nThank you very much for your cooperation with the proposal to the government last week. We greatly appreciate your hard work.  \n\nWe have a meeting today at noon with Bridget and Fumi to report on the results of the experiments conducted over the past two months. Could you please send me the detailed experimental results?  \n\nThank you in advance.  \n\nJoe"
+  },
+  "rubric": {
+    "original": "- 日本語圏と英語圏のメールの書き方の違いを考慮している:3点\n- 日本語と英語の違いを考慮しているか(日本語は結論はあと):3点\n- 原文の内容を過不足なく訳すことができている:3点\n- 自然な英語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Considers differences in email writing between Japanese and English contexts:** 3 points  \n- **Acknowledges differences between Japanese and English (e.g., Japanese often places conclusions later):** 3 points  \n- **Accurately translates the original content without omission or excess:** 3 points  \n- **Uses natural, fluent English:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural phrasing in English.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "### メール\n\nタナカさん、\n\n先週、政府への提案の件でご協力いただきありがとうございました。本当に素晴らしい結果でした。\n\n過去2ヶ月間の実験結果を送っていただけますか？12時頃にブリジットさんとフミさんと会議があるので、今回の取り組みについて説明する必要があります。\n\nよろしくお願いします。\n\nジョー",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 日本語圏と英語圏のメールの書き方の違いを考慮している:1点  \n  - 冒頭・結びは一応メールらしいが、「タナカさん、」などカジュアル寄りで、日本語ビジネスメールとしての体裁（件名風の書き出し、省略されがちな敬語の整え方など）は十分ではない。\n- 日本語と英語の違いを考慮しているか(日本語は結論はあと):1点  \n  - 「実験結果を送っていただけますか？」が先に来ており、理由説明が後に続く形で一応「結論あと」だが、全体として英語メールの直訳に近く、日本語特有の前置きや配慮表現は弱い。\n- 原文の内容を過不足なく訳すことができている:3点  \n  - 先週の協力への感謝、政府への提案、実験結果の送付依頼、過去2ヶ月、正午の会議、BridgetteとFumi、説明が必要であること、署名「ジョー」など、内容はほぼ過不足なく訳されている。\n- 自然な英語である:0点  \n  - 出力は日本語であり、この項目には該当しない。\n\n[計算式]\n1 + 1 + 3 + 0 = 5\n\n[点数]\n5\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:05.578730+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### メール\n\n田中さん、こんにちは。\n\n先週の政府への提案書作成、お世話になりありがとうございました。本当に素晴らしい仕事でした。\n\n過去2ヶ月間の実験結果を送っていただけますでしょうか？ 午後12時にブリジットさんとフミさんと打ち合わせがあり、今までの取り組みについて説明する必要があります。\n\nよろしくお願いいたします。\n\nジョー",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:23.356610+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "相手との関係性（同僚、部下、あるいは親しい間柄か）によって適切なトーンが変わるため、いくつかパターンを用意しました。状況に合わせて使い分けてください。\n\n元のメールにある \"knocked it out of the park\" は野球のホームランに由来する表現で、「最高だった」「大成功だった」「素晴らしい仕事ぶりだった」という意味です。\n\n### パターン1：標準的なビジネスメール（丁寧・推奨）\n最も無難で、社内のやり取りとして自然な表現です。\n\n**件名：** 実験結果の共有のお願い / 先週の件について\n\n田中さん\n（お疲れ様です。）\n\n先週は政府向け提案書の件でご協力いただき、ありがとうございました。本当に素晴らしい出来栄えでした。\n\nついては、過去2ヶ月間の実験結果を送っていただけないでしょうか？\n今日の正午からブリジット、フミとミーティングがあり、これまでの活動状況を説明する必要があるためです。\n\nよろしくお願いいたします。\n\nジョー\n\n---\n\n### パターン2：少しカジュアル（親しい同僚向け）\n元の英語の \"Hey\" や \"knocked it out of the park\" のフランクなニュアンスを反映したものです。\n\n**件名：** 実験データの件\n\n田中さん\n\n先週は政府への提案書の件、手伝ってくれてありがとう。最高の結果になったよ（さすがでした）。\n\n過去2ヶ月分の実験結果を送ってもらえるかな？\nお昼にブリジットとフミとの打ち合わせがあって、これまでの進捗を説明しないといけないんだ。\n\nよろしく。\n\nジョー\n\n---\n\n### 補足\n*   **\"or proposal\"について:** 文脈から \"our proposal\"（私たちの提案書）のタイプミスと判断して翻訳しています。\n*   **\"knocked it out of the park\":** 直訳すると意味が通じないため、「素晴らしい出来栄えでした」「最高の結果になった」などと意訳しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:39.246886+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:45.012281+00:00"
+  }
+}

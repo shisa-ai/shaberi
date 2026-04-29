@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 42,
+  "category": null,
+  "question": {
+    "original": "AさんとBさんは同じ会社で働いています。二人はそれぞれ、仕事でコンピューターを使う必要があることがあります。しかし、そのコンピュータはあまり高性能ではありません。二人が同時にログインすると、たいていクラッシュしてしまいます。そこで、会社は午前中はAさんだけ、午後はBさんだけがパソコンを使うことを許可すると宣言しました。翌日、AさんとBさんはどちらも寝坊して13時からコンピュータで仕事を始めました。そしてその日コンピュータはクラッシュしてしまいました。誰がコンピュータをクラッシュさせてしまったのでしょうか？",
+    "translation_en": "**[Purpose: Question]**  \n\nA and B work at the same company. Both occasionally need to use a computer for work, but the computer is not very powerful. If they log in at the same time, it usually crashes. To prevent this, the company announced that A would use the computer in the morning, and B in the afternoon. The next day, both A and B overslept and started working on the computer at 1 PM. The computer crashed that day. Who caused the computer to crash?  \n\n*(Note: The translation preserves the original meaning and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題は、論理パズルの一種で、見かけ上の矛盾を解く必要があります。結論から言うと、**AさんとBさん**の両方がコンピュータをクラッシュさせてしまったということになります。\n\n以下にその理由を説明します。\n\n1. **会社のルール**: 午前中はAさんだけ、午後はBさんだけがコンピュータを使うことが許可されています。\n2. **翌日の状況**: AさんとBさんはどちらも寝坊して13時からコンピュータを使い始めました。これは会社のルールに違反しています。\n3. **クラッシュの原因**: 二人が同時にログインすると、コンピュータがクラッシュするというルールがあります。13時にはAさんとBさんが同時にログインしたため、コンピュータがクラッシュしたのです。\n\nつまり、AさんとBさんが会社のルールを破ったために、コンピュータがクラッシュしたということになります。誰か一方だけが原因であるとは言えません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "回答は「AさんとBさんの両方がクラッシュさせた」としており、問題の想定解「許可されていない時間に使ったAさんがクラッシュさせた」とは異なっています。そのため内容としては不正解です。\n\nただし、問題文の条件（同時ログインでクラッシュする／13時に二人とも使い始めた）を踏まえ、「二人ともルール違反をした結果クラッシュした」という筋の通った説明になっており、方向性は大きく外れてはいません。\n\n日本語も自然で、支離滅裂な点もありません。\n\n以上から、採点基準に従うと「誤っているが、方向性は合っている」に相当します。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:47.050178+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この状況では、**Bさんがコンピュータをクラッシュさせた可能性が高い**と考えられます。理由は以下の通りです。\n\n*   **会社のルール**: 会社は午前中はAさん、午後はBさんの使用を許可しています。\n*   **寝坊**: AさんとBさんはどちらも13時から仕事を始めました。13時は午後の時間帯なので、この時間帯はBさんがコンピュータを使うのが許可されています。\n*   **同時ログイン**: Aさんが午前中の使用権を持っていますが、13時からAさんがログインした場合、それはルール違反となります。しかし、問題文からはAさんが午前中にログインしていたかどうかの情報がありません。もしAさんが午前中にログインしていた場合、Bさんのログインによって同時に二人がログインしたことになり、クラッシュの原因となります。\n\nしかし、問題文からはAさんの午前中の行動について言及されていないため、**Bさんが13時にログインしたことが直接的な原因**と考えるのが自然です。\n\n結論として、**Bさんがコンピュータをクラッシュさせた可能性が高い**ですが、アさんの午前中の行動次第では判断が変わる可能性もあります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:17.845407+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "コンピュータをクラッシュさせた原因は**Aさん**にあります。\n\n理由は以下の通りです。\n\n1.  **時間は午後だった**: 13時は午後1時です。\n2.  **ルールの適用**: 会社のルールでは、午後は**Bさんだけ**がコンピュータを使う許可を得ていました。\n3.  **責任の所在**: Bさんは自分の割り当てられた時間（午後）に正当にログインしていましたが、Aさんは自分の割り当てられた時間（午前）ではないのにログインしました。\n\nしたがって、Aさんがルールを破って午後にログインしたことが、同時ログイン状態を引き起こし、クラッシュの原因となりました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:50.020073+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:49.171774+00:00"
+  }
+}

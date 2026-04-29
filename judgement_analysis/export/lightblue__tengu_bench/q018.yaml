@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 18,
+  "category": "Function calling",
+  "question": {
+    "original": "あなたは以下のツールを使うことができます。\n[\n    {\n        \"type\":\"function\",\n        \"function\": {\n            \"name\": \"get_email_address\",\n            \"description\": \"メールアドレスを検索、取得\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"name\": {\n                        \"type\": \"string\",\n                        \"description\": \"メールアドレスを調べたい人の名前\"\n                    },\n                },\n                \"required\": [\"name\"]\n            }\n          }\n    },\n    {\n        \"type\":\"function\",\n        \"function\": {\n            \"name\": \"auto_message\",\n            \"description\": \"状況にあったメール文を作成、送信する\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"address\": {\n                        \"type\": \"string\",\n                        \"description\": \"宛先のメールアドレス\"\n                    },\n                    \"situation\": {\n                        \"type\": \"string\",\n                        \"description\": \"送りたいメールの内容\"\n                    },\n                },\n                \"required\": [\"address\", \"situation\"]\n            }\n          }\n    }\n]\nこの時以下の発言に対してJSON形式で使用できる関数およびその引数を\"name\"及び\"properties\"にそれぞれ格納して出力してください。また複数関数を順番に実行する必要がある場合は順番がわかるようにまとめてJSONに格納してください。\n### 発言\nxxxooo@example.com宛に新しい製品紹介のメールを送信したい。",
+    "translation_en": "Here is the JSON output with the required functions and arguments in the specified format:  \n\n```json\n[\n  {\n    \"name\": \"get_email_address\",\n    \"properties\": {\n      \"name\": \"xxxooo\"\n    }\n  },\n  {\n    \"name\": \"auto_message\",\n    \"properties\": {\n      \"address\": \"xxxooo@example.com\",\n      \"situation\": \"新しい製品紹介のメール\"\n    }\n  }\n]\n```  \n\nThis JSON represents the sequence of functions to first retrieve the email address (if needed, though in this case the address is already provided) and then send the product introduction email. The order reflects the logical execution sequence."
+  },
+  "answer": {
+    "gold_original": "[\n  {\n    \"name\": \"auto_message\",\n    \"properties\": {\n      \"address\": \"xxxooo@example.com\",\n      \"situation\": \"新しい製品紹介のメール\"\n    }\n  }\n]",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\n```json\n[  \n  {  \n    \"name\": \"auto_message\",  \n    \"properties\": {  \n      \"address\": \"xxxooo@example.com\",  \n      \"situation\": \"New product introduction email\"  \n    }  \n  }  \n]  \n```  \n\n(Translation preserves the original structure and meaning while ensuring natural English phrasing for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- \"auto_message\"のツールを選択している:3点\n- propertiesの中の\"address\"の値が\"xxxooo@example.com\":2点\n- propertiesの中の\"situation\"の値が\"新しい製品紹介のメール\"に類するもの:2点\n- properities内の引数のキーの名称が正しい:2点\n- 正確なJSON形式である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Selecting the \"auto_message\" tool:** 3 points  \n- **The value of \"address\" in properties is \"xxxooo@example.com\":** 2 points  \n- **The value of \"situation\" in properties is similar to \"New product introduction email\":** 2 points  \n- **The argument key names in properties are correct:** 2 points  \n- **Formatted in accurate JSON syntax:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下のJSON形式で、発言に対応する関数と引数を出力します。  \n\n```json\n{\n  \"functions\": [\n    {\n      \"name\": \"auto_message\",\n      \"properties\": {\n        \"address\": \"xxxooo@example.com\",\n        \"situation\": \"新しい製品紹介\"\n      }\n    }\n  ]\n}\n```\n\nこのJSONは、`auto_message`関数を呼び出し、`address`に「xxxooo@example.com」、`situation`に「新しい製品紹介」を渡すように指示しています。必要に応じて、この関数を実行してメールを送信できます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- \"auto_message\"のツールを選択している:3点  \n  - `\"name\": \"auto_message\"` を正しく指定している。\n- propertiesの中の\"address\"の値が\"xxxooo@example.com\":2点  \n  - `\"address\": \"xxxooo@example.com\"` と完全一致。\n- propertiesの中の\"situation\"の値が\"新しい製品紹介のメール\"に類するもの:2点  \n  - `\"situation\": \"新しい製品紹介\"` としており、意味的にほぼ同等。\n- properities内の引数のキーの名称が正しい:2点  \n  - `\"address\"` と `\"situation\"` を正しく使用。\n- 正確なJSON形式である:0点  \n  - 正解例は最上位が配列だが、回答は最上位がオブジェクトで `\"functions\"` キーを持つ構造になっており、指定形式と異なる。\n\n[計算式]\n3 + 2 + 2 + 2 + 0 = 9\n\n[点数]\n9\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:06.158093+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下のJSON形式で、使用する関数とその引数を順番に格納しました。まずは宛先のメールアドレスを取得し、その後メール文を作成・送信します。\n\n```json\n{\n  \"functions\": [\n    {\n      \"name\": \"get_email_address\",\n      \"parameters\": {\n        \"name\": \"xxxooo@example.com\"\n      }\n    },\n    {\n      \"name\": \"auto_message\",\n      \"parameters\": {\n        \"address\": \"${get_email_address.result}\",\n        \"situation\": \"新しい製品紹介\"\n      }\n    }\n  ]\n}\n```\n\nこのJSONでは、最初に`get_email_address`関数でメールアドレスを取得し、その結果を`auto_message`関数の`address`パラメータに渡すようにしています。`${get_email_address.result}`は、最初の関数の実行結果（メールアドレス）を参照するプレースホルダーです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:32.083687+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n[\n    {\n        \"name\": \"auto_message\",\n        \"properties\": {\n            \"address\": \"xxxooo@example.com\",\n            \"situation\": \"新しい製品紹介のメール\"\n        }\n    }\n]\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:21.717421+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:52.106069+00:00"
+  }
+}

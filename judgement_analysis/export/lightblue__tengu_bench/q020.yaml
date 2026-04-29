@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 20,
+  "category": "Function calling",
+  "question": {
+    "original": "あなたは以下のツールを使うことができます。\n[\n    {\n        \"type\":\"function\",\n        \"function\": {\n            \"name\": \"get_stock_symbol\",\n            \"description\": \"会社名から株取引市場でのシンボルを取得する\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"company_name\": {\n                        \"type\": \"string\",\n                        \"description\": \"会社名\"\n                    },\n                },\n                \"required\": [\"company_name\"]\n            }\n          }\n    },\n    {\n        \"type\":\"function\",\n        \"function\": {\n            \"name\": \"search_company\",\n            \"description\": \"該当する会社名の検索を行う\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"keyword\": {\n                        \"type\": \"string\",\n                        \"description\": \"調べたい内容のキーワード\"\n                    },\n                    \"name\": {\n                        \"type\": \"string\",\n                        \"description\": \"会社名\"\n                    },\n                },\n                \"required\": []\n            }\n          }\n    },\n    {\n        \"type\":\"function\",\n        \"function\": {\n            \"name\": \"get_stock_price\",\n            \"description\": \"特定の会社の株価情報を取得\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"symbol\": {\n                        \"type\": \"string\",\n                        \"description\": \"株取引市場における会社のシンボル\"\n                    },\n                },\n                \"required\": [\"symbol\"]\n            }\n          }\n    }\n]\nこの時以下の発言に対してJSON形式で使用できる関数およびその引数を\"name\"及び\"properties\"にそれぞれ格納して出力してください。また複数関数を順番に実行する必要がある場合は順番がわかるようにまとめてJSONに格納してください。\n### 発言\n医療関係の会社の株価を比べて分析したい。",
+    "translation_en": "```json\n{  \n  \"functions\": [  \n    {  \n      \"name\": \"search_company\",  \n      \"properties\": {  \n        \"keyword\": \"医療関係\",  \n        \"name\": \"\"  \n      }  \n    },  \n    {  \n      \"name\": \"get_stock_symbol\",  \n      \"properties\": {  \n        \"company_name\": \"\"  \n      }  \n    },  \n    {  \n      \"name\": \"get_stock_price\",  \n      \"properties\": {  \n        \"symbol\": \"\"  \n      }  \n    }  \n  ]  \n}\n```  \n\n**Explanation (for clarity, though not part of the output):**  \n1. **`search_company`**: First, search for companies related to \"医療関係\" (medical/healthcare). The `name` parameter is left empty as the search is based on the keyword.  \n2. **`get_stock_symbol`**: Once a company is identified from the search, retrieve its stock symbol using the company name.  \n3. **`get_stock_price`**: Finally, use the stock symbol to get the stock price for analysis.  \n\nThe functions are ordered sequentially to reflect the necessary steps. The `properties` for `company_name` and `symbol` are left empty to be filled after the previous function's output."
+  },
+  "answer": {
+    "gold_original": "[\n  {\n    \"name\": \"search_company\",\n    \"properties\": {\n      \"keyword\": \"医療\"\n    }\n  },\n  {\n    \"name\": \"get_stock_symbol\",\n    \"properties\": {\n      \"company_name\": \"<search_companyで見つけた会社名>\"\n    }\n  },\n  {\n    \"name\": \"get_stock_price\",\n    \"properties\": {\n      \"symbol\": \"<get_stock_symbolで取得したシンボル>\"\n    }\n  }\n]",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\n[  \n  {  \n    \"name\": \"search_company\",  \n    \"properties\": {  \n      \"keyword\": \"healthcare\"  \n    }  \n  },  \n  {  \n    \"name\": \"get_stock_symbol\",  \n    \"properties\": {  \n      \"company_name\": \"<company name found by search_company>\"  \n    }  \n  },  \n  {  \n    \"name\": \"get_stock_price\",  \n    \"properties\": {  \n      \"symbol\": \"<symbol retrieved by get_stock_symbol>\"  \n    }  \n  }  \n]"
+  },
+  "rubric": {
+    "original": "- [\"search_company\",\"get_stock_symbol\",\"get_stock_price\"]の全てのツールを選択している:3点\n- [\"search_company\",\"get_stock_symbol\",\"get_stock_price\"]の順番にツールが選択されている:3点\n- propertiesの中の引数の説明が正しい:2点\n- properities内の引数のキーの名称が正しい:1点\n- 正確なJSON形式である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **3 points** – All tools (\"search_company,\" \"get_stock_symbol,\" \"get_stock_price\") are selected.  \n- **3 points** – Tools are selected in the correct order (\"search_company,\" \"get_stock_symbol,\" \"get_stock_price\").  \n- **2 points** – Argument descriptions within `properties` are accurate.  \n- **1 point** – Argument key names within `properties` are correct.  \n- **1 point** – The JSON format is accurate.  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下のJSON形式で、発言に対応する関数と引数を出力します。医療関係の会社を比較分析するためには、まず関連する会社名を特定し、その後株価情報を取得する必要があります。ここでは、例として「Johnson & Johnson」と「Pfizer」を比較分析の例として挙げます。  \n\n```json\n{\n  \"functions\": [\n    {\n      \"name\": \"search_company\",\n      \"properties\": {\n        \"keyword\": \"医療関係\",\n        \"name\": null\n      }\n    },\n    {\n      \"name\": \"get_stock_symbol\",\n      \"properties\": {\n        \"company_name\": \"Johnson & Johnson\"\n      }\n    },\n    {\n      \"name\": \"get_stock_symbol\",\n      \"properties\": {\n        \"company_name\": \"Pfizer\"\n      }\n    },\n    {\n      \"name\": \"get_stock_price\",\n      \"properties\": {\n        \"symbol\": null\n      }\n    }\n  ]\n}\n```\n\n### 説明  \n1. **`search_company`**: 「医療関係」というキーワードで関連会社を検索（例: Johnson & Johnson, Pfizer）。  \n2. **`get_stock_symbol`**: 検索結果から各社の株式シンボル（例: JNJ, PFE）を取得。  \n3. **`get_stock_price`**: 取得したシンボルを使って株価情報を取得（実際にはシンボルが必要なので、後続の処理で補完）。  \n\n必要に応じて、さらに詳細な分析（例: 比較グラフ作成）を行うための追加ステップが考えられますが、今回は基本的な流れのみ回答します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- [\"search_company\",\"get_stock_symbol\",\"get_stock_price\"]の全てのツールを選択している:3点  \n  - 3つすべてがJSON内に含まれている。\n- [\"search_company\",\"get_stock_symbol\",\"get_stock_price\"]の順番にツールが選択されている:3点  \n  - 並び順は search_company → get_stock_symbol → get_stock_symbol → get_stock_price であり、基本的な順序は満たしているとみなせる。\n- propertiesの中の引数の説明が正しい:1点  \n  - search_company.keyword, get_stock_symbol.company_name は適切だが、get_stock_price.symbol に null を入れており、「取得したシンボル」を明示していない点で不十分。\n- properities内の引数のキーの名称が正しい:1点  \n  - keyword, name, company_name, symbol などキー名自体は仕様どおり。\n- 正確なJSON形式である:0点  \n  - 正解例は配列そのものを返す形式だが、回答は `{ \"functions\": [...] }` という別構造になっており、指定フォーマットから外れている。\n\n[計算式]\n3 + 3 + 1 + 1 + 0 = 8\n\n[点数]\n8\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.776274+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下のJSONは、発言「医療関係の会社の株価を比べて分析したい」に対して必要な関数とその引数を順番に実行する手順を示しています。\n\n```json\n{\n  \"steps\": [\n    {\n      \"name\": \"search_company\",\n      \"properties\": {\n        \"keyword\": \"医療\",\n        \"name\": \"\"\n      }\n    },\n    {\n      \"name\": \"get_stock_symbol\",\n      \"properties\": {\n        \"company_name\": \"{result_of_search_company}\"\n      }\n    },\n    {\n      \"name\": \"get_stock_price\",\n      \"properties\": {\n        \"symbol\": \"{result_of_get_stock_symbol}\"\n      }\n    }\n  ]\n}\n```\n\n### 解説:\n1. **search_company**: まず「医療」というキーワードで会社名を検索します。\n2. **get_stock_symbol**: 検索結果から得られた会社名（例: 「株式会社○○」）を使って株式市場でのシンボル（例: 「○○株」）を取得します。\n3. **get_stock_price**: シンボルを使って現在の株価情報を取得します。\n\n`{result_of_...}` は前のステップの結果が代入されることを示しています。実際には、各関数が返す値を次の関数に渡す必要があります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:38.620606+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n[\n    {\n        \"name\": \"search_company\",\n        \"properties\": {\n            \"keyword\": \"医療\"\n        }\n    }\n]\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:29.317444+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:36:05.533779+00:00"
+  }
+}

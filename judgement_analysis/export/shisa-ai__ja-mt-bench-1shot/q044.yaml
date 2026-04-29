@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 44,
+  "category": null,
+  "question": {
+    "original": "大石さんには三人の年上の姉がいて、それぞれの姉には自分より一歳年上の兄が一人ずついます。大石さんには何人の兄がいるでしょうか？",
+    "translation_en": "**[Purpose: Question]**  \n\nŌishi has three older sisters, and each sister has one older brother (one year older than herself). How many older brothers does Ōishi have?  \n\n*(Note: The translation maintains the original structure and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "大石さんには**1人の兄**がいます。  \n\n理由：  \n- 大石さんの姉たちはそれぞれ自分より1歳年上の兄がいるため、姉の数（3人）と1人の兄で構成されます。  \n- つまり、姉の数（3人）に加えて大石さん自身を含めると、合計で4人ですが、そのうち1人は兄です。  \n\nしたがって、大石さんの兄は**1人**です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "説明：  \n回答として提示している「1人の兄」という結論自体は、このなぞなぞ的な問題の一般的な解釈としては正しいです。「三人の年上の姉がいて、それぞれの姉には自分より一歳年上の兄が一人ずついる」という条件は、3人それぞれに別々の兄がいるとは限らず、同じ兄を指していると解釈するのが自然であり、その兄は大石さんにとっても兄になるため、兄は1人と考えられます。\n\n一方で、理由の説明部分は論理展開がやや不明瞭で、「姉の数（3人）と1人の兄で構成されます」「合計で4人ですが、そのうち1人は兄です」といった記述は、なぜそれで「兄が1人」といえるのかが十分に整理されていません。もう少し「3人の姉が共有している同一人物の兄である」という点を明示すると、より分かりやすくなります。\n\n日本語自体は自然で、誤字や不適切な表現もなく、支離滅裂さやループもありません。ただし、説明の論理性・明瞭さの面でやや減点要素があります。\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:04.079832+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "大石さんには三人の年上の姉がいます。それぞれの姉には自分より一歳年上の兄が一人ずついるので、各姉に対して一人の兄が存在します。したがって、大石さんには3人の兄がいます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:04.871741+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "答えは **3人** です。\n\n**解説:**\n通常、この種のなぞなぞ（「3人の姉にはそれぞれ兄がいます」など）では、姉妹全員が「一人の兄」を共有しているため、答えが「1人」になることがよくあります。\n\nしかし、今回の問題には**「自分より一歳年上の」**という条件がついています。\n\n姉たちの年齢がそれぞれ異なると仮定した場合（一般的な兄弟構成）、それぞれの姉に対して「ちょうど1歳年上」になる兄の年齢もそれぞれ異なることになります。そのため、兄を共有することはできず、姉一人につき一人の兄が必要となります。\n\nしたがって、3人の姉 $\\times$ 1人の兄 ＝ **3人の兄** がいることになります。\n\n（※例外として、もし3人の姉が「三つ子」で全員同じ年齢であれば、兄は1人という可能性もありますが、文脈上は3人と考えるのが論理的です。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:16.921309+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:03.812214+00:00"
+  }
+}

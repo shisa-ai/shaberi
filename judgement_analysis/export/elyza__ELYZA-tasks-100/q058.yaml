@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 58,
+  "category": null,
+  "question": {
+    "original": "「必ず時間は守ります」葵と悠が手を繋いで歩き出すと、善吉は口調を荒げ「ふざけるな！娘をどうするつもりだ！」と捲し立てた。悠は「私は彼女を愛しています。私たちは結婚したんです。」と堂々と答えた。\n\nこの文章において、善吉は悠にとっての何ですか？",
+    "translation_en": "**[Purpose: question]**  \n\n*\"I will always keep my word,\"* Aoi and Yu said as they walked hand in hand, but Zenkichi raised his voice harshly, shouting, *\"Don’t play games! What do you intend to do with my daughter!\"* Yu replied confidently, *\"I love her. We are married.\"*  \n\n**In this passage, what is Zenkichi to Yu?**  \n\n*(Note: The translation preserves the original meaning and tone while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この文章において、善吉は悠にとって**反対者**または**障害となる存在**です。  \n\n善吉は葵（悠の妻）を「娘」と呼び、悠と葵の結婚を認めず、強い反発を示しています。これは悠にとって、結婚生活や未来に対する大きな障害となる可能性があります。  \n\nまた、善吉の口調が荒れていることから、彼が悠や葵に対して強い感情（不満や反感）を持っていることが伺えます。悠はこれに対し、「私は彼女を愛しています」と堂々と答えることで、自分の選択を主張していますが、これは善吉との対立をさらに深める可能性もあります。  \n\nしたがって、善吉は悠にとって**問題の原因となる人物**であり、彼との関係性が物語の展開に影響を与えるでしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は、善吉と悠の「血縁・親族としての関係性」ではなく、「反対者」「障害となる存在」といった立場的・心理的な関係に焦点を当てています。\n\nこの問題では、「善吉は悠にとっての何か」を家族関係として答えることが求められており、正解は「義父」または「義理の親」です。  \n採点基準でも、「善吉は悠にとっての敵」のような血縁ではない関係性を答えた場合は3点とされています。\n\n回答は物語状況の理解としては方向性が大きく外れてはいませんが、求められている「家族としての関係性」を示せていないため、基準に従い3点評価となります。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.404900+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この文章から推測すると、**善吉は悠の妻である葵の父親**である可能性が高いです。  \n\n理由：  \n1. 善吉が「娘をどうするつもりだ！」と激怒していることから、葵が善吉の娘であることが示唆されます。  \n2. 悠が「私たちは結婚したんです」と反論していることから、葵と悠は既に結婚しており、善吉はそれを認めていない（または知らなかった）様子です。  \n\nしたがって、善吉は**悠の義父（妻の父親）**にあたるでしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:09.800225+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "善吉は悠にとっての**義理の父（妻の父）**です。\n\n**理由：**\n1. 善吉が「娘をどうするつもりだ」と発言していることから、善吉は葵の父親であることがわかります。\n2. 悠が「私たちは結婚したんです」と発言していることから、悠は葵の夫であることがわかります。\n3. したがって、妻（葵）の父親である善吉は、悠から見て義理の父にあたります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:47.095754+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:30.400551+00:00"
+  }
+}

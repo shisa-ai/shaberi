@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 14,
+  "category": null,
+  "question": {
+    "original": "以下のデータを基に、2021年に最も利益を上げた会社とそのCEOの名前を特定してください:\na) 田中社長の下で運営される会社Aは、2021年に30億円の売上高と3億円の利益を報告しました。\nb) 鈴木社長が率いる会社Bは、同年に60億円の売上高と6億円の利益を記録しました。\nc) 佐藤社長の下で運営される会社Cは、2021年に20億円の売上高と7億円の利益を発表しました。\nd) 高橋社長が管理する会社Dは、2021年に300億円の売上高と21億円の利益を公表しました。\ne) 伊藤社長の下で運営される会社Eは、2021年に200億円の売上高と25億円の利益を報告しました。\nf) 山田社長が率いる会社Fは、同年に180億円の売上高と20億円の利益を記録しました。",
+    "translation_en": "[Purpose: question]  \n\nBased on the following data, identify the company that generated the highest profit in 2021 and the name of its CEO:  \n\na) Company A, under President Tanaka, reported ¥3 billion in revenue and ¥300 million in profit in 2021.  \nb) Company B, led by President Suzuki, recorded ¥6 billion in revenue and ¥600 million in profit that year.  \nc) Company C, under President Sato, announced ¥2 billion in revenue and ¥700 million in profit in 2021.  \nd) Company D, managed by President Takahashi, disclosed ¥30 billion in revenue and ¥2.1 billion in profit in 2021.  \ne) Company E, under President Ito, reported ¥20 billion in revenue and ¥2.5 billion in profit in 2021.  \nf) Company F, led by President Yamada, recorded ¥18 billion in revenue and ¥2 billion in profit that year.  \n\n(Translation preserves numerical values in yen for accuracy, as the original text uses Japanese currency notation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "2021年に最も利益を上げた会社とそのCEOの名前は以下の通りです。  \n\n**最も利益を上げた会社:** 会社E（伊藤社長）  \n**利益額:** 25億円  \n\n### 各社の利益比較:  \n1. 会社A（田中社長）: 3億円  \n2. 会社B（鈴木社長）: 6億円  \n3. 会社C（佐藤社長）: 7億円  \n4. 会社D（高橋社長）: 21億円  \n5. 会社F（山田社長）: 20億円  \n6. **会社E（伊藤社長）**: **25億円**  \n\nしたがって、2021年の利益で最も高いのは**伊藤社長率いる会社E**です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "回答は日本語として自然で読みやすく、質問に対して正しく答えています。  \n与えられたデータから各社の利益額を正しく抜き出し、比較したうえで「25億円の利益を上げた会社Eと伊藤社長」が最も利益を上げたと結論づけており、計算・論理ともに誤りはありません。  \n\nまた、各社の利益を一覧で示しており、ユーザーが確認しやすい構成になっています。過度な冗長さもなく、支離滅裂さや不自然な表現、反復・ループも見られません。  \n質問の要求（「最も利益を上げた会社とそのCEOの名前を特定」）に対して十分かつ的確に応答しているため、総合的な品質は高いと評価できます。\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:05.015769+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "2021年に最も利益を上げた会社は、**会社E** で、そのCEOは **伊藤社長** です。  \n\n利益額は **25億円** で、他の会社よりも高い利益を記録しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:04.644811+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提供されたデータに基づくと、2021年に最も利益を上げた会社とそのCEOは以下の通りです。\n\n*   **会社名:** 会社E\n*   **CEO（社長）:** 伊藤社長\n*   **利益:** 25億円\n\n**比較内訳:**\n1.  **会社E (伊藤社長): 25億円**\n2.  会社D (高橋社長): 21億円\n3.  会社F (山田社長): 20億円\n4.  会社C (佐藤社長): 7億円\n5.  会社B (鈴木社長): 6億円\n6.  会社A (田中社長): 3億円",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:01.454649+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:34.721232+00:00"
+  }
+}

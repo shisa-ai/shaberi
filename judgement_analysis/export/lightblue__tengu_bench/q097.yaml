@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 97,
+  "category": "建設",
+  "question": {
+    "original": "第1種低層住居専用地域で13mの住宅を建設することはできますか？",
+    "translation_en": "[Purpose: Question]  \n\nIs it possible to construct a 13-meter-tall house in a Type 1 Low-Rise Residential Zone?  \n\n(Translation preserves the original meaning, including the specific zoning designation and height restriction, while ensuring natural and clear English suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "第1種低層住居専用地域では絶対高さ制限が設けられており、その絶対高さは土地計画にもよりますが原則10mもしくは12mと定められているため13mの住宅は原則建設できないと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nIn the Type 1 Low-Rise Residential District, an absolute height restriction is in place, and while the specific height may vary depending on the land use plan, it is generally set at 10m or 12m. Therefore, a 13m-high house would generally not be permitted for construction.  \n\n*(Note: The translation maintains the original meaning, technical details, and formal tone suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 建設できないことに言及している:4点\n- 第一種低層住居専用地域で絶対高さ制限が設けられていることについて言及している:2点\n- 絶対高さ制限の具体的数値に言及している:2点\n- 説明が具体的でわかりやすい:1点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Mentions the inability to construct: **4 points**  \n- Mentions the absolute height restriction in a Type 1 Low-Rise Residential Zone: **2 points**  \n- Mentions the specific numerical value of the absolute height restriction: **2 points**  \n- Explanation is specific and easy to understand: **1 point**  \n- Uses natural Japanese: **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "日本の都市計画法では、第1種低層住居専用地域において、建物の高さには一定の制限があります。一般的に、第1種低層住居専用地域では、建物の高さは**7m以下**が原則とされています。ただし、例外規定として、以下のような場合には13mまで許可されることがあります。\n\n1. **容積率制限の緩和**：特定の条件を満たす場合に、高さ制限が緩和されることがあります。\n2. **地区計画**：地区計画によっては、高さ制限が異なる場合があります。\n3. **用途地域内での特別な措置**：地域によっては、高さ制限を超える建物を建設できる特別な措置が取られている場合があります。\n\nただし、これらの例外規定を利用するためには、以下の手続きが必要です。\n\n- **建築確認申請**：自治体に建築確認申請を行い、高さ制限の緩和に関する許可を得る必要があります。\n- **法的根拠の確認**：自治体の都市計画法や地区計画を確認し、具体的な条件や要件を満たしていることを確認する必要があります。\n\nしたがって、13mの住宅を建設するためには、自治体に詳細な情報提供と建築確認申請を行うことが必要です。また、地域によっては特別な措置が取られている可能性もあるため、その地域の具体的な規制や例外規定を事前に確認することが重要です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 建設できないことに言及している:0点  \n  - 「13mの住宅を建設するためには…必要です」と述べており、むしろ建設可能との方向で説明している。\n- 第一種低層住居専用地域で絶対高さ制限が設けられていることについて言及している:0点  \n  - 「一定の制限があります」とは述べるが、「絶対高さ制限」という趣旨・用語には触れていない。\n- 絶対高さ制限の具体的数値に言及している:0点  \n  - 「7m以下が原則」と誤った数値を挙げており、評価対象の10mまたは12mにも言及していない。\n- 説明が具体的でわかりやすい:1点  \n  - 手続きや例外について段落分けされ、文章としては具体的で読みやすい。\n- 自然な日本語である:1点  \n  - 文法や表現は自然で、日本語として問題ない。\n\n[計算式]\n0 + 0 + 0 + 1 + 1 = 2\n\n[点数]\n2\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:13.302558+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下に、都道府県名とそれぞれの都道府県庁所在地をまとめたCSV形式の表を示します。  \n\n```csv\n都道府県名,都道府県庁所在地\n北海道,札幌市\n青森県,青森市\n岩手県,盛岡市\n宮城県,仙台市\n秋田県,秋田市\n山形県,山形市\n福島県,福島市\n茨城県,水戸市\n栃木県,宇都宮市\n群馬県,前橋市\n埼玉県,さいたま市\n千葉県,千葉市\n東京都,新宿区（東京）\n神奈川県,横浜市\n新潟県,新潟市\n富山県,富山市\n石川県,金沢市\n福井県,福井市\n山梨県,甲府市\n長野県,長野市\n岐阜県,岐阜市\n静岡県,静岡市\n愛知県,名古屋市\n三重県,津市  \n滋賀縣、大津都市  \n京都府、京都都市  \n大阪府、大阪都市  \n兵庫縣、神戸都市  \n奈良縣、奈良都市  \n和歌山縣、和歌山都市  \n鳥取縣、鳥取都市  \n島根縣、松江都市  \n岡山縣、岡山市  \n広島縣、広島都市  \n山口縣、山口都市  \n徳島縣、徳島都市  \n香川縣、高松都市  \n愛媛縣、松山市  \n高知縣、高知都市  \n福岡縣、福岡都市  \n佐賀縣、佐賀都市  \n長崎縣、長崎都市  \n熊本縣、熊本都市（現：熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定（熊本地方）※2023年4月1日改称予定  \n\n大分县、大分城市 \n宫崎县、宫崎城市 \n鹿儿岛县、鹿儿岛城市 \n冲绳县、なはし  \n\n```  \n\n### 注意点:   \n- 熊本当地政府于 **2022/12/26** 宣布将于 **2025/04/01** 正式更名为「**くまもとしちほう**」（Kumamoto Regional Government），但截至目前尚未生效。如需最新信息，请参照官方公告。  \n\n- CSV格式为UTF-8编码，若导入Excel等软件时出现乱码，请选择正确的字符集。  \n\n如需调整格式或追加信息，请告知！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:18.513398+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "都道府県名と都道府県庁所在地をまとめたCSV形式のデータです。\n北から南（JISコード順）に並べています。\n\n```csv\n都道府県名,都道府県庁所在地\n北海道,札幌市\n青森県,青森市\n岩手県,盛岡市\n宮城県,仙台市\n秋田県,秋田市\n山形県,山形市\n福島県,福島市\n茨城県,水戸市\n栃木県,宇都宮市\n群馬県,前橋市\n埼玉県,さいたま市\n千葉県,千葉市\n東京都,新宿区\n神奈川県,横浜市\n新潟県,新潟市\n富山県,富山市\n石川県,金沢市\n福井県,福井市\n山梨県,甲府市\n長野県,長野市\n岐阜県,岐阜市\n静岡県,静岡市\n愛知県,名古屋市\n三重県,津市\n滋賀県,大津市\n京都府,京都市\n大阪府,大阪市\n兵庫県,神戸市\n奈良県,奈良市\n和歌山県,和歌山市\n鳥取県,鳥取市\n島根県,松江市\n岡山県,岡山市\n広島県,広島市\n山口県,山口市\n徳島県,徳島市\n香川県,高松市\n愛媛県,松山市\n高知県,高知市\n福岡県,福岡市\n佐賀県,佐賀市\n長崎県,長崎市\n熊本県,熊本市\n大分県,大分市\n宮崎県,宮崎市\n鹿児島県,鹿児島市\n沖縄県,那覇市\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:54.046277+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:09.103681+00:00"
+  }
+}

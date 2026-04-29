@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 32,
+  "category": "長い文書のClosed QA（千トークン以上）",
+  "question": {
+    "original": "以下の文章をもとに問題に答えよ\n### 文章\n1 調査の目的\n農家等における農薬の使用状況の調査点検及び農産物中の残留農薬の分析を行うことにより、農薬のリスク管理に係る施策の企画立案のための基礎資料等を得るとともに、農薬の適 正使用状況、農薬の使用頻度等を把握し、広く国民に情報提供することにより農薬に係る正しい理解を促し、調査点検結果等に基づく所要の指導を通じて、農薬の不適正使用の防止等 を図り、もって安全な農産物の生産に資する。\n2 農薬の使用状況調査\n(1)調査方法\n令和4年度の調査は、穀類、野菜類、果樹類又は茶を生産している農家 469 戸を対象とした。独立行政法人農林水産消費安全技術センター(FAMIC)が農薬使用状況等記入簿に基づき、使用された農薬の適用農作物、使用量又は希釈倍数、使用時期及び使用回数の調査を行った。\n(注)農薬の使用状況を生産者団体等の独自の作成している帳簿等の様式に記入している農家 については、当該様式に記載された内容に基づき、調査を行った。\n(2)調査結果(概況)(別表1)\n調査対象とした 469 戸の農産物販売農家のうち、468 戸の農家が農薬を適正に使用している一方で、1 戸の農家で、使用時期が適切でなかった事例が確認された。\n3 農薬の残留状況調査\n(1)調査方法\nア 試料検体数\n上記2の農薬の使用状況調査を実施した農家が生産している農産物のべ 10 品目(米穀、だいこん、ごぼう、チンゲンサイ、しゅんぎく、ねぎ、なす、えだまめ、ぶどう、茶)を対象とし、合計 469 検体とした。\nイ 試料採取方法\n上記2の農薬の使用状況調査を実施した農家から、穀類は、無作為に採取して合成縮 分の上 1 kg 以上となるよう、茶は、同様にして 0.2 kg 以上となるよう、その他の農産物 は、無作為に 5 個以上かつ合計重量が 2 kg 以上となるよう採取した。\nウ 分析方法\n(ア)分析対象農薬\n調査対象となる各農産物に使用された農薬のうち、分析法が確立している農薬を選定した。\n(イ)検査部位\n食品、添加物等の規格基準(昭和 34 年 12 月 28 日付け厚生省告示第 370 号) 第 1 食品 A の部 食品一般の成分規格において定める部位を検査部位とした。 \n(ウ)分析法\n「食品に残留する農薬、飼料添加物又は動物用医薬品の成分である物質の試験法について」(平成 17 年1月 24 日付け食安発第 0124001 号厚生労働省医薬食品局食品安全部 長通知)の別添の第2章(一斉試験法)及び第3章(個別試験法)に定められた試験 法や精製溶媒等に一部修正を加えた分析法を用いた。なお、修正を加えた分析法につ いては、「食品中に残留する農薬等に関する試験法の妥当性評価ガイドラインについ て」(平成 19 年 11 月 15 日付け食安発第 1115001 号厚生労働省医薬食品局食品安全部 長通知)に従い、妥当性を確認した。\n(エ)定量限界 \n適切な精確さをもって定量できる(具体的な濃度が決められる)濃度の限界値である\n定量限界は、農薬ごとに残留基準値の 10 分の 1 以下となるよう設定した(ただし、基 準値が一律基準 0.01 ppm とその付近のものについては、基準値以下となるように設定) (別表2)。\n(オ)妥当性確認\n代表的な作物と農薬の組合せで添加回収率が適切な範囲(70~120%)にあることを確認した。\n### 問題\n文章によるとどのような結果が得られたか答えよ。",
+    "translation_en": "**Results Obtained from the Survey:**  \n\n1. **Pesticide Use Status Survey:**  \n   - A total of 469 farms producing grains, vegetables, fruits, or tea were surveyed.  \n   - The survey, conducted by FAMIC, collected data on the types of pesticides used, application rates, dilution ratios, application periods, and frequency of use.  \n   - Among the 469 farms, 468 used pesticides appropriately, while 1 farm had an inappropriate application period.  \n\n2. **Pesticide Residue Status Survey:**  \n   - Samples from 10 agricultural products (rice, daikon radish, burdock root, Chinese cabbage, chrysanthemum, scallions, eggplant, green beans, grapes, and tea) were collected from the surveyed farms, totaling 469 samples.  \n   - Sampling methods varied by product (e.g., grains were randomly collected to weigh ≥1 kg after drying, tea ≥0.2 kg, and other products ≥5 units or 2 kg).  \n   - Analyzed pesticides were selected based on established methods, with testing conducted on specified food parts (e.g., edible portions).  \n   - Quantification limits were set at ≤1/10 of the residue standard values (or ≤standard value for ≤0.01 ppm standards).  \n   - Recovery rates for representative crop-pesticide combinations were confirmed to be within 70–120%.  \n\n**Summary:**  \nThe survey confirmed that most farms used pesticides correctly, with only one instance of improper timing. Residue analysis was conducted on 469 samples, with quantification limits and recovery rates validated according to regulatory guidelines."
+  },
+  "answer": {
+    "gold_original": "文章によると、以下のような結果が得られました：\n\n1. 農薬の使用状況調査では、対象とした穀類、野菜類、果樹類又は茶を生産している469戸の農家のうち、468戸が農薬を適正に使用しているとされました。一方で、1戸で使用時期が適切ではなかった事例が確認されました。\n\n2. 農薬の残留状況調査では、穀類、だいこん、ごぼう、チンゲンサイ、しゅんぎく、ねぎ、なす、えだまめ、ぶどう、茶といった合計10品目、合計469検体の農産物について検査が行われました。この調査では、分析法が確立している農薬について、食品に定められた部位を対象に分析が行われました。分析方法には、一斉試験法や個別試験法が用いられ、一部には修正が加えられていましたが、その妥当性は確認されています。定量限界は農薬ごとに残留基準値の10分の1以下に設定され、基準値が一律基準0.01 ppmとその付近のものについては基準値以下に設定されました。また、妥当性確認では、代表的な作物と農薬の組合せで添加回収率が70~120%の適切な範囲にあることが確認されました。",
+    "gold_backtranslation_en": "According to the text, the following results were obtained:  \n\n1. In the survey of pesticide usage, out of 469 farms producing grains, vegetables, fruits, or tea, 468 were found to be using pesticides appropriately. However, one farm was identified as having used pesticides at an inappropriate time.  \n\n2. In the pesticide residue survey, a total of 469 samples from 10 agricultural products (grains, daikon radish, burdock root, Chinese cabbage, chrysanthemum, scallions, eggplant, snap beans, grapes, and tea) were tested. The analysis focused on pesticides with established methods, targeting food parts specified by regulations. Both simultaneous and individual testing methods were used, with some modifications, but their validity was confirmed. Quantitation limits were set at or below one-tenth of the residue standard for each pesticide, and for standards uniformly set at 0.01 ppm or nearby, limits were set below the standard. Validity checks confirmed that recovery rates for representative crop-pesticide combinations were within the acceptable range of 70–120%.  \n\n*(Note: The translation maintains technical accuracy and natural phrasing suitable for evaluation documentation, preserving all key details without adding commentary.)*"
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 農薬の使用状況調査の概要と結果:3点\n  - 農薬の残留状況調査の概要と結果:3点\n  - 調査結果を正しい数値を元に示している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Overview and results of the pesticide usage survey: **3 points**  \n  - Overview and results of the pesticide residue survey: **3 points**  \n  - Presents survey results based on accurate numerical data: **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "文章によると、以下の結果が得られました。  \n\n1. **農薬の使用状況調査**  \n   - 469戸の農家を対象に調査が実施され、468戸が農薬を適正に使用していたが、1戸で使用時期が適切でなかった事例が確認された。  \n\n2. **農薬の残留状況調査**  \n   - 10種類の農産物（米穀、だいこん、ごぼうなど）から合計469検体を採取し、分析した結果、**全ての検体で残留農薬基準値を下回っていた**。  \n   - 定量限界は各農薬ごとに残留基準値の10分の1以下（一部基準値0.01ppm付近は基準値以下）に設定され、妥当性確認も実施された。  \n\n3. **総括的な成果**  \n   - 農薬の適正使用状況や残留状況を把握し、安全な農産物生産に貢献するためのデータ収集に成功した。  \n\nこの調査により、農薬管理の現状とリスク管理策の必要性が明らかになりました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 農薬の使用状況調査の概要と結果:3点  \n  - 対象469戸、468戸が適正使用、1戸で使用時期不適切と正しく記述している。\n- 農薬の残留状況調査の概要と結果:1点  \n  - 10品目・469検体など概要は書かれているが、「全ての検体で残留農薬基準値を下回っていた」と本文にない結果を捏造しているため、大きく減点。\n- 調査結果を正しい数値を元に示している:1点  \n  - 戸数・検体数・品目数など数値は正しいが、存在しない結果（基準値を下回った）を付け加えているため満点不可。\n- 自然な日本語である:1点  \n  - 文体は自然で読みやすい。\n- 要約として適切な短さである:1点  \n  - 必要な情報を比較的簡潔にまとめている。\n\n[計算式]\n使用状況調査 3 + 残留状況調査 1 + 数値 1 + 日本語 1 + 長さ 1 = 7\n\n[点数]\n7\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.504261+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "文章によると、以下の結果が得られました。  \n\n1. **農薬の使用状況調査**  \n   - 調査対象469戸のうち、468戸が農薬を適正に使用していた。  \n   - 1戸で「使用時期が適切でなかった」事例が確認された。  \n\n2. **農薬の残留状況調査**  \n   - 試料検体数：469検体（10品目）  \n   - 分析方法：確立された分析法を用いて残留農薬を調査し、定量限界は農薬ごとに残留基準値の10分の1以下に設定。  \n   - 妥当性確認：代表的な作物と農薬の組み合わせで添加回収率が70～120%と適切な範囲であった。  \n\n**総合的な結果**：ほとんどの農家で適正な農薬使用が確認され、残留分析も妥当性を満たす方法で実施された。ただし、1件の不適切な使用事例が指摘されている。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:35.129802+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "文章によると、**農薬の使用状況調査**において以下の結果が得られました。\n\n*   調査対象とした469戸の農産物販売農家のうち、**468戸は農薬を適正に使用**していました。\n*   一方で、**1戸の農家において、使用時期が適切でなかった事例**が確認されました。\n\n※なお、文章には「3 農薬の残留状況調査」の調査方法等は記載されていますが、その分析結果自体は記載されていません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:33.943909+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:37:45.418030+00:00"
+  }
+}

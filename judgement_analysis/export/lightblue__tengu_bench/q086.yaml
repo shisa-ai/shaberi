@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 86,
+  "category": "ダジャレ",
+  "question": {
+    "original": "以下の文はダジャレですか？\n隣町に泊まった友達",
+    "translation_en": "**[Purpose: question]**  \n\nIs the following sentence a pun?  \n*\"A friend stayed in the next town.\"*  \n\n(If the original Japanese text contains a pun, the translation should reflect that. However, the given sentence appears literal. If the pun is in the original Japanese, please provide the full context for accurate translation.)  \n\n*(Note: Without the original Japanese, I assumed the question is about the English sentence. If the pun is in Japanese, please provide the full text for proper translation.)*"
+  },
+  "answer": {
+    "gold_original": "いいえ、ダジャレではありません。この文をひらがなにすると「となりまちにとまったともだち」となりますが、この文の中にはダジャレと判断できる同じひらがなの並びを見つけることはできません。",
+    "gold_backtranslation_en": "No, it’s not a pun. When written in hiragana, the sentence becomes \"となりまちにとまったともだち,\" but there is no sequence of identical hiragana characters within the sentence that would allow it to be judged as a pun.  \n\n*(Note: The translation preserves the original meaning, including the explanation of why the sentence is not considered a pun, while maintaining natural English phrasing suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- ダジャレではないことを示している: 6点\n- 音に注目してダジャレではない理由を示している:3点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Demonstrates that it is not a pun (6 points)**  \n- **Highlights the sound and explains why it is not a pun (3 points)**  \n- **Is natural Japanese (1 point)**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この文「隣町に泊まった友達」は、ダジャレとは言えません。ダジャレは、言葉遊びや音の類似性を利用して作られる言葉遊びの一種で、通常は意味のある言葉を組み合わせて新しい意味や効果を生み出します。この文は日常的な会話や文章で使われる自然な表現であり、ダジャレのような意図的な言葉遊びの要素は含まれていません。  \n\nもしダジャレを探している場合は、例えば「**お腹が減ったから、お腹に泊まった**」（お腹が空いて困る様子を擬人化したダジャレ）のように、音や意味の掛け合わせが意図的に使われているものが該当します。  \n\n必要に応じて、別の例や解説も提供できますのでお知らせください！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- ダジャレではないことを示している: 6点  \n  - 「ダジャレとは言えません」と明確に否定している。\n- 音に注目してダジャレではない理由を示している: 0点  \n  - ダジャレの一般的説明はあるが、「となりまちにとまったともだち」の音や語の重なりを具体的に検討していない。\n- 自然な日本語である: 1点  \n  - 文体は自然で読みやすい日本語になっている。\n\n[計算式]\n6 + 0 + 1 = 7\n\n[点数]\n7\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.505999+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "「きのこの山」と「たけのこの里」はどちらも人気のあるお菓子で、味の好みは人それぞれです。  \n\n- **「きのこの山」**：チョコレート風味で、柔らかくて甘いのが特徴。チョコレート好きにはたまらない一品です。  \n- **「たけのこの里」**：抹茶風味で、ほんのり苦みと甘さが絶妙なバランス。抹茶好きやちょっと大人な味を好む人に人気です。  \n\n### どちらが美味しいか？  \n- **甘いもの・チョコレート派** → 「きのこの山」  \n- **抹茶・ほんのり苦み派** → 「たけのこの里」  \n\n両方試してみて、自分好みを見つけてみるのが一番です！ また、季節や気分によって好みが変わる人もいるので、両方楽しむのも良いかもしれません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:42.270201+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "「きのこの山」と「たけのこの里」のどちらが美味しいかという問いは、日本の菓子文化における最大の論争の一つであり、**「きのこたけのこ戦争」**と呼ばれるほど意見が分かれるテーマです。\n\n味覚は主観的なものであるため、どちらが客観的に「美味しい」と断定することはできませんが、それぞれの特徴や世間の評価を公平に比較することはできます。\n\nそれぞれの魅力と違いをまとめましたので、あなたの好みに合うのがどちらか判断する参考にしてください。\n\n### 1. たけのこの里（クッキー生地）\n一般的に、**たけのこの里の方が人気が高い傾向**にあります。明治が行った過去の「総選挙」でも、たけのこの里が勝利することが多いです。\n\n*   **特徴:** サクサクとした**クッキー生地**が使われています。\n*   **魅力:** クッキーの甘みとチョコレートが口の中で一体となりやすく、スイーツとしての完成度が高いと評価されることが多いです。口溶けが良く、ホロホロとした食感が楽しめます。\n*   **こんな人におすすめ:** クッキーやビスケットが好きで、チョコとの一体感を重視する人。\n\n### 2. きのこの山（クラッカー生地）\nたけのこの里に比べると少数派になることが多いですが、熱狂的なファンが多く存在します。\n\n*   **特徴:** カリッとした**クラッカー（プレッツェル）生地**が使われています。\n*   **魅力:** クラッカーの塩気とチョコレートの甘さのバランスが絶妙です。また、チョコの部分と軸の部分がはっきり分かれているため、チョコの存在感を強く感じられます。「チョコだけ食べる」「軸を持って手が汚れない」といった食べやすさや楽しみ方も魅力です。\n*   **こんな人におすすめ:** カリカリした食感が好きな人、チョコとスナックの「あまじょっぱい」対比を楽しみたい人。\n\n### 結論：どちらが美味しいか？\n\n*   **濃厚な甘さと一体感**を求めるなら **「たけのこの里」**\n*   **カリッとした食感とチョコの存在感**を求めるなら **「きのこの山」**\n\n世論調査や売上では「たけのこの里」が優勢であることが多いですが、チョコレート自体の量は「きのこの山」の方がわずかに多いというデータもあります。\n\n最終的には、あなたが「クッキー派」か「クラッカー派」かによって答えが決まると言えるでしょう。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:56.078838+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:33.271239+00:00"
+  }
+}

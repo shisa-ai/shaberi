@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 96,
+  "category": "建設",
+  "question": {
+    "original": "川崎市において河川から25m離れた位置に新たに建物を建築する場合河川管理者の許可は必要ですか？",
+    "translation_en": "**[Purpose: Question]**  \n\nIs permission from the river administrator required if a new building is constructed 25 meters away from a river in Kawasaki City?  \n\n*(Note: The translation maintains the original meaning, structure, and key details while ensuring natural English phrasing suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "川崎市では新たな建物を建築する場合に河川管理者の許可を必要とする区域である河川保全区域を河川から20mに設定しています。そのため川崎市において河川から25m離れた位置に新たな建物を建築する場合河川管理者の許可は必要ではないと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nIn Kawasaki City, the river conservation area, where permission from the river administrator is required for new construction, is set at 20 meters from the riverbank. Therefore, in Kawasaki City, it is considered that permission from the river administrator is not required for constructing a new building 25 meters away from the river.  \n\n*(Note: The translation maintains the original meaning and details while ensuring natural and clear English suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 河川管理者の許可が必要ないことに言及している:4点\n- 河川管理者の許可の必要性の有無が河川保存区域かどうかで決まることに言及している:2点\n- 川崎市の河川保存区域が河川から20mであることに言及している:2点\n- 説明が具体的でわかりやすい:1点\n- 自然な日本語である:1点\n",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Mentions that no permission from the river administrator is required: 4 points**  \n- **States that the need for permission from the river administrator depends on whether it is a river conservation area: 2 points**  \n- **Specifies that Kawasaki City’s river conservation area extends 20m from the river: 2 points**  \n- **Explanation is specific and easy to understand: 1 point**  \n- **Written in natural Japanese: 1 point**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "川崎市において河川から25m離れた位置に新たに建物を建築する場合、河川管理者の許可が必要かどうかは、以下の要素によって判断されます。  \n\n### **1. 河川の種類と管理者**  \n- **国有河川（例：多摩川）**：国土交通省または地方自治体（川崎市）の河川管理者が許可を必要とする場合があります。25m以上離れている場合でも、河川の規模や用途によっては許可が必要です。  \n- **市町村所有の河川**：川崎市が管理する場合は、市の条例や河川法に基づき許可が必要となる可能性があります。  \n\n### **2. 建物の用途と規模**  \n- **高さや広さが大きい建物**（例：高層マンションや工場）では、景観や水害防止の観点から許可が必要になることが多いです。  \n- **低層住宅など小規模な建物**でも、河川近くに建設される場合は、地盤や水害対策に関する確認が必要になる場合があります。  \n\n### **3. 川崎市の条例・ガイドライン**  \n- 川崎市には「河川敷利用に関する条例」などがあり、河川からの距離だけでなく、建物の構造や用途によって規制がある場合があります。  \n\n### **結論**  \n25m以上離れているとしても、以下のような場合は許可が必要です：  \n- 河川管理者（国または市）による規制がある場合。  \n- 建物の用途や規模によっては追加で確認が必要な場合。  \n\n詳細は【**国土交通省・地方自治体（川崎市）の河川管理部門に問い合わせる**】のが確実です。また、建築前に地元の建築士や行政書士に相談することをおすすめします。  \n\n（※情報は2024年5月時点で正確ですが、法改正により変更される可能性があるため最新情報を確認してください）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 河川管理者の許可が必要ないことに言及している:0点  \n  - 「必要ない」とは言わず、「必要な場合がある」としており正解と逆の結論。\n- 河川管理者の許可の必要性の有無が河川保存区域かどうかで決まることに言及している:0点  \n  - 河川保全区域・保存区域という概念に触れていない。\n- 川崎市の河川保存区域が河川から20mであることに言及している:0点  \n  - 20m という具体的な距離の記載なし。\n- 説明が具体的でわかりやすい:1点  \n  - 誤った方向性ではあるが、構成は整理されており日本語としては読みやすい。\n- 自然な日本語である:1点  \n  - 文法・表現ともに自然な日本語。\n\n[計算式]\n0 + 0 + 0 + 1 + 1 = 2\n\n[点数]\n2\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:15.591421+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下は、Mermaid記法を使用して円グラフ（Pie Chart）で表現した調査結果です。Mermaidの`pie`チャートを使用して、各選択肢の割合を視覚化しています。\n\n```mermaid\npie title \"あなたは現在の首相を支持しますか\"\n    \"はい\" : 45.6\n    \"いいえ\" : 30.4\n    \"どちらでもない\" : 24.0\n```\n\nこのコードをMermaid対応の環境（例: Markdownファイル、VS Code拡張機能など）で表示すると、円グラフが描画されます。各項目のラベルと割合が自動的に計算・表示されます。\n\n### 補足説明:\n- `pie title`で円グラフのタイトルを設定\n- 各項目は `\"ラベル\" : 割合` の形式で記述（単位は%）\n- 割合の合計が100%になるように自動調整されるため、手動での計算は不要です\n\n必要に応じて、色やスタイルをカスタマイズすることも可能です。例えば特定の項目に色を指定する場合は以下のようにします：\n\n```mermaid\npie title \"あなたは現在の首相を支持しますか\"\n    \"はい\" : 45.6, color=\"#007BFF\"\n    \"いいえ\" : 30.4, color=\"#DC3545\"\n    \"どちらでもない\" : 24.0, color=\"#17A2B8\"\n```\n\nこのようにして、より見やすい円グラフを作成できます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:52.833577+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた調査結果に基づいたMermaid記法の円グラフは以下の通りです。\n\n```mermaid\npie title あなたは現在の首相を支持しますか\n    \"はい\" : 45.6\n    \"いいえ\" : 30.4\n    \"どちらでもない\" : 24.0\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:38.300426+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:06.003316+00:00"
+  }
+}

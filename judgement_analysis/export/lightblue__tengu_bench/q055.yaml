@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 55,
+  "category": "翻訳",
+  "question": {
+    "original": "When testing our enhanced architecture on the\nMQAR task, we found that ReBased surpasses the\noriginal Based model across a variety of contexts\nand model sizes. Additionally, after training with\nthe Pile dataset (Gao et al., 2020), we observed that\nReBased performs better than its predecessor at\nIn-Context Learning and excels at modeling associative dependencies measured through improved\nperplexity metrics.を翻訳してください",
+    "translation_en": "**[Purpose: question]**  \n\nWhen testing our enhanced architecture on the **MQAR task**, we found that **ReBased** surpasses the original **Based** model across a variety of contexts and model sizes. Additionally, after training with the **Pile dataset (Gao et al., 2020)**, we observed that **ReBased** performs better than its predecessor in **In-Context Learning** and excels at modeling associative dependencies, as evidenced by improved **perplexity metrics**.  \n\n*(Note: The translation maintains the original meaning, technical terms, and structure while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "MQARタスクで強化されたアーキテクチャをテストした結果、様々なコンテキストやモデルサイズにおいて、ReBasedが元のBasedモデルを上回ることがわかりました。さらに、Pileデータセット（Gao et al., 2020）を使ってトレーニングした後、ReBasedは先行モデルよりもインコンテキスト学習で優れており、改善されたパープレキシティ指標を通じて、関連依存性のモデリングにおいても優れていることが観察されました。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nResults from testing the enhanced architecture on the MQAR task showed that ReBased outperformed the original Based model across various contexts and model sizes. Additionally, after training on the Pile dataset (Gao et al., 2020), ReBased demonstrated superior in-context learning compared to prior models and exhibited improved performance in modeling related dependencies, as evidenced by enhanced perplexity metrics.  \n\n*(Translation preserves the original meaning, technical details, and structure while ensuring natural English suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 原文の内容を過不足なく訳すことができている:4点\n- 引用文を英語のまま残している:2点\n- 必要に応じて適切にカタカナや英字を用いて訳している:2点\n- 自然な日本語である:2点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Accurately translates the original content without omission or excess:** 4 points  \n- **Retains quoted text in English as is:** 2 points  \n- **Uses katakana or English letters appropriately when necessary:** 2 points  \n- **Natural and fluent Japanese:** 2 points  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural phrasing in English.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下は、与えられた英文の日本語訳です。技術的な内容を正確に伝えるよう、専門用語も適切に処理しています。  \n\n---  \n\n「MQARタスクで改良されたアーキテクチャをテストしたところ、ReBasedはさまざまな文脈やモデルサイズにおいて元のBasedモデルを上回る性能を示しました。さらに、Pileデータセット（Gao et al., 2020）で学習した結果、ReBasedはIn-Context Learningにおいて優位性を発揮し、関連性の高い依存関係を捉える能力が向上していることを示す改善されたパープレキシティ指標からも裏付けられました。」  \n\n---  \n\n### 翻訳のポイント  \n1. **「ReBased surpasses the original Based model」** → 「ReBasedは元のBasedモデルを上回る」  \n   - 「surpasses」を「上回る」と自然な日本語表現に変換。  \n2. **「In-Context Learning and excels at modeling associative dependencies」** → 「In-Context Learningにおいて優位性を発揮し、関連性の高い依存関係を捉える能力が向上」  \n   - 「excels at modeling」を「捉える能力が向上」と具体化し、技術的なニュアンスを明確化。  \n3. **「improved perplexity metrics」** → 「改善されたパープレキシティ指標」  \n   - 専門用語として「パープレキシティ」をそのまま使用し、「改善された」と補足。  \n\n必要に応じてさらに調整可能です。例えば、特定の分野（NLPなど）に特化した表現が必要であればお知らせください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 原文の内容を過不足なく訳すことができている:4点  \n  - MQARタスク、強化されたアーキテクチャ、様々なコンテキストとモデルサイズ、Pileデータセットでの学習後の性能向上、In-Context Learning、associative dependencies、perplexity指標など、内容はほぼ漏れなく訳されている。\n- 引用文を英語のまま残している:2点  \n  - 「MQAR」「ReBased」「Based」「Pile」「Gao et al., 2020」「In-Context Learning」「perplexity」など、必要な英語表記を保持している。\n- 必要に応じて適切にカタカナや英字を用いて訳している:2点  \n  - 「パープレキシティ指標」「In-Context Learning」など、専門用語をカタカナ・英字で適切に表記している。\n- 自然な日本語である:2点  \n  - 文体は自然で読みやすく、不自然な箇所はない。\n\n[計算式]\n4 + 2 + 2 + 2 = 10\n\n[点数]\n10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.313805+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "MQARタスクにおいて、強化されたアーキテクチャを評価した結果、ReBasedモデルが様々なコンテキストやモデルのサイズにおいて、元のBasedモデルを上回る性能を示しました。さらに、Pileデータセット（Gao et al., 2020）で学習を行った後、ReBasedは前身モデルよりもインコンテキスト学習において優れた性能を発揮し、ペルプルティティ指標の改善を通じて測定される連想依存関係のモデリングにおいても優れていることが確認されました。  \n\n（注：\"In-Context Learning\"は「インコンテキスト学習」または「文脈内学習」と訳すことも可能です。技術文書では前者が一般的ですが、文脈に応じて調整してください。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:30.729703+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "以下に翻訳を提示します。文脈に合わせて、学術的・技術的なニュアンスで訳しています。\n\n**翻訳:**\n「MQARタスクにおいて、我々の改良されたアーキテクチャを検証した結果、ReBasedは様々なコンテキストやモデルサイズにおいて、元のBasedモデルを上回ることが判明しました。さらに、Pileデータセット（Gao et al., 2020）を用いて学習させたところ、ReBasedは前身モデル（Based）と比較してインコンテキスト学習（In-Context Learning）において優れた性能を発揮し、パープレキシティ指標の改善によって示されるように、連想的な依存関係のモデリングにも長けていることが確認されました。」\n\n---\n**用語の補足:**\n*   **MQAR task:** Multi-Query Associative Recall task（多重クエリ連想想起タスク）。\n*   **In-Context Learning:** 文脈内学習（インコンテキスト学習）。\n*   **Perplexity:** パープレキシティ（言語モデルの性能評価指標の一つ）。\n*   **Associative dependencies:** 連想的な依存関係（ある要素が別の要素とどのように関連しているかという関係性）。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:35.123403+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:54.087694+00:00"
+  }
+}

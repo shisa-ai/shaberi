@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 89,
+  "category": "ダジャレ",
+  "question": {
+    "original": "以下の文はダジャレですか？\n枕が吹っ飛んだ",
+    "translation_en": "**[Purpose: question]**  \n\nIs the following sentence a pun?  \n*\"The pillow flew away.\"*  \n\n*(Note: The original Japanese \"枕が吹っ飛んだ\" (makura ga futtobotta) is a play on words, as \"枕\" (makura) means \"pillow\" but also sounds like \"枕詞\" (makurakotoba), a type of poetic epithet, and \"吹っ飛んだ\" (futtobotta) means \"flew away\" but can also imply \"was blown away\" or \"vanished.\" The English translation maintains the literal meaning while acknowledging the potential for wordplay.)*  \n\n*(Output only the translation as requested, without commentary.)*  \n\n---  \n**Final Translation:**  \n*\"Is the following sentence a pun? 'The pillow flew away.'\"*"
+  },
+  "answer": {
+    "gold_original": "いいえ、ダジャレではありません。この文をひらがなにすると「まくらがふっとんだ」となりますが、この文の中にはダジャレと判断できる同じひらがなの並びを見つけることはできません。",
+    "gold_backtranslation_en": "No, it’s not a pun. When written in hiragana, the sentence becomes \"makuraga futonda,\" but there is no sequence of identical hiragana characters within the sentence that would allow it to be judged as a pun.  \n\n*(Note: The translation preserves the original meaning, including the explanation of why the sentence is not considered a pun, while maintaining natural English phrasing suitable for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- ダジャレではないことを示している: 6点\n- 音に注目してダジャレではない理由を示している:3点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Demonstrates that it is not a pun (6 points)**  \n- **Highlights the sound and explains why it is not a pun (3 points)**  \n- **Is natural Japanese (1 point)**  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "「枕が吹っ飛んだ」は、文字通りには「枕が飛んでいった」という意味ですが、ダジャレ（言葉遊び）としての意図は薄いです。ただし、日本語のダジャレは多様で、文脈や解釈によっては以下のような可能性も考えられます。  \n\n1. **「枕（くし）」と「吹っ飛ぶ」の音の類似性**  \n   - 「くし」と「吹っ飛ぶ」を組み合わせた言葉遊びとして捉えることも可能ですが、一般的なダジャレとしては弱いです。  \n\n2. **状況による解釈**  \n   - 例えば、「寝ている時に枕が吹っ飛んだ」という状況を想像すると、驚きや滑稽さを表現するダジャレに近づくかもしれません。  \n\n結論としては、**標準的なダジャレとは言えませんが**、状況や解釈によっては軽い言葉遊びとして楽しむこともできます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- ダジャレではないことを示している: 3点  \n  - 「標準的なダジャレとは言えませんが」としつつ、「言えません」と否定はしているが、「軽い言葉遊びとして楽しむこともできる」とも述べており、ダジャレではないと明確に言い切れていないため減点。\n- 音に注目してダジャレではない理由を示している: 0点  \n  - 「まくらがふっとんだ」の音や同音・類音の不在に基づく説明がなく、「枕（くし）」など意味不明な説明になっており、音に基づく非ダジャレ性の説明になっていない。\n- 自然な日本語である: 1点  \n  - 日本語としては自然で、文法的にも問題ない。\n\n[計算式]\n3 + 0 + 1 = 4\n\n[点数]\n4\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.929583+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "海賊をテーマにした国民的な漫画といえば、間違いなく『ONE PIECE』ですね！  \n\n**『ONE PIECE』**は尾田栄一郎が描く超人気漫画で、1997年から連載中。世界中で大ヒットし、映画・アニメ・ゲームなど様々なメディア展開もされています。  \n\n### 『ONE PIECE』の魅力  \n- **壮大な冒険譚**：主人公ルフィをはじめとする「麦わらの一味」が「ひとつなぎの大秘宝（ワンピース）」を求めてグランドラインを冒険する物語。  \n- **個性豊かなキャラクター**：多彩な能力（悪魔の実）を持つ仲間たちや敵役が登場し、友情・夢・正義などを描く。  \n- **海賊ファンタジー世界観**：海軍や七武海、四皇といった勢力が入り乱れる独特の設定が人気。  \n\n日本だけでなく海外でも翻訳され、世界的なファンを持つ国民的作品です。他にも『コブラ』や『サウスパーク』（アニメ版）など海賊漫画はありますが、『ONE PIECE』ほどの影響力と知名度はありません。  \n\n何か特定の要素（例：古典的な作品希望など）があれば、その点も考慮してお答えできますよ！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:49.283133+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "海賊をテーマにした国民的な漫画といえば、間違いなく**『ONE PIECE』（ワンピース）**です。\n\n**基本情報:**\n*   **作者:** 尾田栄一郎\n*   **連載:** 『週刊少年ジャンプ』（集英社）にて1997年から連載中\n*   **概要:** 主人公のモンキー・D・ルフィが「海賊王」になることを夢見て、仲間（麦わらの一味）と共に「ひとつなぎの大秘宝（ワンピース）」を探す海洋冒険ロマンです。\n\n**国民的と言われる理由:**\n1.  **世界一の発行部数:** 全世界でのコミックス累計発行部数は5億部を突破しており、「最も多く発行された単一作者によるコミックシリーズ」としてギネス世界記録に認定されています。\n2.  **幅広いファン層:** 連載が25年以上続いているため、子供だけでなく、連載開始当初からの大人のファンまで、親子数世代にわたって愛されています。\n3.  **社会現象:** アニメ、映画の大ヒットはもちろん、歌舞伎化やNetflixでの実写ドラマ化など、漫画の枠を超えて日本を代表するコンテンツとなっています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:42.160368+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:45.924878+00:00"
+  }
+}

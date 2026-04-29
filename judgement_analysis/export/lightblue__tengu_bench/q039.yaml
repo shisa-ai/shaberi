@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 39,
+  "category": "敬語",
+  "question": {
+    "original": "以下の会話をフランクな文体に直してください。\n### 会話\n◆鈴木均　委員　　中小企業生産性向上・設備投資促進補助金についてですけれども、川村委員からもお尋ねがありましたが、私からは、まず最初に２点、この補助の対象になる事業者の数はどのぐらいを想定しているのかということと、それから、予算22億円計上していますが、この予算の内訳はどんなものなのかというのをお尋ねします。\n\n○委員長（田中幸太郎君）　田中経済政策課長。\n\n◎説明者（田中経済政策課長）　まず、対象事業者の数でございますけれども、予算額22億円のうち、補助金の原資については20億円というふうに計上しておりまして、上限額500万円で仮に申請があった場合には400件程度ということで見込んでございます。予算額の内訳につきましては、22億円のうち補助金の原資が20億円、それから業務委託費につきまして２億円ということで計上しているところでございます。\n　以上でございます。\n\n○委員長（田中幸太郎君）　鈴木委員。\n\n◆鈴木均　委員　　まず、この対象となる件数400件というお話ですが、これを大幅に超えて応募があった場合はどういうふうにしようと考えていらっしゃいますか。\n\n○委員長（田中幸太郎君）　田中経済政策課長。\n\n◎説明者（田中経済政策課長）　現時点では、この補助金につきましては予算の範囲内での補助ということを考えてございます。件数につきましては、当然上限額で皆さん申請してくるかどうかはちょっと分かりませんけれども、その場合にはより多くの補助事業者を採択できるということにはなるかと思います。\n　以上でございます。\n\n○委員長（田中幸太郎君）　鈴木委員。\n\n◆鈴木均　委員　　分かりました。\n　それから、今、事務委託の費用が２億円という予算だとお聞きしましたが、これは前回も特別高圧のことでお尋ねしたんですけれども、今回はどういった契約形態を考えているのか教えてください。\n\n○委員長（田中幸太郎君）　田中経済政策課長。\n\n◎説明者（田中経済政策課長）　契約形態、業者の選定方法ということかと思いますけれども、こちらもちょっと検討中ではございますけれども、できるだけ迅速な事業の実施を図りつつ、競争性を確保できるような形、プロポーザル方式等も含めまして検討してまいりたいと思っております。",
+    "translation_en": "[Purpose: Question]  \n\n**Chairman Tanaka (Yukitaro):** Tanaka, Director of Economic Policy.  \n\n**Explainant (Tanaka, Director of Economic Policy):** Regarding the number of eligible businesses, the budget of ¥2.2 billion allocates ¥2 billion as the primary funding source for the subsidies. Assuming applications are made at the maximum amount of ¥5 million, we anticipate around 400 cases. As for the budget breakdown, ¥2 billion is allocated for the subsidy fund, and ¥200 million for contracted services.  \n\n**Chairman Tanaka (Yukitaro):** Mr. Suzuki.  \n\n**Commissioner Suzuki (Hitoshi):** You mentioned an estimated 400 eligible cases. What’s the plan if applications significantly exceed this number?  \n\n**Chairman Tanaka (Yukitaro):** Director Tanaka.  \n\n**Explainant (Tanaka, Director of Economic Policy):** Currently, we plan to provide subsidies within the allocated budget. While we can’t predict if all applicants will request the maximum amount, exceeding the estimated number would allow us to approve more subsidy recipients.  \n\n**Chairman Tanaka (Yukitaro):** Mr. Suzuki.  \n\n**Commissioner Suzuki (Hitoshi):** Understood. Also, I understand the contracted services budget is ¥200 million—similar to the previous special high-voltage inquiry. Could you clarify the planned contract structure for this round?  \n\n**Chairman Tanaka (Yukitara):** Director Tanaka.  \n\n**Explainant (Tanaka, Director of Economic Policy):** Regarding the contract structure and selection process, we’re still evaluating options. We aim to ensure a swift implementation while maintaining competitiveness, potentially including a proposal-based approach."
+  },
+  "answer": {
+    "gold_original": "### 会話（フランクな文体）\n◆鈴木均　委員　　お疲れ様。中小企業の生産性を上げたり、設備への投資を促したりするための支援金の話なんだけど、川村委員も聞いていたけど、私からも二つ聞きたいことがあって、対象の事業者ってどれくらいの数を見込んでいるの？ っていうのと、予算が22億円って聞いたけど、これってどういう風に使う予定なの？\n\n○委員長（田中幸太郎）　田中経済政策課長、よろしく。\n\n◎説明者（田中経済政策課長）　まず、対象の事業者数の話なんだけど、予算は22億円で、そのうち20億円を支援金として考えていて、上限500万円で申請してもらったら、大体400件くらいかなと見てるんだ。予算の内訳は、支援金に20億円、あとは業務委託費に2億円って感じだよ。\n\n○委員長（田中幸太郎）　鈴木委員、どうぞ。\n\n◆鈴木均　委員　　了解。400件って言ってたけど、もしもの話、申請がそれ以上にたくさん来たらどうするつもり？\n\n○委員長（田中幸太郎）　田中経済政策課長、答えて。\n\n◎説明者（田中経済政策課長）　今のところ、支援は予算内でって感じで考えてる。申請がどのくらい来るかはわからないけど、多く受け入れられるようにはしてみるよ。\n\n○委員長（田中幸太郎）　鈴木委員。\n\n◆鈴木均　委員　　なるほどね。\n　それと、事務委託費が2億円っていうのを聞いたんだけど、これ、どんな契約を考えてるの？ \n\n○委員長（田中幸太郎）　田中経済政策課長、答えてください。\n\n◎説明者（田中経済政策課長）　契約の形式と業者の選び方についてだね。まだちょっと詰めてるところだけど、スピードも大事だし、競争もある程度は必要だから、プロポーザル方式とかも考えてるよ。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\n### Conversation (Casual Tone)  \n\n◆ Suzuki Hitoshi (Commissioner)  \nThanks for the hard work. This is about the subsidies to boost productivity and encourage investment in equipment for SMEs, right? Commissioner Kawamura was listening too, but I have two questions. First, how many businesses are you expecting to target? And second, I heard the budget is 2.2 billion yen—how exactly do you plan to use it?  \n\n○ Chairman (Tanaka Kota)  \nTanaka, Director of the Economic Policy Division, please proceed.  \n\n◎ Explainer (Tanaka, Director of the Economic Policy Division)  \nRegarding the number of target businesses, the budget is 2.2 billion yen, with 2 billion allocated for subsidies. If applicants request the maximum of 5 million yen, we’re estimating around 400 cases. The budget breakdown is 2 billion for subsidies and 200 million for contracted services.  \n\n○ Chairman (Tanaka Kota)  \nCommissioner Suzuki, your turn.  \n\n◆ Suzuki Hitoshi (Commissioner)  \nGot it. You said 400 cases, but what if more applications come in than expected?  \n\n○ Chairman (Tanaka Kota)  \nDirector Tanaka, answer.  \n\n◎ Explainer (Tanaka, Director of the Economic Policy Division)  \nFor now, we’re planning to stay within the budget. We don’t know how many applications we’ll get, but we’ll try to accept as many as possible.  \n\n○ Chairman (Tanaka Kota)  \nCommissioner Suzuki.  \n\n◆ Suzuki Hitoshi (Commissioner)  \nI see. Also, I heard 200 million yen is for contracted services—what kind of contracts are you considering?  \n\n○ Chairman (Tanaka Kota)  \nDirector Tanaka, please respond.  \n\n◎ Explainer (Tanaka, Director of the Economic Policy Division)  \nYou’re asking about the contract format and how we’ll select the contractor. We’re still finalizing it, but since speed is important and some competition is necessary, we’re considering a proposal-based (competitive bidding) approach."
+  },
+  "rubric": {
+    "original": "- 全ての文が敬語ではない表現に統一されている:2点\n- 文章中の難しい単語表現(漢字が多い等)を適切にフランクな表現に言い換えている:2点\n- 文章中の形式を保存している:2点\n- 文章の意味内容を全て含んでいる:2点\n- 正しい敬語の用法である:1点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- All sentences are consistently in plain (non-honorific) language: **2 points**  \n- Difficult or complex wordings (e.g., excessive kanji) are appropriately rephrased into simpler, more natural expressions: **2 points**  \n- The original sentence structure is preserved: **2 points**  \n- The translation retains all original meaning and content: **2 points**  \n- Correct use of honorifics (where applicable): **1 point**  \n- Natural and fluent Japanese: **1 point**  \n\n*(Note: The rubric is structured for evaluating Japanese-to-Japanese translation quality, focusing on clarity, naturalness, and adherence to the original meaning while adjusting formality.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "**会話（フランクな文体に直す）**  \n\n◆鈴木均（委員）：中小企業生産性向上・設備投資促進補助金について、川村委員からも聞いたんだけど、まず最初に2点質問したいんだ。1つは、対象事業者の数をどのくらい想定してるのか？ 2つ目は、22億円の予算内訳だけど、具体的にどう分配してるのか知りたい。  \n\n○委員長（田中幸太郎）：田中経済政策課長さん。  \n\n◎説明者（田中経済政策課長）：対象事業者数ですが、22億円のうち補助金の原資は20億円で計上されています。上限額500万円で仮に申請が400件あった場合を想定しています。予算内訳は、補助金原資が20億円、業務委託費が2億円です。  \n\n○委員長（田中幸太郎）：鈴木委員さん。  \n\n◆鈴木均（委員）：400件という件数ですが、それを大幅に超えて応募があった場合はどう対応する予定ですか？  \n\n○委員長（田中幸太郎）：田中経済政策課長さん。  \n\n◎説明者（田中経済政策課長）：現時点では予算内での補助を前提にしています。件数が超えた場合は、より多くの事業者を採択できる可能性がありますが、今のところは不確定です。  \n\n○委員長（田中幸太郎）：鈴木委員さん。  \n\n◆鈴木均（委員）：承知しました。それで、今回の事務委託費用が2億円というのは前回も高額だったと聞きました。今回はどのような契約形態を検討していますか？  \n\n○委員長（田中幸太郎）：田中経済政策課長さん。  \n\n◎説明者（田中経済政策課長）：契約形態や業者の選定方法ですが、これも検討途上です。迅速な事業実施と競争性を両立できるよう、プロポーザル方式なども含めて検討したいと思っています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 全ての文が敬語ではない表現に統一されている:0点  \n  - 「質問したいんだ」など砕けた表現もある一方、「想定してるのか？」「対応する予定ですか？」「検討していますか？」「検討したいと思っています」など敬語・丁寧語が多数残っており、統一されていない。\n- 文章中の難しい単語表現(漢字が多い等)を適切にフランクな表現に言い換えている:0点  \n  - 「対象事業者数」「補助金の原資」「計上されています」「予算内訳」「採択」「契約形態」「選定方法」「検討途上」など、ほぼ元の硬い表現のままでフランクになっていない。\n- 文章中の形式を保存している:2点  \n  - 「◆鈴木均（委員）」「○委員長」「◎説明者」など、話者区分や会話の順序は概ね保持されている。\n- 文章の意味内容を全て含んでいる:1点  \n  - 概ね含まれているが、「上限額500万円で仮に申請があった場合には400件程度ということで見込んでございます」が「申請が400件あった場合を想定」となり、「上限額で申請した場合」という条件が抜けているなど、細部が一部欠落・改変している。\n- 正しい敬語の用法である:1点  \n  - 残っている敬語表現自体は不自然ではなく、用法としてはおおむね正しい。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語になっている。\n\n[計算式]\n0 + 0 + 2 + 1 + 1 + 1 = 5\n\n[点数]\n5\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:11.810689+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### フランクな文体に直した会話  \n\n**鈴木均委員**  \n「中小企業の生産性向上補助金について、川村委員も質問してたけど、まず2点聞きたい。対象になる事業者の数はどれくらい想定してるのか？ それと、予算22億円の内訳はどうなってるのか教えてほしい」  \n\n**田中経済政策課長**  \n「まず対象事業者の数ですが、補助金の原資は20億円で、上限500万円で申請があった場合400件くらい見込んでます。予算内訳は補助金20億円と業務委託費2億円です」  \n\n**鈴木均委員**  \n「400件って話だけど、これを大幅に超えた応募があったらどうするつもり？」  \n\n**田中経済政策課長**  \n「現時点では予算範囲内での補助を考えてます。上限額で全員が申請するか分からないけど、そうならればより多くの事業者を採択できるでしょう」  \n\n**鈴木均委員**  \n「分かった。それから、今回も事務委託費用が2億円って聞いたけど、契約形態はどうするつもり？ 前回特別高圧の件でも聞いたんだけど、今回は？」  \n\n**田中経済政策課長**  \n「契約形態や業者選定方法はまだ検討中ですが、迅速な実施と競争性を両立できるよう、プロポーザル方式も含めて考えたいと思っています」  \n\n---  \nこのように、敬語や冗長な表現を避け、直接的な言い回しにしました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:47.383486+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "議会での堅苦しいやり取りを、同僚同士や先輩後輩が休憩室で話しているようなフランクな会話にリライトしました。\n\n***\n\n**鈴木：** 中小企業の生産性向上とか設備投資の補助金についてなんだけどさ。さっき川村さんも聞いてたけど、俺からも2つ聞きたいことがあるんだ。\nまず、これって何社くらいの事業者を対象にするつもりなの？ それと、予算が22億円ついてるけど、その内訳ってどんな感じ？\n\n**田中（課長）：** まず対象の数だけど、予算22億のうち、実際に配る補助金の原資は20億なんだよね。だから、もし上限の500万で申請が来たとしたら、大体400件くらいを見込んでるよ。\n予算の内訳は、さっき言った補助金の原資が20億で、残りの2億が事務委託費ってところだね。\n\n**鈴木：** なるほど、400件か。もし応募が殺到して、その数を大幅に超えちゃったらどうするつもり？\n\n**田中（課長）：** 今のところは、あくまで予算の範囲内でやるつもりだよ。まあ、みんながみんな上限額ギリギリで申請してくるかは分からないし、もし少なめの申請が多ければ、その分もっと多くの事業者を採択できることにはなるかな。\n\n**鈴木：** りょーかい。\nあと、事務委託費が2億って話だけど、これ前回も特高（特別高圧電力）の件で聞いたけどさ、今回はどういう契約形態にするつもりなの？\n\n**田中（課長）：** 業者の選び方だね。それもまだ検討中なんだけど、なるべく早く事業を始めたいし、かといってちゃんと競争もさせたいから、プロポーザル方式とかも含めて考えてるところだよ。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:42.745308+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:38:47.611395+00:00"
+  }
+}

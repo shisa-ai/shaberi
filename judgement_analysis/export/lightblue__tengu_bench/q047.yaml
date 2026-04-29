@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 47,
+  "category": "数学",
+  "question": {
+    "original": "80円のみかんと120円のりんごをあわせて40個買ったところ、3800円になりました。りんごは何個買いましたか。",
+    "translation_en": "**[Purpose: Question]**  \n\nYou bought a total of 40 mandarin oranges (80 yen each) and apples (120 yen each) for a total of 3,800 yen. How many apples did you buy?  \n\n*(Note: The translation maintains the original structure and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "問題を解くために、方程式を立てることができます。みかんの個数を \\(x\\)、りんごの個数を \\(y\\) とします。\n\nまず、全体で40個買っていることから、\n\\[x + y = 40\\]\n\n次に、みかんが80円、りんごが120円で合計3800円使ったということから、\n\\[80x + 120y = 3800\\]\n\nこれらの方程式を解きます。一方の方程式から変数\\(x\\)または\\(y\\)を求めて、他方に代入する方法が一般的です。\n\nまず、第一の方程式から\\(x = 40 - y\\)と表されることがわかります。この式を第二の方程式に代入します：\n\n\\[80(40 - y) + 120y = 3800\\]\n\nこれを展開すると、\n\\[3200 - 80y + 120y = 3800\\]\n\nつまり、\n\\[40y = 600\\]\n\nこれを解くと、\n\\[y = 15\\]\n\nよって、買ったりんごの数は15個です。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nTo solve the problem, we can set up equations. Let \\( x \\) be the number of mandarin oranges and \\( y \\) be the number of apples.  \n\nFirst, since a total of 40 fruits were bought, we have:  \n\\[ x + y = 40 \\]  \n\nNext, given that mandarin oranges cost 80 yen each, apples cost 120 yen each, and the total cost was 3800 yen, we have:  \n\\[ 80x + 120y = 3800 \\]  \n\nWe solve these equations. A common method is to solve for one variable (\\( x \\) or \\( y \\)) in one equation and substitute it into the other.  \n\nFirst, from the first equation, we find that \\( x = 40 - y \\). Substituting this into the second equation:  \n\\[ 80(40 - y) + 120y = 3800 \\]  \n\nExpanding this, we get:  \n\\[ 3200 - 80y + 120y = 3800 \\]  \n\nWhich simplifies to:  \n\\[ 40y = 600 \\]  \n\nSolving for \\( y \\), we find:  \n\\[ y = 15 \\]  \n\nTherefore, the number of apples bought is 15."
+  },
+  "rubric": {
+    "original": "- 答えの買ったリンゴの数が15個になっている:4点\n- 方程式を立てることができている:3点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **4 points** – The answer correctly states that 15 apples were bought.  \n- **3 points** – The equation is correctly set up.  \n- **2 points** – The explanation is specific and easy to understand.  \n- **1 point** – The Japanese is natural and fluent.  \n\n(Translation preserves the original meaning, structure, and scoring criteria while ensuring natural English phrasing for evaluation documentation.)"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くために、以下のステップで考えていきましょう。\n\n1. **変数の定義**:\n   - 80円のみかんの数を \\( x \\) 個\n   - 120円のりんごの数を \\( y \\) 個とします。\n\n2. **方程式の設定**:\n   - みかんとりんごの合計個数は40個なので、\\( x + y = 40 \\) です。\n   - 合計金額は3800円なので、\\( 80x + 120y = 3800 \\) です。\n\n3. **方程式の解法**:\n   - 最初の方程式 \\( x + y = 40 \\) を \\( y = 40 - x \\) と変形します。\n   - この \\( y \\) の値を2番目の方程式に代入します：\n     \\[\n     80x + 120(40 - x) = 3800\n     \\]\n   - 展開して整理します：\n     \\[\n     80x + 4800 - 120x = 3800\n     \\]\n     \\[\n     -40x + 4800 = 3800\n     \\]\n     \\[\n     -40x = -1000\n     \\]\n     \\[\n     x = 25\n     \\]\n\n4. **りんごの個数を求める**:\n   - \\( y = 40 - x = 40 - 25 = 15 \\)\n\n5. **検算**:\n   - みかん25個とりんご15個で合計40個。\n   - 金額計算：\\( (25 \\times 80) + (15 \\times 120) = (2000) + (1800) = (3800)\\)\n\nしたがって、**りんごは15個買いました**。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えの買ったリンゴの数が15個になっている:4点  \n  - 最後に「りんごは15個買いました」と明示している。\n- 方程式を立てることができている:3点  \n  - \\(x + y = 40\\)、\\(80x + 120y = 3800\\) を正しく立式している。\n- 説明が具体的でわかりやすい:2点  \n  - 変数の定義から代入・整理・検算まで段階的に説明している。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語で書かれている。\n\n[計算式]\n4 + 3 + 2 + 1 = 10\n\n[点数]\n10点\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:10.575956+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この問題を解くために、連立方程式を使うことができます。まず、変数を設定します。\n\n- みかんの個数を \\( x \\) とする\n- りんごの個数を \\( y \\) とする\n\n与えられた条件から以下の2つの式が得られます：\n\n1. 個数の合計： \\( x + y = 40 \\)\n2. 価格の合計： \\( 80x + 120y = 3800 \\)\n\nまず、第1の方程式から \\( y \\) を消去します。第1の方程式を変形して \\( y = 40 - x \\) とします。\n\n次に、この式を第2の方程式に代入します：\n\n\\[ 80x + 120(40 - x) = 3800 \\]\n\n括弧の中身を展開します：\n\n\\[ 80x + 4800 - 120x = 3800 \\]\n\n同類項をまとめます：\n\n\\[ -40x + 4800 = 3800 \\]\n\n両辺から4800を引きます：\n\n\\[ -40x = -1000 \\]\n\n両辺を-40で割ります：\n\n\\[ x = \\frac{-1000}{-40} = 25 \\]\n\nよって、みかんは25個です。次に、りんごの個数 \\( y \\) を求めます。先ほどの式 \\( y = 40 - x \\) に \\( x = 25 \\) を代入します：\n\n\\[ y = 40 - 25 = 15 \\]\n\nしたがって、りんごは **15個** 買いました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:45.285018+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "りんごは **15個** 買いました。\n\n計算方法は以下の通りです（つるかめ算の考え方）。\n\n1.  **すべてみかんだったと仮定します**\n    $80\\text{円} \\times 40\\text{個} = 3200\\text{円}$\n\n2.  **実際の金額との差を求めます**\n    $3800\\text{円} - 3200\\text{円} = 600\\text{円}$\n    （すべてみかんだと600円足りません）\n\n3.  **みかん1個をりんご1個に変えるといくら高くなるか求めます**\n    $120\\text{円} - 80\\text{円} = 40\\text{円}$\n\n4.  **差額（600円）を埋めるために、何個りんごに変えればよいか計算します**\n    $600\\text{円} \\div 40\\text{円} = 15\\text{個}$\n\nよって、りんごは15個となります。\n\n---\n**検算：**\nりんご 15個 × 120円 ＝ 1800円\nみかん 25個 × 80円 ＝ 2000円\n合計：1800円 ＋ 2000円 ＝ 3800円（正しい）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:34.543826+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:19.921954+00:00"
+  }
+}

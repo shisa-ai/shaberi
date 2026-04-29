@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 102,
+  "category": "ビジネス",
+  "question": {
+    "original": "外国人アルバイトを雇用する際に気を付ける点はありますか？",
+    "translation_en": "**[Purpose: Question]**  \n\nAre there any points to be aware of when hiring foreign part-time workers?  \n\n*(Note: The translation maintains the original meaning and formality while ensuring natural English phrasing suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "外国人アルバイトを雇用する際には日本人を雇う際と異なる対応が必要な場合があります。具体的には以下の点に気をつけてください。\n1. 在留カードを持っているか\n在留カードを持っていない場合雇用することはできません。間違いなく本人の在留カードであるということ、有効期限が切れていないこと、「技術」「技能」「教授」など就労可能な在留資格であることなど、実質的な確認を行うようにしてください。\n2. 留学生の場合、週の勤務時間を28時間以内とする\n「留学」の在留資格の場合は資格外活動（アルバイト）の許可を受けている必要があります。また、資格外活動が許可されている留学生であっても、学校の夏休みなどの期間を除き、1週間に就労可能なのは28時間までです。この上限を超えて勤務させないように気を付けて下さい。\n3. ハローワークへの届出を行う\n外国人を雇用する場合であっても、原則としては日本人を雇用する場合と同様に、指定労働時間が一定時間を超える場合は社会保険や雇用保険に加入させる必要があります。留学生の場合は、週の勤務時間が20時間を超える場合でも、雇用保険の加入対象外となっていますが、留学生を含め、雇用保険の加入対象外となる外国人の方であっても、「外国人雇用状況届出書」によって、ハローワークへの届出が必要となっているため気をつけてください。\n\nこれ以外にも外国人との間には言語の壁や文化の違いがあるため適切な研修を予め施すことが大事だと考えられます。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\nWhen hiring foreign part-time workers, different procedures may be required compared to hiring Japanese nationals. Specifically, please note the following:  \n\n1. **Residence Card Verification**  \n   You cannot employ someone without a valid residence card. Ensure the card belongs to the individual, is not expired, and has a permissible status for employment (e.g., \"Technical Intern,\" \"Skilled Labor,\" \"Professor\"). Conduct thorough verification.  \n\n2. **Student Workers (28-Hour Limit)**  \n   If the worker has a \"Student\" visa, they must have permission for \"activities outside of studies\" (part-time work). Even with permission, student workers are limited to **28 hours per week**, except during school breaks (e.g., summer vacation). Do not exceed this limit.  \n\n3. **Reporting to Hello Work (Public Employment Security Office)**  \n   Even when hiring foreigners, the same rules as hiring Japanese nationals apply: if working hours exceed a certain threshold, they must be enrolled in social and employment insurance. While student workers are exempt from employment insurance even if working over 20 hours per week, **all foreign workers (including students) who are not subject to employment insurance must still be reported to Hello Work via the \"Foreign Worker Employment Status Report.\"**  \n\nAdditionally, due to language barriers and cultural differences, it is advisable to provide appropriate training in advance.  \n\n(Translation preserves the original meaning, structure, and key details for evaluation documentation.)"
+  },
+  "rubric": {
+    "original": "- 就労可能な在留カードが必要なことを示している:2点\n- 留学生の週の勤務時間の上限を示している:2点\n- 外国人雇用状況届出書の必要性を示している:2点\n- その他の具体的な気をつけるべき点を示している:1点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates the need for a re-entry permit for employment:** 2 points  \n- **Shows the weekly work hour limit for international students:** 2 points  \n- **Highlights the requirement to submit a \"Foreigner Employment Status Report\":** 2 points  \n- **Lists other specific precautions to take:** 1 point  \n- **Explanation is clear and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "外国人アルバイトを雇用する際には、以下の点に注意すると良いでしょう。法的要件を遵守し、円滑な雇用関係を築くことができます。  \n\n### **1. 法的要件の確認**  \n- **在留資格**: アルバイトが日本で働くための適切な在留資格（例：特定活動ビザ、技能実習生など）を持っているか確認しましょう。  \n- **労働基準法**: 外国人アルバイトも日本の労働基準法（最低賃金、労働時間、休日など）が適用されます。  \n- **社会保険**: 健康保険や厚生年金などの加入手続きが必要な場合があります。  \n\n### **2. コミュニケーションと文化理解**  \n- **言語**: 日本語能力を確認し、必要に応じて翻訳ツールや通訳を提供しましょう。  \n- **文化的違い**: 仕事の進め方やコミュニケーションスタイルに違いがある場合がありますので、柔軟に対応しましょう。  \n\n### **3. 雇用契約と給与**  \n- **明確な契約書**: 勤務時間、給与、福利厚生などを明記した書面で契約しましょう。  \n- **賃金支払い**: 外国人アルバイトにも適切な賃金を支払い、税金の取り扱いについて説明します。  \n\n### **4. 安全衛生と労働環境**  \n- **安全対策**: 危険な作業を行う場合は、日本語での指示や安全教育が必要です。  \n- **ハラスメント防止**: 不当な扱いや差別がないよう配慮しましょう。  \n\n### **5. その他の注意点**  \n- **住所・連絡先の確認**: 緊急時の連絡先や住所を把握しておきましょう。  \n- **帰国時の手続き**: 在留期間満了後も適切な退職手続きを行いましょう。  \n\n外国人アルバイトとの良好な関係構築には、これらの点に加え、彼らの文化や背景を尊重することが重要です。不明点がある場合は専門家（弁護士や就労ビザ専門家）に相談することも検討してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 就労可能な在留カードが必要なことを示している:0点  \n  - 在留「カード」やその確認についての記載がなく、「在留資格」の一般的説明にとどまっている。\n- 留学生の週の勤務時間の上限を示している:0点  \n  - 留学生や週28時間などの上限に関する具体的な記載がない。\n- 外国人雇用状況届出書の必要性を示している:0点  \n  - ハローワークへの届出や「外国人雇用状況届出書」についての言及がない。\n- その他の具体的な気をつけるべき点を示している:1点  \n  - 労働基準法の適用、社会保険、契約書、賃金支払い、ハラスメント防止など、具体的な注意点を複数挙げている。\n- 説明が具体的でわかりやすい:2点  \n  - 見出しを用いて整理されており、内容も具体的で理解しやすい。\n- 自然な日本語である:1点  \n  - 文法・表現ともに自然で読みやすい日本語で書かれている。\n\n[計算式]\n0 + 0 + 0 + 1 + 2 + 1 = 4\n\n[点数]\n4\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:17.956784+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "第1種低層住居専用地域（以下、**第一種低層**）における建築物の高さ制限については、**都市計画法**および関連する地方自治体の条例によって定められています。一般的な原則と注意点を以下に説明します。\n\n---\n\n### **1. 一般的な高さ制限**\n- **第一種低層**では、原則として建築物の高さは「**10m以下**」と規定されています（都市計画法第78条）。  \n  - ただし、例外規定や地域差異があるため、必ずしも10mが絶対的な上限とは限りません。\n\n---\n\n### **2. 13mの住宅建設可否**\n- **原則不可**: 13mは一般的な高さ制限（10m）を超えるため、通常は建設できません。  \n- **例外ケース**:  \n  - 地方自治体の条例で「傾斜地等の特殊な地形」や「既存建築物との調和」を考慮し、高さ制限が緩和される場合があります。  \n  - 屋根部分（軒下など）の突出を含めれば13mに達する可能性もありますが、これも自治体判断となります。\n\n---\n\n### **3. 確認すべき点**\n- **用途地域指定確認**: 実際の土地が第一種低層かどうかを市町村に確認。  \n- **地域条例・景観規制**: 自治体独自の規制（例：屋根形状や色彩指定）がある場合があります。  \n- **斜線制限・日影規制**: 隣地への影響を考慮した追加規制が適用される可能性があります。\n\n---\n\n### **4. 対策案**\n- 高さを10m以下に抑える設計変更。  \n- 用途地域変更（困難な場合が多い）。  \n- 自治体へ個別相談（許可申請前）。\n\n---\n\n### **結論**\n13mの住宅は通常不可ですが、自治体によって解釈が異なるため、必ず事前確認が必要です。特に近隣環境との調和性や景観保全が重視される傾向があります。  \n\n詳細は該当する市区町村の都市計画課へ問い合わせることをお勧めします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:06.985989+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "結論から申し上げますと、**原則として建設することはできません。**\n\n第1種低層住居専用地域には、建築基準法により**「絶対高さ制限」**という非常に厳しいルールが設けられているためです。\n\n詳細な理由は以下の通りです。\n\n### 1. 絶対高さ制限（10mまたは12m）\n第1種低層住居専用地域では、建物の高さの上限が**「10メートル」または「12メートル」**のどちらかに定められています（建築基準法第55条）。\nどちらの制限が適用されるかは、その土地の都市計画によって決まっていますが、**最大でも12メートル**までしか建てられません。したがって、13メートルの建物は原則として違法となります。\n\n### 2. 例外的に認められるケース（可能性は極めて低い）\nごく稀な例外として、以下のようなケースであれば認められる可能性がありますが、一般的な個人住宅ではハードルが非常に高いです。\n\n*   **屋上突出物（ペントハウス等）の特例:**\n    その地域の制限が「12m」であり、かつ13mになる部分が「階段室」や「エレベーター塔」などの屋上突出部分のみである場合です。\n    *   建築面積の1/8以内であること。\n    *   高さが5m以内であること。\n    *   これらが満たされれば、その部分は高さに算入しないという緩和規定があります。\n    *   *（つまり、建物の本体は12m以下で、階段室のてっぺんだけが13mという場合なら可能なことがあります。）*\n\n*   **特定行政庁の許可（第55条第3項）:**\n    敷地の周囲に広い公園や道路があるなど、環境を害する恐れがないと認められ、かつ公益上必要であると特定行政庁（自治体）が許可した場合です。しかし、これは主に学校や公共施設などを想定しており、個人の住宅で許可が下りることはまずありません。\n\n### 3. その他の厳しい制限\n仮に高さ制限をクリアできたとしても、第1種低層住居専用地域には他にも厳しい制限があります。\n*   **北側斜線制限:** 北側の隣地の日当たりを確保するため、建物の北側を斜めにカットしなければならない制限。\n*   **日影規制:** 周囲に落とす影の時間を制限するルール。\n\n### まとめとアドバイス\n一般的な3階建て住宅や、天井が高い住宅を建てようとしても、**13メートルという高さは第1種低層住居専用地域では許可されません。**\n\nもし「どうしても高い天井や3階建てが欲しい」という場合は、以下の対応が必要です。\n\n1.  **設計の工夫:** 地面を掘り下げて「半地下」を作る、あるいは天井高を調整して、建物の総高さを10m（または12m）以内に収める。\n2.  **土地の変更:** 高さ制限が緩い「第1種中高層住居専用地域」や「住居地域」などで土地を探す。\n\nまずは、その土地の高さ制限が「10m」なのか「12m」なのかを自治体の都市計画図や不動産屋に確認することをお勧めします。もし10m制限の地域であれば、13mの建物は絶望的です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:59.300884+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:42:29.094846+00:00"
+  }
+}

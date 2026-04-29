@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 46,
+  "category": "数学",
+  "question": {
+    "original": "赤玉4個、青玉2個、黄玉1個を用いて首飾りをつくるとき、首飾りの作り方は何通りあるか。",
+    "translation_en": "**[Purpose: Question]**  \n\n*How many different ways can a necklace be made using 4 red beads, 2 blue beads, and 1 yellow bead?*  \n\n(Translation preserves the original meaning, structure, and details without adding commentary.)"
+  },
+  "answer": {
+    "gold_original": "この問題は数珠順列についての問題であり、同じ種類の玉が複数あることを考慮する必要があります。\nまず同じ玉が複数個存在する場合に対称性等を考える必要があるため１個しかない黄玉について固定して考えます。\nこの時数珠順列では全体の配置が左右対称のものについて同一の配置だと考える必要があるため、左右対称の配置と左右対称ではない配置を分けて計算する必要があります。今、左右対称の配置は黄玉を除いた 2+4 = 6個を円状に配置した際に青玉を中心線に対して直角になるように置くような配置であるから 6/2 = 3通りであり、左右対称でない配列は全体の配列6*5/2 = 15通りから左右対称の3通りを引いた12通りとなる。\n今左右対称ではない12通りは黄玉を通る中心軸で回転させた際に別のもう1通りになるため数珠順列では数を半分にする必要があります。そのため12/2 = 6通りになります。\nそのため 3+6 = 9通りとなります。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThis problem involves a circular permutation where multiple beads of the same type exist. Since there are multiple identical beads, we must consider symmetry. To simplify, we first fix the single yellow bead, as symmetry considerations require us to treat configurations with multiple identical beads differently.  \n\nIn circular permutations, configurations that are mirror images (left-right symmetric) are considered identical. Therefore, we must separate symmetric and asymmetric arrangements. The symmetric arrangements involve placing the remaining 6 beads (2 blue + 4 red) in a circle such that the blue beads are perpendicular to the line of symmetry, resulting in 6/2 = 3 symmetric configurations. The asymmetric arrangements are the total 6 × 5 / 2 = 15 configurations minus the 3 symmetric ones, leaving 12 asymmetric configurations.  \n\nSince the 12 asymmetric configurations can be rotated around the axis passing through the yellow bead to produce another distinct configuration, we must halve this count in circular permutations, resulting in 12/2 = 6 asymmetric configurations.  \n\nThus, the total number of distinct arrangements is 3 (symmetric) + 6 (asymmetric) = 9.  \n\n---  \n*(Translation preserves the original meaning, technical details, and step-by-step reasoning without adding commentary.)*"
+  },
+  "rubric": {
+    "original": "- 答えが9通りになっている:3点\n- 数珠順列の問題であることを示している:2点\n- 同じ色の玉の被りを踏まえている:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Answer provides 9 possible combinations:** 3 points  \n- **Indicates the problem is a permutation with repetition:** 2 points  \n- **Accounts for overlapping identical-colored beads:** 2 points  \n- **Explanation is specific and easy to understand:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くためには、玉の並び順を考慮する必要があります。玉の並び順は、赤玉、青玉、黄玉の順序で決まります。赤玉4個、青玉2個、黄玉1個を並べる方法は、以下のように計算できます。\n\n1. **赤玉4個の並び方**: 4! (4の階乗) = 24通り\n2. **青玉2個の並び方**: 2! (2の階乗) = 2通り\n3. **黄玉1個の並び方**: 1! (1の階乗) = 1通り\n\nこれらの並び順を掛け合わせると、総数が求められます。\n\n\\[ 24 \\times 2 \\times 1 = 48 \\]\n\nしたがって、首飾りの作り方は **48通り** あります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えが9通りになっている:0点  \n  - 回答は48通りとしており誤り。\n- 数珠順列の問題であることを示している:0点  \n  - 数珠順列や回転・裏返しの同一視についての言及がない。\n- 同じ色の玉の被りを踏まえている:0点  \n  - 4!・2!・1!を単純に掛けており、「同色は区別しない」という前提を考慮していない。\n- 説明が具体的でわかりやすい:1点  \n  - 手順自体は具体的で、何をしているかは分かる。\n- 自然な日本語である:1点  \n  - 文法的に自然で読みやすい日本語。\n\n[計算式]\n0 + 0 + 0 + 1 + 1 = 2\n\n[点数]\n2点\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:07.130871+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "赤玉4個、青玉2個、黄玉1個を用いて首飾りを作る場合の作り方は、以下の手順で計算できます。\n\n1. **玉の並べ方を考える**: 首飾りは円形なので、回転や反転によって同じものとみなされます。まずは一列に並べた場合の数を考え、その後円形であることを考慮します。\n\n2. **一列に並べた場合**: 7つの玉（赤4個、青2個、黄1個）を一列に並べる方法は、\n   \\[\n   \\frac{7!}{4! \\cdot 2! \\cdot 1!} = \\frac{5040}{24 \\cdot 2 \\cdot 1} = 210\n   \\]\n   通りです。\n\n3. **円形であることを考慮**: 首飾りは円形なので、回転によって同じものとみなされます。例えば、「赤青黄赤青赤」は「青黄赤青赤赤」と同じ首飾りとみなされます。したがって、一列に並べた場合の数を7で割る必要があります（ただし、この計算では反転も考慮する必要があります）。\n\n4. **反転も考慮**: 首飾りは反転しても同じものとみなされるため、さらに2で割る必要があります。\n\n5. **最終的な計算**:\n   \\[\n   \\frac{210}{7} = 30\n   \\]\n   （ただし、これではまだ反転が考慮されていません）\n\n6. **反転を考慮**:\n   円形で反転も同じとみなすため、\n   \\[\n   \\frac{210}{7 \\times 2} = 15\n   \\]\n   \nしたがって、首飾りの作り方は **15通り** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:49.461076+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "赤玉4個、青玉2個、黄玉1個を用いて首飾りを作る方法（じゅず順列）の数を求めます。\n\n手順は以下の通りです。\n\n1.  **円順列**（回転して一致するものを同じとみなす）の数を求める。\n2.  **じゅず順列**（裏返して一致するものを同じとみなす）の数を求める。\n\n---\n\n### 1. 円順列の計算\n\nまず、すべての玉を一列に並べる場合の数（同じものを含む順列）を計算します。\n玉の合計は $4 + 2 + 1 = 7$ 個です。\n\n$$ \\frac{7!}{4! \\times 2! \\times 1!} = \\frac{5040}{24 \\times 2 \\times 1} = 105 \\text{ 通り} $$\n\n次に、これを円形に並べます。\n玉の総数は7個（素数）であり、黄玉が1個だけあるため、回転して元の並びと一致するような「繰り返しのパターン」は存在しません。したがって、単純に玉の総数 $7$ で割ります。\n\n$$ \\frac{105}{7} = 15 \\text{ 通り} $$\n\nこれが円順列の総数です。\n\n### 2. じゅず順列の計算\n\n首飾りは裏返すことができるため、線対称な配置を考慮する必要があります。\n公式としては以下のようになります。\n$$ \\text{首飾りの数} = \\frac{\\text{円順列の総数} + \\text{線対称な円順列の数}}{2} $$\n\n**線対称な配置の数を求める：**\n玉の総数が7個（奇数）なので、線対称になるためには、対称軸が「ある1つの玉」を通る必要があります。\n今回、黄玉は1個しかないので、対称軸は必ず**黄玉**を通らなければなりません（もし赤玉を通るとすると、反対側に黄玉のペアが必要になりますが、黄玉は1個しかないため不可能です）。\n\n黄玉を通る軸に対して左右対称になるには、残りの玉（赤4個、青2個）が左右に半分ずつ配置される必要があります。\nつまり、片側に「赤2個、青1個」が並ぶことになります。\n\n片側の3個（赤2、青1）の並べ方は以下の通りです。\n$$ \\frac{3!}{2! \\times 1!} = 3 \\text{ 通り} $$\n\nこれが線対称な円順列の数です。\n\n### 3. 最終計算\n\n先ほどの公式に当てはめます。\n\n$$ \\frac{15 + 3}{2} = \\frac{18}{2} = 9 $$\n\n### 答え\n首飾りの作り方は **9通り** です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:48.660777+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:39:14.749248+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 16,
+  "category": null,
+  "question": {
+    "original": "以下のメールに返信してください。\nお疲れ様です。\n本日体調不良により、予定より到着が少し遅れてしまいそうです。\n遅くとも13時過ぎには着くと思います。\nご迷惑をおかけして恐縮ではございますが、 何卒ご容赦いただけますようお願い申し上げます。",
+    "translation_en": "Here is the translation:  \n\n---  \n\n**Subject:** Delay in Arrival  \n\nDear [Recipient's Name],  \n\nThank you for your hard work.  \n\nDue to feeling unwell today, I anticipate arriving slightly later than planned. I should be there by 1:00 PM at the latest.  \n\nI apologize for any inconvenience this may cause and kindly ask for your understanding.  \n\nBest regards,  \n[Your Name]  \n\n---  \n\n(Adjusted for natural English phrasing while preserving the original meaning and politeness.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "承知いたしました。以下に返信メールの例文をご提案します。状況に合わせて調整してください。\n\n---\n\n**件名**: Re: 予定変更のご連絡  \n\n**本文**:  \n〇〇様  \n\nお疲れ様です。  \n本日は体調不良でしたら、無理をなさらないでください。  \n13時過ぎまでには到着できるとのこと、承知いたしました。  \nご迷惑をおかけすることと存じますが、  \nどうぞよろしくお願い申し上げます。  \n\n（※必要に応じて「何かお手伝いできることがあればお申し付けください」などの一文を追加しても良いでしょう）  \n\n---\n\n**ポイント**:  \n- 相手の体調を気遣う言葉を入れることで配慮を示す  \n- 簡潔に内容を確認し、理解していることを伝える  \n- 迷惑をかけることを謝罪しつつ、理解を求めるトーンに  \n\n必要に応じて修正してご活用ください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "返信メールとして成立しており、丁寧な文体で相手の体調を気遣い、13時過ぎ到着の点も正しく受けているため内容は概ね良好です。  \n一方で、問題は「メールに返信してください」なのに対し、解答は「例文の提案」「ポイント解説」など余分なメタ情報が多く、実際に送る返信メールそのものとしては不要な部分が含まれています。  \nそれでも、正解例と同様のレベルで役に立つ返信文が含まれているため、高評価が妥当です。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:47.019395+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**件名：RE: 本日到着時間のご連絡**  \n\n〇〇様  \n\nお疲れ様です。  \n本日は体調不良とのこと、ご心配申し上げます。どうぞご無理なさらないでください。  \n\n13時過ぎの到着でしたら、大丈夫ですのでご安心ください。  \n万が一、状況に変化がございましたら、またお知らせいただけますと幸いです。  \n\nお身体を大切になさってくださいませ。  \n何卒よろしくお願い申し上げます。  \n\n（署名）  \n\n---  \n※ 必要に応じて「〇〇様」の部分を実際の宛先名に置き換えてください。また、署名は会社や個人の形式に合わせて調整してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:12.310769+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "相手との関係性（社内・社外・上司・部下など）に合わせていくつかパターンを用意しました。状況に合わせて使い分けてください。\n\n### パターン1：社内・同僚向け（標準的・丁寧）\n最も無難で使いやすい返信です。\n\n件名：Re: お疲れ様です\n本文：\nお疲れ様です。\nご連絡ありがとうございます。\n\n到着が遅れる件、承知いたしました。\nこちらのことは気になさらず、無理せず気をつけてお越しください。\n\n体調が優れないとのことですので、もし辛いようであれば遠慮なくご相談くださいね。\nお待ちしております。\n\n---\n\n### パターン2：取引先・社外向け（フォーマル）\n相手がお客様や外部の方の場合です。\n\n件名：Re: お疲れ様です\n本文：\n〇〇様\n\nいつもお世話になっております。\n（自分の名前）です。\n\nご連絡いただきありがとうございます。\n到着時間の変更の件、承知いたしました。\n\nどうかお時間は気になさらず、お身体を第一に、気をつけてお越しください。\n到着されましたら、受付までお声がけいただけますと幸いです。\n\nお待ち申し上げております。\n\n---\n\n### パターン3：上司・先輩から部下へ（配慮・指示）\nあなたが上司で、相手が部下の場合です。\n\n件名：Re: お疲れ様です\n本文：\nお疲れ様です。\n連絡ありがとう。\n\n13時過ぎの到着の件、了解しました。\n業務のことはカバーできるので、焦らずに来てください。\n\nもし移動中に具合が悪くなるようであれば、無理せず休むか、引き返しても構いません。\nまずは安全第一でお願いします。\n\n---\n\n### パターン4：チャットツール（Slack/Teams/LINEなど）\nメールではなくチャットで返す場合の短めの返信です。\n\nお疲れ様です。ご連絡ありがとうございます。\n遅刻の件、了解しました！\n体調が悪い中大変かと思いますが、どうか焦らず、気をつけてお越しください。\n無理はなさらないでくださいね。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:53.045386+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:15.533876+00:00"
+  }
+}

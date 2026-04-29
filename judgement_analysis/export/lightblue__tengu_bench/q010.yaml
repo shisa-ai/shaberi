@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 10,
+  "category": "論理パズル",
+  "question": {
+    "original": "[論理パズル]\n以下の?に入る数字を答えなさい。\n10 = 3\n11 = 5\n20 = 4\n1 = 2\n38 = 7\n123 = ?",
+    "translation_en": "**[Purpose: Question]**  \n\n**[Logic Puzzle]**  \nWhat number should replace the \"?\" in the following sequence?  \n10 = 3  \n11 = 5  \n20 = 4  \n1 = 2  \n38 = 7  \n123 = ?  \n\n*(Note: The translation maintains the original structure and formatting for clarity in evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "この問題は数字をひらがなにしたときの文字数が等式の答えになっていると考えられます。すなわち、\n1. 10（じゅう）: 3文字\n2. 11（じゅういち）: 5文字\n3. 20（にじゅう）: 4文字\n4. 1（いち）: 2文字\n5. 38（さんじゅうはち）: 7文字\nとなります。よって123は「ひゃくにじゅうさん」の9文字なので?に入る数字は9だと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThis problem likely involves the number of hiragana characters when the numbers are written in Japanese. Specifically:  \n1. 10 (じゅう): 3 characters  \n2. 11 (じゅういち): 5 characters  \n3. 20 (にじゅう): 4 characters  \n4. 1 (いち): 2 characters  \n5. 38 (さんじゅうはち): 7 characters  \n\nTherefore, 123 is written as \"ひゃくにじゅうさん\" (9 characters), so the number that fits in the question mark is 9.  \n\n*(Note: The translation maintains the original structure and technical details while ensuring natural English readability for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 答えの？に入る数字が9である:4点\n- 数字をひらがなにしたときの文字数であることを示している:3点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **4 points** – The number that fits in the answer’s blank is 9.  \n- **3 points** – Indicates the number of characters when the digit is written in hiragana.  \n- **2 points** – Explanation is specific and easy to understand.  \n- **1 point** – Uses natural Japanese.  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity in English.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この論理パズルは、数字の各桁の和を考えることで解くことができます。具体的には、各数字を構成する桁の数字を足し合わせることで、その数字に対応する答えが得られます。  \n\n例:  \n- 10 = 1 + 0 = 1  \n- 11 = 1 + 1 = 2  \n- 20 = 2 + 0 = 2  \n- 1 = 1 (単一の数字なのでそのまま)  \n- 38 = 3 + 8 = 11  \n- 123 = ? → **1 + 2 + 3 = **6**  \n\nしたがって、123 の答えは **6**です。  \n\nこのパズルは「各桁の和」を求めるシンプルなものですが、最初は少し混乱するかもしれませんね。他にも解釈方法があるかもしれませんが、この方法で一貫性があります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 答えの？に入る数字が9である:0点  \n  - 回答は「6」としており不正解。\n- 数字をひらがなにしたときの文字数であることを示している:0点  \n  - ひらがな表記や文字数には一切言及していない。\n- 説明が具体的でわかりやすい:2点  \n  - 「各桁の和」という独自ルールだが、一貫して具体的に説明されている。\n- 自然な日本語である:1点  \n  - 文法的にも表現としても自然な日本語で書かれている。\n\n[計算式]\n0 + 0 + 2 + 1 = 3\n\n[点数]\n3点\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:07.152714+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この論理パズルは、数字の文字数（桁数）を数える問題です。  \n例えば、  \n- 10は「10」と2文字なので3（不正解）、正しくは2  \n- 11は「11」と2文字なので5（不正解）、正しくは2  \n- 20は「20」と2文字なので4（不正解）、正しくは2  \n- 1は「1」と1文字なので2（不正解）、正しくは1  \n- 38は「38」と2文字なので7（不正解）、正しくは2  \n\nしかし、問題文の例が矛盾しているため、別の可能性として「数字を単語に変換したときの文字数」を考えることもできます。  \n例:  \n- 10 = \"ten\" → 3文字  \n- 11 = \"eleven\" → 6文字（5と矛盾）  \n- 20 = \"twenty\" → 6文字（4と矛盾）  \n\nしかし、この場合も一貫性がありません。  \n\n**最も合理的な解釈**として、**桁数を数える**とします。  \n123 = **3** (百二十三と書くと3桁)  \n\nただし、問題文の例が誤っている可能性が高いです。もし「数字を単語に変換したときの文字数」であれば:  \n123 = \"one hundred twenty-three\" → **17** 文字  \n\n### 最終回答: **3** (または問題文が間違っていると判断し、再確認を求めるのが適切)",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:45.462953+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **9** です。\n\n**解説:**\nこのパズルは、数字を**日本語（ひらがな）で読んだときの文字数**を表しています。\n\n*   10 = じゅう（3文字）\n*   11 = じゅういち（5文字）\n*   20 = にじゅう（4文字）\n*   1 = いち（2文字）\n*   38 = さんじゅうはち（7文字）\n\nしたがって、123は\n**ひゃくにじゅうさん**\nとなり、文字数は **9文字** になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:31.438333+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:22.870437+00:00"
+  }
+}

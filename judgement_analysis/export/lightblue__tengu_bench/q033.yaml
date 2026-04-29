@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 33,
+  "category": "長い文書のClosed QA（千トークン以上）",
+  "question": {
+    "original": "以下の文章の筆者の嫁姑問題についての意見を簡潔に述べて下さい。\n### 文章\n男性シニアブロガーさんの記事に80代の女性の\n悩みは嫁姑問題にある…\nを読みましたが本当にその通りだと思いました。\n\n60代の嫁が不機嫌で口も聞かない。\n夕食は作ってくれる。\n月に6万円払っているそうです。\n\nこじれる前に何とか解決出来なかったのかしらね。\n今の世の中では同居は無理だと思うの。\n\n愛があった夫婦関係だって怪しいのに、\nはじめから愛の無い嫁姑が、波風立てずに\n付き合うのは至難の業ですよ。\n\n別居していて年に1〜2度会うだけでも\n揉めてる人達もいるんでしょ？\n\n上手くやる方法は、会わない事が一番なのよ。\nそれを「上手くいってる」と言うのかは分\nからないけどね。\n\n兎に角、表面立ってもめたら終わりよね。\nシコリには治療法は無いんだもん。\nシコリは余命宣告した(された)のと同じだわ。\n\n娘でも同じよ。\n一人の人間として生き方を尊重してあげれば\n親の意見なんか言う必要は無いんじゃない。\n聞かれた時は別よ。\n\n「親子だから遠慮なく何でも言える」と言う人も\nいるけれど～\n私達親子は言葉には気を使うわよ。\n\n性格はお互いに良く知ってるので嫌がる事は言わないわ。\nあれは違う\nこれも違う\n服装が派手だ\n化粧が派手？\nなんて本人の自由じゃない？\n大人なんだもの。\n\n私には、嫁が二人居るけど本当の親のように\nなろうなんて無理だし無駄よ。\n\n嫁はそんなの求めてないもの。\nそもそも、私の嫁じゃないわ。\n忘れないでね、息子の嫁よ。\n\nニコニコと頷いて話を聞いてれば良いんだし、\n嫁が喋らない時は、無難な話で、息子の欠点を\n言いながら～\n「扱いが大変でしょ〜」と言ってればいいんじゃない？\n息子を褒め過ぎるのはダメよ。\nいずれにしても姑が夫婦の中を\nこじらせるような事をしたら最悪！\n\n嫁姑の中でなくても、不機嫌が顔に出る人ってどうなの？\n\n我が家は二世帯住宅と言っても、猫の出入りの為に\nドアが10センチほど開いてたり、\n私の玄関フロアに息子家の冷蔵庫があるので、\n時々嫁とも顔を合わせるけど、いつでもニコニコしてるわ。\n\nでも私、知ってるの。\n息子家に帰ると、私にニコニコする3倍も\nゲラゲラ笑って楽しそうなのを。\n\nいつでも明るい笑い声が聞こえてくるけど、\n私の家庭では無い事を肝に命じてるわ。",
+    "translation_en": "**[Purpose: question]**  \n\nPlease concisely state the author's opinion on the mother-in-law/daughter-in-law (姑嫁) problem based on the following text.  \n\n### Text  \nI read an article by a male senior blogger that said the biggest worry for 80-year-old women is the mother-in-law/daughter-in-law problem… and I completely agree.  \n\nThe daughter-in-law (60s) is sullen and won’t even speak to her. She cooks dinner, though, and apparently pays 60,000 yen a month.  \n\nI wonder why they couldn’t resolve it before things got so bad. In today’s world, cohabitation is probably impossible anyway.  \n\nEven couples with love in their marriage are shaky these days, so it’s incredibly difficult for a mother-in-law and daughter-in-law without love to get along without conflict from the start.  \n\nEven if they live separately and only meet once or twice a year, there are still people who argue, right?  \n\nThe best way to handle it is to avoid seeing each other. Whether that’s what you’d call \"getting along\" is another question.  \n\nIn any case, if things come to a head and turn ugly, it’s over. A sore spot has no cure. A sore spot is like a death sentence.  \n\nThe same goes for daughters. If you respect their way of life as individuals, there’s no need for parents to impose their opinions—unless they’re asked, of course.  \n\nSome people say, \"As parents, we can say anything without holding back,\" but my family and I are careful with our words.  \n\nSince we know each other’s personalities well, we avoid saying things the other dislikes. \"That’s wrong,\" \"This is wrong,\" \"Your clothes are too flashy,\" \"Your makeup is too much?\"—isn’t that their choice? They’re adults, after all.  \n\nI have two daughters-in-law, but it’s impossible and pointless to try to become their real mother.  \n\nThey don’t want that anyway. Besides, they’re not *my* daughters-in-law. Remember, I’m the mother of their husbands.  \n\nIt’s enough to nod and listen with a smile. When the daughter-in-law is quiet, you can talk about safe topics—like pointing out your son’s flaws and saying, \"He must be hard to deal with!\" But don’t praise your son too much. Either way, it’s the worst if the mother-in-law does anything to disrupt the marriage.  \n\nWhat about people who show their displeasure on their faces, even outside of mother-in-law/daughter-in-law relationships?  \n\nIn our two-generation household, the door is always open a few inches for the cat, and my son’s family keeps their refrigerator in my entryway, so I occasionally see my daughter-in-law. But I always smile.  \n\nBut I know. When she’s at her husband’s house, she laughs three times as much and seems much happier.  \n\nI always hear cheerful laughter, but I remind myself that it’s not my home."
+  },
+  "answer": {
+    "gold_original": "筆者は嫁姑問題に関して、同居は現代社会において困難であると考えています。愛を基盤とする夫婦であっても難しい同居を愛が基盤となっていない嫁姑関係ですることは更に難しく、滅多に会わないことがトラブルを避ける最善の方法であると述べています。筆者は、表面的な交流だけを保ち、深入りしすぎず、お互いの生活や選択を尊重することが重要であると強調しています。また、親子関係においても、無理に干渉せず、相手の意見や選択を尊重するべきだと主張しています。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nThe author believes that cohabitation in the mother-in-law/daughter-in-law relationship is difficult in modern society. Even for couples based on love, cohabitation is challenging, and it is even more so for mother-in-law/daughter-in-law relationships that lack such a foundation. The author states that rarely meeting is the best way to avoid conflict. They emphasize the importance of maintaining only superficial interactions, avoiding excessive involvement, and respecting each other’s lives and choices. Additionally, the author argues that in parent-child relationships as well, one should not interfere unnecessarily and should respect the other’s opinions and choices.  \n\n(Translation preserves the original meaning, structure, and key details without adding commentary.)"
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 嫁姑問題についての話である:2点\n  - 現代社会において嫁姑の同居は困難である:2点\n  - 嫁姑間のトラブルは滅多に会わないことが最善の解決法である:2点\n  - 親子であっても無理に干渉せずに相手の意見や選択を尊重すべきである:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information:**  \n  - The story is about mother-in-law and daughter-in-law conflicts: **2 points**  \n  - Co-residence between mother-in-law and daughter-in-law is difficult in modern society: **2 points**  \n  - Avoiding frequent contact is the best solution for mother-in-law/daughter-in-law disputes: **2 points**  \n  - Even between parents and children, one should not interfere excessively and should respect the other’s opinions and choices: **2 points**  \n- **Written in natural Japanese:** **1 point**  \n- **Appropriately concise as a summary:** **1 point**  \n\n*(Total: 10 points)*  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring clarity and natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この文章の筆者は、嫁姑関係に対して非常に現実的で、時に皮肉を含んだ意見を持っています。彼女は嫁姑問題を「至難の業」と表現し、同居が現代では難しいと考えていることを示しています。  \n\n具体的には、以下のような点が読み取れます。  \n1. **愛情の欠如**：嫁と姑が最初から愛情を持っていない場合、良好な関係を築くのは困難だと強調しています。  \n2. **距離感の重要性**：会わない方が良い場合もあると指摘し、「上手くいっている」という表面的な評価には懐疑的です。  \n3. **個人の尊重**：娘や嫁に対して「親の意見は不要」という姿勢を支持し、個人の自由（服装や化粧など）を尊重すべきだと主張しています。  \n4. **夫婦関係への警鐘**：姑が夫婦関係を悪化させる可能性に言及し、息子との関係よりも自分の家庭を優先する立場を明確にしています。  \n\n総じて、筆者は「理想論」ではなく、現実的な距離感や個人の尊重が重要だと考えていることがわかります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 嫁姑問題についての話である:2点  \n  - 嫁姑関係についての意見としてまとめており、テーマは押さえている。\n- 現代社会において嫁姑の同居は困難である:2点  \n  - 「同居が現代では難しいと考えている」と明示している。\n- 嫁姑間のトラブルは滅多に会わないことが最善の解決法である:1点  \n  - 「会わない方が良い場合もある」と距離感の重要性に触れているが、「滅多に会わないことが最善」とまでは明確に要約していない。\n- 親子であっても無理に干渉せずに相手の意見や選択を尊重すべきである:2点  \n  - 「親の意見は不要」「個人の自由を尊重すべき」と明確に述べている。\n- 自然な日本語である:1点  \n  - 不自然な表現はなく、読みやすい日本語。\n- 要約として適切な短さである:1点  \n  - 簡潔で、必要以上に長くない。\n\n[計算式]\n2 + 2 + 1 + 2 + 1 + 1 = 9\n\n[点数]\n9\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.618026+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "筆者は「嫁姑問題は本質的に解決不可能で、同居は現代社会では無理」と考え、**「会わないこと」が最良の解決策**だと主張しています。愛のない関係で波風立てずに付き合うのは難しく、表面的な調和を保つだけでも限界があると指摘。娘や嫁に対しても「個人の自由を尊重し、意見を押し付けない」姿勢を重視し、特に嫁に対しては「ニコニコと接しつつ、本音は言わずに息子の欠点を軽く触れる程度」が適切だと提案しています。自身の経験からも、表面的な笑顔の裏に隠された嫁の本音を見抜きつつも、干渉しない距離感を保っている様子が伺えます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:31.707765+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "筆者の嫁姑問題に対する意見は、以下の点に集約されます。\n\n*   **同居は無理・距離感が最重要**\n    愛のない他人同士が同居して上手くやるのは至難の業であり、一番の解決策は「会わないこと」である。一度こじれると修復は不可能。\n*   **「息子の妻」と割り切る**\n    嫁は自分の所有物でも娘でもないため、本当の親になろうとするのは無駄。息子の家庭は「自分の家庭ではない」と肝に銘じるべき。\n*   **干渉せず、礼儀を尽くす**\n    大人として相手の生き方を尊重し、服装や化粧などに口出ししない。親しき仲にも礼儀が必要。\n*   **姑としての処世術**\n    ニコニコと聞き役に徹し、息子を褒めすぎず（むしろ欠点を言い）、夫婦仲をこじらせないことが重要。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:33.507151+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:37:56.761757+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 113,
+  "category": "政治",
+  "question": {
+    "original": "Aさん(16歳)は最寄駅で見かけた選挙運動の様子を面白いと感じ、SNSを通じてその様子を収めた動画を拡散しました。\n未成年の選挙運動は禁止されていますが、この行為は許容されるでしょうか。",
+    "translation_en": "**[Purpose: Question]**  \n\nA (16 years old) found the election campaign activities they saw at the nearest train station amusing and shared a video of the scene on social media. While election campaigning by minors is prohibited, would this action be permissible?  \n\n*(Note: The translation maintains the original meaning, structure, and legal context while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": "公職選挙法第137条の2において未成年の選挙運動は禁止されています。選挙運動とは特定の選挙で特定の候補者の当選を目的として投票をしてもらうために有利な活動のことを示します。今、Aさんは未成年であるため動画が単に選挙運動の様子を記録したものであり、特定の候補者や政党を支持・推奨する意図がなく、選挙の公平を害するような内容でなければ、選挙運動とはみなされない可能性があります。一方で、動画が特定の候補者や政党への支持を呼びかける内容であったり、選挙の公平を害する恐れがある場合は、問題視される可能性があります。\n許容される可能性はありますが念の為にも動画を拡散する行為は避けるべきだと考えられます。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nUnder Article 137-2 of the Public Office Election Law, election campaigning by minors is prohibited. \"Election campaigning\" refers to activities intended to solicit votes for a specific candidate in a particular election. In this case, since A is a minor, if the video merely records the scene of election campaigning without any intent to support or endorse a specific candidate or party, and does not contain content that could harm the fairness of the election, it may not be considered election campaigning. However, if the video contains content that calls for support of a specific candidate or party, or poses a risk of harming the fairness of the election, it could be problematic.  \n\nWhile there is a possibility it may be permissible, it is advisable to avoid disseminating the video as a precaution.  \n\n(Translation preserves the original meaning, legal context, and nuanced considerations regarding the video's content and potential implications.)"
+  },
+  "rubric": {
+    "original": "- 法律上問題ないことを示している:3点\n- 公職選挙法によって定められていることを示している:2点\n- 根拠を法律を元に示している:2点\n- 説明が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- Demonstrates legal compliance: 3 points  \n- Shows adherence to the Public Office Election Law: 2 points  \n- Provides legal justification as a basis: 2 points  \n- Explanation is specific and clear: 2 points  \n- Uses natural Japanese: 1 point"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "Aさんの行為については、複数の側面から検討する必要があります。以下に、法的・倫理的な観点から分析します。\n\n**1. 法的観点:**\n\n*   **未成年者の選挙運動禁止:** 日本の選挙法では、16歳未満の者が選挙運動を行うことは原則として禁止されています（選挙法第166条）。Aさんが動画を拡散する行為は、間接的に選挙運動とみなされる可能性があります。\n*   **責任の所在:** Aさんが未成年である場合、親権者や保護者にも責任が問われる可能性があります。親権者は未成年者の行動を適切に監督し、違法行為を防止する義務があります。\n*   **罰則:** 違反した場合、Aさんや親権者には罰金などの刑事罰が科される可能性があります。\n\n**2. 倫理的な観点:**\n\n*   **公平性:** 選挙運動は公平な情報提供に基づいて行われるべきです。Aさんの動画が特定の候補者や政党に有利になるように編集されている場合、公平性に欠ける可能性があります。\n*   **プライバシー:** 動画に登場する人々のプライバシーを侵害していないか確認する必要があります。顔や名前が特定できる場合は、事前に許可を得ることが重要です。\n*   **社会への影響:** Aさんの行動が社会に与える影響も考慮する必要があります。若い世代の政治参加を促す一方で、不適切な情報拡散につながるリスクもあります。\n\n**3. 許容される範囲:**\n\nAさんの行為が完全に許容されるかどうかは、これらの要素によって判断されます。\n\n*   **教育目的:** Aさんが動画を拡散した目的が教育的なものであれば（例えば、選挙制度について学ぶ機会を作るため）、親権者の監督のもとで許容される可能性があります。\n*   **情報公開:** 動画が公正な情報公開を目的としており、特定の候補者や政党への偏りがない場合は、一部許容される可能性があります。\n*   **違反行為への対応:** 違反行為があった場合は、速やかに動画を削除し、二度と繰り返さないように注意喚起する必要があります。\n\n**結論:**\n\nAさんの行為は法律上問題がある可能性があるため、慎重に対応する必要があります。親権者はAさんとよく話し合い、今後の行動について指導し、二度と違法行為を繰り返さないように注意喚起してください。また、アドバイザーとして、私たちは以下のようなアドバイスをお伝えできます。\n\n*   未成年者の政治参加に関する法律や倫理的な問題について学ぶ機会を作る\n*   選挙運動に関する正しい知識を身につける\n*   SNSでの情報発信には十分注意し、プライバシー保護や公平性に配慮する\n\nこの問題は複雑であり、一概に「許容される」「許容されない」と断言することはできません。しかし、アドバイザーとして、私たちは法的・倫理的な観点から慎重に対応し、今後の行動について指導することをお勧めします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 法律上問題ないことを示している:0点  \n  - 「法律上問題がある可能性がある」としており、むしろ違法の可能性を強調している。\n- 公職選挙法によって定められていることを示している:0点  \n  - 「日本の選挙法」「選挙法第166条」としており、公職選挙法とも条文番号とも異なり誤り。\n- 根拠を法律を元に示している:0点  \n  - 条文番号・内容ともに不正確で、正しい法的根拠になっていない。\n- 説明が具体的でわかりやすい:2点  \n  - 法的評価は誤っているが、文章としての構成や説明自体は具体的で読みやすい。\n- 自然な日本語である:1点  \n  - 日本語としては自然で文法的にも問題ない。\n\n[計算式]\n0 + 0 + 0 + 2 + 1 = 3\n\n[点数]\n3\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:22.865640+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "信号機のない横断歩道（または横断歩道）で、歩行者が横渡りを開始しているにもかかわらず車両が一時停止せずに通過した場合、道路交通法に基づき以下の罰則が科される可能性があります。  \n\n### **1. 罰則の内容**  \n- **違反内容**: 横断歩道における歩行者優先違反（道路交通法第38条第1項違反）  \n- **罰金**:  \n  - **3万円以下の罰金**（刑事罰）  \n  - または**交通違反切符（青切符）**として即時納付（通常は6,000円～9,000円程度）。  \n- **加算点数**: 運転免許証の違反点数として**6点**が加算される。  \n\n### **2. その他の注意点**  \n- 歩行者がまだ横断歩道に入っていない場合でも、車両は減速・一時停止し、安全を確認する義務がある。  \n- 歩行者がすでに横渡りを開始している場合は、車両は必ず停止しなければならない。  \n- 事故を起こした場合は、より重い刑事責任（自動車運転過失傷害罪など）が問われる可能性もある。  \n\n### **3. 関連法規**  \n- 道路交通法第38条第1項：「横断歩道においては、車両は歩行者の通行を妨げてはならない。」  \n\n### **4. 補足**  \n警察官や交通巡視員によって判断され、状況によっては厳しい取り締まりを受ける場合もあります。特に小学生や高齢者などの弱者保護意識から、一時停止せず通過した場合は厳しく処分される傾向があります。  \n\n安全運転と法律遵守をお願いします！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:06.180795+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "信号機のない横断歩道で、歩行者が渡ろうとしている（または渡っている）にもかかわらず一時停止せずに通過した場合、道路交通法第38条に基づく**「横断歩行者等妨害等違反」**となります。\n\nこの違反に対する罰則（行政処分および反則金）は以下の通りです。\n\n### 1. 違反点数（行政処分）\n*   **2点**\n\n### 2. 反則金（青切符の場合）\n警察官に検挙され、交通反則通告制度（いわゆる青切符）が適用された場合に納める金額です。車種によって異なります。\n\n*   **大型車（大型・中型・大型特殊など）：** 12,000円\n*   **普通車：** 9,000円\n*   **二輪車：** 7,000円\n*   **原付車：** 6,000円\n\n### 3. 刑事罰（懲役または罰金）\nもし反則金を納めなかった場合や、事故を起こして赤切符となった場合など、刑事手続きに移行した際の法定刑は以下の通りです。\n\n*   **3ヶ月以下の懲役 または 5万円以下の罰金**\n\n---\n\n### 補足：道路交通法第38条のルールについて\n法律では、横断歩道等に近づく場合、以下の義務が定められています。\n\n1.  **歩行者がいるか明らかでない場合：** 横断歩道の直前で停止できるように速度を落として進行しなければなりません。\n2.  **歩行者が横断している、または横断しようとしている場合：** 横断歩道の直前（停止線がある場合はその直前）で**一時停止**し、かつ歩行者の通行を妨げないようにしなければなりません。\n\n近年、警察はこの違反の取り締まりを強化しています。歩行者がいる場合は必ず一時停止してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:53.356182+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:10.143290+00:00"
+  }
+}

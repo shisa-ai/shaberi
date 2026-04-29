@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 59,
+  "category": "抽出",
+  "question": {
+    "original": "以下の文章をもとに問いに答えなさい。\n### 文章\n現在の NATO の核政策は、二つの文書すなわち、すべての同盟国によっ\nて合意されている「2022 Strategic Concept」及び「2012 Deterrence and Defence posture Review」に基づくものとしている5。2022 年の 6 月 29 日 及び 30 日、「2022 Strategic Concept」は、スペインのマドリードで開催 された NATO の首脳会議で決議された。「2022 Strategic Concept」の、冒 頭では、NATO の核能力の基盤的目的は、平和を維持し、強制を防止し、 侵略を抑止することであり、核兵器が存在する限り NATO は核同盟 (Nuclear Alliance)を存続させる旨、記載されている。また、NATO の 目標はすべてにとってより安全な世界を作ることであり、NATO は核兵器 なしによる世界の安全保障環境を構築することを探求している旨、記載さ れている6。さらに、これらの目的を達成するために、後に詳述するが米国 が保有する核兵器の欧州前方展開や「Dual Capable Aircraft(DCA)」と いった核政策について説明がある7。昨今、ロシアによるウクライナ侵攻に ついて明示的に「侵略」でありロシアを明確に非難している部分が大きな 変更ではあるが8、基本的に「2022 Strategic Concept」の内容は、「2010 Strategic Concept」を踏襲する形で具現化されており、特に核政策に関す る抜本的な変更はみられない。\n### 問い\n2022 Strategic Conceptが踏襲している以前の文書からの変更点はなんですか",
+    "translation_en": "The changes from the previous document, the 2010 Strategic Concept, that the 2022 Strategic Concept follows up on include:  \n\n1. **Explicit condemnation of Russia’s invasion of Ukraine as an \"aggression\"** (a significant change, though not related to nuclear policy).  \n2. **No fundamental changes to nuclear policy**, which remains based on the 2012 Deterrence and Defence Posture Review and the 2022 Strategic Concept’s reaffirmation of NATO’s nuclear deterrence role.  \n\nThe core nuclear policy—maintaining a nuclear alliance as long as nuclear weapons exist, pursuing a world without them, and relying on U.S. forward-deployed nuclear weapons and Dual-Capable Aircraft (DCA)—remains consistent with the 2010 Strategic Concept. The primary change is the explicit condemnation of Russia’s actions."
+  },
+  "answer": {
+    "gold_original": "「2022 Strategic Concept」が以前の文書、「2010 Strategic Concept」から踏襲しているものの、変更点として明確に挙がっているのは、ロシアによるウクライナ侵攻に対して「侵略」という用語を使用し、ロシアを明確に非難している部分です。しかし、この文書に書かれている内容によると、核政策においては抜本的な変更は見られないとしています。",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nWhile the \"2022 Strategic Concept\" largely follows the previous document, the \"2010 Strategic Concept,\" a key change is the explicit use of the term \"invasion\" to describe Russia’s aggression in Ukraine and the clear condemnation of Russia. However, according to the content of this document, no fundamental changes are observed in nuclear policy.  \n\n*(Note: The translation maintains the original meaning, structure, and key details without adding commentary.)*"
+  },
+  "rubric": {
+    "original": "- 「2010 Strategic Concept」から踏襲していることを示している:3点\n- 「ロシアによるウクライナ侵攻に ついて明示的に「侵略」でありロシアを明確に非難している部分」に該当する内容を含む:4点\n- 必要以上の内容を含まない:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Demonstrates continuity with the \"2010 Strategic Concept\": 3 points**  \n- **Includes content explicitly labeling Russia’s invasion of Ukraine as an \"invasion\" and clearly condemning Russia: 4 points**  \n- **Does not contain unnecessary information: 2 points**  \n- **Written in natural Japanese: 1 point**  \n\n*(Note: The rubric is structured for evaluation, so the translation maintains the original scoring criteria and phrasing for clarity.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "2022年 Strategic Concept が 2010年 Strategic Concept を踏襲しつつも、以下の点で変更が見られます。  \n\n1. **ロシアのウクライナ侵攻への明確な非難**  \n   - 2022年版では、ロシアを「侵略」と明確に非難する表現が追加され、より強い姿勢が示されています。  \n   - これは、2010年版にはなかった具体的な事例への言及であり、安全保障環境の変化に対応した修正です。  \n\n2. **核政策の具体的な展開方針**  \n   - 米国の欧州前方展開や「Dual Capable Aircraft（DCA）」の活用に関する詳細な説明が追加されました。  \n   - これは、従来の核抑止力に加え、より柔軟な対応能力を強調する内容です。  \n\n3. **核兵器なしの安全保障環境への探求**  \n   - 2022年版では、「核兵器なしによる世界の安全保障環境を構築することを探求」という表現が追加されました。  \n   - これは、従来の核抑止力に加え、新たな非核的解決策を模索する姿勢を示しています。  \n\nただし、これらの変更は「抜本的な変更」ではなく、「2010 Strategic Concept」を基盤としつつ、現実的な脅威（ロシア侵攻）や技術的進歩に対応した修正と言えます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 「2010 Strategic Concept」から踏襲していることを示している:3点  \n  - 「2010年 Strategic Concept を踏襲しつつも」と明記している。\n- 「ロシアによるウクライナ侵攻に ついて明示的に「侵略」でありロシアを明確に非難している部分」に該当する内容を含む:4点  \n  - 「ロシアのウクライナ侵攻への明確な非難」「『侵略』と明確に非難する表現が追加」と記述しており要件を満たす。\n- 必要以上の内容を含まない:0点  \n  - 問文・文章にはない「核政策の具体的な展開方針が追加」「非核的解決策を模索する姿勢が新たに追加」など、本文に根拠のない変更点を複数挙げており、不要かつ誤った内容が多い。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n3 + 4 + 0 + 1 = 8\n\n[点数]\n8\n\nFINAL SCORE: 8",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.493826+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "2022 Strategic Conceptが踏襲している「2010 Strategic Concept」からの主な変更点は、**ロシアのウクライナ侵攻に対する明確な非難と「侵略」との認定**です。以前の文書ではロシアとの関係改善を目指す姿勢が見られましたが、2022年の文書ではロシアを明確に非難し、NATOの安全保障環境に対する脅威として位置づけています。ただし、核政策に関しては抜本的な変更はなく、基本的な枠組み（核抑止の維持と核兵器なしによる世界への探求）は継承されています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:27.376705+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提供された文章によると、2022 Strategic Conceptにおける以前の文書（2010 Strategic Concept）からの変更点は以下の通りです。\n\n**ロシアによるウクライナ侵攻について明示的に「侵略」であるとし、ロシアを明確に非難している点。**\n\n（なお、核政策に関しては抜本的な変更は見られないと記述されています。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:29.664634+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:40:10.996730+00:00"
+  }
+}

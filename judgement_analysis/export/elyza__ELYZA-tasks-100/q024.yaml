@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 24,
+  "category": null,
+  "question": {
+    "original": "以下の内容を小学生に向けて説明してください。\n\n衆議院は、1890年に明治憲法の施行に伴い設立された、日本の下院に相当する議院です。この「下院」は「上院」と対になる言葉ですが、必ずしも権限の強弱を表す言葉ではありません。むしろ我が国においては、下院である衆議院の方が上院の参議院よりも権限が強いとされています。これは、衆議院には解散があり、且つ任期も短いことから、より国民の意見を反映した議院となると考えられているからです。\n　一般的に、下院は人民の代表によって構成される国が多く、上院は貴族(我が国では皇族や華族)のような地域の代表によって構成されていた事が多かった議院なのです。つまり、上院・下院の違いは構成する人間の選出方法の差だったわけですね。ただ、現在は貴族院を持たない国が増えたので、上院と下院の人材的な差は昔と比べ少なくなったと言えるでしょう。",
+    "translation_en": "Here is the translation into natural, clear English suitable for evaluation documentation:  \n\n---  \n\n**[Purpose: Question]**  \n\nExplain the following to elementary school students:  \n\nThe House of Representatives (Shūgiin) is the lower house of the Japanese Diet, established in 1890 with the implementation of the Meiji Constitution. While \"lower house\" is paired with \"upper house,\" it does not necessarily indicate weaker authority. In fact, in Japan, the lower house (House of Representatives) has more power than the upper house (Senate). This is because the House of Representatives can be dissolved and has shorter terms, making it more reflective of the people’s will.  \n\nHistorically, lower houses were often composed of elected representatives of the people, while upper houses were frequently made up of regional representatives, such as nobles (in Japan, imperial or aristocratic families). Thus, the difference between upper and lower houses originally lay in how their members were selected. However, since many countries no longer have aristocratic upper houses, the difference in the composition of upper and lower houses has become less pronounced compared to the past.  \n\n---  \n\nThis translation preserves the original meaning and details while ensuring clarity and natural phrasing for evaluation documentation. Let me know if you'd like any refinements!"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "わかりやすく説明しますね！  \n\n**衆議院ってなんだろう？**  \n日本の国会（国を決める会）には「衆議院」と「参議院」の2つがあります。衆議院は「下院」って呼ばれていますが、上院より権力が強いんです！  \n\n**なぜそうなるのか？**  \n- **解散がある**：衆議院は、国民の意見が反映されないと判断したら、解散して選挙をやり直すことができます。  \n- **任期が短い**：衆議院の議員は3年ごとに選挙で選ばれるので、常に新しい意見が入ってきます。  \n\nこれで、国民の声をよく聞けるようになっているんです！  \n\n**上院と下院の違いは？**  \n昔は、下院（衆議院）は普通の人々が選ぶのに対し、上院（貴族院）は皇族や特別な人たちが選ばれていました。でも、今は貴族制度もなくなったから、両方とも普通の人々が選ぶようになりました。だから、今ではあまり違いがないんです！  \n\n簡単に言うと、衆議院は国民の声をよく聞くための「速い反応力」のあるチームみたいなものですよ！ 🎉",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "衆議院・参議院・上院・下院という語はすべて使えており、小学生向けのやさしい文体にもなっている点はよいです。また、「衆議院（下院）の方が参議院（上院）より権限が強い」「国民の意見をより反映するため」というポイントも押さえられています。\n\n一方で減点が必要な点があります。\n\n- 任期を「3年ごと」としているのは事実誤りです（正しくは4年）。採点基準上「部分的に事実と異なる内容」に該当し、-1点です。\n- 上院の説明で「今は貴族制度もなくなったから、両方とも普通の人々が選ぶようになりました」とありますが、日本の参議院は「貴族院がなくなったあとにできた議院」であり、「昔は上院＝貴族院、今は参議院」という歴史的な流れを踏まえると、やや単純化しすぎで誤解を招きます。ただし、「昔は貴族、今はそうではない」という時間の変化自体は示せているので、問題固有の -1 点（昔の内容を今のこととしている）までは当てはまりません。\n- 絵文字の使用は減点条件にはないので採点には影響しません。\n\n内容の方向性は合っており、小学生にも概ね役に立つ説明ですが、事実誤りがあるため満点から1点減と判断します。\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:48.029175+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "**小学生向けの説明：衆議院と参議院について**  \n\n日本には、国会という大きな会議があります。国会は「衆議院」と「参議院」の2つに分かれています。  \n\n### **1. 衆議院（しゅうぎいん）とは？**  \n- 1890年（明治時代）にできた、日本の「下院」にあたる場所です。  \n- 「下」という言葉がついていますが、実は権限が強いんです！  \n  - なぜ？→ 衆議院は「解散」（会員を全部変えること）があるし、任期（仕事期間）も短いから、国民の意見をよく反映できるからです。  \n\n### **2. 上院と下院の違い**  \n昔は、世界的に…  \n- **下院**：国民が選んだ代表者で構成（例：アメリカの下院議員）。  \n- **上院**：貴族や地域代表で構成（例：イギリスの貴族院）。  \n\nでも、今は多くの国で「貴族」がいなくなったので、上下両方とも国民が選ぶことが増えました。日本でも、衆議院と参議院はどちらも国民が選んでいます！  \n\n### **まとめ**  \n- 衆議院：解散や短い任期で、「国民の声」を強く反映する場所。  \n- 参議院：もう少し落ち着いた意見を聞く場所（任期が長め）。  \n\nどちらも大事な役割を持って、日本を良くするために協力しています！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:22.849725+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "小学生のみなさん、こんにちは。\n日本の政治（せいじ）を行う「国会」には、**衆議院（しゅうぎいん）**と**参議院（さんぎいん）**という2つのチームがあります。\n\n今日は、そのうちの「衆議院」について、わかりやすく説明しますね。\n\n***\n\n**1. 衆議院ってなに？**\n衆議院は、明治時代（1890年）に作られた、とても歴史のあるチームです。\n世界の国々では、このチームのことを「下院（かいん）」と呼び、もう一つのチーム（日本では参議院）を「上院（じょういん）」と呼ぶことがあります。\n\n**2. 「下」ってことは、弱いの？**\nいいえ、ちがいます！名前に「下」とついていても、力が弱いわけではありません。\nむしろ日本では、**衆議院（下院）の方が、参議院（上院）よりも強い力を持っている**とされています。\n\n**3. どうして衆議院の方が強いの？**\n衆議院のメンバーは、参議院のメンバーよりも、選挙（せんきょ）の回数が多くて、働ける期間（任期）が短いからです。\n「期間が短い」ということは、**「国民のみんなが今どう思っているか」** という新しい意見を、すぐに政治に取り入れやすいということです。だから、国民の代表として強い力を持っているんですね。\n\n**4. 昔はどんな違いがあったの？**\n大昔、世界の国々ではこんな分け方をしていました。\n*   **下院（衆議院）：** 普通の市民の代表が集まる場所\n*   **上院（参議院）：** 貴族（きぞく）や王族のような、特別な身分の人たちが集まる場所\n\nつまり、昔は「誰がメンバーになるか」が全然ちがったのです。\nでも今は、日本を含めて多くの国で貴族だけの政治はなくなったので、昔のような大きな違いはなくなっています。\n\n***\n\n**まとめ**\n衆議院は、「選挙が多くて大変だけど、そのぶん国民の声をすばやく政治に届けることができる、とても大事なチーム」だと覚えておいてくださいね！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:58.516199+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:28.614079+00:00"
+  }
+}

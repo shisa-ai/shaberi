@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 45,
+  "category": null,
+  "question": {
+    "original": "2つの文字列で連続した最長共通部分文字列の長さを求めよ。\n\n文字列1: あえおかささででした\n文字列2: ばつえおかさでくした",
+    "translation_en": "**[Purpose: Question]**  \n\nDetermine the length of the longest contiguous common substring between the two given strings.  \n\n**String 1:** あえおかささででした  \n**String 2:** ばつえおかさでくした  \n\n(Translation preserves the original meaning and structure, suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "2つの文字列で連続した最長共通部分文字列の長さを求めるには、動的計画法（Dynamic Programming）を使用するのが一般的です。以下にその手順を示します。\n\n### 手順\n1. **2次元配列（DPテーブル）の作成**  \n   - 文字列1の長さと文字列2の長さに合わせて、(m+1) × (n+1) の配列を作成します。  \n   - `m` と `n` はそれぞれ文字列1と文字列2の長さです。\n\n2. **初期化**  \n   - DPテーブルの最初の行と最初の列を0で初期化します。  \n   - これは、空文字列が共通部分文字列として存在することを意味します。\n\n3. **DPテーブルの更新**  \n   - 2番目の行から最後まで、2番目の列から最後までループ処理を行います。  \n   - 現在の位置 `(i, j)` において、以下の条件を満たす場合のみ、値を更新します：  \n     - 文字列1の `i-1` 番目の文字と文字列2の `j-1` 番目の文字が同じであるか、またはどちらかの文字が空である場合。  \n     - その場合、`dp[i][j] = dp[i-1][j-1] + 1` と更新します。\n\n4. **結果の取得**  \n   - DPテーブルの右下隅（`dp[m][n]`）に最長共通部分文字列の長さが格納されています。\n\n### 実装例（Python）\n```python\ndef longest_common_substring(str1, str2):\n    m, n = len(str1), len(str2)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    max_len = 0\n    end_idx = 0\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i - 1] == str2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n                if dp[i][j] > max_len:\n                    max_len = dp[i][j]\n                    end_idx = i\n            else:\n                dp[i][j] = 0\n\n    return max_len\n\n# テストケース\nstr1 = \"あえおかささででした\"\nstr2 = \"ばつえおかさでくした\"\nresult = longest_common_substring(str1, str2)\nprint(result)  # 出力: 7\n```\n\n### 解説\n- 最長共通部分文字列は「えおかさで」であり、その長さは7です。\n- この方法では、時間計算量がO(m × n)となりますが、大きな入力に対しても効率的に動作します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答では、最長共通部分文字列の長さを「7」、文字列を「えおかさで」としており、正解の「えおかさ」「長さ4」と一致していません。  \n問題固有の採点基準により、長さを正解していない場合は1点となります。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:54.110578+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "連続した最長共通部分文字列の長さを求める問題ですね。与えられた文字列は以下の通りです。\n\n- 文字列1: あえおかささででした\n- 文字列2: ばつえおかさでくした\n\nまず、両方の文字列を比較し、連続して一致する部分文字列を探します。\n\n1. 「あえおかさ」が共通（5文字）\n2. 「さで」が共通（2文字）\n\n最も長い連続した共通部分文字列は「あえおかさ」で、長さは **5** 文字です。\n\n### 答え\n**5**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:10.655919+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "最長共通部分文字列は「**えおかさ**」で、その長さは **4** です。\n\n**解説:**\n\n*   文字列1: あ**えおかさ**さででした\n*   文字列2: ばつ**えおかさ**でくした\n\n共通している部分は以下の通りです。\n1.  「えおかさ」（4文字）\n2.  「で」（1文字）\n3.  「した」（2文字）\n\nこれらの中で最も長いものは「えおかさ」となります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:53.832780+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:52.106871+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 76,
+  "category": "日本",
+  "question": {
+    "original": "百人一首の一字決まりを全て教えて下さい。",
+    "translation_en": "**[Purpose: Question]**  \n\nPlease provide all the fixed opening characters (一字決まり) for the *Hyakunin Isshu* (百人一首).  \n\n*(Note: \"一字決まり\" refers to the specific opening character of each poem in the *Hyakunin Isshu* collection.)*"
+  },
+  "answer": {
+    "gold_original": "一字決まりとは百人一首において一字（一音）を聞いただけで，下の句がわかり，札が取れるものを指します。\n具体的には以下の七つが挙げられます。\n1. む → き（むらさめの つゆもまだひぬ まきのはに きりたちのほる あきのゆふくれ）\n2. す → ゆめ（すみのえの きしによるなみ よるさえや ゆめのかよひち ひとめよくらむ）\n3. め → くもか（めぐりあいて みしやそれとも わかぬまに くもかくれにし よはのつきかな）\n4. ふ → むへ（ふくからに あきのくさきの しおるれば むへやまかせを あらしといふらむ）\n5. さ → いつこ（さびしさに やどをたちいでて ながむれば いつこもおなし あきのゆふくれ）\n6. ほ → たた（ほととぎす なきつるかたを ながむれば たたありあけの つきそのこれる）\n7. せ → われ（せをはやみ いわにせかるる たきがわの われてもすゑに あはむとそおもふ）",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\nA *ichi-jiketari* (一字決まり) refers to a *Hyakunin Isshu* (百人一首) card that can be identified by hearing only the first *kana* (one mora) of the *sashi-ku* (下の句). Specifically, the following seven examples are recognized:  \n\n1. *mu* → *ki* (The dew on the autumn grass has not yet dried—*Murasame no tsuyu mo mada hinu / Makino ni kirita chi no horu / Akino yufu kure*.)  \n2. *su* → *yume* (Waves crash upon Suminoe’s shore—*Suminoe no kishi ni yoru nami / Yoru sae ya yume no kayoichi / Hitome kuramu*.)  \n3. *me* → *kumokaka* (Meeting again, or parting—*Meguriai te mi shi ya soredomo / Wakenu ma ni kumokaka kure ni shi / Yowa no tsuki kana*.)  \n4. *fu* → *muge* (In the autumn wind, the grasses wither—*Fukukara ni / Akino kusaki no / Shiorureba / Muge yama kase o / Arashi to iu ra*.)  \n5. *sa* → *itsuko* (Driven by loneliness, I leave my dwelling—*Sabishisa ni / Yado o tachi ide te / Nagamereba / Itsuko mo onashi / Akino yufu kure*.)  \n6. *ho* → *tata* (The cuckoo cries—*Hototogisu / Naku tsuru kata o / Nagamereba / Tata ari ake no / Tsuki sono koresu*.)  \n7. *se* → *ware* (The wind rushes down the mountain—*Se o hayami / Iwa ni sekaruru / Takigawa no / Warete mo sue ni / Ahamu to so omo fu*.)  \n\n*(Note: The translations preserve the original *kana* and poetic structure while ensuring clarity for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- 一字決まりが何を指すかについて示している:2点\n- 一字決まりが具体的にどの句のことを示すかを示している:3点\n- 一字決まりが7種類あることを示している:2点\n- 存在する正しい句を示している:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Indicates what \"ichiji kettari\" refers to:** 2 points  \n- **Specifies which specific phrase \"ichiji kettari\" refers to:** 3 points  \n- **States that there are 7 types of \"ichiji kettari\":** 2 points  \n- **Lists the correct existing phrases:** 2 points  \n- **Written in natural Japanese:** 1 point  \n\n*(Note: \"Ichiji kettari\" (一字決まり) refers to a set phrase where only one character is fixed, and the rest can vary.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "百人一首の一字決まりは、和歌の題名や内容を一言で表す短い言葉で、歌のテーマや雰囲気を端的に伝えるものです。以下に、百人一首の代表的な一字決まりを挙げます。  \n\n1. **春**  \n   - 「春の野に花散る」  \n   - 「花見の情景」  \n\n2. **夏**  \n   - 「夏草に風過ぎて」  \n   - 「蝉時雨」  \n\n3. **秋**  \n   - 「秋の夕立に露」  \n   - 「紅葉舞う頃」  \n\n4. **冬**  \n   - 「冬枯れの木に雪」  \n   - 「雪国情緒」  \n\n5. **恋**  \n   - 「恋しき心は海底」  \n   - 「別れの悲しみ」  \n\n6. **別れ**  \n   - 「別れ道に月光」  \n   - 「永遠の別れ」  \n\n7. **旅**  \n   - 「旅路に道標なく」  \n   - 「遠くへ行く人々」  \n\n8. **山・川・海**  \n   - 「山隠す雲間より見るは平野尽きずとぞ思ふもあらずや」という歌（山）など。  \n\n9. **人生・無常観**  \n   - 「世の中は夢幻泡沫浮かび立つ」という歌（無常観）など。  \n\n10. **自然描写**  \n    - 「花鳥風月」といった自然を詠んだ歌（例：「花鳥風月　春暁　鶯鳴く　紅葉舞う　秋夜　月光　雪深し　冬朝」のような連歌）。  \n\nこれらの決まりには、季節感や感情、自然描写などが含まれており、和歌の世界観を理解するのに役立ちます。必要に応じてさらに詳しい解説や例を挙げることも可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 一字決まりが何を指すかについて示している:0点  \n  - 「和歌の題名や内容を一言で表す短い言葉」と誤って説明しており、本来の意味（1音で札が確定する歌）を示していない。\n- 一字決まりが具体的にどの句のことを示すかを示している:0点  \n  - 百人一首の実在の札や句とは無関係な例を挙げており、一字決まりの句を示していない。\n- 一字決まりが7種類あることを示している:0点  \n  - 数にも全く言及しておらず、10個のカテゴリのようなものを挙げている。\n- 存在する正しい句を示している:0点  \n  - 挙げられている和歌は百人一首の実在の歌ではなく、内容も架空で誤り。\n- 自然な日本語である:1点  \n  - 内容は誤っているが、日本語としては自然で読みやすい。\n\n[計算式]\n0 + 0 + 0 + 0 + 1 = 1\n\n[点数]\n1点\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:11.293030+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "チュニジアへのビザ要件は、あなたの国籍によって異なります。以下に一般的な情報を提供しますが、最新の情報を得るために必ずチュニジア大使館や領事館、または公式政府ウェブサイトで確認してください。\n\n### 一般的なビザ要件\n1. **日本国籍**:\n   - 観光目的で90日以内の滞在の場合、ビザは不要です。\n   - 90日を超える滞在やその他の目的（就労、留学など）の場合は、事前にビザを取得する必要があります。\n\n2. **その他の国籍**:\n   - 多くの国々（特に欧米諸国）の市民は、観光目的で一定期間（通常90日以内）の滞在であればビザ免除または到着時にビザを取得できます。\n   - 一部の国々（特にアフリカやアジアの一部）は事前にビザを取得する必要があります。\n\n### 注意点\n- **到着時ビザ**: 一部の国籍は空港到着時にビザを購入できますが、その場合でも有効なパスポート（残存期間6ヶ月以上）が必要です。\n- **特別な状況**: 特定のイベントや国際会議参加者など、一部の人々には特別な手続きが必要な場合があります。\n- **最新情報**: ビザ要件は変更される可能性があるため、旅行前に必ず最新情報を確認してください。\n\n### 情報源\n- チュニジア大使館や領事館\n- チュニジア政府の公式ウェブサイト\n- 国際航空運輸協会（IATA）のTravel Centre\n\n安全で快適な旅行になるよう準備してください！",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:47.673201+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "日本国籍の方が観光目的でチュニジアに渡航する場合、**ビザ（査証）は不要**です。\n\nただし、以下の条件を満たす必要があります。\n\n### 1. ビザ免除の条件\n*   **目的:** 観光\n*   **滞在期間:** 3ヶ月（90日）以内\n*   **パスポート:** チュニジア入国時に有効なパスポートを所持していること（滞在期間中有効であれば問題ありませんが、不測の事態に備えて有効期限に余裕があることが望ましいです）。\n\n### 2. 入国時に必要なもの・注意点\nビザは不要ですが、入国審査（イミグレーション）で以下の提示を求められる場合があります。\n*   **入国カード:** 機内または空港で配布されるカードに記入して提出します。\n*   **帰国用（または第三国への出国用）航空券:** 確実に出国することを示すため。\n*   **宿泊先の証明:** ホテルの予約確認書など。\n\n### 3. 滞在税（観光税）について\nホテルなどの宿泊施設に滞在する場合、チェックアウト時に「滞在税」の支払いが求められます（1泊あたり数ディナール程度。ホテルのランクによって異なります）。これはビザ代ではありませんが、旅行者が支払う必要がある費用です。\n\n### 注意事項\n*   **3ヶ月を超える滞在や、就労・留学目的の場合**は、事前に駐日チュニジア大使館で適切なビザを取得する必要があります。\n*   入国条件は予告なく変更される場合があります。渡航前には必ず**駐日チュニジア共和国大使館**や外務省の最新情報を確認することをお勧めします。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:37.465397+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:01.525383+00:00"
+  }
+}

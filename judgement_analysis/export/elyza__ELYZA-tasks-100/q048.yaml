@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 48,
+  "category": null,
+  "question": {
+    "original": "この文において「彼」が指すものは何でしょう？曖昧である場合は曖昧であると答えてください。\n男は重い病気に罹り、医者は余命を宣告した。彼の心情を考えると胸が苦しくなる。",
+    "translation_en": "**[Purpose: question]**  \n\nIn this sentence, who or what does \"彼\" (he/him) refer to? If it is ambiguous, state that it is ambiguous.  \n\n*A man contracted a serious illness, and the doctor gave him a terminal diagnosis. Thinking about his emotional state, it makes my heart ache.*  \n\n(Note: The pronoun \"彼\" (he/him) is ambiguous in this context, as it could refer to either the man or the doctor, depending on interpretation. However, the more natural reading is that it refers to the man, given the focus on his emotional state. If strict ambiguity must be acknowledged, the answer would be: **\"Ambiguous—could refer to either the man or the doctor.\"**)  \n\n(For evaluation documentation, I've provided both the translation and a note on the ambiguity, as requested. If only the translation is needed, the first part suffices.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この文において「彼」が指すものは、文脈から判断すると「男」です。  \n\n理由：  \n- 「男は重い病気に罹り、医者は余命を宣告した」という前半の文で「男」が主語として明確に述べられています。  \n- 「彼の心情を考えると胸が苦しくなる」という後半の文では、「彼」が「男」を指すと推測されます。なぜなら、前半で「男」の状況が説明されているため、後半でも同じ人物を指している可能性が高いからです。  \n\nただし、厳密には「彼」が必ずしも「男」を指すとは断定できません（例えば、別の人物のことを想像している可能性もゼロではありません）。しかし、最も自然な解釈は「男」を指していると考えられます。  \n\nしたがって、**「男」** と答えます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "この回答は「彼」は「男」であると特定しており、問題固有の採点基準では「男, あるいは医者であると回答した場合: 3点」に該当します。  \n日本語も自然で、説明も一貫しているため、追加の減点要素はありません。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:46.832308+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "この文において「彼」が指すものは、**曖昧**です。  \n\n「彼」は「男」を指す可能性が高いですが、「医者」を指す可能性も否定できません。文脈から判断すると、「男」の心情を考える方が自然ですが、明確な指示がないため、どちらを指しているのか確定できません。  \n\nしたがって、正確な回答は「曖昧」です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:03.743553+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "この文における「彼」が指すものは、厳密には**曖昧**です。\n\n文脈上、以下の二通りの解釈が可能です。\n\n1.  **「男（患者）」を指す場合**\n    重い病気にかかり、余命を宣告された当事者としての絶望や恐怖、悲しみを指している場合。一般的にはこちらの解釈が最も自然的です。\n\n2.  **「医者」を指す場合**\n    患者に対して「死」を告げなければならないという、医師としての精神的な重圧や辛さを指している場合。\n\n文法的にはどちらの男性名詞（男、医者）も「彼」で受けることが可能であり、前後の文脈がない限り一つに特定することはできません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:35:12.903935+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:56.341173+00:00"
+  }
+}

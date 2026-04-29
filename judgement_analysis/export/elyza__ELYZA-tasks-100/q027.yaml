@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 27,
+  "category": null,
+  "question": {
+    "original": "1から500までの数字を入力するのに何回キーボードを叩く必要があるでしょうか？\n\n1桁の数字を入力するには1回、2桁の場合は2回、3桁の場合は3回キーボードを叩く必要があるものとします。\n\n選択肢: (a) 1156 (b) 1392 (c) 1480 (d) 1562 (e) 1788\n",
+    "translation_en": "**[Purpose: Question]**  \n\nHow many times must you press the keyboard to input all numbers from 1 to 500? Assume that entering a one-digit number requires 1 press, a two-digit number requires 2 presses, and a three-digit number requires 3 presses.  \n\n**Options:** (a) 1156 (b) 1392 (c) 1480 (d) 1562 (e) 1788  \n\n*(Note: The translation maintains the original structure and details while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くために、1から500までの数字を入力するのに必要なキーボード叩きの回数を計算します。  \n\n### 計算方法  \n1. **1桁の数字（1～9）**: 9個 × 1回 = 9回  \n2. **2桁の数字（10～99）**: 90個 × 2回 = 180回  \n3. **3桁の数字（100～499）**: 400個 × 3回 = 1200回  \n4. **500**: 1回  \n\n### 合計回数  \n\\[ 9 + 180 + 1200 + 1 = 1390 \\]  \n\n### 選択肢との比較  \n計算結果は **1390** 回ですが、選択肢には **1392** があります。誤差はわずか2回で、問題文の「1から500まで」の解釈やキーボード叩きの定義に若干の違いがある可能性があります。  \n\n### 最も適切な答え  \n選択肢の中では **(b) 1392** が最も近いです。ただし、正確には1390回ですが、選択肢にないため、最も近いのは(b)です。  \n\n**答え: (b) 1392**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "計算の方針自体は、1桁・2桁・3桁に分けて個数×桁数で求めようとしており、方向性は正しいです。\n\nしかし、\n- 3桁の数を「100～499の400個」としており、本来「100～500の401個」であるべきところを誤っているため、計算結果が1390回となってしまっています。\n- その後、「誤差はわずか2回」「定義に違いがある可能性」などとしていますが、これは単純な個数の数え間違いであり、問題文の解釈の問題ではありません。\n- 最終的に選択肢(b)を答えとして選んではいるものの、その根拠が「最も近いから」であり、正しい計算に基づいていません。\n\nよって、「1桁, 2桁, 3桁の3パターンに場合分けをして考えているが、外している」に該当し、減点対象です。  \n全体としては部分的に誤っており、部分的に合っている回答と評価できます。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:47.842708+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "1から500までの数字を入力するために必要なキーボードの打鍵回数を計算しましょう。\n\n* **1桁の数字 (1～9):** 9個 × 1回 = 9回\n* **2桁の数字 (10～99):** 90個 × 2回 = 180回\n* **3桁の数字 (100～500):**  \n    * 100～499: 400個 × 3回 = 1200回  \n    * 500: 1個 × 3回 = 3回  \n    * 合計: 1200 + 3 = **1203回**\n\nこれらを合計すると:  \n9 + 180 + 1203 = **1392回**\n\nしたがって、正解は **(b) 1392**です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:12.489108+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "正解は **(b) 1392** です。\n\n計算の内訳は以下の通りです。\n\n1.  **1桁の数字（1〜9）**\n    *   数字の個数：9個\n    *   キーを叩く回数：$9 \\times 1 = 9$ 回\n\n2.  **2桁の数字（10〜99）**\n    *   数字の個数：90個\n    *   キーを叩く回数：$90 \\times 2 = 180$ 回\n\n3.  **3桁の数字（100〜500）**\n    *   数字の個数：$500 - 100 + 1 = 401$ 個\n    *   キーを叩く回数：$401 \\times 3 = 1203$ 回\n\n**合計回数：**\n$9 + 180 + 1203 = 1392$ 回",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:49.484049+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:32:34.031269+00:00"
+  }
+}

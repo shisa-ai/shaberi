@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 6,
+  "category": null,
+  "question": {
+    "original": "次の文章を読んで、その人がどの程度怒っているか、1〜10の尺度で評価してください。(1＝怒っていない、10＝非常に怒っている)。\n\n1. またテストで赤点か。君は全く...\n2. テストで赤点？今回は難しかったね。",
+    "translation_en": "**[Purpose: Question]**  \n\nRead the following sentences and rate how angry the person is on a scale of 1 to 10 (1 = not angry at all, 10 = extremely angry).  \n\n1. \"Another failing grade on the test? You really… [sentence cut off]\"  \n2. \"Failing the test? This one was tough, huh?\"  \n\n*(Note: The first sentence appears to be cut off, suggesting strong anger, while the second is more neutral.)*  \n\n---  \n**Translation Notes:**  \n- Preserved the original tone and abruptness of the first sentence (implied anger).  \n- The second sentence is phrased as a casual observation, indicating less anger.  \n- No additional commentary or interpretation was added."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "1. またテストで赤点か。君は全く...  \n→ **8/10**（非常に怒っている）  \n\n2. テストで赤点？今回は難しかったね。  \n→ **2/10**（怒っていない、または軽い不満）  \n\n### 評価の理由：  \n- **1番目の文章**は「全く」という言葉と「～か」という断定的な文末から、強い不満や失望が感じられます。  \n- **2番目の文章**は「難しかったね」という配慮のある表現から、怒りではなく共感や理解を示しています。  \n\nこのように、文脈や言葉遣いによって感情の強さが大きく変わります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "5\n\nこの回答は、両方の文について怒りの程度を正しい範囲で評価できており（1問目は8で5〜9の範囲内、2問目は2で1〜4の範囲内）、さらに理由の説明も簡潔かつ妥当についています。日本語も自然で、不自然さや事実誤認もありません。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:45.818697+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "1. **8/10** - この文章は強い不満と怒りを示しています。「また」という言葉が繰り返しの失敗への苛立ちを表し、「全く...」という途切れさせた言い方が抑えきれない怒りを感じさせます。  \n2. **2/10** - この文章はほとんど怒りを示していません。「難しかったね」という言葉はむしろ同情や理解のニュアンスで、怒りの要素はほとんどありません。  \n\nしたがって、1番の文章の方が遥かに怒っていることがわかります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:09.751389+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提示された文章に基づき、怒りのレベルを評価しました。\n\n**1. 「またテストで赤点か。君は全く...」**\n**評価：7**\n**理由：**\n「また」という言葉から、同じ失敗が繰り返されていることへの強い苛立ちや、堪忍袋の緒が切れかかっている様子が伺えます。「君は全く...」と文末を濁している表現は、呆れ果てているか、あるいは怒りを抑えようとして言葉を飲み込んでいる状態を示唆しており、静かですが確実な怒り（または強い失望）が含まれています。\n\n**2. 「テストで赤点？今回は難しかったね。」**\n**評価：1**\n**理由：**\n相手が赤点を取った事実を確認していますが、その直後に「今回は難しかったね」と相手に寄り添い、共感を示しています。相手を責めるのではなく、テストの難易度に原因を求めて慰めているため、怒りの感情は全く読み取れません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:49.568981+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:31:57.551737+00:00"
+  }
+}

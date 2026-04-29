@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 63,
+  "category": null,
+  "question": {
+    "original": "次の指示に従った場合、あなたはスタート地点に戻っていますか？\n\n常に前を向いていてください。1歩下がって。2歩左へ行って。2歩下がって。6歩前進して。3歩、いや2歩右に進んで。",
+    "translation_en": "**[Purpose: Question]**  \n\nIf you follow the instructions below, will you end up back at the starting point?  \n\nAlways face forward. Take 1 step back. Move 2 steps to the left. Take 2 steps back. Move 6 steps forward. Then, move 3 steps (no, 2 steps) to the right.  \n\n*(Note: The translation preserves the original phrasing, including the hesitation \"3 steps, no, 2 steps,\" to maintain the exact meaning and nuance.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "指示に従って移動をシミュレートします。  \n\n1. **常に前を向いていてください。** → 現在の方向は前（正面）  \n2. **1歩下がって。** → 下（後方）へ1歩進む  \n   - 現在の位置: 前（正面）から下（後方）へ1歩進んだ位置  \n3. **2歩左へ行って。** → 左方向へ2歩進む  \n   - 現在の位置: 前（正面）から左へ2歩進んだ位置  \n4. **2歩下がって。** → 下（後方）へ2歩進む  \n   - 現在の位置: 左方向から下（後方）へ2歩進んだ位置  \n5. **6歩前進して。** → 前（正面）へ6歩進む  \n   - 現在の位置: 左方向から下（後方）へ2歩、さらに前（正面）へ6歩進んだ位置  \n6. **3步、いや2步右に進んで。** → 右方向へ2歩進む（「3步」は誤りと解釈）  \n   - 現在の位置: 前（正面）から右へ2歩進んだ位置  \n\n### 結果：スタート地点に戻るか？  \n- 最初の移動では「1歩下がる」ため、スタート地点から下方向に1ステップ離れる。  \n- その後、「6歩前進」するため、下方向への移動を上回り、スタート地点に戻る可能性があるが、最後の「右に2ステップ」という指示により、完全には戻らない可能性がある。  \n\n### 正確な回答：  \n「最後の指示により完全には戻らないため、スタート地点に完全には戻っていません。」  \n\nただし、最初の移動で「1ステップ下がる」だけならば、「6ステップ前進」で上回ります。そのため、最終的な移動は「右に2ステップ」という指示によりスタート地点からは少し離れています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": "回答は「スタート地点には戻っていない」という結論自体は正しいものの、\n\n- 位置を座標で追っておらず、どこにいるかを定量的に示していない\n- 「スタート地点に戻る可能性があるが〜可能性がある」など、あいまいな表現で論理が不明瞭\n- 最終的な位置が「スタート地点から3歩前に進んだ位置」であることに触れていない\n\nため、正解してはいるが、理由・説明が不十分と判断できます。\n\n採点基準に従うと「正解しているが理由や説明がない場合: 4点」に相当します。\n\nFINAL SCORE: 4",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:50.857668+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "指示に従って動きを追ってみましょう。  \n\n1. **1歩下がる** → 後ろに1歩（座標で表すと (0, -1)）  \n2. **2歩左へ行く** → 左に2歩（座標で (0, -1) → (-2, -1)）  \n3. **2歩下がる** → 後ろにさらに2歩（座標で (-2, -1) → (-2, -3)）  \n4. **6歩前進する** → 前に6歩（座標で (-2, -3) → (-2, 3)）  \n5. **3歩、いや2歩右に進む** → 右に実際には「2歩」（指示の訂正あり）（座標で (-2, 3) → (0, 3)）  \n\n最終的な位置は **(0, 3)** で、スタート地点 (0, 0) とは異なります。  \nしたがって、**スタート地点には戻っていません**。  \n\n（注：前提として「常に前を向いている」という条件があるため、左右の移動は向きを変えずに行うものと解釈しました。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:17.995111+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "いいえ、スタート地点には戻っていません。\n\n最終的に、スタート地点から**3歩前**にいることになります。\n\n動きの内訳は以下の通りです：\n\n**前後の動き：**\n*   1歩下がる (-1)\n*   2歩下がる (-2)\n*   6歩前進する (+6)\n*   合計：**+3（3歩前）**\n\n**左右の動き：**\n*   2歩左へ (-2)\n*   2歩右へ (+2) ※「3歩、いや2歩」という訂正に従います\n*   合計：**0（元の位置）**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:51.131403+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:38.668091+00:00"
+  }
+}

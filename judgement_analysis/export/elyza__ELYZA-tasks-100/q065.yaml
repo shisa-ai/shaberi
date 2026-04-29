@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 65,
+  "category": null,
+  "question": {
+    "original": "下の表はペンギンについてまとめたものです。\n\n名前, 年齢(歳), 身長(cm), 体重(kg)\nルイ, 7, 50, 11\nベルナール, 5, 80, 13\nヴィンセント, 9, 60, 11\nグエン, 8, 70, 15\n\n例えば、ルイの年齢は7歳、グエンの体重は15kg、ベルナールの身長は80cmです。\n\nQ: 一番老いているペンギンは誰ですか？",
+    "translation_en": "[Purpose: question]  \n\nThe table below summarizes information about penguins.  \n\n| Name       | Age (years) | Height (cm) | Weight (kg) |  \n|------------|-------------|-------------|-------------|  \n| Louis      | 7           | 50          | 11          |  \n| Bernard    | 5           | 80          | 13          |  \n| Vincent    | 9           | 60          | 11          |  \n| Gwen       | 8           | 70          | 15          |  \n\nFor example, Louis is 7 years old, Gwen weighs 15 kg, and Bernard is 80 cm tall.  \n\nQ: Which penguin is the oldest?"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "表から確認すると、ヴィンセントが9歳で一番老いているペンギンです。  \n\n**答え: ヴィンセント**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "回答は、最も年齢が高いペンギンがヴィンセントであり、その年齢が9歳であることにも触れており、問題固有の採点基準で満点条件を満たしています。日本語も自然で、不自然な点や事実誤認もありません。\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:43.978017+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "ヴィンセントが一番老いています。9歳です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:44:43.344785+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "一番老いているペンギンは**ヴィンセント**です（9歳）。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:45.348358+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:41.273887+00:00"
+  }
+}

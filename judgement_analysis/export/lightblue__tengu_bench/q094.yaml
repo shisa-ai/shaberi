@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 94,
+  "category": "フォーマット",
+  "question": {
+    "original": "Markdown形式で研究内容について報告するための文書例を作成して下さい。",
+    "translation_en": "**[Purpose: Question]**  \n\n*Please create an example document in Markdown format for reporting research content.*  \n\n(Translation preserves the original intent and structure while ensuring natural English phrasing suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 正しいMarkdown形式である:4点\n- タイトルなどが適宜\"#\"を用いて大きな文字にされている:3点\n- 文書の構成が具体的でわかりやすい:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Correct Markdown format:** 4 points  \n- **Appropriate use of \"#\" for titles and headings:** 3 points  \n- **Clear and well-structured document organization:** 2 points  \n- **Natural Japanese language:** 1 point  \n\n*(Note: The translation maintains the original meaning, structure, and scoring criteria while ensuring natural English phrasing suitable for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下は、研究内容を報告するためのMarkdown形式の文書例です。構造が明確で、読みやすいように設計されています。\n\n```markdown\n# 研究報告書\n\n## 1. 研究概要\n- **研究テーマ**: [具体的な研究テーマを記述]\n- **目的**: [研究の目的を簡潔に記述]\n- **期間**: [開始日] - [終了日]\n\n## 2. 研究背景\n- **問題提起**: [研究で解決しようとしている問題点]\n- **関連研究**: [類似研究の概要と本研究との差異]\n\n## 3. 方法論\n### 3.1 研究デザイン\n- **手法**: [使用した手法（実験、調査、シミュレーションなど）]\n- **対象**: [対象となるグループやデータ]\n\n### 3.2 データ収集\n- **方法**: [具体的なデータ収集方法]\n- **期間**: [収集期間]\n\n### 3.3 分析手法\n- **使用ツール**: [使用した分析ツール（統計ソフト、プログラミング言語など）]\n- **分析内容**: [実施した分析内容]\n\n## 4. 結果\n### 4.1 主要な発見\n| 項目 | 値/結果 |\n|------|--------|\n| ... | ... |\n\n### 4.2 統計的有意性\n- **p値**: [p値の結果]\n- **有意差の有無**: [有意差があるかどうかの判断]\n\n## 5. 考察\n- **結果の解釈**: [結果が示す意味合い]\n- **今後の課題**: [今後の改善点や展望]\n\n## 6. 参考文献 (Optional)\n```bibliography\n@article{example,\n    author = {Author Name},\n    title = {Title of the Article},\n    journal = {Journal Name},\n    year = {Year}\n}\n```\n\n## 7. アップロード情報 (Optional)\n```\n[ファイル名]: ファイルパスまたはURL\n[ファイル説明]: ファイルの内容や用途について簡単に説明します。\n```\n\nこのテンプレートは、学術論文やプロジェクト報告書など、あらゆる分野で利用可能です。必要に応じてセクションを追加・削除してください。\n```\n\nこの例では以下の特徴を取り入れています：\n1. 見出しと箇条書きで構造化されているため読みやすい\n2. 表形式で主要なデータを整理可能（必要に応じて追加）\n3. 参考文献リストやアップロード情報などのオプションセクションを含むことで柔軟性を持たせている\n\n必要に応じてさらに詳細なセクション（例：倫理的配慮、予算管理など）を追加することも可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 正しいMarkdown形式である:4点  \n  - 見出し、箇条書き、表、コードブロックなどMarkdownの構文が正しく使われている。  \n- タイトルなどが適宜\"#\"を用いて大きな文字にされている:3点  \n  - `# 研究報告書` をはじめ、`##` や `###` で階層的な見出しが設定されている。  \n- 文書の構成が具体的でわかりやすい:2点  \n  - 概要、背景、方法論、結果、考察、参考文献など、研究報告として妥当で整理された構成になっている。  \n- 自然な日本語である:1点  \n  - 全体として自然で読みやすい日本語で記述されている。  \n\n[計算式]\n4 + 3 + 2 + 1 = 10  \n\n[点数]\n10  \n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:18.056780+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "はい、**「枕が吹っ飛んだ」**はダジャレ（駄洒落）と言えます。  \n\n### 解説：\n1. **「枕」**には「まくら」と読む本来の意味がありますが、  \n2. **「枕（まくら）が飛ぶ」**という表現は、  \n   - **「頭から離れる」「忘れる」**という意味の慣用句「頭から吹っ飛ぶ」と掛けているため、ダジャレになります。  \n\nさらに、「枕（まくら）」と「頭（あたま）」が関連性があるため、言葉遊びとして成立しています。  \n\n### 判定：  \n✅ ダジャレです。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:36.722395+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "いいえ、それはダジャレではありません。\n\n有名なダジャレに**「布団（ふとん）が吹っ飛んだ（ふっとんだ）」**というものがあります。これは「ふとん」と「ふっとん（だ）」の音が似ている（韻を踏んでいる）ため、ダジャレとして成立します。\n\nしかし、「枕（まくら）」と「吹っ飛んだ」では音が似ていないため、単に事実を述べているだけの文であり、言葉遊びにはなっていません。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:41.126521+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:41:57.832151+00:00"
+  }
+}

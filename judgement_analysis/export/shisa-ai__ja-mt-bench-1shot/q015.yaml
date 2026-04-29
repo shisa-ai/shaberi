@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 15,
+  "category": null,
+  "question": {
+    "original": "以下の文中に登場する国、その首都、そして話されている言語を特定してください。出力はJSON形式でお願いします。\na) 優美な景色の中で、デンマークの首都コペンハーゲンは、活気に満ちたアートシーンと魅力的なデンマーク語で訪問者を魅了します。\nb) 魔法の国エルドリアの中には、壮大な都市アヴァロアがあり、幻想的なオーラが放たれています。この神秘的な場所で主に使われるのは、美しい言葉であるルミナ語です。\nc) 伝統と現代が見事に調和した中で、アルゼンチンの首都ブエノスアイレスは、活気に満ちた大都市として立っています。情緒豊かなスペイン語が市民の間で主流となっています。",
+    "translation_en": "```json\n[\n  {\n    \"country\": \"Denmark\",\n    \"capital\": \"Copenhagen\",\n    \"language\": \"Danish\"\n  },\n  {\n    \"country\": \"Eldoria\",\n    \"capital\": \"Avalora\",\n    \"language\": \"Luminian\"\n  },\n  {\n    \"country\": \"Argentina\",\n    \"capital\": \"Buenos Aires\",\n    \"language\": \"Spanish\"\n  }\n]\n```"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下が、各文における国、首都、話されている言語をJSON形式でまとめたものです。  \n\n```json\n[\n  {\n    \"text\": \"a) 優美な景色の中で、デンマークの首都コペンハーゲンは、活気に満ちたアートシーンと魅力的なデンマーク語で訪問者を魅了します。\",\n    \"country\": \"デンマーク\",\n    \"capital\": \"コペンハーゲン\",\n    \"language\": \"デンマーク語\"\n  },\n  {\n    \"text\": \"b) 魔法の国エルドリアの中には、壮大な都市アヴァロアがあり、幻想的なオーラが放たれています。この神秘的な場所で主に使われるのは、美しい言葉であるルミナ語です。\",\n    \"country\": \"エルドリア\",\n    \"capital\": \"アヴァロア\",\n    \"language\": \"ルミナ語\"\n  },\n  {\n    \"text\": \"c) 伝統と現代が見事に調和した中で、アルゼンチンの首都ブエノスアイレスは、活気に満ちた大都市として立っています。情緒豊かなスペイン語が市民の間で主流となっています。\",\n    \"country\": \"アルゼンチン\",\n    \"capital\": \"ブエノスアイレス\",\n    \"language\": \"スペイン語\"\n  }\n]\n```  \n\nこの形式では、各文の情報を明確に分離し、必要に応じて検索や分析が可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": "全体として、ユーザーの指示に正確に従っており、内容・形式ともに適切な回答です。\n\n- 質問は「文中に登場する国、その首都、そして話されている言語を特定し、JSON形式で出力する」ことでしたが、回答は3つの文それぞれについて country / capital / language を正しく抽出しています。\n- a) デンマーク / コペンハーゲン / デンマーク語  \n  c) アルゼンチン / ブエノスアイレス / スペイン語  \n  は現実の情報としても正しく、b) についても架空の国・都市・言語をそのまま抽出しており、問題ありません。\n- JSON構造も妥当で、配列の各要素に text / country / capital / language が整理されており、機械処理にも適した形式です。\n- 日本語も自然で丁寧であり、不適切な表現や意味不明な箇所、ループ・反復もありません。\n- 要求以上の余計な情報はほとんどなく、最後の一文の説明も簡潔で許容範囲です。\n\n減点要素は特に見当たりません。\n\nFINAL SCORE: 10",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:07.958578+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下にJSON形式で出力します。  \n\n```json\n{\n  \"a\": {\n    \"country\": \"デンマーク\",\n    \"capital\": \"コペンハーゲン\",\n    \"language\": \"デンマーク語\"\n  },\n  \"b\": {\n    \"country\": \"エルドリア\", // 架空の国\n    \"capital\": \"アヴァロア\", // 架空の都市\n    \"language\": \"ルミナ語\" // 架空の言語\n  },\n  \"c\": {\n    \"country\": \"アルゼンチン\",\n    \"capital\": \"ブエノスアイレス\",\n    \"language\": \"スペイン語\"\n  }\n}\n```  \n\n※ b) のエルドリアは架空の国ですが、問題文に従って記載しました。必要に応じて除外してください。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:12.282917+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n[\n  {\n    \"id\": \"a\",\n    \"country\": \"デンマーク\",\n    \"capital\": \"コペンハーゲン\",\n    \"language\": \"デンマーク語\"\n  },\n  {\n    \"id\": \"b\",\n    \"country\": \"エルドリア\",\n    \"capital\": \"アヴァロア\",\n    \"language\": \"ルミナ語\"\n  },\n  {\n    \"id\": \"c\",\n    \"country\": \"アルゼンチン\",\n    \"capital\": \"ブエノスアイレス\",\n    \"language\": \"スペイン語\"\n  }\n]\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:02.407425+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:35.865193+00:00"
+  }
+}

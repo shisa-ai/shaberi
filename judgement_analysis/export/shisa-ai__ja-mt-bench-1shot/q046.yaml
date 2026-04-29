@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 46,
+  "category": null,
+  "question": {
+    "original": "下記は三つのステートメントがあります。最初の2つのステートメントに基づいて、3番目のステートメントは真実、偽り、または不確定なのか考えてください。\n\n1. オレンジはリンゴよりも高価です。\n2. オレンジはバナナよりも安価です。\n3. バナナはリンゴよりも高く、バナナはオレンジよりも高価です。\n\n最初の2つのステートメントが真実である場合、3番目のステートメントは真実、偽り、または不確定ですか？",
+    "translation_en": "**[Purpose: Question]**  \n\nThe following are three statements. Based on the first two statements, determine whether the third statement is true, false, or indeterminate.  \n\n1. Oranges are more expensive than apples.  \n2. Oranges are cheaper than bananas.  \n3. Bananas are more expensive than apples, and bananas are more expensive than oranges.  \n\nIf the first two statements are true, is the third statement true, false, or indeterminate?  \n\n---  \n\n*(Translation preserves the logical structure and meaning of the original Japanese text, suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "最初の2つのステートメントが真実である場合、3番目のステートメントは**偽り**です。  \n\n理由：  \n1. オレンジはリンゴよりも高価（ステートメント1）。  \n2. オレンジはバナナよりも安価（ステートメント2）。  \n\nこれらから、オレンジ > リンゴ > バナナ の順序が導かれます。したがって、バナナがリンゴよりも高く、オレンジよりも高価という主張（ステートメント3）は誤りです。  \n\n**結論：偽り**",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "説明：  \n論理の扱い方に誤りがあります。  \n1. 「オレンジはリンゴよりも高価」→ オレンジ > リンゴ  \n2. 「オレンジはバナナよりも安価」→ バナナ > オレンジ  \n\nこの2つから導かれる順序は「バナナ > オレンジ > リンゴ」です。  \nしたがって、3番目の「バナナはリンゴよりも高く、バナナはオレンジよりも高価です」は  \n- バナナ > リンゴ → 真  \n- バナナ > オレンジ → 真  \n\nよって3番目のステートメントは「真実」です。  \nアシスタントはここを「オレンジ > リンゴ > バナナ」と誤って推論しており、結論も逆になっているため、論理的正しさの点で大きな減点となります。  \n日本語自体は自然で読みやすいですが、核心となる論理が誤っているため、全体の有用性は低いです。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:04.454294+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "3番目のステートメントは**真実**です。\n\n理由：\n\n*   1番目のステートメントから、オレンジ > リンゴ\n*   2番目のステートメントから、バナナ > オレンジ\n*   これらを組み合わせると、バナナ > オレンジ > リンゴ となります。\n*   したがって、バナナはリンゴよりも高価であり、バナナはオレンジよりも高価であるという3番目のステートメントは真実です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:08.481355+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "**真実** です。\n\n論理的な推論は以下の通りです。\n\n1.  **ステートメント1:** オレンジ > リンゴ\n2.  **ステートメント2:** バナナ > オレンジ\n\nこれらを組み合わせると、価格の順序は **バナナ > オレンジ > リンゴ** となります。\n\n3番目のステートメントは以下の2つの主張をしています。\n*   「バナナはリンゴよりも高い」：上記の順序（バナナ > ... > リンゴ）により、これは正しいです。\n*   「バナナはオレンジよりも高価」：ステートメント2（バナナ > オレンジ）により、これも正しいです。\n\n両方の主張が正しいため、3番目のステートメントは真実です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:00.670688+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:10.086381+00:00"
+  }
+}

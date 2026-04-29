@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 16,
+  "category": null,
+  "question": {
+    "original": "下記の段落を読み、\"アマゾン\"、\"川\"、そして\"生物\"が何回出現するか数えてください。結果は\"単語、出現回数\"の形式で、各単語を別々の行にしてください。出現回数の多い順に行を並べてください。\nアマゾンは自然の驚異が広がる魅惑的な地域で、そこには伝説的なアマゾン川が流れています。アマゾンの熱帯雨林をはじめとする壮大な風景を通り、川はブラジル、コロンビア、ペルーを経由し、無数の生物に生命を与えています。アマゾンのジャングルをうろつく強大なジャガーから、樹冠上空を飛び回る鮮やかなマカウまで、この驚くべき地域は生物多様性に溢れています。川の流れの中深くには、壮観なピンクの川のイルカが、ピラニアやエレクトリックイールと共に優雅に泳いでいます。川岸には、都市と自然が交錯するマナウスのような活気ある都市や、アマゾン熱帯雨林の中心への入口となるイキトスがあります。さらに進むと、アマゾン川はアナヴィリアナス諸島という魅力的な秘境を明らかにします。ここは稀有な種類が溢れる島々のモザイクです。冒険に乗り出し、魅力的なアマゾン川を探検し、生命と自然美に満ちた世界に身を浸してみてください。",
+    "translation_en": "**Word, Occurrence Count**  \n**アマゾン (Amazon), 6**  \n**川 (river), 5**  \n**生物 (life/organisms), 3**  \n\n*(Note: \"生物\" appears 3 times, but the exact count may vary slightly depending on interpretation—e.g., \"生物多様性\" (biodiversity) could be considered an additional instance. However, the primary noun \"生物\" appears 3 times explicitly.)*  \n\n*(Sorted by frequency as requested.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下に、各単語の出現回数を示します。  \n\n- **アマゾン**、3回  \n- **川**、4回  \n- **生物**、3回  \n\n出現回数の多い順に並べると、以下のようになります。  \n\n- **川**、4回  \n- **アマゾン**、3回  \n- **生物**、3回  \n\nしたがって、結果は以下の通りです。  \n\n```\n川, 4\nアマゾン, 3\n生物, 3\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "回答は日本語として自然で丁寧であり、指定された出力形式（「単語, 出現回数」、多い順、各語を別行）も守られています。ただし、肝心のカウントが誤っています。\n\n実際に数えると：\n- 「アマゾン」は「アマゾン」「アマゾン川」「アマゾンの」「アマゾンの」「アマゾン熱帯雨林」「アマゾン川」「アマゾン川」で計7回出現します。\n- 「川」は「アマゾン川」「川は」「川の」「川の」「アマゾン川」「アマゾン川」で計6回です。\n- 「生物」は「無数の生物」「生物多様性」で「生物」を含むのは2回です。\n\nしたがって、提示された「アマゾン3回・川4回・生物3回」はいずれも誤りであり、有用性・正確性の面で大きく減点となります。文章構成や形式は良いものの、タスクの核心であるカウントが間違っているため、全体評価は低くなります。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:04.267088+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "川、7  \nアマゾン、6  \n生物、2",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:02.402257+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "アマゾン, 7\n川, 7\n生物, 2",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 4,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:05.437310+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:37.306632+00:00"
+  }
+}

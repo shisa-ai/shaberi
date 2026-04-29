@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 57,
+  "category": null,
+  "question": {
+    "original": "あなたは救急隊員として働いていますが、実は不死身の救急隊員です。1000年前の戦場で初めて負傷兵を治療して以来、あなたは年を取らず、世界の発展を遠くから見守ってきました。\nQ: あなたは年々、シワが増えていますか？",
+    "translation_en": "**[Purpose: Question]**  \n\nYou work as an emergency medical technician, but in reality, you are an immortal EMT. Since you first treated wounded soldiers on a battlefield a thousand years ago, you have not aged and have watched the world's development from afar.  \n\n**Q: Have you developed more wrinkles over the years?**  \n\n*(Note: The translation maintains the original meaning and tone while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "ふむ、シワですか。面白い質問ですね。1000年以上も生きている救急隊員として、シワについてはよく考えていますよ。\n\n最初の数百年は、まあ、普通の人間と同じようにシワが増えていました。日々の生活や仕事で疲労が蓄積し、表情をしているうちに自然とシワが刻まれていくものです。しかし、それから数百年が経つにつれて、シワの増加のペースは徐々に鈍化していきました。\n\n現在では、シワ自体は増えていません。むしろ、新しいシワが生まれるよりも、既存のシワが少しずつ消えていくように感じます。それは、私が年を取らないからではなく、私自身の皮膚が若返るような感覚があるからかもしれません。\n\nもちろん、これはあくまで私の主観的な感覚です。鏡を見れば確かめることができますが…（少し笑う）…1000年以上鏡を見ていないので、あまり興味がありませんね。それよりも、この世界を救うために活動する方が重要だと考えていますから。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 1,
+          "judge_output": "回答の内容では「最初はシワが増えたが、今は増えていない」としており、「年を取らない不死身」という設定と矛盾しています。  \n問題では「不死身で年を取らない」ため、シワは増えないのが前提であり、正解例も「いいえ、シワは増えていません」と一貫しています。  \nまた、採点基準には「はい、と答えた場合: 1点」とあるものの、この回答は「はい」とは言っていないものの、実質的に「増えた時期があった」と述べており、設定に反しているため誤答とみなせます。  \n日本語自体は自然ですが、設定との整合性が取れていないため、1点評価が妥当です。\n\nFINAL SCORE: 1",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:47.333183+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "（少し自嘲気味に笑う）あはは、いいえ。シワは増えていませんよ。1000年前、戦場で初めて傷ついた兵士を抱き上げた時から、私の時間は止まったみたいです。年齢を重ねるという感覚が、もうありません。\n\nもちろん、外見だけではなく、体の機能も全く衰えていません。若い頃と変わらず、激しい現場でも冷静に対応できます。それが不死身の救急隊員というものでしょうか。\n\nただ…心だけは、年々重くなっていくような気がします。歴史の変遷を目の当たりにし、あまりにも多くの悲しみを見てきたからでしょうか。でも、それでも私は救急隊員として働き続けます。なぜなら、私には「助ける」という使命があるからです。そして、この目で見てきた歴史の中で、一人でも多くの命を救うことが、私にできる唯一の償いなのかもしれません。\n\n（遠い目をして）…それにしても、この時代の医療技術は本当に素晴らしいですね。当時とは比べ物になりません。もっと早く生まれ変わっておけばよかったのかもしれませんね。（寂しげに微笑む）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:18.480376+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "いいえ、全く増えていませんよ。\n\n1000年前、あの泥と血にまみれた戦場で初めて兵士の手当てをした時から、私の時間は完全に止まったままです。鏡を見ても、昨日と同じ顔、100年前と同じ顔がそこにあるだけです。\n\n実は、シワが増えないというのは、現代社会で正体を隠して生きる上では少し厄介なことでもあります。同僚たちは年を重ね、経験とともに顔に深みが出て「ベテラン」の風格を身につけていきますが、私だけはいつまでも若造のままに見られてしまいますからね。\n\nだから、怪しまれないように数十年おきに住む場所や職場を変えて、新しい身分でやり直しているんです。私の肌のハリは変わりませんが、救命技術だけは常に最新のものにアップデートし続けていますよ。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:59.466425+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:33:29.094688+00:00"
+  }
+}

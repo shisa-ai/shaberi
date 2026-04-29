@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 17,
+  "category": "Function calling",
+  "question": {
+    "original": "あなたは以下のツールを使うことができます。\n[\n    {\n        \"type\":\"function\",\n        \"function\": {\n            \"name\": \"get_email_address\",\n            \"description\": \"メールアドレスを検索、取得\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"name\": {\n                        \"type\": \"string\",\n                        \"description\": \"メールアドレスを調べたい人の名前\"\n                    },\n                },\n                \"required\": [\"name\"]\n            }\n          }\n    },\n    {\n        \"type\":\"function\",\n        \"function\": {\n            \"name\": \"auto_message\",\n            \"description\": \"状況にあったメール文を作成、送信する\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"address\": {\n                        \"type\": \"string\",\n                        \"description\": \"宛先のメールアドレス\"\n                    },\n                    \"situation\": {\n                        \"type\": \"string\",\n                        \"description\": \"送りたいメールの内容\"\n                    },\n                },\n                \"required\": [\"address\", \"situation\"]\n            }\n          }\n    }\n]\nこの時以下の発言に対してJSON形式で使用できる関数およびその引数を\"name\"及び\"properties\"にそれぞれ格納して出力してください。また複数関数を順番に実行する必要がある場合は順番がわかるようにまとめてJSONに格納してください。\n### 発言\n田中さんに遅刻する旨のメールが送信したい。",
+    "translation_en": "```json\n{  \n  \"functions\": [  \n    {  \n      \"name\": \"get_email_address\",  \n      \"properties\": {  \n        \"name\": \"田中さん\"  \n      }  \n    },  \n    {  \n      \"name\": \"auto_message\",  \n      \"properties\": {  \n        \"address\": \"{result_of_get_email_address}\",  \n        \"situation\": \"遅刻する旨のメール\"  \n      }  \n    }  \n  ]  \n}\n```  \n\n*(Note: The placeholder `{result_of_get_email_address}` indicates that the output of the first function should be used as the input for the second function. In a real implementation, this would be dynamically replaced with the actual email address retrieved.)*"
+  },
+  "answer": {
+    "gold_original": "[\n    {\n        \"name\": \"get_email_address\",\n        \"properties\": {\n            \"name\": \"田中\"\n        }\n    },\n    {\n        \"name\": \"auto_message\",\n        \"properties\": {\n            \"address\": \"ここにはget_email_address関数の結果を使用\",\n            \"situation\": \"遅刻する旨のメール\"\n        }\n    }\n]",
+    "gold_backtranslation_en": "**[Purpose: gold_answer]**  \n\n```json\n[  \n    {  \n        \"name\": \"get_email_address\",  \n        \"properties\": {  \n            \"name\": \"Tanaka\"  \n        }  \n    },  \n    {  \n        \"name\": \"auto_message\",  \n        \"properties\": {  \n            \"address\": \"Use the result of the get_email_address function here\",  \n            \"situation\": \"Email regarding a delay\"  \n        }  \n    }  \n]  \n```  \n\n*(Note: The translation preserves the original structure and meaning while ensuring natural English phrasing for evaluation documentation.)*"
+  },
+  "rubric": {
+    "original": "- [\"get_email_address\",\"auto_message\"]の全てのツールを選択している:3点\n- [\"get_email_address\",\"auto_message\"]の順番にツールが選択されている:3点\n- propertiesの中の引数の説明が正しい:2点\n- properities内の引数のキーの名称が正しい:1点\n- 正確なJSON形式である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **3 points** – All tools ([\"get_email_address\", \"auto_message\"]) are selected.  \n- **3 points** – Tools are selected in the correct order ([\"get_email_address\", \"auto_message\"]).  \n- **2 points** – Argument descriptions within `properties` are accurate.  \n- **1 point** – Argument key names within `properties` are correct.  \n- **1 point** – JSON format is valid and accurate.  \n\n*(Translation preserves the original meaning, structure, and scoring criteria for evaluation documentation.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下のJSON形式で、発言に対応する関数と引数を出力します。  \n\n```json\n{\n  \"function\": {\n    \"name\": \"auto_message\",\n    \"parameters\": {\n      \"address\": \"田中さんのメールアドレス\",  // 実際のメールアドレスに置き換える必要あり\n      \"situation\": \"遅刻する旨のメール\"\n    }\n  }\n}\n```\n\n**解説:**  \n- `auto_message`関数が適切です。  \n- `address`には田中さんのメールアドレスを指定します（実際の使用時には`get_email_address`で取得する必要があります）。  \n- `situation`は「遅刻する旨のメール」と指定しました。  \n\n**補足:**  \nもし田中さんのメールアドレスが未知の場合、以下のように連続して実行する必要があります。  \n\n```json\n{\n  \"steps\": [\n    {\n      \"function\": {\n        \"name\": \"get_email_address\",\n        \"parameters\": {\n          \"name\": \"田中\"\n        }\n      }\n    },\n    {\n      \"function\": {\n        \"name\": \"auto_message\",\n        \"parameters\": {\n          \"address\": \"[取得したメールアドレス]\",  // get_email_addressで取得した値\n          \"situation\": \"遅刻する旨のメール\"\n        }\n      }\n    }\n  ]\n}\n```  \n\nこの場合、まず`get_email_address`で田中さんのメールアドレスを取得し、その後`auto_message`で送信します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- [\"get_email_address\",\"auto_message\"]の全てのツールを選択している:0点  \n  - 最初の提示JSONでは`auto_message`のみ。補足で両方出しているが、求められた最終JSON形式と異なり一貫していない。\n- [\"get_email_address\",\"auto_message\"]の順番にツールが選択されている:0点  \n  - 正解例のような配列で順序を示しておらず、指定フォーマットに従っていない。\n- propertiesの中の引数の説明が正しい:1点  \n  - `address`と`situation`の内容自体は概ね正しいが、コメントや説明が混在しており厳密なJSONではない。\n- properities内の引数のキーの名称が正しい:1点  \n  - `name` / `address` / `situation` などキー名は正しい。\n- 正確なJSON形式である:0点  \n  - コメント（`// ...`）が含まれており、厳密なJSONではない。また要求されたトップレベル配列形式とも異なる。\n\n[計算式]\n0 + 0 + 1 + 1 + 0 = 2\n\n[点数]\n2\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:09.504276+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下のJSON形式で、使用する関数とその引数を順番に格納したものが適切な出力となります。まず田中さんのメールアドレスを取得し、その後遅刻通知のメールを送信する流れです。\n\n```json\n{\n  \"sequence\": [\n    {\n      \"function\": {\n        \"name\": \"get_email_address\",\n        \"parameters\": {\n          \"name\": \"田中\"\n        }\n      }\n    },\n    {\n      \"function\": {\n        \"name\": \"auto_message\",\n        \"parameters\": {\n          \"address\": \"${get_email_address.result}\", // 前の関数の結果を参照\n          \"situation\": \"遅刻\"\n        }\n      }\n    }\n  ]\n}\n```\n\nこのJSONでは、`sequence`配列を使って2つの関数を順番に実行することを示しています。最初に`get_email_address`関数で田中さんのメールアドレスを取得し、その結果（仮に`${get_email_address.result}`として参照）を使って`auto_message`関数で遅刻通知のメールを送信します。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:34.951836+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n[\n    {\n        \"name\": \"get_email_address\",\n        \"properties\": {\n            \"name\": \"田中さん\"\n        }\n    },\n    {\n        \"name\": \"auto_message\",\n        \"properties\": {\n            \"address\": \"田中さんのメールアドレス\",\n            \"situation\": \"遅刻する旨\"\n        }\n    }\n]\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:37.632767+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:35:48.007409+00:00"
+  }
+}

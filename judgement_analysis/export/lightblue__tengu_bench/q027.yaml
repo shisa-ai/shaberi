@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 27,
+  "category": "会話要約",
+  "question": {
+    "original": "以下の会話を要約してください。\n### 会話\n大月：僕は千葉出身なんですけど、津村さんの地元はどこなんですか？\n津村：埼玉県。商業高校の応援団長をやっていました。当時は、応援団に入っていると髪型や学ランにちょっとだけ自由が許されていたから入団して。ちょっとヤンキーだったのかもしれないね（笑）。\nーデザイナーの人って、どこで生まれ育ったかを尋ねる人が多い気がします。\n大月：やっぱりルーツが大事だからなのかな。それに、さっき言ったようにファッションには「みんなが白を着ているなら、俺は黒を着る」みたいな相対性があるから。特に、埼玉、千葉、茨城あたりの「東京にもアクセスできる半端な田舎」が一番その相対性が強く出る気がする。\n津村：俺はイオンモールでは服を買わないぞ！とかね（笑）。ベッドタウンとしての郊外は周辺へのコンプレックスが加速するのよ。\n大月：「俺もどうせなら島根とか鳥取出身って言いたかったな」と思っていました。\n津村：きちんと別のカルチャーがそこにはもうあるもんね。\n大月：コンプレックスでファッションをやっている節はありませんか？\n津村：大いにあるよ。常に何かしらのショックがあった時にコンプレックスが生まれて、それがファッションに昇華できたら最高だよ。\n\nファッションはコミュニティの中からしか生まれない\n大月：コミュニティがファッションを生み出すんだなということを最近考えるんです。例えば、僕がカッコいいと思っていたのはアルバイト先のスーパーマーケットで働いていた上司で。正社員なのに剃り込みが入っていて、ちょっとヤンキーっぽい風体をしているのに「いらっしゃっせー、いらっしゃっせー」と店内放送を流す声や仕草がとてもイカしていて、憧れたんですよ。憧憬も含めて、「あれは確かにファッションであったよな」と。\n津村：そのスーパーマーケットのお兄ちゃんを違うコミュニティに置いても、同じようにはカッコよく映らないよね。\n大月：コミュニティ内でのみ成立するかっこよさや、憧れの図式化ってありますよね。\n津村：BAD HOPとかもそうだけど、彼らもやっぱり神奈川県川崎市という地域じゃない。\n大月：ラッパーは、レぺゼン地域ですからね。\n\n津村：そういう地域からカルチャーやファッションみたいなものは生まれるんじゃないかな。キャップの下にバンダナを巻くとか、スウェットパンツの左足だけをたくしあげるとか。\n大月：地域の中だけで生まれた一見どうでもいい着こなしルールは、おそらくコミュニティ内で醸造されたマジョリティに対するカウンターとして生まれたものだと思うんですよね。",
+    "translation_en": "**Summary of the Conversation:**  \n\n**Daigatsu:** I’m from Chiba, but where are you from, Tsutsumi?  \n**Tsutsumi:** Saitama. I was the cheerleading squad leader at a commercial high school. Back then, being in the squad gave you a little freedom with hairstyles and gakuran uniforms, so I joined. I might have been a bit of a delinquent back then (laughs).  \n\n**Daigatsu:** I feel like people often ask designers where they grew up. Maybe roots are important. Plus, like I said earlier, fashion has a relativity—like \"if everyone’s wearing white, I’ll wear black.\" I think that’s especially strong in places like Saitama, Chiba, and Ibaraki—those \"semi-rural areas with access to Tokyo.\"  \n**Tsutsumi:** Yeah, like, \"I refuse to buy clothes at Aeon Malls!\" (laughs). Suburban bedroom communities just amplify that sense of inferiority toward the surrounding areas.  \n**Daigatsu:** I was secretly wishing I could say I was from Shimane or Tottori.  \n**Tsutsumi:** Because there’s already a distinct culture there.  \n**Daigatsu:** Do you think fashion can stem from insecurity?  \n**Tsutsumi:** Absolutely. Whenever I experience some kind of shock, it creates an insecurity, and if I can channel that into fashion, that’s the best.  \n\n**Fashion Only Emerges from Communities**  \n**Daigatsu:** I’ve been thinking lately that communities create fashion. For example, the boss at the supermarket where I worked part-time was the coolest. He was a full-time employee but had a mohawk and a slightly delinquent look, yet his voice and gestures when announcing \"Welcome, welcome!\" over the PA system were so cool—I admired him. Including that admiration, \"That was definitely fashion.\"  \n**Tsutsumi:** That supermarket guy wouldn’t look as cool in a different community, right?  \n**Daigatsu:** There’s a certain coolness or admiration that only exists within a community.  \n**Tsutsumi:** Like BAD HOP—they’re also tied to their region, Kawasaki, Kanagawa.  \n**Daigatsu:** Rappers are representatives of their regions, after all.  \n\n**Tsutsumi:** I think culture and fashion come from those kinds of places. Like wearing a bandana under a cap or rolling up only the left pant leg of sweatpants.  \n**Daigatsu:** Those seemingly insignificant style rules that only exist within a region—I think they’re born as a counter to the majority within that community.  \n\n*(Note: The translation preserves the conversational tone, cultural references, and key ideas while ensuring clarity for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": "- 文章中の以下の情報を含んでいる\n  - 出身地についての質問:2点\n  - ファッションはコミュニティから生まれる:2点\n  - 地域の着こなしルールは地域のマジョリティへの反抗である:2点\n- 文章中の論理関係を保存している:2点\n- 自然な日本語である:1点\n- 要約として適切な短さである:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- **Includes the following information in the text:**  \n  - Question about place of origin: 2 points  \n  - Fashion originates from the community: 2 points  \n  - Local dress codes are a rebellion against the regional majority: 2 points  \n- **Preserves logical relationships in the text:** 2 points  \n- **Natural Japanese phrasing:** 1 point  \n- **Appropriately concise as a summary:** 1 point  \n\n*(Note: The translation maintains the original structure and scoring criteria while ensuring natural English phrasing.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この会話は、ファッションと地域文化の関係についての議論を中心に展開しています。主なポイントは以下の通りです。  \n\n1. **出身地とファッション**  \n   - 津村さんは埼玉県出身で、商業高校の応援団長を務めていた経験から、地域やコミュニティがファッションに影響を与えることを指摘。特に「東京にもアクセスできる半端な田舎」では相対性が強いと話しています。  \n   - 大月さんは島根や鳥取のような地方出身を自称したいという意見を述べ、地域文化の独自性を強調しています。  \n\n2. **郊外（ベッドタウン）のコンプレックス**  \n   - 津村さんはイオンモールなどで服を買わない理由として、「郊外は周辺へのコンプレックスが加速する」と説明。ファッションが地域的な競争心から生まれる可能性も示唆しています。  \n\n3. **コミュニティとファッション**  \n   - 大月さんは「コミュニティがファッションを生み出す」という考えを提唱し、アルバイト先の上司（剃り込みの上司でヤンキーっぽい風体）への憧れを例に挙げています。  \n   - 津村さんはBAD HOP（ラッパー）も神奈川県川崎市という地域から生まれたカルチャーであることを指摘し、地域固有のスタイルが重要であることを強調しています。  \n\n4. **着こなしルールの起源**  \n   - 大月さんは「キャップの下にバンダナを巻く」などの着こなしルールは、コミュニティ内で醸成されたマジョリティに対するカウンターとして生まれたものだと分析しています。  \n\n要約すると、この会話では**「地域やコミュニティがファッションに大きな影響を与え、特定の場所から生まれたスタイルはその土地ならではの独自性を持つ」**というテーマが中心となっています。また、ファッションは単なる個人の好みではなく、社会的・文化的な文脈の中で意味を持つことが示唆されています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 出身地についての質問:2点  \n  - 冒頭で出身地とその影響に触れており、会話の要素として含まれている。\n- ファッションはコミュニティから生まれる:2点  \n  - 「コミュニティがファッションを生み出す」という趣旨を明確に説明している。\n- 地域の着こなしルールは地域のマジョリティへの反抗である:2点  \n  - 「マジョリティに対するカウンターとして生まれた」と明記している。\n- 文章中の論理関係を保存している:2点  \n  - 出身地→コンプレックス→コミュニティ→ファッション→着こなしルールという流れを保っている。\n- 自然な日本語である:1点  \n  - 不自然な表現はなく、読みやすい日本語。\n- 要約として適切な短さである:0点  \n  - 箇条書きで詳細に説明しており、元の会話に対してやや長く、要約としては冗長。\n\n[計算式]\n2 + 2 + 2 + 2 + 1 + 0 = 9\n\n[点数]\n9\n\nFINAL SCORE: 9",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:12.295472+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 会話の要約  \n\n**大月**（千葉出身）と**津村**（埼玉県出身、元応援団長）が、ファッションとルーツの関係について語り合う。  \n\n1. **ルーツの重要性**  \n   - デザイナーのルーツを尋ねられることが多いことから、「東京に近い半端な田舎」（埼玉・千葉・茨城など）では「相対性」が強く、コンプレックスがファッションに影響する。  \n   - 津村は「イオンモールでは服を買わない」という姿勢で、郊外のコンプレックスを表現。  \n\n2. **コミュニティとファッション**  \n   - 大月はアルバイト先の上司（ヤンキー風だがカッコいい正社員）の存在から、「コミュニティ内でのみ成立するファッション」に気づく。  \n   - 津村も同意し、BAD HOP（神奈川県川崎市発祥のヒップホップグループ）の例を挙げ、地域性がカルチャーを生むと指摘。  \n\n3. **反骨精神と着こなし**  \n   - 地域独特の着こなし（例：キャップ下バンダナ、片足スウェットパンツ）は、マジョリティへのカウンターとして生まれたものだと分析。  \n\n要するに、「ルーツやコミュニティの反骨精神がファッションを形作る」という共通認識で話が進む。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:45.464202+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "提示された会話の要約は以下の通りです。\n\n**要約：**\n千葉出身の大月氏と埼玉出身の津村氏が、自身のルーツ（出身地）やコンプレックスが、いかにファッションの形成や創造に影響を与えているかについて語り合っています。\n\n**主な論点：**\n*   **郊外が生むコンプレックスとファッション：**\n    東京へアクセスできる「半端な田舎（千葉・埼玉など）」であるベッドタウンは、周囲へのコンプレックスや「人と同じものは着ない」という相対的な反骨精神を生みやすく、それがファッションへの原動力になっている。\n*   **コミュニティ固有のかっこよさ：**\n    ファッションはコミュニティの中から生まれるものであり、特定の環境（例：アルバイト先のスーパー、川崎のラッパーなど）という文脈の中でのみ成立する「かっこよさ」や憧れが存在する。\n*   **マジョリティへのカウンター：**\n    地域やコミュニティ内で生まれる一見独特な着こなしのルールは、マジョリティ（多数派）に対するカウンターとして醸成されたものである。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 10,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:56.084799+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:37:03.786254+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "dataset": "elyza__ELYZA-tasks-100",
+  "id": 81,
+  "category": null,
+  "question": {
+    "original": "マウスには (A) ネズミ, (B) 口, (C) コンピュータの入力機器 の3つの意味があります。下のそれぞれの選択肢ではどのような意味で使われているでしょうか？\n\n1. マウスウォッシュ\n2. マウスカーソル\n3. ミッキーマウス\n4. マウスパッド\n5. マウスピース\n6. マウスツーマウス法\n",
+    "translation_en": "**[Purpose: Question]**  \n\nThe word \"mouse\" has three meanings: (A) a rodent, (B) a mouth, and (C) a computer input device. In the options below, which meaning is being used in each case?  \n\n1. **Mouthwash**  \n2. **Mouse cursor**  \n3. **Mickey Mouse**  \n4. **Mouse pad**  \n5. **Mouthpiece**  \n6. **Face-to-face method** (lit. \"mouse-to-mouse method\")  \n\n*(Note: The last option, \"マウスツーマウス法,\" is a literal translation of \"face-to-face method,\" but the original Japanese may be using \"mouse\" as a homophone for \"mouth\" (口 - *kuchi*), implying a direct, personal interaction. If the context suggests a different meaning, adjust accordingly.)*  \n\n*(Translation preserves the original structure and ambiguity for evaluation purposes.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "各選択肢における「マウス」の意味は以下の通りです。  \n\n1. **マウスウォッシュ**  \n   - 「ネズミ」を意味する「mouse」と「洗浄」を意味する「wash」が組み合わさった造語で、歯磨き粉や口腔ケア製品の名前（例：Colgate Mouse Wash）。  \n\n2. **マウスカーソル**  \n   - 「コンピュータの入力機器」を指す「mouse」と、光る線を示す「cursor」が組み合わさった言葉。  \n\n3. **ミッキーマウス**  \n   - ディズニーのキャラクターで、「ネズミ」を表す「mouse」に由来する名前。  \n\n4. **マウスパッド**  \n   - コンピュータのマウスを置くための保護材で、「コンピュータの入力機器」を指す「mouse」に関連。  \n\n5. **マウスピース**  \n   - 「ネズミ」を意味する「mouse」と、口に挿ぐ道具を意味する「pegs」が組み合わさった造語（ただし一般的ではない）。  \n\n6. **マウスツーマウス法**  \n   - 「ネズミ同士」の比喩で使われる表現（例：動物園での繁殖管理）で、「コンピュータの入力機器」の意味とは無関係。  \n\nこのように、「マウス」は文脈によって異なる意味を持つことがわかります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 2,
+          "judge_output": "回答は以下の通りです。\n\n1. マウスウォッシュ → 本来は (B) 口 だが、「ネズミ」の造語と誤説明\n2. マウスカーソル → (C) コンピュータの入力機器（正しい）\n3. ミッキーマウス → (A) ネズミ（正しい）\n4. マウスパッド → (C) コンピュータの入力機器（正しい）\n5. マウスピース → 本来は (B) 口 だが、「ネズミ」の造語と誤説明\n6. マウスツーマウス法 → 本来は (B) 口 だが、「ネズミ同士」の比喩と誤説明\n\n設問の趣旨（どの意味で使われているか）に対して、1,5,6 が誤りで、2,3,4 のみ正解なので、6問中3問不正解です。  \n問題固有の採点基準より「3~4問不正解: 2点」に該当します。\n\nFINAL SCORE: 2",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:40:50.046523+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "それぞれの選択肢で「マウス」がどのような意味で使われているかを分析します。  \n\n1. **マウスウォッシュ**  \n   → **(A) ネズミ** の意味。ネズミの体を洗うための洗剤や石鹸を指す可能性が高いです。  \n\n2. **マウスカーソル**  \n   → **(C) コンピュータの入力機器** の意味。コンピュータ画面上で操作するカーソル（ポインタ）のことです。  \n\n3. **ミッキーマウス**  \n   → **(A) ネズミ** の意味。ディズニーのキャラクター「ミッキーマウス」は擬人化されたネズミです。  \n\n4. **マウスパッド**  \n   → **(C) コンピュータの入力機器** の意味。コンピュータ用マウスを滑らせるためのパッドです。  \n\n5. **マウスピース**  \n   → **(B) 口（口当て）** の意味。楽器（例：サックス）やダイビング用の口当てなど、口に装着する部品を指します。  \n\n6. **マウスツーマウス法**  \n   → この表現は一般的ではありませんが、文脈によって解釈が異なります。  \n     - もし「ネズミを使った実験法」のような意味であれば、**(A) ネズミ** です。  \n     - もし「コンピュータ操作に関する手法」のような意味であれば、**(C) コンピュータの入力機器** です（ただし、この表現は通常使われません）。  \n\n### 結論  \n1. (A) ネズミ, 2. (C) コンピュータ, 3. (A) ネズミ, 4. (C) コンピュータ, 5. (B) 口, 6. （文脈によるが、おそらく(A)または(C)、または誤記）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:45:27.614179+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "それぞれの言葉における「マウス」の意味は以下の通りです。\n\n1. **マウスウォッシュ**：**(B) 口**\n   （英語の Mouthwash。口内洗浄液のことです）\n\n2. **マウスカーソル**：**(C) コンピュータの入力機器**\n   （パソコンの画面上で操作に合わせて動く矢印などのことです）\n\n3. **ミッキーマウス**：**(A) ネズミ**\n   （ネズミをモチーフにしたキャラクターです）\n\n4. **マウスパッド**：**(C) コンピュータの入力機器**\n   （パソコンのマウスを操作しやすくするために下に敷くマットのことです）\n\n5. **マウスピース**：**(B) 口**\n   （英語の Mouthpiece。楽器演奏やスポーツの際に口に含む器具のことです）\n\n6. **マウスツーマウス法**：**(B) 口**\n   （英語の Mouth-to-mouth。口対口で行う人工呼吸法のことです）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:34:53.740399+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:34:05.757453+00:00"
+  }
+}

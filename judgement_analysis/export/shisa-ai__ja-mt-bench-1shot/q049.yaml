@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 49,
+  "category": null,
+  "question": {
+    "original": "ある朝、日の出後、大樹さんは一本のポールを見つめて立っていました。ポールの影はちょうど彼の右側に落ちていました。その影が指していた方向は東、南、西、北のどちらを教えてください。あなたの推論手順を説明してください。",
+    "translation_en": "**[Purpose: Question]**  \n\nOne morning after sunrise, Mr. Ooki stood gazing at a pole. The pole’s shadow fell directly to his right. Which direction—east, south, west, or north—was the shadow pointing? Explain your reasoning process.  \n\n*(Note: The translation preserves the original meaning, structure, and key details while ensuring natural English phrasing suitable for evaluation documentation.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "この問題を解くためには、日の出後の太陽の位置と影の性質を理解することが重要です。以下に推論手順を説明します。\n\n1. **日の出後の太陽の位置**: 日の出後、太陽は東方向に昇っています。したがって、日の出直後は東が最も明るい方向です。\n\n2. **影の性質**: 影は光源（この場合は太陽）から反対方向に落ちます。つまり、太陽が東にある場合、影は西に落ちます。\n\n3. **ポールの影と大樹さんの位置**: ポールの影が大樹さんの右側に落ちているということは、大樹さんがポールから見て右側にいることを意味します。ただし、影が指している方向は太陽からの反対方向なので、影が指している方向は西になります。\n\n4. **結論**: 以上の推論から、大樹さんが見ているポールの影が指している方向は西です。\n\nしたがって、答えは「西」です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 3,
+          "judge_output": "説明が物理的状況を正しく扱えていません。\n\nこの問題では「ポールの影はちょうど彼の右側に落ちていました」とあるので、「影がどの方角を指しているか」を求めるには、大樹さんがどの方角を向いて立っているかを考えなければなりません。しかし提示された回答では、\n\n- 「太陽は東 → 影は西」という一般論だけで、\n- 「影が右側にある」という条件から大樹さんの向き（方位）を推定する手順がまったく踏まれていません。\n- そのため、「影が指している方向は西」と結論づけているのは、問題文の条件を十分に使っておらず、論理的に不十分です。\n\n日本語自体は自然で読みやすいものの、推論が浅く、問題の肝である「人物の向きと影の位置関係」を無視しているため、解答としては不正確・不十分です。\n\nFINAL SCORE: 3",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:06.120345+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "影が指していた方向は**西**です。以下に推論手順を説明します。\n\n1. **日の出の位置**: 日の出は東から昇ります。問題文で「日の出後」とあるので、太陽は東の空に位置しています。\n\n2. **影の方向**: 影は光源（太陽）と対象物（ポール）の反対側に落ちます。つまり、太陽が東にある場合、影は西に落ちます。\n\n3. **大樹さんの位置**: 大樹さんがポールを見つめているので、彼の視線方向はポールに向かっています。しかし、影が「彼の右側」にあるということは、大樹さんはポールと影の中間に立っているわけではありません。もし大樹さんがポールと影の中間（つまり西側）に立っていれば、影は彼の左側になるはずです。したがって、大樹さんはポールよりも東側に立っており、影が彼の右側（西）にあるという状況になります。\n\n4. **結論**: 以上から、影が指していた方向は西であると結論付けられます。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:15.744252+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "答えは**西**です。\n\n推論手順は以下の通りです。\n\n1.  **太陽の位置**: 「ある朝、日の出後」とあるため、太陽は**東**の空にあります。\n2.  **影の方向**: 影は常に光源（太陽）と正反対の方向に伸びます。\n3.  **結論**: 太陽が東にあるため、ポールの影は**西**に向かって伸びています。\n\n（補足：影が西（右側）に落ちていたということは、大樹さんは南を向いて立っていたことになります。）",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:01.018722+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:44:12.723771+00:00"
+  }
+}

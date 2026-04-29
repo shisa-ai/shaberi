@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 17,
+  "category": null,
+  "question": {
+    "original": "以下のニュース記事で言及されている固有名詞（人、組織、場所）を特定してください。それらの固有名詞をエンティティタイプ別に3つのグループに分けてJSON辞書を作成してください。キーはエンティティのタイプで、値は文字列のリストとします。\n昨日、ファラデーのCEOである中島雄一郎氏とダイムラーAGのCEOである斎藤昭二氏は、ベルリンに新たなギガファクトリーを建設する計画を発表しました。この施設はファラデーとダイムラーの合弁事業で、両社の電気自動車とバッテリーパックを生産し、地域の雇用を何千も創出します。中島氏と斎藤氏は、ベルリンの戦略的な位置、熟練した労働力、強固なインフラが拡大に適していると述べました。新たなギガファクトリーは、ヨーロッパでの電気自動車への需要の増加に対応し、持続可能な未来に貢献することを目指しています。フォルクスワーゲンのCEOである田村健一郎氏はこのニュースを歓迎し、自動車産業の電動化への移行にはより大きな協力が有益だと述べました。",
+    "translation_en": "Here is the translation of the provided text into natural, clear English suitable for evaluation documentation:  \n\n---  \n\n**[Purpose: Question]**  \n\nIdentify the proper nouns (people, organizations, places) mentioned in the following news article. Create a JSON dictionary grouping these proper nouns into three categories based on entity type. The key should be the entity type, and the value should be a list of strings.  \n\nYesterday, Yūichirō Nakajima, CEO of Faraday, and Akihiko Saitō, CEO of Daimler AG, announced plans to build a new gigafactory in Berlin. The facility will be a joint venture between Faraday and Daimler, producing electric vehicles and battery packs, and is expected to create thousands of jobs in the region. Nakajima and Saitō stated that Berlin’s strategic location, skilled workforce, and robust infrastructure make it ideal for expansion. The new gigafactory aims to meet the growing demand for electric vehicles in Europe and contribute to a sustainable future. Kōichirō Tamura, CEO of Volkswagen, welcomed the news, stating that greater cooperation would be beneficial in the automotive industry’s transition to electrification.  \n\n---  \n\n### **JSON Dictionary (Entity Type Grouping):**  \n```json\n{  \n  \"People\": [\"Yūichirō Nakajima\", \"Akihiko Saitō\", \"Kōichirō Tamura\"],  \n  \"Organizations\": [\"Faraday\", \"Daimler AG\", \"Volkswagen\"],  \n  \"Places\": [\"Berlin\"]  \n}  \n```  \n\nThis translation preserves the original meaning and details while ensuring clarity and natural English phrasing. The JSON dictionary categorizes the proper nouns as requested."
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下に、ニュース記事で言及されている固有名詞をエンティティタイプ別に分類したJSON辞書を作成しました。  \n\n```json\n{\n  \"People\": [\n    \"中島雄一郎\",\n    \"斎藤昭二\",\n    \"田村健一郎\"\n  ],\n  \"Organizations\": [\n    \"ファラデー\",\n    \"ダイムラーAG\",\n    \"ベルリン\",\n    \"フォルクスワーゲン\"\n  ],\n  \"Locations\": [\n    \"ベルリン\"\n  ]\n}\n```\n\n### 解説:  \n1. **People（人）**  \n   - 中島雄一郎氏（ファラデーCEO）  \n   - 斎藤昭二氏（ダイムラーAGCEO）  \n   - 田村健一郎氏（フォルクスワーゲンCEO）  \n\n2. **Organizations（組織）**  \n   - ファラデー（企業名）  \n   - ダイムラーAG（企業名）  \n   - ベルリン（都市名だが、ここでは企業の所在地として扱う）  \n   - フォルクスワーゲン（企業名）  \n\n3. **Locations（場所）**  \n   - ベルリン（都市名）  \n\nこの分類では、企業や人物を「組織」に含め、都市は「場所」に分類しました。必要に応じて調整可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 6,
+          "judge_output": "エンティティの抽出自体はほぼ正しく、「中島雄一郎」「斎藤昭二」「田村健一郎」「ファラデー」「ダイムラーAG」「フォルクスワーゲン」「ベルリン」といった固有名詞は適切に拾えています。また、日本語も自然で、JSON形式も構文的には正しいです。\n\nしかし、いくつか問題があります。\n\n1. **エンティティタイプの誤分類**  \n   - 「ベルリン」が `\"Organizations\"` に含まれているのは明らかな誤りで、都市名なので組織ではなく場所にのみ分類すべきです。  \n   - 解説で「ベルリン（都市名だが、ここでは企業の所在地として扱う）」と書いていますが、所在地であっても組織ではないため、この扱いは不適切です。\n\n2. **重複した分類**  \n   - 「ベルリン」が `\"Organizations\"` と `\"Locations\"` の両方に入っており、問題文は「エンティティタイプ別に3つのグループに分けて」としているので、タイプごとに明確に分けるべきで、こうした重複は紛らわしいです。\n\n3. **細部の要件への配慮不足**  \n   - 人名については「中島雄一郎氏」「斎藤昭二氏」「田村健一郎氏」と「氏」を含めるかどうかは一貫していませんが、JSONでは敬称を外しているので、そこは統一されていて問題ありません。  \n   - ただし、解説の最後で「企業や人物を『組織』に含め」と書いていますが、実際のJSONでは人物は `\"People\"` に入っており、この説明文は内容と矛盾しています。\n\n全体として、構造や日本語は良いものの、エンティティタイプの分類に明確な誤りと説明の矛盾があるため減点が必要です。\n\nFINAL SCORE: 6",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:07.059572+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下に、ニュース記事から抽出した固有名詞をエンティティタイプ別に分類したJSON辞書を示します。  \n\n```json\n{\n  \"人物\": [\"中島雄一郎\", \"斎藤昭二\", \"田村健一郎\"],\n  \"組織\": [\"ファラデー\", \"ダイムラーAG\", \"フォルクスワーゲン\"],\n  \"場所\": [\"ベルリン\", \"ヨーロッパ\"]\n}\n```\n\n### 説明  \n- **人物**: 記事で言及された個人の名前（CEOなど）  \n- **組織**: 企業名や団体名  \n- **場所**: 地域や都市の名称  \n\n必要に応じて、さらに詳細な分類（例: 役職別の人物リスト）も可能ですが、今回は基本的な3つのカテゴリで整理しました。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:12.463056+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n{\n  \"人\": [\n    \"中島雄一郎\",\n    \"斎藤昭二\",\n    \"田村健一郎\"\n  ],\n  \"組織\": [\n    \"ファラデー\",\n    \"ダイムラーAG\",\n    \"ダイムラー\",\n    \"フォルクスワーゲン\"\n  ],\n  \"場所\": [\n    \"ベルリン\",\n    \"ヨーロッパ\"\n  ]\n}\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:12.422196+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:41.531622+00:00"
+  }
+}

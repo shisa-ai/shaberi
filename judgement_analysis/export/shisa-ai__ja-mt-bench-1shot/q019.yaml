@@ -1,0 +1,68 @@
+{
+  "dataset": "shisa-ai__ja-mt-bench-1shot",
+  "id": 19,
+  "category": null,
+  "question": {
+    "original": "複雑な方程式のセットから、各方程式からすべての変数名を抽出します。結果をJSON文字列として返し、各方程式に一行を割り当ててください。\n1) y = (3/4)x^3 - e^(2x) + sin(pi*x) - sqrt(7)\n2) 2A - B/(3+C) * sum(N=1 to 5; ln(N)^2) = 5D*integral(a=0 to pi; cos(comb(N=1 to 10; N*a)))\n3) E = m(c^2) + gamma*(v/d)/(-(alpha/2) + sqrt(beta^2 + (alpha/2)^2))",
+    "translation_en": "**[Purpose: Question]**  \n\nExtract all variable names from a set of complex equations. Return the result as a JSON string, assigning one line per equation.  \n\n1) `y = (3/4)x^3 - e^(2x) + sin(pi*x) - sqrt(7)`  \n2) `2A - B/(3+C) * sum(N=1 to 5; ln(N)^2) = 5D*integral(a=0 to pi; cos(comb(N=1 to 10; N*a)))`  \n3) `E = m(c^2) + gamma*(v/d)/(-(alpha/2) + sqrt(beta^2 + (alpha/2)^2))`  \n\n**JSON Output:**  \n```json\n{  \n  \"equations\": [  \n    { \"equation\": \"y = (3/4)x^3 - e^(2x) + sin(pi*x) - sqrt(7)\", \"variables\": [\"x\", \"y\"] },  \n    { \"equation\": \"2A - B/(3+C) * sum(N=1 to 5; ln(N)^2) = 5D*integral(a=0 to pi; cos(comb(N=1 to 10; N*a)))\", \"variables\": [\"A\", \"B\", \"C\", \"D\", \"N\"] },  \n    { \"equation\": \"E = m(c^2) + gamma*(v/d)/(-(alpha/2) + sqrt(beta^2 + (alpha/2)^2))\", \"variables\": [\"E\", \"c\", \"gamma\", \"v\", \"d\", \"alpha\", \"beta\", \"m\"] }  \n  ]  \n}\n```  \n\n*(Note: The JSON output is structured to match the request, with each equation and its extracted variables on separate lines.)*"
+  },
+  "answer": {
+    "gold_original": null,
+    "gold_backtranslation_en": null
+  },
+  "rubric": {
+    "original": null,
+    "explanation_en": null
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下は、各方程式から抽出した変数名をJSON形式で表現したものです。  \n\n```json\n{\n  \"equations\": [\n    {\n      \"equation\": \"y = (3/4)x^3 - e^(2x) + sin(pi*x) - sqrt(7)\",\n      \"variables\": [\"y\", \"x\"]\n    },\n    {\n      \"equation\": \"2A - B/(3+C) * sum(N=1 to 5; ln(N)^2) = 5D*integral(a=0 to pi; cos(comb(N=1 to 10; N*a)))\",\n      \"variables\": [\"A\", \"B\", \"C\", \"D\"]\n    },\n    {\n      \"equation\": \"E = m(c^2) + gamma*(v/d)/(-(alpha/2) + sqrt(beta^2 + (alpha/2)^2))\",\n      \"variables\": [\"E\", \"m\", \"c\", \"gamma\", \"v\", \"d\", \"alpha\", \"beta\"]\n    }\n  ]\n}\n```\n\n### 説明:\n- 各方程式は1行ずつ割り当てられ、対応する変数名がリストとして格納されています。  \n- 変数名はアルファベット（大文字・小文字）と特殊記号（例: `sum`, `integral`）を含みます。  \n- 数学記号（例: `e`, `sin`, `sqrt`）は変数として扱われません。  \n\n必要に応じて、さらに詳細な処理（例: 変数の型指定や複雑な記号の処理）も可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": "全体として、日本語は自然で丁寧であり、JSON 形式も正しく構造化されています。ただし、変数抽出の精度に問題があります。\n\n良い点:\n- JSON 構造は要求どおりで、各方程式ごとに1行（1オブジェクト）を割り当てている。\n- 1つ目と3つ目の式については、一般的な解釈として妥当な変数集合を抽出している（`y, x` および `E, m, c, gamma, v, d, alpha, beta`）。\n- 日本語の説明も自然で読みやすい。\n\n問題点:\n- 2つ目の式の変数抽出が不完全。\n  - `sum(N=1 to 5; ln(N)^2)` や `comb(N=1 to 10; N*a)` の中で使われている `N` や `a` は、通常は「変数」あるいは少なくとも「式中の変数記号」と見なされるが、回答では `[\"A\", \"B\", \"C\", \"D\"]` のみで `N` と `a` を含めていない。\n- 説明文に「変数名はアルファベット（大文字・小文字）と特殊記号（例: `sum`, `integral`）を含みます。」とあるが、実際の JSON では `sum` や `integral` を変数として含めていないため、説明と実際の処理が矛盾している。\n- 「数学記号（例: `e`, `sin`, `sqrt`）は変数として扱われません。」という方針は一貫しているが、`e` を数学定数とみなすか変数とみなすかは文脈依存であり、ここでは明示されていないため、やや恣意的ではある（ただし減点要因としては小さい）。\n\n総合すると、形式面・日本語は良好だが、変数抽出の要件に対して2番目の式の処理が不完全であり、説明との整合性にも欠けるため、満点は付けられません。\n\nFINAL SCORE: 7",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:41:08.033474+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "以下に、各方程式から抽出した変数名をJSON形式で返します。各方程式に対応する変数名のリストを一行ずつ記載します。\n\n```json\n{\n  \"equations\": [\n    {\n      \"variables\": [\"x\", \"y\"]\n    },\n    {\n      \"variables\": [\"A\", \"B\", \"C\", \"D\", \"N\", \"a\"]\n    },\n    {\n      \"variables\": [\"E\", \"m\", \"c\", \"gamma\", \"v\", \"d\", \"alpha\", \"beta\"]\n    }\n  ]\n}\n```\n\n### 解説:\n1. **1番目の方程式**: `y = (3/4)x^3 - e^(2x) + sin(pi*x) - sqrt(7)`\n   - 変数: `x`, `y`\n   - 定数: `pi`（数学定数として扱う）\n\n2. **2番目の方程式**: `2A - B/(3+C) * sum(N=1 to 5; ln(N)^2) = 5D*integral(a=0 to pi; cos(comb(N=1 to 10; N*a)))`\n   - 変数: `A`, `B`, `C`, `D`, `N`, `a`\n   - 定義済み関数/定数: `ln`（自然対数）、`comb`（組み合わせ）、`pi`\n\n3. **3番目の方程式**: `E = m(c^2) + gamma*(v/d)/(-(alpha/2) + sqrt(beta^2 + (alpha/2)^2))`\n   - 変数: `E`, `m`, `c`, `gamma`, `v`, `d`, `alpha`, `beta`\n\nこの形式で、各方程式の変数名を抽出してJSON文字列として返しています。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:46:23.966087+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "```json\n{\n  \"1\": [\"y\", \"x\"],\n  \"2\": [\"A\", \"B\", \"C\", \"N\", \"D\", \"a\"],\n  \"3\": [\"E\", \"m\", \"c\", \"gamma\", \"v\", \"d\", \"alpha\", \"beta\"]\n}\n```",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 9,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:36:13.395358+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:43:50.388100+00:00"
+  }
+}

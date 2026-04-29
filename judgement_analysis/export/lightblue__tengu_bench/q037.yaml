@@ -1,0 +1,68 @@
+{
+  "dataset": "lightblue__tengu_bench",
+  "id": 37,
+  "category": "敬語",
+  "question": {
+    "original": "以下の感想文を適切で丁寧な日本語に直してください。\n### 文章\n同じ物質がアレルギーを促進するとともに抑制する機能を持つということに驚きました。これから先、より良いアレルギーの発見簡易化、治療、抑制の可能性増加に役立っていけば自分自身助かるのでこの先の動向が気になります。とりあえず２倍ということを覚えといてというお話が最後にあったと思いますが、個人的には生活の多様性が広がったことで同時にアレルギー発症に繋がる可能性のある行為を知らず知らずのうちにしてしまうことが増えたのが特に大きな原因ではないかと思いました。",
+    "translation_en": "### Revised Japanese Text (for evaluation documentation)  \n\nI was surprised to learn that the same substance can both promote and suppress allergic reactions. I am particularly interested in future developments, as this could greatly aid in the easier discovery, treatment, and prevention of allergies, which would be personally beneficial. While the final remarks mentioned remembering the \"two-fold\" effect, I believe a major contributing factor is that the diversification of lifestyles has inadvertently led to an increase in behaviors that may trigger allergies without our awareness.  \n\n(Note: The translation maintains the original meaning and details while refining the phrasing for clarity and formality suitable for evaluation documentation.)"
+  },
+  "answer": {
+    "gold_original": "### 訂正された文章\n同じ成分がアレルギーを促進すると同時に抑制する機能も持っているという事実には驚きました。今後アレルギーの診断が容易になり、アレルギーの治療や抑制の可能性が向上することで、私自身の生活が改善されることを期待しています。そのため、将来の研究の進展について非常に関心があります。最後に、「とりあえず２倍ということを覚えといて」というお話があったように記憶していますが、個人的には、生活が多様化することで、無意識のうちにアレルギーを引き起こす可能性のある行動をとってしまう機会が増えたことが、アレルギーの発症に大きく寄与しているのではないかと感じています。",
+    "gold_backtranslation_en": "[Purpose: gold_answer]  \n\n### Corrected Text  \nI was surprised to learn that the same component can both promote and suppress allergic reactions. I hope that easier allergy diagnosis in the future, along with improved treatment and suppression options, will enhance my own quality of life. Therefore, I am very interested in the progress of future research. Lastly, I recall there being a discussion about \"keeping in mind the factor of doubling,\" but personally, I believe that the increasing diversity of lifestyles has inadvertently led to more opportunities for behaviors that may trigger allergies, which I think significantly contributes to the development of allergies."
+  },
+  "rubric": {
+    "original": "- 全ての文がです・ます調の丁寧な表現に変換されている:2点\n- 「ございます」のような丁寧すぎる表現を使用していない:2点\n- 文章の意味内容に変更が内容に変換されている:2点\n- 文章中にない表現を加えていない:1点\n- 正しい敬語の用法である:2点\n- 自然な日本語である:1点",
+    "explanation_en": "**[Purpose: Rubric]**  \n\n- All sentences are converted to polite *desu/masu* form: **2 points**  \n- Avoids overly polite expressions like *gozaimasu*: **2 points**  \n- Meaning and content remain unchanged in the conversion: **2 points**  \n- No extraneous expressions added: **1 point**  \n- Correct use of honorifics (keigo): **2 points**  \n- Natural Japanese phrasing: **1 point**  \n\n*(Total: 10 points)*  \n\n*(Note: The rubric is structured for evaluating Japanese-to-English translation quality, but the criteria are phrased in Japanese. If the rubric itself needs translation, please clarify.)*"
+  },
+  "samples": [
+    {
+      "model_key": "183",
+      "model_file": "shisa-ai__183-llama3.1-8b-v2.1o-dpo-7e8.json",
+      "model_answer": "以下のように丁寧で適切な日本語に修正しました。  \n\n---  \n\n**感想文（修正版）**  \n同じ物質がアレルギーを促進する一方で抑制する機能を持つという点に驚きました。今後の研究動向がアレルギーの早期発見や効果的な治療法の開発に繋がれば、個人的にも大きな助けとなるでしょう。特に、生活の多様化が進む中で、アレルギーを引き起こす可能性のある環境要因や食事などを無意識に過剰摂取してしまうケースが増えていると感じています。  \n\n---  \n\n### 修正ポイント  \n1. **自然な表現**：「自分自身助かるので」→「個人的にも大きな助けとなるでしょう」（より丁寧な言い回し）  \n2. **論理的整合性**：「2倍ということを覚えといて」という話を直接引用せず、「早期発見・治療法開発」という具体的な期待に置き換え  \n3. **文体調整**：「とりあえず」→「特に」（前置詞の変更でフォーマルさを強化）  \n4. **重複回避**：「気になります」を一度だけ使用し、文脈で明確化  \n\n必要に応じてさらに調整可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 5,
+          "judge_output": "[該当する評価項目とその簡潔な理由]\n- 全ての文がです・ます調の丁寧な表現に変換されている:0点  \n  - 「驚きました」以外は「〜でしょう」「〜しています」などで統一されておらず、原文全体を丁寧体に直したとは言い難い。\n- 「ございます」のような丁寧すぎる表現を使用していない:2点  \n  - 「ございます」は使っていない。\n- 文章の意味内容に変更が内容に変換されている:0点  \n  - 「2倍ということを覚えといて」という内容を削除し、「早期発見や効果的な治療法の開発」など原文にない意味を追加しており、意味内容が大きく変わっている。\n- 文章中にない表現を加えていない:0点  \n  - 「早期発見」「効果的な治療法の開発」「環境要因や食事」「無意識に過剰摂取」など、元の文章にない内容を多数追加している。\n- 正しい敬語の用法である:2点  \n  - 用いられている敬語表現自体は不自然な誤用はない。\n- 自然な日本語である:1点  \n  - 日本語としては自然で読みやすい。\n\n[計算式]\n0 + 2 + 0 + 0 + 2 + 1 = 5\n\n[点数]\n5\n\nFINAL SCORE: 5",
+          "error_count": 0,
+          "updated_at": "2025-11-27T06:39:08.913164+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "shisa-v2-405b",
+      "model_file": "shisa-ai__shisa-v2-llama3.1-405b.json",
+      "model_answer": "### 日本語訳（丁寧表現）  \n「同じ物質がアレルギーを促進する一方で抑制する機能も持つという事実に驚きました。今後、この知見がアレルギーの発見や治療、抑制の可能性を広げることに繋がれば、個人的にも助かるため、今後の動向に注目したいと思います。最後に『2倍』という点を覚えておくように言われたと記憶していますが、私見ではありますが、生活の多様化により、アレルギー発症につながる可能性のある行動を無意識に行ってしまうケースが増えたことが大きな要因ではないかと考えています。」  \n\n### 改善点  \n1. 「自分自身助かる」を「個人的にも助かる」に変更し、より丁寧な表現に。  \n2. 「気になります」を「注目したいと思います」に変更し、積極的な姿勢を示す。  \n3. 「とりあえず」を削除し、文頭を整理。  \n4. 「特に大きな原因ではないかと思いました」を「大きな要因ではないかと考えています」に変更し、推測のニュアンスを明確化。  \n\n全体的に自然な日本語として読めるよう調整しました。必要に応じてさらに調整可能です。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 8.0,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-22T14:43:41.790604+00:00"
+        }
+      ]
+    },
+    {
+      "model_key": "gemini3-pro",
+      "model_file": "gemini-3-pro-preview.json",
+      "model_answer": "ご提示いただいた感想文は、講義や講演を聞いた後のレポートやアンケート回答と推測されます。\n元の文章の意図（驚き、自分事としての期待、独自の考察）を汲み取りつつ、提出先やシチュエーションに合わせていくつかパターンを用意しました。\n\n---\n\n### パターン1：標準的で丁寧な表現\n（学校の授業の感想や、一般的なアンケートなどに適しています）\n\n同一の物質が、アレルギーを促進する作用と抑制する作用の両方を併せ持っているという事実に驚きました。\n今後の研究が進み、アレルギーの簡易的な検査方法や治療、予防策の確立に役立つことを期待しています。私自身にとっても切実な問題ですので、今後の動向に強く関心を持っています。\n最後に「まずは2倍という数字を覚えておくように」というお話がありましたが、個人的には、生活様式の多様化がアレルギー増加の大きな要因ではないかと感じました。知らず知らずのうちに、アレルギー発症のリスクを高める行動をとってしまっている機会が増えたことが、背景にあるのではないかと思います。\n\n---\n\n### パターン2：より硬く、知的な表現\n（大学のレポートや、目上の人への報告などに適しています）\n\n同じ物質がアレルギーの促進と抑制という相反する機能を持つ点に、大変感銘を受けました。\n本研究が、アレルギー診断の簡易化や治療・抑制技術の向上に寄与することを願っております。私自身も当事者であるため、今後の研究動向を注視していきたいと考えています。\n講義の結びに「2倍」という数値について言及がありましたが、私見としては、生活の多様性が広がったことが特に大きな要因ではないかと推察します。無意識のうちにアレルギー発症につながる行動をとってしまう機会が増加したことが、現状を招いているのではないでしょうか。\n\n---\n\n### パターン3：少し柔らかく、自然な表現\n（口頭で伝える場合や、少し砕けた形式の感想欄などに適しています）\n\n同じ物質がアレルギーを促進するだけでなく、抑制する機能も持っているということに驚きました。\nこれから先、アレルギーの発見がより簡単になったり、治療や予防の可能性が広がったりすれば、私自身も助かりますので、今後の動向がとても気になります。\n最後に「とりあえず2倍ということを覚えておくように」というお話がありましたが、個人的には、生活スタイルが多様化したことが大きな原因ではないかと感じました。知らず知らずのうちにアレルギーの原因となるような行動をしてしまうことが増えたのが、影響しているのではないかと思います。\n\n---\n\n### 主な修正ポイントの解説\n\n1.  **「発見簡易化、治療、抑制の可能性増加」**\n    *   元の表現は少し熟語を詰め込みすぎている印象があります。「診断の簡易化」「治療法や予防策の進歩」などと解きほぐすと読みやすくなります。\n2.  **「自分自身助かるので」**\n    *   少し口語的（話し言葉）です。「私自身にとっても切実な問題ですので」「当事者として」などに言い換えると、文章としての品格が上がります。\n3.  **「とりあえず２倍ということを覚えといて」**\n    *   「覚えといて」は「覚えておいて」の短縮形で、かなりカジュアルな話し言葉です。「覚えておくようにというお話がありましたが」などに修正しました。\n4.  **「生活の多様性が広がったことで～」**\n    *   文意は通じますが、少し長くなっています。「生活様式の多様化により、～リスクを高める行動を無意識にとってしまっている」と整理すると、論理が明確になります。",
+      "judgements": [
+        {
+          "judge_id": "judge_gpt-5.1-2025-11-13",
+          "score": 7,
+          "judge_output": null,
+          "error_count": 0,
+          "updated_at": "2025-11-23T08:33:45.248798+00:00"
+        }
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "unreviewed",
+  "translation_meta": {
+    "model": "shisa-ai/shisa-v2.1-unphi4-14b-152-155-149-nuslerp",
+    "base_url": "http://localhost:8000/v1",
+    "last_updated": "2025-11-28T07:38:30.447297+00:00"
+  }
+}
